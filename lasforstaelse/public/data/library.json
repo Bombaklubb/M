@@ -983,7 +983,7 @@
     "genre": "berättelse",
     "theme": "musik",
     "title": "Klapp, stopp, klapp",
-    "text": "På musiklektionen sa läraren: \"Vi ska göra en rytm.\" Alla stod i en ring. Läraren klappade: klapp, klapp, stopp. Klassen härmade.\n\nYusuf klappade jättefort. Mei klappade långsamt och tittade på lärarens händer. \"Jag hinner inte,\" viskade Yusuf.\n\nMei sa: \"Vi kan räkna.\"\n\nDe räknade tillsammans: \"Ett, två, stopp.\" Yusuf provade igen. Nu gick det bättre.\n\nSedan fick alla hitta på en egen rytm. Yusuf gjorde: klapp, stamp, klapp. Mei gjorde: klapp, knäpp, stopp. När de spelade ihop blev det som en liten låt.\n\nEfteråt sa Yusuf: \"Tack. Jag trodde jag inte kunde.\"\n\nMei log. \"Du kunde. Du behövde bara en takt.\" Klassen skrattade och klappade en sista gång, lugnt och tillsammans.",
+    "text": "På musiklektionen sa läraren: \"Vi ska göra en rytm.\" Alla stod i en ring. Läraren klappade: klapp, klapp, stopp. Klassen härmade.\n\nYusuf klappade jättefort. \"Jag hinner inte\", viskade han.\n\nMei sa: \"Vi kan räkna.\"\n\nDe räknade tillsammans: \"Ett, två, stopp.\" Yusuf provade igen. Nu gick det bättre.\n\nSedan fick alla hitta på en egen rytm. Yusuf gjorde: klapp, stamp, klapp. När de spelade ihop blev det som en liten låt.\n\n\"Tack\", sa Yusuf. \"Jag trodde jag inte kunde.\"\n\nMei log. \"Du behövde bara en takt.\"",
     "questions": [
       {
         "type": "literal",
@@ -1053,7 +1053,7 @@
       }
     ],
     "meta": {
-      "wordCount": 111,
+      "wordCount": 85,
       "fingerprint": "gpt4-ak1-11",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
@@ -1146,7 +1146,7 @@
     "genre": "faktatext",
     "theme": "natur",
     "title": "Regn och pölar",
-    "text": "När det regnar faller vatten från molnen ner på marken. Vattnet kan hamna på gator, gräs och i skogen. Om marken är hård eller redan blöt kan vattnet samlas i pölar.\n\nI en pöl kan du se himlen spegla sig. Ibland hoppar små droppar när det regnar mer. När solen kommer fram kan pölen bli mindre. Då avdunstar vattnet, vilket betyder att det blir till vattenånga och stiger upp i luften.\n\nRegn är viktigt för växter. Blommor och träd behöver vatten för att växa. Men vi ska akta oss vid stora pölar och hala stenar. Det är bäst att ha stövlar och gå försiktigt när det är blött ute.",
+    "text": "När det regnar faller vatten från molnen ner på marken. Om marken är hård eller redan blöt kan vattnet samlas i pölar, eftersom det inte kan sjunka ner lika lätt.\n\nNär solen kommer fram kan pölen bli mindre. Då avdunstar vattnet, vilket betyder att det blir till vattenånga och stiger upp i luften.\n\nRegn är viktigt för växter. Blommor och träd behöver vatten för att växa.\n\nMen vi ska akta oss vid hala stenar. Det är bäst att gå försiktigt när det är blött ute.",
     "questions": [
       {
         "type": "literal",
@@ -1216,7 +1216,7 @@
       }
     ],
     "meta": {
-      "wordCount": 109,
+      "wordCount": 85,
       "fingerprint": "gpt4-ak1-09",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
@@ -1312,7 +1312,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten Max",
-    "text": "Max är en liten katt. Han bor i ett gult hus. På morgonen vaknar Max tidigt. Han sträcker på sig och jamar högt. Sedan går han till köket. Där står en skål med mat. Max äter och dricker vatten.\n\nEfter frukosten vill Max leka. Han jagar en röd boll över golvet. Bollen rullar snabbt. Max springer efter. Ibland gömmer han sig bakom soffan. Då tror han att ingen ser honom.\n\nNär det blir kväll är Max trött. Han kryper upp i sin mjuka korg. Där somnar han och drömmer om nya äventyr.",
+    "text": "Max är en liten katt. Han bor i ett gult hus. På morgonen vaknar Max tidigt. Han sträcker på sig och jamar högt. Sedan går han till köket. Där står en skål med mat.\n\nEfter frukosten vill Max leka. Han jagar en röd boll över golvet. Max springer efter. Ibland gömmer han sig bakom soffan. Då tror han att ingen ser honom.\n\nNär det blir kväll är Max trött. Han kryper upp i sin mjuka korg. Där somnar han.",
     "questions": [
       {
         "type": "literal",
@@ -1382,7 +1382,7 @@
       }
     ],
     "meta": {
-      "wordCount": 92,
+      "wordCount": 79,
       "fingerprint": "ak1-natur-katt-001",
       "generatedAt": "2026-02-28T12:54:37.710Z",
       "model": "claude"
@@ -2957,7 +2957,7 @@
     "genre": "berättelse",
     "theme": "familj",
     "title": "Storasyster hjälper till",
-    "text": "Malte är fem år. Hans storasyster Saga är sju. Idag ska de baka bullar med pappa. Pappa tar fram mjöl, socker och smör. Saga får mäta mjölet. Malte vill också hjälpa till. \"Du kan röra i degen\", säger pappa. Malte rör så hårt att mjöl flyger upp i luften. Saga skrattar. \"Sakta, sakta!\" säger hon. Hon lägger sin hand över Maltes och visar hur man rör försiktigt. Tillsammans gör de runda bullar. Malte gör en extra stor. \"Den är till dig, Saga\", säger han. Saga ler. \"Tack, lillebror.\" Bullarna doftar gott i ugnen.",
+    "text": "Malte är fem år. Hans storasyster Saga är sju. Idag ska de baka bullar med pappa.\n\nPappa tar fram mjöl, socker och smör. Saga får mäta mjölet. Malte vill också hjälpa till.\n\n\"Du kan röra i degen\", säger pappa.\n\nMalte rör så hårt att mjöl flyger upp i luften. Saga skrattar. \"Sakta, sakta!\" Hon lägger sin hand över Maltes och visar hur man rör försiktigt.\n\nTillsammans gör de runda bullar. Malte gör en extra stor. \"Den är till dig, Saga\", säger han.\n\nSaga ler. \"Tack, lillebror.\"",
     "questions": [
       {
         "type": "literal",
@@ -3028,7 +3028,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1476234251651-f353703a034d?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 93
+      "wordCount": 86
     }
   },
   {
@@ -3037,7 +3037,7 @@
     "genre": "berättelse",
     "theme": "väder",
     "title": "Vattenpölen",
-    "text": "Det har regnat hela natten. När Ines kommer ut på morgonen finns det en stor vattenpöl på gården. Den är nästan som en liten sjö. Ines har sina gula gummistövlar på sig. Hon hoppar rakt i pölen. Splash! Vattnet stänker högt. Kompisen Omar kommer förbi. \"Får jag hoppa också?\" frågar han. \"Klart du får!\" säger Ines. De hoppar och hoppar tills stövlarna är blöta på insidan. Sedan sitter de på trappen och häller ut vattnet. \"Titta\", säger Omar. \"Solen kommer fram.\" Pölen börjar bli mindre. \"Vi får hoppa snabbt imorgon\", säger Ines. \"Innan pölen försvinner.\"",
+    "text": "Det har regnat hela natten. När Ines kommer ut på morgonen finns det en stor vattenpöl på gården.\n\nInes har sina gula gummistövlar på sig. Hon hoppar rakt i pölen. Splash! Vattnet stänker högt.\n\nKompisen Omar kommer förbi. \"Får jag hoppa också?\" frågar han.\n\n\"Klart du får!\" säger Ines.\n\nDe hoppar tills stövlarna är blöta på insidan. Sedan sitter de på trappen och häller ut vattnet.\n\n\"Titta\", säger Omar. \"Solen kommer fram.\" Pölen börjar bli mindre.\n\n\"Vi får hoppa snabbt imorgon\", säger Ines. \"Innan pölen försvinner.\"",
     "questions": [
       {
         "type": "literal",
@@ -3108,7 +3108,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1428592953211-077101b2021b?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 95
+      "wordCount": 86
     }
   },
   {
@@ -3117,7 +3117,7 @@
     "genre": "berättelse",
     "theme": "fantasi",
     "title": "Lådan som blev en båt",
-    "text": "I garaget hittar Theo en stor pappkartong. Den är nästan lika stor som han själv. \"Den här kan bli vad som helst!\" säger han. Han drar ut den på gräset. Först blir den en båt. Theo kliver i och låtsas ro med en pinne. \"Land i sikte!\" ropar han. Kompisen Li kommer springande. \"Vad gör du?\" frågar hon. \"Jag seglar till en ö\", säger Theo. Li kliver också i. De låtsas att gräset är hav och att maskrosorna är fiskar. Sedan vänder de på lådan och den blir ett hus. De sitter under den och äter äpple. \"Det här är det bästa huset\", säger Li. Theo nickar. En vanlig kartong kan bli allt.",
+    "text": "I garaget hittar Theo en stor pappkartong. \"Den här kan bli vad som helst!\" säger han. Han drar ut den på gräset.\n\nFörst blir den en båt. Theo kliver i och låtsas ro med en pinne.\n\nKompisen Li kommer springande. \"Jag seglar till en ö\", säger Theo. Li kliver också i. De låtsas att gräset är hav och att maskrosorna är fiskar.\n\nSedan vänder de på lådan och den blir ett hus. De sitter under den och äter äpple.\n\n\"Det här är det bästa huset\", säger Li.",
     "questions": [
       {
         "type": "literal",
@@ -3188,7 +3188,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 113
+      "wordCount": 87
     }
   },
   {
@@ -3197,7 +3197,7 @@
     "genre": "berättelse",
     "theme": "hjälpsamhet",
     "title": "Mössan i trädet",
-    "text": "Elias tappar sin mössa på väg till skolan. Vinden tar den och den fastnar i ett träd. Grenen är för hög. Elias sträcker sig men når inte. \"Oj!\" säger han. Kompisen Mira kommer gående. \"Vad hände?\" frågar hon. \"Min mössa sitter fast\", säger Elias. Mira tittar upp. \"Om du lyfter mig kan jag nå den\", säger hon. Elias lyfter Mira försiktigt. Hon sträcker sig och får tag i mössan. \"Tack!\" säger Elias och sätter på sig den. \"Inget att tacka för\", säger Mira. \"Man hjälper varandra.\" De går till skolan tillsammans. Elias håller hårt i mössan hela vägen.",
+    "text": "Elias tappar sin mössa på väg till skolan. Vinden tar den och den fastnar i ett träd. Grenen är för hög. Elias sträcker sig men når inte.\n\nKompisen Mira kommer gående. \"Vad hände?\" frågar hon.\n\n\"Min mössa sitter fast\", säger Elias.\n\nMira tittar upp. \"Om du lyfter mig kan jag nå den.\"\n\nElias lyfter Mira försiktigt. Hon får tag i mössan.\n\n\"Tack!\" säger Elias.\n\n\"Inget att tacka för\", säger Mira. \"Man hjälper varandra.\"\n\nDe går till skolan tillsammans. Elias håller hårt i mössan hela vägen.",
     "questions": [
       {
         "type": "literal",
@@ -3268,7 +3268,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 98
+      "wordCount": 85
     }
   },
   {
@@ -7581,7 +7581,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Fågeln vid fönstret",
-    "text": "Varje morgon sitter en liten fågel på fönsterbrädan utanför Willmas rum. Den pickar på glaset och hoppar fram och tillbaka. Willma tycker att det ser ut som om fågeln vill komma in.\n\n\"Vad äter den?\" frågar hon sin pappa.\n\n\"Fröer och insekter,\" svarar pappa. \"Vi kan hänga ut en fågelmatare.\"\n\nDe gör en matare av en tom mjölkkartong. Willma klipper ett hål i sidan och fyller med solrosfrön. Pappa hjälper henne att hänga den i trädet utanför fönstret.\n\nNästa dag kommer fågeln tillbaka. Den sitter på mataren och äter. Snart kommer fler fåglar. Willma räknar tre stycken. Hon ritar dem i sitt block och skriver vad de gör.",
+    "text": "Varje morgon sitter en liten fågel på fönsterbrädan utanför Willmas rum. Den pickar på glaset och hoppar fram och tillbaka.\n\n\"Vad äter den?\" frågar hon sin pappa.\n\n\"Fröer och insekter\", svarar pappa. \"Vi kan hänga ut en fågelmatare.\"\n\nDe gör en matare av en tom mjölkkartong. Willma klipper ett hål i sidan och fyller med solrosfrön. Pappa hjälper henne att hänga den i trädet.\n\nNästa dag kommer fågeln tillbaka och äter. Snart kommer fler. Willma räknar tre stycken. Hon ritar dem i sitt block och skriver vad de gör.",
     "questions": [
       {
         "type": "literal",
@@ -7652,7 +7652,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1444464666168-49d633b86797?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 108
+      "wordCount": 89
     }
   },
   {
@@ -7741,7 +7741,7 @@
     "genre": "berättelse",
     "theme": "hjälpsamhet",
     "title": "Grannens tunga kasse",
-    "text": "Saga och hennes bror Ville satt på trappen hemma. De såg grannfrun Margit komma gående med två tunga kassar. Margit stannade och pustade.\n\n\"Ska vi hjälpa dig?\" frågade Saga.\n\nMargit log. \"Det vore snällt. Jag bor ju bara där borta.\"\n\nSaga tog en kasse och Ville tog den andra. De gick sakta bredvid Margit till hennes dörr. I kassen fanns mjölk, bröd, äpplen och en tidning.\n\n\"Tack, barn,\" sa Margit. \"Ni är riktiga hjältar. Vill ni ha var sin kaka?\"\n\nDe fick en kanelbulle var. Saga och Ville satte sig på Margits bänk och åt.\n\n\"Det känns bra att hjälpa,\" sa Ville.\n\n\"Ja,\" sa Saga. \"Och man får kanelbullar.\"",
+    "text": "Saga och hennes bror Ville satt på trappen hemma. De såg grannfrun Margit komma gående med två tunga kassar. Margit stannade och pustade.\n\n\"Ska vi hjälpa dig?\" frågade Saga.\n\nMargit log. \"Det vore snällt.\"\n\nSaga tog en kasse och Ville tog den andra. I kassen fanns mjölk, bröd, äpplen och en tidning.\n\n\"Tack, barn\", sa Margit. \"Vill ni ha var sin kaka?\"\n\nDe fick en kanelbulle var.\n\n\"Det känns bra att hjälpa\", sa Ville.\n\n\"Ja\", sa Saga. \"Och man får kanelbullar.\"",
     "questions": [
       {
         "type": "literal",
@@ -7812,7 +7812,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 109
+      "wordCount": 81
     }
   },
   {
@@ -7978,7 +7978,7 @@
   {
     "id": "ak2-tema-006",
     "title": "Enhörningen i skogen",
-    "text": "Enhörningar är magiska djur som finns i sagor. De liknar hästar men har ett långt horn i pannan. Många berättelser säger att hornet kan lysa i mörkret. I en liten by bodde barnet Alva som älskade sagor om enhörningar. Varje kväll tittade hon ut genom fönstret mot skogen och hoppades få se en.\n\nEn morgon såg Alva något vitt mellan träden. Det rörde sig tyst och försiktigt. Hon vågade gå närmare och såg en enhörning med silverglänsande man. Den drack vatten ur bäcken. När enhörningen märkte Alva stod den stilla och tittade på henne. Sedan sprang den mjukt in bland träden igen. Alva log och visste att hon aldrig skulle glömma den stunden.",
+    "text": "Enhörningar är magiska djur som finns i sagor. De liknar hästar men har ett långt horn i pannan.\n\nI en liten by bodde barnet Alva som älskade sagor om enhörningar. Varje kväll tittade hon ut mot skogen och hoppades få se en.\n\nEn morgon såg Alva något vitt mellan träden. Det rörde sig tyst och försiktigt. Hon vågade gå närmare och såg en enhörning med silverglänsande man. Den drack vatten ur bäcken.\n\nSedan sprang den in bland träden igen. Alva log och visste att hon aldrig skulle glömma den stunden.",
     "grade": 2,
     "category": "Kultur",
     "questions": [
@@ -8051,7 +8051,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 113
+      "wordCount": 90
     },
     "genre": "faktatext",
     "theme": "Kultur"
@@ -8059,7 +8059,7 @@
   {
     "id": "ak2-tema-007",
     "title": "Regnbågens enhörning",
-    "text": "I sagornas land finns en enhörning som heter Luma. Hon har vit päls och en man i alla regnbågens färger. När solen lyser skimrar hennes horn som en liten stjärna. Luma bor på en äng med mjukt gräs och färgglada blommor.\n\nVarje morgon springer hon över ängen och lämnar glittrande spår bakom sig. Barn som tror på magi kan ibland se spåren. En dag kom barnet Sam till ängen med sin morfar. Sam kände sig ledsen och satte sig på en sten. Då dök Luma upp. Hon stod en stund bredvid Sam och det kändes genast lite lättare i hjärtat. Sedan galopperade hon vidare mot skogen.",
+    "text": "I sagornas land finns en enhörning som heter Luma. Hon har vit päls och en man i alla regnbågens färger. Luma bor på en äng med mjukt gräs och färgglada blommor.\n\nVarje morgon springer hon över ängen och lämnar glittrande spår bakom sig.\n\nEn dag kom barnet Sam till ängen med sin morfar. Sam kände sig ledsen och satte sig på en sten. Då dök Luma upp. Hon stod en stund bredvid Sam, och det kändes genast lite lättare i hjärtat. Sedan galopperade hon vidare mot skogen.",
     "grade": 2,
     "category": "Kultur",
     "questions": [
@@ -8132,7 +8132,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 106
+      "wordCount": 87
     },
     "genre": "berättelse",
     "theme": "Kultur"
@@ -8140,7 +8140,7 @@
   {
     "id": "ak2-tema-008",
     "title": "Enhörningen som hjälpte till",
-    "text": "En liten enhörning bodde nära en by där många barn lekte. Den hette Orion och var nyfiken på människorna. Varje kväll smög Orion fram till kanten av byn för att titta.\n\nEn dag tappade barnet Leila sin röda boll i en buske med taggar. Hon vågade inte ta tillbaka den. Orion såg vad som hände. Med sitt horn lyfte han försiktigt bort grenarna så att bollen blev fri. Leila blev förvånad men också glad.\n\nOrion sprang snabbt tillbaka mot ängen innan någon vuxen hann se honom. Leila berättade för sina vänner om den snälla enhörningen. Ingen visste säkert om det var sant, men många började hålla utkik efter glittrande spår på marken.",
+    "text": "En liten enhörning bodde nära en by där många barn lekte. Den hette Orion och var nyfiken på människorna.\n\nEn dag tappade barnet Leila sin röda boll i en buske med taggar. Hon vågade inte ta tillbaka den. Orion såg vad som hände. Med sitt horn lyfte han försiktigt bort grenarna så att bollen blev fri. Leila blev förvånad men också glad.\n\nOrion sprang snabbt tillbaka mot ängen. Leila berättade för sina vänner om den snälla enhörningen, och många började hålla utkik efter glittrande spår på marken.",
     "grade": 2,
     "category": "Kultur",
     "questions": [
@@ -8213,7 +8213,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 112
+      "wordCount": 87
     },
     "genre": "berättelse",
     "theme": "Kultur"
@@ -8221,7 +8221,7 @@
   {
     "id": "ak2-tema-009",
     "title": "Enhörningens hemlighet",
-    "text": "Det sägs att enhörningar bara visar sig för den som är snäll. I en skog nära en sjö bodde en gammal enhörning med gyllene horn. Den höll sig gömd bland träden.\n\nBarnet Noa brukade gå till sjön för att mata änderna. Noa var försiktig och skräpade aldrig ner. En kväll när solen gick ner hördes ett mjukt ljud bakom buskarna. Den gamla enhörningen klev fram.\n\nDen böjde sitt huvud och lät hornet lysa svagt. Noa stod stilla och log. Efter en stund försvann enhörningen lika tyst som den kommit. Noa berättade inte för alla, utan sparade mötet som en hemlighet i sitt hjärta.",
+    "text": "Det sägs att enhörningar bara visar sig för den som är snäll. I en skog nära en sjö bodde en gammal enhörning med gyllene horn.\n\nBarnet Noa brukade gå till sjön för att mata änderna. Noa var försiktig och skräpade aldrig ner.\n\nEn kväll när solen gick ner hördes ett mjukt ljud bakom buskarna. Den gamla enhörningen klev fram. Den böjde sitt huvud och lät hornet lysa svagt. Noa stod stilla och log.\n\nNoa berättade inte för alla, utan sparade mötet som en hemlighet i sitt hjärta.",
     "grade": 2,
     "category": "Kultur",
     "questions": [
@@ -8294,7 +8294,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 103
+      "wordCount": 87
     },
     "genre": "berättelse",
     "theme": "Kultur"
@@ -8302,7 +8302,7 @@
   {
     "id": "ak2-tema-010",
     "title": "Enhörningen och snön",
-    "text": "En kall vinterdag föll snön över fälten. I skogen bodde en ung enhörning som hette Frost. Hans päls var nästan lika vit som snön. När han gick lämnade han små spår bakom sig.\n\nBarnen Amina och Leo byggde en snögubbe nära skogen. Plötsligt såg de något röra sig mellan träden. Det var Frost som försiktigt klev ut på fältet. Han sniffade på snögubben och fnös till.\n\nAmina och Leo stod helt stilla. De ville inte skrämma honom. Frost tittade på dem med stora ögon och skrapade lätt med hoven i snön. Sedan vände han och sprang tillbaka in i skogen. Barnen viskade till varandra att de just hade sett något magiskt.",
+    "text": "En kall vinterdag föll snön över fälten. I skogen bodde en ung enhörning som hette Frost. Hans päls var nästan lika vit som snön.\n\nBarnen Amina och Leo byggde en snögubbe nära skogen. Plötsligt såg de något röra sig mellan träden. Det var Frost som försiktigt klev ut på fältet.\n\nAmina och Leo stod helt stilla. De ville inte skrämma honom. Frost tittade på dem med stora ögon. Sedan vände han och sprang tillbaka in i skogen.\n\nBarnen viskade till varandra att de just hade sett något magiskt.",
     "grade": 2,
     "category": "Kultur",
     "questions": [
@@ -8375,7 +8375,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1534447677941-ce074f5b6617?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 111
+      "wordCount": 88
     },
     "genre": "berättelse",
     "theme": "Kultur"
@@ -10129,7 +10129,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Tävlingen med äpplen",
-    "text": "På skolans höstfest ordnar lärarna en rolig tävling med äpplen. Eleverna delas in i små lag. Varje lag får en skål med vatten där flera äpplen flyter. Uppgiften är att få upp ett äpple utan att använda händerna. Barnen måste istället försöka ta äpplet med munnen. Det blir mycket skratt när någon nästan lyckas men äpplet glider iväg igen. Läraren Maria förklarar att äpplen flyter eftersom de innehåller mycket luft inuti. Därför sjunker de inte till botten. Efter tävlingen får alla äta äpplena eller ta med dem hem. Vinnarlaget får också en liten korg med extra frukt. Många elever säger att det var den roligaste delen av hela höstfesten.",
+    "text": "På skolans höstfest ordnar lärarna en rolig tävling med äpplen. Eleverna delas in i små lag. Varje lag får en skål med vatten där flera äpplen flyter. Uppgiften är att få upp ett äpple utan att använda händerna. Barnen måste i stället ta äpplet med munnen.\n\nDet blir mycket skratt när någon nästan lyckas men äpplet glider iväg igen.\n\nLäraren Maria förklarar att äpplen flyter eftersom de innehåller mycket luft.\n\nVinnarlaget får en liten korg med extra frukt. Många elever säger att det var det roligaste på hela höstfesten.",
     "questions": [
       {
         "type": "literal",
@@ -10199,7 +10199,7 @@
       }
     ],
     "meta": {
-      "wordCount": 109,
+      "wordCount": 89,
       "fingerprint": "ak3-tema-005",
       "generatedAt": "2026-03-13T12:58:05.128Z",
       "model": "claude"
@@ -10209,7 +10209,7 @@
   {
     "id": "ak3-tema-006",
     "title": "Cykeln som blev stulen",
-    "text": "En måndag efter skolan gick Amina hem med sin kompis Leo. De stannade vid cykelstället för att hämta Aminas cykel. Men platsen var tom. Amina kände hur magen knöt sig. Hon tittade runt och såg ett trasigt lås på marken. Leo föreslog att de skulle fråga vaktmästaren. Vaktmästaren hette Rune och sa att flera cyklar hade försvunnit den senaste veckan. Han följde med dem och skrev ner färg och märke på cykeln. Sedan ringde han Aminas mamma. Amina fick låna skolans reservcykel för att ta sig hem. På kvällen gjorde Amina och hennes mamma en polisanmälan. Dagen efter satt en lapp på skolans dörr: \"Kom ihåg att låsa cykeln med två lås.\"",
+    "text": "En måndag efter skolan stannade Amina vid cykelstället för att hämta sin cykel. Men platsen var tom.\n\nAmina kände hur magen knöt sig. Hon tittade runt och såg ett trasigt lås på marken.\n\nVaktmästaren Rune sa att flera cyklar hade försvunnit. Han skrev ner färg och märke på cykeln och ringde Aminas mamma. Amina fick låna skolans reservcykel för att ta sig hem.\n\nPå kvällen gjorde Amina och hennes mamma en polisanmälan. Dagen efter satt en lapp på skolans dörr: \"Kom ihåg att låsa cykeln med två lås.\"",
     "grade": 2,
     "category": "Samhälle",
     "questions": [
@@ -10282,7 +10282,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1505705694340-019e5d6e2eb2?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 112
+      "wordCount": 88
     },
     "genre": "berättelse",
     "theme": "Samhälle"
@@ -11586,7 +11586,7 @@
   {
     "id": "ak3-tema-023",
     "title": "Hur choklad blir till",
-    "text": "För att göra Marabous choklad börjar allt med kakaobönor. De växer på träd i varma länder nära ekvatorn. Bönder plockar bönorna och låter dem torka i solen. Sedan skickas de med båt till fabriker i andra länder. När bönorna kommer fram rostas de så att smaken blir starkare. Efter rostningen mals bönorna till en massa. I massan blandas socker och ibland mjölkpulver. Blandningen rörs länge tills den blir mjuk och len. Därefter hälls chokladen i formar som ger den rätt form. Formarna kyls så att chokladen stelnar. Till sist packas plattorna i papper och skickas till affärer. Det är en lång resa från kakaoträd till butikshylla. Många människor arbetar tillsammans för att vi ska kunna köpa en färdig chokladkaka.",
+    "text": "För att göra Marabous choklad börjar allt med kakaobönor. De växer på träd i varma länder nära ekvatorn. Bönder plockar bönorna och låter dem torka i solen. Sedan skickas de med båt till fabriker i andra länder.\n\nNär bönorna kommer fram rostas de så att smaken blir starkare. Efter rostningen mals de till en massa. I massan blandas socker och ibland mjölkpulver.\n\nDärefter hälls chokladen i formar. Formarna kyls så att chokladen stelnar. Till sist packas plattorna och skickas till affärer.",
     "grade": 2,
     "category": "Teknik",
     "questions": [
@@ -11659,7 +11659,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 119
+      "wordCount": 81
     },
     "genre": "faktatext",
     "theme": "Teknik"
@@ -12164,7 +12164,7 @@
     "genre": "berättelse",
     "theme": "äventyr",
     "title": "Skatten i skogen",
-    "text": "Emma och Leo gick djupt in i skogen en solig lördagsmorgon. De hade hittat en gammal karta på vinden hemma hos mormor. Kartan visade en stig som ledde till ett stort träd med ett rött kryss på stammen.\n\nEfter en timmes vandring såg de äntligen trädet. Det var en jättelik ek med tjocka grenar. Vid rötterna hittade de en rostig låda. Inuti låg gamla guldmynt och ett brev från mormors morfar.\n\nI brevet stod det att han hade gömt skatten för hundra år sedan. Han hoppades att någon i familjen skulle hitta den en dag. Emma och Leo skyndade hem för att visa mormor vad de hade hittat.",
+    "text": "Emma och Leo gick djupt in i skogen. De hade hittat en gammal karta på vinden hemma hos mormor. Kartan visade ett stort träd med ett rött kryss på stammen.\n\nEfter en timmes vandring såg de trädet. Vid rötterna hittade de en rostig låda. Inuti låg gamla guldmynt och ett brev från mormors morfar.\n\nI brevet stod det att han hade gömt skatten för hundra år sedan. Han hoppades att någon i familjen skulle hitta den en dag.\n\nEmma och Leo skyndade hem för att visa mormor.",
     "questions": [
       {
         "type": "literal",
@@ -12234,7 +12234,7 @@
       }
     ],
     "meta": {
-      "wordCount": 108,
+      "wordCount": 87,
       "fingerprint": "sample004",
       "generatedAt": "2025-01-01T00:00:00.000Z",
       "model": "sample"
@@ -12887,7 +12887,7 @@
     "genre": "faktatext",
     "theme": "geografi",
     "title": "Vulkaner och lava",
-    "text": "En vulkan är ett berg som kan få utbrott. Djupt nere i jorden finns het magma. När trycket blir för stort kan magman pressas upp genom vulkanen. När den kommer upp på marken kallas den lava.\n\nEtt vulkanutbrott kan vara farligt. Lava är mycket varm och kan förstöra hus och vägar. Det kan också komma aska som sprids i luften. Ibland måste människor flytta från sina hem för att vara säkra.\n\nSamtidigt kan vulkaner skapa ny mark. När lavan svalnar blir den hård sten. På vissa platser har nya öar bildats efter utbrott.\n\nForskare studerar vulkaner för att försöka förstå när de kan få utbrott. På så sätt kan man varna människor i tid.",
+    "text": "En vulkan är ett berg som kan få utbrott. Djupt nere i jorden finns het magma. När trycket blir för stort pressas magman upp genom vulkanen. När den kommer upp på marken kallas den lava.\n\nEtt vulkanutbrott kan vara farligt. Lava är mycket varm och kan förstöra hus och vägar. Det kan också komma aska som sprids i luften.\n\nNär lavan svalnar blir den hård sten.\n\nForskare studerar vulkaner för att förstå när de kan få utbrott. På så sätt kan man varna människor i tid.",
     "questions": [
       {
         "type": "literal",
@@ -12957,7 +12957,7 @@
       }
     ],
     "meta": {
-      "wordCount": 114,
+      "wordCount": 86,
       "fingerprint": "ak4-geo-vulkan-001",
       "generatedAt": "2026-02-28T12:50:32.184Z",
       "model": "claude"
@@ -12970,7 +12970,7 @@
     "genre": "faktatext",
     "theme": "hälsa",
     "title": "Att cykla säkert",
-    "text": "Att cykla är roligt och bra motion. Många barn cyklar till skolan eller till sina vänner. För att cykla säkert är det viktigt att använda hjälm. Hjälmen skyddar huvudet om man ramlar.\n\nDet är också viktigt att cykeln har fungerande bromsar och ringklocka. Om det är mörkt ute ska cykeln ha lampor och reflexer så att andra trafikanter ser dig.\n\nNär man cyklar i trafiken måste man följa regler. Man ska stanna vid rött ljus och visa med handen om man ska svänga. Det är bra att hålla uppsikt och inte använda mobilen när man cyklar.\n\nGenom att vara försiktig och följa reglerna minskar risken för olyckor. Då kan cyklingen vara både trygg och rolig.",
+    "text": "Att cykla är roligt och bra motion. Många barn cyklar till skolan eller till sina vänner. För att cykla säkert är det viktigt att använda hjälm. Hjälmen skyddar huvudet om man ramlar.\n\nOm det är mörkt ute ska cykeln ha lampor och reflexer så att andra ser dig.\n\nI trafiken måste man följa regler. Man ska stanna vid rött ljus och visa med handen om man ska svänga. Det är bra att hålla uppsikt och inte använda mobilen när man cyklar.",
     "questions": [
       {
         "type": "inferens",
@@ -13040,7 +13040,7 @@
       }
     ],
     "meta": {
-      "wordCount": 115,
+      "wordCount": 81,
       "fingerprint": "ak4-halsa-cykel-001",
       "generatedAt": "2026-02-28T12:50:32.184Z",
       "model": "claude"
@@ -14520,7 +14520,7 @@
     "genre": "faktatext",
     "theme": "geografi",
     "title": "Spanien – sol och traditioner",
-    "text": "Spanien ligger i sydvästra Europa. Landet har kust mot både Medelhavet och Atlanten. Huvudstaden heter Madrid. I Spanien talar man spanska.\n\nMånga turister besöker Spanien för det varma klimatet. På sommaren är det ofta soligt och varmt. Det finns långa stränder där människor badar och solar.\n\nSpanien är också känt för sina traditioner. En känd dans heter flamenco. Den dansas med starka känslor och snabb musik. I vissa städer firas färgglada festivaler med parader och musik.\n\nMaten i Spanien är varierad. En känd rätt är paella som lagas med ris och olika ingredienser. Många äter också tapas, som är små rätter man delar.\n\nSpanien är ett land med både livliga städer och vacker natur.",
+    "text": "Spanien ligger i sydvästra Europa. Landet har kust mot både Medelhavet och Atlanten. Huvudstaden heter Madrid.\n\nMånga turister besöker Spanien för det varma klimatet. På sommaren är det ofta soligt och varmt. Det finns långa stränder där människor badar.\n\nSpanien är också känt för sina traditioner. En känd dans heter flamenco. Den dansas med starka känslor och snabb musik.\n\nMaten är varierad. En känd rätt är paella som lagas med ris. Många äter också tapas, som är små rätter man delar.",
     "questions": [
       {
         "type": "literal",
@@ -14590,7 +14590,7 @@
       }
     ],
     "meta": {
-      "wordCount": 114,
+      "wordCount": 81,
       "fingerprint": "ak4-tema-007",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
@@ -15169,7 +15169,7 @@
     "genre": "faktatext",
     "theme": "vetenskap",
     "title": "Rymden och planeterna",
-    "text": "Rymden är det stora området utanför jorden. Där finns planeter, stjärnor och galaxer. Jorden är en av åtta planeter som kretsar runt solen.\n\nSolen är en stjärna som ger oss ljus och värme. Månen kretsar runt jorden och lyser på natten. Ibland kan vi se planeter som Mars och Venus som små ljuspunkter på himlen.\n\nAstronauter är personer som reser ut i rymden med raketer. De arbetar på rymdstationer och gör experiment. I rymden finns nästan ingen luft, därför måste astronauter ha speciella dräkter.\n\nForskare använder teleskop för att studera rymden. Genom att titta på stjärnorna kan de lära sig mer om universum och hur det bildades.",
+    "text": "Rymden är det stora området utanför jorden. Där finns planeter, stjärnor och galaxer. Jorden är en av åtta planeter som kretsar runt solen.\n\nSolen är en stjärna som ger oss ljus och värme. Månen kretsar runt jorden och lyser på natten.\n\nAstronauter är personer som reser ut i rymden med raketer. I rymden finns nästan ingen luft, därför måste astronauter ha speciella dräkter.\n\nForskare använder teleskop för att studera rymden. Genom att titta på stjärnorna kan de lära sig mer om universum.",
     "questions": [
       {
         "type": "literal",
@@ -15239,7 +15239,7 @@
       }
     ],
     "meta": {
-      "wordCount": 107,
+      "wordCount": 82,
       "fingerprint": "ak4-vetenskap-rymd-001",
       "generatedAt": "2026-02-28T12:50:32.184Z",
       "model": "claude"
