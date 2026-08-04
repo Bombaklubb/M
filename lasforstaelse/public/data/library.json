@@ -31198,77 +31198,77 @@
     "genre": "faktatext",
     "theme": "Hälsa",
     "title": "Att må bra i vardagen",
-    "text": "Hälsa handlar inte bara om kroppen utan också om hur vi mår mentalt. För att må bra i vardagen är det viktigt att hitta balans mellan arbete, vila och fritid. Många ungdomar upplever stress från skola, sociala medier och krav från omgivningen.\n\nFysisk aktivitet är en viktig del av hälsa. Att röra på sig regelbundet kan förbättra både kropp och sinne. Det behöver inte vara avancerad träning, utan kan vara promenader, cykling eller att spela sport.\n\nSömn är också avgörande. Utan tillräcklig sömn blir det svårare att koncentrera sig och hantera känslor. Att ha rutiner kring läggdags kan hjälpa kroppen att återhämta sig.\n\nSociala relationer spelar en stor roll för hur vi mår. Att ha någon att prata med och känna stöd från vänner eller familj är viktigt. Samtidigt behöver man ibland tid för sig själv.\n\nGenom att ta hand om både kropp och sinne kan man skapa en hållbar livsstil som främjar välmående.",
+    "text": "Hälsa handlar inte bara om kroppen utan också om hur vi mår mentalt. För att må bra i vardagen är det viktigt att hitta balans mellan skola, vila och fritid. Många ungdomar upplever stress från skola, sociala medier och krav från omgivningen.\n\nStress i sig är inte farligt. Kroppen reagerar på en utmaning genom att göra sig redo: pulsen ökar, uppmärksamheten skärps och energin riktas mot det som ska klaras av. Det är en användbar reaktion inför ett prov eller en match. Problemet uppstår när stressen aldrig släpper och det inte finns någon återhämtning mellan topparna. Då börjar samma reaktion som var hjälpsam att slita på kroppen i stället.\n\nFysisk aktivitet är en viktig del av hälsa. Att röra på sig regelbundet kan förbättra både kropp och sinne. Det behöver inte vara avancerad träning, utan kan vara promenader, cykling eller att spela sport. Forskningen är tydlig med att effekten på humöret kommer snabbt, ofta redan samma dag, medan effekterna på konditionen tar veckor. Den som rör sig för att må bättre behöver alltså inte vänta länge på ett resultat.\n\nSömn är också avgörande. Utan tillräcklig sömn blir det svårare att koncentrera sig och hantera känslor. Under sömnen bearbetas dessutom det man lärt sig under dagen, vilket gör att en natts sömn ibland är mer värd än en timmes extra plugg. Ungdomar behöver mer sömn än vuxna, samtidigt som kroppens dygnsrytm skjuts framåt i tonåren så att det blir svårare att somna tidigt. Det är en av anledningarna till att morgnarna upplevs som tyngre just under de åren.\n\nMaten spelar roll, men på ett mindre dramatiskt sätt än många budskap på nätet påstår. Regelbundna måltider håller blodsockret jämnare, och den som hoppar över frukost märker det ofta på koncentrationen framåt förmiddagen. Enskilda livsmedel avgör sällan hur någon mår. Det är helheten över tid som betyder något.\n\nSociala relationer spelar en stor roll för hur vi mår. Att ha någon att prata med och känna stöd från vänner eller familj är viktigt. Samtidigt behöver man ibland tid för sig själv. Ensamhet och att vara ensam är inte samma sak: den som trivs med egen tid mår inte sämre för det, medan den som saknar någon att vända sig till gör det.\n\nDet man ser i sitt flöde påverkar också bilden av hur andra har det. Ett flöde visar sällan tråkiga eftermiddagar eller dåliga dagar, och den som jämför sin egen vardag med andras höjdpunkter kommer alltid att förlora jämförelsen.\n\nDet är också värt att skilja på underhållning och återhämtning. Att skrolla en timme kan kännas som vila utan att kroppen faktiskt varvar ner. Riktig återhämtning är ofta tråkigare: en promenad, en stund utan skärm, en natts ordentlig sömn.\n\nIbland räcker inte egna rutiner. Om nedstämdhet eller oro håller i sig i veckor och påverkar både skolan och kompisarna är det ett skäl att prata med en vuxen, skolsköterskan eller elevhälsan. Att söka hjälp är inte ett tecken på svaghet utan på att man tar sig själv på allvar.\n\nGenom att ta hand om både kropp och sinne kan man skapa en hållbar livsstil som främjar välmående.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad handlar hälsa om?",
+        "type": "inferens",
+        "q": "Varför beskriver texten stress som ofarlig i sig?",
         "options": [
-          "Bara kroppen",
-          "Bara skolan",
-          "Kropp och sinne",
-          "Endast träning"
+          "För att kroppens reaktion hjälper en att klara en utmaning",
+          "För att stress bara drabbar den som redan mår dåligt",
+          "För att reaktionen alltid försvinner av sig själv efter en stund",
+          "För att ungdomar påverkas mindre av stress än vuxna gör"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vad kan fysisk aktivitet göra?",
+        "q": "Vad säger texten om hur snabbt träning påverkar humöret?",
         "options": [
-          "Försämra hälsa",
-          "Förbättra mående",
-          "Ge stress",
-          "Minska energi"
+          "Effekten kommer först efter några veckors träning",
+          "Effekten märks ofta redan samma dag som man rör sig",
+          "Effekten uppstår bara vid hård och avancerad träning",
+          "Effekten beror helt på hur mycket man har sovit"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Varför är sömn viktig?",
+        "type": "inferens",
+        "q": "Varför blir morgnarna tyngre under tonåren?",
         "options": [
-          "För plånboken",
-          "För tekniken",
-          "För matlusten",
-          "För koncentration"
+          "För att skoldagarna blir längre ju äldre man blir",
+          "För att träning på kvällarna stör den djupa sömnen",
+          "För att dygnsrytmen skjuts framåt medan sömnbehovet är stort",
+          "För att sömnbehovet minskar snabbare än vanorna hinner ändras"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad menas med att \"helheten över tid\" är det som betyder något?",
+        "options": [
+          "Att man bör äta ungefär samma sak varje dag",
+          "Att kosttillskott kan ersätta vanliga måltider",
+          "Att maten spelar mindre roll än vad sömnen gör",
+          "Att vanorna sammantaget väger tyngre än enstaka val"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vad ger sociala relationer?",
+        "q": "Vilken skillnad gör texten mellan ensamhet och att vara ensam?",
         "options": [
-          "Stress",
-          "Trötthet",
-          "Stöd",
-          "Problem"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "forfattarens-syfte",
-        "q": "Vad behöver man ibland?",
-        "options": [
-          "Mer skola",
-          "Tid för sig själv",
-          "Mer träning",
-          "Fler krav"
+          "Att ensamhet framför allt drabbar de yngsta eleverna",
+          "Att den som trivs med egen tid inte mår sämre av den",
+          "Att den som är ensam alltid blir nedstämd till slut",
+          "Att skillnaden handlar om hur många vänner man har"
         ],
         "correct": 1
       },
       {
         "type": "sammanfatta",
-        "q": "Vad är huvudbudskapet?",
+        "q": "Vilken hållning har texten till hälsoråd?",
         "options": [
-          "Träning är viktigast",
-          "Balans i livet ger hälsa",
-          "Sömn är oviktig",
-          "Skola orsakar allt"
+          "Att råden är verkningslösa om man inte följer dem alla",
+          "Att kosten är den enskilt viktigaste faktorn för måendet",
+          "Att flera vanor samverkar och att hjälp finns när de inte räcker",
+          "Att unga sällan behöver fundera över sin egen hälsa"
         ],
-        "correct": 1
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 154,
+      "wordCount": 514,
       "fingerprint": "ak7-tema-030",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
@@ -33605,77 +33605,77 @@
     "genre": "faktatext",
     "theme": "Historia",
     "title": "Tryckpressens betydelse",
-    "text": "När tryckpressen utvecklades på 1400-talet förändrades samhället i grunden. Innan dess skrevs böcker för hand, vilket gjorde dem dyra och ovanliga. Med tryckpressen kunde texter produceras snabbare och i större mängder.\n\nDetta ledde till att fler människor fick tillgång till kunskap. Böcker blev billigare och kunde spridas över större områden. Utbildning blev mer tillgänglig, och fler lärde sig läsa.\n\nTryckpressen spelade också en viktig roll i spridningen av idéer. Under reformationen användes den för att sprida religiösa texter och kritik mot kyrkan. Detta bidrog till stora förändringar i Europa.\n\nSamtidigt fanns det motstånd. Vissa makthavare försökte kontrollera vad som fick tryckas, eftersom de var rädda för att förlora inflytande.\n\nPå lång sikt bidrog tryckpressen till utvecklingen av vetenskap, demokrati och yttrandefrihet. Den gjorde det möjligt för människor att dela tankar och diskutera idéer på ett helt nytt sätt.\n\nIdag kan vi se likheter med internet, som också sprider information snabbt. Precis som då finns både möjligheter och utmaningar.",
+    "text": "När tryckpressen utvecklades på 1400-talet förändrades samhället i grunden. Innan dess skrevs böcker för hand, vilket gjorde dem dyra och ovanliga. Med tryckpressen kunde texter produceras snabbare och i betydligt större mängder.\n\nDet avgörande var inte pressen i sig utan de lösa typerna. Johannes Gutenberg göt enskilda bokstäver i metall som kunde sättas ihop till en sida, tryckas i många exemplar och sedan plockas isär och användas på nytt. Själva pressen lånade han från vinframställningen. Tekniken med rörliga typer fanns redan i Kina och Korea, men det latinska alfabetets få tecken gjorde metoden särskilt användbar i Europa.\n\nArbetet i ett tryckeri var ett hantverk. En sättare plockade bokstav för bokstav ur ett fack och byggde upp sidan spegelvänt, rad för rad. En van sättare kunde hantera omkring tusen tecken i timmen, vilket var långsamt jämfört med i dag men oerhört snabbt jämfört med att skriva av en hel bok för hand.\n\nDetta ledde till att fler människor fick tillgång till kunskap. Böcker blev billigare och kunde spridas över större områden. Utbildning blev mer tillgänglig, och fler lärde sig läsa. Förändringen gick fort: under de första femtio åren efter Gutenbergs verkstad trycktes miljontals böcker i Europa, fler än vad avskrivarna hunnit framställa under flera århundraden.\n\nTryckpressen spelade också en viktig roll i spridningen av idéer. Under reformationen användes den för att sprida religiösa texter och kritik mot kyrkan. Martin Luthers teser översattes, trycktes och såldes i hela Tyskland inom några veckor, långt snabbare än kyrkan hann formulera ett svar. Att Bibeln kunde tryckas på folkspråk innebar dessutom att människor kunde läsa den utan en präst som mellanhand. Detta bidrog till stora förändringar i Europa.\n\nSamtidigt fanns det motstånd. Vissa makthavare försökte kontrollera vad som fick tryckas, eftersom de var rädda för att förlora inflytande. Kyrkan upprättade listor över förbjudna böcker, och i många länder krävdes tillstånd för att över huvud taget driva ett tryckeri. Censuren var alltså inte ett undantag utan under lång tid själva regeln.\n\nTryckningen påverkade också språken. När böcker skulle säljas i ett helt land behövde stavningen bli enhetlig, och de former som råkade användas av de största tryckerierna blev normen. Många av de stavningsregler vi i dag uppfattar som självklara går tillbaka på praktiska beslut i tryckerier för flera hundra år sedan.\n\nI Sverige kom den första tryckta boken ut 1483, och länge var det kyrkan och kungamakten som bestämde vad som fick tryckas. Först 1766 fick landet en tryckfrihetsförordning, som var bland de första i världen. Den innebar att myndigheternas handlingar blev offentliga och att det gick att kritisera makten i tryck utan att först be om lov.\n\nDet är också värt att komma ihåg att pressen spred allt slags innehåll. Samma teknik som gjorde vetenskapliga arbeten tillgängliga tryckte handböcker för häxprocesser, rykten och propaganda. Att information sprids snabbare säger ingenting om hur sann den är.\n\nPå lång sikt bidrog tryckpressen ändå till utvecklingen av vetenskap, demokrati och yttrandefrihet. Den gjorde det möjligt för människor att dela tankar och diskutera idéer på ett helt nytt sätt. Forskare kunde bygga vidare på varandras resultat eftersom de kunde vara säkra på att läsa exakt samma text, något som handskrifter med sina avskrivningsfel aldrig kunnat garantera.\n\nIdag kan vi se likheter med internet, som också sprider information snabbt. Precis som då finns både möjligheter och utmaningar, och precis som då tog det tid innan samhället hittade sätt att hantera dem.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad förändrades med tryckpressen?",
+        "q": "Vad var det avgörande med Gutenbergs uppfinning?",
         "options": [
-          "Hur böcker producerades",
-          "Hur varor transporterades",
-          "Hur klimatet förändrades",
-          "Hur jordbruket sköttes"
+          "Att pressen kunde drivas med hjälp av vattenkraft",
+          "Att papperet blev betydligt billigare att tillverka",
+          "Att lösa typer kunde sättas ihop och sedan återanvändas",
+          "Att bläcket torkade mycket snabbare än tidigare"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blev metoden särskilt användbar just i Europa?",
+        "options": [
+          "För att det latinska alfabetet har förhållandevis få tecken",
+          "För att europeiska språk skrivs från vänster till höger",
+          "För att Kina saknade tillgång till papper vid samma tid",
+          "För att de europeiska städerna låg tätare intill varandra"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vad blev en effekt?",
+        "q": "Vad hände med Luthers teser?",
         "options": [
-          "Färre böcker",
-          "Dyrare utbildning",
-          "Mer tillgång till kunskap",
-          "Mindre läsning"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Hur användes tryckpressen under reformationen?",
-        "options": [
-          "För att bygga kyrkor",
-          "För att sprida idéer",
-          "För att stoppa böcker",
-          "För att skapa pengar"
+          "De förbjöds innan de hann tryckas i någon upplaga",
+          "De spreds i hela Tyskland inom loppet av några veckor",
+          "De skrevs av för hand i klostren under flera år",
+          "De översattes till tyska först ett sekel senare"
         ],
         "correct": 1
       },
       {
         "type": "inferens",
-        "q": "Varför försökte vissa kontrollera tryckning?",
+        "q": "Varför skriver texten att censuren var regeln snarare än undantaget?",
         "options": [
-          "För att spara papper",
-          "För att hjälpa läsare",
-          "För att undvika konkurrens",
-          "För att behålla makt"
+          "För att böcker sällan lästes utanför de större städerna",
+          "För att tryckerierna själva valde bort känsligt innehåll",
+          "För att läskunnigheten var för låg för att oroa makten",
+          "För att förbudslistor och tillstånd var vanliga i många länder"
         ],
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vad bidrog tryckpressen till?",
+        "type": "inferens",
+        "q": "Varför nämns handböcker för häxprocesser?",
         "options": [
-          "Vetenskap och demokrati",
-          "Krig",
-          "Mindre utbildning",
-          "Färre idéer"
+          "För att förklara varför censuren infördes så tidigt",
+          "För att jämföra kyrkans makt med statens vid samma tid",
+          "För att peka ut vilken sorts böcker som trycktes mest",
+          "För att visa att tekniken spred allt slags innehåll"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vad jämförs med tryckpressen idag?",
+        "type": "sammanfatta",
+        "q": "Vilken jämförelse med internet gör texten?",
         "options": [
-          "Radio",
-          "TV",
-          "Internet",
-          "Telefon"
+          "Att internet spridit mer felaktig information än pressen gjorde",
+          "Att båda spred information snabbt innan samhället hann anpassa sig",
+          "Att internet gjort tryckta böcker i stort sett överflödiga",
+          "Att båda framför allt kom att gynna dem som redan hade makt"
         ],
-        "correct": 2
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 158,
+      "wordCount": 561,
       "fingerprint": "ak8-tema-024",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
@@ -34684,77 +34684,77 @@
     "genre": "faktatext",
     "theme": "Djur",
     "title": "Kattens beteende och relation till människor",
-    "text": "Katter är ett av de vanligaste husdjuren i världen. De har levt tillsammans med människor i tusentals år, men till skillnad från hundar har de behållit mycket av sitt självständiga beteende. Katter jagar ofta ensamma och kan klara sig själva under kortare perioder.\n\nTrots detta kan katter skapa starka band till sina ägare. De kommunicerar genom kroppsspråk, ljud och beteenden som att spinna eller stryka sig mot människor. Forskning visar att katter kan känna igen sina ägares röster och reagera på dem.\n\nKatter är också kända för sin nyfikenhet. De utforskar gärna nya miljöer och kan tillbringa lång tid med att observera sin omgivning. Samtidigt behöver de trygghet och rutiner för att må bra.\n\nDet finns olika uppfattningar om hur katter ska hållas. Vissa menar att de bör få gå fritt utomhus, medan andra förespråkar innekatter för att skydda både djuret och naturen.\n\nKattens roll som husdjur fortsätter att utvecklas i takt med att människors livsstil förändras.",
+    "text": "Katter är ett av de vanligaste husdjuren i världen. De har levt tillsammans med människor i tusentals år, men till skillnad från hundar har de behållit mycket av sitt självständiga beteende. Katter jagar ofta ensamma och kan klara sig själva under kortare perioder.\n\nHistorien bakom det förklarar en del. Tamkatten härstammar från den afrikanska vildkatten, och de första kontakterna med människor uppstod troligen kring de tidiga jordbrukarnas sädesförråd. Där fanns möss, och därmed fanns det mat. Katten sökte alltså upp människan av eget intresse, snarare än att fångas in och avlas fram för en bestämd uppgift på det sätt som hunden i hög grad gjorde. Skillnaden märks fortfarande i hur de två djuren förhåller sig till oss.\n\nKattens sinnen förklarar mycket av beteendet. Ögonen är byggda för skymning och klarar sig med betydligt mindre ljus än våra behöver, medan morrhåren känner av luftrörelser och hjälper katten att bedöma om den får plats i en öppning. Hörseln når högre toner än både vår och hundens, vilket är användbart när bytet är en mus.\n\nTrots detta kan katter skapa starka band till sina ägare. De kommunicerar genom kroppsspråk, ljud och beteenden som att spinna eller stryka sig mot människor. Forskning visar att katter kan känna igen sina ägares röster och reagera på dem.\n\nEtt märkligt förhållande gäller jamandet. Vuxna katter jamar sällan till varandra, utan ljudet används i första hand mot människor. Katten har alltså utvecklat ett sätt att tala som riktar sig mot en helt annan art. Spinnandet är svårare att tolka. Det förknippas med välbehag, men katter spinner även när de är rädda eller har ont, vilket gör att ljudet inte ensamt säger hur djuret mår.\n\nKatter är också kända för sin nyfikenhet. De utforskar gärna nya miljöer och kan tillbringa lång tid med att observera sin omgivning. Samtidigt behöver de trygghet och rutiner för att må bra. Leken hänger nära ihop med jaktbeteendet: en katt som jagar en leksaksmus följer samma mönster som vid riktig jakt, och en katt som aldrig får utlopp för det blir lätt rastlös.\n\nAtt katter sover mycket är ingen lättja. En jägare som lägger stor kraft på korta utfall behöver vila däremellan, och en katt kan sova uppemot sexton timmar per dygn. Aktiviteten är dessutom störst i gryning och skymning.\n\nBilden av katten som osocial stämmer inte heller helt. Där det finns gott om mat, till exempel kring en gård, bildar katter kolonier där honor kan hjälpa varandra med ungarna. Självständigheten handlar alltså mer om att katten klarar sig ensam än om att den föredrar det.\n\nDet finns olika uppfattningar om hur katter ska hållas. Vissa menar att de bör få gå fritt utomhus, medan andra förespråkar innekatter för att skydda både djuret och naturen. Argumenten är konkreta på båda sidor. Utekatter dödar fåglar och smådjur i mängder som studier beskriver som betydande, särskilt i områden där arterna redan är hotade. Samtidigt löper en utekatt risk att bli påkörd eller skadad, medan en innekatt behöver mer stimulans för att inte tråkas ut.\n\nI Sverige omfattas katter av djurskyddslagen på samma sätt som andra sällskapsdjur, och sedan 2023 måste de vara märkta och registrerade. Bakgrunden är att övergivna katter länge varit ett problem: ett djur utan känd ägare kan inte återlämnas, och antalet hemlösa katter har uppskattats till tiotusentals.\n\nKattens roll som husdjur fortsätter att utvecklas i takt med att människors livsstil förändras.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Hur skiljer sig katter från hundar enligt texten?",
-        "options": [
-          "De är större",
-          "De är mer självständiga",
-          "De är farligare",
-          "De lever kortare"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Hur visar katter kontakt med människor?",
-        "options": [
-          "Genom att tala",
-          "Genom kroppsspråk och ljud",
-          "Genom att skriva",
-          "Genom att springa bort"
-        ],
-        "correct": 1
-      },
-      {
         "type": "inferens",
-        "q": "Vad visar forskning om katter?",
+        "q": "Varför beskrivs katten som ett djur som sökte upp människan?",
         "options": [
-          "De kan inte höra",
-          "De känner inte människor",
-          "De känner igen röster",
-          "De alltid sover"
+          "För att den avlades fram för att vakta sädesförråden",
+          "För att den följde med människor under långa vandringar",
+          "För att sädesförråden lockade möss och därmed byten",
+          "För att den behövde skydd mot betydligt större rovdjur"
         ],
         "correct": 2
       },
       {
-        "type": "inferens",
-        "q": "Vad är katter kända för?",
+        "type": "literal",
+        "q": "Vad är särskilt med kattens jamande?",
         "options": [
-          "Lathet",
-          "Aggressivitet",
-          "Tystnad",
-          "Nyfikenhet"
+          "Det används i första hand mot människor",
+          "Det förekommer enbart hos alldeles unga katter",
+          "Det ersätter kroppsspråket helt och hållet",
+          "Det låter tydligt olika beroende på kattens ras"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför säger spinnandet inte ensamt hur katten mår?",
+        "options": [
+          "För att alla katter inte har förmågan att spinna",
+          "För att katter spinner även när de är rädda eller har ont",
+          "För att ljudet är för svagt för att kunna uppfattas",
+          "För att spinnandet nästan alltid sker under sömnen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken risk med utekatter tar texten upp för naturen?",
+        "options": [
+          "Att de sprider smittsamma sjukdomar till vilda djur",
+          "Att de tränger undan rävar och grävlingar från reviren",
+          "Att de trampar ner växtlighet i känsliga naturområden",
+          "Att de dödar fåglar och smådjur i betydande mängder"
         ],
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
-        "q": "Vad behöver katter för att må bra?",
+        "type": "literal",
+        "q": "Varför infördes kravet på märkning och registrering?",
         "options": [
-          "Endast mycket mat",
-          "Stora och tomma hus",
-          "Trygghet och rutiner",
-          "Höga ljud omkring sig"
+          "För att katter utan känd ägare inte kan återlämnas",
+          "För att underlätta försäljningen av kattungar",
+          "För att begränsa hur många katter ett hushåll får ha",
+          "För att kunna ta ut en årlig avgift av kattägare"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "sammanfatta",
-        "q": "Vad diskuteras kring katter?",
+        "q": "Vilken bild av katten ger texten som helhet?",
         "options": [
-          "Vad de helst vill äta för mat",
-          "Hur länge de sover per dygn",
-          "Hur gamla de brukar bli",
-          "Om de ska vara ute eller inne"
+          "Att katten passar allt sämre som husdjur i dagens samhälle",
+          "Att katten borde hållas inomhus helt utan undantag",
+          "Att katten är självständig men ändå formad av livet med människor",
+          "Att kattens beteende i stort sett är outforskat än så länge"
         ],
-        "correct": 3
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 157,
+      "wordCount": 558,
       "fingerprint": "ak8-tema-004",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
@@ -35929,77 +35929,77 @@
     "genre": "faktatext",
     "theme": "Samhälle",
     "title": "Ledarskap och retorik",
-    "text": "Barack Obama är känd för sin förmåga att tala inför publik. Hans tal har ofta beskrivits som inspirerande och välformulerade. Retorik, alltså konsten att övertyga genom tal, var en viktig del av hans ledarskap.\n\nHan använde ofta berättelser och personliga exempel för att nå fram till människor. Genom att knyta an till gemensamma värderingar kunde han skapa engagemang.\n\nObamas tal innehöll också tydliga budskap om hopp, förändring och ansvar. Han betonade vikten av att människor tillsammans kan påverka samhället.\n\nSamtidigt har hans retorik kritiserats av vissa som menar att ord inte alltid följdes av handling. Detta visar att ledarskap inte bara handlar om att tala, utan också om att genomföra beslut.\n\nRetorik spelar en viktig roll i politik eftersom den påverkar hur människor uppfattar budskap. En stark talare kan mobilisera stöd och skapa förtroende.\n\nObamas sätt att kommunicera har studerats av både forskare och politiker, och hans tal används ofta som exempel på effektiv retorik.",
+    "text": "Barack Obama är känd för sin förmåga att tala inför publik. Hans tal har ofta beskrivits som inspirerande och välformulerade. Retorik, alltså konsten att övertyga genom tal, var en viktig del av hans ledarskap.\n\nGenombrottet kom 2004, flera år innan han var presidentkandidat. I ett tal på Demokraternas partikonvent beskrev han sin egen bakgrund som son till en far från Kenya och en mor från Kansas, och band ihop den med bilden av ett land som inte borde delas upp i röda och blå delstater. Talet var kort, men det gjorde honom på en enda kväll till ett namn långt utanför Illinois.\n\nHan använde ofta berättelser och personliga exempel för att nå fram till människor. Genom att knyta an till gemensamma värderingar kunde han skapa engagemang. Retorikläran brukar tala om tre sätt att övertyga: genom talarens trovärdighet, genom känslor och genom sakskäl. Obama arbetade sällan med bara det ena. Ett resonemang om sjukvårdsreformen kunde börja i en enskild familjs räkningar och därifrån röra sig ut mot siffror och principer.\n\nEtt annat grepp var upprepningen. Genom att inleda flera meningar med samma ord byggde han en rytm som gjorde budskapet lätt att minnas och att stämma in i. Frasen \"Yes we can\" fungerade just så: den var kort nog att ropas av en publik och öppen nog att rymma många olika förhoppningar.\n\nOckså framförandet hörde till hantverket. Han talade långsammare än de flesta politiker och lät pauserna stå kvar, vilket gav publiken tid att uppfatta varje mening och gjorde att applåderna hann komma. Talen skrevs dessutom av ett team, ofta med Jon Favreau som huvudförfattare, vilket är vanligt men sällan syns för lyssnaren.\n\nEtt återkommande drag var att han placerade en enskild händelse i ett längre historiskt sammanhang. I talet vid minnesmarschen i Selma 2015 knöt han demonstranternas väg över bron till en berättelse om ett land som gradvis tvingats vidga sitt löfte om frihet.\n\nObamas tal innehöll också tydliga budskap om hopp, förändring och ansvar. Han betonade vikten av att människor tillsammans kan påverka samhället. I tal om rasfrågor valde han ofta att beskriva olika gruppers erfarenheter som begripliga var för sig, i stället för att peka ut en part som skyldig. Kritiker på båda sidor tyckte att det var undvikande, medan andra menade att det var det enda sättet att bli lyssnad på av fler än de redan övertygade.\n\nSamtidigt har hans retorik kritiserats av vissa som menar att ord inte alltid följdes av handling. Han lovade att stänga fånglägret i Guantánamo, vilket aldrig genomfördes. Under hans tid utvidgades användningen av drönare, och antalet utvisningar var högt. Avståndet mellan talens tonläge och besluten i vardagen blev för många det som satte sig kvar.\n\nDetta visar att ledarskap inte bara handlar om att tala, utan också om att genomföra beslut. En president är dessutom bunden av en kongress som kan säga nej, vilket gör att ett brutet löfte inte alltid är detsamma som en ovilja att hålla det.\n\nRetorik spelar en viktig roll i politik eftersom den påverkar hur människor uppfattar budskap. En stark talare kan mobilisera stöd och skapa förtroende. Samma verktyg fungerar dock oavsett vad de används till: en välbyggd mening övertygar lika effektivt när innehållet är falskt. Att kunna se hur ett tal är konstruerat är därför inte bara en fråga om att beundra hantverket, utan ett sätt att kunna värdera det som faktiskt sägs.\n\nObamas sätt att kommunicera har studerats av både forskare och politiker, och hans tal används ofta som exempel på effektiv retorik.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad är retorik?",
+        "q": "Vad gjorde talet 2004 betydelsefullt?",
         "options": [
-          "Konsten att skriva lagar",
-          "Konsten att övertyga genom tal",
-          "Att analysera ekonomi",
-          "Att leda företag"
+          "Det ledde direkt till att han valdes till president",
+          "Det gjorde honom känd långt utanför delstaten Illinois",
+          "Det var första gången han talade om sjukvårdsreformen",
+          "Det hölls kort efter att han vunnit sitt första val"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Hur nådde Obama människor i sina tal?",
+        "type": "inferens",
+        "q": "Varför kunde ett resonemang om sjukvården börja i en enskild familj?",
         "options": [
-          "Genom tekniska termer",
-          "Genom berättelser och exempel",
-          "Genom statistik enbart",
-          "Genom korta instruktioner"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vilka teman återkom i hans tal?",
-        "options": [
-          "Rädsla och kontroll",
-          "Tradition och regler",
-          "Hopp och förändring",
-          "Teknik och ekonomi"
+          "För att undvika siffror som publiken inte skulle förstå",
+          "För att sjukvårdsfrågan saknade principiella sidor",
+          "För att förena känslor och sakskäl i samma argument",
+          "För att korta ned talen inför de direktsända sändningarna"
         ],
         "correct": 2
       },
       {
-        "type": "inferens",
-        "q": "Vad har kritiker påpekat?",
+        "type": "ord",
+        "q": "Vad menas med att \"upprepningen\" var ett grepp i hans tal?",
         "options": [
-          "Att han talade alldeles för lite",
-          "Att han undvek att träffa folk",
-          "Att hans språk var för svårt",
-          "Att ord inte alltid följdes av handling"
+          "Att samma tal hölls om och om igen på flera orter",
+          "Att publiken fick öva in vissa fraser i förväg",
+          "Att budskapet förenklades till en enda kort mening",
+          "Att flera meningar inleds med samma ord och bygger en rytm"
         ],
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
-        "q": "Vad kan stark retorik göra?",
+        "type": "literal",
+        "q": "Vilket löfte nämns som aldrig genomfördes?",
         "options": [
-          "Minska intresse",
-          "Skapa stöd och förtroende",
-          "Stoppa förändring",
-          "Försvåra beslut"
+          "Att stänga fånglägret i Guantánamo",
+          "Att helt avveckla användningen av drönare",
+          "Att kraftigt minska antalet utvisningar",
+          "Att införa en helt statligt driven sjukvård"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför nämner texten att en president är bunden av kongressen?",
+        "options": [
+          "För att förklara varför tal blivit viktigare än beslut",
+          "För att visa att ett brutet löfte inte alltid beror på ovilja",
+          "För att peka ut kongressen som ansvarig för all kritik",
+          "För att jämföra amerikansk politik med den svenska"
         ],
         "correct": 1
       },
       {
-        "type": "textbevis",
-        "q": "Vad handlar texten främst om?",
+        "type": "forfattarens-syfte",
+        "q": "Varför påpekar texten att retoriska verktyg fungerar oavsett innehåll?",
         "options": [
-          "Obamas sätt att kommunicera",
-          "Landets ekonomiska läge",
-          "Utbildning i skolan",
-          "Militär strategi i krig"
+          "För att avråda läsaren från att studera retorik",
+          "För att visa att Obamas tal var mindre unika än de framstår",
+          "För att motivera varför man bör granska hur ett tal är byggt",
+          "För att förklara varför politiker sällan blir trodda i dag"
         ],
-        "correct": 0
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 155,
+      "wordCount": 579,
       "fingerprint": "ak10-obama-004",
       "generatedAt": "2026-04-14T00:00:00.000Z",
       "model": "manual"
@@ -37672,77 +37672,77 @@
     "genre": "faktatext",
     "theme": "Musik",
     "title": "Arv och påverkan",
-    "text": "Michael Jacksons påverkan på musik och kultur är fortfarande tydlig långt efter hans död 2009. Många moderna artister hänvisar till honom som en viktig inspirationskälla, både musikaliskt och visuellt. Hans sätt att kombinera olika konstformer har blivit en modell för hur artister kan uttrycka sig.\n\nHans musik fortsätter att spelas globalt och når nya generationer av lyssnare. Genom digitala plattformar har hans verk fått nytt liv och blivit tillgängliga för en bredare publik. Detta visar hur teknologiska förändringar kan bidra till att bevara kulturellt arv.\n\nJacksons arbete har också påverkat frågor om representation och identitet inom populärkulturen. Hans framgång bidrog till att öppna dörrar för artister från olika bakgrunder.\n\nSamtidigt diskuteras hans arv ofta i relation till de kontroverser som omgav honom. Detta gör att hans eftermäle är komplext och föremål för olika tolkningar.\n\nTexten visar att Michael Jacksons betydelse inte bara ligger i hans musik utan också i hans långsiktiga påverkan på kultur och samhälle.",
+    "text": "Michael Jacksons påverkan på musik och kultur är fortfarande tydlig långt efter hans död 2009. Många moderna artister hänvisar till honom som en viktig inspirationskälla, både musikaliskt och visuellt. Hans sätt att kombinera olika konstformer har blivit en modell för hur artister kan uttrycka sig.\n\nPåverkan syns tydligast i formen. Att en popartist förväntas leverera koreografi, musikvideor med regi och en scenshow som hänger ihop är inte någon självklarhet historiskt, utan något som etablerades under 1980-talet med Jackson som det tydligaste exemplet. Artister som Beyoncé, Usher och Justin Timberlake har alla arbetat inom den mallen, och flera av dem har uttryckligen berättat att de studerat hans framträdanden bild för bild.\n\nHans musik fortsätter att spelas globalt och når nya generationer av lyssnare. Genom digitala plattformar har hans verk fått nytt liv och blivit tillgängliga för en bredare publik. Detta visar hur teknologiska förändringar kan bidra till att bevara kulturellt arv. Samtidigt förändrar strömningstjänsterna vad ett arv egentligen är: det som ligger kvar i spellistor fortsätter att generera intäkter, medan det som aldrig lagts upp i praktiken försvinner. Ett dödsbo som förvaltar rättigheterna har därmed betydande makt över hur en artist minns.\n\nMusikaliskt är arvet svårare att peka ut än det visuella, men det finns. Kombinationen av funkbaserad bas, taktfasta trummor och melodier byggda för att kunna sjungas med återfinns hos en lång rad senare producenter. Även sättet att lägga sång i flera lager, där artisten stämmer med sig själv, hämtade många från hans skivor.\n\nSkalan är också en del av förklaringen. Thriller sålde i ett antal exemplar som ingen skiva sedan dess kommit i närheten av, i en tid då nästan alla köpte samma format. En sådan gemensam publik finns knappast längre, eftersom lyssnandet i dag är uppdelat i tusentals flöden.\n\nJacksons arbete har också påverkat frågor om representation och identitet inom populärkulturen. Hans framgång bidrog till att öppna dörrar för artister från olika bakgrunder. Ett konkret exempel är musikkanalen MTV, som under sina första år sällan spelade svarta artister. Att \"Billie Jean\" kom in i kanalens rotation 1983 brukar beskrivas som en vändpunkt, även om det är omtvistat exakt hur avgörande just den enskilda händelsen var.\n\nSamtidigt diskuteras hans arv ofta i relation till de kontroverser som omgav honom. Anklagelser om övergrepp mot barn har prövats i domstol, avvisats i ett fall och lyfts på nytt i dokumentärer långt efter hans död. När filmen Leaving Neverland visades 2019 valde flera radiostationer att sluta spela hans musik, medan andra lyssnare i stället strömmade den mer än tidigare. Reaktionerna gick alltså åt två håll samtidigt.\n\nDetta gör att hans eftermäle är komplext och föremål för olika tolkningar. Frågan om man kan skilja verket från upphovspersonen har inget svar som alla accepterar. Den som menar att musiken kan stå för sig själv pekar på att den skapades av många människor och att den tillhör dem som lyssnar. Den som menar motsatsen invänder att lyssnandet ger intäkter och uppmärksamhet, och att ingen av delarna är neutral.\n\nHan bidrog också till att göra insamlingar till stora medieevenemang. Låten We Are the World, som han skrev tillsammans med Lionel Richie 1985, samlade in stora summor och blev en förlaga för hur artister sedan dess engagerat sig i katastrofer. Kritiken mot den formen, att den kan handla mer om avsändaren än om mottagaren, kom också att följa med.\n\nEtt arv är därför inte något färdigt som lämnas efter sig, utan något som varje generation bestämmer på nytt. Vad som spelas, vad som lärs ut i skolan och vad som utelämnas avgörs av dem som lever nu, inte av den som en gång skapade verken.\n\nTexten visar att Michael Jacksons betydelse inte bara ligger i hans musik utan också i hans långsiktiga påverkan på kultur och samhälle.",
     "questions": [
       {
-        "type": "inferens",
-        "q": "Hur påverkar Michael Jackson dagens artister?",
+        "type": "literal",
+        "q": "Vad etablerades under 1980-talet med Jackson som tydligaste exempel?",
         "options": [
-          "Han inspirerar dem",
-          "Han begränsar dem",
-          "Han ersätter dem",
-          "Han ignoreras"
+          "Att popmusik alltid framförs med ett liveband på scen",
+          "Att artister förväntas skriva allt sitt material själva",
+          "Att en popartist levererar koreografi, video och scenshow",
+          "Att musik säljs främst genom singlar i stället för album"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför har ett dödsbo betydande makt över hur en artist minns?",
+        "options": [
+          "För att det avgör vad som finns tillgängligt på plattformarna",
+          "För att det kan neka andra artister att hämta inspiration",
+          "För att det bestämmer vilka musikpriser som delas ut",
+          "För att det kontrollerar vad forskare tillåts skriva"
         ],
         "correct": 0
       },
       {
-        "type": "inferens",
-        "q": "Hur har digitala plattformar påverkat hans musik?",
+        "type": "literal",
+        "q": "Vad beskrivs som en vändpunkt år 1983?",
         "options": [
-          "De har minskat spridningen",
-          "De har gjort den mer tillgänglig",
-          "De har förstört kvaliteten",
-          "De har begränsat lyssnandet"
+          "Att Jackson för första gången turnerade utanför USA",
+          "Att \"Billie Jean\" kom in i MTV:s rotation",
+          "Att musikvideon uppfanns som eget format",
+          "Att skivbolagen började kontraktera betydligt yngre artister"
         ],
         "correct": 1
       },
       {
         "type": "inferens",
-        "q": "Vad bidrog hans framgång till inom kultur?",
+        "q": "Vad menas med att reaktionerna gick åt två håll samtidigt?",
         "options": [
-          "Mindre mångfald",
-          "Färre artister",
-          "Ökad representation",
-          "Mindre innovation"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inferens",
-        "q": "Hur beskrivs hans eftermäle?",
-        "options": [
-          "Enkelt och tydligt",
-          "Obetydligt",
-          "Kortvarigt",
-          "Komplext och omdiskuterat"
+          "Att kritiken kom både från publiken och från recensenter",
+          "Att domstolar i olika länder kom till olika slutsatser",
+          "Att dokumentären både hyllades och kritiserades för sitt hantverk",
+          "Att musiken både plockades bort och strömmades mer än förut"
         ],
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vad är ett exempel på hans långsiktiga påverkan?",
+        "type": "forfattarens-syfte",
+        "q": "Varför redovisar texten båda sidorna i frågan om verk och upphovsperson?",
         "options": [
-          "Hans musik spelas fortfarande",
-          "Hans hus finns kvar",
-          "Hans kläder säljs",
-          "Hans familj är känd"
+          "För att visa att frågan saknar ett svar som alla accepterar",
+          "För att övertyga läsaren om att musiken bör väljas bort",
+          "För att slå fast att konsten alltid står fri från konstnären",
+          "För att slippa ta ställning i en fråga som väcker starka känslor"
         ],
         "correct": 0
       },
       {
-        "type": "inferens",
-        "q": "Vad är textens huvudbudskap?",
+        "type": "sammanfatta",
+        "q": "Vilken slutsats drar texten om vad ett arv är?",
         "options": [
-          "Hans barndom i Gary, Indiana",
-          "Hans ekonomi och kontrakt",
-          "Hans långvariga kulturella påverkan",
-          "Hans utbildning och skola"
+          "Att ett arv fastställs av forskare först långt i efterhand",
+          "Att ett arv bevaras bäst om det inte ifrågasätts alls",
+          "Att ett arv avgörs på nytt av varje ny generation",
+          "Att ett arv i praktiken bestäms av strömningstjänsterna"
         ],
         "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 156,
+      "wordCount": 620,
       "fingerprint": "akgy-mj-005",
       "generatedAt": "2026-05-03T00:00:00.000Z",
       "model": "manual"
