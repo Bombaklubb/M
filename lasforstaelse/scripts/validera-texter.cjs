@@ -114,6 +114,37 @@ lib.forEach(t => {
     varningar.push(`${id}: har word_count på toppnivå – appen läser meta.wordCount`);
   }
 
+  // Punkter insprängda mitt i en mening lämnar efter sig meningar som består
+  // av ett enda ord. Två åk 1-texter var skadade så: "Katten. Maja bor hos.
+  // Leo." Utropstecken och frågetecken undantas, eftersom "Plask!" och "Hur?"
+  // är avsiktliga.
+  const meningar = (t.text || '').split(/(?<=[.!?])\s+/).map(m => m.trim());
+  const enOrdsMeningar = meningar.filter((m, i) => {
+    if (!/^[A-ZÅÄÖ][a-zåäöé]+\.$/.test(m)) return false;
+    // "J.R.R. Tolkien." delas av meningsdelaren i två bitar. Är föregående
+    // mening slut på en ensam versal med punkt är brytningen ett artefakt.
+    const innan = meningar[i - 1] || '';
+    return !/\b[A-ZÅÄÖ]\.$/.test(innan);
+  });
+  if (enOrdsMeningar.length) {
+    varningar.push(`${id}: mening med bara ett ord – ${enOrdsMeningar.join(' ')} (kan vara en felplacerad punkt)`);
+  }
+
+  // En mening kan inte sluta på ett bindeord. Sex texter var skadade så att en
+  // punkt hamnat rakt före ett namn: "Ella springer snabbt men. Leo tar längre
+  // steg." Uteslutningstecken undantas, eftersom "Men..." i dialog är avsiktligt.
+  // "som" är medvetet utelämnat: det kan avsluta en korrekt mening när det
+  // står sist i en relativsats – "tillhör den person den låter som".
+  const bindeord = new Set(['och', 'att', 'men', 'eller', 'samt']);
+  meningar.forEach(m => {
+    if (/[!?]$/.test(m) || /\.\.\.["”]?\.?$/.test(m)) return;
+    const ord = m.replace(/[."”]+$/, '').trim().split(/\s+/);
+    const sist = (ord[ord.length - 1] || '').toLowerCase().replace(/[^a-zåäöé]/g, '');
+    if (bindeord.has(sist)) {
+      varningar.push(`${id}: mening slutar på bindeordet "${sist}" – ...${m.slice(-40)}`);
+    }
+  });
+
   // ── Frågor ────────────────────────────────────────────────────────────────
   const fragor = t.questions || [];
   if (fragor.length !== 6) fel.push(`${id}: ${fragor.length} frågor (ska vara 6)`);
@@ -126,6 +157,21 @@ lib.forEach(t => {
 
     if (!q.q || !q.q.trim()) fel.push(`${plats}: tom frågetext`);
 
+    // Frågetypen styr vad profilen visar eleven om sina lässtrategier, så en
+    // felklassad fråga ger fel vägledning. Två mönster är entydiga nog att
+    // kontrollera automatiskt; övriga gränsfall bedöms för hand.
+    const fragetext = (q.q || '').toLowerCase();
+    // "Vad betyder <ett enda ord>?" – ett ord, inte ett påstående.
+    if (/^vad betyder ["'“]?[a-zåäöé-]+["'”]?( enligt texten| i texten)?\?$/.test(fragetext)
+        && q.type && q.type !== 'ord') {
+      varningar.push(`${plats}: frågar efter ett ords betydelse men har type "${q.type}" i stället för "ord"`);
+    }
+    // Frågor om textens huvudbudskap som helhet.
+    if (/(textens |^)(huvudbudskap|huvudidé|huvudsakliga budskap)/.test(fragetext)
+        && q.type && q.type !== 'sammanfatta') {
+      varningar.push(`${plats}: frågar efter textens huvudbudskap men har type "${q.type}" i stället för "sammanfatta"`);
+    }
+
     const alt = q.options || [];
     if (alt.length !== 4) fel.push(`${plats}: ${alt.length} svarsalternativ (ska vara 4)`);
     if (alt.some(o => !o || !o.trim())) fel.push(`${plats}: tomt svarsalternativ`);
@@ -135,6 +181,27 @@ lib.forEach(t => {
     if (typeof q.correct !== 'number' || q.correct < 0 || q.correct >= alt.length) {
       fel.push(`${plats}: ogiltigt correct-index (${q.correct})`);
     }
+
+    // Femton mallfraser satt tidigare på 102 distraktorer i alla årskurser,
+    // aldrig på ett rätt svar. Frasen blev därmed ett facit i sig: eleven
+    // kunde välja bort alternativet utan att läsa texten. De är omskrivna,
+    // och listan ligger kvar som spärr mot att de kommer tillbaka.
+    const MALLFRASER = [
+      'för att undvika missförstånd', 'för säkerhets skull',
+      'för att det hade fungerat förut', 'redan innan något annat hände',
+      'oavsett vad andra tyckte', 'och ingenting annat',
+      'under hela den perioden', 'men bara under vissa förutsättningar',
+      'av en slump', 'utan att det fick några konsekvenser',
+      'för att slippa problem senare', 'utan någon som helst förändring',
+      'men bara om det behövdes', 'på exakt samma sätt som förut',
+      'för att det skulle gå snabbare',
+    ];
+    alt.forEach((o, oi) => {
+      const fras = MALLFRASER.find(f => (o || '').endsWith(f));
+      if (fras) {
+        fel.push(`${plats} alternativ ${'ABCD'[oi]}: slutar på mallfrasen "${fras}"`);
+      }
+    });
 
     // Rätt svar ska inte gå att peka ut på längden. Måttet är KVOT mot närmaste
     // distraktor, inte absolut teckenskillnad: "En hundvalp och hennes dag" (26)

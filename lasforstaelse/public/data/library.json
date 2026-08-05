@@ -394,7 +394,7 @@
         "options": [
           "Att man aldrig ska låna",
           "Att man får behålla allt",
-          "Att suddgummin är hemliga utan någon som helst förändring",
+          "Att man får behålla saker man lånat om man glömmer bort det",
           "Att man ska lämna tillbaka och säga förlåt om man glömmer"
         ],
         "correct": 3
@@ -423,7 +423,7 @@
           "Bara på sten",
           "På papper och ibland på dator eller surfplatta",
           "Bara i sand",
-          "Bara på väggar, för att det skulle gå snabbare"
+          "Bara på griffeltavlor som man suddar med en trasa"
         ],
         "correct": 1
       },
@@ -464,7 +464,7 @@
         "type": "inferens",
         "q": "Varför var griffeltavlor bra?",
         "options": [
-          "För att de var mjuka utan någon som helst förändring",
+          "För att de var mjuka och gick att vika ihop i fickan",
           "För att de gav läxor",
           "För att de sjöng",
           "För att man kunde sudda och använda dem många gånger"
@@ -721,7 +721,7 @@
           "Att el kommer från godis",
           "Att naturen är liten",
           "Att många små handlingar tillsammans gör skillnad",
-          "Att små lampor lyser starkast för säkerhets skull"
+          "Att små lampor lyser starkare än de stora gör"
         ],
         "correct": 2
       }
@@ -1045,7 +1045,7 @@
         "q": "Vad visar berättelsen om att lära sig?",
         "options": [
           "Att man aldrig får räkna",
-          "Att man alltid ska ge upp för säkerhets skull",
+          "Att man ska ge upp om det inte går på en gång",
           "Att hjälp och träning kan göra att man lyckas",
           "Att rytm är farligt"
         ],
@@ -2379,7 +2379,7 @@
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Linas robot",
-    "text": "Lina har en liten robot som kan köra på golvet. Hennes syskon. Amir bygger banor av böcker och klossar. Roboten följer linjer som. Lina ritar med tejp. Ibland fastnar den vid stolen. Då flyttar. Amir hindret så roboten kan fortsätta.",
+    "text": "Lina har en liten robot som kan köra på golvet. Hennes syskon Amir bygger banor av böcker och klossar. Roboten följer linjer som Lina ritar med tejp. Ibland fastnar den vid stolen. Då flyttar Amir hindret så roboten kan fortsätta.",
     "questions": [
       {
         "type": "literal",
@@ -2462,7 +2462,7 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Idrottslektionen",
-    "text": "På idrotten springer klassen runt den lilla planen. Läraren Samir blåser i en visselpipa när tiden börjar. Ella springer snabbt men. Leo tar längre steg. Efter två varv stannar alla och andas. Sedan gör de roliga hopp tillsammans på gräset.",
+    "text": "På idrotten springer klassen runt den lilla planen. Läraren Samir blåser i en visselpipa när tiden börjar. Ella springer snabbt men Leo tar längre steg. Efter två varv stannar alla och andas. Sedan gör de roliga hopp tillsammans på gräset.",
     "questions": [
       {
         "type": "literal",
@@ -2628,7 +2628,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Sagostund",
-    "text": "På kvällen släcker familjen lamporna i vardagsrummet. De tänder ett litet ljus på bordet. Maja läser högt ur en sagobok. Hennes lillebror. Noor lyssnar och håller sin filt. Utanför fönstret syns månen. Den lyser lugnt över husen i natten stilla.",
+    "text": "På kvällen släcker familjen lamporna i vardagsrummet. De tänder ett litet ljus på bordet. Maja läser högt ur en sagobok. Hennes lillebror Noor lyssnar och håller sin filt. Utanför fönstret syns månen. Den lyser lugnt över husen i den stilla natten.",
     "questions": [
       {
         "type": "literal",
@@ -2698,7 +2698,7 @@
       }
     ],
     "meta": {
-      "wordCount": 40,
+      "wordCount": 41,
       "fingerprint": "tema-ak1-tema-008",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -2794,7 +2794,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Cykel till skolan",
-    "text": "En morgon missar bussen hållplatsen där. Oskar väntar. Han blir först orolig. Då kommer grannen Fatima förbi med sin cykel. Hon frågar om Oskar vill åka bakpå. De cyklar lugnt till skolan och hinner före lektionen den första idag tillsammans.",
+    "text": "En morgon missar bussen hållplatsen där Oskar väntar. Han blir först orolig. Då kommer grannen Fatima förbi med sin cykel. Hon frågar om Oskar vill åka bakpå. De cyklar lugnt till skolan och hinner fram före första lektionen. Oskar är inte orolig längre.",
     "questions": [
       {
         "type": "literal",
@@ -2864,7 +2864,7 @@
       }
     ],
     "meta": {
-      "wordCount": 40,
+      "wordCount": 43,
       "fingerprint": "tema-ak1-tema-010",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -6173,7 +6173,7 @@
     "text": "I Harry Potter-böckerna är det lätt att fastna för dueller, magiska föremål och stora avslöjanden. Men en stor del av seriens spänning kommer från något mer igenkännligt: hur makt fungerar i vardagen. Hogwarts är inte bara en äventyrsplats, utan också en institution med regler, rangordning och informella normer. Därför blir skolan en bra miljö för att undersöka hur människor anpassar sig när auktoritet känns både nödvändig och hotfull.\n\nEtt tydligt exempel är hur \"säkerhet\" används som argument. När hotet från Voldemort växer, blir det lättare att acceptera inskränkningar: fler kontroller, hårdare straff och misstänksamhet mot avvikare. Det här är inte unikt för trollkarlsvärlden. I många samhällen legitimeras nya regler genom att de presenteras som ett skydd mot en yttre fiende. Problemet är att rädslan ofta sprider sig inåt. Plötsligt börjar människor leta efter skyldiga bland sina egna, och gränsen mellan försvar och förtryck suddas ut.\n\nDolores Umbridge fungerar som en symbol för den här typen av makt. Hon behöver inte kasta stora förbannelser för att förändra skolan. I stället styr hon genom formulär, dekret och straff som paketeras som \"ordning\". Hennes makt är byråkratisk: den låter korrekt på papper, men blir brutal i praktiken. Hon får också människor att själva övervaka varandra. När elever rapporterar, viskar och gissar vem som är illojal skapas ett klimat där många lydigt följer regler de egentligen ogillar.\n\nSamtidigt visar serien att motstånd inte alltid är dramatiskt. Det kan handla om att vägra spela med i ryktesspridning, att dela information ansvarsfullt, eller att organisera sig utan att förlora sin etik. Dumbledores armé blir intressant just för att gruppen tränar försvar, men också tränar ett slags civilkurage: att agera tillsammans när institutionen sviker.\n\nSerien är dock inte en enkel lärobok om \"onda\" och \"goda\" makthavare. Många karaktärer samarbetar med fel personer av rädsla, bekvämlighet eller lojalitet. Andra tar risker men gör misstag. Det skapar en mer realistisk bild: i en pressad situation är det inte bara mod som avgör, utan även vilka informationskällor man litar på, vilka man vill skydda och vilka konsekvenser man är beredd att ta.\n\nOckså språket bär på makt. Ministeriets skrivelser låter sakliga och opersonliga, medan motståndet talar om enskilda människor. Skillnaden gör tydligt vem som räknar i antal och vem som räknar i namn.\n\nAtt läsa Harry Potter med fokus på makt gör därför berättelsen mindre sagolik och mer politiskt relevant. Magin blir inte huvudpoängen, utan ett verktyg som förstärker sådant som redan finns i mänskliga relationer: rädsla, kontroll, grupptillhörighet och möjligheten att säga nej.",
     "questions": [
       {
-        "type": "literal",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudsakliga fokus när den tolkar Harry Potter?",
         "options": [
           "Hur makt och auktoritet fungerar i vardagen, särskilt i en institution som Hogwarts.",
@@ -6270,7 +6270,7 @@
         "type": "literal",
         "q": "Vilket dilemma kring namn beskriver texten?",
         "options": [
-          "Att namn bör bytas till svenska namn oavsett, annars går handlingen inte att följa oavsett vad andra tyckte",
+          "Att namn alltid bör bytas till svenska, eftersom en läsare annars inte kan följa handlingen alls",
           "Att ett \"talande\" namn kan tappa sin effekt, och översättaren måste välja mellan att behålla eller anpassa.",
           "Att namn i originalet alltid saknar betydelse och därför inte kräver några val.",
           "Att namn bara översätts när de tillhör lärare, men aldrig när de tillhör elever."
@@ -6281,7 +6281,7 @@
         "type": "inferens",
         "q": "Hur beskriver texten arbetet med humor i översättning?",
         "options": [
-          "Man kan ofta ersätta ett skämt ord för ord och få exakt samma effekt för säkerhets skull",
+          "Man kan ofta ersätta ett skämt ord för ord, eftersom humor fungerar likadant i alla språk",
           "Humor bör tas bort för att undvika missförstånd i ett nytt språk.",
           "Humor kräver ibland att man skapar en ny lösning som fyller samma funktion i målspråket.",
           "Humor är alltid universell och påverkas inte av språk eller kultur."
@@ -6367,7 +6367,7 @@
           "Att moral är oviktig i kriser eftersom regler då upphör att gälla.",
           "Att det bara är resultatet som spelar roll, aldrig metoden.",
           "Att det som fungerar snabbt inte automatiskt är rätt, särskilt om det skadar någons frihet.",
-          "Att effektiva handlingar alltid är rättfärdiga om de minskar konflikter och ingenting annat"
+          "Att effektiva handlingar alltid är rättfärdiga, eftersom resultatet är det som räknas"
         ],
         "correct": 2
       },
@@ -6388,7 +6388,7 @@
         "options": [
           "Att gränser aldrig behövs eftersom människor naturligt väljer rätt.",
           "Att övertramp kan börja kännas som praktiska genvägar när de blir vanliga eller sker under stress.",
-          "Att etik alltid blir enklare när fler personer är inblandade i ett beslut men bara om det behövdes",
+          "Att etik alltid blir enklare när fler är inblandade, eftersom ansvaret då delas mellan alla",
           "Att institutioner automatiskt förhindrar all maktmissbruk."
         ],
         "correct": 1
@@ -6471,7 +6471,7 @@
         "options": [
           "Att fanfiction, fanart och tillgängliga läsformer kan ge fler perspektiv och fler sätt att delta.",
           "Att man stänger diskussioner direkt när någon uttrycker osäkerhet.",
-          "Att man bara godkänner medlemmar som kan citera hela boken utantill, för att undvika missförstånd",
+          "Att man bara godkänner medlemmar som kan citera hela boken, så att nivån hålls hög i gruppen",
           "Att man undviker alla nya tolkningar för att inte riskera konflikt."
         ],
         "correct": 0
@@ -6520,7 +6520,7 @@
         "q": "Hur tolkas dementorerna i texten?",
         "options": [
           "Som en bild av ett tillstånd där energi och mening försvinner, liknande depressionens tyngd.",
-          "Som en humoristisk detalj som mest ska göra skolmiljön mer spännande under hela den perioden",
+          "Som en humoristisk detalj vars enda syfte är att göra skolmiljön lite mer spännande",
           "Som ett bevis på att Harry aldrig känner rädsla, bara irritation.",
           "Som en symbol för att minnen alltid är positiva och därför ofarliga."
         ],
@@ -6751,7 +6751,7 @@
     "genre": "berättelse",
     "theme": "djur",
     "title": "Maja är hungrig",
-    "text": "Katten. Maja bor hos. Leo. En morgon är hennes matskål tom. Maja mjauar högt och springer till köket. Leo hittar en påse foder i skåpet. Han fyller skålen och Maja spinner. Sedan hoppar hon upp i fönstret och tittar på fåglarna ute.",
+    "text": "Katten Maja bor hos Leo. En morgon är hennes matskål tom. Maja mjauar högt och springer till köket. Leo hittar en påse foder i skåpet. Han fyller skålen och Maja spinner. Sedan hoppar hon upp i fönstret och tittar på fåglarna ute.",
     "questions": [
       {
         "type": "literal",
@@ -6834,7 +6834,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "En tur i skogen",
-    "text": "På lördagen går. Sara och pappa till skogen. De följer en smal stig. Solen lyser mellan träden. Sara hittar en stor kotte och en blank sten. De hör en hackspett som knackar. När de vilar dricker de varm choklad ur en termos och ler.",
+    "text": "På lördagen går Sara och pappa till skogen. De följer en smal stig. Solen lyser mellan träden. Sara hittar en stor kotte och en blank sten. De hör en hackspett som knackar. När de vilar dricker de varm choklad ur en termos och ler.",
     "questions": [
       {
         "type": "literal",
@@ -6917,7 +6917,7 @@
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "En rolig rast",
-    "text": "Ali sitter ensam på rasten. Han har glömt sin boll hemma. Då kommer. Nora fram. Hon frågar om Ali vill bygga en hinderbana med pinnar och stenar. De hoppar och skrattar. När klockan ringer säger. Ali: \"Tack, du gjorde min rast rolig.\".",
+    "text": "Ali sitter ensam på rasten. Han har glömt sin boll hemma. Då kommer Nora fram. Hon frågar om Ali vill bygga en hinderbana med pinnar och stenar. De hoppar och skrattar. När klockan ringer säger Ali: \"Tack, du gjorde min rast rolig.\"",
     "questions": [
       {
         "type": "literal",
@@ -7000,7 +7000,7 @@
     "genre": "berättelse",
     "theme": "skola",
     "title": "Högläsning i 2B",
-    "text": "I klass 2B ska de ha högläsning. Läraren Anna delar ut en bok om en pirat. Elsa får läsa första sidan. Hon läser tydligt och pekar med fingret. Några ord är svåra, men. Anna hjälper. Efteråt ritar alla en bild från berättelsen.",
+    "text": "I klass 2B ska de ha högläsning. Läraren Anna delar ut en bok om en pirat. Elsa får läsa första sidan. Hon läser tydligt och pekar med fingret. Några ord är svåra, men Anna hjälper. Efteråt ritar alla en bild från berättelsen.",
     "questions": [
       {
         "type": "literal",
@@ -7083,7 +7083,7 @@
     "genre": "berättelse",
     "theme": "familj",
     "title": "Söndag i simhallen",
-    "text": "På söndag ska familjen åka till simhallen. Storasyster. Lina packar handdukar. Lillebror. Max tar sina armpuffar. Mamma köper biljetter och pappa håller koll på tiderna. I vattnet tränar. Lina ryggsim. Max plaskar nära kanten. När de åker hem är alla trötta men glada.",
+    "text": "På söndag ska familjen åka till simhallen. Storasyster Lina packar handdukar. Lillebror Max tar sina armpuffar. Mamma köper biljetter och pappa håller koll på tiderna. I vattnet tränar Lina ryggsim. Max plaskar nära kanten. När de åker hem är alla trötta men glada.",
     "questions": [
       {
         "type": "literal",
@@ -7169,7 +7169,7 @@
     "text": "Skolan har funnits länge, men den har inte alltid sett ut som i dag. Förr hade många barn inte skolplikt. Det betyder att de inte behövde gå i skolan varje dag. Många barn hjälpte till hemma eller arbetade.\n\nNär skolor fanns kunde klassrummen vara annorlunda. Det kunde vara fler elever i samma rum och mindre plats. Ibland skrev man på små tavlor, och man kunde ha bläckpennor. Läraren kunde vara sträng och barnen hade andra regler.\n\nI dag har vi skolplikt i Sverige. Det betyder att barn ska gå i skolan. Skolan ska hjälpa alla att lära sig läsa, skriva och räkna. I skolan finns ofta böcker, datorer och olika ämnen som NO, SO, bild och idrott.\n\nMen en sak är lika: barn har alltid behövt öva och lära sig nya saker. De har också behövt vänner och trygga vuxna. När du tänker på förr kan du jämföra. Då blir historia något som handlar om människors liv, inte bara om gamla saker.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder skolplikt?",
         "options": [
           "Att man får välja själv om man vill lära sig",
@@ -7252,7 +7252,7 @@
     "text": "När vi slänger saker kallas det sopor. Men många sopor kan bli nya saker om vi sorterar dem rätt. Att sortera betyder att lägga samma slags material tillsammans. Då kan man återvinna, alltså göra nytt av gammalt.\n\nPapper kan bli nytt papper. Plast kan bli ny plast, till exempel en hink eller en leksak. Glas kan smältas och bli nya flaskor.\n\nOm allt blandas i samma påse blir det svårare att återvinna. Matrester kan göra papper blött och smutsigt. Då kan papperet inte användas igen. Därför är det bra att ha olika kärl hemma och i skolan.\n\nNär vi återvinner sparar vi energi och natur. Det behövs ofta mindre energi att göra något av gammalt material än att ta nytt från naturen. Om vi tar mindre från naturen kan skogar, djur och vatten må bättre.\n\nDu kan hjälpa till genom att sortera din yoghurtburk, din papperslapp och ditt äppelskrutt. Det är små saker, men när många gör det blir det en stor skillnad.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder att sortera sopor?",
         "options": [
           "Att bränna papper",
@@ -7291,7 +7291,7 @@
           "För att material kan förstöras och inte gå att använda igen",
           "För att sopor försvinner",
           "För att det blir roligare",
-          "För att det blir fler sopor, för att det skulle gå snabbare"
+          "För att det då blir fler sopor än vad bilarna kan hämta"
         ],
         "correct": 0
       },
@@ -7301,7 +7301,7 @@
         "options": [
           "För att det alltid är gratis",
           "För att sopor är varma",
-          "För att glas inte väger något men bara under vissa förutsättningar",
+          "För att glas inte väger något och därför är gratis att frakta",
           "För att det ofta behövs mindre energi än att ta nytt från naturen"
         ],
         "correct": 3
@@ -7371,7 +7371,7 @@
         "type": "inferens",
         "q": "Varför blir det bättre när Diego saktar ner?",
         "options": [
-          "För att trummor försvinner redan innan något annat hände",
+          "För att trummorna låter tystare när man spelar sakta",
           "För att de kan lyssna på varandra och spela tillsammans",
           "För att Leila blir arg",
           "För att klassen går ut"
@@ -7804,7 +7804,7 @@
         "options": [
           "Hon menade att hjälpsamhet kan ge goda saker tillbaka",
           "Hon ville ha fler bullar",
-          "Hon tyckte inte det var roligt att hjälpa av en slump",
+          "Hon tyckte inte att det var roligt att hjälpa till",
           "Hon var hungrig och tänkte bara på mat"
         ],
         "correct": 0
@@ -7963,7 +7963,7 @@
         "q": "Varför ritade de en ny karta?",
         "options": [
           "De ville att någon i framtiden ska hitta deras skatt",
-          "Meja behövde öva sig på att rita för säkerhets skull",
+          "Meja behövde öva sig på att rita raka streck",
           "De hade tappat den gamla kartan",
           "De ville göra en läxa"
         ],
@@ -8721,7 +8721,7 @@
     "text": "Att säga förlåt betyder att man visar att man ångrar något man gjort. Det kan vara när man har råkat säga något taskigt eller gjort någon ledsen. Ett bra förlåt kan vara att säga vad man ångrar och att försöka göra det bättre. Man kan också fråga: \"Hur kan jag hjälpa?\" När man vågar säga förlåt kan vänskap bli starkare.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder det att säga förlåt?",
         "options": [
           "Att man springer snabbare",
@@ -8887,7 +8887,7 @@
     "text": "Mod betyder inte att man aldrig är rädd. Mod kan vara att våga göra något även när det känns pirrigt. Det kan vara att räcka upp handen i klassen eller säga ifrån när någon blir retad. Ibland är mod att be om hjälp. När man tränar på mod blir det lättare nästa gång, eftersom man märker att man klarade det.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder mod enligt texten?",
         "options": [
           "Att alltid vinna över alla andra",
@@ -9568,7 +9568,7 @@
           "För att de gör läxorna åt eleverna",
           "För att de tar bort alla bollar",
           "För att de kan hjälpa om någon blir ledsen eller om det blir bråk",
-          "För att de delar ut godis varje dag, för att undvika missförstånd"
+          "För att de delar ut godis till alla elever varje rast"
         ],
         "correct": 2
       },
@@ -10758,7 +10758,7 @@
         "q": "Vad tyckte simläraren om hur de gjorde?",
         "options": [
           "Att de borde ha vänt om",
-          "Att de borde ha skällt på någon på exakt samma sätt som förut",
+          "Att de borde ha skällt på den som lämnade grinden öppen",
           "Att de gjorde rätt som väntade lugnt och följde informationen",
           "Att de borde ha åkt taxi direkt"
         ],
@@ -11000,7 +11000,7 @@
       {
         "q": "Vad skrev eleverna i sin logg efter lektionen?",
         "options": [
-          "Vilken mat de åt till lunch på exakt samma sätt som förut",
+          "Vilken mat de åt till lunch och hur den smakade",
           "Hur många böcker de lånade",
           "Vad som gjorde pulsen hög och vad som fick den att sjunka",
           "Vilka som vann en tävling"
@@ -12389,7 +12389,7 @@
         "options": [
           "Korgen lämnas kvar i boden vid bryggan",
           "Bamse cyklar hem och ger upp letandet",
-          "Skalman gömmer korgen för säkerhets skull",
+          "Skalman gömmer korgen i sin egen ryggsäck",
           "Vargen hjälper till att städa parken som tack"
         ],
         "correct": 3,
@@ -13185,7 +13185,7 @@
         "options": [
           "Att barn inte hade någon fantasi",
           "Att vuxna förbjöd lek",
-          "Att det inte fanns några material alls men bara om det behövdes",
+          "Att det inte fanns några material alls att tillverka av",
           "Att många familjer hade mindre pengar och använde det som fanns"
         ],
         "correct": 3
@@ -13195,7 +13195,7 @@
         "q": "Varför säger texten att historia inte bara handlar om kungar och krig?",
         "options": [
           "För att kungar aldrig funnits",
-          "För att skolor inte får prata om krig, för att undvika missförstånd",
+          "För att skolor inte får prata om krig med yngre elever",
           "För att krig alltid är påhittade",
           "För att vanliga människors liv också visar hur samhället förändras"
         ],
@@ -13307,7 +13307,7 @@
           "Att bränna allt direkt"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vilket material tar texten upp som exempel på något som sparar mycket energi att återvinna?",
@@ -13383,7 +13383,7 @@
         "q": "Vad hittar Sofia vid bäcken?",
         "options": [
           "En sten",
-          "Ett äpple oavsett vad andra tyckte",
+          "Ett äpple och en handfull gula löv",
           "Skräp som en plastpåse och en burk",
           "En fisk"
         ],
@@ -13417,7 +13417,7 @@
         "options": [
           "För att djur gillar skräp",
           "För att djur kan fastna i den eller tro att den är mat",
-          "För att vatten alltid blir farligt och ingenting annat",
+          "För att vatten alltid blir farligt för små djur",
           "För att plastpåsen är varm"
         ],
         "correct": 1
@@ -13922,7 +13922,7 @@
         "options": [
           "Att form, material och krafter samarbetar för att göra bron säker",
           "Att broar bara är för cyklar",
-          "Att broar inte behöver testas utan att det fick några konsekvenser",
+          "Att broar inte behöver testas om de ser stabila ut",
           "Att alla broar är lika"
         ],
         "correct": 0
@@ -13979,7 +13979,7 @@
         "q": "Varför jämför texten nätverket med en väg som kan få \"för mycket trafik\"?",
         "options": [
           "För att servrar flyttar på sig",
-          "För att internet använder bilar, för att det hade fungerat förut",
+          "För att internet skickas längs samma vägar som bilar kör på",
           "För att mycket data samtidigt kan göra att vissa paket blir sena",
           "För att wifi alltid är farligt"
         ],
@@ -14658,7 +14658,7 @@
           "Laga och göra helt igen"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad verkar texten vilja visa om kroppen?",
@@ -14738,7 +14738,7 @@
           "Att vattnet rinner nedåt"
         ],
         "correct": 2,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför kallar texten det ett kretslopp?",
@@ -14792,7 +14792,7 @@
         "options": [
           "Alla röstade för Isaks förslag om att byta varannan vecka",
           "De kunde inte bestämma sig",
-          "Alla röstade för Olivers förslag oavsett vad andra tyckte",
+          "Alla röstade för Olivers förslag om att alltid börja om",
           "Alla röstade för Fatimas förslag"
         ],
         "correct": 0,
@@ -14818,7 +14818,7 @@
           "Att ingen ville rösta"
         ],
         "correct": 2,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad visar berättelsen om hur beslut kan fattas i en grupp?",
@@ -15100,7 +15100,7 @@
         "correct": 3
       },
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder densitet enligt texten?",
         "options": [
           "Hur varmt något är",
@@ -15150,7 +15150,7 @@
           "För att man vill att lyftkraften ska hjälpa personen att hålla sig uppe",
           "För att vatten ska rinna snabbare",
           "För att flytvästar ska bli tyngre",
-          "För att flytvästar ska se coola ut utan att det fick några konsekvenser"
+          "För att flytvästar ska se coola ut och gå att välja i olika färger"
         ],
         "correct": 0
       }
@@ -15255,7 +15255,7 @@
     "text": "Orden rättvist och lika låter nästan som samma sak, men de betyder inte alltid exakt samma. När vi pratar om etik handlar det ofta om hur vi behandlar varandra och hur vi tar beslut som påverkar fler än en person. Då kan skillnaden mellan rättvist och lika bli viktig.\n\nAtt något är lika betyder att alla får samma sak. Till exempel: alla får exakt tio minuter på en dator, eller alla får samma antal pennor. Det kan kännas enkelt. Men ibland blir det ändå inte rättvist, eftersom människor kan ha olika behov.\n\nRättvist betyder att man försöker skapa en bra situation för alla, även om det inte blir exakt samma för alla. Tänk dig att tre personer ska nå upp till en hylla. En är lång, en är medellång och en är kort. Om alla får samma pall, kanske den långa personen inte behöver den alls, medan den korta personen fortfarande inte når. Om man vill vara rättvis kan man ge olika stöd: kanske den korta får en högre pall, den medellånga en liten pall och den långa ingen. Då får alla möjlighet att nå.\n\nI skolan kan detta hända ofta. En elev kanske behöver extra tid på ett prov, eller får lyssna på en text istället för att läsa. Någon annan kanske behöver sitta på en lugn plats för att kunna koncentrera sig. Det är inte fusk om målet är att alla ska få en rimlig chans att visa vad de kan.\n\nSamtidigt kan rättvisa kännas svårt, eftersom det kräver att man tänker efter. Vem behöver vad? Hur kan man veta att det är rimligt? Därför behövs regler och samtal. Det är också viktigt att skilja på behov och önskningar.\n\nEtt sätt att tänka är att fråga: Vad är målet? Om målet är att alla ska få samma tid med en spelkonsol hemma kan det vara lika som gäller. Om målet är att alla ska kunna göra läxan kan det vara rättvist att någon får mer hjälp.\n\nNär man diskuterar etik kan man också komma ihåg att rättvisa kan se olika ut i olika situationer. Ibland är det mest rättvist att behandla alla lika. I andra situationer är det mest rättvist att behandla människor olika, för att alla ska få en ärlig chans.\n\nAtt förstå skillnaden kan göra det lättare att lösa konflikter. I stället för att bara säga \"det är orättvist!\" kan man fråga: Menar jag att det inte är lika? Eller menar jag att någon inte får det stöd den behöver?",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder det att något är lika enligt texten?",
         "options": [
           "Att ingen får något",
@@ -15305,7 +15305,7 @@
           "För att målet är att alla ska få en rimlig chans att visa vad de kan",
           "För att lärare gillar fusk",
           "För att alla får mer godis",
-          "För att prov inte spelar någon roll, för att det hade fungerat förut"
+          "För att prov inte spelar någon roll för hur mycket man lär sig"
         ],
         "correct": 0
       },
@@ -15583,7 +15583,7 @@
         "options": [
           "En sorts sport",
           "Ett område där människor bor, arbetar och går i skolan",
-          "En webbplats för spel, för att det hade fungerat förut",
+          "En webbplats där man kan spela och chatta med andra",
           "En bok i biblioteket"
         ],
         "correct": 1
@@ -15615,7 +15615,7 @@
         "q": "Varför kallar texten kommunen för en 'vardagsmotor'?",
         "options": [
           "För att alla måste åka bil",
-          "För att kommunen bygger motorcyklar, för att det hade fungerat förut",
+          "För att kommunen bygger motorcyklar och andra fordon till alla",
           "För att kommuner alltid är tysta",
           "För att kommunen får många vardagliga saker att fungera i bakgrunden"
         ],
@@ -15787,7 +15787,7 @@
       {
         "q": "Vilken slutsats passar bäst med textens innehåll om fotosyntes och klimat?",
         "options": [
-          "Fotosyntes påverkas inte av människors utsläpp alls, för att undvika missförstånd",
+          "Fotosyntes påverkas inte alls av utsläpp, eftersom växter tar upp all koldioxid",
           "Växter kan ta upp en del koldioxid men inte alltid lika snabbt som den släpps ut",
           "Koldioxid bildas bara i havet och inte på land",
           "Skogar gör alltid klimatet varmare överallt"
@@ -15936,7 +15936,7 @@
       {
         "q": "Vilken slutsats passar bäst om varför elektronik lämnas separat?",
         "options": [
-          "Den blir automatiskt återvunnen hemma själv men bara under vissa förutsättningar",
+          "Den blir automatiskt återvunnen om man bara lämnar den i den vanliga soppåsen",
           "Den tar alltid mer plats än annat avfall",
           "Den kan innehålla både värdefulla metaller och ämnen som kräver säker hantering",
           "Den kan inte transporteras på lastbil"
@@ -16193,7 +16193,7 @@
           "Att något väger mycket"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför jämför texten celler med en motor?",
@@ -16273,7 +16273,7 @@
           "Ilsket och stressat"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad säger berättelsen om värdet av att spara gamla saker?",
@@ -16353,7 +16353,7 @@
           "Vattnets temperatur"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför är spåren av vatten på Mars viktiga enligt texten?",
@@ -16433,7 +16433,7 @@
           "Den som bestämmer utan att fråga"
         ],
         "correct": 2,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad försöker berättelsen visa om demokrati?",
@@ -16513,7 +16513,7 @@
           "Att man byter mellan olika sorters mat"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vilket verkar vara textens viktigaste budskap?",
@@ -17952,7 +17952,7 @@
         "options": [
           "För att frågor gör att man vinner direkt",
           "För att frågor alltid är roliga",
-          "För att frågor gör att allt blir ett skämt, för att det skulle gå snabbare",
+          "För att frågor gör att allt blir ett skämt och stämningen blir lättare",
           "För att frågor kan få personen att reflektera över hur det känns för andra"
         ],
         "correct": 3
@@ -18017,12 +18017,12 @@
       },
       {
         "type": "literal",
-        "q": "Vem följer med eleverna när de går ut för att undersöka platsen?",
+        "q": "Vem upptäcker det inhuggna märket på stenen?",
         "options": [
-          "Said",
+          "Rania",
           "Hugo",
-          "Parisa",
-          "Rania"
+          "Mateo",
+          "Parisa"
         ],
         "correct": 0
       },
@@ -18055,7 +18055,7 @@
           "Att kartor aldrig går att lita på",
           "Att historia bara finns i böcker",
           "Att spår av historia kan finnas i platser omkring oss om vi lär oss att undersöka dem",
-          "Att gamla saker alltid är oviktiga, för att det hade fungerat förut"
+          "Att gamla saker alltid är oviktiga så snart något nyare har byggts"
         ],
         "correct": 2
       }
@@ -18091,7 +18091,7 @@
           "Ett nät av rutter som kopplade samman delar av Asien, Mellanöstern och Europa",
           "En hemlig tunnel under havet",
           "En modern motorväg i Kina",
-          "En enda rak väg genom Europa men bara om det behövdes"
+          "En enda rak handelsväg som gick tvärs genom hela Europa"
         ],
         "correct": 0
       },
@@ -18193,7 +18193,7 @@
         "type": "inferens",
         "q": "Varför räcker det inte att plast bryts sönder i havet?",
         "options": [
-          "För att den blir osynlig men borta redan innan något annat hände",
+          "För att den blir osynlig och därmed helt ofarlig för djuren",
           "För att fiskar gillar plast",
           "För att havet blir varmare",
           "För att den fortfarande finns kvar som mindre bitar och kan spridas i näringskedjan"
@@ -18207,7 +18207,7 @@
           "För att plast ger näring",
           "För att den kan känna sig mätt utan att få näring och få ont i magen",
           "För att den börjar sjunga",
-          "För att den flyger snabbare men bara om det behövdes"
+          "För att den flyger snabbare när den har ätit plastbitar"
         ],
         "correct": 1
       },
@@ -18254,7 +18254,7 @@
           "Isberg som smälter",
           "Skräp som följer med regnvatten ner i brunnar och vidare till vattendrag",
           "Vulkanutbrott",
-          "Havsströmmar som skapar plast, för att slippa problem senare"
+          "Havsströmmar som skapar ny plast långt ute till havs"
         ],
         "correct": 1
       },
@@ -18274,7 +18274,7 @@
         "q": "Varför blir plastens \"hållbarhet\" ett problem när den hamnar i naturen?",
         "options": [
           "För att plasten alltid luktar illa",
-          "För att plasten försvinner för snabbt, för att undvika missförstånd",
+          "För att plasten försvinner för snabbt för att hinna samlas in",
           "För att plasten blir till papper",
           "För att plasten kan ligga kvar länge och brytas ner mycket långsamt"
         ],
@@ -18405,7 +18405,7 @@
         "options": [
           "Färg som rör sig",
           "Vatten som kokar",
-          "Ljus som studsar för säkerhets skull",
+          "Ljus som studsar mellan föremål",
           "Vibrationer som rör sig genom luften"
         ],
         "correct": 3
@@ -18438,7 +18438,7 @@
         "options": [
           "För att hjärnan blandar ihop ljud och smak",
           "För att låga frekvenser kan få större delar av luften och ibland kroppen att vibrera",
-          "För att högtalare skickar elektricitet in i kroppen, för att det hade fungerat förut",
+          "För att högtalare skickar svag elektricitet genom golvet och in i kroppen",
           "För att bas alltid är farlig"
         ],
         "correct": 1
@@ -18449,7 +18449,7 @@
         "options": [
           "För att trumhinnan alltid går sönder",
           "För att ljud fastnar i hörselgången",
-          "För att örat slutar fungera på vintern utan någon som helst förändring",
+          "För att örat slutar fungera helt när det utsätts för kyla",
           "För att hårceller i innerörat kan skadas och inte alltid växa tillbaka"
         ],
         "correct": 3
@@ -18541,7 +18541,7 @@
         "type": "textbevis",
         "q": "Varför jämför Leila sina känslor i skolan med älgens situation?",
         "options": [
-          "För att hon också kan springa snabbare än andra under hela den perioden",
+          "För att hon också kan springa fort när hon blir rädd i skogen",
           "För att hon vill bli ett vilt djur",
           "För att hon inte gillar att vara i klassrummet",
           "För att hon känner sig rädd och vill bli bemött utan att någon skrattar"
@@ -18582,7 +18582,7 @@
         "options": [
           "Trängsel, ljudnivå, köer vid disk och dörr",
           "Regn, snö och blåst",
-          "Idrott, musik och bild och ingenting annat",
+          "Idrott, musik och bild på schemat",
           "Betyg, prov och läxor"
         ],
         "correct": 0
@@ -18851,7 +18851,7 @@
           "För att hon vill bli sist",
           "För att hon vill att Emilia ska vinna",
           "För att hon minns att hon tidigare sprang för fort och fick håll",
-          "För att Jonas sa att man måste gå först oavsett vad andra tyckte"
+          "För att Jonas sa att man måste ligga först hela loppet"
         ],
         "correct": 2
       },
@@ -18944,7 +18944,7 @@
         "options": [
           "För att batterier blir snyggare då",
           "För att man kan ta tillbaka metaller och minska behovet av nya råvaror",
-          "För att laddare slutar fungera annars, för att det hade fungerat förut",
+          "För att laddare slutar fungera om batteriet slängs fel",
           "För att batterier alltid är farliga"
         ],
         "correct": 1
@@ -19033,7 +19033,7 @@
         "type": "textbevis",
         "q": "Varför blir gruppens lösning bättre när Ali föreslår en timer på två minuter?",
         "options": [
-          "För att sensorn då slutar fungera, för att det hade fungerat förut",
+          "För att sensorn då slutar fungera när fönstret är stängt",
           "För att lampan blinkar snyggare",
           "För att Frida inte hör pipet",
           "För att varningen blir mer rimlig och ger tid att rätta till felet"
@@ -19106,7 +19106,7 @@
           "Att vattnet är mindre klart och fullt av små partiklar",
           "Att vattnet är varmt och salt",
           "Att vattnet luktar blommor",
-          "Att vattnet är fruset och hårt under hela den perioden"
+          "Att vattnet är fruset och hårt på ytan"
         ],
         "correct": 0,
         "type": "ord"
@@ -19115,7 +19115,7 @@
         "q": "Vad är textens huvudbudskap?",
         "options": [
           "Att alla våtmarker är farliga att gå i",
-          "Att naturen alltid klarar sig bäst utan människor av en slump",
+          "Att naturen alltid klarar sig bäst helt utan människor",
           "Att våtmarker kan vara viktiga och ibland behöver återställas",
           "Att åkrar borde byggas om till parker i alla byar"
         ],
@@ -19249,13 +19249,13 @@
           "Att han får torp och stöd men måste kunna kallas ut till krig"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför fanns det oro för bränder i staden?",
         "options": [
           "För att husen var byggda av trä och elden kunde sprida sig snabbt",
-          "För att det regnade för lite under våren oavsett vad andra tyckte",
+          "För att det regnade för lite under våren och somrarna",
           "För att gatorna var för breda",
           "För att alla hade egna eldstäder av sten"
         ],
@@ -19406,12 +19406,12 @@
         "q": "Vad betyder avsaltning?",
         "options": [
           "Att man fryser havsvatten till is",
-          "Att man pumpar upp vatten från berg, för att undvika missförstånd",
+          "Att man pumpar upp vatten ur berggrunden till kranarna",
           "Att man blandar salt i regnvatten",
           "Att man tar bort saltet ur havsvatten så det kan bli dricksvatten"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför har kommunen satt upp solpaneler vid anläggningen?",
@@ -19514,7 +19514,7 @@
           "Att alla texter ska vara exakt lika långa"
         ],
         "correct": 2,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad lärde sig klassen mest av projektet enligt Jasmin?",
@@ -19558,7 +19558,7 @@
         "options": [
           "För att näsan är täppt och doftämnen inte når fram",
           "För att man äter långsammare",
-          "För att hjärnan stänger av smaklökarna av en slump",
+          "För att hjärnan stänger av smaklökarna när man är sjuk",
           "För att tungan slutar fungera helt"
         ],
         "correct": 0,
@@ -19595,7 +19595,7 @@
           "Att all mat smakar likadant överallt"
         ],
         "correct": 0,
-        "type": "literal"
+        "type": "inferens"
       },
       {
         "q": "Vad vill texten visa om smak som helhet?",
@@ -19676,7 +19676,7 @@
           "Att det bara gäller vissa städer"
         ],
         "correct": 2,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vilken grundfråga handlar barnarbete om enligt texten?",
@@ -19757,7 +19757,7 @@
           "En kedja av metall i naturen"
         ],
         "correct": 0,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vilken insikt vill texten ge läsaren?",
@@ -19838,7 +19838,7 @@
           "Bearbetade och förändrade digitalt"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför är bilder särskilt kraftfulla enligt texten?",
@@ -19886,7 +19886,7 @@
           "Att matchen spelas utan publik"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför nämns passningsspel som något som kräver mycket?",
@@ -19978,7 +19978,7 @@
           "Att laget försöker vinna tillbaka bollen snabbt"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad tycker Samira är det viktigaste minnet från dagen?",
@@ -20199,7 +20199,7 @@
           "Att flytta bollen framåt steg för steg"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför droppar en mittfältare ner i början av anfallet?",
@@ -20243,7 +20243,7 @@
           "Att man aldrig får passa bakåt"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad är textens huvudidé?",
@@ -20361,7 +20361,7 @@
           "Att Finland styr alla beslut på Åland"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför ville många ålänningar hellre höra till Sverige efter 1917?",
@@ -21130,7 +21130,7 @@
         "type": "forfattarens-syfte",
         "q": "Varför hjälper Amirs sätt att förklara Leyla att bli tryggare?",
         "options": [
-          "För att han säger åt henne att sluta, för att slippa problem senare",
+          "För att han säger åt henne att sluta försöka med det svåra",
           "För att han förklarar som om det är självklart att hon kan lära sig",
           "För att han ignorerar henne",
           "För att han skrattar åt henne"
@@ -21200,7 +21200,7 @@
         "q": "Varför tar de prover från flera olika platser?",
         "options": [
           "För att kunna jämföra och se skillnader mellan ren och smutsig snö",
-          "För att läraren vill ha fler läxor, för att det skulle gå snabbare",
+          "För att läraren vill att alla i klassen ska få varsitt prov",
           "För att få fler burkar",
           "För att snö alltid ser likadan ut"
         ],
@@ -21292,7 +21292,7 @@
         "options": [
           "För att luften är för varm",
           "För att den alltid måste snurra",
-          "För att Valentina målade fenorna röda, för att det hade fungerat förut",
+          "För att Valentina målade fenorna röda och färgen gjorde dem tyngre",
           "För att kraften eller formen inte är jämnt fördelad och skapar obalans"
         ],
         "correct": 3
@@ -21362,7 +21362,7 @@
           "För att minnesceller gör att immunförsvaret kan sätta igång snabbare",
           "För att smittan alltid blir snällare",
           "För att kroppen glömmer att bli sjuk",
-          "För att man alltid har mer vitaminer då, för att undvika missförstånd"
+          "För att man alltid har mer vitaminer i kroppen andra gången"
         ],
         "correct": 0
       },
@@ -21732,7 +21732,7 @@
     "text": "Matsvinn betyder att mat som kunde ha ätits slängs. Det kan vara en banan som blivit brun, en portion pasta som står kvar på tallriken, eller bröd som kastas fast det hade kunnat frysas. Det kan låta som en liten sak, men när man räknar ihop allt blir det en stor miljöfråga.\n\nFör att förstå varför matsvinn påverkar miljön behöver man tänka på hela resan som maten gör. Den börjar i odling, djurhållning, fiske eller fabriker. För att producera mat behövs mark, vatten, energi och arbete. Om maten slängs har alla dessa resurser använts i onödan.\n\nNär mat hamnar i soporna kan det också bildas växthusgaser. Matavfall som bryts ner utan syre, till exempel i vissa deponier, kan skapa metan. Metan är en stark växthusgas.\n\nVarför slängs mat? En orsak är planering. Om man handlar mer än man hinner äta blir det rester som glöms bort längst in i kylskåpet. En annan orsak är missförstånd om datum. \"Bäst före\" betyder ofta att maten kan vara okej även efter datumet. \"Sista förbrukningsdag\" är däremot viktigare, särskilt för känsliga varor.\n\nLösningar finns på flera nivåer. Hemma kan man planera inköp, skriva en enkel lista, och använda rester i nya rätter. I skolan kan man jobba med tydligare information om portioner. Det viktiga är att förstå systemet och hitta smartare vanor.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder matsvinn?",
         "options": [
           "Att man äter för mycket",
@@ -22023,7 +22023,7 @@
         "q": "Varför säger texten att algoritmer inte är neutrala?",
         "options": [
           "För att de byggs av människor med mål som styr vad som prioriteras",
-          "För att de bara fungerar på tisdagar, för att undvika missförstånd",
+          "För att de bara fungerar när många använder appen samtidigt",
           "För att de alltid ljuger",
           "För att de är gjorda av metall"
         ],
@@ -22094,7 +22094,7 @@
         "type": "inferens",
         "q": "Varför kan inlägg som väcker starka känslor spridas mer?",
         "options": [
-          "För att de bara visas för vuxna utan att det fick några konsekvenser",
+          "För att de bara visas för vuxna som redan följer många konton",
           "För att de alltid är sanna",
           "För att de är kortare",
           "För att de får många reaktioner som algoritmen tolkar som engagemang"
@@ -22558,7 +22558,7 @@
         "correct": 0
       },
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder pollinering enligt texten?",
         "options": [
           "Att pollen flyttas mellan blommor så frön kan bildas",
@@ -22663,7 +22663,7 @@
         "correct": 0
       },
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder det att ungdomsrådet skulle vara \"rådgivande\"?",
         "options": [
           "Att rådet får bestämma utan politiker",
@@ -22962,7 +22962,7 @@
     "text": "Många som läser Harry Potter säger att Hogwarts nästan känns som en riktig plats. Det beror inte bara på magi och spännande händelser, utan på hur världen byggs upp med regler, detaljer och vardag. På Hogwarts finns lektioner som kan vara tråkiga, lärare som är olika stränga, konflikter i korridorerna och små rutiner som återkommer: uggleposten, elevhemmen, måltiderna och poängen som delas ut. När en fantasivärld har vardag blir den lättare att tro på.\n\nSamtidigt är världen inte helt logisk, och det är ofta med flit. I berättelserna finns saker som väcker frågor: Varför använder trollkarlar ibland enkla saker när de har magi? Varför är vissa problem svåra att lösa trots att det finns kraftfulla besvärjelser? Författaren låter ibland logiken böja sig för att skapa spänning eller humor. Det gör att läsaren får fylla i luckor och fundera vidare.\n\nEn viktig del av känslan är också perspektivet. Vi ser mycket genom Harrys ögon, och han kan inte allt. Han missförstår, gissar och får veta nya saker i efterhand. Därför får läsaren upptäcka världen steg för steg. Hemligheter blir inte bara information, utan något som påverkar relationer: vem man litar på, vem som döljer något och vilka rykten som sprids.\n\nDessutom finns tydliga symboler. Elevhemmen står för olika ideal: mod, kunskap, lojalitet och ambition. Men böckerna visar att ingen är bara en sak. En elev kan vara modig och samtidigt rädd. En annan kan vara smart men ändå göra dåliga val. Just den blandningen gör att Hogwarts känns som en skola där riktiga människor skulle kunna gå.\n\nTill slut handlar det om att magin inte tar bort det mänskliga. Vänskap, sorg, avundsjuka och ansvar finns kvar. När läsaren känner igen det, blir det mindre viktigt om trapporna flyttar på sig. Då blir Hogwarts en plats man kan sakna, trots att den inte finns på en karta.",
     "questions": [
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudidé?",
         "options": [
           "Att Hogwarts känns trovärdigt eftersom världen har regler, detaljer och vardagliga inslag.",
@@ -23100,7 +23100,7 @@
         "type": "inferens",
         "q": "Vad visar texten om hur olika personer kan tolka samma berättelse?",
         "options": [
-          "Att det finns bara en korrekt tolkning som alla måste följa redan innan något annat hände",
+          "Att det bara finns en korrekt tolkning, och att de andra läsarna har missförstått texten",
           "Att tolkningar främst beror på vilken film man såg först.",
           "Att tolkningar kan variera: samma händelse kan handla om fördomar, sorg eller vardagsmod.",
           "Att tolkningar blir identiska när en serie blir populär."
@@ -23282,13 +23282,13 @@
     "text": "Att vara fan av Harry Potter kan betyda många saker. För vissa handlar det om att läsa om böckerna och känna trygghet i en bekant berättelse. För andra handlar det om att diskutera detaljer, hitta mönster och bygga teorier. I en fandom uppstår ofta ett slags gemenskap där man känner sig mindre ensam med sina intressen.\n\nTänk dig en bokcirkel på en skola. Gruppen består av olika personer: Maja som älskar språk och jämför svenska och engelska uttryck, Leo som har dyslexi men lyssnar på ljudbok och minns scenerna exakt, och Farah som helst pratar om karaktärernas val och moral. Det finns också en pensionerad granne, Sven, som ibland kommer förbi och berättar hur han upplevde böckernas lansering när hans barn var små. I samma rum kan olika generationer och olika sätt att läsa mötas.\n\nMen gemenskapen kan också skapa problem. Ibland blir diskussioner till tävlingar: vem kan mest, vem har \"rätt\" tolkning, eller vem har läst flest extramaterial? Då kan nya personer känna sig dumma och sluta delta.\n\nEn annan fråga är gränsen mellan fantasi och verklighet. Det kan vara roligt att kalla sig ett elevhem och skämta om \"mugglarproblem\", men ibland används sådana ord för att utesluta andra. Om man vill att en fandom ska vara välkomnande behöver man tänka på tonen: skämt som känns interna kan upplevas som stängda dörrar.\n\nSamtidigt kan fandom göra verklig skillnad. Många fan-grupper samlar in pengar till välgörenhet, ordnar läsprojekt eller skapar kreativa saker som fanfiction, fanart och musik. Där tränar man skrivande, samarbete och källkritik, eftersom man lär sig skilja på text, tolkning och rykten.\n\nDet viktigaste är kanske att komma ihåg varför man började: en berättelse som väckte känslor. Om gemenskapen hjälper fler att läsa, skapa och känna sig inkluderade, då har fandom blivit mer än underhållning. Den har blivit ett sätt att bygga broar mellan människor.",
     "questions": [
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudbudskap om att vara fan?",
         "options": [
           "Att fandom kan bli en gemenskap som både kan inkludera och skapa problem, beroende på hur man beter sig.",
           "Att fandom alltid leder till konflikter och därför bör undvikas.",
           "Att bara de som kan flest fakta får kallas fans.",
-          "Att det viktigaste med fandom är att vinna diskussioner om detaljer men bara under vissa förutsättningar"
+          "Att det viktigaste med fandom är att vinna diskussioner om detaljer och veta mest av alla i gruppen"
         ],
         "correct": 0
       },
@@ -23330,7 +23330,7 @@
         "q": "Vilket exempel på positiv påverkan från fandom nämns?",
         "options": [
           "Att fan-grupper kan samla in pengar, ordna läsprojekt och skapa kreativt innehåll.",
-          "Att fan-grupper alltid ersätter skolarbete med rollspel på lektionstid av en slump",
+          "Att fan-grupper alltid ersätter skolarbetet med rollspel under lektionstid",
           "Att fan-grupper gör att man slipper tänka kritiskt om källor.",
           "Att fan-grupper hindrar personer från att läsa andra böcker."
         ],
@@ -23622,7 +23622,7 @@
         "correct": 2
       },
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder fiatpengar?",
         "options": [
           "Pengar som har värde för att vi litar på att de har det",
@@ -23749,7 +23749,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudbudskap om rättvisa?",
         "options": [
           "Att rättvisa är omöjligt att uppnå",
@@ -23884,7 +23884,7 @@
         "options": [
           "För att få fler felkällor",
           "För att jämföra med en grupp som inte får förändringen",
-          "För att göra experimentet roligare för säkerhets skull",
+          "För att göra experimentet roligare för dem som deltar",
           "För att slippa mäta"
         ],
         "correct": 1
@@ -23895,7 +23895,7 @@
         "options": [
           "För att man då kan vara mer säker och minska risken för slump",
           "För att kontrollgruppen försvinner",
-          "För att läraren kräver det utan anledning för säkerhets skull",
+          "För att läraren kräver att varje försök skrivs ner i häftet",
           "För att felkällor blir större"
         ],
         "correct": 0
@@ -23918,7 +23918,7 @@
           "För att data aldrig betyder något",
           "För att olika situationer kan göra att resultatet inte gäller överallt",
           "För att växter alltid ljuger",
-          "För att kontrollgrupper är onödiga utan att det fick några konsekvenser"
+          "För att kontrollgrupper är onödiga när man bara testar en sak"
         ],
         "correct": 1
       }
@@ -24613,7 +24613,7 @@
           "När en högtid alltid firas"
         ],
         "correct": 0,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vilket exempel visar hur Zilan kombinerar olika delar av sitt liv?",
@@ -24873,7 +24873,7 @@
         "options": [
           "Bojkotter är förbjudna enligt lag",
           "Alla kläder kommer från samma land",
-          "Kläderna därifrån är av bäst kvalitet av en slump",
+          "Kläderna därifrån är av allra bästa kvalitet",
           "Det kan leda till att arbetare förlorar sina jobb"
         ],
         "correct": 3,
@@ -25001,7 +25001,7 @@
           "Att juice alltid säljs på stränder",
           "Att all reklam är äkta och spontan",
           "Att reklam ofta är noga planerad trots att den ser naturlig ut",
-          "Att resebolag ljuger om sina destinationer och ingenting annat"
+          "Att resebolag ljuger om hur stränderna faktiskt ser ut"
         ],
         "correct": 2,
         "type": "literal"
@@ -25170,7 +25170,7 @@
         "q": "Varför blev Amina generad under presentationen?",
         "options": [
           "Hon tappade sina anteckningar",
-          "Hon glömde vad hon skulle säga och ingenting annat",
+          "Hon glömde vad hon skulle säga mitt i meningen",
           "En kille fnissade när hon använde ett arabiskt ord",
           "Läraren avbröt henne"
         ],
@@ -25192,7 +25192,7 @@
         "q": "Vad sa läraren efter att Amina läst sin text?",
         "options": [
           "Att språk inte bara är kommunikation utan också ett sätt att tänka",
-          "Att hon borde skriva om texten på arabiska under hela den perioden",
+          "Att hon borde skriva om hela texten på arabiska i stället",
           "Att alla borde lära sig arabiska",
           "Att hon borde välja ett av språken"
         ],
@@ -25346,7 +25346,7 @@
           "En studie om ungdomars sömnvanor"
         ],
         "correct": 0,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför beskrivs FOMO som paradoxalt i texten?",
@@ -25374,7 +25374,7 @@
         "q": "Vad är textens slutsats?",
         "options": [
           "Att telefoner borde förbjudas helt",
-          "Att man aldrig ska stänga av telefonen under hela den perioden",
+          "Att man aldrig ska stänga av telefonen under skoldagen",
           "Att balans och eget val om nåbarhet kan vara en form av frihet",
           "Att bara vuxna bör ha mobiltelefon"
         ],
@@ -25400,7 +25400,7 @@
         "options": [
           "Vad är meningen med livet?",
           "Om ett träd faller i skogen och ingen hör det, låter det då?",
-          "Finns det liv på andra planeter på exakt samma sätt som förut",
+          "Finns det liv på andra planeter någonstans i universum",
           "Varför finns det ont i världen?"
         ],
         "correct": 1,
@@ -25444,7 +25444,7 @@
         "options": [
           "Att man inte kan bevisa det men att alternativet vore ensamt",
           "Att hon har läst det i en bok",
-          "Att Kasper inte verkar ha ett medvetande för säkerhets skull",
+          "Att Kasper inte verkar ha ett medvetande att tala om",
           "Att hon inte gillar Kasper"
         ],
         "correct": 0,
@@ -25456,7 +25456,7 @@
           "Kan man resa i tiden?",
           "Om alla minnen försvann, skulle du fortfarande vara du?",
           "Vad händer efter döden?",
-          "Varför finns universum, för att det hade fungerat förut"
+          "Varför finns universum, och vem kan svara på det"
         ],
         "correct": 1,
         "type": "literal"
@@ -25476,7 +25476,7 @@
     "text": "Antibiotika är läkemedel som används för att döda bakterier eller hindra dem från att föröka sig. När antibiotika fungerar kan de rädda liv, till exempel vid lunginflammation, blodförgiftning eller infektioner efter operationer. Men det finns ett växande problem som gör att antibiotika ibland inte biter: antibiotikaresistens. Det betyder att bakterier förändras så att de klarar av medicinen och kan fortsätta spridas.\n\nFör att förstå resistens kan du tänka på bakterier som en stor grupp där individer inte är helt lika. När antibiotika ges dör de bakterier som är känsliga, men om några råkar ha egenskaper som gör att de överlever får de ett stort försprång. De kan då föröka sig och bli fler. På så sätt blir bakterierna i gruppen mer och mer motståndskraftiga. Det här är evolution i snabb version: variation, urval och spridning.\n\nBakterier kan bli resistenta på flera sätt. Ibland uppstår slumpmässiga mutationer (små förändringar i arvsmassan) som gör att antibiotika inte längre kan påverka bakterien som förr. Bakterier kan också utbyta genetisk information med varandra, nästan som att de \"lånar\" bra lösningar. Det gör att resistens kan spridas snabbt, även mellan olika bakteriearter.\n\nResistens är inget nytt fenomen. Redan Alexander Fleming, som upptäckte penicillinet, varnade i sin nobelföreläsning 1945 för att bakterier skulle kunna vänja sig vid medlet om det användes slarvigt. Att varningen kom samtidigt med genombrottet säger något om hur väl förloppet var förstått redan från början.\n\nVarför ökar resistensen? En viktig orsak är överanvändning och felanvändning. Om antibiotika tas när det inte behövs, till exempel vid virusinfektioner som förkylning (där antibiotika inte fungerar), utsätts bakterier i kroppen ändå för läkemedlet. Då ökar chansen att resistenta bakterier överlever och sprids. Ett annat problem är om man avbryter en kur för tidigt. Då kan de starkaste bakterierna, som klarat sig längst, bli kvar och börja växa igen.\n\nResistens hänger också ihop med hur antibiotika används i samhället. I vissa delar av världen har antibiotika använts mycket inom djurhållning, ibland för att förebygga sjukdom i stora besättningar. Det kan skapa resistenta bakterier som kan spridas via mat, vatten eller kontakter mellan människor och djur. I dag arbetar många länder för att minska den typen av användning, men det kräver både regler och kontroll.\n\nKonsekvenserna kan bli stora. Om antibiotika slutar fungera blir vanliga infektioner farligare. Operationer, cancerbehandlingar och intensivvård blir också mer riskfyllda, eftersom patienter då är extra sårbara för infektioner. Det betyder inte att vi \"är tillbaka på medeltiden\", men det betyder att modern sjukvård blir svårare utan fungerande antibiotika.\n\nUtvecklingen av nya antibiotika har samtidigt gått långsamt. De flesta antibiotika vi använder i dag bygger på upptäckter från mitten av 1900-talet. En förklaring är ekonomisk: ett läkemedel som ska användas i korta kurer och helst så sällan som möjligt är mindre lönsamt än ett som tas varje dag i decennier. Därför diskuteras nya sätt att finansiera forskningen.\n\nVad kan man göra? På individnivå handlar det om att använda antibiotika på rätt sätt: bara när läkare bedömer att det behövs, och att fullfölja behandlingen enligt ordination. På samhällsnivå handlar det om smittskydd, bättre hygien i vården, snabbare tester som visar om en infektion är bakterie eller virus, samt forskning som kan ta fram nya antibiotika och alternativa behandlingar.\n\nDet viktiga är att förstå att antibiotikaresistens inte är en \"skuldfälla\" där allt ligger på en person. Det är en gemensam utmaning. Bakterier är smarta på sitt sätt: de anpassar sig. Därför behöver vi också vara smarta – med kunskap, samarbete och tydliga rutiner – för att antibiotika ska fungera även i framtiden.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder antibiotikaresistens enligt texten?",
         "options": [
           "Att kroppen slutar behöva medicin",
@@ -25702,7 +25702,7 @@
         "options": [
           "Att reklam alltid är sann",
           "Att jakten på förbättring kan bli ett krav snarare än ett val",
-          "Att forskning bör stoppas helt, för att slippa problem senare",
+          "Att forskning bör stoppas helt tills alla risker är kända",
           "Att celler kan läsa affischer"
         ],
         "correct": 1
@@ -25825,7 +25825,7 @@
           "Snabbare borttagning av innehåll och tydligare ansvar för plattformar",
           "Förbud mot internet",
           "Fler skolprov",
-          "Gratis mobiltelefoner redan innan något annat hände"
+          "Gratis mobiltelefoner till alla under arton år"
         ],
         "correct": 0
       },
@@ -25858,7 +25858,7 @@
           "Att skydd inte behövs",
           "Att lagar kan både försvara samhället och samtidigt hota friheter",
           "Att val alltid är riggade",
-          "Att politiker aldrig kompromissar utan någon som helst förändring"
+          "Att politiker aldrig kompromissar när friheter står på spel"
         ],
         "correct": 1
       },
@@ -25929,7 +25929,7 @@
         "options": [
           "För att frågan kopplas till identitet och rättvisa, inte bara fakta",
           "För att alla redan är överens",
-          "För att vädret alltid är samma utan att det fick några konsekvenser",
+          "För att vädret alltid är sig likt oavsett vad forskarna säger",
           "För att koldioxid inte finns"
         ],
         "correct": 0
@@ -26901,7 +26901,7 @@
           "Det fungerade helt utan problem",
           "Det användes endast av kvinnor",
           "Det valde alltid de mest kvalificerade",
-          "Det missgynnande kvinnliga sökande"
+          "Det missgynnade kvinnliga sökande"
         ],
         "correct": 3,
         "type": "literal"
@@ -27060,7 +27060,7 @@
       {
         "q": "Vilken risk nämns med att data delas eller läcker?",
         "options": [
-          "Att priset på telefoner sjunker av en slump",
+          "Att priset på telefoner sjunker snabbt",
           "Att alla får bättre appar",
           "Att internet blir snabbare",
           "Att känslig information kan spridas oönskat"
@@ -27073,7 +27073,7 @@
         "options": [
           "Att alla bör dölja allt",
           "Att integritet handlar om kontroll över sin egen berättelse",
-          "Att internet bör förbjudas, för att det hade fungerat förut",
+          "Att internet bör förbjudas för alla under arton år",
           "Att data aldrig samlas in"
         ],
         "correct": 1,
@@ -27320,7 +27320,7 @@
           "Att hen väljer gymnasium genom att följa kompisarnas val"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "inferens"
       },
       {
         "q": "Vilken roll spelar morfars berättelse i texten?",
@@ -27500,7 +27500,7 @@
         "options": [
           "Att drömmar kan spegla oro och även användas för att påverka människor",
           "Att drömmar inte påverkas av samhället alls",
-          "Att drömmar blir svagare ju mer man läser historia för säkerhets skull",
+          "Att drömmar blir svagare ju mer man läser om historia",
           "Att drömmar alltid är identiska över generationer"
         ],
         "correct": 0,
@@ -28175,7 +28175,7 @@
     "text": "Sociala medier beskrivs ofta som en plats där människor \"bara delar\" bilder, åsikter och vardag. Men bakom varje flöde finns en ekonomisk logik: uppmärksamhet är en resurs. Plattformar tjänar pengar på annonser och på att användare stannar kvar så länge som möjligt. Den här logiken kallas ibland uppmärksamhetsekonomi, och den påverkar både vad du ser och hur du ser på dig själv.\n\nAlgoritmerna i sociala medier är byggda för att förutsäga vad som får dig att fortsätta scrolla. De mäter beteenden: vilka inlägg du stannar vid, vad du kommenterar, vad du delar, och vilka videor du ser klart. Det leder ofta till att innehåll som väcker starka känslor prioriteras, eftersom känslor gör oss mer benägna att reagera. Det kan vara inspiration och humor, men också ilska och rädsla.\n\nFör individen kan detta påverka identiteten. I tonåren är identitet ofta under konstruktion: man testar roller, grupper och uttryck. Sociala medier kan ge stöd, gemenskap och möjlighet att hitta människor med samma intressen. Men de kan också skapa en känsla av att man alltid blir bedömd. Om en bild får få likes kan det kännas som ett socialt misslyckande, även om det egentligen bara handlar om timing, algoritmer eller slump.\n\nEn annan effekt är jämförelse. Flöden visar sällan vardagens \"mellanscener\": väntan, misslyckanden, tråkiga dagar. De visar höjdpunkter. När man jämför sitt eget liv, med alla sina detaljer, mot andras höjdpunkter kan man känna sig sämre. Det kan skapa stress och en jakt på perfektion. Samtidigt kan människor också använda plattformar för att visa mer ärliga sidor, och då kan flöden bli en plats för igenkänning snarare än jämförelse.\n\nUppmärksamhetsekonomin påverkar också samhällsdebatten. Om starka reaktioner belönas kan nyanserade resonemang få mindre plats. Det kan leda till att extremare ståndpunkter syns mer, inte för att de är vanligast, utan för att de är mest \"engagerande\". Dessutom kan desinformation spridas snabbt när den är formulerad för att chocka eller bekräfta en grupps identitet.\n\nVad kan man göra? Först behöver man förstå att flödet inte är neutralt. Det är ett urval. Att följa olika typer av källor, att ibland söka information aktivt och att ta pauser kan minska effekterna. Man kan också fundera på sin egen roll: varför delar jag detta? Vill jag informera, uttrycka mig, eller få bekräftelse? Bekräftelse är mänskligt, men när den blir det enda måttet på värde kan den bli farlig.\n\nDet finns också forskning som nyanserar bilden. Studier av ungas mående visar sällan ett enkelt samband mellan skärmtid och psykisk ohälsa. Vad man gör verkar spela större roll än hur länge: att aktivt skriva med vänner ser ut att fungera annorlunda än att passivt scrolla genom främlingars flöden. Den som redan mår dåligt söker sig dessutom oftare till skärmen, vilket gör det svårt att avgöra vad som är orsak och vad som är följd.\n\nPå samhällsnivå diskuteras reglering: transparens kring algoritmer, krav på att skydda unga användare, och ansvar för hur hat och desinformation hanteras. Det är inte enkelt, eftersom reglering också kan påverka yttrandefrihet. Men diskussionen visar att sociala medier inte bara är privata val, utan en del av den gemensamma infrastrukturen för kommunikation.\n\nAtt förstå uppmärksamhetsekonomin är att förstå att din tid och din reaktion är värdefull. När du ser det kan du börja använda plattformar mer som verktyg och mindre som miljöer som styr dig. Identitet formas fortfarande av dig och dina relationer i verkligheten, men det blir lättare att skydda den när du vet vilka krafter som försöker fånga din uppmärksamhet.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad menas med uppmärksamhetsekonomi enligt texten?",
         "options": [
           "Att plattformar tjänar på att användare stannar kvar och ser annonser",
@@ -28212,7 +28212,7 @@
         "q": "Varför kan nyanserade resonemang få mindre plats i sociala medier enligt texten?",
         "options": [
           "För att långa texter inte får plats",
-          "För att alla plattformar är statliga, för att slippa problem senare",
+          "För att alla plattformar ägs och styrs av staten i dag",
           "För att nyanser alltid är förbjudna",
           "För att starka reaktioner ofta belönas och lyfts fram av algoritmer"
         ],
@@ -28258,7 +28258,7 @@
     "text": "Många använder AI-verktyg i skolan och hemma: för att sammanfatta text, skapa idéer, öva språk eller få hjälp med programmering. Men en AI-modell är inte en neutral \"sanningmaskin\". Den är en statistisk modell som tränats på stora mängder data, och därför bär den på både styrkor och begränsningar från den värld den lärt sig av. För att förstå hur AI påverkar samhället behöver man förstå begrepp som träningsdata, bias och generalisering.\n\nEn AI-modell inom språk, som en chattbot, tränas genom att läsa enorma textmängder och lära sig mönster: vilka ord som ofta följer på andra, hur argument byggs, hur berättelser brukar fungera. Modellen får inte \"förståelse\" på samma sätt som en människa, men den kan bli mycket skicklig på att förutsäga rimliga svar. Det gör den användbar, men också riskabel om man tror att den alltid har rätt.\n\nBias betyder snedvridning. Om träningsdata innehåller mer text från vissa grupper, språk eller perspektiv kan modellen bli bättre på just dessa och sämre på andra. Bias kan också handla om stereotyper. Om materialet ofta kopplar vissa yrken till vissa kön kan modellen spegla det i sina svar, även om det inte är sant eller önskvärt. Det är viktigt att förstå att bias inte alltid är medvetet \"ondska\". Det kan vara en spegel av hur information producerats och sparats historiskt.\n\nEtt annat viktigt begrepp är generalisering: förmågan att ge rimliga svar på nya situationer. En modell kan vara bra på att härma mönster men ändå göra fel när frågan kräver exakt fakta, eller när den möter ovanliga exempel. Ibland kan den \"hallucinera\", alltså skapa ett svar som låter övertygande men som inte stämmer. Därför behöver användaren en kritisk roll: kontrollera källor, jämföra med pålitliga texter och förstå att ett snyggt svar inte är samma sak som ett sant svar.\n\nAI påverkar också makt. Den som kontrollerar vilka data som används, vilka mål modellen optimeras för och vilka regler som styr användningen kan påverka hur verktyget fungerar i praktiken. Om ett företag tjänar pengar på att du spenderar tid i en app kan det designa system som maximerar engagemang, inte nödvändigtvis lärande eller välmående. På samma sätt kan en skola använda AI på ett sätt som stärker elevers självständighet - eller på ett sätt som gör elever beroende av färdiga svar.\n\nDet finns också etiska frågor om data. Många modeller tränas på texter och bilder som skapats av människor som aldrig aktivt gett sitt medgivande. Samtidigt kan AI skapa nytt innehåll som liknar det den tränats på. Det leder till konflikter om upphovsrätt och rättvisa: vem får betalt, och vem får kontroll?\n\nI gymnasiet kan AI vara ett kraftfullt verktyg om den används rätt. Du kan använda den som en samtalspartner: be den förklara begrepp på olika nivåer, skapa övningsfrågor, föreslå struktur för en text eller ge dig alternativa perspektiv. Men du behöver fortfarande tänka själv. Om du låter AI göra hela arbetet tappar du träningsmomentet som skolan egentligen handlar om: att utveckla din egen förmåga att resonera.\n\nDet finns också en miljöfråga. Att träna en stor modell kräver mycket el, och varje fråga du ställer kostar energi i ett datacenter någonstans. Mängden är liten per fråga men stor i summa, och kylningen kräver dessutom vatten.\n\nAtt förstå AI handlar alltså inte bara om teknik, utan om samhälle. Träningsdata formar modellens beteende, bias påverkar vilka som gynnas eller missgynnas, och generalisering avgör när verktyget är pålitligt. När du ser det blir AI mindre magi och mer ett system som går att granska, diskutera och använda medvetet.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder bias enligt texten?",
         "options": [
           "Att AI bara fungerar på engelska språket",
@@ -28345,7 +28345,7 @@
         "options": [
           "Att den är oberoende av historiska data",
           "Att den alltid kan ge ett enda exakt värde",
-          "Att den beskriver verkligheten i alla detaljer oavsett vad andra tyckte",
+          "Att den beskriver verkligheten i alla sina detaljer utan förenkling",
           "Att den är användbar för ett visst syfte och att antagandena är tydliga"
         ],
         "correct": 3,
@@ -28357,7 +28357,7 @@
           "Att jämförelser mellan modeller blir meningslösa",
           "Att modeller blir mer neutrala över tid",
           "Att viktiga fenomen kan osynliggöras om de inte passar in i modellens struktur",
-          "Att osäkerhet kan elimineras genom standardvärden på exakt samma sätt som förut"
+          "Att osäkerhet kan elimineras helt genom att välja bra standardvärden"
         ],
         "correct": 2,
         "type": "inferens"
@@ -28404,7 +28404,7 @@
           "Modeller är värdeneutrala om de är matematiskt formulerade"
         ],
         "correct": 0,
-        "type": "literal"
+        "type": "sammanfatta"
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1484981138541-3d074aa97716?w=600&h=400&fit=crop",
@@ -28469,7 +28469,7 @@
         "options": [
           "Att cykling kräver fler bilar",
           "Att fler invånare kan ge underlag för service men också öka belastningen om investeringar uteblir",
-          "Att parker bara behövs i ytterområden, för att slippa problem senare",
+          "Att parker bara behövs i ytterområden, eftersom marken där ändå är billig",
           "Att högre hus alltid ger mer skugga"
         ],
         "correct": 1,
@@ -28481,7 +28481,7 @@
           "Enbart hur höga husen är i genomsnitt",
           "Både sociala indikatorer (tillgänglighet, blandning) och miljöindikatorer (grönstruktur, resvanor) över tid",
           "Enbart hur många bostäder som färdigställts",
-          "Enbart invånarnas preferenser före byggstart utan någon som helst förändring"
+          "Enbart invånarnas preferenser insamlade före byggstart genom en enkätundersökning"
         ],
         "correct": 1,
         "type": "inferens"
@@ -28605,7 +28605,7 @@
       {
         "q": "Vilket problem avses med \"kollektiv handlingsproblematik\" i texten?",
         "options": [
-          "Att människor inte kan kombinera flera jobb på exakt samma sätt som förut",
+          "Att människor inte längre kan kombinera flera olika jobb",
           "Att individuellt rationella val kan leda till sämre villkor på systemnivå",
           "Att kollektivtrafik alltid är ineffektiv",
           "Att plattformar inte kan skala upp tekniskt"
@@ -28630,7 +28630,7 @@
           "För att tekniken utvecklas för snabbt för att diskuteras",
           "För att alla arbetstagare föredrar osäkerhet",
           "För att effekterna beror på vilka institutioner och regler som formar incitament och riskfördelning",
-          "För att plattformsarbete är identiskt med traditionellt arbete men bara under vissa förutsättningar"
+          "För att plattformsarbete i praktiken är identiskt med traditionell anställning i alla avseenden"
         ],
         "correct": 2,
         "type": "literal"
@@ -28686,7 +28686,7 @@
         "q": "Texten problematiserar idén att lägga ansvar på den med \"störst kontroll\". Vilket är det starkaste skälet som ges?",
         "options": [
           "Att organisationer saknar processer",
-          "Att kontroll alltid ligger hos den drabbade personen redan innan något annat hände",
+          "Att kontroll alltid ligger hos den person som till sist drabbas av beslutet",
           "Att olika aktörer har olika slags kontroll och att kedjor med underleverantörer gör ansvarslinjen lång",
           "Att kontroll är en entydig och lätt mätbar storhet"
         ],
@@ -28741,7 +28741,7 @@
     "text": "I nyheter, reklam och sociala medier presenteras ofta siffror som om de vore självklara bevis. \"Elever som gör X får högre betyg\", \"Människor som äter Y lever längre\", \"Den här metoden fungerar eftersom kurvan går upp\". Problemet är att data kan visa samband utan att säga något säkert om orsaker. Därför är det viktigt att förstå skillnaden mellan korrelation och kausalitet.\n\nKorrelation betyder att två saker förändras tillsammans. Om glassförsäljningen ökar samtidigt som antalet solbrända personer ökar kan vi säga att det finns en korrelation. Men det betyder inte att glass orsakar solbränna. Här finns en tredje faktor: varmt väder. Den tredje faktorn kallas ibland en \"confounder\" eller en bakomliggande variabel. Den kan skapa ett samband som ser starkt ut men som egentligen beror på något annat.\n\nKausalitet betyder att en sak faktiskt orsakar en annan. För att kunna säga något om kausalitet behöver man ofta mer än observationer. Ibland behöver man experiment där man förändrar en faktor och håller andra faktorer så lika som möjligt. Det är därför randomiserade kontrollerade studier ses som en \"guldstandard\" i medicinsk forskning. Om deltagare slumpas till två grupper, och bara den ena gruppen får en behandling, kan man jämföra resultaten med mindre risk att andra skillnader förklarar effekten.\n\nMen även experiment har problem. Först är det inte alltid etiskt eller praktiskt att experimentera. Man kan till exempel inte slumpa människor till att röka i tio år för att se effekterna. Då behöver man observationsstudier, och då blir källkritiken extra viktig. Dessutom kan resultat misstolkas även när studien är korrekt. Om en effekt är statistiskt signifikant betyder det inte att den är stor eller viktig i praktiken. En liten skillnad kan bli \"signifikant\" i en enorm studie, medan en relevant skillnad kan vara svår att upptäcka i en liten studie.\n\nEtt annat problem är selektionsbias. Det innebär att de som ingår i en studie inte är representativa. Om man till exempel undersöker sambandet mellan träning och välmående genom att fråga människor på ett gym får man en grupp som redan valt att vara där. Då riskerar man att överskatta hur lätt träning är för alla, eller hur väl den fungerar för alla.\n\nVi kan också luras av hur data presenteras. En graf kan börja på en ovanlig skala och få en liten förändring att se dramatisk ut. En rubrik kan lyfta fram en trend utan att nämna att variationen är stor. Och en procent kan låta stor utan att man förstår basen. Om en risk ökar med 50% kan det låta skrämmande, men om risken gick från 2 av 10 000 till 3 av 10 000 är ökningen fortfarande liten i absoluta tal.\n\nEn besläktad fälla är att bara de studier som visar ett tydligt resultat blir publicerade. De försök som inte gav något syns aldrig, och den samlade bilden blir därför skevare än verkligheten. Fenomenet brukar kallas publiceringsbias.\n\nDet betyder inte att data är värdelöst. Tvärtom är data ett av våra bästa verktyg för att förstå världen. Men data kräver tolkning, och tolkning kräver frågor. Vem har samlat in informationen? Hur? Vilka saknas? Finns det alternativa förklaringar? Vad säger andra studier?\n\nI ett samhälle där algoritmer sorterar information och där \"statistik\" ofta används som argument är förmågan att skilja korrelation från kausalitet en form av demokratiskt självförsvar. När du lär dig tänka så blir du svårare att manipulera, och du blir bättre på att delta i diskussioner som handlar om allt från hälsa och skola till ekonomi och klimat.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder korrelation enligt texten?",
         "options": [
           "Att en sak orsakar en annan",
@@ -28778,7 +28778,7 @@
         "q": "Varför kan en effekt bli statistiskt signifikant utan att vara särskilt viktig i praktiken?",
         "options": [
           "För att små studier alltid är bättre",
-          "För att signifikans betyder att effekten är stor, för att undvika missförstånd",
+          "För att signifikans alltid betyder att effekten också är stor",
           "För att en mycket liten skillnad kan bli signifikant i en väldigt stor studie",
           "För att grafer aldrig visar verkligheten"
         ],
@@ -28838,7 +28838,7 @@
         "q": "Hur kopplas AI-användning till likvärdighet i texten?",
         "options": [
           "Genom att betyg kan sättas automatiskt",
-          "Genom att lärare slipper undervisa om skrivande i onödan men bara om det behövdes",
+          "Genom att lärare slipper undervisa om skrivande och kan lägga tiden på annat",
           "Genom att alla får exakt samma AI-svar",
           "Genom att vissa elever kan få hjälp med struktur och språk så att innehållskunskap kan synas bättre"
         ],
@@ -28850,7 +28850,7 @@
         "options": [
           "Att AI alltid skriver mer personligt än eleven",
           "Att elever slipper skriva egna utkast",
-          "Att verktyget kan visa elevens känslor kring uppgiften utan att det fick några konsekvenser",
+          "Att verktyget kan avläsa elevens känslor kring uppgiften och anpassa svaren efter dem",
           "Att eleven kan jämföra utkast med förslag och upptäcka otydlighet, logikbrister och saknade belägg"
         ],
         "correct": 3,
@@ -28870,7 +28870,7 @@
       {
         "q": "Vilket åtgärdspaket stämmer bäst överens med textens rekommendationer?",
         "options": [
-          "Fri användning utan regler, eftersom ansvar alltid ligger på individen redan innan något annat hände",
+          "Fri användning utan regler, eftersom ansvaret för lärandet alltid ligger hos den enskilda eleven",
           "Öppen redovisning av användning, uppgifter som synliggör processen och undervisning om faktakontroll",
           "Endast AI för grammatik, men inga andra hjälpmedel",
           "Förbud, hemliga kontroller och inga diskussioner om begränsningar"
@@ -28918,7 +28918,7 @@
         "q": "Vad symboliserar mannen vid övergångsstället mest sannolikt i berättelsen?",
         "options": [
           "Hur tvekan och små val kan flytta en till en annan \"cykel\" av händelser",
-          "Att staden är farlig för fotgängare men bara under vissa förutsättningar",
+          "Att staden är farlig för fotgängare vid stora korsningar",
           "Att alla människor är distraherade",
           "Att teknik alltid fungerar perfekt"
         ],
@@ -28931,7 +28931,7 @@
           "Hon kopierar Amirs disposition ordagrant",
           "Hon fokuserar på att motivera val och synliggöra sin tankeväg, inte bara leverera en färdig text",
           "Hon byter ämne för att undvika osäkerhet",
-          "Hon slutar använda källor och skriver bara från minnet, för att undvika missförstånd"
+          "Hon slutar använda källor helt och skriver uppsatsen bara utifrån sitt eget minne"
         ],
         "correct": 1,
         "type": "literal"
@@ -28999,7 +28999,7 @@
         "options": [
           "För att språket alltid lurar läsaren",
           "För att den delas i fel sammanhang, till exempel utan tidsperiod eller med manipulerad skala",
-          "För att primärkällor aldrig går att lita på, för att undvika missförstånd",
+          "För att primärkällor aldrig går att lita på när de har några år på nacken",
           "För att statistik är meningslös"
         ],
         "correct": 1,
@@ -29020,7 +29020,7 @@
         "q": "Hur beskriver texten kopplingen mellan spridning och trovärdighet i digitala miljöer?",
         "options": [
           "Mycket spritt innehåll är alltid mest korrekt",
-          "Spridning säger inget alls om kvaliteten och kan ignoreras, för att slippa problem senare",
+          "Spridning säger inget alls om kvaliteten och kan därför ignoreras helt",
           "Spridning kan påverkas av känslor och tempo, så man bör inte låta det avgöra sanningshalt",
           "Algoritmer tar bort allt känslomässigt innehåll"
         ],
@@ -29068,7 +29068,7 @@
         "options": [
           "Att ge exakta fakta om trafikregler",
           "Att förklara hur motorer fungerar",
-          "Att bevisa att ett transportsätt alltid är bäst, för att undvika missförstånd",
+          "Att bevisa att ett visst transportsätt alltid är bäst i staden",
           "Att göra stadens rytm och skillnader mellan rörelsesätt konkreta för läsaren"
         ],
         "correct": 3,
@@ -29111,7 +29111,7 @@
         "q": "Vad antyder avslutningen om stadens rörelse som \"social\"?",
         "options": [
           "Att infrastruktur inte spelar någon roll",
-          "Att alla platser blir lika nära om man vill redan innan något annat hände",
+          "Att alla platser blir lika nära om man bara vill tillräckligt mycket",
           "Att hur vi tar oss fram påverkar möten, närhet och upplevelsen av avstånd",
           "Att sociala medier styr alla resor"
         ],
@@ -29147,7 +29147,7 @@
         "q": "Vilken övergripande förklaring ger texten till varför studievanor kan vara svåra att förändra?",
         "options": [
           "För att alla har samma inlärningsstil",
-          "För att motivation är medfödd och oföränderlig och ingenting annat",
+          "För att motivation är medfödd och därför inte går att påverka alls",
           "För att hjärnan försöker spara energi och undvika osäkerhet, vilket påverkar val i stunden",
           "För att skolans krav alltid är orealistiska"
         ],
@@ -29157,7 +29157,7 @@
       {
         "q": "Varför kan om-läsning av anteckningar ge en missvisande känsla av kunskap enligt texten?",
         "options": [
-          "För att ord aldrig kan läras in genom läsning men bara under vissa förutsättningar",
+          "För att ord aldrig kan läras in enbart genom att läsa dem tyst",
           "För att anteckningar alltid är fel",
           "För att självtest bara passar vissa ämnen",
           "För att igenkänning kan förväxlas med förmågan att återkalla och använda kunskapen"
@@ -29192,7 +29192,7 @@
         "options": [
           "Hjälpsam planering minskar beslut i stunden, medan fällan ger kontrollkänsla utan att leda till handling",
           "Hjälpsam planering gör pauser onödiga, medan fällan kräver fler pauser",
-          "Hjälpsam planering fungerar bara för extroverta, medan fällan drabbar introverta under hela den perioden",
+          "Hjälpsam planering fungerar bara för vissa personligheter, medan fällan drabbar alla de andra",
           "Hjälpsam planering kräver att man fyller varje minut, medan fällan lämnar luckor"
         ],
         "correct": 0,
@@ -31591,7 +31591,7 @@
         "type": "forfattarens-syfte",
         "q": "Hur beskriver texten kärnan i diskussionen om vem som får använda vad?",
         "options": [
-          "Att allt kulturutbyte bör undvikas för säkerhets skull",
+          "Att allt kulturutbyte mellan grupper bör undvikas",
           "Att frågan i grunden handlar om erkännande och maktförhållanden",
           "Att bara den som fötts in i en kultur får använda dess uttryck",
           "Att diskussionen är ny och saknar historisk motsvarighet"
@@ -32360,7 +32360,7 @@
     "genre": "faktatext",
     "theme": "Teknik",
     "title": "Vad är artificiell intelligens?",
-    "text": "Artificiell intelligens, ofta förkortat AI, är teknik som gör att datorer kan utföra uppgifter som vanligtvis kräver mänsklig intelligens. Det kan handla om att känna igen bilder, förstå språk eller fatta beslut.\n\nAI används redan i många delar av samhället. Till exempel kan mobiltelefoner använda AI för att känna igen ansikten i bilder. Streamingtjänster använder AI för att rekommendera filmer baserat på vad du tidigare har sett.\n\nTekniken bygger ofta på stora mängder data. Genom att analysera data kan AI-system hitta mönster och lära sig över tid. Detta kallas maskininlärning.\n\nSkillnaden mot vanliga program är värd att förstå. I ett vanligt program skriver en människa reglerna: om detta händer, gör det. Ett system som lär sig får i stället se tusentals exempel och räknar själv ut vilka drag som hänger ihop med vilket svar. Ingen har alltså skrivit ned regeln för hur en katt ser ut, utan systemet har hittat den i bilderna.\n\nDet gör att materialet som systemet tränats på blir avgörande. Har ett ansiktsigenkänningssystem framför allt sett ljushyade ansikten fungerar det sämre på andra, inte för att någon velat det utan för att exemplen var skeva. Sådana fel upptäcks ofta först när tekniken redan används.\n\nEtt annat problem är att system som skriver text kan låta säkra även när de har fel. De väljer ord som brukar passa ihop, vilket ger meningar som ser rätt ut också när innehållet är påhittat. Att kontrollera en uppgift i en annan källa är därför nödvändigt, hur välformulerat svaret än verkar.\n\nDe senaste årens stora förändring är att AI kan skapa nytt material: text, bilder, röster och musik. Det ger nya möjligheter men också nya frågor, som vem som äger en bild byggd på tusentals andras verk, och hur man vet om en inspelad röst verkligen tillhör den den låter som.\n\nMen AI väcker också frågor. Vem ansvarar om ett AI-system gör fel? Hur skyddas människors integritet när stora mängder data samlas in? Dessa frågor diskuteras av forskare, politiker och företag. Inom EU har en särskild lag om AI arbetats fram, där användningen delas in efter hur riskabel den är: ju större risk för människor, desto hårdare krav.\n\nDet finns också en oro för att AI kan ersätta vissa jobb. Samtidigt kan tekniken skapa nya möjligheter och yrken. Historiskt har ny teknik ofta förändrat arbetsmarknaden snarare än att helt ta bort jobb. Det är dock en klen tröst för den enskilda som förlorar sitt arbete, eftersom de nya jobben sällan uppstår på samma plats eller kräver samma kunskaper.\n\nOrdet intelligens i namnet är delvis missvisande. Det valdes redan på 1950-talet, långt innan tekniken kunde göra något av det den gör i dag.\n\nDet är också värt att komma ihåg vad AI inte är. Ett system som beskriver en känsla har inte känt något, och ett som svarar snabbt förstår inte frågan på det sätt en människa gör. Att tekniken är imponerande betyder inte att den fungerar som ett medvetande.\n\nFör att använda AI på ett bra sätt krävs kunskap och regler. Genom att förstå tekniken kan människor fatta informerade beslut och använda AI på ett ansvarsfullt sätt.",
+    "text": "Artificiell intelligens, ofta förkortat AI, är teknik som gör att datorer kan utföra uppgifter som vanligtvis kräver mänsklig intelligens. Det kan handla om att känna igen bilder, förstå språk eller fatta beslut.\n\nAI används redan i många delar av samhället. Till exempel kan mobiltelefoner använda AI för att känna igen ansikten i bilder. Streamingtjänster använder AI för att rekommendera filmer baserat på vad du tidigare har sett.\n\nTekniken bygger ofta på stora mängder data. Genom att analysera data kan AI-system hitta mönster och lära sig över tid. Detta kallas maskininlärning.\n\nSkillnaden mot vanliga program är värd att förstå. I ett vanligt program skriver en människa reglerna: om detta händer, gör det. Ett system som lär sig får i stället se tusentals exempel och räknar själv ut vilka drag som hänger ihop med vilket svar. Ingen har alltså skrivit ned regeln för hur en katt ser ut, utan systemet har hittat den i bilderna.\n\nDet gör att materialet som systemet tränats på blir avgörande. Har ett ansiktsigenkänningssystem framför allt sett ljushyade ansikten fungerar det sämre på andra, inte för att någon velat det utan för att exemplen var skeva. Sådana fel upptäcks ofta först när tekniken redan används.\n\nEtt annat problem är att system som skriver text kan låta säkra även när de har fel. De väljer ord som brukar passa ihop, vilket ger meningar som ser rätt ut också när innehållet är påhittat. Att kontrollera en uppgift i en annan källa är därför nödvändigt, hur välformulerat svaret än verkar.\n\nDe senaste årens stora förändring är att AI kan skapa nytt material: text, bilder, röster och musik. Det ger nya möjligheter men också nya frågor, som vem som äger en bild byggd på tusentals andras verk, och hur man vet om en inspelad röst verkligen tillhör den person den låter som.\n\nMen AI väcker också frågor. Vem ansvarar om ett AI-system gör fel? Hur skyddas människors integritet när stora mängder data samlas in? Dessa frågor diskuteras av forskare, politiker och företag. Inom EU har en särskild lag om AI arbetats fram, där användningen delas in efter hur riskabel den är: ju större risk för människor, desto hårdare krav.\n\nDet finns också en oro för att AI kan ersätta vissa jobb. Samtidigt kan tekniken skapa nya möjligheter och yrken. Historiskt har ny teknik ofta förändrat arbetsmarknaden snarare än att helt ta bort jobb. Det är dock en klen tröst för den enskilda som förlorar sitt arbete, eftersom de nya jobben sällan uppstår på samma plats eller kräver samma kunskaper.\n\nOrdet intelligens i namnet är delvis missvisande. Det valdes redan på 1950-talet, långt innan tekniken kunde göra något av det den gör i dag.\n\nDet är också värt att komma ihåg vad AI inte är. Ett system som beskriver en känsla har inte känt något, och ett som svarar snabbt förstår inte frågan på det sätt en människa gör. Att tekniken är imponerande betyder inte att den fungerar som ett medvetande.\n\nFör att använda AI på ett bra sätt krävs kunskap och regler. Genom att förstå tekniken kan människor fatta informerade beslut och använda AI på ett ansvarsfullt sätt.",
     "questions": [
       {
         "type": "inferens",
@@ -32430,7 +32430,7 @@
       }
     ],
     "meta": {
-      "wordCount": 515,
+      "wordCount": 516,
       "fingerprint": "ak7-tema-039",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
@@ -35218,7 +35218,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "ord",
         "q": "Vad betyder djurens välfärd?",
         "options": [
           "Att djur arbetar",
@@ -35323,7 +35323,7 @@
         "correct": 1
       },
       {
-        "type": "sammanfatta",
+        "type": "inferens",
         "q": "Vad menas med att rättigheterna är odelbara?",
         "options": [
           "Att inget land får välja bort en konvention",
@@ -36983,7 +36983,7 @@
         "correct": 1
       },
       {
-        "type": "textbevis",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudbudskap?",
         "options": [
           "ABBA förändrade svensk och internationell popmusik",
@@ -37813,7 +37813,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vad är huvudbudskapet?",
         "options": [
           "Solsystemet skapades mycket snabbt",
@@ -38062,7 +38062,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vilket huvudbudskap förmedlar texten?",
         "options": [
           "Tennis har inte förändrats",
@@ -38228,7 +38228,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudsakliga budskap?",
         "options": [
           "Eftermäle formas av flera faktorer",
@@ -38300,7 +38300,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vilket huvudbudskap förmedlar texten?",
         "options": [
           "Demokrati har utvecklats över tid",
