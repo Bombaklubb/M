@@ -14792,7 +14792,7 @@
         "options": [
           "Alla röstade för Isaks förslag om att byta varannan vecka",
           "De kunde inte bestämma sig",
-          "Alla röstade för Olivers förslag oavsett vad andra tyckte",
+          "Alla röstade för Olivers förslag om att alltid börja om",
           "Alla röstade för Fatimas förslag"
         ],
         "correct": 0,
@@ -15150,7 +15150,7 @@
           "För att man vill att lyftkraften ska hjälpa personen att hålla sig uppe",
           "För att vatten ska rinna snabbare",
           "För att flytvästar ska bli tyngre",
-          "För att flytvästar ska se coola ut utan att det fick några konsekvenser"
+          "För att flytvästar ska se coola ut och gå att välja i olika färger"
         ],
         "correct": 0
       }
@@ -15305,7 +15305,7 @@
           "För att målet är att alla ska få en rimlig chans att visa vad de kan",
           "För att lärare gillar fusk",
           "För att alla får mer godis",
-          "För att prov inte spelar någon roll, för att det hade fungerat förut"
+          "För att prov inte spelar någon roll för hur mycket man lär sig"
         ],
         "correct": 0
       },
@@ -15583,7 +15583,7 @@
         "options": [
           "En sorts sport",
           "Ett område där människor bor, arbetar och går i skolan",
-          "En webbplats för spel, för att det hade fungerat förut",
+          "En webbplats där man kan spela och chatta med andra",
           "En bok i biblioteket"
         ],
         "correct": 1
@@ -15615,7 +15615,7 @@
         "q": "Varför kallar texten kommunen för en 'vardagsmotor'?",
         "options": [
           "För att alla måste åka bil",
-          "För att kommunen bygger motorcyklar, för att det hade fungerat förut",
+          "För att kommunen bygger motorcyklar och andra fordon till alla",
           "För att kommuner alltid är tysta",
           "För att kommunen får många vardagliga saker att fungera i bakgrunden"
         ],
@@ -15787,7 +15787,7 @@
       {
         "q": "Vilken slutsats passar bäst med textens innehåll om fotosyntes och klimat?",
         "options": [
-          "Fotosyntes påverkas inte av människors utsläpp alls, för att undvika missförstånd",
+          "Fotosyntes påverkas inte alls av utsläpp, eftersom växter tar upp all koldioxid",
           "Växter kan ta upp en del koldioxid men inte alltid lika snabbt som den släpps ut",
           "Koldioxid bildas bara i havet och inte på land",
           "Skogar gör alltid klimatet varmare överallt"
@@ -15936,7 +15936,7 @@
       {
         "q": "Vilken slutsats passar bäst om varför elektronik lämnas separat?",
         "options": [
-          "Den blir automatiskt återvunnen hemma själv men bara under vissa förutsättningar",
+          "Den blir automatiskt återvunnen om man bara lämnar den i den vanliga soppåsen",
           "Den tar alltid mer plats än annat avfall",
           "Den kan innehålla både värdefulla metaller och ämnen som kräver säker hantering",
           "Den kan inte transporteras på lastbil"
@@ -17952,7 +17952,7 @@
         "options": [
           "För att frågor gör att man vinner direkt",
           "För att frågor alltid är roliga",
-          "För att frågor gör att allt blir ett skämt, för att det skulle gå snabbare",
+          "För att frågor gör att allt blir ett skämt och stämningen blir lättare",
           "För att frågor kan få personen att reflektera över hur det känns för andra"
         ],
         "correct": 3
@@ -18055,7 +18055,7 @@
           "Att kartor aldrig går att lita på",
           "Att historia bara finns i böcker",
           "Att spår av historia kan finnas i platser omkring oss om vi lär oss att undersöka dem",
-          "Att gamla saker alltid är oviktiga, för att det hade fungerat förut"
+          "Att gamla saker alltid är oviktiga så snart något nyare har byggts"
         ],
         "correct": 2
       }
@@ -18091,7 +18091,7 @@
           "Ett nät av rutter som kopplade samman delar av Asien, Mellanöstern och Europa",
           "En hemlig tunnel under havet",
           "En modern motorväg i Kina",
-          "En enda rak väg genom Europa men bara om det behövdes"
+          "En enda rak handelsväg som gick tvärs genom hela Europa"
         ],
         "correct": 0
       },
@@ -18193,7 +18193,7 @@
         "type": "inferens",
         "q": "Varför räcker det inte att plast bryts sönder i havet?",
         "options": [
-          "För att den blir osynlig men borta redan innan något annat hände",
+          "För att den blir osynlig och därmed helt ofarlig för djuren",
           "För att fiskar gillar plast",
           "För att havet blir varmare",
           "För att den fortfarande finns kvar som mindre bitar och kan spridas i näringskedjan"
@@ -18207,7 +18207,7 @@
           "För att plast ger näring",
           "För att den kan känna sig mätt utan att få näring och få ont i magen",
           "För att den börjar sjunga",
-          "För att den flyger snabbare men bara om det behövdes"
+          "För att den flyger snabbare när den har ätit plastbitar"
         ],
         "correct": 1
       },
@@ -18254,7 +18254,7 @@
           "Isberg som smälter",
           "Skräp som följer med regnvatten ner i brunnar och vidare till vattendrag",
           "Vulkanutbrott",
-          "Havsströmmar som skapar plast, för att slippa problem senare"
+          "Havsströmmar som skapar ny plast långt ute till havs"
         ],
         "correct": 1
       },
@@ -18274,7 +18274,7 @@
         "q": "Varför blir plastens \"hållbarhet\" ett problem när den hamnar i naturen?",
         "options": [
           "För att plasten alltid luktar illa",
-          "För att plasten försvinner för snabbt, för att undvika missförstånd",
+          "För att plasten försvinner för snabbt för att hinna samlas in",
           "För att plasten blir till papper",
           "För att plasten kan ligga kvar länge och brytas ner mycket långsamt"
         ],
@@ -18405,7 +18405,7 @@
         "options": [
           "Färg som rör sig",
           "Vatten som kokar",
-          "Ljus som studsar för säkerhets skull",
+          "Ljus som studsar mellan föremål",
           "Vibrationer som rör sig genom luften"
         ],
         "correct": 3
@@ -18438,7 +18438,7 @@
         "options": [
           "För att hjärnan blandar ihop ljud och smak",
           "För att låga frekvenser kan få större delar av luften och ibland kroppen att vibrera",
-          "För att högtalare skickar elektricitet in i kroppen, för att det hade fungerat förut",
+          "För att högtalare skickar svag elektricitet genom golvet och in i kroppen",
           "För att bas alltid är farlig"
         ],
         "correct": 1
@@ -18449,7 +18449,7 @@
         "options": [
           "För att trumhinnan alltid går sönder",
           "För att ljud fastnar i hörselgången",
-          "För att örat slutar fungera på vintern utan någon som helst förändring",
+          "För att örat slutar fungera helt när det utsätts för kyla",
           "För att hårceller i innerörat kan skadas och inte alltid växa tillbaka"
         ],
         "correct": 3
@@ -18541,7 +18541,7 @@
         "type": "textbevis",
         "q": "Varför jämför Leila sina känslor i skolan med älgens situation?",
         "options": [
-          "För att hon också kan springa snabbare än andra under hela den perioden",
+          "För att hon också kan springa fort när hon blir rädd i skogen",
           "För att hon vill bli ett vilt djur",
           "För att hon inte gillar att vara i klassrummet",
           "För att hon känner sig rädd och vill bli bemött utan att någon skrattar"
@@ -18582,7 +18582,7 @@
         "options": [
           "Trängsel, ljudnivå, köer vid disk och dörr",
           "Regn, snö och blåst",
-          "Idrott, musik och bild och ingenting annat",
+          "Idrott, musik och bild på schemat",
           "Betyg, prov och läxor"
         ],
         "correct": 0
@@ -18851,7 +18851,7 @@
           "För att hon vill bli sist",
           "För att hon vill att Emilia ska vinna",
           "För att hon minns att hon tidigare sprang för fort och fick håll",
-          "För att Jonas sa att man måste gå först oavsett vad andra tyckte"
+          "För att Jonas sa att man måste ligga först hela loppet"
         ],
         "correct": 2
       },
@@ -18944,7 +18944,7 @@
         "options": [
           "För att batterier blir snyggare då",
           "För att man kan ta tillbaka metaller och minska behovet av nya råvaror",
-          "För att laddare slutar fungera annars, för att det hade fungerat förut",
+          "För att laddare slutar fungera om batteriet slängs fel",
           "För att batterier alltid är farliga"
         ],
         "correct": 1
@@ -19033,7 +19033,7 @@
         "type": "textbevis",
         "q": "Varför blir gruppens lösning bättre när Ali föreslår en timer på två minuter?",
         "options": [
-          "För att sensorn då slutar fungera, för att det hade fungerat förut",
+          "För att sensorn då slutar fungera när fönstret är stängt",
           "För att lampan blinkar snyggare",
           "För att Frida inte hör pipet",
           "För att varningen blir mer rimlig och ger tid att rätta till felet"
@@ -19106,7 +19106,7 @@
           "Att vattnet är mindre klart och fullt av små partiklar",
           "Att vattnet är varmt och salt",
           "Att vattnet luktar blommor",
-          "Att vattnet är fruset och hårt under hela den perioden"
+          "Att vattnet är fruset och hårt på ytan"
         ],
         "correct": 0,
         "type": "ord"
@@ -19115,7 +19115,7 @@
         "q": "Vad är textens huvudbudskap?",
         "options": [
           "Att alla våtmarker är farliga att gå i",
-          "Att naturen alltid klarar sig bäst utan människor av en slump",
+          "Att naturen alltid klarar sig bäst helt utan människor",
           "Att våtmarker kan vara viktiga och ibland behöver återställas",
           "Att åkrar borde byggas om till parker i alla byar"
         ],
@@ -19255,7 +19255,7 @@
         "q": "Varför fanns det oro för bränder i staden?",
         "options": [
           "För att husen var byggda av trä och elden kunde sprida sig snabbt",
-          "För att det regnade för lite under våren oavsett vad andra tyckte",
+          "För att det regnade för lite under våren och somrarna",
           "För att gatorna var för breda",
           "För att alla hade egna eldstäder av sten"
         ],
@@ -19406,7 +19406,7 @@
         "q": "Vad betyder avsaltning?",
         "options": [
           "Att man fryser havsvatten till is",
-          "Att man pumpar upp vatten från berg, för att undvika missförstånd",
+          "Att man pumpar upp vatten ur berggrunden till kranarna",
           "Att man blandar salt i regnvatten",
           "Att man tar bort saltet ur havsvatten så det kan bli dricksvatten"
         ],
