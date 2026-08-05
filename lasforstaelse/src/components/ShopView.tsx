@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { loadUser, saveUser } from '../services/userService';
 import { AVATAR_OPTIONS, User } from '../types';
 import FramedAvatar from './FramedAvatar';
@@ -41,6 +41,19 @@ function ConfirmBuy({
   preview: React.ReactNode; onConfirm: () => void; onCancel: () => void;
 }) {
   const after = balance - price;
+  const avbrytRef = useRef<HTMLButtonElement>(null);
+
+  // Rutan är märkt aria-modal men gick varken att stänga med Escape eller att
+  // nå med tangentbord – fokus låg kvar på kortet bakom.
+  useEffect(() => {
+    avbrytRef.current?.focus();
+    const vidTangent = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onCancel();
+    };
+    document.addEventListener('keydown', vidTangent);
+    return () => document.removeEventListener('keydown', vidTangent);
+  }, [onCancel]);
+
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[70] p-4"
       role="dialog" aria-modal="true" aria-label={`Köp ${name}`}>
@@ -55,7 +68,7 @@ function ConfirmBuy({
         <p className="text-sm text-gray-600 mb-1">Pris: <strong className="text-indigo-600">⭐ {price}</strong></p>
         <p className="text-xs text-gray-500 mb-5">Kvar efter köp: ⭐ {after}</p>
         <div className="flex gap-2">
-          <button onClick={onCancel}
+          <button onClick={onCancel} ref={avbrytRef}
             className="flex-1 py-3 rounded-2xl font-bold text-gray-600 transition-all active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-300"
             style={{ background: 'rgba(0,0,0,0.06)', border: '1px solid rgba(0,0,0,0.10)' }}>
             Avbryt
@@ -194,7 +207,10 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
   // Avatar-kort
   function avatarCard(a: typeof SHOP_AVATARS[number]) {
     const owned = shop.ownedAvatars.includes(a.id);
-    const equipped = currentEmoji === a.emoji;
+    // Fjorton butiksavatarer har samma emoji som en av de gratis avatarerna i
+    // profilen. Jämfördes bara emojin fick ett oköpt kort grön "vald"-ram
+    // samtidigt som knappen sa Köp. Kortet räknas som valt först när det ägs.
+    const equipped = owned && currentEmoji === a.emoji;
     return (
       <ItemCard
         key={`av-${a.id}`}

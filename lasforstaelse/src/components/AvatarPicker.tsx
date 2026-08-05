@@ -23,6 +23,7 @@ export const AvatarPicker: React.FC<AvatarPickerProps> = ({
           </h3>
           <button
             onClick={onClose}
+            aria-label="Stäng avatarväljaren"
             className="p-2.5 bg-white dark:bg-slate-700 hover:bg-indigo-100 dark:hover:bg-slate-600 rounded-xl shadow-md border-2 border-indigo-100 dark:border-slate-600 transition-all duration-200 hover:scale-105 cursor-pointer"
           >
             <svg
