@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useReducedMotion } from 'framer-motion';
 import { AppState, User, LibraryText, UserAnswers, Badge, QuestionResult, Chest } from './types';
 import { LoginView } from './components/LoginView';
 import { Header } from './components/Header';
@@ -57,6 +58,9 @@ function App() {
   const [showShop, setShowShop] = useState(false);
   const quizStartTime = useRef<number | null>(null);
   const { darkMode } = useDarkMode();
+  // De flytande bakgrundselementen är rent dekorativa och stängs av när
+  // eleven har bett systemet om mindre rörelse.
+  const minskaRorelse = useReducedMotion();
 
   // Valt tema från affären – appliceras bara i ljust läge så mörkt läge förblir oförändrat.
   const equippedThemeId = getEquippedTheme();
@@ -511,7 +515,7 @@ function App() {
   return (
     <div className="min-h-screen bg-sky-50 dark:bg-slate-900 relative overflow-hidden" style={themeStyle}>
       {/* Animated floating background elements - only show on setup page */}
-      {appState === AppState.SETUP && (
+      {appState === AppState.SETUP && !minskaRorelse && (
         <>
           {floatingElements.map((el, index) => (
             <div

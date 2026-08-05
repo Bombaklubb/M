@@ -186,3 +186,26 @@ html {
   0%, 100% { opacity: 0.45; transform: scale(0.95); }
   50%      { opacity: 1; transform: scale(1.05); }
 }
+
+/*
+ * Respektera systeminställningen "minska rörelse".
+ *
+ * Appen har rörliga bakgrundselement som går i oändlig loop bakom lästexten.
+ * För en elev med ADHD, dyslexi eller yrselkänslighet är det ett hinder rakt
+ * i vägen för uppgiften, och enligt WCAG 2.2.2 måste innehåll som rör sig av
+ * sig självt i mer än fem sekunder gå att stoppa.
+ *
+ * Reglerna nedan tar hand om allt som animeras via CSS. Animationer som körs
+ * av framer-motion sätter transform inline och stoppas i stället i respektive
+ * komponent med useReducedMotion().
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

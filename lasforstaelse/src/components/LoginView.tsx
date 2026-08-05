@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { BookLogo } from './BookLogo';
 import { AvatarPicker } from './AvatarPicker';
 import { JaktLinks } from './JaktLinks';
@@ -15,6 +15,9 @@ interface LoginViewProps {
 }
 
 export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
+  // Systeminställningen "minska rörelse". Bakgrundens rörliga element är rent
+  // dekorativa och stängs av helt när eleven bett om mindre rörelse.
+  const minskaRorelse = useReducedMotion();
   const [name, setName] = useState('');
   const [selectedAvatar, setSelectedAvatar] = useState(AVATAR_OPTIONS[0]);
 
@@ -48,7 +51,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated floating background elements */}
-      {floatingElements.map((el, index) => (
+      {!minskaRorelse && floatingElements.map((el, index) => (
         <motion.div
           key={index}
           className={cn("absolute pointer-events-none select-none", el.size)}
@@ -75,7 +78,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
       ))}
 
       {/* Animated gradient orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {!minskaRorelse && <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl"
           animate={{
@@ -94,7 +97,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
-      </div>
+      </div>}
 
       <motion.div
         initial={{ opacity: 0, y: 20, scale: 0.95 }}
