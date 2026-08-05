@@ -209,7 +209,7 @@ lib.forEach(t => {
       'av en slump', 'utan att det fick några konsekvenser',
       'för att slippa problem senare', 'utan någon som helst förändring',
       'men bara om det behövdes', 'på exakt samma sätt som förut',
-      'för att det skulle gå snabbare',
+      'för att det skulle gå snabbare', 'men bara när tillfället passade',
     ];
     alt.forEach((o, oi) => {
       const fras = MALLFRASER.find(f => (o || '').endsWith(f));

@@ -229,7 +229,7 @@
         "type": "inferens",
         "q": "Vad lär sig barnen i berättelsen?",
         "options": [
-          "Att alltid ta nya pennor men bara när tillfället passade",
+          "Att man får behålla saker man hittar på golvet",
           "Att fråga när man hittar något som kan vara någon annans",
           "Att gömma saker",
           "Att aldrig prata"
@@ -18459,7 +18459,7 @@
         "q": "Vilken situation i texten är ett tecken på att volymen kan vara för hög?",
         "options": [
           "Att du inte gillar låten",
-          "Att du blir hungrig av musik men bara när tillfället passade",
+          "Att du känner musiken vibrera svagt i bröstet",
           "Att du måste höja rösten för att prata med någon bredvid dig",
           "Att du kan viska till någon"
         ],
@@ -25112,7 +25112,7 @@
         "q": "Varför är transparens ett problem med avancerad AI?",
         "options": [
           "Systemet kan vara så komplext att inte ens utvecklarna förstår dess beslut",
-          "AI-system är alltid hemliga och säljs dyrt men bara när tillfället passade",
+          "AI-system hålls hemliga av företagen som byggt dem",
           "Användare kan inte ladda ner programmen",
           "Koden är skriven på ett ovanligt språk"
         ],
