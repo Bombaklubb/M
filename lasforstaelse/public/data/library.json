@@ -229,7 +229,7 @@
         "type": "inferens",
         "q": "Vad lär sig barnen i berättelsen?",
         "options": [
-          "Att alltid ta nya pennor men bara när tillfället passade",
+          "Att man får behålla saker man hittar på golvet",
           "Att fråga när man hittar något som kan vara någon annans",
           "Att gömma saker",
           "Att aldrig prata"
@@ -9797,7 +9797,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Äppelträdet i trädgården",
-    "text": "På hösten mognar många äpplen i Sverige. I en trädgård i Uppsala står ett gammalt äppelträd som familjen Karim tar hand om. Varje september plockar barnen Amina och Leo frukterna tillsammans med sin mormor. De lägger äpplena i stora korgar. Vissa äpplen är röda, andra gröna eller gula. Mormor berättar att olika sorter smakar olika. En del är söta och andra är lite sura. Familjen använder äpplena till många saker. De bakar äppelpaj, kokar äppelmos och gör juice. Några äpplen sparar de i en sval källare så att de håller längre. Amina tycker bäst om pajen medan Leo gillar att dricka kall äppeljuice efter skolan. Mormor säger att äpplen är nyttiga eftersom de innehåller vitaminer och fibrer. Därför försöker familjen äta frukt nästan varje dag under hösten. De delar ibland frukten med grannar som bor nära. På så sätt går inget äpple till spillo. Barnen lär sig också hur träd",
+    "text": "På hösten mognar många äpplen i Sverige. I en trädgård i Uppsala står ett gammalt äppelträd som familjen Karim tar hand om. Varje september plockar barnen Amina och Leo frukterna tillsammans med sin mormor. De lägger äpplena i stora korgar. Vissa äpplen är röda, andra gröna eller gula. Mormor berättar att olika sorter smakar olika. En del är söta och andra är lite sura. Familjen använder äpplena till många saker. De bakar äppelpaj, kokar äppelmos och gör juice. Några äpplen sparar de i en sval källare så att de håller längre. Amina tycker bäst om pajen medan Leo gillar att dricka kall äppeljuice efter skolan. Mormor säger att äpplen är nyttiga eftersom de innehåller vitaminer och fibrer. Därför försöker familjen äta frukt nästan varje dag under hösten. De delar ibland frukten med grannar som bor nära. På så sätt går inget äpple till spillo. Barnen lär sig också hur träd sköts och varför skörden skiljer sig mellan olika år.",
     "questions": [
       {
         "type": "literal",
@@ -9867,7 +9867,7 @@
       }
     ],
     "meta": {
-      "wordCount": 150,
+      "wordCount": 159,
       "fingerprint": "ak3-tema-001",
       "generatedAt": "2026-03-13T12:58:05.127Z",
       "model": "claude"
@@ -10758,7 +10758,7 @@
         "q": "Vad tyckte simläraren om hur de gjorde?",
         "options": [
           "Att de borde ha vänt om",
-          "Att de borde ha skällt på den som lämnade grinden öppen",
+          "Att de borde ha skällt på den som orsakade stoppet",
           "Att de gjorde rätt som väntade lugnt och följde informationen",
           "Att de borde ha åkt taxi direkt"
         ],
@@ -13797,7 +13797,7 @@
         "options": [
           "Robotens kropp är för stor",
           "Kabeln sitter inte i helt",
-          "Batteriet är i texten slut",
+          "Batteriet i motorn är slut",
           "Hjulen saknas"
         ],
         "correct": 1,
@@ -13859,7 +13859,7 @@
     "genre": "faktatext",
     "theme": "teknik",
     "title": "Så fungerar en bro",
-    "text": "En bro hjälper människor att ta sig över något, till exempel en flod, en väg eller en dal. Det finns många sorters broar, men alla måste klara samma sak: de måste vara stabila och hålla för tyngd.\n\nNär en bil eller en person står på en bro trycker tyngden neråt. Det kallas belastning. Bron måste fördela belastningen så att den inte går sönder. Därför använder man olika former och material.\n\nMen om bron ska vara lång eller hålla för tunga lastbilar behöver den vara starkare.\n\nEn annan typ är bågbro. Den ser ut som en stor båge. När någon går på bron trycks bågen ihop och skickar kraften åt sidorna ner i marken. Det gör att bron kan bli stark även om den är ganska tunn.\n\nDet finns också hängbroar. De har kablar som hänger mellan höga torn. Vägen på bron hänger i kablarna. Kablarna dras hårt och kan bära mycket. Hängbroar passar bra när man behöver en väldigt lång bro.\n\nIngenjörerna som bygger broar testar ofta modeller först. I skolan kan du testa själv: bygg en bro av papper och lägg mynt på den.\n\nBroar är alltså inte bara vägar i luften. De är smarta lösningar där form, material och krafter samarbetar för att människor ska kunna ta sig fram säkert.",
+    "text": "En bro hjälper människor att ta sig över något, till exempel en flod, en väg eller en dal. Det finns många sorters broar, men alla måste klara samma sak: de måste vara stabila och hålla för tyngd.\n\nNär en bil eller en person står på en bro trycker tyngden neråt. Det kallas belastning. Bron måste fördela belastningen så att den inte går sönder. Därför använder man olika former och material. Den enklaste sorten är en rak balkbro.\n\nMen om bron ska vara lång eller hålla för tunga lastbilar behöver den vara starkare.\n\nEn annan typ är bågbro. Den ser ut som en stor båge. När någon går på bron trycks bågen ihop och skickar kraften åt sidorna ner i marken. Det gör att bron kan bli stark även om den är ganska tunn.\n\nDet finns också hängbroar. De har kablar som hänger mellan höga torn. Vägen på bron hänger i kablarna. Kablarna dras hårt och kan bära mycket. Hängbroar passar bra när man behöver en väldigt lång bro.\n\nIngenjörerna som bygger broar testar ofta modeller först. I skolan kan du testa själv: bygg en bro av papper och lägg mynt på den.\n\nBroar är alltså inte bara vägar i luften. De är smarta lösningar där form, material och krafter samarbetar för att människor ska kunna ta sig fram säkert.",
     "questions": [
       {
         "type": "literal",
@@ -13930,7 +13930,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 212
+      "wordCount": 219
     }
   },
   {
@@ -14324,7 +14324,7 @@
           "På stora scener med ljusshower",
           "Bara i små klassrum",
           "Endast utomhus utan publik",
-          "utan publik"
+          "Bara i studion när hon spelar in"
         ],
         "correct": 0
       },
@@ -18459,7 +18459,7 @@
         "q": "Vilken situation i texten är ett tecken på att volymen kan vara för hög?",
         "options": [
           "Att du inte gillar låten",
-          "Att du blir hungrig av musik men bara när tillfället passade",
+          "Att du känner musiken vibrera svagt i bröstet",
           "Att du måste höja rösten för att prata med någon bredvid dig",
           "Att du kan viska till någon"
         ],
@@ -25112,7 +25112,7 @@
         "q": "Varför är transparens ett problem med avancerad AI?",
         "options": [
           "Systemet kan vara så komplext att inte ens utvecklarna förstår dess beslut",
-          "AI-system är alltid hemliga och säljs dyrt men bara när tillfället passade",
+          "AI-system hålls hemliga av företagen som byggt dem",
           "Användare kan inte ladda ner programmen",
           "Koden är skriven på ett ovanligt språk"
         ],

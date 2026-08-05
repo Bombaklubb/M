@@ -114,6 +114,12 @@ lib.forEach(t => {
     varningar.push(`${id}: har word_count på toppnivå – appen läser meta.wordCount`);
   }
 
+  // En text ska sluta med skiljetecken. ak3-tema-001 var kapad mitt i en
+  // mening vid exakt minimigränsen för sin årskurs.
+  if (t.text && !/[.!?"”]\s*$/.test(t.text.trim())) {
+    fel.push(`${id}: texten slutar utan skiljetecken – ...${t.text.trim().slice(-40)}`);
+  }
+
   // Punkter insprängda mitt i en mening lämnar efter sig meningar som består
   // av ett enda ord. Två åk 1-texter var skadade så: "Katten. Maja bor hos.
   // Leo." Utropstecken och frågetecken undantas, eftersom "Plask!" och "Hur?"
@@ -182,6 +188,15 @@ lib.forEach(t => {
       fel.push(`${plats}: ogiltigt correct-index (${q.correct})`);
     }
 
+    // Ett svarsalternativ ska börja med versal eller siffra. ak4-tema-004
+    // hade alternativet "utan publik", ett gement fragment som var slutet av
+    // alternativet intill – eleven hade i praktiken bara tre svar att välja på.
+    alt.forEach((o, oi) => {
+      if (o && /^[a-zåäöé]/.test(o)) {
+        fel.push(`${plats} alternativ ${'ABCD'[oi]}: börjar med gemen – "${o}"`);
+      }
+    });
+
     // Femton mallfraser satt tidigare på 102 distraktorer i alla årskurser,
     // aldrig på ett rätt svar. Frasen blev därmed ett facit i sig: eleven
     // kunde välja bort alternativet utan att läsa texten. De är omskrivna,
@@ -194,7 +209,7 @@ lib.forEach(t => {
       'av en slump', 'utan att det fick några konsekvenser',
       'för att slippa problem senare', 'utan någon som helst förändring',
       'men bara om det behövdes', 'på exakt samma sätt som förut',
-      'för att det skulle gå snabbare',
+      'för att det skulle gå snabbare', 'men bara när tillfället passade',
     ];
     alt.forEach((o, oi) => {
       const fras = MALLFRASER.find(f => (o || '').endsWith(f));
