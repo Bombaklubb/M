@@ -137,7 +137,7 @@ lib.forEach(t => {
   // står sist i en relativsats – "tillhör den person den låter som".
   const bindeord = new Set(['och', 'att', 'men', 'eller', 'samt']);
   meningar.forEach(m => {
-    if (/[!?]$/.test(m) || /\.\.\.["”]?$/.test(m)) return;
+    if (/[!?]$/.test(m) || /\.\.\.["”]?\.?$/.test(m)) return;
     const ord = m.replace(/[."”]+$/, '').trim().split(/\s+/);
     const sist = (ord[ord.length - 1] || '').toLowerCase().replace(/[^a-zåäöé]/g, '');
     if (bindeord.has(sist)) {
