@@ -19151,10 +19151,10 @@
       {
         "q": "Varför säger Jonas att nätfiske ofta använder stress?",
         "options": [
-          "För att få dig att klicka snabbt utan att tänka efter",
-          "För att internet ska bli snabbare",
-          "För att göra sidan mer färgglad",
-          "För att spara batteri på enheten"
+          "För att spara batteri när många enheter är igång",
+          "För att internet ska gå snabbare i skolans nätverk",
+          "För att sidan ska se mer färgglad och inbjudande ut",
+          "För att få dig att klicka snabbt utan att tänka efter"
         ],
         "correct": 3,
         "type": "inferens"
