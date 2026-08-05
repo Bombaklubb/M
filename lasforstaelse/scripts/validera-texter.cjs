@@ -130,6 +130,21 @@ lib.forEach(t => {
     varningar.push(`${id}: mening med bara ett ord – ${enOrdsMeningar.join(' ')} (kan vara en felplacerad punkt)`);
   }
 
+  // En mening kan inte sluta på ett bindeord. Sex texter var skadade så att en
+  // punkt hamnat rakt före ett namn: "Ella springer snabbt men. Leo tar längre
+  // steg." Uteslutningstecken undantas, eftersom "Men..." i dialog är avsiktligt.
+  // "som" är medvetet utelämnat: det kan avsluta en korrekt mening när det
+  // står sist i en relativsats – "tillhör den person den låter som".
+  const bindeord = new Set(['och', 'att', 'men', 'eller', 'samt']);
+  meningar.forEach(m => {
+    if (/[!?]$/.test(m) || /\.\.\.["”]?$/.test(m)) return;
+    const ord = m.replace(/[."”]+$/, '').trim().split(/\s+/);
+    const sist = (ord[ord.length - 1] || '').toLowerCase().replace(/[^a-zåäöé]/g, '');
+    if (bindeord.has(sist)) {
+      varningar.push(`${id}: mening slutar på bindeordet "${sist}" – ...${m.slice(-40)}`);
+    }
+  });
+
   // ── Frågor ────────────────────────────────────────────────────────────────
   const fragor = t.questions || [];
   if (fragor.length !== 6) fel.push(`${id}: ${fragor.length} frågor (ska vara 6)`);

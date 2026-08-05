@@ -2379,7 +2379,7 @@
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Linas robot",
-    "text": "Lina har en liten robot som kan köra på golvet. Hennes syskon. Amir bygger banor av böcker och klossar. Roboten följer linjer som. Lina ritar med tejp. Ibland fastnar den vid stolen. Då flyttar. Amir hindret så roboten kan fortsätta.",
+    "text": "Lina har en liten robot som kan köra på golvet. Hennes syskon Amir bygger banor av böcker och klossar. Roboten följer linjer som Lina ritar med tejp. Ibland fastnar den vid stolen. Då flyttar Amir hindret så roboten kan fortsätta.",
     "questions": [
       {
         "type": "literal",
@@ -2462,7 +2462,7 @@
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Idrottslektionen",
-    "text": "På idrotten springer klassen runt den lilla planen. Läraren Samir blåser i en visselpipa när tiden börjar. Ella springer snabbt men. Leo tar längre steg. Efter två varv stannar alla och andas. Sedan gör de roliga hopp tillsammans på gräset.",
+    "text": "På idrotten springer klassen runt den lilla planen. Läraren Samir blåser i en visselpipa när tiden börjar. Ella springer snabbt men Leo tar längre steg. Efter två varv stannar alla och andas. Sedan gör de roliga hopp tillsammans på gräset.",
     "questions": [
       {
         "type": "literal",
@@ -6917,7 +6917,7 @@
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "En rolig rast",
-    "text": "Ali sitter ensam på rasten. Han har glömt sin boll hemma. Då kommer. Nora fram. Hon frågar om Ali vill bygga en hinderbana med pinnar och stenar. De hoppar och skrattar. När klockan ringer säger. Ali: \"Tack, du gjorde min rast rolig.\".",
+    "text": "Ali sitter ensam på rasten. Han har glömt sin boll hemma. Då kommer Nora fram. Hon frågar om Ali vill bygga en hinderbana med pinnar och stenar. De hoppar och skrattar. När klockan ringer säger Ali: \"Tack, du gjorde min rast rolig.\"",
     "questions": [
       {
         "type": "literal",
@@ -7000,7 +7000,7 @@
     "genre": "berättelse",
     "theme": "skola",
     "title": "Högläsning i 2B",
-    "text": "I klass 2B ska de ha högläsning. Läraren Anna delar ut en bok om en pirat. Elsa får läsa första sidan. Hon läser tydligt och pekar med fingret. Några ord är svåra, men. Anna hjälper. Efteråt ritar alla en bild från berättelsen.",
+    "text": "I klass 2B ska de ha högläsning. Läraren Anna delar ut en bok om en pirat. Elsa får läsa första sidan. Hon läser tydligt och pekar med fingret. Några ord är svåra, men Anna hjälper. Efteråt ritar alla en bild från berättelsen.",
     "questions": [
       {
         "type": "literal",
@@ -32360,7 +32360,7 @@
     "genre": "faktatext",
     "theme": "Teknik",
     "title": "Vad är artificiell intelligens?",
-    "text": "Artificiell intelligens, ofta förkortat AI, är teknik som gör att datorer kan utföra uppgifter som vanligtvis kräver mänsklig intelligens. Det kan handla om att känna igen bilder, förstå språk eller fatta beslut.\n\nAI används redan i många delar av samhället. Till exempel kan mobiltelefoner använda AI för att känna igen ansikten i bilder. Streamingtjänster använder AI för att rekommendera filmer baserat på vad du tidigare har sett.\n\nTekniken bygger ofta på stora mängder data. Genom att analysera data kan AI-system hitta mönster och lära sig över tid. Detta kallas maskininlärning.\n\nSkillnaden mot vanliga program är värd att förstå. I ett vanligt program skriver en människa reglerna: om detta händer, gör det. Ett system som lär sig får i stället se tusentals exempel och räknar själv ut vilka drag som hänger ihop med vilket svar. Ingen har alltså skrivit ned regeln för hur en katt ser ut, utan systemet har hittat den i bilderna.\n\nDet gör att materialet som systemet tränats på blir avgörande. Har ett ansiktsigenkänningssystem framför allt sett ljushyade ansikten fungerar det sämre på andra, inte för att någon velat det utan för att exemplen var skeva. Sådana fel upptäcks ofta först när tekniken redan används.\n\nEtt annat problem är att system som skriver text kan låta säkra även när de har fel. De väljer ord som brukar passa ihop, vilket ger meningar som ser rätt ut också när innehållet är påhittat. Att kontrollera en uppgift i en annan källa är därför nödvändigt, hur välformulerat svaret än verkar.\n\nDe senaste årens stora förändring är att AI kan skapa nytt material: text, bilder, röster och musik. Det ger nya möjligheter men också nya frågor, som vem som äger en bild byggd på tusentals andras verk, och hur man vet om en inspelad röst verkligen tillhör den den låter som.\n\nMen AI väcker också frågor. Vem ansvarar om ett AI-system gör fel? Hur skyddas människors integritet när stora mängder data samlas in? Dessa frågor diskuteras av forskare, politiker och företag. Inom EU har en särskild lag om AI arbetats fram, där användningen delas in efter hur riskabel den är: ju större risk för människor, desto hårdare krav.\n\nDet finns också en oro för att AI kan ersätta vissa jobb. Samtidigt kan tekniken skapa nya möjligheter och yrken. Historiskt har ny teknik ofta förändrat arbetsmarknaden snarare än att helt ta bort jobb. Det är dock en klen tröst för den enskilda som förlorar sitt arbete, eftersom de nya jobben sällan uppstår på samma plats eller kräver samma kunskaper.\n\nOrdet intelligens i namnet är delvis missvisande. Det valdes redan på 1950-talet, långt innan tekniken kunde göra något av det den gör i dag.\n\nDet är också värt att komma ihåg vad AI inte är. Ett system som beskriver en känsla har inte känt något, och ett som svarar snabbt förstår inte frågan på det sätt en människa gör. Att tekniken är imponerande betyder inte att den fungerar som ett medvetande.\n\nFör att använda AI på ett bra sätt krävs kunskap och regler. Genom att förstå tekniken kan människor fatta informerade beslut och använda AI på ett ansvarsfullt sätt.",
+    "text": "Artificiell intelligens, ofta förkortat AI, är teknik som gör att datorer kan utföra uppgifter som vanligtvis kräver mänsklig intelligens. Det kan handla om att känna igen bilder, förstå språk eller fatta beslut.\n\nAI används redan i många delar av samhället. Till exempel kan mobiltelefoner använda AI för att känna igen ansikten i bilder. Streamingtjänster använder AI för att rekommendera filmer baserat på vad du tidigare har sett.\n\nTekniken bygger ofta på stora mängder data. Genom att analysera data kan AI-system hitta mönster och lära sig över tid. Detta kallas maskininlärning.\n\nSkillnaden mot vanliga program är värd att förstå. I ett vanligt program skriver en människa reglerna: om detta händer, gör det. Ett system som lär sig får i stället se tusentals exempel och räknar själv ut vilka drag som hänger ihop med vilket svar. Ingen har alltså skrivit ned regeln för hur en katt ser ut, utan systemet har hittat den i bilderna.\n\nDet gör att materialet som systemet tränats på blir avgörande. Har ett ansiktsigenkänningssystem framför allt sett ljushyade ansikten fungerar det sämre på andra, inte för att någon velat det utan för att exemplen var skeva. Sådana fel upptäcks ofta först när tekniken redan används.\n\nEtt annat problem är att system som skriver text kan låta säkra även när de har fel. De väljer ord som brukar passa ihop, vilket ger meningar som ser rätt ut också när innehållet är påhittat. Att kontrollera en uppgift i en annan källa är därför nödvändigt, hur välformulerat svaret än verkar.\n\nDe senaste årens stora förändring är att AI kan skapa nytt material: text, bilder, röster och musik. Det ger nya möjligheter men också nya frågor, som vem som äger en bild byggd på tusentals andras verk, och hur man vet om en inspelad röst verkligen tillhör den person den låter som.\n\nMen AI väcker också frågor. Vem ansvarar om ett AI-system gör fel? Hur skyddas människors integritet när stora mängder data samlas in? Dessa frågor diskuteras av forskare, politiker och företag. Inom EU har en särskild lag om AI arbetats fram, där användningen delas in efter hur riskabel den är: ju större risk för människor, desto hårdare krav.\n\nDet finns också en oro för att AI kan ersätta vissa jobb. Samtidigt kan tekniken skapa nya möjligheter och yrken. Historiskt har ny teknik ofta förändrat arbetsmarknaden snarare än att helt ta bort jobb. Det är dock en klen tröst för den enskilda som förlorar sitt arbete, eftersom de nya jobben sällan uppstår på samma plats eller kräver samma kunskaper.\n\nOrdet intelligens i namnet är delvis missvisande. Det valdes redan på 1950-talet, långt innan tekniken kunde göra något av det den gör i dag.\n\nDet är också värt att komma ihåg vad AI inte är. Ett system som beskriver en känsla har inte känt något, och ett som svarar snabbt förstår inte frågan på det sätt en människa gör. Att tekniken är imponerande betyder inte att den fungerar som ett medvetande.\n\nFör att använda AI på ett bra sätt krävs kunskap och regler. Genom att förstå tekniken kan människor fatta informerade beslut och använda AI på ett ansvarsfullt sätt.",
     "questions": [
       {
         "type": "inferens",
@@ -32430,7 +32430,7 @@
       }
     ],
     "meta": {
-      "wordCount": 515,
+      "wordCount": 516,
       "fingerprint": "ak7-tema-039",
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
