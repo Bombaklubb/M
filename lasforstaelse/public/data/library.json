@@ -13797,7 +13797,7 @@
         "options": [
           "Robotens kropp är för stor",
           "Kabeln sitter inte i helt",
-          "Batteriet är i texten slut",
+          "Batteriet i motorn är slut",
           "Hjulen saknas"
         ],
         "correct": 1,
@@ -14324,7 +14324,7 @@
           "På stora scener med ljusshower",
           "Bara i små klassrum",
           "Endast utomhus utan publik",
-          "utan publik"
+          "Bara i studion när hon spelar in"
         ],
         "correct": 0
       },

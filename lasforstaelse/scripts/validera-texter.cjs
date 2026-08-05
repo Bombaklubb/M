@@ -188,6 +188,15 @@ lib.forEach(t => {
       fel.push(`${plats}: ogiltigt correct-index (${q.correct})`);
     }
 
+    // Ett svarsalternativ ska börja med versal eller siffra. ak4-tema-004
+    // hade alternativet "utan publik", ett gement fragment som var slutet av
+    // alternativet intill – eleven hade i praktiken bara tre svar att välja på.
+    alt.forEach((o, oi) => {
+      if (o && /^[a-zåäöé]/.test(o)) {
+        fel.push(`${plats} alternativ ${'ABCD'[oi]}: börjar med gemen – "${o}"`);
+      }
+    });
+
     // Femton mallfraser satt tidigare på 102 distraktorer i alla årskurser,
     // aldrig på ett rätt svar. Frasen blev därmed ett facit i sig: eleven
     // kunde välja bort alternativet utan att läsa texten. De är omskrivna,
