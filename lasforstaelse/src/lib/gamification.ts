@@ -364,10 +364,12 @@ export function openChest(type: ChestType, badges: string[], currentChests: Ches
 
   let bonusChest: Chest | undefined;
   if (Math.random() < bonusChestChance) {
-    // Bonus chest is one tier lower than current
-    const bonusTypes: ChestType[] = ['bronze', 'bronze', 'silver', 'silver', 'gold', 'emerald', 'diamond'];
-    const currentIndex = ['bronze', 'silver', 'gold', 'emerald', 'ruby', 'diamond', 'secret'].indexOf(type);
-    const bonusType = bonusTypes[currentIndex] || 'bronze';
+    // Bonuskistan ligger ett steg under den öppnade kistan. Tabellen hoppade
+    // tidigare över ett steg från smaragd och uppåt (smaragd gav silver,
+    // rubin gav guld), vilket inte stämde med raden ovan.
+    const TIERS: ChestType[] = ['bronze', 'silver', 'gold', 'emerald', 'ruby', 'diamond', 'secret'];
+    const currentIndex = TIERS.indexOf(type);
+    const bonusType = currentIndex > 0 ? TIERS[currentIndex - 1] : 'bronze';
 
     // Ge bara bonuskista om under max för den typen
     if (chestCounts[bonusType] < MAX_CHESTS_PER_TYPE) {
@@ -426,5 +428,11 @@ export function loadGamification(): GamificationData {
 }
 
 export function saveGamification(data: GamificationData): void {
-  localStorage.setItem(gamificationStorageKey(), JSON.stringify(data));
+  // Får inte kasta: anropas mitt i resultatflödet, och ett fullt lagringsutrymme
+  // skulle annars avbryta renderingen efter att resultatet redan sparats.
+  try {
+    localStorage.setItem(gamificationStorageKey(), JSON.stringify(data));
+  } catch (error) {
+    console.error('Kunde inte spara kistor och märken:', error);
+  }
 }

@@ -75,7 +75,12 @@ function migrateLegacyAvatarIndices(data: ShopData): ShopData {
 }
 
 export function saveShop(data: ShopData): void {
-  localStorage.setItem(storageKey(), JSON.stringify(data));
+  // Får inte kasta – en full lagring ska inte krascha butiken mitt i ett köp.
+  try {
+    localStorage.setItem(storageKey(), JSON.stringify(data));
+  } catch (error) {
+    console.error('Kunde inte spara butiksdata:', error);
+  }
 }
 
 /** Spenderbart saldo = livstidspoäng − redan spenderat. */

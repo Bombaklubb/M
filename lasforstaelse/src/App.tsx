@@ -137,11 +137,35 @@ function App() {
   };
 
   // Handle points update from chests
+  //
+  // Poäng från en öppnad kista räknas in i totalen precis som poäng från en text.
+  // Därför måste poängmilstolparna kollas här också: annars passerar eleven t.ex.
+  // 1000 poäng genom en kista, milstolpen delas aldrig ut, och nästa textresultat
+  // ser prevPoints > 1000 och hoppar över den för alltid.
   const handleChestPointsUpdate = (points: number) => {
     if (!user) return;
-    const updatedUser = { ...user, totalPoints: user.totalPoints + points };
+    const prevPoints = user.totalPoints;
+    const updatedUser = { ...user, totalPoints: prevPoints + points };
     saveUser(updatedUser);
     setUser(updatedUser);
+
+    const gam = loadGamification();
+    const pointChests = chestsEarnedFromPoints(
+      prevPoints,
+      updatedUser.totalPoints,
+      gam.pointsMilestonesRewarded,
+      gam.chests
+    );
+    if (pointChests.length === 0) return;
+
+    saveGamification({
+      ...gam,
+      chests: [...gam.chests, ...pointChests.map(c => c.chest)],
+      pointsMilestonesRewarded: [
+        ...gam.pointsMilestonesRewarded,
+        ...pointChests.map(c => c.milestone),
+      ],
+    });
   };
 
   // Get number of unopened chests
@@ -395,9 +419,19 @@ function App() {
     );
   }
 
+  // Lärarvyn ligger som overlay ovanpå vilken vy som helst. Den måste därför
+  // renderas i varje gren nedan – annars gör F8 ingenting när eleven står i
+  // profilen, kistorna eller affären.
+  const teacherOverlay = showTeacher ? <TeacherView onClose={() => setShowTeacher(false)} /> : null;
+
   // Login view
   if (appState === AppState.LOGIN || !user) {
-    return <LoginView onLogin={handleLogin} />;
+    return (
+      <>
+        <LoginView onLogin={handleLogin} />
+        {teacherOverlay}
+      </>
+    );
   }
 
   // Profile view
@@ -418,6 +452,7 @@ function App() {
           onClose={() => setShowProfile(false)}
           onAvatarChange={handleAvatarChange}
         />
+        {teacherOverlay}
       </div>
     );
   }
@@ -425,21 +460,27 @@ function App() {
   // Kistor view
   if (showKistor) {
     return (
-      <KistorView
-        user={user}
-        onClose={() => setShowKistor(false)}
-        onPointsUpdate={handleChestPointsUpdate}
-      />
+      <>
+        <KistorView
+          user={user}
+          onClose={() => setShowKistor(false)}
+          onPointsUpdate={handleChestPointsUpdate}
+        />
+        {teacherOverlay}
+      </>
     );
   }
 
   // Shop view
   if (showShop) {
     return (
-      <ShopView
-        onBack={() => setShowShop(false)}
-        onAvatarChange={handleAvatarChange}
-      />
+      <>
+        <ShopView
+          onBack={() => setShowShop(false)}
+          onAvatarChange={handleAvatarChange}
+        />
+        {teacherOverlay}
+      </>
     );
   }
 
@@ -540,10 +581,8 @@ function App() {
         </div>
       )}
 
-      {/* Lärarvy (öppnas med Ctrl+Shift+L) */}
-      {showTeacher && (
-        <TeacherView onClose={() => setShowTeacher(false)} />
-      )}
+      {/* Lärarvy (öppnas med F8, Ctrl+Shift+P eller ?teacher=1) */}
+      {teacherOverlay}
 
       {/* Jaktlänkar */}
       <footer className="fixed bottom-4 right-4 text-sm z-50">

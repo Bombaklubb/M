@@ -89,11 +89,6 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
     }
   };
 
-  const formatDateShort = (dateStr: string) => {
-    const date = new Date(dateStr);
-    return date.toLocaleDateString('sv-SE', { day: 'numeric', month: 'short' });
-  };
-
   useEffect(() => {
     if (authenticated && gradeCounts.length === 0) {
       loadLibraryStats();
