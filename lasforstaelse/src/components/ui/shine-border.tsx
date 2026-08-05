@@ -22,6 +22,8 @@ export function ShineBorder({
       style={
         {
           "--border-radius": `${borderRadius}px`,
+          // Klassnamnet nedan läser --border-width, som annars aldrig sattes.
+          "--border-width": borderWidth,
           "--duration": `${duration}s`,
           "--mask-linear-gradient": `linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)`,
           "--background-radial-gradient": `radial-gradient(transparent,transparent, ${Array.isArray(color) ? color.join(",") : color},transparent,transparent)`,

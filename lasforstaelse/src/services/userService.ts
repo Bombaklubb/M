@@ -528,12 +528,16 @@ export function getTeacherStats(): {
   const themesMap = new Map<string, number>();
   const gradesMap = new Map<number, number>();
 
-  // Gå igenom alla användare och deras completed texts
+  // Gå igenom alla användare och deras completed texts.
+  // Genre, tema och årskurs räknas från samma källa och samma tidsspann, så att
+  // topplistorna går att jämföra med varandra. Tidigare kom genre och tema från
+  // den dagliga statistiken (bara sju dagar bakåt) medan årskurs kom härifrån.
   allUsers.forEach(user => {
     user.completedTexts.forEach(text => {
       totalTexts++;
-      const grade = text.grade;
-      gradesMap.set(grade, (gradesMap.get(grade) || 0) + 1);
+      gradesMap.set(text.grade, (gradesMap.get(text.grade) || 0) + 1);
+      if (text.genre) genresMap.set(text.genre, (genresMap.get(text.genre) || 0) + 1);
+      if (text.theme) themesMap.set(text.theme, (themesMap.get(text.theme) || 0) + 1);
     });
   });
 
@@ -553,16 +557,6 @@ export function getTeacherStats(): {
       date: dateKey,
       count: stats?.textsRead || 0,
     });
-
-    // Aggregera genres och themes från daglig statistik
-    if (stats) {
-      Object.entries(stats.genres).forEach(([genre, count]) => {
-        genresMap.set(genre, (genresMap.get(genre) || 0) + count);
-      });
-      Object.entries(stats.themes).forEach(([theme, count]) => {
-        themesMap.set(theme, (themesMap.get(theme) || 0) + count);
-      });
-    }
   }
 
   // Sortera och begränsa topp-listor
@@ -617,8 +611,20 @@ export function sendStudentMessage(studentName: string, studentAvatar: string, m
 
   const messages = getStudentMessages();
   messages.push(msg);
-  localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+  saveStudentMessages(messages);
   return msg;
+}
+
+/**
+ * Spara meddelandelistan. Skrivningen får aldrig kasta – en full lagring ska
+ * inte krascha vyn, på samma sätt som för användardata ovan.
+ */
+function saveStudentMessages(messages: StudentMessage[]): void {
+  try {
+    localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+  } catch (error) {
+    console.error('Kunde inte spara meddelanden:', error);
+  }
 }
 
 /**
@@ -644,7 +650,7 @@ export function markMessageAsRead(messageId: string): void {
   const msg = messages.find(m => m.id === messageId);
   if (msg) {
     msg.read = true;
-    localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+    saveStudentMessages(messages);
   }
 }
 
@@ -654,7 +660,7 @@ export function markMessageAsRead(messageId: string): void {
 export function markAllMessagesAsRead(): void {
   const messages = getStudentMessages();
   messages.forEach(m => m.read = true);
-  localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+  saveStudentMessages(messages);
 }
 
 /**
@@ -662,7 +668,7 @@ export function markAllMessagesAsRead(): void {
  */
 export function deleteMessage(messageId: string): void {
   const messages = getStudentMessages().filter(m => m.id !== messageId);
-  localStorage.setItem(MESSAGES_KEY, JSON.stringify(messages));
+  saveStudentMessages(messages);
 }
 
 /**

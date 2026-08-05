@@ -1,4 +1,3 @@
-import React from 'react';
 import { FRAME_MAP, EFFECT_MAP, type ShopFrame, type ShopEffect, type EffectKind } from '../data/shop';
 
 interface FramedAvatarProps {

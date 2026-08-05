@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { User, Chest, GamificationData } from '../types';
 import {
   CHEST_META,
-  ALL_GAMIFICATION_BADGES,
   getBadge,
   openChest,
   loadGamification,
@@ -290,7 +289,7 @@ interface KistorViewProps {
   onPointsUpdate: (points: number) => void;
 }
 
-export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsUpdate }) => {
+export const KistorView: React.FC<KistorViewProps> = ({ onClose, onPointsUpdate }) => {
   const [gam, setGam] = useState<GamificationData>(() => loadGamification());
   const [rewardResult, setRewardResult] = useState<RewardResult | null>(null);
 
@@ -313,10 +312,12 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
 
     const newGam = { ...gam, chests: newChests, gamificationBadges: newBadges };
     saveGamification(newGam);
-    setGam({ ...newGam });
 
-    // Update user points
+    // Update user points. Poängen kan passera en milstolpe, och då lägger App
+    // till en ny kista i lagringen – därför läses state om efteråt i stället för
+    // att sättas från newGam, som annars inte skulle visa den kistan.
     onPointsUpdate(result.points);
+    setGam(loadGamification());
 
     setRewardResult({ description: result.description, points: result.points });
   }
