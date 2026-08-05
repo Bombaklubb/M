@@ -8718,7 +8718,7 @@
     "genre": "faktatext",
     "theme": "etik",
     "title": "Att säga förlåt",
-    "text": "Att säga förlåt betyder att man visar att man ångrar något man gjort. Det kan vara när man har råkat säga något taskigt eller gjort någon ledsen. Ett bra förlåt kan vara att säga vad man ångrar och att försöka göra det bättre. Ibland behöver den som blivit ledsen också tid. Då kan man fråga: \"Hur kan jag hjälpa?\" När man vågar säga förlåt kan vänskap bli starkare.",
+    "text": "Att säga förlåt betyder att man visar att man ångrar något man gjort. Det kan vara när man har råkat säga något taskigt eller gjort någon ledsen. Ett bra förlåt kan vara att säga vad man ångrar och att försöka göra det bättre. Man kan också fråga: \"Hur kan jag hjälpa?\" När man vågar säga förlåt kan vänskap bli starkare.",
     "questions": [
       {
         "type": "literal",
@@ -8788,7 +8788,7 @@
       }
     ],
     "meta": {
-      "wordCount": 68,
+      "wordCount": 60,
       "fingerprint": "gpt3-018",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
@@ -9133,7 +9133,7 @@
     "genre": "faktatext",
     "theme": "natur",
     "title": "Varför löven byter färg",
-    "text": "På hösten ändrar många löv färg. De gröna bladen blir gula, orange eller röda. Det beror på att träden får mindre ljus när dagarna blir kortare. Då slutar bladen göra lika mycket klorofyll, alltså det gröna ämnet i bladet. När det gröna försvinner syns andra färger som redan finns i bladet. Till slut släpper trädet löven så att det kan vila under vintern och spara energi.",
+    "text": "På hösten ändrar många löv färg. De gröna bladen blir gula, orange eller röda. Det beror på att dagarna blir kortare. Då slutar bladen göra lika mycket klorofyll, alltså det gröna ämnet i bladet. När det gröna försvinner syns andra färger som redan finns i bladet. Till slut släpper trädet löven för att vila och spara energi.",
     "questions": [
       {
         "type": "literal",
@@ -9203,7 +9203,7 @@
       }
     ],
     "meta": {
-      "wordCount": 66,
+      "wordCount": 57,
       "fingerprint": "gpt3-002",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
@@ -9631,7 +9631,7 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "Sista varvet",
-    "text": "Tilda är med på skolans lopp i gymnastiksalen. De ska springa många varv runt konerna. Första varvet känns lätt, men sedan blir benen tunga. Tilda hör sin kompis ropa: \"Du klarar det!\" När det är ett varv kvar vill Tilda stanna, men hon tänker på målet. Hon tar ett djupt andetag och springer snabbare. När hon går i mål får hon vatten och ett stort leende.",
+    "text": "Tilda är med på skolans lopp i gymnastiksalen. De ska springa många varv runt konerna. Första varvet känns lätt, men sedan blir benen tunga. Tilda hör sin kompis ropa: \"Du klarar det!\" När det är ett varv kvar vill Tilda stanna, men hon tänker på målet. När hon går i mål får hon vatten och ett stort leende.",
     "questions": [
       {
         "type": "literal",
@@ -9701,7 +9701,7 @@
       }
     ],
     "meta": {
-      "wordCount": 66,
+      "wordCount": 58,
       "fingerprint": "gpt3-004",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
@@ -15575,7 +15575,7 @@
     "genre": "faktatext",
     "theme": "samhälle",
     "title": "Vad gör en kommun?",
-    "text": "Du bor i en kommun, även om du kanske inte tänker på det varje dag. En kommun är ett område där människor bor, arbetar och går i skolan. I Sverige är landet indelat i många kommuner. Kommunen har ansvar för saker som påverkar din vardag: skolan du går i, vägarna du cyklar på och var soporna tar vägen.\n\nEn viktig del av kommunen är skolan. Kommunen betalar för skolor och ser till att det finns lärare, lokaler och skolmat. Det betyder inte att kommunen bestämmer allt i klassrummet, men den har ansvar för att skolan fungerar.\n\nKommunen ansvarar också för äldreomsorg. Det handlar om hjälp till äldre personer som behöver stöd hemma eller bor på ett äldreboende. Där jobbar personal som hjälper till med mat, mediciner och trygghet.\n\nEn annan sak kommunen sköter är vatten och avlopp. Vattnet som kommer ur kranen ska vara rent och säkert att dricka. Avloppet tar hand om smutsigt vatten, till exempel från dusch och disk. Det renas så att naturen inte blir förstörd.\n\nKommunen planerar också hur staden eller byn ska utvecklas. Var ska det byggas bostäder? Var ska det finnas parker? Hur ska trafiken fungera? För att kunna planera behöver kommunen lyssna på invånare och följa regler.\n\nKommunen styrs av politiker som du inte själv röstar på förrän du är äldre, men kommunen påverkar dig ändå. Därför är det viktigt att förstå hur kommunen fungerar. Du kan till exempel skriva medborgarförslag när du blir lite äldre, prata med vuxna som röstar, eller vara med i elevråd och lära dig hur man påverkar.\n\nKommunen är alltså som en stor \"vardagsmotor\". Många personer arbetar för att saker ska fungera även när du inte ser det. När bussen kommer i tid, när lampor lyser på gatan och när soporna hämtas, då är det ofta kommunen som har planerat eller ordnat det.\n\nOm du lär dig vad kommunen gör kan du också förstå att samhället inte bara händer av sig självt. Det är människor som tar beslut, och beslut kan ändras. Det betyder att du som växer upp i kommunen en dag också kan vara med och påverka hur din plats ska bli.",
+    "text": "Du bor i en kommun, även om du kanske inte tänker på det varje dag. En kommun är ett område där människor bor, arbetar och går i skolan. I Sverige är landet indelat i många kommuner. Kommunen har ansvar för saker som påverkar din vardag: skolan du går i, vägarna du cyklar på och var soporna tar vägen.\n\nEn viktig del av kommunen är skolan. Kommunen betalar för skolor och ser till att det finns lärare, lokaler och skolmat.\n\nEn annan sak kommunen sköter är vatten och avlopp. Vattnet som kommer ur kranen ska vara rent och säkert att dricka. Avloppet tar hand om smutsigt vatten, till exempel från dusch och disk. Det renas så att naturen inte blir förstörd.\n\nKommunen planerar också hur staden eller byn ska utvecklas. Var ska det byggas bostäder? Var ska det finnas parker? Hur ska trafiken fungera? För att kunna planera behöver kommunen lyssna på invånare och följa regler.\n\nKommunen styrs av politiker som du inte själv röstar på förrän du är äldre, men kommunen påverkar dig ändå. Därför är det viktigt att förstå hur kommunen fungerar. Du kan till exempel skriva medborgarförslag när du blir lite äldre, prata med vuxna som röstar, eller vara med i elevråd och lära dig hur man påverkar.\n\nKommunen är alltså som en stor \"vardagsmotor\". Många personer arbetar för att saker ska fungera även när du inte ser det. När bussen kommer i tid, när lampor lyser på gatan och när soporna hämtas, då är det ofta kommunen som har planerat eller ordnat det.\n\nOm du lär dig vad kommunen gör kan du också förstå att samhället inte bara händer av sig självt. Det är människor som tar beslut, och beslut kan ändras. Det betyder att du som växer upp i kommunen en dag också kan vara med och påverka hur din plats ska bli.",
     "questions": [
       {
         "type": "literal",
@@ -15645,7 +15645,7 @@
       }
     ],
     "meta": {
-      "wordCount": 356,
+      "wordCount": 307,
       "fingerprint": "gpt4-ak5-04",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
@@ -16218,7 +16218,7 @@
     "genre": "berättelse",
     "theme": "historia",
     "title": "Brevet från farfars farfar",
-    "text": "Saga hittade ett gulnat kuvert i en låda på vinden. Bokstäverna på framsidan var skrivna med svarta bläckpennan i en slingrande stil som var svår att läsa.\n\n\"Mormor, vems är det här?\" ropade hon nerför trappen.\n\nMormor kom upp och tog försiktigt kuvertet. \"Det är från min farfar. Han skrev det 1923 när han jobbade på järnvägen.\"\n\nSaga öppnade brevet varsamt. Där stod det om långa arbetspass i kyla, om att sakna familjen och om glädjen över att äntligen ha fast lön. Farfars farfar berättade att de höll på att bygga en ny sträcka genom skogen och att arbetet var tungt men gav hopp om en bättre framtid.\n\n\"Tänk att vi kan läsa hans tankar hundra år senare\", sa Saga.\n\n\"Just det\", sa mormor. \"Förr skrev man brev för att det var det enda sättet att nå varandra. Det kunde ta veckor att få svar.\"\n\nSaga tänkte på sina egna meddelanden som kom fram på sekunder. Hon undrade om någon om hundra år skulle vilja läsa dem.\n\n\"Ska vi spara brevet?\" frågade Saga. Mormor nickade. \"Det är en del av vår historia.\"",
+    "text": "Saga hittade ett gulnat kuvert i en låda på vinden.\n\n\"Mormor, vems är det här?\" ropade hon nerför trappen.\n\nMormor kom upp och tog försiktigt kuvertet. \"Det är från min farfar. Han skrev det 1923 när han jobbade på järnvägen.\"\n\nSaga öppnade brevet varsamt. Där stod det om långa arbetspass i kyla, om att sakna familjen och om glädjen över att äntligen ha fast lön. Farfars farfar berättade att de höll på att bygga en ny sträcka och att arbetet var tungt men gav hopp om en bättre framtid.\n\n\"Tänk att vi kan läsa hans tankar hundra år senare\", sa Saga.\n\n\"Just det\", sa mormor. \"Förr skrev man brev för att det var det enda sättet att nå varandra. Det kunde ta veckor att få svar.\"\n\nSaga tänkte på sina egna meddelanden som kom fram på sekunder. Hon undrade om någon om hundra år skulle vilja läsa dem.\n\n\"Ska vi spara brevet?\" frågade Saga. Mormor nickade. \"Det är en del av vår historia.\"",
     "questions": [
       {
         "q": "Var hittade Saga brevet?",
@@ -16289,7 +16289,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 182
+      "wordCount": 163
     }
   },
   {
@@ -21729,7 +21729,7 @@
     "genre": "faktatext",
     "theme": "miljö",
     "title": "Matsvinn",
-    "text": "Matsvinn betyder att mat som kunde ha ätits slängs. Det kan vara en banan som blivit brun, en portion pasta som står kvar på tallriken, eller bröd som kastas fast det hade kunnat frysas. Matsvinn händer hemma, i butiker och i skolor. Det kan låta som en liten sak, men när man räknar ihop allt blir det en stor miljöfråga.\n\nFör att förstå varför matsvinn påverkar miljön behöver man tänka på hela resan som maten gör. Mat börjar inte i affären. Den börjar i odling, djurhållning, fiske eller fabriker. För att producera mat behövs mark, vatten, energi och arbete. Traktorer använder bränsle, växthus kan kräva uppvärmning, och transporter kräver lastbilar, båtar eller flyg. Om maten slängs har alla dessa resurser använts i onödan.\n\nNär mat hamnar i soporna kan det också bildas växthusgaser. Matavfall som bryts ner utan syre, till exempel i vissa deponier, kan skapa metan. Metan är en stark växthusgas.\n\nVarför slängs mat? En orsak är planering. Om man handlar mer än man hinner äta blir det rester som glöms bort längst in i kylskåpet. En annan orsak är missförstånd om datum. \"Bäst före\" betyder ofta att maten kan vara okej även efter datumet. \"Sista förbrukningsdag\" är däremot viktigare, särskilt för känsliga varor.\n\nLösningar finns på flera nivåer. Hemma kan man planera inköp, skriva en enkel lista, och använda rester i nya rätter. I skolan kan man jobba med tydligare information om portioner. Det viktiga är att förstå systemet och hitta smartare vanor.",
+    "text": "Matsvinn betyder att mat som kunde ha ätits slängs. Det kan vara en banan som blivit brun, en portion pasta som står kvar på tallriken, eller bröd som kastas fast det hade kunnat frysas. Det kan låta som en liten sak, men när man räknar ihop allt blir det en stor miljöfråga.\n\nFör att förstå varför matsvinn påverkar miljön behöver man tänka på hela resan som maten gör. Den börjar i odling, djurhållning, fiske eller fabriker. För att producera mat behövs mark, vatten, energi och arbete. Om maten slängs har alla dessa resurser använts i onödan.\n\nNär mat hamnar i soporna kan det också bildas växthusgaser. Matavfall som bryts ner utan syre, till exempel i vissa deponier, kan skapa metan. Metan är en stark växthusgas.\n\nVarför slängs mat? En orsak är planering. Om man handlar mer än man hinner äta blir det rester som glöms bort längst in i kylskåpet. En annan orsak är missförstånd om datum. \"Bäst före\" betyder ofta att maten kan vara okej även efter datumet. \"Sista förbrukningsdag\" är däremot viktigare, särskilt för känsliga varor.\n\nLösningar finns på flera nivåer. Hemma kan man planera inköp, skriva en enkel lista, och använda rester i nya rätter. I skolan kan man jobba med tydligare information om portioner. Det viktiga är att förstå systemet och hitta smartare vanor.",
     "questions": [
       {
         "type": "literal",
@@ -21800,7 +21800,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 245
+      "wordCount": 218
     }
   },
   {
@@ -22298,7 +22298,7 @@
   {
     "id": "ak7-tema-003",
     "title": "Musikalisk utveckling och stilbyten",
-    "text": "Miley Cyrus musikaliska karriär kännetecknas av tydliga stilförändringar. I början var hennes musik starkt kopplad till tv-serien Hannah Montana och riktade sig främst till en ung publik. Låtarna hade enkla budskap om vänskap och drömmar.\n\nEfter att serien avslutats började hon experimentera mer. Albumet Bangerz innehöll influenser från hiphop och elektronisk pop. Texterna blev mer personliga och handlade om relationer, självständighet och att bryta normer. För många fans blev det en överraskning.\n\nSenare återvände hon delvis till sina rötter genom att spela in musik med tydligare inslag av rock och country. Den variationen visar att hon inte vill låsa sig vid en enda genre. I intervjuer har hon sagt att musik ska spegla den person man är just då i livet.\n\nMusikkritiker har haft delade åsikter om hennes förändringar. Vissa menar att hon är modig och kreativ, medan andra tycker att stilbytena kan uppfattas som strategiska sätt att skapa uppmärksamhet. Det väcker frågan om hur mycket av en artists utveckling som är konstnärlig och hur mycket som påverkas av marknaden.\n\nTrots kritiken har flera av hennes låtar nått höga placeringar på topplistor världen över. Hon har också uppträtt på stora galor och prisats för sin röst. Många framhåller att hennes sångteknik har utvecklats och blivit mer kraftfull med åren.\n\nMiley Cyrus karriär illustrerar hur en artist kan förändras över tid utan att helt förlora sin publik. Genom att våga testa nya uttryck har hon fortsatt vara relevant i en bransch som ständigt förändras.",
+    "text": "Miley Cyrus musikaliska karriär kännetecknas av tydliga stilförändringar. I början var hennes musik starkt kopplad till tv-serien Hannah Montana och riktade sig främst till en ung publik. Låtarna hade enkla budskap om vänskap och drömmar.\n\nEfter att serien avslutats började hon experimentera mer. Albumet Bangerz innehöll influenser från hiphop och elektronisk pop. Texterna blev mer personliga och handlade om relationer, självständighet och att bryta normer. För många fans blev det en överraskning.\n\nSenare återvände hon delvis till sina rötter genom att spela in musik med tydligare inslag av rock och country. Den variationen visar att hon inte vill låsa sig vid en enda genre. I intervjuer har hon sagt att musik ska spegla den person man är just då i livet.\n\nMusikkritiker har haft delade åsikter om hennes förändringar. Vissa menar att hon är modig och kreativ, medan andra tycker att stilbytena kan uppfattas som strategiska sätt att skapa uppmärksamhet. Det väcker frågan om hur mycket av en artists utveckling som är konstnärlig och hur mycket som påverkas av marknaden.\n\nMånga framhåller att hennes sångteknik har utvecklats och blivit mer kraftfull med åren.\n\nMiley Cyrus karriär illustrerar hur en artist kan förändras över tid utan att helt förlora sin publik. Genom att våga testa nya uttryck har hon fortsatt vara relevant i en bransch som ständigt förändras.",
     "grade": 4,
     "category": "Kultur",
     "questions": [
@@ -22371,7 +22371,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 243
+      "wordCount": 217
     },
     "genre": "faktatext",
     "theme": "Kultur"
@@ -22627,7 +22627,7 @@
     "genre": "faktatext",
     "theme": "demokrati",
     "title": "När unga får vara med och bestämma",
-    "text": "På kommunens webbplats stod det: \"Vi vill höra ungdomars idéer.\" Amina i åttan skickade länken till sin kompis Leo och skrev: \"Ska vi gå?\" De var båda trötta på att vuxna pratade om ungas fritid utan att fråga dem som faktiskt använder idrottshallen, biblioteket och busshållplatserna. De ville veta om det fanns ett sätt att påverka mer än genom att bara sucka i korridoren.\n\nMötet handlade om ett ungdomsråd. Tanken var att en grupp elever från olika skolor skulle träffa tjänstepersoner och politiker några gånger per termin. Ungdomarna skulle kunna lämna förslag, kommentera planer och följa upp beslut. Några vuxna i rummet såg tveksamma ut. De undrade om det skulle bli \"för mycket klagomål\" och om ungdomarna skulle orka hålla igång arbetet när skolan redan tar tid.\n\nAmina räckte upp handen och sa att klagomål ofta betyder att något inte fungerar. Om man vill ha färre klagomål behöver man veta vad som orsakar dem. Leo fyllde i att ungdomar redan är bra på att organisera sig: de planerar lag, spelkvällar, föreningar och skolprojekt. Skillnaden är att kommunen har en annan sorts makt, och då blir det svårare att förstå hur man gör sin röst hörd och vart man ska vända sig.\n\nEfter mötet fick de läsa ett förslag till regler. Där stod att ungdomsrådet skulle vara \"rådgivande\". Det betyder att rådet inte bestämmer, men ger råd innan beslut tas. Amina blev först besviken. Sedan insåg hon att rådgivande ändå kan spela stor roll om kommunen verkligen lyssnar och visar hur råden påverkar. Hon föreslog att varje idé ska få ett tydligt svar: genomförs den, utreds den vidare, eller avslås den, och varför.\n\nEn annan diskussion handlade om vilka som brukar komma till sådana här möten. Ofta är det elever som redan känner sig trygga i att prata inför andra. Därför föreslog Leo att ungdomsrådet också ska samla in synpunkter på flera sätt: anonyma formulär, besök i klassrum och samtal på fritidsgården. När de gick hem pratade de om demokrati. För dem blev det tydligt att demokrati också handlar om att förstå hur beslut växer fram och hur fler kan få plats att påverka.",
+    "text": "På kommunens webbplats stod det: \"Vi vill höra ungdomars idéer.\" Amina i åttan skickade länken till sin kompis Leo och skrev: \"Ska vi gå?\" De var båda trötta på att vuxna pratade om ungas fritid utan att fråga dem som faktiskt använder idrottshallen, biblioteket och busshållplatserna. De ville veta om det fanns ett sätt att påverka mer än genom att bara sucka i korridoren.\n\nMötet handlade om ett ungdomsråd. Tanken var att en grupp elever från olika skolor skulle träffa tjänstepersoner och politiker några gånger per termin. Ungdomarna skulle kunna lämna förslag, kommentera planer och följa upp beslut. Några vuxna i rummet såg tveksamma ut. De undrade om det skulle bli \"för mycket klagomål\" och om ungdomarna skulle orka hålla igång arbetet när skolan redan tar tid.\n\nAmina räckte upp handen och sa att klagomål ofta betyder att något inte fungerar. Om man vill ha färre klagomål behöver man veta vad som orsakar dem.\n\nEfter mötet fick de läsa ett förslag till regler. Där stod att ungdomsrådet skulle vara \"rådgivande\". Det betyder att rådet inte bestämmer, men ger råd innan beslut tas. Amina blev först besviken. Sedan insåg hon att rådgivande ändå kan spela stor roll om kommunen verkligen lyssnar och visar hur råden påverkar. Hon föreslog att varje idé ska få ett tydligt svar: genomförs den, utreds den vidare, eller avslås den, och varför.\n\nEn annan diskussion handlade om vilka som brukar komma till sådana här möten. Ofta är det elever som redan känner sig trygga i att prata inför andra. Därför föreslog Leo att ungdomsrådet också ska samla in synpunkter på flera sätt: anonyma formulär, besök i klassrum och samtal på fritidsgården. När de gick hem pratade de om demokrati. För dem blev det tydligt att demokrati också handlar om att förstå hur beslut växer fram och hur fler kan få plats att påverka.",
     "questions": [
       {
         "type": "literal",
@@ -22697,7 +22697,7 @@
       }
     ],
     "meta": {
-      "wordCount": 353,
+      "wordCount": 306,
       "fingerprint": "ak7-tema-007",
       "generatedAt": "2026-02-14T00:00:00.000Z",
       "model": "manual"
@@ -22793,7 +22793,7 @@
     "genre": "faktatext",
     "theme": "teknik",
     "title": "Flödet som väljer åt dig",
-    "text": "När Malte öppnar sin app efter skolan är det som om den redan vet vad han vill se. Ett klipp om en ny speluppdatering följs av ett om en basketmatch, och sedan dyker en video upp där någon testar en billig mikrofon. \"Hur kan den pricka så rätt?\" frågar han sin syster Rana. Hon svarar: \"Det är algoritmer. De gissar vad du stannar kvar vid, och de vill att du ska fortsätta.\"\n\nEn algoritm är en uppsättning steg som löser en uppgift. I sociala medier handlar uppgiften ofta om att välja vilket innehåll som ska visas och i vilken ordning. Appar mäter sådant som tittartid, likes, kommentarer och om du delar vidare. De kan också titta på mer dolda signaler: om du pausar, spolar tillbaka eller snabbt scrollar förbi. Allt detta blir data som används för att förutsäga vad som får dig att stanna.\n\nDet låter smart, men det finns baksidor. Om algoritmen belönar sådant som gör oss arga eller chockade, kan flödet fyllas av konflikter. Och om man bara får mer av det man redan gillar kan man fastna i en \"bubbla\" där andra perspektiv nästan aldrig syns. Rana berättar att forskare ibland kallar det filterbubbla eller ekokammare, även om effekten kan variera mellan personer och plattformar.\n\nEn dag får klassen i uppgift att granska påståendet: \"Algoritmer är neutrala.\" Malte vill först hålla med. En algoritm är ju bara matematik. Men läraren påminner dem om att människor bestämmer målet, väljer vilken data som ska samlas in och sätter reglerna. Om datan speglar gamla orättvisor kan algoritmen förstärka dem. Om den tränas på innehåll som mest kommer från vissa grupper kan andra bli sämre representerade.\n\nKlassen gör ett experiment. De skapar två nya konton och tittar på olika typer av videor i fem minuter. Kontot som tittar på träningsklipp får snabbt fler råd om kost och kropp, medan det andra som tittar på humor får fler skämtkanaler. Efteråt jämför de flödena. Skillnaden blir tydlig, trots att kontona är lika nya. Läraren säger att lösningen inte är att \"stänga av internet\", utan att förstå mekanismerna och söka mer aktivt när flödet börjar styra för mycket.",
+    "text": "När Malte öppnar sin app efter skolan är det som om den redan vet vad han vill se. Ett klipp om en ny speluppdatering följs av ett om en basketmatch, och sedan dyker en video upp där någon testar en billig mikrofon. \"Hur kan den pricka så rätt?\" frågar han sin syster Rana. Hon svarar: \"Det är algoritmer. De gissar vad du stannar kvar vid, och de vill att du ska fortsätta.\"\n\nEn algoritm är en uppsättning steg som löser en uppgift. I sociala medier handlar uppgiften ofta om att välja vilket innehåll som ska visas och i vilken ordning. Appar mäter sådant som tittartid, likes, kommentarer och om du delar vidare. De kan också titta på mer dolda signaler: om du pausar, spolar tillbaka eller snabbt scrollar förbi. Allt detta blir data som används för att förutsäga vad som får dig att stanna.\n\nDet låter smart, men det finns baksidor. Om algoritmen belönar sådant som gör oss arga eller chockade, kan flödet fyllas av konflikter. Och om man bara får mer av det man redan gillar kan man fastna i en \"bubbla\" där andra perspektiv nästan aldrig syns. Rana berättar att forskare ibland kallar det filterbubbla eller ekokammare, även om effekten kan variera mellan personer och plattformar.\n\nLäraren påminner om att människor bestämmer målet, väljer vilken data som ska samlas in och sätter reglerna. Om datan speglar gamla orättvisor kan algoritmen förstärka dem.\n\nKlassen gör ett experiment. De skapar två nya konton och tittar på olika typer av videor i fem minuter. Kontot som tittar på träningsklipp får snabbt fler råd om kost och kropp, medan det andra som tittar på humor får fler skämtkanaler. Efteråt jämför de flödena. Skillnaden blir tydlig, trots att kontona är lika nya. Läraren säger att lösningen inte är att \"stänga av internet\", utan att förstå mekanismerna och söka mer aktivt när flödet börjar styra för mycket.",
     "questions": [
       {
         "type": "literal",
@@ -22863,7 +22863,7 @@
       }
     ],
     "meta": {
-      "wordCount": 354,
+      "wordCount": 313,
       "fingerprint": "ak7-tema-009",
       "generatedAt": "2026-02-14T00:00:00.000Z",
       "model": "manual"
@@ -22876,7 +22876,7 @@
     "genre": "faktatext",
     "theme": "hälsa",
     "title": "Sömn, stress och den där sista videon",
-    "text": "På tisdagar börjar skolan extra tidigt för att idrottshallen är bokad senare på dagen. Mira känner redan i korridoren att huvudet går långsammare. Hon somnade sent igen. I omklädningsrummet berättar hon för sin vän Elias att hon \"bara\" skulle kolla en sista video, men att det blev fem. Elias nickar. Han brukar själv fastna, särskilt när han är stressad och vill slippa tänka på nästa prov.\n\nSkolsköterskan har satt upp en affisch om sömn. Den säger att ungdomar ofta behöver omkring åtta till tio timmar per natt, men att många får mindre. Det handlar inte bara om trötthet. För lite sömn kan göra det svårare att koncentrera sig, komma ihåg saker och hantera känslor. Mira märker att hon blir lättare irriterad, och hon börjar tolka små kommentarer som kritik, även när ingen menar något illa.\n\nPå elevhälsans temalektion berättar kuratorn Jamal att stress kan vara både yttre och inre. Yttre stress kan vara prov, tider och höga krav. Inre stress kan vara tankar som \"jag måste vara perfekt\" eller \"alla andra klarar det\". Jamal påpekar också att stress inte alltid syns. Någon kan skämta mycket och ändå känna press. En annan kan vara tyst och ändå må bra, och man kan inte alltid gissa.\n\nI klassen finns också Alex, som använder hörselkåpor när det blir för mycket ljud. Alex säger att sömnbrist gör ljud ännu jobbigare, som om volymen skruvas upp. Mira hade inte tänkt på att trötthet kan påverka kroppen så olika. Samtidigt vill hon inte göra sömn till en tävling. Elias säger: \"Det handlar inte om att vara duktig. Det handlar om att fungera.\"\n\nDe får göra en plan i par. Mira och Elias skriver tre små steg: lägga mobilen utanför sängen, ha ett fast \"släck-ljus\"-klockslag och göra något lugnt tio minuter innan, som att läsa eller lyssna på musik. Alex nämner också skärmljus, och Jamal förklarar att starkt ljus på kvällen kan göra hjärnan mer vaken, särskilt när notiser ger snabba belöningar. Efter två veckor märker Mira en skillnad vissa dagar. Hon snubblar ibland, men känner sig mindre hopplös, eftersom hon kan gå i en hjälpsam riktning steg för steg.",
+    "text": "På tisdagar börjar skolan extra tidigt för att idrottshallen är bokad senare på dagen. Mira känner redan i korridoren att huvudet går långsammare. Hon somnade sent igen. I omklädningsrummet berättar hon för sin vän Elias att hon \"bara\" skulle kolla en sista video, men att det blev fem. Elias nickar. Han brukar själv fastna, särskilt när han är stressad och vill slippa tänka på nästa prov.\n\nSkolsköterskan har satt upp en affisch om sömn. Den säger att ungdomar ofta behöver omkring åtta till tio timmar per natt, men att många får mindre. Det handlar inte bara om trötthet. För lite sömn kan göra det svårare att koncentrera sig, komma ihåg saker och hantera känslor. Mira märker att hon blir lättare irriterad, och hon börjar tolka små kommentarer som kritik, även när ingen menar något illa.\n\nPå elevhälsans temalektion berättar kuratorn Jamal att stress kan vara både yttre och inre. Yttre stress kan vara prov, tider och höga krav. Inre stress kan vara tankar som \"jag måste vara perfekt\" eller \"alla andra klarar det\".\n\nI klassen finns också Alex, som använder hörselkåpor när det blir för mycket ljud. Alex säger att sömnbrist gör ljud ännu jobbigare, som om volymen skruvas upp. Samtidigt vill hon inte göra sömn till en tävling. Elias säger: \"Det handlar inte om att vara duktig. Det handlar om att fungera.\"\n\nDe får göra en plan i par. Mira och Elias skriver tre små steg: lägga mobilen utanför sängen, ha ett fast \"släck-ljus\"-klockslag och göra något lugnt tio minuter innan, som att läsa eller lyssna på musik. Alex nämner också skärmljus, och Jamal förklarar att starkt ljus på kvällen kan göra hjärnan mer vaken, särskilt när notiser ger snabba belöningar. Efter två veckor märker Mira en skillnad vissa dagar. Hon snubblar ibland, men känner sig mindre hopplös, eftersom hon kan gå i en hjälpsam riktning steg för steg.",
     "questions": [
       {
         "type": "literal",
@@ -22946,7 +22946,7 @@
       }
     ],
     "meta": {
-      "wordCount": 353,
+      "wordCount": 310,
       "fingerprint": "ak7-tema-010",
       "generatedAt": "2026-02-14T00:00:00.000Z",
       "model": "manual"
@@ -23199,7 +23199,7 @@
     "genre": "faktatext",
     "theme": "vetenskap",
     "title": "Magin bakom en besvärjelse",
-    "text": "I Harry Potter-världen kan en kort fras och en rörelse få något att hända direkt. För läsaren kan det se ut som om besvärjelser är \"gratis\": man säger orden och så löser sig problemet. Men om man tittar närmare finns det nästan alltid en kostnad. Kostnaden behöver inte vara pengar, utan kan vara koncentration, kunskap, risk eller ansvar.\n\nFör att en besvärjelse ska fungera krävs flera saker samtidigt. Eleven måste kunna uttalet, förstå vad den försöker göra och kunna kontrollera sin avsikt. I berättelserna går det ofta fel när någon är stressad, arg eller försöker imponera. Det är en påminnelse om att magi inte bara handlar om teknik, utan också om psykologi. Om du tappar fokus kan du skapa konsekvenser du inte tänkt på.\n\nMånga besvärjelser fungerar dessutom som en sorts teknologi med regler. De har räckvidd, begränsningar och ibland biverkningar. Om du förtrollar ett föremål kan det påverka andra saker runt omkring. Om du försöker ändra något som är komplext kan resultatet bli ofullständigt. Därför lägger skolan så mycket tid på teori och övning. Det räcker inte att \"vilja väl\".\n\nEtt annat viktigt tema är etik. Bara för att något är möjligt betyder det inte att det är rätt. I böckerna finns förbjudna metoder och besvärjelser som skadar, kontrollerar eller skrämmer andra. De kan ge makt snabbt, men de förstör också relationer och förtroende. När någon använder magi för att tvinga fram ett resultat blir frågan inte bara \"fungerade det?\", utan \"vad gjorde det med den som blev utsatt?\" och \"vad gör det med den som använder det?\"\n\nSamtidigt kan magi användas omtänksamt. En liten reparationsbesvärjelse kan spara tid. En skyddsbesvärjelse kan rädda liv. Men även då krävs ansvar: att veta när man kan hjälpa och när man måste be om hjälp. I många scener är det de som vågar erkänna sina gränser som undviker de största misstagen.\n\nNär man läser så kan man se magin som en spegel av verkliga färdigheter. Kunskap utan ansvar kan bli farligt. Kraft utan eftertanke kan skada. Och den största \"besvärjelsen\" är kanske att kunna stanna upp och välja hur man använder det man kan.",
+    "text": "I Harry Potter-världen kan en kort fras och en rörelse få något att hända direkt. För läsaren kan det se ut som om besvärjelser är \"gratis\": man säger orden och så löser sig problemet. Men om man tittar närmare finns det nästan alltid en kostnad. Kostnaden behöver inte vara pengar, utan kan vara koncentration, kunskap, risk eller ansvar.\n\nFör att en besvärjelse ska fungera krävs flera saker samtidigt. Eleven måste kunna uttalet, förstå vad den försöker göra och kunna kontrollera sin avsikt. I berättelserna går det ofta fel när någon är stressad, arg eller försöker imponera. Det är en påminnelse om att magi inte bara handlar om teknik, utan också om psykologi. Om du tappar fokus kan du skapa konsekvenser du inte tänkt på.\n\nMånga besvärjelser fungerar dessutom som en sorts teknologi med regler. De har räckvidd, begränsningar och ibland biverkningar.\n\nEtt annat viktigt tema är etik. Bara för att något är möjligt betyder det inte att det är rätt. I böckerna finns förbjudna metoder och besvärjelser som skadar, kontrollerar eller skrämmer andra. De kan ge makt snabbt, men de förstör också relationer och förtroende. När någon använder magi för att tvinga fram ett resultat blir frågan inte bara \"fungerade det?\", utan \"vad gjorde det med den som blev utsatt?\" och \"vad gör det med den som använder det?\"\n\nSamtidigt kan magi användas omtänksamt. En liten reparationsbesvärjelse kan spara tid. En skyddsbesvärjelse kan rädda liv. Men även då krävs ansvar: att veta när man kan hjälpa och när man måste be om hjälp. I många scener är det de som vågar erkänna sina gränser som undviker de största misstagen.\n\nNär man läser så kan man se magin som en spegel av verkliga färdigheter. Kunskap utan ansvar kan bli farligt. Kraft utan eftertanke kan skada. Och den största \"besvärjelsen\" är kanske att kunna stanna upp och välja hur man använder det man kan.",
     "questions": [
       {
         "type": "literal",
@@ -23270,7 +23270,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 352
+      "wordCount": 312
     }
   },
   {
@@ -24266,7 +24266,7 @@
     "genre": "faktatext",
     "theme": "kultur",
     "title": "Michael Jacksons liv och karriär",
-    "text": "Michael Jackson föddes 1958 i Gary, Indiana, i USA. Redan som barn blev han känd genom gruppen The Jackson 5, där han sjöng tillsammans med sina bröder. Gruppen fick flera stora hits under slutet av 1960-talet och början av 1970-talet. Michaels starka röst och scennärvaro gjorde att han snabbt stack ut.\n\nUnder 1980-talet inledde han en framgångsrik solokarriär. Albumet \"Thriller\" från 1982 blev det mest sålda albumet i världen. Musikvideorna till låtar som \"Billie Jean\" och \"Beat It\" visades flitigt på tv-kanalen MTV och förändrade hur musik presenterades. Jackson kombinerade sång, dans och avancerad koreografi på ett sätt som påverkade många senare artister.\n\nHans dansstil, särskilt steget \"moonwalk\", blev världsberömd. Han var också känd för sina spektakulära konserter med stora scenshower. Samtidigt väckte hans privatliv stor uppmärksamhet i medierna. Rykten, rättsprocesser och hans förändrade utseende gjorde att han ofta var i centrum för debatt.\n\nMichael Jackson engagerade sig även i välgörenhet och deltog i projekt som samlade in pengar till människor i nöd. Trots framgångarna mötte han kritik och kontroverser. Vissa anklagelser mot honom ledde till rättegångar, där han i ett fall frikändes.\n\nNär han dog 2009 skapade det stor sorg bland fans världen över. Hans musik fortsätter att spelas och diskuteras. I dag ses han både som en av pophistoriens mest inflytelserika artister och som en person vars liv präglades av motsättningar.\n\nSammanfattningsvis är Michael Jackson en komplex figur i musikhistorien. Hans konstnärliga betydelse är svår att förneka, samtidigt som hans liv utanför scenen fortfarande väcker frågor och diskussioner.",
+    "text": "Michael Jackson föddes 1958 i Gary, Indiana, i USA. Redan som barn blev han känd genom gruppen The Jackson 5, där han sjöng tillsammans med sina bröder. Gruppen fick flera stora hits under slutet av 1960-talet och början av 1970-talet.\n\nUnder 1980-talet inledde han en framgångsrik solokarriär. Albumet \"Thriller\" från 1982 blev det mest sålda albumet i världen. Musikvideorna till låtar som \"Billie Jean\" och \"Beat It\" visades flitigt på tv-kanalen MTV och förändrade hur musik presenterades. Jackson kombinerade sång, dans och avancerad koreografi på ett sätt som påverkade många senare artister.\n\nHans dansstil, särskilt steget \"moonwalk\", blev världsberömd. Han var också känd för sina spektakulära konserter med stora scenshower. Samtidigt väckte hans privatliv stor uppmärksamhet i medierna. Rykten, rättsprocesser och hans förändrade utseende gjorde att han ofta var i centrum för debatt.\n\nMichael Jackson engagerade sig även i välgörenhet och deltog i projekt som samlade in pengar till människor i nöd. Trots framgångarna mötte han kritik och kontroverser. Vissa anklagelser mot honom ledde till rättegångar, där han i ett fall frikändes.\n\nNär han dog 2009 skapade det stor sorg bland fans världen över. Hans musik fortsätter att spelas och diskuteras. I dag ses han både som en av pophistoriens mest inflytelserika artister och som en person vars liv präglades av motsättningar.",
     "questions": [
       {
         "type": "literal",
@@ -24336,7 +24336,7 @@
       }
     ],
     "meta": {
-      "wordCount": 250,
+      "wordCount": 212,
       "fingerprint": "ak8-tema-001",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
@@ -25153,7 +25153,7 @@
     "genre": "berättelse",
     "theme": "identitet och kultur",
     "title": "Två språk, en röst",
-    "text": "Amina hade alltid pratat arabiska hemma och svenska i skolan. Det var inget hon tänkte på – det bara var så. Men i åttan började det skava.\n\nDet hade börjat med en presentation i svenskan. Amina berättade om sin familjs bakning, om kaak-kakorna som hennes farmor alltid bakade till fredagar. Hon använde det arabiska ordet utan att tänka sig för, och en kille i klassen fnissade. \"Vad sa du?\" Amina upprepade och kände hur kinderna blev varma.\n\nPå rasten sa kompisen Ella: \"Jag tyckte det lät fint. Hur stavas det?\" Amina visade, och Ella provade att säga ordet. Det lät fel men känslan var rätt.\n\nSenare den veckan hade de en uppgift om identitet i SO:n. Läraren frågade: \"Vad formar vem ni är?\" Amina skrev om sina två språk. Hon beskrev hur arabiskan hade ord för känslor som svenskan saknade, och tvärtom. Ordet \"lagom\" till exempel – det gick inte att översätta rakt av. Och det arabiska \"tarab\", känslan när musik griper tag i hela kroppen, hade ingen direkt motsvarighet i svenskan.\n\nNär hon läste upp texten blev det tyst. Sedan sa läraren: \"Du visar att språk inte bara är kommunikation. Det är också ett sätt att tänka.\" Amina kände något lossna i bröstet. Det var inte så att hon hade två halvspråk. Hon hade två hela världar.\n\nPå vägen hem ringde hon farmor och berättade om presentationen – på arabiska. Farmor skrattade och sa: \"Du har alltid haft orden. Nu har du hittat modet att använda dem.\"",
+    "text": "Amina hade alltid pratat arabiska hemma och svenska i skolan. Det var inget hon tänkte på – det bara var så. Men i åttan började det skava.\n\nDet hade börjat med en presentation i svenskan. Amina berättade om sin familjs bakning, om kaak-kakorna som hennes farmor alltid bakade till fredagar. Hon använde det arabiska ordet utan att tänka sig för, och en kille i klassen fnissade. \"Vad sa du?\" Amina upprepade och kände hur kinderna blev varma.\n\nSenare den veckan hade de en uppgift om identitet i SO:n. Läraren frågade: \"Vad formar vem ni är?\" Amina skrev om sina två språk. Hon beskrev hur arabiskan hade ord för känslor som svenskan saknade, och tvärtom. Ordet \"lagom\" till exempel – det gick inte att översätta rakt av. Och det arabiska \"tarab\", känslan när musik griper tag i hela kroppen, hade ingen direkt motsvarighet i svenskan.\n\nNär hon läste upp texten blev det tyst. Sedan sa läraren: \"Du visar att språk inte bara är kommunikation. Det är också ett sätt att tänka.\" Amina kände något lossna i bröstet. Det var inte så att hon hade två halvspråk. Hon hade två hela världar.\n\nPå vägen hem ringde hon farmor och berättade om presentationen – på arabiska. Farmor skrattade och sa: \"Du har alltid haft orden. Nu har du hittat modet att använda dem.\"",
     "questions": [
       {
         "q": "Vad handlade Aminas presentation i svenskan om?",
@@ -25224,7 +25224,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 248
+      "wordCount": 220
     }
   },
   {
@@ -27598,7 +27598,7 @@
   {
     "id": "ak9-tema-016",
     "title": "Giorgio Armani och idén om tyst elegans",
-    "text": "När man hör namnet Giorgio Armani tänker många på lyx, kavajer och röda mattan. Men Armanis genomslag handlar också om hur en designer kan påverka både arbetsliv och populärkultur. Giorgio Armani föddes 1934 i Piacenza i norra Italien. Efter en tid med medicinstudier och militärtjänst började han arbeta i modebranschen, först med skyltning och försäljning och senare med design. Den praktiska erfarenheten gjorde att han tidigt såg hur kläder faktiskt används: hur man rör sig, sitter, reser och möter människor.\n\nPå 1970-talet startade han sitt eget märke. Hans stil beskrevs ofta som avskalad och kontrollerad, med dämpade färger och rena linjer. I stället för att bygga allt på dekor ville han skapa ett uttryck som kändes modernt och lätt att bära. Ett ord som ofta kopplas till Armani är elegans, men hans elegans var inte högljudd. Den byggde på material, passform och proportioner. Kavajerna blev mindre stela än tidigare: axlarna mjukare och plagget följde kroppen utan att se slarvigt ut.\n\nUnder 1980-talet blev hans kostymer särskilt betydelsefulla. I många länder ökade antalet kontorsjobb, och det fanns en stark idé om hur en professionell person skulle se ut. Armani bidrog till en stil där både män och kvinnor kunde signalera auktoritet utan extrema detaljer. Samtidigt kritiserades perioden för att förstärka pressen att passa in i en viss företagskultur. Det visar att mode inte bara är smak, utan också normer.\n\nArmanis företag växte till en koncern med flera linjer. Skillnaden mellan olika linjer kan handla om pris, kvalitet, målgrupp och var plaggen säljs. En viktig affärsidé i lyxvärlden är att varumärket måste kännas konsekvent: samma ton i reklam, butiksdesign och kundupplevelse. Armani satsade på en helhet där allt från parfymflaskor till inredning skulle spegla samma lugna identitet.\n\nSamtidigt är lyxindustrin inte fri från problem. Produktionen kan vara komplex med många underleverantörer, och branschen får kritik för resursförbrukning och avfall. Armanis namn kan därför användas som exempel i en större fråga: Hur kan ett företag kombinera design, status och ansvar? För att förstå det räcker det inte att titta på en snygg kostym. Man behöver också se historien, affärsstrategin och de samhällen som påverkas av kläderna vi väljer.",
+    "text": "När man hör namnet Giorgio Armani tänker många på lyx, kavajer och röda mattan. Men Armanis genomslag handlar också om hur en designer kan påverka både arbetsliv och populärkultur. Giorgio Armani föddes 1934 i Piacenza i norra Italien. Efter en tid med medicinstudier och militärtjänst började han arbeta i modebranschen, först med skyltning och försäljning och senare med design.\n\nPå 1970-talet startade han sitt eget märke. Hans stil beskrevs ofta som avskalad och kontrollerad, med dämpade färger och rena linjer. I stället för att bygga allt på dekor ville han skapa ett uttryck som kändes modernt och lätt att bära. Ett ord som ofta kopplas till Armani är elegans, men hans elegans var inte högljudd. Den byggde på material, passform och proportioner. Kavajerna blev mindre stela än tidigare: axlarna mjukare och plagget följde kroppen utan att se slarvigt ut.\n\nUnder 1980-talet blev hans kostymer särskilt betydelsefulla. I många länder ökade antalet kontorsjobb, och det fanns en stark idé om hur en professionell person skulle se ut. Armani bidrog till en stil där både män och kvinnor kunde signalera auktoritet utan extrema detaljer. Samtidigt kritiserades perioden för att förstärka pressen att passa in i en viss företagskultur. Det visar att mode inte bara är smak, utan också normer.\n\nArmanis företag växte till en koncern med flera linjer. Skillnaden mellan olika linjer kan handla om pris, kvalitet, målgrupp och var plaggen säljs. Armani satsade på en helhet där allt från parfymflaskor till inredning skulle spegla samma lugna identitet.\n\nSamtidigt är lyxindustrin inte fri från problem. Produktionen kan vara komplex med många underleverantörer, och branschen får kritik för resursförbrukning och avfall. Armanis namn kan därför användas som exempel i en större fråga: Hur kan ett företag kombinera design, status och ansvar? För att förstå det räcker det inte att titta på en snygg kostym. Man behöver också se historien, affärsstrategin och de samhällen som påverkas av kläderna vi väljer.",
     "grade": 5,
     "category": "Kultur",
     "questions": [
@@ -27671,7 +27671,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1484981138541-3d074aa97716?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 355
+      "wordCount": 316
     },
     "genre": "faktatext",
     "theme": "Kultur"
