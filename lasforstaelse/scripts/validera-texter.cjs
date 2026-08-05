@@ -182,6 +182,27 @@ lib.forEach(t => {
       fel.push(`${plats}: ogiltigt correct-index (${q.correct})`);
     }
 
+    // Femton mallfraser satt tidigare på 102 distraktorer i alla årskurser,
+    // aldrig på ett rätt svar. Frasen blev därmed ett facit i sig: eleven
+    // kunde välja bort alternativet utan att läsa texten. De är omskrivna,
+    // och listan ligger kvar som spärr mot att de kommer tillbaka.
+    const MALLFRASER = [
+      'för att undvika missförstånd', 'för säkerhets skull',
+      'för att det hade fungerat förut', 'redan innan något annat hände',
+      'oavsett vad andra tyckte', 'och ingenting annat',
+      'under hela den perioden', 'men bara under vissa förutsättningar',
+      'av en slump', 'utan att det fick några konsekvenser',
+      'för att slippa problem senare', 'utan någon som helst förändring',
+      'men bara om det behövdes', 'på exakt samma sätt som förut',
+      'för att det skulle gå snabbare',
+    ];
+    alt.forEach((o, oi) => {
+      const fras = MALLFRASER.find(f => (o || '').endsWith(f));
+      if (fras) {
+        fel.push(`${plats} alternativ ${'ABCD'[oi]}: slutar på mallfrasen "${fras}"`);
+      }
+    });
+
     // Rätt svar ska inte gå att peka ut på längden. Måttet är KVOT mot närmaste
     // distraktor, inte absolut teckenskillnad: "En hundvalp och hennes dag" (26)
     // mot "En resa" (7) är trivialt gissningsbar trots bara 18 teckens skillnad,

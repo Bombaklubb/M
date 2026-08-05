@@ -19558,7 +19558,7 @@
         "options": [
           "För att näsan är täppt och doftämnen inte når fram",
           "För att man äter långsammare",
-          "För att hjärnan stänger av smaklökarna av en slump",
+          "För att hjärnan stänger av smaklökarna när man är sjuk",
           "För att tungan slutar fungera helt"
         ],
         "correct": 0,
@@ -21130,7 +21130,7 @@
         "type": "forfattarens-syfte",
         "q": "Varför hjälper Amirs sätt att förklara Leyla att bli tryggare?",
         "options": [
-          "För att han säger åt henne att sluta, för att slippa problem senare",
+          "För att han säger åt henne att sluta försöka med det svåra",
           "För att han förklarar som om det är självklart att hon kan lära sig",
           "För att han ignorerar henne",
           "För att han skrattar åt henne"
@@ -21200,7 +21200,7 @@
         "q": "Varför tar de prover från flera olika platser?",
         "options": [
           "För att kunna jämföra och se skillnader mellan ren och smutsig snö",
-          "För att läraren vill ha fler läxor, för att det skulle gå snabbare",
+          "För att läraren vill att alla i klassen ska få varsitt prov",
           "För att få fler burkar",
           "För att snö alltid ser likadan ut"
         ],
@@ -21292,7 +21292,7 @@
         "options": [
           "För att luften är för varm",
           "För att den alltid måste snurra",
-          "För att Valentina målade fenorna röda, för att det hade fungerat förut",
+          "För att Valentina målade fenorna röda och färgen gjorde dem tyngre",
           "För att kraften eller formen inte är jämnt fördelad och skapar obalans"
         ],
         "correct": 3
@@ -21362,7 +21362,7 @@
           "För att minnesceller gör att immunförsvaret kan sätta igång snabbare",
           "För att smittan alltid blir snällare",
           "För att kroppen glömmer att bli sjuk",
-          "För att man alltid har mer vitaminer då, för att undvika missförstånd"
+          "För att man alltid har mer vitaminer i kroppen andra gången"
         ],
         "correct": 0
       },
@@ -22023,7 +22023,7 @@
         "q": "Varför säger texten att algoritmer inte är neutrala?",
         "options": [
           "För att de byggs av människor med mål som styr vad som prioriteras",
-          "För att de bara fungerar på tisdagar, för att undvika missförstånd",
+          "För att de bara fungerar när många använder appen samtidigt",
           "För att de alltid ljuger",
           "För att de är gjorda av metall"
         ],
@@ -22094,7 +22094,7 @@
         "type": "inferens",
         "q": "Varför kan inlägg som väcker starka känslor spridas mer?",
         "options": [
-          "För att de bara visas för vuxna utan att det fick några konsekvenser",
+          "För att de bara visas för vuxna som redan följer många konton",
           "För att de alltid är sanna",
           "För att de är kortare",
           "För att de får många reaktioner som algoritmen tolkar som engagemang"
@@ -23100,7 +23100,7 @@
         "type": "inferens",
         "q": "Vad visar texten om hur olika personer kan tolka samma berättelse?",
         "options": [
-          "Att det finns bara en korrekt tolkning som alla måste följa redan innan något annat hände",
+          "Att det bara finns en korrekt tolkning, och att de andra läsarna har missförstått texten",
           "Att tolkningar främst beror på vilken film man såg först.",
           "Att tolkningar kan variera: samma händelse kan handla om fördomar, sorg eller vardagsmod.",
           "Att tolkningar blir identiska när en serie blir populär."
@@ -23288,7 +23288,7 @@
           "Att fandom kan bli en gemenskap som både kan inkludera och skapa problem, beroende på hur man beter sig.",
           "Att fandom alltid leder till konflikter och därför bör undvikas.",
           "Att bara de som kan flest fakta får kallas fans.",
-          "Att det viktigaste med fandom är att vinna diskussioner om detaljer men bara under vissa förutsättningar"
+          "Att det viktigaste med fandom är att vinna diskussioner om detaljer och veta mest av alla i gruppen"
         ],
         "correct": 0
       },
@@ -23330,7 +23330,7 @@
         "q": "Vilket exempel på positiv påverkan från fandom nämns?",
         "options": [
           "Att fan-grupper kan samla in pengar, ordna läsprojekt och skapa kreativt innehåll.",
-          "Att fan-grupper alltid ersätter skolarbete med rollspel på lektionstid av en slump",
+          "Att fan-grupper alltid ersätter skolarbetet med rollspel under lektionstid",
           "Att fan-grupper gör att man slipper tänka kritiskt om källor.",
           "Att fan-grupper hindrar personer från att läsa andra böcker."
         ],
@@ -23884,7 +23884,7 @@
         "options": [
           "För att få fler felkällor",
           "För att jämföra med en grupp som inte får förändringen",
-          "För att göra experimentet roligare för säkerhets skull",
+          "För att göra experimentet roligare för dem som deltar",
           "För att slippa mäta"
         ],
         "correct": 1
@@ -23895,7 +23895,7 @@
         "options": [
           "För att man då kan vara mer säker och minska risken för slump",
           "För att kontrollgruppen försvinner",
-          "För att läraren kräver det utan anledning för säkerhets skull",
+          "För att läraren kräver att varje försök skrivs ner i häftet",
           "För att felkällor blir större"
         ],
         "correct": 0
@@ -23918,7 +23918,7 @@
           "För att data aldrig betyder något",
           "För att olika situationer kan göra att resultatet inte gäller överallt",
           "För att växter alltid ljuger",
-          "För att kontrollgrupper är onödiga utan att det fick några konsekvenser"
+          "För att kontrollgrupper är onödiga när man bara testar en sak"
         ],
         "correct": 1
       }
@@ -24873,7 +24873,7 @@
         "options": [
           "Bojkotter är förbjudna enligt lag",
           "Alla kläder kommer från samma land",
-          "Kläderna därifrån är av bäst kvalitet av en slump",
+          "Kläderna därifrån är av allra bästa kvalitet",
           "Det kan leda till att arbetare förlorar sina jobb"
         ],
         "correct": 3,
@@ -25001,7 +25001,7 @@
           "Att juice alltid säljs på stränder",
           "Att all reklam är äkta och spontan",
           "Att reklam ofta är noga planerad trots att den ser naturlig ut",
-          "Att resebolag ljuger om sina destinationer och ingenting annat"
+          "Att resebolag ljuger om hur stränderna faktiskt ser ut"
         ],
         "correct": 2,
         "type": "literal"
@@ -25170,7 +25170,7 @@
         "q": "Varför blev Amina generad under presentationen?",
         "options": [
           "Hon tappade sina anteckningar",
-          "Hon glömde vad hon skulle säga och ingenting annat",
+          "Hon glömde vad hon skulle säga mitt i meningen",
           "En kille fnissade när hon använde ett arabiskt ord",
           "Läraren avbröt henne"
         ],
@@ -25192,7 +25192,7 @@
         "q": "Vad sa läraren efter att Amina läst sin text?",
         "options": [
           "Att språk inte bara är kommunikation utan också ett sätt att tänka",
-          "Att hon borde skriva om texten på arabiska under hela den perioden",
+          "Att hon borde skriva om hela texten på arabiska i stället",
           "Att alla borde lära sig arabiska",
           "Att hon borde välja ett av språken"
         ],
@@ -25374,7 +25374,7 @@
         "q": "Vad är textens slutsats?",
         "options": [
           "Att telefoner borde förbjudas helt",
-          "Att man aldrig ska stänga av telefonen under hela den perioden",
+          "Att man aldrig ska stänga av telefonen under skoldagen",
           "Att balans och eget val om nåbarhet kan vara en form av frihet",
           "Att bara vuxna bör ha mobiltelefon"
         ],
@@ -25400,7 +25400,7 @@
         "options": [
           "Vad är meningen med livet?",
           "Om ett träd faller i skogen och ingen hör det, låter det då?",
-          "Finns det liv på andra planeter på exakt samma sätt som förut",
+          "Finns det liv på andra planeter någonstans i universum",
           "Varför finns det ont i världen?"
         ],
         "correct": 1,
@@ -25444,7 +25444,7 @@
         "options": [
           "Att man inte kan bevisa det men att alternativet vore ensamt",
           "Att hon har läst det i en bok",
-          "Att Kasper inte verkar ha ett medvetande för säkerhets skull",
+          "Att Kasper inte verkar ha ett medvetande att tala om",
           "Att hon inte gillar Kasper"
         ],
         "correct": 0,
@@ -25456,7 +25456,7 @@
           "Kan man resa i tiden?",
           "Om alla minnen försvann, skulle du fortfarande vara du?",
           "Vad händer efter döden?",
-          "Varför finns universum, för att det hade fungerat förut"
+          "Varför finns universum, och vem kan svara på det"
         ],
         "correct": 1,
         "type": "literal"
@@ -25702,7 +25702,7 @@
         "options": [
           "Att reklam alltid är sann",
           "Att jakten på förbättring kan bli ett krav snarare än ett val",
-          "Att forskning bör stoppas helt, för att slippa problem senare",
+          "Att forskning bör stoppas helt tills alla risker är kända",
           "Att celler kan läsa affischer"
         ],
         "correct": 1
@@ -25825,7 +25825,7 @@
           "Snabbare borttagning av innehåll och tydligare ansvar för plattformar",
           "Förbud mot internet",
           "Fler skolprov",
-          "Gratis mobiltelefoner redan innan något annat hände"
+          "Gratis mobiltelefoner till alla under arton år"
         ],
         "correct": 0
       },
@@ -25858,7 +25858,7 @@
           "Att skydd inte behövs",
           "Att lagar kan både försvara samhället och samtidigt hota friheter",
           "Att val alltid är riggade",
-          "Att politiker aldrig kompromissar utan någon som helst förändring"
+          "Att politiker aldrig kompromissar när friheter står på spel"
         ],
         "correct": 1
       },
@@ -25929,7 +25929,7 @@
         "options": [
           "För att frågan kopplas till identitet och rättvisa, inte bara fakta",
           "För att alla redan är överens",
-          "För att vädret alltid är samma utan att det fick några konsekvenser",
+          "För att vädret alltid är sig likt oavsett vad forskarna säger",
           "För att koldioxid inte finns"
         ],
         "correct": 0
@@ -27060,7 +27060,7 @@
       {
         "q": "Vilken risk nämns med att data delas eller läcker?",
         "options": [
-          "Att priset på telefoner sjunker av en slump",
+          "Att priset på telefoner sjunker snabbt",
           "Att alla får bättre appar",
           "Att internet blir snabbare",
           "Att känslig information kan spridas oönskat"
@@ -27073,7 +27073,7 @@
         "options": [
           "Att alla bör dölja allt",
           "Att integritet handlar om kontroll över sin egen berättelse",
-          "Att internet bör förbjudas, för att det hade fungerat förut",
+          "Att internet bör förbjudas för alla under arton år",
           "Att data aldrig samlas in"
         ],
         "correct": 1,
@@ -27500,7 +27500,7 @@
         "options": [
           "Att drömmar kan spegla oro och även användas för att påverka människor",
           "Att drömmar inte påverkas av samhället alls",
-          "Att drömmar blir svagare ju mer man läser historia för säkerhets skull",
+          "Att drömmar blir svagare ju mer man läser om historia",
           "Att drömmar alltid är identiska över generationer"
         ],
         "correct": 0,
@@ -28212,7 +28212,7 @@
         "q": "Varför kan nyanserade resonemang få mindre plats i sociala medier enligt texten?",
         "options": [
           "För att långa texter inte får plats",
-          "För att alla plattformar är statliga, för att slippa problem senare",
+          "För att alla plattformar ägs och styrs av staten i dag",
           "För att nyanser alltid är förbjudna",
           "För att starka reaktioner ofta belönas och lyfts fram av algoritmer"
         ],
@@ -28345,7 +28345,7 @@
         "options": [
           "Att den är oberoende av historiska data",
           "Att den alltid kan ge ett enda exakt värde",
-          "Att den beskriver verkligheten i alla detaljer oavsett vad andra tyckte",
+          "Att den beskriver verkligheten i alla sina detaljer utan förenkling",
           "Att den är användbar för ett visst syfte och att antagandena är tydliga"
         ],
         "correct": 3,
@@ -28357,7 +28357,7 @@
           "Att jämförelser mellan modeller blir meningslösa",
           "Att modeller blir mer neutrala över tid",
           "Att viktiga fenomen kan osynliggöras om de inte passar in i modellens struktur",
-          "Att osäkerhet kan elimineras genom standardvärden på exakt samma sätt som förut"
+          "Att osäkerhet kan elimineras helt genom att välja bra standardvärden"
         ],
         "correct": 2,
         "type": "inferens"
@@ -28469,7 +28469,7 @@
         "options": [
           "Att cykling kräver fler bilar",
           "Att fler invånare kan ge underlag för service men också öka belastningen om investeringar uteblir",
-          "Att parker bara behövs i ytterområden, för att slippa problem senare",
+          "Att parker bara behövs i ytterområden, eftersom marken där ändå är billig",
           "Att högre hus alltid ger mer skugga"
         ],
         "correct": 1,
@@ -28481,7 +28481,7 @@
           "Enbart hur höga husen är i genomsnitt",
           "Både sociala indikatorer (tillgänglighet, blandning) och miljöindikatorer (grönstruktur, resvanor) över tid",
           "Enbart hur många bostäder som färdigställts",
-          "Enbart invånarnas preferenser före byggstart utan någon som helst förändring"
+          "Enbart invånarnas preferenser insamlade före byggstart genom en enkätundersökning"
         ],
         "correct": 1,
         "type": "inferens"
@@ -28605,7 +28605,7 @@
       {
         "q": "Vilket problem avses med \"kollektiv handlingsproblematik\" i texten?",
         "options": [
-          "Att människor inte kan kombinera flera jobb på exakt samma sätt som förut",
+          "Att människor inte längre kan kombinera flera olika jobb",
           "Att individuellt rationella val kan leda till sämre villkor på systemnivå",
           "Att kollektivtrafik alltid är ineffektiv",
           "Att plattformar inte kan skala upp tekniskt"
@@ -28630,7 +28630,7 @@
           "För att tekniken utvecklas för snabbt för att diskuteras",
           "För att alla arbetstagare föredrar osäkerhet",
           "För att effekterna beror på vilka institutioner och regler som formar incitament och riskfördelning",
-          "För att plattformsarbete är identiskt med traditionellt arbete men bara under vissa förutsättningar"
+          "För att plattformsarbete i praktiken är identiskt med traditionell anställning i alla avseenden"
         ],
         "correct": 2,
         "type": "literal"
@@ -28686,7 +28686,7 @@
         "q": "Texten problematiserar idén att lägga ansvar på den med \"störst kontroll\". Vilket är det starkaste skälet som ges?",
         "options": [
           "Att organisationer saknar processer",
-          "Att kontroll alltid ligger hos den drabbade personen redan innan något annat hände",
+          "Att kontroll alltid ligger hos den person som till sist drabbas av beslutet",
           "Att olika aktörer har olika slags kontroll och att kedjor med underleverantörer gör ansvarslinjen lång",
           "Att kontroll är en entydig och lätt mätbar storhet"
         ],
@@ -28778,7 +28778,7 @@
         "q": "Varför kan en effekt bli statistiskt signifikant utan att vara särskilt viktig i praktiken?",
         "options": [
           "För att små studier alltid är bättre",
-          "För att signifikans betyder att effekten är stor, för att undvika missförstånd",
+          "För att signifikans alltid betyder att effekten också är stor",
           "För att en mycket liten skillnad kan bli signifikant i en väldigt stor studie",
           "För att grafer aldrig visar verkligheten"
         ],
@@ -28838,7 +28838,7 @@
         "q": "Hur kopplas AI-användning till likvärdighet i texten?",
         "options": [
           "Genom att betyg kan sättas automatiskt",
-          "Genom att lärare slipper undervisa om skrivande i onödan men bara om det behövdes",
+          "Genom att lärare slipper undervisa om skrivande och kan lägga tiden på annat",
           "Genom att alla får exakt samma AI-svar",
           "Genom att vissa elever kan få hjälp med struktur och språk så att innehållskunskap kan synas bättre"
         ],
@@ -28850,7 +28850,7 @@
         "options": [
           "Att AI alltid skriver mer personligt än eleven",
           "Att elever slipper skriva egna utkast",
-          "Att verktyget kan visa elevens känslor kring uppgiften utan att det fick några konsekvenser",
+          "Att verktyget kan avläsa elevens känslor kring uppgiften och anpassa svaren efter dem",
           "Att eleven kan jämföra utkast med förslag och upptäcka otydlighet, logikbrister och saknade belägg"
         ],
         "correct": 3,
@@ -28870,7 +28870,7 @@
       {
         "q": "Vilket åtgärdspaket stämmer bäst överens med textens rekommendationer?",
         "options": [
-          "Fri användning utan regler, eftersom ansvar alltid ligger på individen redan innan något annat hände",
+          "Fri användning utan regler, eftersom ansvaret för lärandet alltid ligger hos den enskilda eleven",
           "Öppen redovisning av användning, uppgifter som synliggör processen och undervisning om faktakontroll",
           "Endast AI för grammatik, men inga andra hjälpmedel",
           "Förbud, hemliga kontroller och inga diskussioner om begränsningar"
@@ -28918,7 +28918,7 @@
         "q": "Vad symboliserar mannen vid övergångsstället mest sannolikt i berättelsen?",
         "options": [
           "Hur tvekan och små val kan flytta en till en annan \"cykel\" av händelser",
-          "Att staden är farlig för fotgängare men bara under vissa förutsättningar",
+          "Att staden är farlig för fotgängare vid stora korsningar",
           "Att alla människor är distraherade",
           "Att teknik alltid fungerar perfekt"
         ],
@@ -28931,7 +28931,7 @@
           "Hon kopierar Amirs disposition ordagrant",
           "Hon fokuserar på att motivera val och synliggöra sin tankeväg, inte bara leverera en färdig text",
           "Hon byter ämne för att undvika osäkerhet",
-          "Hon slutar använda källor och skriver bara från minnet, för att undvika missförstånd"
+          "Hon slutar använda källor helt och skriver uppsatsen bara utifrån sitt eget minne"
         ],
         "correct": 1,
         "type": "literal"
@@ -28999,7 +28999,7 @@
         "options": [
           "För att språket alltid lurar läsaren",
           "För att den delas i fel sammanhang, till exempel utan tidsperiod eller med manipulerad skala",
-          "För att primärkällor aldrig går att lita på, för att undvika missförstånd",
+          "För att primärkällor aldrig går att lita på när de har några år på nacken",
           "För att statistik är meningslös"
         ],
         "correct": 1,
@@ -29020,7 +29020,7 @@
         "q": "Hur beskriver texten kopplingen mellan spridning och trovärdighet i digitala miljöer?",
         "options": [
           "Mycket spritt innehåll är alltid mest korrekt",
-          "Spridning säger inget alls om kvaliteten och kan ignoreras, för att slippa problem senare",
+          "Spridning säger inget alls om kvaliteten och kan därför ignoreras helt",
           "Spridning kan påverkas av känslor och tempo, så man bör inte låta det avgöra sanningshalt",
           "Algoritmer tar bort allt känslomässigt innehåll"
         ],
@@ -29068,7 +29068,7 @@
         "options": [
           "Att ge exakta fakta om trafikregler",
           "Att förklara hur motorer fungerar",
-          "Att bevisa att ett transportsätt alltid är bäst, för att undvika missförstånd",
+          "Att bevisa att ett visst transportsätt alltid är bäst i staden",
           "Att göra stadens rytm och skillnader mellan rörelsesätt konkreta för läsaren"
         ],
         "correct": 3,
@@ -29111,7 +29111,7 @@
         "q": "Vad antyder avslutningen om stadens rörelse som \"social\"?",
         "options": [
           "Att infrastruktur inte spelar någon roll",
-          "Att alla platser blir lika nära om man vill redan innan något annat hände",
+          "Att alla platser blir lika nära om man bara vill tillräckligt mycket",
           "Att hur vi tar oss fram påverkar möten, närhet och upplevelsen av avstånd",
           "Att sociala medier styr alla resor"
         ],
@@ -29147,7 +29147,7 @@
         "q": "Vilken övergripande förklaring ger texten till varför studievanor kan vara svåra att förändra?",
         "options": [
           "För att alla har samma inlärningsstil",
-          "För att motivation är medfödd och oföränderlig och ingenting annat",
+          "För att motivation är medfödd och därför inte går att påverka alls",
           "För att hjärnan försöker spara energi och undvika osäkerhet, vilket påverkar val i stunden",
           "För att skolans krav alltid är orealistiska"
         ],
@@ -29157,7 +29157,7 @@
       {
         "q": "Varför kan om-läsning av anteckningar ge en missvisande känsla av kunskap enligt texten?",
         "options": [
-          "För att ord aldrig kan läras in genom läsning men bara under vissa förutsättningar",
+          "För att ord aldrig kan läras in enbart genom att läsa dem tyst",
           "För att anteckningar alltid är fel",
           "För att självtest bara passar vissa ämnen",
           "För att igenkänning kan förväxlas med förmågan att återkalla och använda kunskapen"
@@ -29192,7 +29192,7 @@
         "options": [
           "Hjälpsam planering minskar beslut i stunden, medan fällan ger kontrollkänsla utan att leda till handling",
           "Hjälpsam planering gör pauser onödiga, medan fällan kräver fler pauser",
-          "Hjälpsam planering fungerar bara för extroverta, medan fällan drabbar introverta under hela den perioden",
+          "Hjälpsam planering fungerar bara för vissa personligheter, medan fällan drabbar alla de andra",
           "Hjälpsam planering kräver att man fyller varje minut, medan fällan lämnar luckor"
         ],
         "correct": 0,
@@ -31591,7 +31591,7 @@
         "type": "forfattarens-syfte",
         "q": "Hur beskriver texten kärnan i diskussionen om vem som får använda vad?",
         "options": [
-          "Att allt kulturutbyte bör undvikas för säkerhets skull",
+          "Att allt kulturutbyte mellan grupper bör undvikas",
           "Att frågan i grunden handlar om erkännande och maktförhållanden",
           "Att bara den som fötts in i en kultur får använda dess uttryck",
           "Att diskussionen är ny och saknar historisk motsvarighet"
