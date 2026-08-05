@@ -120,6 +120,21 @@ lib.forEach(t => {
     fel.push(`${id}: texten slutar utan skiljetecken – ...${t.text.trim().slice(-40)}`);
   }
 
+  // Ersättningstecknet U+FFFD betyder att tecken gått förlorade i något
+  // tidigare steg. Det syns som en svart romb mitt i ett ord: "för m<?><?>nga".
+  const strangar = [['titel', t.title], ['texten', t.text]];
+  (t.questions || []).forEach((q, qi) => {
+    strangar.push([`fråga ${qi + 1}`, q.q]);
+    (q.options || []).forEach((o, oi) => strangar.push([`fråga ${qi + 1} alternativ ${'ABCD'[oi]}`, o]));
+  });
+  strangar.forEach(([var_, s]) => {
+    if (typeof s !== 'string') return;
+    const i = s.indexOf('�');
+    if (i !== -1) {
+      fel.push(`${id}: trasigt tecken i ${var_} – ...${s.slice(Math.max(0, i - 25), i + 25)}...`);
+    }
+  });
+
   // Punkter insprängda mitt i en mening lämnar efter sig meningar som består
   // av ett enda ord. Två åk 1-texter var skadade så: "Katten. Maja bor hos.
   // Leo." Utropstecken och frågetecken undantas, eftersom "Plask!" och "Hur?"
