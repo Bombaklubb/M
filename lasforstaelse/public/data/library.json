@@ -6751,7 +6751,7 @@
     "genre": "berättelse",
     "theme": "djur",
     "title": "Maja är hungrig",
-    "text": "Katten. Maja bor hos. Leo. En morgon är hennes matskål tom. Maja mjauar högt och springer till köket. Leo hittar en påse foder i skåpet. Han fyller skålen och Maja spinner. Sedan hoppar hon upp i fönstret och tittar på fåglarna ute.",
+    "text": "Katten Maja bor hos Leo. En morgon är hennes matskål tom. Maja mjauar högt och springer till köket. Leo hittar en påse foder i skåpet. Han fyller skålen och Maja spinner. Sedan hoppar hon upp i fönstret och tittar på fåglarna ute.",
     "questions": [
       {
         "type": "literal",
@@ -7083,7 +7083,7 @@
     "genre": "berättelse",
     "theme": "familj",
     "title": "Söndag i simhallen",
-    "text": "På söndag ska familjen åka till simhallen. Storasyster. Lina packar handdukar. Lillebror. Max tar sina armpuffar. Mamma köper biljetter och pappa håller koll på tiderna. I vattnet tränar. Lina ryggsim. Max plaskar nära kanten. När de åker hem är alla trötta men glada.",
+    "text": "På söndag ska familjen åka till simhallen. Storasyster Lina packar handdukar. Lillebror Max tar sina armpuffar. Mamma köper biljetter och pappa håller koll på tiderna. I vattnet tränar Lina ryggsim. Max plaskar nära kanten. När de åker hem är alla trötta men glada.",
     "questions": [
       {
         "type": "literal",
@@ -18017,12 +18017,12 @@
       },
       {
         "type": "literal",
-        "q": "Vem följer med eleverna när de går ut för att undersöka platsen?",
+        "q": "Vem upptäcker det inhuggna märket på stenen?",
         "options": [
-          "Said",
+          "Rania",
           "Hugo",
-          "Parisa",
-          "Rania"
+          "Mateo",
+          "Parisa"
         ],
         "correct": 0
       },
@@ -26901,7 +26901,7 @@
           "Det fungerade helt utan problem",
           "Det användes endast av kvinnor",
           "Det valde alltid de mest kvalificerade",
-          "Det missgynnande kvinnliga sökande"
+          "Det missgynnade kvinnliga sökande"
         ],
         "correct": 3,
         "type": "literal"

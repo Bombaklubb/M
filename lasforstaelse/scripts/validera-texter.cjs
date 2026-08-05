@@ -114,6 +114,22 @@ lib.forEach(t => {
     varningar.push(`${id}: har word_count på toppnivå – appen läser meta.wordCount`);
   }
 
+  // Punkter insprängda mitt i en mening lämnar efter sig meningar som består
+  // av ett enda ord. Två åk 1-texter var skadade så: "Katten. Maja bor hos.
+  // Leo." Utropstecken och frågetecken undantas, eftersom "Plask!" och "Hur?"
+  // är avsiktliga.
+  const meningar = (t.text || '').split(/(?<=[.!?])\s+/).map(m => m.trim());
+  const enOrdsMeningar = meningar.filter((m, i) => {
+    if (!/^[A-ZÅÄÖ][a-zåäöé]+\.$/.test(m)) return false;
+    // "J.R.R. Tolkien." delas av meningsdelaren i två bitar. Är föregående
+    // mening slut på en ensam versal med punkt är brytningen ett artefakt.
+    const innan = meningar[i - 1] || '';
+    return !/\b[A-ZÅÄÖ]\.$/.test(innan);
+  });
+  if (enOrdsMeningar.length) {
+    varningar.push(`${id}: mening med bara ett ord – ${enOrdsMeningar.join(' ')} (kan vara en felplacerad punkt)`);
+  }
+
   // ── Frågor ────────────────────────────────────────────────────────────────
   const fragor = t.questions || [];
   if (fragor.length !== 6) fel.push(`${id}: ${fragor.length} frågor (ska vara 6)`);
