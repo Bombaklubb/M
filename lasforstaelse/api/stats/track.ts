@@ -27,11 +27,13 @@ interface TrackEvent {
   };
 }
 
-// CORS headers
+// Ingen Access-Control-Allow-Origin: appen ligger på samma domän som
+// endpointen, så anropet är inte korsdomän. Jokertecknet lät tidigare vilken
+// webbplats som helst skriva till statistiken från sina besökares webbläsare.
 function setCorsHeaders(res: VercelResponse) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Vary', 'Origin');
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {

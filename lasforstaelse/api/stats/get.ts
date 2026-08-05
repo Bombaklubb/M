@@ -1,4 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import { createHash, timingSafeEqual } from 'node:crypto';
 import { redis, KEY_PREFIX, getTodayKey, getDateKey } from '../lib/redis';
 
 /**
@@ -17,11 +18,41 @@ interface DailyStats {
   tasks: number;
 }
 
-// CORS headers
+// Ingen Access-Control-Allow-Origin här. Appen och endpointen ligger på samma
+// domän, så webbläsaren behöver ingen CORS-header för att anropet ska gå fram.
+// Tidigare stod det '*', vilket lät vilken webbplats som helst skicka
+// lösenordsgissningar via besökarnas webbläsare.
 function setCorsHeaders(res: VercelResponse) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Vary', 'Origin');
+}
+
+/** Jämförelse som tar lika lång tid oavsett var strängarna börjar skilja sig. */
+function likaHemlighet(a: string, b: string): boolean {
+  const ha = new Uint8Array(createHash('sha256').update(a).digest());
+  const hb = new Uint8Array(createHash('sha256').update(b).digest());
+  return timingSafeEqual(ha, hb);
+}
+
+// Enkel spärr mot lösenordsgissning: fem misslyckade försök per IP och kvart.
+const MAX_FORSOK = 5;
+const SPARR_SEKUNDER = 900;
+
+async function forsokKvar(ip: string): Promise<number> {
+  const nyckel = `${KEY_PREFIX}login_fail:${ip}`;
+  const antal = (await redis.get<number>(nyckel)) || 0;
+  return MAX_FORSOK - antal;
+}
+
+async function raknaMisslyckande(ip: string): Promise<void> {
+  const nyckel = `${KEY_PREFIX}login_fail:${ip}`;
+  const antal = await redis.incr(nyckel);
+  if (antal === 1) await redis.expire(nyckel, SPARR_SEKUNDER);
+}
+
+async function nollstallMisslyckanden(ip: string): Promise<void> {
+  await redis.del(`${KEY_PREFIX}login_fail:${ip}`);
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -38,9 +69,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const { password } = req.body;
 
-  // Verifiera lösenord
-  if (password !== TEACHER_PASSWORD) {
-    return res.status(401).json({ error: 'Unauthorized' });
+  const vidarebefordrad = req.headers['x-forwarded-for'];
+  const ip = (Array.isArray(vidarebefordrad) ? vidarebefordrad[0] : vidarebefordrad || 'okand')
+    .split(',')[0]
+    .trim();
+
+  // Verifiera lösenord, med spärr mot upprepade gissningar
+  try {
+    if ((await forsokKvar(ip)) <= 0) {
+      return res.status(429).json({ error: 'For many attempts' });
+    }
+    if (typeof password !== 'string' || !likaHemlighet(password, TEACHER_PASSWORD)) {
+      await raknaMisslyckande(ip);
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+    await nollstallMisslyckanden(ip);
+  } catch (error) {
+    console.error('Auth check error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 
   try {

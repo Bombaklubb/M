@@ -13,15 +13,23 @@
 // Generera eller hämta anonymt device-ID
 function getAnonymousDeviceId(): string {
   const storageKey = 'lasjakten_anonymous_device_id';
-  let deviceId = localStorage.getItem(storageKey);
 
-  if (!deviceId) {
-    // Generera nytt slumpmässigt UUID (ingen personlig info)
-    deviceId = crypto.randomUUID();
-    localStorage.setItem(storageKey, deviceId);
+  // Anropas bland annat från sidans avslutningshändelse, utanför all annan
+  // felhantering. Statistik får aldrig vara det som kraschar appen, så en
+  // avstängd lagring ger ett tillfälligt id i stället för ett undantag.
+  try {
+    let deviceId = localStorage.getItem(storageKey);
+
+    if (!deviceId) {
+      // Generera nytt slumpmässigt UUID (ingen personlig info)
+      deviceId = crypto.randomUUID();
+      localStorage.setItem(storageKey, deviceId);
+    }
+
+    return deviceId;
+  } catch {
+    return crypto.randomUUID();
   }
-
-  return deviceId;
 }
 
 // Skicka tracking-event till API
