@@ -124,7 +124,23 @@ lib.forEach(t => {
   // av ett enda ord. Två åk 1-texter var skadade så: "Katten. Maja bor hos.
   // Leo." Utropstecken och frågetecken undantas, eftersom "Plask!" och "Hur?"
   // är avsiktliga.
-  const meningar = (t.text || '').split(/(?<=[.!?])\s+/).map(m => m.trim());
+  // Delaren tar hänsyn till avslutande citattecken, så att «"Hur kan jag
+  // hjälpa?" Nästa mening» räknas som två meningar och inte som en.
+  const meningar = (t.text || '').split(/(?<=[.!?]["”]?)\s+/).map(m => m.trim());
+
+  // Meningslängden ska följa årskursen. Fem åk 5-texter hade exakt tio
+  // meningar på exakt trettio ord vardera – nästan dubbelt så långa som
+  // gymnasietexternas – vilket pressat ihop satser utan skiljetecken.
+  // Taket ligger på ungefär 1,6 gånger årskursens riktvärde, så bara verkliga
+  // avvikelser flaggas.
+  const MENINGSTAK = { 1: 12, 2: 14, 3: 17, 4: 19, 5: 21, 6: 22, 7: 22, 8: 23, 9: 24, 10: 26 };
+  const riktiga = meningar.filter(Boolean);
+  if (riktiga.length && MENINGSTAK[t.grade]) {
+    const snitt = (t.text.trim().split(/\s+/).length) / riktiga.length;
+    if (snitt > MENINGSTAK[t.grade]) {
+      varningar.push(`${id}: meningarna är i snitt ${snitt.toFixed(1)} ord, taket för åk ${t.grade} är ${MENINGSTAK[t.grade]}`);
+    }
+  }
   const enOrdsMeningar = meningar.filter((m, i) => {
     if (!/^[A-ZÅÄÖ][a-zåäöé]+\.$/.test(m)) return false;
     // "J.R.R. Tolkien." delas av meningsdelaren i två bitar. Är föregående
