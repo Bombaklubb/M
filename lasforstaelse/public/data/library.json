@@ -414,7 +414,7 @@
     "genre": "faktatext",
     "theme": "historia",
     "title": "Förr och nu: skriva med olika saker",
-    "text": "I dag skriver många med penna på papper. Ibland skriver vi på dator eller surfplatta. Men förr skrev människor på andra sätt.\n\nFör länge sedan kunde man skriva med bläck och fjäder. Bläcket var en vätska som kunde kladda. Man behövde vara försiktig. Senare började fler använda blyertspennor.\n\nDet fanns också små griffeltavlor. Barn kunde skriva på tavlan och sudda bort med en trasa. Då kunde man använda samma tavla många gånger.\n\nNär vi tittar på hur man skrev förr kan vi lära oss något. Vi ser att människor alltid har velat dela ord och tankar. Sättet ändras, men behovet att skriva finns kvar.\n\nOm du vill kan du prova hemma: skriv med penna, skriv på dator, och rita bokstäver med en pinne i sand. Då känner du skillnaden mellan förr och nu.",
+    "text": "I dag skriver många med penna på papper. Ibland skriver vi på dator eller surfplatta. Men förr skrev människor på andra sätt.\n\nFör länge sedan kunde man skriva med bläck och fjäder. Bläcket var en vätska som kunde kladda. Man behövde vara försiktig. Senare började fler använda blyertspennor.\n\nÄnnu längre tillbaka ristade människor tecken i sten och trä. Sådana tecken finns kvar på runstenar än i dag.\n\nDet fanns också små griffeltavlor. Barn kunde skriva på tavlan och sudda bort med en trasa. Då kunde man använda samma tavla många gånger.\n\nNär vi tittar på hur man skrev förr kan vi lära oss något. Vi ser att människor alltid har velat dela ord och tankar. Sättet ändras, men behovet att skriva finns kvar.\n\nOm du vill kan du prova hemma: skriv med penna, skriv på dator, och rita bokstäver med en pinne i sand. Då känner du skillnaden mellan förr och nu.",
     "questions": [
       {
         "type": "literal",
@@ -484,7 +484,7 @@
       }
     ],
     "meta": {
-      "wordCount": 133,
+      "wordCount": 152,
       "fingerprint": "gpt4-ak1-07",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
@@ -1964,7 +1964,7 @@
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Hjulet som rullade",
-    "text": "På fritids byggde Noura och Viktor en bana av klossar. De ville att en liten bil skulle rulla hela vägen utan att stanna. Men bilen fastnade vid en kant.\n\n\"Den hoppar inte över,\" sa Viktor och såg fundersam ut.\n\nNoura tittade noga. \"Kanten är för hög. Vi kan göra en ramp.\"\n\nDe tog en platt kloss och lade den som en sluttning. Noura höll i klossen medan Viktor tryckte fast den med två andra klossar.\n\nDe testade igen. Bilen rullade, upp på rampen och vidare. Den kom hela vägen till slutet och stannade precis vid en bok.\n\n\"Det funkar!\" sa Viktor.\n\nNoura log. \"Vi ändrade en sak och provade igen.\"\n\nDe ritade en pil på ett papper: start och mål. Sedan byggde de en ännu längre bana. Teknik kan vara att bygga, testa och förbättra.",
+    "text": "På fritids byggde Noura och Viktor en bana av klossar. De ville att en liten bil skulle rulla hela vägen utan att stanna. Men bilen fastnade vid en kant.\n\n\"Den hoppar inte över,\" sa Viktor och såg fundersam ut.\n\nNoura tittade noga. \"Kanten är för hög. Vi kan göra en ramp.\"\n\nDe tog en platt kloss och lade den som en sluttning. Noura höll i klossen medan Viktor tryckte fast den med två andra klossar.\n\nDe testade igen. Bilen rullade, upp på rampen och vidare. Den kom hela vägen till slutet och stannade precis vid en bok.\n\n\"Det funkar!\" sa Viktor.\n\nNoura log. \"Vi ändrade en sak och provade igen.\"\n\nDe ritade en pil på ett papper: start och mål. Sedan byggde de en ännu längre bana. Nästa dag kom en kompis och ville prova. Noura visade rampen och förklarade varför den behövdes.\n\nTeknik kan vara att bygga, testa och förbättra.",
     "questions": [
       {
         "type": "literal",
@@ -2034,7 +2034,7 @@
       }
     ],
     "meta": {
-      "wordCount": 135,
+      "wordCount": 151,
       "fingerprint": "gpt4-ak1-10",
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
@@ -7821,7 +7821,7 @@
     "genre": "faktatext",
     "theme": "väder",
     "title": "Vad är snö?",
-    "text": "När det är tillräckligt kallt ute kan det börja snöa. Snö är egentligen vatten som har frusit till iskristaller uppe i molnen. Varje snöflinga ser lite annorlunda ut, men de flesta har sex armar.\n\nNär snöflingorna blir tillräckligt tunga faller de ner mot marken. Om luften är kall hela vägen ner landar de som snö. Om det är varmare nere vid marken kan de smälta och bli regn istället.\n\nSnö kan vara lös och fluffig eller tung och blöt. Lös snö är bra att åka skidor i. Blöt snö är bra att göra snöbollar och snögubbar av.\n\nDjur hanterar snö på olika sätt. Haren byter till vit päls på vintern för att gömma sig. Räven gräver i snön för att hitta möss. Och ekorren sover mycket och lever på nötter som den gömde under hösten.",
+    "text": "När det är tillräckligt kallt ute kan det börja snöa. Snö är egentligen vatten som har frusit till iskristaller uppe i molnen. Varje snöflinga ser lite annorlunda ut, men de flesta har sex armar.\n\nNär snöflingorna blir tillräckligt tunga faller de ner mot marken. Om luften är kall hela vägen ner landar de som snö. Om det är varmare nere vid marken kan de smälta och bli regn istället.\n\nSnö kan vara lös och fluffig eller tung och blöt. Lös snö är bra att åka skidor i. Blöt snö är bra att göra snöbollar och snögubbar av.\n\nDjur hanterar snö på olika sätt. Haren byter till vit päls på vintern för att gömma sig. Räven gräver i snön för att hitta möss. Och ekorren sover mycket och lever på nötter som den gömde under hösten.\n\nSnön gör också nytta. Ett tjockt lager snö håller värmen kvar i marken, så att växter och smådjur klarar kylan bättre.",
     "questions": [
       {
         "type": "literal",
@@ -7892,7 +7892,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 135
+      "wordCount": 156
     }
   },
   {
@@ -9963,7 +9963,7 @@
     "genre": "berättelse",
     "theme": "vetenskap",
     "title": "Äpplet som föll",
-    "text": "En dag sitter Samir i en park och gör sin läxa. Han sitter under ett stort äppelträd. Plötsligt faller ett äpple ner från en gren och landar i gräset bredvid honom. Samir plockar upp äpplet och tittar nyfiket på det. Han undrar varför äpplen alltid faller ner mot marken och inte upp mot himlen. Hans vän Maja, som också är i parken, säger att det beror på något som kallas tyngdkraft. Tyngdkraften drar allt mot jorden. Samir tycker att det låter spännande och bestämmer sig för att fråga sin lärare nästa dag. Innan de går hem delar Samir och Maja på äpplet. De tycker att det smakar friskt och lite syrligt. Samir tänker att ett enkelt äpple kan få människor att ställa stora frågor om hur världen fungerar.",
+    "text": "En dag sitter Samir i en park och gör sin läxa. Han sitter under ett stort äppelträd. Plötsligt faller ett äpple ner från en gren och landar i gräset bredvid honom. Samir plockar upp äpplet och tittar nyfiket på det. Han undrar varför äpplen alltid faller ner mot marken och inte upp mot himlen. Hans vän Maja, som också är i parken, säger att det beror på något som kallas tyngdkraft. Tyngdkraften drar allt mot jorden. Maja berättar också att en engelsk vetenskapsman ska ha tänkt på samma sak när ett äpple föll i hans trädgård för länge sedan. Samir skrattar och säger att han kanske inte är först ändå.\n\nSamir tycker att det låter spännande och bestämmer sig för att fråga sin lärare nästa dag. Innan de går hem delar Samir och Maja på äpplet. De tycker att det smakar friskt och lite syrligt. Samir tänker att ett enkelt äpple kan få människor att ställa stora frågor om hur världen fungerar.",
     "questions": [
       {
         "type": "literal",
@@ -10033,7 +10033,7 @@
       }
     ],
     "meta": {
-      "wordCount": 128,
+      "wordCount": 162,
       "fingerprint": "ak3-tema-003",
       "generatedAt": "2026-03-13T12:58:05.128Z",
       "model": "claude"
@@ -10533,7 +10533,7 @@
   {
     "id": "ak3-tema-010",
     "title": "Matchen i regnet",
-    "text": "Det regnade små droppar när fotbollslaget samlades på planen. Tränaren Elin delade ut västar och sa att de skulle öva passningar. Kim knöt sina skor extra hårt eftersom gräset var halt. Alex, som var ny i laget, såg lite nervös ut och tittade på de andra. \"Vi hjälper varandra,\" sa Elin. Övningen började med att två och två passade bollen fram och tillbaka. Om bollen rullade iväg skulle man hämta den utan att stressa. Efter en stund gjorde de en liten match. Kim råkade halka och tappade bollen, men Alex sprang tillbaka och vann den. Kim ropade \"Tack!\" och Alex log. När matchen var slut samlades laget i en ring. Elin frågade vad som fungerat bra. Flera sa att de pratade mer med varandra och att det gjorde spelet lättare, även i regn.",
+    "text": "Det regnade små droppar när fotbollslaget samlades på planen. Tränaren Elin delade ut västar och sa att de skulle öva passningar. Kim knöt sina skor extra hårt eftersom gräset var halt. Alex, som var ny i laget, såg lite nervös ut och tittade på de andra. \"Vi hjälper varandra,\" sa Elin. Övningen började med att två och två passade bollen fram och tillbaka. Om bollen rullade iväg skulle man hämta den utan att stressa. Efter en stund gjorde de en liten match. Kim råkade halka och tappade bollen, men Alex sprang tillbaka och vann den. Kim ropade \"Tack!\" och Alex log. När matchen var slut samlades laget i en ring. Elin frågade vad som fungerat bra. Flera sa att de pratade mer med varandra och att det gjorde spelet lättare, även i regn.\n\nEfteråt sprang Alex och Kim tillsammans in till omklädningsrummet. Alex verkade inte längre lika nervös som i början av träningen.",
     "grade": 3,
     "category": "Sport",
     "questions": [
@@ -10606,7 +10606,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 133
+      "wordCount": 153
     },
     "genre": "berättelse",
     "theme": "Sport"
@@ -10776,7 +10776,7 @@
   {
     "id": "ak3-tema-013",
     "title": "Den hemliga hyllan på biblioteket",
-    "text": "På skolbiblioteket jobbade bibliotekarien Farah med att ställa böcker i ordning. En dag följde Nova med sin klass dit. Nova är icke-binär och gillar både fakta och sagor. När de gick mellan hyllorna såg Nova en liten skylt: \"Nya böcker\". Där stod en vagn med blandade titlar.\n\nFarah berättade att biblioteket får nya böcker varje månad, men att de först måste märkas och registreras. Nova fick hjälpa till att sätta klisterlappar med streckkoder. Sedan fick Nova välja en bok att låna först.\n\nNova valde en bok om rymden, men tog också en tunn deckare. På vägen ut stämplade Farah lånekortet och sa att om man lämnar tillbaka i tid får andra också chansen. Nova tänkte att biblioteket är som en skattkista: man hittar något nytt om man letar noga.",
+    "text": "På skolbiblioteket jobbade bibliotekarien Farah med att ställa böcker i ordning. En dag följde Nova med sin klass dit. Nova är icke-binär och gillar både fakta och sagor. När de gick mellan hyllorna såg Nova en liten skylt: \"Nya böcker\". Där stod en vagn med blandade titlar.\n\nFarah berättade att biblioteket får nya böcker varje månad, men att de först måste märkas och registreras. Nova fick hjälpa till att sätta klisterlappar med streckkoder. Sedan fick Nova välja en bok att låna först.\n\nFarah visade också var böckerna med stor stil stod. Den som tycker att bokstäverna är svåra att se kan låna samma berättelse i en annan utgåva.\n\nNova valde en bok om rymden, men tog också en tunn deckare. På vägen ut stämplade Farah lånekortet och sa att om man lämnar tillbaka i tid får andra också chansen. Nova tänkte att biblioteket är som en skattkista: man hittar något nytt om man letar noga.",
     "grade": 3,
     "category": "Kultur",
     "questions": [
@@ -10849,7 +10849,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 129
+      "wordCount": 155
     },
     "genre": "berättelse",
     "theme": "Kultur"
@@ -11667,7 +11667,7 @@
   {
     "id": "ak3-tema-024",
     "title": "En dag på chokladfabriken",
-    "text": "På en chokladfabrik arbetar många olika personer. Amir kör en maskin som blandar chokladen tills den blir len. Sofia kontrollerar att förpackningarna inte har några fel. Chen arbetar med att laga maskiner om de går sönder. Fatima planerar hur lastbilarna ska köra ut varorna till affärerna. Alla måste samarbeta för att arbetet ska fungera. I fabriken är det viktigt med rena händer och skyddskläder. Det finns regler för hur man ska arbeta säkert. Maskinerna kan vara både stora och snabba. Därför får nya anställda utbildning innan de börjar. På rasten kan personalen sitta tillsammans och fika. Många tycker att det luktar gott av kakao i lokalerna. Trots det är det hårt arbete att göra choklad varje dag. Utan alla dessa personer skulle ingen choklad nå fram till butikerna.",
+    "text": "På en chokladfabrik arbetar många olika personer. Amir kör en maskin som blandar chokladen tills den blir len. Sofia kontrollerar att förpackningarna inte har några fel. Chen arbetar med att laga maskiner om de går sönder. Fatima planerar hur lastbilarna ska köra ut varorna till affärerna. Alla måste samarbeta för att arbetet ska fungera. I fabriken är det viktigt med rena händer och skyddskläder. Det finns regler för hur man ska arbeta säkert. Maskinerna kan vara både stora och snabba. Därför får nya anställda utbildning innan de börjar. På rasten kan personalen sitta tillsammans och fika. Många tycker att det luktar gott av kakao i lokalerna. Trots det är det hårt arbete att göra choklad varje dag. Under ett arbetspass kan fabriken göra tusentals kakor. Ändå kontrolleras varje låda innan den lastas, eftersom ett fel som slinker igenom kan hamna i en affär långt bort.\n\nUtan alla dessa personer skulle ingen choklad nå fram till butikerna.",
     "grade": 3,
     "category": "Samhälle",
     "questions": [
@@ -11740,7 +11740,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 128
+      "wordCount": 156
     },
     "genre": "faktatext",
     "theme": "Samhälle"
@@ -14188,7 +14188,7 @@
     "genre": "faktatext",
     "theme": "kultur",
     "title": "Vad är sushi?",
-    "text": "Sushi är en maträtt som kommer från Japan. Den består oftast av ris som smaksätts med vinäger. Till riset lägger man olika saker, till exempel rå fisk, räkor, ägg eller grönsaker. Ibland rullas allt in i ett tunt sjögräs som kallas nori.\n\nDet finns många olika sorters sushi. En sort heter nigiri och är en liten risklump med något ovanpå. En annan sort är maki, som är rullar som skärs i bitar. Sushi äts ofta med pinnar, men det går också bra att använda gaffel.\n\nMånga tycker om sushi för att den är fräsch och färgglad. Andra tycker att det känns ovant med rå fisk. I Sverige har sushin blivit vanlig och finns i många städer. Vissa restauranger gör även vegetarisk sushi för den som inte vill äta fisk.",
+    "text": "Sushi är en maträtt som kommer från Japan. Den består oftast av ris som smaksätts med vinäger. Till riset lägger man olika saker, till exempel rå fisk, räkor, ägg eller grönsaker. Ibland rullas allt in i ett tunt sjögräs som kallas nori.\n\nDet finns många olika sorters sushi. En sort heter nigiri och är en liten risklump med något ovanpå. En annan sort är maki, som är rullar som skärs i bitar. Sushi äts ofta med pinnar, men det går också bra att använda gaffel.\n\nMånga tycker om sushi för att den är fräsch och färgglad. Andra tycker att det känns ovant med rå fisk. I Sverige har sushin blivit vanlig och finns i många städer. Vissa restauranger gör även vegetarisk sushi för den som inte vill äta fisk.\n\nSushi började som ett sätt att spara fisk. Man lade fisken i ris som jäste, så att den höll längre. Först långt senare blev riset något man också åt.",
     "questions": [
       {
         "type": "literal",
@@ -14258,7 +14258,7 @@
       }
     ],
     "meta": {
-      "wordCount": 129,
+      "wordCount": 158,
       "fingerprint": "ak4-tema-003",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
@@ -14271,7 +14271,7 @@
     "genre": "faktatext",
     "theme": "kultur",
     "title": "Zara Larsson – en svensk artist",
-    "text": "Zara Larsson är en svensk sångerska som blev känd redan som barn. Hon vann tv-programmet Talang när hon var tio år gammal. Efter det började hon ge ut egen musik. Hennes låtar spelas både i Sverige och i andra länder.\n\nZara sjunger popmusik och har gjort flera kända låtar. Hon har samarbetat med artister från olika delar av världen. Hennes musik handlar ofta om vänskap, kärlek och att tro på sig själv.\n\nFörutom att sjunga är Zara känd för att säga vad hon tycker. Hon pratar öppet om jämställdhet och rättvisa. Många unga ser upp till henne som en förebild.\n\nHon uppträder på stora scener med dansare och ljusshower. Samtidigt arbetar hon hårt bakom kulisserna med att skriva och spela in ny musik. Zara Larsson är i dag en av Sveriges mest kända artister.",
+    "text": "Zara Larsson är en svensk sångerska som blev känd redan som barn. Hon vann tv-programmet Talang när hon var tio år gammal. Efter det började hon ge ut egen musik. Hennes låtar spelas både i Sverige och i andra länder.\n\nZara sjunger popmusik och har gjort flera kända låtar. Hon har samarbetat med artister från olika delar av världen. Hennes musik handlar ofta om vänskap, kärlek och att tro på sig själv.\n\nFörutom att sjunga är Zara känd för att säga vad hon tycker. Hon pratar öppet om jämställdhet och rättvisa. Många unga ser upp till henne som en förebild.\n\nHon har också berättat att det inte alltid var lätt att växa upp med många som tittade på. Att bli känd tidigt betyder att man gör sina misstag inför andra.\n\nHon uppträder på stora scener med dansare och ljusshower. Samtidigt arbetar hon hårt bakom kulisserna med att skriva och spela in ny musik. Zara Larsson är i dag en av Sveriges mest kända artister.",
     "questions": [
       {
         "type": "literal",
@@ -14341,7 +14341,7 @@
       }
     ],
     "meta": {
-      "wordCount": 134,
+      "wordCount": 164,
       "fingerprint": "ak4-tema-004",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
@@ -21892,7 +21892,7 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "Sista varvet",
-    "text": "Zahra hade alltid gillat att springa, men hon hade inte alltid gillat att springa inför andra. På idrottslektionerna brukade hon hålla ett jämnt tempo, inte sticka ut. Men den här veckan hade skolan en löptävling runt elljusspåret.\n\n\"Det är inte en tävling mot andra,\" sa idrottsläraren. \"Det är en utmaning mot dig själv.\"\n\nZahra hade tränat på egen hand med sin kusin Samir, som spelade fotboll och älskade att ge råd.\n\n\"Du måste hitta din rytm,\" sa Samir. \"Inte börja för snabbt. Och när du tror att du inte orkar mer, då har du mer kvar än du tror.\"\n\nPå tävlingsdagen var luften kall och klar. Startskottet gick, och gruppen rörde sig som en stor, ojämn våg. Några rusade iväg. Zahra höll igen. Hon hittade ett tempo där andningen kändes stadig.\n\nEfter första varvet började benen kännas tyngre. Hon ville också gå. Men då kom hon att tänka på Samirs ord. Hon sänkte tempot lite, men hon stannade inte.\n\nVid andra varvet såg hon Maja längre fram. Maja vinkade kort, som om de var i samma lag. Zahra kände att det hjälpte.\n\nNär de kom in på sista varvet hörde hon Samir ropa: \"Zahra! Sista biten!\"\n\nHon lyfte blicken och såg målet. Hon ökade lite. Det var inte en explosiv spurt, mer som att hon slutade hålla tillbaka.\n\nNär hon sprang över mållinjen blev hon nästan förvånad över hur starkt hon ville le. Det var viktigt på ett sätt som var svårt att förklara. Inte för att hon var snabbast, utan för att hon hade mött sin egen tvekan och fortsatt ändå.",
+    "text": "Zahra hade alltid gillat att springa, men hon hade inte alltid gillat att springa inför andra. På idrottslektionerna brukade hon hålla ett jämnt tempo, inte sticka ut. Men den här veckan hade skolan en löptävling runt elljusspåret.\n\n\"Det är inte en tävling mot andra,\" sa idrottsläraren. \"Det är en utmaning mot dig själv.\"\n\nZahra hade tränat på egen hand med sin kusin Samir, som spelade fotboll och älskade att ge råd.\n\n\"Du måste hitta din rytm,\" sa Samir. \"Inte börja för snabbt. Och när du tror att du inte orkar mer, då har du mer kvar än du tror.\"\n\nPå tävlingsdagen var luften kall och klar. Startskottet gick, och gruppen rörde sig som en stor, ojämn våg. Några rusade iväg. Zahra höll igen. Hon hittade ett tempo där andningen kändes stadig.\n\nEfter första varvet började benen kännas tyngre. Hon ville också gå. Men då kom hon att tänka på Samirs ord. Hon sänkte tempot lite, men hon stannade inte.\n\nVid andra varvet såg hon Maja längre fram. Maja vinkade kort, som om de var i samma lag. Zahra kände att det hjälpte.\n\nNär de kom in på sista varvet hörde hon Samir ropa: \"Zahra! Sista biten!\"\n\nHon lyfte blicken och såg målet. Hon ökade lite. Det var inte en explosiv spurt, mer som att hon slutade hålla tillbaka.\n\nNär hon sprang över mållinjen blev hon nästan förvånad över hur starkt hon ville le. Det var viktigt på ett sätt som var svårt att förklara. Inte för att hon var snabbast, utan för att hon hade mött sin egen tvekan och fortsatt ändå.\n\nEfteråt satte hon sig i gräset och fick låna Majas vattenflaska. De pratade om tempot, om hur olika det kändes på första och sista varvet. Zahra insåg att hon aldrig hade pratat med Maja om något annat än skolarbete förut.",
     "questions": [
       {
         "type": "literal",
@@ -21963,7 +21963,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 262
+      "wordCount": 302
     }
   },
   {
@@ -24508,7 +24508,7 @@
   {
     "id": "ak8-tema-004",
     "title": "Självstyre och svåra kompromisser",
-    "text": "I norra Irak finns ett område som ofta kallas irakiska Kurdistan. Där har den kurdiska befolkningen under lång tid strävat efter större självbestämmande. Efter konflikter och politiska förändringar under 1900-talet växte ett regionalt självstyre fram, och i dag finns en regional regering med parlament och egna myndigheter inom flera områden. Samtidigt är regionen formellt en del av Irak, vilket betyder att vissa beslut måste förhandlas med den federala staten i Bagdad.\n\nI praktiken kan självstyre handla om allt från skolans språkval till hur polis och sjukvård organiseras. Men det kan också handla om ekonomi. Regionen har naturresurser, och inkomsterna från till exempel olja kan skapa både möjligheter och konflikter. Om den regionala nivån och centralstaten inte är överens om hur pengar ska fördelas kan löner, investeringar och samhällsservice påverkas. För invånare kan detta kännas konkret: blir det elavbrott? Finns det jobb? Kan unga starta företag?\n\nRelationerna med grannländer spelar också roll. Kurdiska områden ligger nära flera gränser, och politiska förändringar kan göra grannar oroliga för att egna minoriteter ska kräva samma sak. Därför påverkas regionen av diplomati, handel och ibland spänningar. Många kurder i Irak har dessutom band till släktingar i andra länder, vilket gör att händelser på andra sidan en gräns kan kännas personliga.\n\nEn del politiska rörelser har drivit frågan om självständighet, men även bland dem som vill ha ett eget land finns olika uppfattningar om tidpunkt och väg dit. Andra betonar att starka institutioner, rättssäkerhet och fungerande demokratiska processer måste komma först. Texten visar att politik sällan är en enkel knapp: mer självstyre kan ge inflytande, men kräver också kompromisser, stabilitet och ansvar.",
+    "text": "I norra Irak finns ett område som ofta kallas irakiska Kurdistan. Där har den kurdiska befolkningen under lång tid strävat efter större självbestämmande. Efter konflikter och politiska förändringar under 1900-talet växte ett regionalt självstyre fram, och i dag finns en regional regering med parlament och egna myndigheter inom flera områden. Samtidigt är regionen formellt en del av Irak, vilket betyder att vissa beslut måste förhandlas med den federala staten i Bagdad.\n\nI praktiken kan självstyre handla om allt från skolans språkval till hur polis och sjukvård organiseras. Men det kan också handla om ekonomi. Regionen har naturresurser, och inkomsterna från till exempel olja kan skapa både möjligheter och konflikter. Om den regionala nivån och centralstaten inte är överens om hur pengar ska fördelas kan löner, investeringar och samhällsservice påverkas. För invånare kan detta kännas konkret: blir det elavbrott? Finns det jobb? Kan unga starta företag?\n\nRelationerna med grannländer spelar också roll. Kurdiska områden ligger nära flera gränser, och politiska förändringar kan göra grannar oroliga för att egna minoriteter ska kräva samma sak. Därför påverkas regionen av diplomati, handel och ibland spänningar. Många kurder i Irak har dessutom band till släktingar i andra länder, vilket gör att händelser på andra sidan en gräns kan kännas personliga.\n\nEtt återkommande exempel är folkomröstningen 2017, där en stor majoritet i regionen röstade för självständighet. Resultatet erkändes inte av Bagdad och möttes av motstånd från flera grannländer, och området förlorade kort därefter kontrollen över omtvistade områden. Händelsen används i dag som argument av båda sidor.\n\nEn del politiska rörelser har drivit frågan om självständighet, men även bland dem som vill ha ett eget land finns olika uppfattningar om tidpunkt och väg dit. Andra betonar att starka institutioner, rättssäkerhet och fungerande demokratiska processer måste komma först. Texten visar att politik sällan är en enkel knapp: mer självstyre kan ge inflytande, men kräver också kompromisser, stabilitet och ansvar.",
     "grade": 5,
     "category": "Samhälle",
     "questions": [
@@ -24581,7 +24581,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 266
+      "wordCount": 311
     },
     "genre": "faktatext",
     "theme": "Samhälle"
@@ -25393,7 +25393,7 @@
     "genre": "berättelse",
     "theme": "filosofi och existens",
     "title": "Tankeexperimentet",
-    "text": "\"Om ett träd faller i skogen och ingen hör det – låter det då?\" Frågan stod på tavlan när Kasper kom in i klassrummet. Filosofilektionen hade börjat.\n\nLäraren Birgitta bad dem fundera i tystnad en minut. Kasper tänkte att svaret var självklart: ja, förstås låter det. Ljudvågor uppstår oavsett om någon lyssnar. Men sedan tvekade han. Är ljud samma sak som ljudvågor, eller behövs ett öra som uppfattar dem?\n\nElsa räckte upp handen och sa att det beror på vad man menar med ljud. Om ljud är vibrationer i luften – ja, det låter. Om ljud kräver någon som hör – nej. Birgitta nickade och sa att det var poängen: ibland handlar filosofi inte om att hitta rätt svar, utan om att ställa bättre frågor.\n\nSedan gav hon ett annat tankeexperiment: \"Tänk er att ni vaknar imorgon och allt ser likadant ut, men alla andra människor har bytts ut mot identiska kopior som beter sig exakt likadant. Skulle ni märka det?\" Klassen blev tyst.\n\nKasper kände en märklig känsla i magen. Hur vet man egentligen att andra människor har ett inre liv? Man kan inte kliva in i någon annans medvetande. Man måste lita på att deras beteende speglar verkliga känslor.\n\nEfter lektionen gick Kasper bredvid Elsa i korridoren. \"Tror du att jag har ett medvetande?\" frågade han och log snett. Elsa skrattade. \"Jag väljer att tro det. Annars blir tillvaron ganska ensam.\"\n\nPå kvällen satt Kasper länge med en tom sida i skrivhäftet. Han försökte formulera en egen filosofisk fråga. Till slut skrev han: \"Om alla minnen från igår försvann – skulle du fortfarande vara du?\"",
+    "text": "\"Om ett träd faller i skogen och ingen hör det – låter det då?\" Frågan stod på tavlan när Kasper kom in i klassrummet. Filosofilektionen hade börjat.\n\nLäraren Birgitta bad dem fundera i tystnad en minut. Kasper tänkte att svaret var självklart: ja, förstås låter det. Ljudvågor uppstår oavsett om någon lyssnar. Men sedan tvekade han. Är ljud samma sak som ljudvågor, eller behövs ett öra som uppfattar dem?\n\nElsa räckte upp handen och sa att det beror på vad man menar med ljud. Om ljud är vibrationer i luften – ja, det låter. Om ljud kräver någon som hör – nej. Birgitta nickade och sa att det var poängen: ibland handlar filosofi inte om att hitta rätt svar, utan om att ställa bättre frågor.\n\nSedan gav hon ett annat tankeexperiment: \"Tänk er att ni vaknar imorgon och allt ser likadant ut, men alla andra människor har bytts ut mot identiska kopior som beter sig exakt likadant. Skulle ni märka det?\" Klassen blev tyst.\n\nKasper kände en märklig känsla i magen. Hur vet man egentligen att andra människor har ett inre liv? Man kan inte kliva in i någon annans medvetande. Man måste lita på att deras beteende speglar verkliga känslor.\n\nEfter lektionen gick Kasper bredvid Elsa i korridoren. \"Tror du att jag har ett medvetande?\" frågade han och log snett. Elsa skrattade. \"Jag väljer att tro det. Annars blir tillvaron ganska ensam.\"\n\nPå kvällen satt Kasper länge med en tom sida i skrivhäftet. Han försökte formulera en egen filosofisk fråga. Till slut skrev han: \"Om alla minnen från igår försvann – skulle du fortfarande vara du?\"\n\nHan visste inte om frågan var djup eller bara krånglig. Kanske var det skillnaden mellan filosofi och ordlekar: en fråga som ändrar hur man ser på något, i stället för en som bara låter svår. Han lät sidan ligga uppslagen och släckte lampan.",
     "questions": [
       {
         "q": "Vad var frågan som stod på tavlan?",
@@ -25464,7 +25464,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 267
+      "wordCount": 310
     }
   },
   {
@@ -25805,7 +25805,7 @@
     "genre": "berättelse",
     "theme": "politik",
     "title": "Tillit i en klippt värld",
-    "text": "När riksdagen debatterade den nya lagen om desinformation hade jag redan sett klippen spridas i min klasschatt. Ett påhittat tal med en politikers röst, ett manipulerat foto från en demonstration, och en \"nyhetsartikel\" som i själva verket var en annons för ett kosttillskott. Allt kändes samtidigt löjligt och farligt, som ett skämt som glider över i hot. På samhällskunskapen pratade vår lärare om att lagen skulle kräva snabbare borttagning av innehåll och tydligare ansvar för plattformar. \"Men vem avgör vad som är falskt?\" frågade Leo. \"Staten?\" Läraren svarade att demokratier alltid balanserar mellan skydd och övergrepp: skydd mot manipulation, men också skydd mot maktens vilja att styra berättelsen. Efter lektionen gick jag hem och testade ett verktyg som kan skapa \"deepfakes\". Det tog mig tio minuter att få fram en video där jag sa något jag aldrig sagt. Jag kände en märklig stolthet, följd av en snabb skam. Om jag kan göra det, vad kan då någon med tid, pengar och hat göra? Senare samma kväll ringde min morfar. Han hade fått ett mejl som påstod att banken fryst hans konto. Jag hjälpte honom att se att avsändaren var falsk. \"Man måste väl kunna lita på något\", sa han tyst. Jag tänkte att politik ibland handlar om lagparagrafer, men oftare om tillit. När tilliten spricker letar människor efter enkla svar, och de svaren kan bli en ny sorts desinformation: att allt är riggat, att ingen går att tro på. Då är frågan inte bara hur vi stoppar lögner, utan hur vi tränar oss att stå ut med osäkerhet utan att ge upp sanningen.",
+    "text": "När riksdagen debatterade den nya lagen om desinformation hade jag redan sett klippen spridas i min klasschatt. Ett påhittat tal med en politikers röst, ett manipulerat foto från en demonstration, och en \"nyhetsartikel\" som i själva verket var en annons för ett kosttillskott. Allt kändes samtidigt löjligt och farligt, som ett skämt som glider över i hot. På samhällskunskapen pratade vår lärare om att lagen skulle kräva snabbare borttagning av innehåll och tydligare ansvar för plattformar. \"Men vem avgör vad som är falskt?\" frågade Leo. \"Staten?\" Läraren svarade att demokratier alltid balanserar mellan skydd och övergrepp: skydd mot manipulation, men också skydd mot maktens vilja att styra berättelsen. Efter lektionen gick jag hem och testade ett verktyg som kan skapa \"deepfakes\". Det tog mig tio minuter att få fram en video där jag sa något jag aldrig sagt. Jag kände en märklig stolthet, följd av en snabb skam. Om jag kan göra det, vad kan då någon med tid, pengar och hat göra? Senare samma kväll ringde min morfar. Han hade fått ett mejl som påstod att banken fryst hans konto. Jag hjälpte honom att se att avsändaren var falsk. \"Man måste väl kunna lita på något\", sa han tyst. Jag tänkte att politik ibland handlar om lagparagrafer, men oftare om tillit. När tilliten spricker letar människor efter enkla svar, och de svaren kan bli en ny sorts desinformation: att allt är riggat, att ingen går att tro på. Då är frågan inte bara hur vi stoppar lögner, utan hur vi tränar oss att stå ut med osäkerhet utan att ge upp sanningen.\n\nNästa dag läste vi att den som sprider en falsk bild sällan behöver övertyga någon på riktigt. Det räcker att så tvivel, för då blir även äkta bilder ifrågasatta. En journalist kallade det för lögnarens fördel: när allt kan vara påhittat kan den som blir avslöjad påstå att beviset är förfalskat.",
     "questions": [
       {
         "type": "literal",
@@ -25875,7 +25875,7 @@
       }
     ],
     "meta": {
-      "wordCount": 263,
+      "wordCount": 314,
       "fingerprint": "gpt9-004",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
@@ -25888,7 +25888,7 @@
     "genre": "faktatext",
     "theme": "globala utmaningar",
     "title": "Ton och värdighet",
-    "text": "På kartan över världen ser klimatkrisen ut som färgade fält och pilar, men i min stad visar den sig först som små förskjutningar: en vinter som inte riktigt blir vinter, en sjöis som bär kortare tid, en allergisäsong som dröjer sig kvar. Det är lätt att vänja sig vid förändringen när den kommer i långsamma steg, som en låt man hör så ofta att man glömmer hur den började. I en rapport vi läste i skolan stod det att utsläpp inte bara är siffror, utan berättelser om vilka liv vi prioriterar. När politiker talar om \"omställning\" låter det som ett tekniskt byte av energikälla, men för många är det en fråga om identitet: bilen som frihet, flygresan som belöning, köttet som tradition. Därför blir diskussionen så hätsk. Den handlar inte enbart om koldioxid, utan om vem som tvingas ändra sig och vem som får fortsätta som vanligt. Jag intervjuade min granne som arbetar på ett sågverk. Han var orolig för jobben, men också trött på att bli kallad \"klimatförnekare\" när han egentligen bara ville förstå hur han skulle betala hyran om fabriken stänger. \"Ni pratar om framtiden\", sa han, \"men jag måste klara nästa månad.\" Det slog mig att globala utmaningar alltid landar i lokala kroppar. Om lösningar upplevs som straff skapar de motstånd, även när målet är rätt. Kanske behöver vi en politik som inte bara räknar ton, utan även räknar värdighet: att omställning kan vara något man gör tillsammans, inte något som görs med en. Annars riskerar vi att förlora tid – och tid är det enda klimatet inte kan förhandla om.",
+    "text": "På kartan över världen ser klimatkrisen ut som färgade fält och pilar, men i min stad visar den sig först som små förskjutningar: en vinter som inte riktigt blir vinter, en sjöis som bär kortare tid, en allergisäsong som dröjer sig kvar. Det är lätt att vänja sig vid förändringen när den kommer i långsamma steg, som en låt man hör så ofta att man glömmer hur den började. I en rapport vi läste i skolan stod det att utsläpp inte bara är siffror, utan berättelser om vilka liv vi prioriterar. När politiker talar om \"omställning\" låter det som ett tekniskt byte av energikälla, men för många är det en fråga om identitet: bilen som frihet, flygresan som belöning, köttet som tradition. Därför blir diskussionen så hätsk. Den handlar inte enbart om koldioxid, utan om vem som tvingas ändra sig och vem som får fortsätta som vanligt. Jag intervjuade min granne som arbetar på ett sågverk. Han var orolig för jobben, men också trött på att bli kallad \"klimatförnekare\" när han egentligen bara ville förstå hur han skulle betala hyran om fabriken stänger. \"Ni pratar om framtiden\", sa han, \"men jag måste klara nästa månad.\" Jag tänkte på att grannen och jag ville samma sak: att veta hur nästa år ser ut. Skillnaden var vilken sorts osäkerhet vi bar på. Min handlade om hur världen ska se ut när jag är vuxen, hans om vilken månad beskedet kommer.\n\nDet slog mig att globala utmaningar alltid landar i lokala kroppar. Om lösningar upplevs som straff skapar de motstånd, även när målet är rätt. Kanske behöver vi en politik som inte bara räknar ton, utan även räknar värdighet: att omställning kan vara något man gör tillsammans, inte något som görs med en. Annars riskerar vi att förlora tid – och tid är det enda klimatet inte kan förhandla om.",
     "questions": [
       {
         "type": "literal",
@@ -25958,7 +25958,7 @@
       }
     ],
     "meta": {
-      "wordCount": 264,
+      "wordCount": 307,
       "fingerprint": "gpt9-005",
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
