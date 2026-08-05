@@ -22,10 +22,23 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleWordClick = (word: string, event: React.MouseEvent) => {
+  // Escape stänger förklaringen. Utan den kan den som navigerar med tangentbord
+  // bara bli av med rutan genom att klicka någon annanstans med musen.
+  useEffect(() => {
+    if (!activeWord) return;
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActiveWord(null);
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [activeWord]);
+
+  // Tar emot elementet i stället för händelsen, så att både mus och tangentbord
+  // kan använda samma väg (event.target pekar fel vid tangentbordshändelser).
+  const toggleWord = (word: string, element: HTMLElement) => {
     if (!hasExplanation(word)) return;
 
-    const rect = (event.target as HTMLElement).getBoundingClientRect();
+    const rect = element.getBoundingClientRect();
     const containerRect = containerRef.current?.getBoundingClientRect();
 
     if (containerRect) {
@@ -35,7 +48,9 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
       });
     }
 
-    setActiveWord(activeWord === word ? null : word);
+    setActiveWord((nuvarande) =>
+      nuvarande?.toLowerCase() === word.toLowerCase() ? null : word
+    );
   };
 
   // Dela upp text i stycken och ord
@@ -66,8 +81,18 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
               {before}
               {hasDef ? (
                 <span
-                  onClick={(e) => handleWordClick(word, e)}
-                  className={`cursor-help border-b-2 border-dotted transition-colors ${
+                  role="button"
+                  tabIndex={0}
+                  aria-expanded={isActive}
+                  aria-label={`Förklara ordet ${word}`}
+                  onClick={(e) => toggleWord(word, e.currentTarget)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      toggleWord(word, e.currentTarget);
+                    }
+                  }}
+                  className={`cursor-help border-b-2 border-dotted transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1 rounded-sm ${
                     isActive
                       ? 'border-indigo-500 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300'
                       : 'border-emerald-500 dark:border-slate-300 hover:border-indigo-500 hover:bg-emerald-50 dark:hover:bg-indigo-900/30'
@@ -95,6 +120,7 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
       {/* Tooltip */}
       {activeWord && wordDef && tooltipPosition && (
         <div
+          role="status"
           className="absolute z-50 max-w-sm p-4 bg-slate-800 dark:bg-slate-700 text-white text-sm rounded-xl shadow-xl transform -translate-x-1/2 -translate-y-full -mt-2 animate-in fade-in zoom-in-95 duration-200"
           style={{
             left: tooltipPosition.x,
@@ -115,7 +141,7 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
       {/* Info om klickbara ord */}
       <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2">
         <span className="inline-block w-6 border-b-2 border-dotted border-emerald-500 dark:border-slate-300"></span>
-        <span>Klicka på understrukna ord för förklaring</span>
+        <span>Klicka på understrukna ord för förklaring, eller välj dem med tabb och enter</span>
       </div>
     </div>
   );
