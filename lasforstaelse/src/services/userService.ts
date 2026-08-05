@@ -115,7 +115,11 @@ export function saveUser(user: User): void {
  * Logga ut (radera lokal användare)
  */
 export function logoutUser(): void {
-  localStorage.removeItem(STORAGE_KEY);
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch (error) {
+    console.error('Kunde inte logga ut:', error);
+  }
 }
 
 /**

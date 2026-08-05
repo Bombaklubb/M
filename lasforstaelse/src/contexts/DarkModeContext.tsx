@@ -9,12 +9,24 @@ const DarkModeContext = createContext<DarkModeContextType | undefined>(undefined
 
 export const DarkModeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
-    const saved = localStorage.getItem('darkMode');
-    return saved ? JSON.parse(saved) : false;
+    // Körs under första renderingen av hela appen. Kastar localStorage här –
+    // avstängd lagring, eller ett trasigt sparat värde – får eleven en vit
+    // sida i stället för appen. Alla andra lagringsläsningar i koden är
+    // skyddade på samma sätt.
+    try {
+      const saved = localStorage.getItem('darkMode');
+      return saved ? JSON.parse(saved) === true : false;
+    } catch {
+      return false;
+    }
   });
 
   useEffect(() => {
-    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    try {
+      localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    } catch (error) {
+      console.error('Kunde inte spara mörkt läge:', error);
+    }
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else {
