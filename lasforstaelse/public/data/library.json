@@ -3277,7 +3277,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten i trädgården",
-    "text": "Ella går ut i trädgården på morgonen. Gräset är vått efter nattens regn. Plötsligt ser hon en liten katt. Katten sitter under ett äppelträd och tittar på henne. Ella hämtar lite vatten till katten. Sedan springer katten vidare.",
+    "text": "Ella går ut i trädgården på morgonen. Gräset är vått efter nattens regn. Plötsligt ser hon en liten katt. Katten sitter under ett äppelträd och tittar på henne. Ella hämtar lite vatten till katten. Sedan springer katten vidare.\n\nElla tittar efter den en stund. Sedan går hon in och äter frukost.",
     "questions": [
       {
         "type": "literal",
@@ -3347,7 +3347,7 @@
       }
     ],
     "meta": {
-      "wordCount": 38,
+      "wordCount": 51,
       "fingerprint": "tema-ak1-tema-016",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -7901,7 +7901,7 @@
     "genre": "berättelse",
     "theme": "fantasi",
     "title": "Kartan i boken",
-    "text": "Leo hittade en gammal bok i bokhyllan hemma. Inuti pärmen satt en liten karta. Det stod \"Skatten under stora stenen\" med blyerts.\n\n\"Titta!\" sa Leo till sin storasyster Meja. \"Det är en skattkarta!\"\n\nMeja tittade noga. \"Det ser ut som vår trädgård. Ser du? Där är trädet och där är gången.\"\n\nDe sprang ut med kartan. De följde den förbi buskarna, runt trädet och fram till en stor sten vid staketet.\n\n\"Gräv!\" sa Leo.\n\nMeja hittade en spade. De grävde och grävde. Plötsligt hörde de ett klonk. I jorden låg en gammal plåtburk. Inuti fanns tre stenar, en pärla av glas och en lapp. På lappen stod det: \"Till den som hittar skatten. Från Maja, 2014.\"\n\n\"Vem är Maja?\" frågade Leo.\n\n\"Kanske någon som bodde här förut,\" sa Meja.\n\nDe lade tillbaka burken och ritade en ny karta. Nu var det deras tur att gömma en skatt.",
+    "text": "Leo hittade en gammal bok i bokhyllan hemma. Inuti pärmen satt en liten karta. Det stod \"Skatten under stora stenen\" med blyerts.\n\n\"Titta!\" sa Leo till sin storasyster Meja. \"Det är en skattkarta!\"\n\nMeja tittade noga. \"Det ser ut som vår trädgård. Ser du? Där är trädet och där är gången.\"\n\nDe sprang ut med kartan. De följde den förbi buskarna, runt trädet och fram till en stor sten vid staketet.\n\n\"Gräv!\" sa Leo.\n\nMeja hittade en spade. De grävde och grävde. Plötsligt hörde de ett klonk. I jorden låg en gammal plåtburk. Inuti fanns tre stenar, en pärla av glas och en lapp. På lappen stod det: \"Till den som hittar skatten. Från Maja, 2014.\"\n\n\"Vem är Maja?\" frågade Leo.\n\n\"Kanske någon som bodde här förut,\" sa Meja.\n\nDe la ner en teckning i burken. Sedan ritade de ett kryss där stenen låg.\n\nDe lade tillbaka burken och ritade en ny karta. Nu var det deras tur att gömma en skatt.",
     "questions": [
       {
         "type": "literal",
@@ -7972,7 +7972,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 147
+      "wordCount": 162
     }
   },
   {
@@ -9880,7 +9880,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Besök i äppelodlingen",
-    "text": "En klass i årskurs tre åker på utflykt till en stor äppelodling. Odlingen ligger utanför en liten stad och där växer hundratals träd i långa rader. Guiden som möter eleverna heter Noor. Hen berättar hur man planterar ett äppelträd och hur lång tid det tar innan trädet börjar ge frukt. Eleverna får också lära sig att bin är viktiga eftersom de hjälper blommorna att bli till äpplen. Utan bin skulle skörden bli mycket mindre. Klassen får gå mellan träden och titta noga på frukterna. Vissa äpplen är fortfarande små medan andra nästan är färdiga att plocka. Till slut får alla elever plocka varsitt äpple och smaka. Många tycker att smaken är både söt och lite syrlig. Noor berättar att odlare måste arbeta hela året med sina träd. De beskär grenar, vattnar jorden och skyddar frukten mot skadedjur.",
+    "text": "En klass i årskurs tre åker på utflykt till en stor äppelodling. Odlingen ligger utanför en liten stad och där växer hundratals träd i långa rader. Guiden som möter eleverna heter Noor. Hen berättar hur man planterar ett äppelträd och hur lång tid det tar innan trädet börjar ge frukt. Eleverna får också lära sig att bin är viktiga eftersom de hjälper blommorna att bli till äpplen. Utan bin skulle skörden bli mycket mindre. Klassen får gå mellan träden och titta noga på frukterna. Vissa äpplen är fortfarande små medan andra nästan är färdiga att plocka. Till slut får alla elever plocka varsitt äpple och smaka. Många tycker att smaken är både söt och lite syrlig. Noor berättar att odlare måste arbeta hela året med sina träd. De beskär grenar, vattnar jorden och skyddar frukten mot skadedjur.\n\nPå bussen hem pratade eleverna om hur många äpplen ett enda träd kan ge. Guiden hade sagt att ett stort träd kan ge flera hundra frukter.",
     "questions": [
       {
         "type": "literal",
@@ -9950,7 +9950,7 @@
       }
     ],
     "meta": {
-      "wordCount": 137,
+      "wordCount": 163,
       "fingerprint": "ak3-tema-002",
       "generatedAt": "2026-03-13T12:58:05.128Z",
       "model": "claude"
@@ -10290,7 +10290,7 @@
   {
     "id": "ak3-tema-007",
     "title": "Spår i snön",
-    "text": "Det hade snöat hela natten, och på morgonen var gården vit och tyst. Samir tog på sig sina varma stövlar och gick ut med sin morfar, Ingrid. Morfar Ingrid gick lite långsamt och använde en käpp, men de hann ändå runt parken. Plötsligt pekade Samir på små spår som gick i en krokig linje. \"Vilket djur kan det vara?\" undrade han. Morfar böjde sig ner och mätte med handen. Spåren var små och låg nära varandra. De följde spåren till en buske, och där låg några frön och ett litet gnagmärke på en kotte. Morfar sa att det kunde vara en mus eller en liten sork. Samir fick en idé: han skulle rita av spåren i sitt anteckningsblock och skriva vad de kunde betyda. När de kom hem drack de varm choklad och tittade i en djurbok.",
+    "text": "Det hade snöat hela natten, och på morgonen var gården vit och tyst. Samir tog på sig sina varma stövlar och gick ut med sin morfar, Ingrid. Morfar Ingrid gick lite långsamt och använde en käpp, men de hann ändå runt parken. Plötsligt pekade Samir på små spår som gick i en krokig linje. \"Vilket djur kan det vara?\" undrade han. Morfar böjde sig ner och mätte med handen. Spåren var små och låg nära varandra. De följde spåren till en buske, och där låg några frön och ett litet gnagmärke på en kotte. Morfar sa att det kunde vara en mus eller en liten sork. Samir fick en idé: han skulle rita av spåren i sitt anteckningsblock och skriva vad de kunde betyda. När de kom hem drack de varm choklad och tittade i en djurbok.\n\nI boken hittade de en bild på sorkspår. De såg nästan likadana ut som spåren i snön, men Samir ville gå tillbaka nästa dag och titta igen.",
     "grade": 3,
     "category": "Natur & Miljö",
     "questions": [
@@ -10363,7 +10363,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 137
+      "wordCount": 164
     },
     "genre": "berättelse",
     "theme": "Natur & Miljö"
@@ -10371,7 +10371,7 @@
   {
     "id": "ak3-tema-008",
     "title": "Bibliotekets hemliga hylla",
-    "text": "På onsdagen följde klassen med sin lärare till biblioteket. Där fanns höga hyllor och mjuka stolar. Nova gillade att gå långsamt mellan böckerna och läsa på ryggarna. Hon letade efter något spännande, men många böcker såg likadana ut. Då märkte hon en liten skylt: \"Rekommenderas.\" Skylten satt på en hylla längst in, nästan bakom en gardin. Nova drog försiktigt undan gardinen och såg böcker med färgglada omslag. En bibliotekarie som hette Malik kom fram och log. Han berättade att hyllan var till för den som ville prova något nytt, som deckare, fakta om rymden eller berättelser från olika länder. Nova valde en bok om en flicka som löste mysterier i sin stad. När hon skulle låna den fick hon ett bokmärke och en lapp där det stod att hon kunde skriva en egen recension nästa gång.",
+    "text": "På onsdagen följde klassen med sin lärare till biblioteket. Där fanns höga hyllor och mjuka stolar. Nova gillade att gå långsamt mellan böckerna och läsa på ryggarna. Hon letade efter något spännande, men många böcker såg likadana ut. Då märkte hon en liten skylt: \"Rekommenderas.\" Skylten satt på en hylla längst in, nästan bakom en gardin. Nova drog försiktigt undan gardinen och såg böcker med färgglada omslag. En bibliotekarie som hette Malik kom fram och log. Han berättade att hyllan var till för den som ville prova något nytt, som deckare, fakta om rymden eller berättelser från olika länder. Nova valde en bok om en flicka som löste mysterier i sin stad. När hon skulle låna den fick hon ett bokmärke och en lapp där det stod att hon kunde skriva en egen recension nästa gång.\n\nNova bläddrade lite i boken redan på vägen tillbaka till klassrummet. Hon bestämde sig för att skriva recensionen, även om hon inte visste hur man gör.",
     "grade": 3,
     "category": "Kultur",
     "questions": [
@@ -10444,7 +10444,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 136
+      "wordCount": 162
     },
     "genre": "berättelse",
     "theme": "Kultur"
@@ -10452,7 +10452,7 @@
   {
     "id": "ak3-tema-009",
     "title": "Vattenexperimentet",
-    "text": "I klassrummet ställde läraren fram tre glas med vatten. På bordet låg också salt, socker och små skedar. Klassen skulle undersöka vad som hände när man blandade olika saker i vatten. Jia, som ibland använder hörselkåpor när det är stökigt, satte sig längst fram för att se tydligt. Först fick alla hälla en sked socker i ett glas och röra om. Sockret försvann nästan direkt. Sedan gjorde de samma sak med salt. Det löstes också upp, men smaken blev annorlunda. I det tredje glaset la de i både salt och socker. Läraren frågade varför man inte alltid ser det som är i vattnet. Eleverna pratade om att vissa saker blir så små att de sprids överallt i glaset. Till sist fick de skriva i sina häften vad de gjort och vad de märkt, och jämföra med sin bänkkompis.",
+    "text": "I klassrummet ställde läraren fram tre glas med vatten. På bordet låg också salt, socker och små skedar. Klassen skulle undersöka vad som hände när man blandade olika saker i vatten. Jia, som ibland använder hörselkåpor när det är stökigt, satte sig längst fram för att se tydligt. Först fick alla hälla en sked socker i ett glas och röra om. Sockret försvann nästan direkt. Sedan gjorde de samma sak med salt. Det löstes också upp, men smaken blev annorlunda. I det tredje glaset la de i både salt och socker. Läraren frågade varför man inte alltid ser det som är i vattnet. Eleverna pratade om att vissa saker blir så små att de sprids överallt i glaset. Till sist fick de skriva i sina häften vad de gjort och vad de märkt, och jämföra med sin bänkkompis.\n\nJia skrev att sockret försvann fortare än saltet. Läraren sa att det var en bra iakttagelse, och att man kan testa det med varmare vatten.",
     "grade": 3,
     "category": "Vetenskap",
     "questions": [
@@ -10525,7 +10525,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 138
+      "wordCount": 163
     },
     "genre": "berättelse",
     "theme": "Vetenskap"
@@ -10857,7 +10857,7 @@
   {
     "id": "ak3-tema-014",
     "title": "Kartan över den närmaste sjön",
-    "text": "Klassen skulle lära sig mer om området runt skolan. Läraren Jonas tog med en stor karta och la den på golvet. \"Vi ska gå till sjön,\" sa han, \"men vi ska också öva på att hitta rätt väg.\"\n\nSana pekade på en blå fläck och frågade om det var sjön. Jonas nickade och visade tecknet för bro. De räknade två broar på kartan och bestämde att de skulle gå över den som låg närmast lekparken.\n\nUte på promenaden gick de lugnt i led. Vid första korsningen jämförde de skylten med kartan. Det stämde: de var på rätt gata. När de kom fram såg de att sjön var mindre än Sana hade trott, men den glittrade i solen. Jonas sa att kartor inte visar allt, men de hjälper oss att planera och känna oss säkra när vi går någonstans.",
+    "text": "Klassen skulle lära sig mer om området runt skolan. Läraren Jonas tog med en stor karta och la den på golvet. \"Vi ska gå till sjön,\" sa han, \"men vi ska också öva på att hitta rätt väg.\"\n\nSana pekade på en blå fläck och frågade om det var sjön. Jonas nickade och visade tecknet för bro. De räknade två broar på kartan och bestämde att de skulle gå över den som låg närmast lekparken.\n\nUte på promenaden gick de lugnt i led. Vid första korsningen jämförde de skylten med kartan. Det stämde: de var på rätt gata. När de kom fram såg de att sjön var mindre än Sana hade trott, men den glittrade i solen. Jonas sa att kartor inte visar allt, men de hjälper oss att planera och känna oss säkra när vi går någonstans.\n\nPå vägen tillbaka fick Sana hålla i kartan. Hon vek ut den vid varje korsning, och till slut behövde hon inte fråga Jonas om vägen.",
     "grade": 3,
     "category": "Geografi",
     "questions": [
@@ -10930,7 +10930,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1544767247-d1f0a0cbf8a7?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 138
+      "wordCount": 163
     },
     "genre": "berättelse",
     "theme": "Geografi"
@@ -10938,7 +10938,7 @@
   {
     "id": "ak3-tema-015",
     "title": "När pulsen slog snabbare",
-    "text": "På idrotten skulle eleverna prova ett nytt upplägg. Läraren Kim satte upp fyra stationer: hoppa rep, kasta boll, balans på en linje och vila med djupa andetag. \"Vi ska känna efter i kroppen,\" sa Kim. \"Det är så man lär sig vad puls betyder.\"\n\nLeo började med hopprep och blev snabbt varm. Han satte två fingrar på handleden, precis som Kim visade. Där kände han små dunk. \"Det är pulsen,\" sa Kim. \"När du rör dig jobbar hjärtat snabbare.\"\n\nVid balansstationen gick Amina långsamt och fokuserade. Hon blev inte lika andfådd som vid hopprepet. På vilostationen satte sig alla ner och andades lugnt i tio andetag. Då kände Leo hur dunken blev långsammare.\n\nEfter lektionen skrev de i en liten logg vad som gjorde pulsen hög och vad som fick den att sjunka. Leo märkte att pauser kan vara lika viktiga som att springa.",
+    "text": "På idrotten skulle eleverna prova ett nytt upplägg. Läraren Kim satte upp fyra stationer: hoppa rep, kasta boll, balans på en linje och vila med djupa andetag. \"Vi ska känna efter i kroppen,\" sa Kim. \"Det är så man lär sig vad puls betyder.\"\n\nLeo började med hopprep och blev snabbt varm. Han satte två fingrar på handleden, precis som Kim visade. Där kände han små dunk. \"Det är pulsen,\" sa Kim. \"När du rör dig jobbar hjärtat snabbare.\"\n\nVid balansstationen gick Amina långsamt och fokuserade. Hon blev inte lika andfådd som vid hopprepet. På vilostationen satte sig alla ner och andades lugnt i tio andetag. Då kände Leo hur dunken blev långsammare.\n\nEfter lektionen skrev de i en liten logg vad som gjorde pulsen hög och vad som fick den att sjunka. Leo märkte att pauser kan vara lika viktiga som att springa.\n\nKim sa att alla har olika puls och att det inte är en tävling. Det viktiga är att märka förändringen.",
     "grade": 3,
     "category": "Hälsa",
     "questions": [
@@ -11011,7 +11011,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 144
+      "wordCount": 164
     },
     "genre": "berättelse",
     "theme": "Hälsa"
@@ -11100,7 +11100,7 @@
   {
     "id": "ak3-tema-017",
     "title": "Vårshowen i trean",
-    "text": "I trean ska klassen göra en liten vårshow. Läraren Jonas frågar vilken musik de vill ha till avslutningen. Flera ropar \"Dolly Style!\" eftersom låtarna är lätta att sjunga med i. Klassen lyssnar på en låt och räknar takten: ett, två, tre, fyra. Sedan delar Jonas ut färgat papper. Uppgiften är att skapa en scenbakgrund som passar musiken. Nora ritar stjärnor och hjärtan. Leo målar en jättestor klubba. Sam bygger en regnbåge av papp och tejp. De pratar om att Dolly Style ofta använder samma tema i kläder, dans och färger, så allt känns som en saga. Efter övningen pratar de om nervositet. Jonas säger att man kan andas långsamt och titta på en vän i publiken. Nora testar och märker att axlarna slappnar av. Leo nickar och säger att han vågar sjunga högre. På fredagen applåderar föräldrar och syskon, och klassen känner sig modig.",
+    "text": "I trean ska klassen göra en liten vårshow. Läraren Jonas frågar vilken musik de vill ha till avslutningen. Flera ropar \"Dolly Style!\" eftersom låtarna är lätta att sjunga med i. Klassen lyssnar på en låt och räknar takten: ett, två, tre, fyra. Sedan delar Jonas ut färgat papper. Uppgiften är att skapa en scenbakgrund som passar musiken. Nora ritar stjärnor och hjärtan. Leo målar en jättestor klubba. Sam bygger en regnbåge av papp och tejp. De pratar om att Dolly Style ofta använder samma tema i kläder, dans och färger, så allt känns som en saga. Efter övningen pratar de om nervositet. Jonas säger att man kan andas långsamt och titta på en vän i publiken. Nora testar och märker att axlarna slappnar av. Leo nickar och säger att han vågar sjunga högre. På fredagen applåderar föräldrar och syskon, och klassen känner sig modig.\n\nEfteråt satt Nora kvar i aulan. Hon tänkte att det roligaste inte var showen, utan alla veckor de övat.",
     "grade": 3,
     "category": "Kultur",
     "questions": [
@@ -11173,7 +11173,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 144
+      "wordCount": 163
     },
     "genre": "berättelse",
     "theme": "Kultur"
@@ -12327,7 +12327,7 @@
     "genre": "berättelse",
     "theme": "värdegrund",
     "title": "Dunderhonung och den försvunna cykelkorgen",
-    "text": "En solig morgon i Småköping ska Bamse, Lille Skutt och Skalman cykla till torget. Bamse har packat en korg med morötter och äpplen som de ska dela ut till barnen som hjälper till att städa parken. Men när de kommer ut från Bamses hus är cykelkorgen borta. Lille Skutt hoppar runt av oro och säger att någon säkert har stulit den. Skalman tar fram sin anteckningsbok och skriver: \"Vi letar lugnt och noggrant.\"\n\nDe frågar grannarna. En äldre granne säger att hon såg någon springa mot ån med en stor korg. Vid ån hittar de spår i leran, och Bamse ser att spåren går mot den gamla boden vid bryggan. Inne i boden sitter Vargen. Han ser ledsen ut och håller om korgen.\n\n\"Jag skulle bara låna den,\" mumlar han. \"Min lillasyster fyllde år, och jag hade inget att lägga presenten i.\" Bamse blir först arg, men andas djupt. Han säger att man måste fråga innan man lånar. Vargen nickar och föreslår att han kan hjälpa till att städa parken som tack. Tillsammans går de till torget, och cykelkorgen får komma till nytta igen.",
+    "text": "En solig morgon i Småköping ska Bamse, Lille Skutt och Skalman cykla till torget. Bamse har packat en korg med morötter och äpplen som de ska dela ut till barnen som hjälper till att städa parken. Men när de kommer ut från Bamses hus är cykelkorgen borta. Lille Skutt hoppar runt av oro och säger att någon säkert har stulit den. Skalman tar fram sin anteckningsbok och skriver: \"Vi letar lugnt och noggrant.\"\n\nDe frågar grannarna. En äldre granne säger att hon såg någon springa mot ån med en stor korg. Vid ån hittar de spår i leran, och Bamse ser att spåren går mot den gamla boden vid bryggan. Inne i boden sitter Vargen. Han ser ledsen ut och håller om korgen.\n\n\"Jag skulle bara låna den,\" mumlar han. \"Min lillasyster fyllde år, och jag hade inget att lägga presenten i.\" Bamse blir först arg, men andas djupt. Han säger att man måste fråga innan man lånar. Vargen nickar och föreslår att han kan hjälpa till att städa parken som tack. Tillsammans går de till torget, och cykelkorgen får komma till nytta igen.\n\nPå kvällen kom Vargen tillbaka till torget med en påse plommon. Han sa att de var till Bamse, men Bamse delade ut dem till barnen i stället.",
     "questions": [
       {
         "q": "Vad var det som hade försvunnit från Bamses cykel?",
@@ -12398,7 +12398,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 184
+      "wordCount": 211
     }
   },
   {
@@ -12407,7 +12407,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Skalmans plan för tysta biblioteket",
-    "text": "I Småköping ska biblioteket ordna en \"tyst timme\" för alla som vill läsa i lugn och ro. Bamse tycker om att bläddra i serier, Lille Skutt lånar böcker om mod, och Skalman vill läsa om stjärnor. När de kommer dit märker de att det ändå är stökigt. Några barn springer mellan hyllorna och pratar högt. Bibliotekarien ser trött ut och försöker säga till, men ingen lyssnar.\n\nDå får Skalman en idé. Han föreslår att de gör en tydlig läshörna med mjuka kuddar och en skylt där det står \"Här viskar vi\". Bamse hjälper till att bära kuddar och små bord. Lille Skutt, som är snabb, springer och hämtar färgpennor och papper så barnen kan rita tysta \"pratbubblor\" som dekoration.\n\nNär allt är klart samlar Bamse barnen och säger vänligt: \"Alla får ha kul, men här inne behöver vissa lugn för att kunna tänka.\" Barnen provar att viska i stället. Bibliotekarien blir glad och tackar.\n\nEfter en stund märker Lille Skutt att även de som först sprang runt nu sitter och läser. En av dem säger: \"Det blev faktiskt mysigare så här.\" Skalman nickar och säger att bra regler fungerar bäst när alla förstår varför de finns.",
+    "text": "I Småköping ska biblioteket ordna en \"tyst timme\" för alla som vill läsa i lugn och ro. Bamse tycker om att bläddra i serier, Lille Skutt lånar böcker om mod, och Skalman vill läsa om stjärnor. När de kommer dit märker de att det ändå är stökigt. Några barn springer mellan hyllorna och pratar högt. Bibliotekarien ser trött ut och försöker säga till, men ingen lyssnar.\n\nDå får Skalman en idé. Han föreslår att de gör en tydlig läshörna med mjuka kuddar och en skylt där det står \"Här viskar vi\". Bamse hjälper till att bära kuddar och små bord. Lille Skutt, som är snabb, springer och hämtar färgpennor och papper så barnen kan rita tysta \"pratbubblor\" som dekoration.\n\nNär allt är klart samlar Bamse barnen och säger vänligt: \"Alla får ha kul, men här inne behöver vissa lugn för att kunna tänka.\" Barnen provar att viska i stället. Bibliotekarien blir glad och tackar.\n\nEfter en stund märker Lille Skutt att även de som först sprang runt nu sitter och läser. En av dem säger: \"Det blev faktiskt mysigare så här.\" Skalman nickar och säger att bra regler fungerar bäst när alla förstår varför de finns.\n\nNästa vecka kom fler barn till den tysta timmen än förra gången. Skalman räknade dem i sin anteckningsbok.",
     "questions": [
       {
         "q": "Vad skulle biblioteket ordna den dagen?",
@@ -12478,7 +12478,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 196
+      "wordCount": 214
     }
   },
   {
@@ -14022,7 +14022,7 @@
     "genre": "faktatext",
     "theme": "tv-spel",
     "title": "Vad är Fortnite?",
-    "text": "Fortnite är ett populärt tv-spel som spelas av miljontals människor runt om i världen. Spelet går ut på att överleva på en ö tillsammans med många andra spelare. Man hoppar fallskärm från en flygande buss och landar på kartan. Där samlar man vapen, material och utrustning. Målet är att vara den sista spelaren eller det sista laget som är kvar.\n\nI Fortnite kan man spela ensam eller i lag. Många väljer att samarbeta med kompisar. Kommunikation och planering är viktigt för att vinna. Under spelets gång krymper en storm runt kartan. Den gör spelområdet mindre och tvingar spelarna att mötas.\n\nEn särskild sak med Fortnite är att man kan bygga väggar, trappor och skydd av material som trä, sten och metall. Det gör spelet annorlunda jämfört med många andra spel i samma genre. Spelare kan också ändra utseende på sina figurer genom så kallade skins.\n\nFortnite är gratis att ladda ner, men det finns saker i spelet som kostar pengar. Därför är det viktigt att tänka efter innan man köper något. Spelet har en åldersgräns och vuxna bör hjälpa yngre barn att förstå regler och säkerhet på nätet.",
+    "text": "Fortnite är ett populärt tv-spel som spelas av miljontals människor runt om i världen. Spelet går ut på att överleva på en ö tillsammans med många andra spelare. Man hoppar fallskärm från en flygande buss och landar på kartan. Där samlar man vapen, material och utrustning. Målet är att vara den sista spelaren eller det sista laget som är kvar.\n\nI Fortnite kan man spela ensam eller i lag. Många väljer att samarbeta med kompisar. Kommunikation och planering är viktigt för att vinna. Under spelets gång krymper en storm runt kartan. Den gör spelområdet mindre och tvingar spelarna att mötas.\n\nEn särskild sak med Fortnite är att man kan bygga väggar, trappor och skydd av material som trä, sten och metall. Det gör spelet annorlunda jämfört med många andra spel i samma genre. Spelare kan också ändra utseende på sina figurer genom så kallade skins.\n\nSpelet ändras hela tiden. Nya säsonger byter kartan, lägger till föremål och tar bort andra. Det gör att även den som spelat länge måste lära om.\n\nFortnite är gratis att ladda ner, men det finns saker i spelet som kostar pengar. Därför är det viktigt att tänka efter innan man köper något. Spelet har en åldersgräns och vuxna bör hjälpa yngre barn att förstå regler och säkerhet på nätet.",
     "questions": [
       {
         "type": "literal",
@@ -14092,7 +14092,7 @@
       }
     ],
     "meta": {
-      "wordCount": 188,
+      "wordCount": 214,
       "fingerprint": "ak4-tema-001",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
@@ -16378,7 +16378,7 @@
     "genre": "berättelse",
     "theme": "demokrati",
     "title": "Omröstningen",
-    "text": "I klass 5A skulle de bestämma vart höstutflykten skulle gå. Fröken Karin hade skrivit tre förslag på tavlan: naturreservatet, vetenskapsmuseet och klätterparken.\n\nLiam ville genast till klätterparken. \"Det är roligast!\" sa han högt. Flera höll med.\n\nMen Amira räckte upp handen. \"Jag tycker vi ska diskutera först. Alla kanske inte kan klättra.\"\n\nFröken Karin nickade. \"Bra tanke. Ska vi låta var och en säga något om förslagen innan vi röstar?\"\n\nEn efter en fick eleverna berätta vad de tyckte. Teo sa att naturreservatet var gratis, vilket betydde att alla kunde följa med utan extra kostnad. Wilma berättade att hon besökt museet och att det fanns roliga experiment.\n\nNär alla hade pratat var det dags att rösta. Varje elev fick lägga en lapp i en låda. Fröken Karin räknade rösterna: naturreservatet fick tolv, museet fem och klätterparken åtta.\n\nLiam såg besviken ut. Men Amira sa: \"Vi kanske kan åka till klätterparken en annan gång. Nu vann naturreservatet för att flest ville dit.\"\n\n\"Det är det som är demokrati\", sa fröken Karin. \"Alla får säga sin åsikt och sedan bestämmer majoriteten. Men man lyssnar på varandra först.\"",
+    "text": "I klass 5A skulle de bestämma vart höstutflykten skulle gå. Fröken Karin hade skrivit tre förslag på tavlan: naturreservatet, vetenskapsmuseet och klätterparken.\n\nLiam ville genast till klätterparken. \"Det är roligast!\" sa han högt. Flera höll med.\n\nMen Amira räckte upp handen. \"Jag tycker vi ska diskutera först. Alla kanske inte kan klättra.\"\n\nFröken Karin nickade. \"Bra tanke. Ska vi låta var och en säga något om förslagen innan vi röstar?\"\n\nEn efter en fick eleverna berätta vad de tyckte. Teo sa att naturreservatet var gratis, vilket betydde att alla kunde följa med utan extra kostnad. Wilma berättade att hon besökt museet och att det fanns roliga experiment.\n\nNär alla hade pratat var det dags att rösta. Varje elev fick lägga en lapp i en låda. Fröken Karin räknade rösterna: naturreservatet fick tolv, museet fem och klätterparken åtta.\n\nLiam såg besviken ut. Men Amira sa: \"Vi kanske kan åka till klätterparken en annan gång. Nu vann naturreservatet för att flest ville dit.\"\n\n\"Det är det som är demokrati\", sa fröken Karin. \"Alla får säga sin åsikt och sedan bestämmer majoriteten. Men man lyssnar på varandra först.\"\n\nPå utflyktsdagen regnade det lite, men ingen brydde sig. Liam hittade en gren som såg ut som ett svärd och glömde bort klätterparken helt.",
     "questions": [
       {
         "q": "Hur många förslag stod det på tavlan?",
@@ -16449,7 +16449,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 185
+      "wordCount": 209
     }
   },
   {
@@ -16538,7 +16538,7 @@
     "genre": "faktatext",
     "theme": "djur",
     "title": "Varför flyttar fåglarna?",
-    "text": "Varje höst lämnar tusentals fåglar Sverige och flyger söderut. De kallas flyttfåglar. Men varför gör de det, och hur hittar de vägen?\n\nDen viktigaste orsaken är maten. Under vintern fryser sjöar och marker, och insekter försvinner. Fåglar som lever av insekter, som svalor och gökar, skulle inte överleva. Därför flyger de till varmare platser där det fortfarande finns mat.\n\nMen inte alla fåglar flyttar. Talgoxar, kråkor och björktrastar stannar kvar. De äter frön, bär och rester och klarar kylan. Man kallar dem stannfåglar.\n\nHur hittar flyttfåglarna rätt? Forskare har upptäckt att fåglar använder flera metoder. Vissa orienterar sig med hjälp av solen och stjärnorna. Andra har ett slags inbyggd kompass som känner av jordens magnetfält. Unga fåglar lär sig också rutten genom att följa äldre fåglar första gången.\n\nResan kan vara otroligt lång. Fjällvråken flyger till Afrika, och den lilla kungsfågeln korsar Medelhavet trots att den bara väger fem gram. Silvertärnan har den längsta sträckan av alla – den flyger från Arktis till Antarktis och tillbaka, nästan fyra mil om dagen.\n\nFågelflyttning visar hur djur anpassar sig till årstiderna. Det visar också att naturen hänger ihop: fåglar som häckar i svenska skogar är beroende av våtmarker i Afrika.",
+    "text": "Varje höst lämnar tusentals fåglar Sverige och flyger söderut. De kallas flyttfåglar. Men varför gör de det, och hur hittar de vägen?\n\nDen viktigaste orsaken är maten. Under vintern fryser sjöar och marker, och insekter försvinner. Fåglar som lever av insekter, som svalor och gökar, skulle inte överleva. Därför flyger de till varmare platser där det fortfarande finns mat.\n\nMen inte alla fåglar flyttar. Talgoxar, kråkor och björktrastar stannar kvar. De äter frön, bär och rester och klarar kylan. Man kallar dem stannfåglar.\n\nHur hittar flyttfåglarna rätt? Forskare har upptäckt att fåglar använder flera metoder. Vissa orienterar sig med hjälp av solen och stjärnorna. Andra har ett slags inbyggd kompass som känner av jordens magnetfält. Unga fåglar lär sig också rutten genom att följa äldre fåglar första gången.\n\nResan kan vara otroligt lång. Fjällvråken flyger till Afrika, och den lilla kungsfågeln korsar Medelhavet trots att den bara väger fem gram. Silvertärnan har den längsta sträckan av alla – den flyger från Arktis till Antarktis och tillbaka, nästan fyra mil om dagen.\n\nFlytten är farlig. Många fåglar dör av utmattning, dåligt väder eller brist på rastplatser längs vägen.\n\nFågelflyttning visar hur djur anpassar sig till årstiderna. Det visar också att naturen hänger ihop: fåglar som häckar i svenska skogar är beroende av våtmarker i Afrika.",
     "questions": [
       {
         "q": "Vad är den viktigaste orsaken till att fåglar flyttar enligt texten?",
@@ -16609,7 +16609,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 198
+      "wordCount": 214
     }
   },
   {
@@ -17502,7 +17502,7 @@
   {
     "id": "ak5-tema-023",
     "title": "Kända spelare i Englands rugbylandslag",
-    "text": "Genom åren har många skickliga spelare representerat Englands rugbylandslag. Vissa har blivit kända långt utanför rugbyns värld. En av de mest uppmärksammade spelarna var Jonny Wilkinson, som sparkade den avgörande poängen i VM-finalen 2003.\n\nEn annan viktig spelare har varit lagkaptener som lett laget både på och utanför planen. En kapten ansvarar för att motivera sina lagkamrater och tala med domaren under matchen. Det kräver både ledarskap och lugn.\n\nI modern tid har laget haft spelare med olika bakgrunder och spelstilar. Vissa är starka forwards som arbetar hårt i närkamperna, medan andra är snabba backar som gör försök genom att springa förbi motståndarna.\n\nMånga spelare engagerar sig också i samhället. De besöker skolor, deltar i välgörenhet och inspirerar unga att börja spela rugby. Flera berättar att de själva började spela tack vare en förebild de såg på tv.\n\nKarriären i landslaget kan vara både kort och lång. Skador, form och konkurrens påverkar hur länge en spelare får vara kvar. Därför försöker många ta vara på varje chans de får att spela.\n\nTrots att rugby är en tuff sport betonar många spelare vikten av respekt. De tackar alltid motståndarna efter matchen och följer sportens traditioner.",
+    "text": "Genom åren har många skickliga spelare representerat Englands rugbylandslag. Vissa har blivit kända långt utanför rugbyns värld. En av de mest uppmärksammade spelarna var Jonny Wilkinson, som sparkade den avgörande poängen i VM-finalen 2003.\n\nEn annan viktig spelare har varit lagkaptener som lett laget både på och utanför planen. En kapten ansvarar för att motivera sina lagkamrater och tala med domaren under matchen. Det kräver både ledarskap och lugn.\n\nI modern tid har laget haft spelare med olika bakgrunder och spelstilar. Vissa är starka forwards som arbetar hårt i närkamperna, medan andra är snabba backar som gör försök genom att springa förbi motståndarna.\n\nMånga spelare engagerar sig också i samhället. De besöker skolor, deltar i välgörenhet och inspirerar unga att börja spela rugby. Flera berättar att de själva började spela tack vare en förebild de såg på tv.\n\nSedan 2010-talet har även damlandslaget fått mycket större uppmärksamhet. Fler matcher sänds på tv, och publiksiffrorna har ökat kraftigt.\n\nKarriären i landslaget kan vara både kort och lång. Skador, form och konkurrens påverkar hur länge en spelare får vara kvar. Därför försöker många ta vara på varje chans de får att spela.\n\nTrots att rugby är en tuff sport betonar många spelare vikten av respekt. De tackar alltid motståndarna efter matchen och följer sportens traditioner.",
     "grade": 4,
     "category": "Sport",
     "questions": [
@@ -17575,7 +17575,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1544117519-31a4b719223d?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 194
+      "wordCount": 213
     },
     "genre": "faktatext",
     "theme": "Sport"
@@ -17583,7 +17583,7 @@
   {
     "id": "ak5-tema-024",
     "title": "Rugbyregler och taktik",
-    "text": "För att förstå Englands rugbylandslag är det viktigt att känna till några grundläggande regler. Rugby spelas med en oval boll och två lag med femton spelare i varje lag. Målet är att göra fler poäng än motståndarna.\n\nPoäng kan göras på flera sätt. Ett försök ger fem poäng och sker när en spelare trycker ner bollen bakom motståndarnas mållinje. Efter ett försök får laget chansen att sparka en extra poäng. Det finns också straffsparkar och drop goals som ger tre poäng.\n\nBollen får bäras framåt, men passningar måste kastas bakåt eller åt sidan. Det gör att laget behöver planera sina rörelser noggrant. Spelarna måste samarbeta för att skapa utrymme på planen.\n\nTaktik handlar om att läsa spelet och anpassa sig. Ibland väljer laget att sparka bollen långt för att flytta spelet till motståndarnas planhalva. Andra gånger försöker de hålla bollen nära laget för att långsamt arbeta sig framåt.\n\nFörsvaret är lika viktigt som anfallet. Spelarna måste tackla säkert och stå rätt placerade för att stoppa motståndarnas attacker.\n\nGenom att kombinera styrka, snabbhet och smart taktik försöker England skapa fördelar i matcherna. Reglerna gör spelet rättvist och hjälper till att skydda spelarna.",
+    "text": "För att förstå Englands rugbylandslag är det viktigt att känna till några grundläggande regler. Rugby spelas med en oval boll och två lag med femton spelare i varje lag. Målet är att göra fler poäng än motståndarna.\n\nEn match är åttio minuter lång och delas i två halvlekar. Domaren kan lägga till tid, och spelet fortsätter tills bollen är död.\n\nPoäng kan göras på flera sätt. Ett försök ger fem poäng och sker när en spelare trycker ner bollen bakom motståndarnas mållinje. Efter ett försök får laget chansen att sparka en extra poäng. Det finns också straffsparkar och drop goals som ger tre poäng.\n\nBollen får bäras framåt, men passningar måste kastas bakåt eller åt sidan. Det gör att laget behöver planera sina rörelser noggrant. Spelarna måste samarbeta för att skapa utrymme på planen.\n\nTaktik handlar om att läsa spelet och anpassa sig. Ibland väljer laget att sparka bollen långt för att flytta spelet till motståndarnas planhalva. Andra gånger försöker de hålla bollen nära laget för att långsamt arbeta sig framåt.\n\nFörsvaret är lika viktigt som anfallet. Spelarna måste tackla säkert och stå rätt placerade för att stoppa motståndarnas attacker.\n\nGenom att kombinera styrka, snabbhet och smart taktik försöker England skapa fördelar i matcherna. Reglerna gör spelet rättvist och hjälper till att skydda spelarna.",
     "grade": 4,
     "category": "Sport",
     "questions": [
@@ -17656,7 +17656,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1544117519-31a4b719223d?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 191
+      "wordCount": 214
     },
     "genre": "faktatext",
     "theme": "Sport"
@@ -18809,7 +18809,7 @@
     "genre": "berättelse",
     "theme": "sport",
     "title": "Sista varvet",
-    "text": "Idrottshallen luktade som den alltid gjorde på onsdagar: en blandning av golvpolish, svett och de där mjuka skumgummimattorna som aldrig riktigt torkar. Klass 6A stod i en halvcirkel medan läraren Jonas förklarade dagens pass: intervaller.\n\n\"Ni ska springa fyra varv,\" sa Jonas och höll upp fyra fingrar. \"Inte för att vara snabbast hela tiden, utan för att hitta ett tempo som går att hålla. Jag vill se att ni tänker.\"\n\nZahra kände hur hennes bröst stramade. Hon var bra på bollspel, men löpning var en annan sak. I femman hade hon sprungit för fort i början och sedan fått håll så att hon nästan grät av frustration. Hon mindes fortfarande hur några i klassen hade skrattat och sagt att hon \"alltid överdriver\".\n\nHon såg sig omkring. Vid ribbstolarna knöt Rami sina skor, lugn och metodisk. Han hade flyttat från Somalia för två år sedan och var ofta den som kunde springa längst utan att se trött ut. Längre bort stod Emilia och pratade om hur hon skulle slå sitt personliga rekord. Diego hoppade på stället som om han redan var ett steg före alla andra.\n\nNär de startade försökte Zahra göra något nytt: hon höll tillbaka. Hon lät Emilia och Diego rusa iväg. Hon fokuserade på andningen: in genom näsan, ut genom munnen. Första varvet kändes nästan lätt, och det gjorde henne misstänksam.\n\n\"Bra tempo,\" hörde hon en röst säga. Det var Rami, som låg bredvid henne. \"Många bränner allt direkt.\"\n\nZahra nickade utan att slösa luft.\n\nPå andra varvet började benen kännas tyngre. Zahra såg hur Emilia fortfarande sprang snabbt, men hennes axlar hade börjat åka upp mot öronen, som om kroppen försökte skydda sig. Diego saktade in och skakade på armarna, irriterat.\n\n\"Fokusera på stegen,\" sa Rami igen, som om han läste hennes tankar. \"Kortare steg kan hjälpa.\"\n\nZahra testade. Det kändes som en liten förändring, men plötsligt blev det lättare att hålla rytmen.\n\nPå tredje varvet kom tvivlet. \"Jag kommer ändå sist,\" tänkte Zahra. Då mindes hon Jonas ord: inte snabbast, utan hålla. Hon tittade på väggen där en klocka tickade. Varje sekund var en sak hon kunde klara.\n\nNär sista varvet började hörde hon Emilia flåsa. Emilia sneglade på Zahra och försökte öka igen, men stegen blev spretiga. Zahra kände hur hon själv fortfarande hade något kvar. Inte mycket, men tillräckligt.\n\nHon ökade lite, inte som en sprint, mer som att vrida upp volymen ett steg. Hon passerade Diego som nu gick några meter och såg arg ut på sig själv. Zahra ville säga något uppmuntrande men vågade inte mitt i andningen.\n\nMålgången var en tejplinje på golvet. Zahra korsade den och stannade, böjd framåt. Hon väntade på håll, på smärta, på skam.\n\nMen det kom inte.\n\nJonas kom fram och nickade. \"Du höll igen i början och ökade på slutet. Det där är smart löpning.\"\n\nZahra drog handen över pannan. Hon märkte att hon log, fast hon fortfarande var trött.\n\nRami kom i mål strax efter. \"Du såg ut som att du hade kontroll,\" sa han.\n\nZahra tänkte på ordet kontroll. Det handlade inte om att vara bäst. Det handlade om att lära sig sin egen kropp, och att inte låta gamla misslyckanden bestämma framtiden.\n\nNär de samlades för nedvarvning såg Zahra hur Diego satte sig bredvid henne.\n\n\"Jag sprang för fort igen,\" mumlade han.\n\nZahra tog ett djupt andetag som nu kändes lugnare. \"Nästa gång kan du testa att hålla igen,\" sa hon. \"Det funkade faktiskt.\"\n\nDiego tittade upp och nickade, och Zahra förstod att hennes seger inte bara var en tid på en klocka. Den var att hon vågade prova en ny strategi – och vågade dela den.",
+    "text": "Idrottshallen luktade som den alltid gjorde på onsdagar: en blandning av golvpolish, svett och de där mjuka skumgummimattorna som aldrig riktigt torkar. Klass 6A stod i en halvcirkel medan läraren Jonas förklarade dagens pass: intervaller.\n\n\"Ni ska springa fyra varv,\" sa Jonas och höll upp fyra fingrar. \"Inte för att vara snabbast hela tiden, utan för att hitta ett tempo som går att hålla. Jag vill se att ni tänker.\"\n\nZahra kände hur hennes bröst stramade. Hon var bra på bollspel, men löpning var en annan sak. I femman hade hon sprungit för fort i början och sedan fått håll så att hon nästan grät av frustration.\n\nHon såg sig omkring. Vid ribbstolarna knöt Rami sina skor, lugn och metodisk. Han hade flyttat från Somalia för två år sedan och var ofta den som kunde springa längst utan att se trött ut. Längre bort stod Emilia och pratade om hur hon skulle slå sitt personliga rekord. Diego hoppade på stället som om han redan var ett steg före alla andra.\n\nNär de startade försökte Zahra göra något nytt: hon höll tillbaka. Hon lät Emilia och Diego rusa iväg. Hon fokuserade på andningen: in genom näsan, ut genom munnen. Första varvet kändes nästan lätt, och det gjorde henne misstänksam.\n\n\"Bra tempo,\" hörde hon en röst säga. Det var Rami, som låg bredvid henne. \"Många bränner allt direkt.\"\n\nZahra nickade utan att slösa luft.\n\nPå andra varvet började benen kännas tyngre. Zahra såg hur Emilia fortfarande sprang snabbt, men hennes axlar hade börjat åka upp mot öronen, som om kroppen försökte skydda sig. Diego saktade in och skakade på armarna, irriterat.\n\n\"Fokusera på stegen,\" sa Rami igen, som om han läste hennes tankar. \"Kortare steg kan hjälpa.\"\n\nZahra testade. Det kändes som en liten förändring, men plötsligt blev det lättare att hålla rytmen.\n\nPå tredje varvet kom tvivlet. \"Jag kommer ändå sist,\" tänkte Zahra. Då mindes hon Jonas ord: inte snabbast, utan hålla. Hon tittade på väggen där en klocka tickade. Varje sekund var en sak hon kunde klara.\n\nNär sista varvet började hörde hon Emilia flåsa. Emilia sneglade på Zahra och försökte öka igen, men stegen blev spretiga. Zahra kände hur hon själv fortfarande hade något kvar. Inte mycket, men tillräckligt.\n\nHon ökade lite, inte som en sprint, mer som att vrida upp volymen ett steg. Hon passerade Diego som nu gick några meter och såg arg ut på sig själv.\n\nMålgången var en tejplinje på golvet. Zahra korsade den och stannade, böjd framåt. Hon väntade på håll, på smärta, på skam.\n\nMen det kom inte.\n\nJonas kom fram och nickade. \"Du höll igen i början och ökade på slutet. Det där är smart löpning.\"\n\nZahra drog handen över pannan. Hon märkte att hon log, fast hon fortfarande var trött.\n\nRami kom i mål strax efter. \"Du såg ut som att du hade kontroll,\" sa han.\n\nZahra tänkte på ordet kontroll. Det handlade inte om att vara bäst. Det handlade om att lära sig sin egen kropp, och att inte låta gamla misslyckanden bestämma framtiden.\n\nNär de samlades för nedvarvning såg Zahra hur Diego satte sig bredvid henne.\n\n\"Jag sprang för fort igen,\" mumlade han.\n\nZahra tog ett djupt andetag som nu kändes lugnare. \"Nästa gång kan du testa att hålla igen,\" sa hon. \"Det funkade faktiskt.\"\n\nDiego tittade upp och nickade, och Zahra förstod att hennes seger inte bara var en tid på en klocka. Den var att hon vågade prova en ny strategi – och vågade dela den.",
     "questions": [
       {
         "type": "literal",
@@ -18879,7 +18879,7 @@
       }
     ],
     "meta": {
-      "wordCount": 605,
+      "wordCount": 579,
       "fingerprint": "gpt4-008",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
@@ -18972,7 +18972,7 @@
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Den felande koden",
-    "text": "När klass 6B fick veta att de skulle delta i en \"Teknikutmaning\" trodde många att det skulle handla om att bygga en bro av glasspinnar eller göra en enkel elkrets. Men deras lärare, Frida, rullade in en låda med små datorer och sa: \"Ni ska programmera en sensor som kan varna när någon glömmer att stänga fönstret.\"\n\nMateo, som hade flyttat från Chile och brukade skruva isär gamla spelkontroller hemma, blev genast intresserad. Bredvid honom satt Noor, som var snabb på logik och alltid hittade fel i matteboken innan läraren hann. Längst fram satt Linnea och Ali, som båda älskade att diskutera och ofta tävlade om vem som kunde förklara bäst.\n\nDe delades in i grupper. Mateo hamnade med Noor och Ali. De fick en liten rörelsesensor och en temperatursensor, plus en lista med mål: Om temperaturen sjunker snabbt och rörelse inte registreras, ska en röd lampa blinka och ett pip höras.\n\n\"Det låter enkelt,\" sa Ali och satte sig självsäkert.\n\nNoor skakade på huvudet. \"Enkelt är ett ord man säger innan man testar.\"\n\nMateo började skriva kod. Han gillade känslan av att ord på skärmen kunde bli handlingar i verkligheten. Efter tjugo minuter var allt klart, tyckte han. De kopplade in sensorerna och testade genom att öppna fönstret och vifta lite.\n\nIngenting hände.\n\nAli suckade. \"Jag visste att den där sensorn var trasig.\"\n\nNoor lutade sig fram. \"Eller så är vår kod trasig. Det är vanligare.\"\n\nMateo kände hur det hettade i ansiktet. Han ville skylla på sensorn, eller på att instruktionerna var otydliga. Men Noor pekade lugnt på en rad.\n\n\"Du jämför temperaturen med fel variabel,\" sa hon. \"Du använder 'tempStart' men uppdaterar aldrig den.\"\n\nMateo stirrade. Hon hade rätt. Han hade tänkt att starttemperaturen skulle sparas, men han hade glömt att faktiskt spara den.\n\nHan rättade raden, och de testade igen. Den här gången blinkade lampan – men den blinkade hela tiden, även när fönstret var stängt.\n\n\"Vi har skapat en stressmaskin,\" muttrade Ali.\n\nNoor log snabbt. \"Då har vi i alla fall skapat något.\" Hon tog fram papper och ritade ett flödesschema: Om fönster öppnas → kolla temperaturfall → kolla rörelse → varna. \"Vi måste bestämma när systemet ska nollställas,\" sa hon.\n\nMateo kände hur hans frustration förvandlades till nyfikenhet. De arbetade vidare. Ali, som först varit mest högljudd, började nu komma med bra idéer: \"Vi kan lägga in en timer så att den väntar två minuter innan den varnar. Då hinner man gå tillbaka och stänga.\"\n\nNär de till slut fick allt att fungera testade Frida deras lösning. Hon öppnade fönstret, gick ut ur klassrummet och väntade. Efter två minuter blinkade den röda lampan och ett pip hördes. Frida nickade. \"Det där är en tydlig varning. Bra.\"\n\nMateo såg på Noor och Ali. Han insåg att deras grupp inte hade blivit bra för att någon var bäst, utan för att de hade tålt att göra fel utan att ge upp.\n\nPå vägen ut sa Noor: \"Du blev inte arg när jag hittade felet.\"\n\nMateo ryckte på axlarna. \"Jag blev det. Men mest inuti. Sen tänkte jag att det är bättre att fixa än att låtsas.\"\n\nAli skrattade. \"Och jag lärde mig att sensorer inte alltid är problemet.\"\n\nMateo log. Teknikutmaningen hade handlat om kod, ja. Men den hade också handlat om något annat: hur man samarbetar när skärmen visar fel och man ändå måste vidare.",
+    "text": "När klass 6B fick veta att de skulle delta i en \"Teknikutmaning\" trodde många att det skulle handla om att bygga en bro av glasspinnar eller göra en enkel elkrets. Men deras lärare, Frida, rullade in en låda med små datorer och sa: \"Ni ska programmera en sensor som kan varna när någon glömmer att stänga fönstret.\"\n\nMateo, som hade flyttat från Chile och brukade skruva isär gamla spelkontroller hemma, blev genast intresserad. Bredvid honom satt Noor, som var snabb på logik och alltid hittade fel i matteboken innan läraren hann. Längst fram satt Linnea och Ali, som båda älskade att diskutera och ofta tävlade om vem som kunde förklara bäst.\n\nDe delades in i grupper. Mateo hamnade med Noor och Ali. De fick en liten rörelsesensor och en temperatursensor, plus en lista med mål: Om temperaturen sjunker snabbt och rörelse inte registreras, ska en röd lampa blinka och ett pip höras.\n\n\"Det låter enkelt,\" sa Ali och satte sig självsäkert.\n\nNoor skakade på huvudet. \"Enkelt är ett ord man säger innan man testar.\"\n\nMateo började skriva kod. Han gillade känslan av att ord på skärmen kunde bli handlingar i verkligheten. Efter tjugo minuter var allt klart, tyckte han. De kopplade in sensorerna och testade genom att öppna fönstret och vifta lite.\n\nIngenting hände.\n\nAli suckade. \"Jag visste att den där sensorn var trasig.\"\n\nNoor lutade sig fram. \"Eller så är vår kod trasig. Det är vanligare.\"\n\nMateo kände hur det hettade i ansiktet. Han ville skylla på sensorn, eller på att instruktionerna var otydliga. Men Noor pekade lugnt på en rad.\n\n\"Du jämför temperaturen med fel variabel,\" sa hon. \"Du använder 'tempStart' men uppdaterar aldrig den.\"\n\nMateo stirrade. Hon hade rätt. Han hade tänkt att starttemperaturen skulle sparas, men han hade glömt att faktiskt spara den.\n\nHan rättade raden, och de testade igen. Den här gången blinkade lampan – men den blinkade hela tiden, även när fönstret var stängt.\n\n\"Vi har skapat en stressmaskin,\" muttrade Ali.\n\nNoor log snabbt. \"Då har vi i alla fall skapat något.\" Hon tog fram papper och ritade ett flödesschema: Om fönster öppnas → kolla temperaturfall → kolla rörelse → varna. \"Vi måste bestämma när systemet ska nollställas,\" sa hon.\n\nMateo kände hur hans frustration förvandlades till nyfikenhet. De arbetade vidare. Ali, som först varit mest högljudd, började nu komma med bra idéer: \"Vi kan lägga in en timer så att den väntar två minuter innan den varnar. Då hinner man gå tillbaka och stänga.\"\n\nNär de till slut fick allt att fungera testade Frida deras lösning. Hon öppnade fönstret, gick ut ur klassrummet och väntade. Efter två minuter blinkade den röda lampan och ett pip hördes. Frida nickade. \"Det där är en tydlig varning. Bra.\"\n\nMateo såg på Noor och Ali. Han insåg att deras grupp inte hade blivit bra för att någon var bäst, utan för att de hade tålt att göra fel utan att ge upp.\n\nFrida bad dem också skriva ner vad som hade gått fel. När listan var klar såg Mateo att nästan alla fel hade varit hans egna antaganden, inte hårdvaran.\n\nPå vägen ut sa Noor: \"Du blev inte arg när jag hittade felet.\"\n\nMateo ryckte på axlarna. \"Jag blev det. Men mest inuti. Sen tänkte jag att det är bättre att fixa än att låtsas.\"\n\nAli skrattade. \"Och jag lärde mig att sensorer inte alltid är problemet.\"\n\nMateo log. Teknikutmaningen hade handlat om kod, ja. Men den hade också handlat om något annat: hur man samarbetar när skärmen visar fel och man ändå måste vidare.",
     "questions": [
       {
         "type": "literal",
@@ -19042,7 +19042,7 @@
       }
     ],
     "meta": {
-      "wordCount": 560,
+      "wordCount": 588,
       "fingerprint": "gpt6-003",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
@@ -23774,7 +23774,7 @@
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "När någon inte svarar",
-    "text": "Det började med något så litet att Amina nästan skämdes över att hon ens tänkte på det. Ett meddelande i klasschatten som hon skrev på bussen hem: \"Ska vi ses och plugga inför SO-provet?\" Hon tryckte skickat, såg bocken bli dubbel, och väntade. Det var inte ens en viktig fråga, bara en idé. Men minuterna gick, och ingen svarade.\n\nHemma satte hon sig vid köksbordet med sin bok om stormaktstiden. Hon försökte läsa, men ögonen drogs tillbaka till skärmen. Chatten fortsatte, men på ett annat spår. Någon lade upp en meme om läraren. Någon annan skrev om fredagens match. Hennes fråga låg kvar som en sten på botten av en bäck: synlig, men ingen rörde den.\n\nDagen efter i skolan kände Amina en märklig tomhet i bröstet, som om hon hade gjort bort sig utan att veta hur. Hon såg sin kompis Elias prata med två andra vid skåpen. De skrattade åt något som Amina inte hörde. Hon försökte säga hej, men det blev mer som ett halvt ord som fastnade.\n\nPå lektionen satte hon sig bredvid Leyla, som hon brukar. Leyla luktade svagt av minttuggummi och hade alltid en penna som klickade när hon tänkte.\n\n\"Du,\" viskade Amina, \"såg du mitt meddelande igår?\"\n\nLeyla blinkade. \"Vilket?\"\n\nAmina svalde. \"Om att ses och plugga.\"\n\nLeyla drog upp chatten, scrollade och stannade. \"Oj. Jag missade det. Förlåt.\"\n\n\"Det är lugnt,\" sa Amina snabbt, men rösten lät inte som hon ville.\n\nUnder rasten kom Kenji fram och frågade Leyla om de skulle spela basket. Amina hörde deras ord, men hon var kvar i känslan av att vara osynlig. Hon tänkte att det kanske var så det började när någon hamnade utanför: inte med ett stort bråk, utan med små tystnader som samlades.\n\nEfter sista lektionen stod Amina vid cykelstället när Elias kom gående. Han såg henne och stannade.\n\n\"Hej,\" sa han. \"Du verkar... off.\"\n\nAmina skrattade kort. \"Det är inget.\"\n\nElias tittade på henne, som om han inte köpte det. \"Är det chatten? Jag såg att du skrev något men jag hann inte svara. Sen försvann det bland allt annat.\"\n\n\"Det var bara en fråga,\" sa Amina, men hon kände hur ansiktet blev varmt.\n\n\"Jag vet,\" sa Elias. \"Men jag fattar också att det kan kännas... som att man inte räknas. Jag har känt så ibland.\"\n\nAmina stirrade på gruset. \"Jag hatar att jag bryr mig.\"\n\n\"Du bryr dig för att du vill ha kontakt,\" sa Elias. \"Det är inte konstigt. Det är mänskligt.\" Han pausade. \"Ska vi plugga då? Jag behöver ändå hjälp att fatta de där orsakerna till krigen.\"\n\nAmina tittade upp. \"På riktigt?\"\n\n\"På riktigt.\"\n\nDe bestämde att ses på biblioteket dagen efter. När Amina kom dit satt redan Leyla vid ett bord och viftade med sin bok.\n\n\"Jag tänkte,\" sa Leyla, \"att om vi ändå pluggar kan vi göra det ordentligt. Och... jag är ledsen att jag missade. Jag vill inte att du ska känna dig ensam.\"\n\nAmina kände hur något släppte, som en knut som långsamt lossnade. Det var fortfarande sant att chatten varit tyst, men det var också sant att vänskap ibland behövde tydliga ord, inte bara antaganden.\n\nNär de gick hem senare hade de inte bara gjort en tidslinje över stormaktstiden. De hade också tränat på något som ingen lärobok riktigt lär ut: att fråga, lyssna och säga förlåt innan avståndet blir för stort.",
+    "text": "Det började med något så litet att Amina nästan skämdes över att hon ens tänkte på det. Ett meddelande i klasschatten som hon skrev på bussen hem: \"Ska vi ses och plugga inför SO-provet?\" Hon tryckte skickat, såg bocken bli dubbel, och väntade. Det var inte ens en viktig fråga, bara en idé. Men minuterna gick, och ingen svarade.\n\nHemma satte hon sig vid köksbordet med sin bok om stormaktstiden. Hon försökte läsa, men ögonen drogs tillbaka till skärmen. Chatten fortsatte, men på ett annat spår. Någon lade upp en meme om läraren. Någon annan skrev om fredagens match. Hennes fråga låg kvar som en sten på botten av en bäck: synlig, men ingen rörde den.\n\nDagen efter i skolan kände Amina en märklig tomhet i bröstet, som om hon hade gjort bort sig utan att veta hur. Hon såg sin kompis Elias prata med två andra vid skåpen. De skrattade åt något som Amina inte hörde. Hon försökte säga hej, men det blev mer som ett halvt ord som fastnade.\n\nPå lektionen satte hon sig bredvid Leyla, som hon brukar. Leyla luktade svagt av minttuggummi och hade alltid en penna som klickade när hon tänkte.\n\n\"Du,\" viskade Amina, \"såg du mitt meddelande igår?\"\n\nLeyla blinkade. \"Vilket?\"\n\nAmina svalde. \"Om att ses och plugga.\"\n\nLeyla drog upp chatten, scrollade och stannade. \"Oj. Jag missade det. Förlåt.\"\n\n\"Det är lugnt,\" sa Amina snabbt, men rösten lät inte som hon ville.\n\nUnder rasten kom Kenji fram och frågade Leyla om de skulle spela basket. Amina hörde deras ord, men hon var kvar i känslan av att vara osynlig. Hon tänkte att det kanske var så det började när någon hamnade utanför: inte med ett stort bråk, utan med små tystnader som samlades.\n\nEfter sista lektionen stod Amina vid cykelstället när Elias kom gående. Han såg henne och stannade.\n\n\"Hej,\" sa han. \"Du verkar... off.\"\n\nAmina skrattade kort. \"Det är inget.\"\n\nElias tittade på henne, som om han inte köpte det. \"Är det chatten? Jag såg att du skrev något men jag hann inte svara. Sen försvann det bland allt annat.\"\n\n\"Det var bara en fråga,\" sa Amina, men hon kände hur ansiktet blev varmt.\n\n\"Jag vet,\" sa Elias. \"Men jag fattar också att det kan kännas... som att man inte räknas. Jag har känt så ibland.\"\n\nAmina stirrade på gruset. \"Jag hatar att jag bryr mig.\"\n\n\"Du bryr dig för att du vill ha kontakt,\" sa Elias. \"Det är inte konstigt. Det är mänskligt.\" Han pausade. \"Ska vi plugga då? Jag behöver ändå hjälp att fatta de där orsakerna till krigen.\"\n\nAmina tittade upp. \"På riktigt?\"\n\n\"På riktigt.\"\n\nDe bestämde att ses på biblioteket dagen efter. När Amina kom dit satt redan Leyla vid ett bord och viftade med sin bok.\n\n\"Jag tänkte,\" sa Leyla, \"att om vi ändå pluggar kan vi göra det ordentligt. Och... jag är ledsen att jag missade. Jag vill inte att du ska känna dig ensam.\"\n\nAmina kände hur något släppte, som en knut som långsamt lossnade. Det var fortfarande sant att chatten varit tyst, men det var också sant att vänskap ibland behövde tydliga ord, inte bara antaganden.\n\nAmina tänkte att hon nog hade gjort samma sak själv någon gång: sett en fråga glida förbi och tänkt att någon annan skulle svara. Det var en obehaglig tanke.\n\nNär de gick hem senare hade de inte bara gjort en tidslinje över stormaktstiden. De hade också tränat på något som ingen lärobok riktigt lär ut: att fråga, lyssna och säga förlåt innan avståndet blir för stort.",
     "questions": [
       {
         "type": "literal",
@@ -23845,7 +23845,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1472745942893-4b9f730c7668?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 559
+      "wordCount": 588
     }
   },
   {
@@ -28255,7 +28255,7 @@
     "genre": "faktatext",
     "theme": "teknik",
     "title": "AI-modeller, bias och varför träningsdata formar framtiden",
-    "text": "Många använder AI-verktyg i skolan och hemma: för att sammanfatta text, skapa idéer, öva språk eller få hjälp med programmering. Men en AI-modell är inte en neutral \"sanningmaskin\". Den är en statistisk modell som tränats på stora mängder data, och därför bär den på både styrkor och begränsningar från den värld den lärt sig av. För att förstå hur AI påverkar samhället behöver man förstå begrepp som träningsdata, bias och generalisering.\n\nEn AI-modell inom språk, som en chattbot, tränas genom att läsa enorma textmängder och lära sig mönster: vilka ord som ofta följer på andra, hur argument byggs, hur berättelser brukar fungera. Modellen får inte \"förståelse\" på samma sätt som en människa, men den kan bli mycket skicklig på att förutsäga rimliga svar. Det gör den användbar, men också riskabel om man tror att den alltid har rätt.\n\nBias betyder snedvridning. Om träningsdata innehåller mer text från vissa grupper, språk eller perspektiv kan modellen bli bättre på just dessa och sämre på andra. Bias kan också handla om stereotyper. Om materialet ofta kopplar vissa yrken till vissa kön kan modellen spegla det i sina svar, även om det inte är sant eller önskvärt. Det är viktigt att förstå att bias inte alltid är medvetet \"ondska\". Det kan vara en spegel av hur information producerats och sparats historiskt.\n\nEtt annat viktigt begrepp är generalisering: förmågan att ge rimliga svar på nya situationer. En modell kan vara bra på att härma mönster men ändå göra fel när frågan kräver exakt fakta, eller när den möter ovanliga exempel. Ibland kan den \"hallucinera\", alltså skapa ett svar som låter övertygande men som inte stämmer. Därför behöver användaren en kritisk roll: kontrollera källor, jämföra med pålitliga texter och förstå att ett snyggt svar inte är samma sak som ett sant svar.\n\nAI påverkar också makt. Den som kontrollerar vilka data som används, vilka mål modellen optimeras för och vilka regler som styr användningen kan påverka hur verktyget fungerar i praktiken. Om ett företag tjänar pengar på att du spenderar tid i en app kan det designa system som maximerar engagemang, inte nödvändigtvis lärande eller välmående. På samma sätt kan en skola använda AI på ett sätt som stärker elevers självständighet - eller på ett sätt som gör elever beroende av färdiga svar.\n\nDet finns också etiska frågor om data. Många modeller tränas på texter och bilder som skapats av människor som aldrig aktivt gett sitt medgivande. Samtidigt kan AI skapa nytt innehåll som liknar det den tränats på. Det leder till konflikter om upphovsrätt och rättvisa: vem får betalt, och vem får kontroll?\n\nI gymnasiet kan AI vara ett kraftfullt verktyg om den används rätt. Du kan använda den som en samtalspartner: be den förklara begrepp på olika nivåer, skapa övningsfrågor, föreslå struktur för en text eller ge dig alternativa perspektiv. Men du behöver fortfarande tänka själv. Om du låter AI göra hela arbetet tappar du träningsmomentet som skolan egentligen handlar om: att utveckla din egen förmåga att resonera.\n\nAtt förstå AI handlar alltså inte bara om teknik, utan om samhälle. Träningsdata formar modellens beteende, bias påverkar vilka som gynnas eller missgynnas, och generalisering avgör när verktyget är pålitligt. När du ser det blir AI mindre magi och mer ett system som går att granska, diskutera och använda medvetet.",
+    "text": "Många använder AI-verktyg i skolan och hemma: för att sammanfatta text, skapa idéer, öva språk eller få hjälp med programmering. Men en AI-modell är inte en neutral \"sanningmaskin\". Den är en statistisk modell som tränats på stora mängder data, och därför bär den på både styrkor och begränsningar från den värld den lärt sig av. För att förstå hur AI påverkar samhället behöver man förstå begrepp som träningsdata, bias och generalisering.\n\nEn AI-modell inom språk, som en chattbot, tränas genom att läsa enorma textmängder och lära sig mönster: vilka ord som ofta följer på andra, hur argument byggs, hur berättelser brukar fungera. Modellen får inte \"förståelse\" på samma sätt som en människa, men den kan bli mycket skicklig på att förutsäga rimliga svar. Det gör den användbar, men också riskabel om man tror att den alltid har rätt.\n\nBias betyder snedvridning. Om träningsdata innehåller mer text från vissa grupper, språk eller perspektiv kan modellen bli bättre på just dessa och sämre på andra. Bias kan också handla om stereotyper. Om materialet ofta kopplar vissa yrken till vissa kön kan modellen spegla det i sina svar, även om det inte är sant eller önskvärt. Det är viktigt att förstå att bias inte alltid är medvetet \"ondska\". Det kan vara en spegel av hur information producerats och sparats historiskt.\n\nEtt annat viktigt begrepp är generalisering: förmågan att ge rimliga svar på nya situationer. En modell kan vara bra på att härma mönster men ändå göra fel när frågan kräver exakt fakta, eller när den möter ovanliga exempel. Ibland kan den \"hallucinera\", alltså skapa ett svar som låter övertygande men som inte stämmer. Därför behöver användaren en kritisk roll: kontrollera källor, jämföra med pålitliga texter och förstå att ett snyggt svar inte är samma sak som ett sant svar.\n\nAI påverkar också makt. Den som kontrollerar vilka data som används, vilka mål modellen optimeras för och vilka regler som styr användningen kan påverka hur verktyget fungerar i praktiken. Om ett företag tjänar pengar på att du spenderar tid i en app kan det designa system som maximerar engagemang, inte nödvändigtvis lärande eller välmående. På samma sätt kan en skola använda AI på ett sätt som stärker elevers självständighet - eller på ett sätt som gör elever beroende av färdiga svar.\n\nDet finns också etiska frågor om data. Många modeller tränas på texter och bilder som skapats av människor som aldrig aktivt gett sitt medgivande. Samtidigt kan AI skapa nytt innehåll som liknar det den tränats på. Det leder till konflikter om upphovsrätt och rättvisa: vem får betalt, och vem får kontroll?\n\nI gymnasiet kan AI vara ett kraftfullt verktyg om den används rätt. Du kan använda den som en samtalspartner: be den förklara begrepp på olika nivåer, skapa övningsfrågor, föreslå struktur för en text eller ge dig alternativa perspektiv. Men du behöver fortfarande tänka själv. Om du låter AI göra hela arbetet tappar du träningsmomentet som skolan egentligen handlar om: att utveckla din egen förmåga att resonera.\n\nDet finns också en miljöfråga. Att träna en stor modell kräver mycket el, och varje fråga du ställer kostar energi i ett datacenter någonstans. Mängden är liten per fråga men stor i summa, och kylningen kräver dessutom vatten.\n\nAtt förstå AI handlar alltså inte bara om teknik, utan om samhälle. Träningsdata formar modellens beteende, bias påverkar vilka som gynnas eller missgynnas, och generalisering avgör när verktyget är pålitligt. När du ser det blir AI mindre magi och mer ett system som går att granska, diskutera och använda medvetet.",
     "questions": [
       {
         "type": "literal",
@@ -28325,7 +28325,7 @@
       }
     ],
     "meta": {
-      "wordCount": 544,
+      "wordCount": 582,
       "fingerprint": "gpt4-gy02",
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
@@ -28901,7 +28901,7 @@
     "genre": "berättelse",
     "theme": "val och konsekvenser",
     "title": "Versioner av samma dag",
-    "text": "När Lea öppnade dokumentet såg hon rubriken hon skrivit kvällen innan: \"Orsak och verkan i en förändrad stad\". Under rubriken låg tre halva stycken, några markerade meningar och ett tomt avsnitt som hette \"Egen analys\". Hon hade tänkt att det skulle vara den lättaste delen.\n\nHon öppnade ett nytt fönster och skrev in några sökord. Resultaten kom snabbt, som de alltid gjorde, men den här gången kändes de inte som hjälp utan som en vägg av möjliga vägar. En rapport från en myndighet, en debattartikel som lovade \"sanningen\", en blogg med dramatiska bilder, en intervju med en forskare bakom en betalvägg. Hon klickade runt och sparade länkar, men varje gång hon trodde att hon hittat en tydlig linje dök en ny invändning upp.\n\nPå vägen till skolan låg dimman som ett tunt filter över gatorna. Vid övergångsstället stod en man och väntade, men han gick inte när det blev grönt. Han tittade på sin skärm med samma koncentration som Lea kände igen från sig själv. När han till slut gick hade signalen redan hunnit blinka rött igen, som om systemet inte riktigt var byggt för tvekan.\n\nI klassrummet delade läraren ut en enkel instruktion: \"Ni ska visa hur ni tänker. Inte bara vad ni kommer fram till.\" Lea kände hur den meningen landade någonstans mellan lättnad och press. På skärmen hemma kunde hon alltid skapa en snygg text. Här skulle hennes väg synas.\n\nNär de började arbeta satte sig Amir bredvid henne. Han hade redan en disposition och såg ut som om han visste vart han var på väg. \"Jag fastnar i allt jag hittar\", sa Lea och pekade på sina länkar. \"Det känns som att jag kan skriva fem olika uppsatser som alla låter rimliga.\"\n\nAmir lutade sig fram. \"Kanske är det det som är poängen?\" sa han. \"Att visa varför du väljer en version.\"\n\nLea tittade på rubriken igen. Orsak och verkan. Hon tänkte på mannen vid övergångsstället: den lilla tvekan som gjorde att han missade ett grönt ljus och hamnade i nästa cykel. I hennes arbete var tvekan större, men mekanismen liknade ändå något: varje val av källa, exempel och begrepp ledde vidare till nya konsekvenser i texten.\n\nHon började sortera länkarna i tre högar: \"Fakta\", \"Tolkningar\" och \"Påståenden\". Det var inte en perfekt uppdelning, och ibland fick en länk ligga i två högar samtidigt, men det gav henne ett grepp om kaoset. Hon skrev en rad under \"Egen analys\": \"Jag utgår från att förändring inte bara är teknisk utan också social.\" Sedan stannade hon. Var hade hon fått det ifrån? Hon mindes morgonens dimma, trängseln vid hållplatsen, samtalet i klassrummet. Inte som bevis, men som erfarenhet som behövde kopplas till något mer än känsla.\n\nNär läraren gick förbi frågade Lea inte om hon \"fick\" använda något verktyg eller någon källa. Hon frågade: \"Hur visar jag att det här är en rimlig slutsats?\" Läraren svarade inte med ett direkt facit, utan med en fråga tillbaka: \"Vilken invändning skulle en kritisk läsare ha?\"\n\nPå rasten gick Lea ut i korridoren och såg elever som satt på golvet med datorer i knät, pratade, jämförde och skrattade åt missförstånd. Hon tänkte att hennes dag hade minst två versioner: en där hon jagade det perfekta svaret och en där hon byggde en väg som gick att följa. När lektionen fortsatte valde hon den senare, även om den var långsammare.",
+    "text": "När Lea öppnade dokumentet såg hon rubriken hon skrivit kvällen innan: \"Orsak och verkan i en förändrad stad\". Under rubriken låg tre halva stycken, några markerade meningar och ett tomt avsnitt som hette \"Egen analys\". Hon hade tänkt att det skulle vara den lättaste delen.\n\nHon öppnade ett nytt fönster och skrev in några sökord. Resultaten kom snabbt, som de alltid gjorde, men den här gången kändes de inte som hjälp utan som en vägg av möjliga vägar. En rapport från en myndighet, en debattartikel som lovade \"sanningen\", en blogg med dramatiska bilder, en intervju med en forskare bakom en betalvägg. Hon klickade runt och sparade länkar, men varje gång hon trodde att hon hittat en tydlig linje dök en ny invändning upp.\n\nPå vägen till skolan låg dimman som ett tunt filter över gatorna. Vid övergångsstället stod en man och väntade, men han gick inte när det blev grönt. Han tittade på sin skärm med samma koncentration som Lea kände igen från sig själv. När han till slut gick hade signalen redan hunnit blinka rött igen, som om systemet inte riktigt var byggt för tvekan.\n\nI klassrummet delade läraren ut en enkel instruktion: \"Ni ska visa hur ni tänker. Inte bara vad ni kommer fram till.\" Lea kände hur den meningen landade någonstans mellan lättnad och press. På skärmen hemma kunde hon alltid skapa en snygg text. Här skulle hennes väg synas.\n\nNär de började arbeta satte sig Amir bredvid henne. Han hade redan en disposition och såg ut som om han visste vart han var på väg. \"Jag fastnar i allt jag hittar\", sa Lea och pekade på sina länkar. \"Det känns som att jag kan skriva fem olika uppsatser som alla låter rimliga.\"\n\nAmir lutade sig fram. \"Kanske är det det som är poängen?\" sa han. \"Att visa varför du väljer en version.\"\n\nLea tittade på rubriken igen. Orsak och verkan. Hon tänkte på mannen vid övergångsstället: den lilla tvekan som gjorde att han missade ett grönt ljus och hamnade i nästa cykel. I hennes arbete var tvekan större, men mekanismen liknade ändå något: varje val av källa, exempel och begrepp ledde vidare till nya konsekvenser i texten.\n\nHon började sortera länkarna i tre högar: \"Fakta\", \"Tolkningar\" och \"Påståenden\". Det var inte en perfekt uppdelning, och ibland fick en länk ligga i två högar samtidigt, men det gav henne ett grepp om kaoset. Hon skrev en rad under \"Egen analys\": \"Jag utgår från att förändring inte bara är teknisk utan också social.\" Sedan stannade hon. Var hade hon fått det ifrån? Hon mindes morgonens dimma, trängseln vid hållplatsen, samtalet i klassrummet. Inte som bevis, men som erfarenhet som behövde kopplas till något mer än känsla.\n\nNär läraren gick förbi frågade Lea inte om hon \"fick\" använda något verktyg eller någon källa. Hon frågade: \"Hur visar jag att det här är en rimlig slutsats?\" Läraren svarade inte med ett direkt facit, utan med en fråga tillbaka: \"Vilken invändning skulle en kritisk läsare ha?\"\n\nHon skrev ner invändningen på en post-it och satte den på skärmkanten. Det kändes barnsligt, men den satt kvar hela dagen och gjorde varje mening lite långsammare att skriva.\n\nPå rasten gick Lea ut i korridoren och såg elever som satt på golvet med datorer i knät, pratade, jämförde och skrattade åt missförstånd. Hon tänkte att hennes dag hade minst två versioner: en där hon jagade det perfekta svaret och en där hon byggde en väg som gick att följa. När lektionen fortsatte valde hon den senare, även om den var långsammare.",
     "questions": [
       {
         "q": "Vilken konflikt driver Leas svårigheter i början av berättelsen?",
@@ -28972,7 +28972,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 558
+      "wordCount": 587
     }
   },
   {
