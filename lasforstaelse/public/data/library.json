@@ -21534,12 +21534,12 @@
       },
       {
         "type": "inferens",
-        "q": "Vad menar Arvin när han säger att folk delar för att det är spännande, som att titta på en brand?",
+        "q": "Vad kan man förstå om varför skärmdumpen sprids så snabbt i chatten?",
         "options": [
           "Att chatten mest handlar om säkerhet",
           "Att människor dras till drama även om det skadar någon",
-          "Att Noor tycker om att tända ljus",
-          "Att eld är intressant att läsa om i NO"
+          "Att alla i klassen redan kände Noor mycket väl",
+          "Att skärmdumpar alltid raderas efter en kort stund"
         ],
         "correct": 1
       },
@@ -21918,7 +21918,7 @@
       },
       {
         "type": "literal",
-        "q": "Vad ropar Samir vid staketet?",
+        "q": "Vad ropar Samir när Zahra kommer in på sista varvet?",
         "options": [
           "Du kommer för sent!",
           "Zahra! Sista biten!",
