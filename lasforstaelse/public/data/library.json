@@ -17795,7 +17795,7 @@
         "correct": 0
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför behöver Samiras text kortas ner enligt Leila?",
         "options": [
           "För att texten innehåller flera rena sakfel om ämnet",
@@ -17806,7 +17806,7 @@
         "correct": 1
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vad visar det att Emil till slut berättar tryggt inför klassen?",
         "options": [
           "Att Theo i själva verket gjorde allting själv",
@@ -17878,7 +17878,7 @@
         "correct": 0
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför blir stämningen bättre när Siri föreslår sin nya regel?",
         "options": [
           "För att läraren tar bollen ifrån dem",
@@ -17889,7 +17889,7 @@
         "correct": 2
       },
       {
-        "type": "textbevis",
+        "type": "sammanfatta",
         "q": "Vad visar berättelsen om vänskap?",
         "options": [
           "Att man helst ska spela ensam för att slippa bråk",
@@ -18129,7 +18129,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "forfattarens-syfte",
         "q": "Vad kan man förstå att texten vill att du ska göra som konsument idag?",
         "options": [
           "Köpa så mycket som möjligt medan priserna är låga",
@@ -18281,7 +18281,7 @@
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför hjälper flergångsprodukter, som en egen vattenflaska, enligt textens resonemang?",
         "options": [
           "För att man då aldrig behöver sortera något mera",
@@ -18292,7 +18292,7 @@
         "correct": 3
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Varför kan städinsatser och samtal om problemet påverka mer än bara den plats man städar?",
         "options": [
           "För att det kan öka engagemanget och få kommuner och företag att prioritera frågan",
@@ -18527,7 +18527,7 @@
         "correct": 2
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Vad visar morfars råd om hur man plockar bär om hans syn på naturen?",
         "options": [
           "Att naturen ska utnyttjas så fort som möjligt",
@@ -18538,7 +18538,7 @@
         "correct": 3
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Varför jämför Leila sina känslor i skolan med älgens situation?",
         "options": [
           "För att hon också kan springa fort när hon blir rädd i skogen",
@@ -18610,7 +18610,7 @@
         "correct": 2
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför tar Hawa upp frågan om rättvisa när de pratar om olika lunchtider?",
         "options": [
           "För att vissa annars kan känna att de alltid hamnar sist och att det känns orättvist",
@@ -18621,7 +18621,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "sammanfatta",
         "q": "Vad vill berättelsen visa om att påverka i samhället?",
         "options": [
           "Att elevrådet alltid bestämmer allting direkt",
@@ -18690,7 +18690,7 @@
         "correct": 2
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Vad kan hända om få invånare engagerar sig eller röstar i kommunvalet?",
         "options": [
           "Färre perspektiv påverkar besluten och vissa behov kan missas",
@@ -18701,7 +18701,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Varför jämför texten kommunstyrelsen med en \"regering\" i kommunen?",
         "options": [
           "För att den bestämmer över andra länder",
@@ -18773,7 +18773,7 @@
         "correct": 2
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför säger rektorn att eleverna måste hjälpa till om de testar en 'lugna hörnan'?",
         "options": [
           "För att Maria inte tycker om några regler alls",
@@ -18784,7 +18784,7 @@
         "correct": 2
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vad menar Aisha med att samhälle också kan vara ett möte i matsalen?",
         "options": [
           "Att matsalen i praktiken styr hela landet",
@@ -18856,7 +18856,7 @@
         "correct": 2
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Vad visar Emilias axlar som åker upp mot öronen om hennes kropp?",
         "options": [
           "Att hon har mer energi än alla",
@@ -18867,7 +18867,7 @@
         "correct": 2
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Varför blir Zahra stolt på slutet, även om hon fortfarande är trött?",
         "options": [
           "För att hon lärde sig en strategi och kände kontroll i stället för skam",
@@ -19019,7 +19019,7 @@
         "correct": 1
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Vad lär sig Mateo av att Noor hittar felet i hans kod?",
         "options": [
           "Att det är bättre att fixa problem än att skylla ifrån sig",
@@ -19030,7 +19030,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Varför blir gruppens lösning bättre när Ali föreslår en timer på två minuter?",
         "options": [
           "För att sensorn då slutar fungera när fönstret är stängt",
@@ -21127,7 +21127,7 @@
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför hjälper Amirs sätt att förklara Leyla att bli tryggare?",
         "options": [
           "För att han säger åt henne att sluta försöka med det svåra",
@@ -21138,7 +21138,7 @@
         "correct": 1
       },
       {
-        "type": "textbevis",
+        "type": "sammanfatta",
         "q": "Vilket budskap om vänskap visar berättelsen tydligast?",
         "options": [
           "Att man aldrig borde byta till en annan skola",
@@ -21367,7 +21367,7 @@
         "correct": 0
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför kan flockimmunitet skydda personer som inte kan vaccinera sig?",
         "options": [
           "För att smittan får färre möjligheter att spridas när många andra är skyddade",
@@ -21378,7 +21378,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vad menar texten med att vacciner inte ersätter immunförsvaret utan tränar det?",
         "options": [
           "Att vacciner gör hela immunförsvaret helt överflödigt",
@@ -21856,7 +21856,7 @@
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Vad menar Yara när hon säger att låten låter som “regn som slutar” efter deras ändringar?",
         "options": [
           "Att låten känns mer hoppfull och ljus",
@@ -21867,7 +21867,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Varför vågar Yara säga ja till att vara med på scen till slut?",
         "options": [
           "För att Kenji tvingar henne",
@@ -23821,7 +23821,7 @@
         "correct": 0
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Vad visar Elias när han säger att han också har känt så?",
         "options": [
           "Att han tycker Amina överdriver",
@@ -23832,7 +23832,7 @@
         "correct": 2
       },
       {
-        "type": "textbevis",
+        "type": "sammanfatta",
         "q": "Vad lär sig Amina om vänskap?",
         "options": [
           "Att det är bäst att ignorera allt jobbigt",
@@ -23981,7 +23981,7 @@
         "correct": 2
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför säger rektorn att det är fel att dela vidare även om man \"bara delar\"?",
         "options": [
           "För att delning sprider kränkningen vidare",
@@ -23992,7 +23992,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vad visar Hanas svar till det anonyma kontot om hur hon utvecklas i berättelsen?",
         "options": [
           "Hon bestämmer sig för att aldrig använda teknik igen",
@@ -24064,7 +24064,7 @@
         "correct": 1
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför står det att arbetaren är \"okänd\" enligt Lailas förklaring?",
         "options": [
           "För att museet glömde att skriva namnet på skylten",
@@ -24075,7 +24075,7 @@
         "correct": 2
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vad förändras i Nadirs syn på historia i slutet av berättelsen?",
         "options": [
           "Han tror att allt förr var bättre än i dag",
@@ -24147,7 +24147,7 @@
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför blir rättighetsfrågor ibland svårare när teknik kan upptäcka likheter snabbare?",
         "options": [
           "För att oavsiktliga likheter kan skapa krav",
@@ -24158,7 +24158,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vilket etiskt skäl nämns till att man kan behöva tillstånd för att sampla?",
         "options": [
           "Att musik annars blir för kort och tråkig",
@@ -24230,7 +24230,7 @@
         "correct": 1
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför kan kompromisser vara viktiga i en demokrati enligt textens resonemang?",
         "options": [
           "För att det ger beslut som fler accepterar",
@@ -24241,7 +24241,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vilken risk beskriver texten om samhällsdebatten blir fylld av personangrepp och misstänksamhet?",
         "options": [
           "Att människor lyssnar mer på varandra och samarbetar",
@@ -25520,7 +25520,7 @@
         "correct": 1
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför kan antibiotikaresistens göra operationer mer riskfyllda?",
         "options": [
           "För att infektioner blir svårare att behandla",
@@ -25531,7 +25531,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vad antyder texten om varför problemet inte kan lösas av enbart individers val?",
         "options": [
           "För att resistens även beror på samhällsfaktorer",
@@ -28053,7 +28053,7 @@
         "correct": 0
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Vad visar det att de väljer att skriva om diskussionen i stället för att bara 'ändra lite'?",
         "options": [
           "Att de framför allt vill få texten att bli längre",
@@ -28064,7 +28064,7 @@
         "correct": 1
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vad menar Elias i slutet när han säger att etik är vad man gör när man har panik?",
         "options": [
           "Att etik bara har betydelse i situationer när man är rädd",
@@ -28136,7 +28136,7 @@
         "correct": 1
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Vad menar Parisa när hon säger att Elin ser vardagen, inte bara processen?",
         "options": [
           "Att Elin ser exakt vad politikerna hade på sig",
@@ -28147,7 +28147,7 @@
         "correct": 2
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vad antyder slutet om Elins nya syn på historia?",
         "options": [
           "Att historia alltid är enkel och tydlig att förstå och tolka",
@@ -28219,7 +28219,7 @@
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför kan jämförelse i flöden skapa stress och perfektionism?",
         "options": [
           "För att likes inte går att se",
@@ -28230,7 +28230,7 @@
         "correct": 1
       },
       {
-        "type": "textbevis",
+        "type": "forfattarens-syfte",
         "q": "Vad vill texten att läsaren ska göra för att minska påverkan från uppmärksamhetsekonomin?",
         "options": [
           "Bara läsa kommentarer",
@@ -28302,7 +28302,7 @@
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför säger texten att ett snyggt svar inte är samma sak som ett sant svar?",
         "options": [
           "För att modellen kan skapa plausibla formuleringar även när fakta är fel",
@@ -28313,7 +28313,7 @@
         "correct": 0
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Vad menar texten med att AI i skolan kan göra elever beroende av färdiga svar?",
         "options": [
           "Att AI gör det helt omöjligt att skriva någonting själv",
@@ -28785,7 +28785,7 @@
         "correct": 2
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför kan en graf med ovanlig skala lura en läsare?",
         "options": [
           "För att skalans start påverkar hur data tolkas",
@@ -28796,7 +28796,7 @@
         "correct": 2
       },
       {
-        "type": "textbevis",
+        "type": "inferens",
         "q": "Varför beskriver texten förmågan att skilja korrelation från kausalitet som demokratiskt viktig?",
         "options": [
           "För att det gör dig svårare att manipulera när statistik används som argument",
@@ -31588,7 +31588,7 @@
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "sammanfatta",
         "q": "Hur beskriver texten kärnan i diskussionen om vem som får använda vad?",
         "options": [
           "Att allt kulturutbyte mellan grupper bör undvikas",
@@ -34399,7 +34399,7 @@
         "correct": 3
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Varför säger läraren att en tolkning ändå inte kan bli hur som helst?",
         "options": [
           "För att läraren själv bestämmer vad som är rätt svar",
@@ -37481,7 +37481,7 @@
         "correct": 1
       },
       {
-        "type": "forfattarens-syfte",
+        "type": "inferens",
         "q": "Vad menar texten att en publik har svårt med?",
         "options": [
           "Att avgöra vilka medier som är trovärdiga",
