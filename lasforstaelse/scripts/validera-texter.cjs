@@ -114,6 +114,12 @@ lib.forEach(t => {
     varningar.push(`${id}: har word_count på toppnivå – appen läser meta.wordCount`);
   }
 
+  // En text ska sluta med skiljetecken. ak3-tema-001 var kapad mitt i en
+  // mening vid exakt minimigränsen för sin årskurs.
+  if (t.text && !/[.!?"”]\s*$/.test(t.text.trim())) {
+    fel.push(`${id}: texten slutar utan skiljetecken – ...${t.text.trim().slice(-40)}`);
+  }
+
   // Punkter insprängda mitt i en mening lämnar efter sig meningar som består
   // av ett enda ord. Två åk 1-texter var skadade så: "Katten. Maja bor hos.
   // Leo." Utropstecken och frågetecken undantas, eftersom "Plask!" och "Hur?"

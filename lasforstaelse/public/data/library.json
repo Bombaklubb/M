@@ -9797,7 +9797,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Äppelträdet i trädgården",
-    "text": "På hösten mognar många äpplen i Sverige. I en trädgård i Uppsala står ett gammalt äppelträd som familjen Karim tar hand om. Varje september plockar barnen Amina och Leo frukterna tillsammans med sin mormor. De lägger äpplena i stora korgar. Vissa äpplen är röda, andra gröna eller gula. Mormor berättar att olika sorter smakar olika. En del är söta och andra är lite sura. Familjen använder äpplena till många saker. De bakar äppelpaj, kokar äppelmos och gör juice. Några äpplen sparar de i en sval källare så att de håller längre. Amina tycker bäst om pajen medan Leo gillar att dricka kall äppeljuice efter skolan. Mormor säger att äpplen är nyttiga eftersom de innehåller vitaminer och fibrer. Därför försöker familjen äta frukt nästan varje dag under hösten. De delar ibland frukten med grannar som bor nära. På så sätt går inget äpple till spillo. Barnen lär sig också hur träd",
+    "text": "På hösten mognar många äpplen i Sverige. I en trädgård i Uppsala står ett gammalt äppelträd som familjen Karim tar hand om. Varje september plockar barnen Amina och Leo frukterna tillsammans med sin mormor. De lägger äpplena i stora korgar. Vissa äpplen är röda, andra gröna eller gula. Mormor berättar att olika sorter smakar olika. En del är söta och andra är lite sura. Familjen använder äpplena till många saker. De bakar äppelpaj, kokar äppelmos och gör juice. Några äpplen sparar de i en sval källare så att de håller längre. Amina tycker bäst om pajen medan Leo gillar att dricka kall äppeljuice efter skolan. Mormor säger att äpplen är nyttiga eftersom de innehåller vitaminer och fibrer. Därför försöker familjen äta frukt nästan varje dag under hösten. De delar ibland frukten med grannar som bor nära. På så sätt går inget äpple till spillo. Barnen lär sig också hur träd sköts och varför skörden skiljer sig mellan olika år.",
     "questions": [
       {
         "type": "literal",
@@ -9867,7 +9867,7 @@
       }
     ],
     "meta": {
-      "wordCount": 150,
+      "wordCount": 159,
       "fingerprint": "ak3-tema-001",
       "generatedAt": "2026-03-13T12:58:05.127Z",
       "model": "claude"
