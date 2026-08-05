@@ -34853,68 +34853,68 @@
     "text": "Hästar är stora och starka djur som har levt tillsammans med människor i tusentals år. I dag finns många hästar i stall där de tas om hand varje dag. I ett stall får hästar mat, vatten och skydd mot väder och vind. De behöver också röra på sig regelbundet för att må bra.\n\nEn vanlig dag börjar med att hästarna får hö eller kraftfoder. Hö är torkat gräs som innehåller viktiga näringsämnen. Vatten är också mycket viktigt eftersom en häst kan dricka flera liter varje dag. Efter maten borstas hästen ofta. Det hjälper till att hålla pälsen ren och gör att man kan upptäcka sår eller skador.\n\nHästens mage förklarar mycket av rutinerna. En häst är byggd för att äta små mängder nästan hela tiden, som den skulle ha gjort ute på en betesmark. Magsäcken är liten i förhållande till kroppen och klarar inte stora måltider. Därför fördelas fodret på flera tillfällen per dag, och en häst som står länge utan mat riskerar att få ont i magen.\n\nHästar behöver också motion. Det kan vara att gå i hage, bli riden eller tränad på olika sätt. Ridning är en sport men också ett sätt att samarbeta med hästen. För att det ska fungera måste ryttaren vara lugn och tydlig.\n\nTill de dagliga sysslorna hör också att mocka boxen, alltså att ta bort spillning och blöt strö. Det är tungt arbete som görs varje dag, året om. Många stall drivs som föreningar där medlemmarna turas om, och den som vill rida får ofta räkna med att arbeta i stallet också.\n\nI stallet finns också regler för säkerhet. Man ska till exempel inte gå bakom en häst utan att den vet att man är där. Hästar kan bli rädda och sparka om de känner sig hotade.\n\nAlla hästar står inte i box. I lösdrift går hästarna ute större delen av dygnet med tillgång till ett skydd, vilket ligger närmare deras naturliga liv. Boxar ger å andra sidan bättre möjlighet att hålla koll på varje enskild häst. Vilken lösning som är bäst diskuteras, och svaret beror ofta på den enskilda hästen och på stallets förutsättningar.\n\nAtt ta hand om en häst kräver ansvar och kunskap. Många som rider lär sig tidigt att samarbeta med djuret och förstå dess behov. Hästar kan också vara viktiga för människors välmående, eftersom närheten till djur ofta gör oss lugnare och gladare.\n\nDärför är hästar inte bara sportdjur utan också viktiga vänner för många människor.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad äter hästar ofta i stallet?",
+        "type": "ord",
+        "q": "Vad är hö enligt texten?",
         "options": [
-          "Ost",
-          "Ris",
-          "Bär",
-          "Hö"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "literal",
-        "q": "Varför borstar man hästen?",
-        "options": [
-          "För att den ska bli trött",
-          "För att göra den snabbare",
-          "För att hålla den ren och se skador",
-          "För att den ska äta bättre"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Hur mycket vatten kan en häst dricka?",
-        "options": [
-          "Mycket lite",
-          "Inget alls",
-          "Flera liter",
-          "En kopp"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inferens",
-        "q": "Varför ska man vara försiktig bakom en häst?",
-        "options": [
-          "Den kan springa iväg",
-          "Den kan hoppa högt",
-          "Den kan bli hungrig",
-          "Den kan sparka"
+          "Ströet som läggs på golvet i boxen",
+          "En blandning av spannmål och mineraler",
+          "Färskt gräs som klipps varje morgon",
+          "Torkat gräs som innehåller viktiga näringsämnen"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad är viktigt för att rida bra?",
+        "q": "Varför delas hästens foder upp på flera tillfällen per dag?",
         "options": [
-          "Att vara lugn och tydlig",
-          "Att ropa högt",
-          "Att springa bredvid",
-          "Att stå stilla"
+          "För att stallpersonalen ska hinna mocka mellan gångerna",
+          "För att fodret annars blir dåligt i värmen",
+          "För att magsäcken är liten och hästen är byggd för att äta lite hela tiden",
+          "För att hästen ska hinna vila ordentligt mellan måltiderna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär det att mocka boxen?",
+        "options": [
+          "Att byta ut hela golvet i boxen mot nytt material",
+          "Att borsta hästen innan den släpps ut i hagen",
+          "Att ta bort spillning och blöt strö ur boxen",
+          "Att fylla på med hö och friskt vatten till hästen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför varnar texten för att gå bakom en häst utan att den vet om det?",
+        "options": [
+          "För att hästen då kan sluta äta resten av dagen",
+          "För att man lätt trampar på hästens svans i mörkret",
+          "För att hästen inte kan vända sig om inne i boxen",
+          "För att en häst som känner sig hotad kan bli rädd och sparka"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vilken fördel med lösdrift lyfter texten fram?",
+        "options": [
+          "Att hästarna är ute större delen av dygnet, nära sitt naturliga liv",
+          "Att varje enskild häst blir lättare att hålla noggrann koll på",
+          "Att hästarna behöver betydligt mindre foder under vintern",
+          "Att stallet slipper ha regler om säkerhet och skötsel"
         ],
         "correct": 0
       },
       {
-        "type": "inferens",
-        "q": "Vad kan hästar ge människor?",
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap om att sköta en häst?",
         "options": [
-          "Lugn och glädje",
-          "Pengar och lyx",
-          "Mat och dryck",
-          "Sömn och vila"
+          "Att det kräver kunskap, dagligt arbete och förståelse för hästens behov",
+          "Att det främst handlar om att lära sig rida tillräckligt bra",
+          "Att det är enkelt så länge hästen får mat och vatten varje dag",
+          "Att det bara passar den som äger en egen gård på landet"
         ],
         "correct": 0
       }
@@ -34936,68 +34936,68 @@
     "text": "Hästar är byggda för att röra sig snabbt och smidigt. Deras kroppar är anpassade för att springa långa sträckor och reagera snabbt på faror. En häst har långa ben med starka muskler som gör att den kan galoppera i hög fart.\n\nHovarna är en viktig del av hästens kropp. De fungerar som skydd för benen och hjälper hästen att stå stadigt. Hovar måste skötas noggrant och ibland får hästar skor av en hovslagare. Skorna skyddar hovarna från att slitas för mycket.\n\nEn häst kan inte kräkas. Matsmältningen går bara åt ett håll, vilket gör att den inte kan göra sig av med något olämpligt den råkat äta. Det är en av anledningarna till att foder hanteras så noggrant i stall, och till att kolik, alltså ont i magen, är en av de vanligaste allvarliga åkommorna hos hästar.\n\nHästens rygg är också viktig, särskilt när den bär en ryttare. Därför är det viktigt att sadeln passar bra. Om sadeln sitter fel kan hästen få ont.\n\nHästar sover dessutom på ett ovanligt sätt. De kan låsa lederna i benen och sova stående, vilket gör att de snabbt kan fly om något händer. Djup sömn kräver däremot att de lägger sig ner, och det gör de bara korta stunder och helst när någon annan häst står vakt.\n\nHästar kommunicerar med kroppsspråk. De använder öron, svans och kropp för att visa hur de känner sig. Till exempel kan bakåtriktade öron visa att hästen är irriterad eller rädd.\n\nDet finns olika gångarter hos hästar. De vanligaste är skritt, trav och galopp. Skritt är långsam och lugn, medan galopp är snabbast. Ryttare tränar ofta på att växla mellan dessa gångarter.\n\nHästens sinnen är också väl utvecklade. Den har bra hörsel och kan upptäcka ljud långt bort. Synen är bred eftersom ögonen sitter på sidan av huvudet. Det gör att hästen kan se nästan runt hela sig.\n\nTrots den breda synen finns det två punkter där hästen inte ser något alls: rakt framför nosen och rakt bakom sig. Det förklarar varför man inte ska närma sig en häst bakifrån utan att först säga till, och varför en häst kan reagera starkt på något den plötsligt får syn på alldeles intill.\n\nVissa raser har fler gångarter än de tre vanliga. Islandshästen kan till exempel tölta, en jämn gångart där hästen alltid har minst en fot i marken, vilket gör ritten ovanligt mjuk.\n\nAlla dessa egenskaper gör hästen till ett fantastiskt djur som både är starkt och känsligt.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad hjälper hästens ben den att göra?",
+        "type": "inferens",
+        "q": "Varför hanteras hästens foder så noggrant enligt texten?",
         "options": [
-          "Simma långt",
-          "Springa snabbt",
-          "Flyga högt",
-          "Gräva djupt"
+          "För att hästen tuggar långsamt och behöver äta i lugn och ro",
+          "För att hästen inte kan kräkas upp något olämpligt den råkat äta",
+          "För att foder annars kan fastna i hovarna och börja skava",
+          "För att hästen bara kan äta medan den står stilla i boxen"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad gör en hovslagare?",
+        "type": "ord",
+        "q": "Vad betyder kolik i texten?",
         "options": [
-          "Matar hästen",
-          "Tvättar hästen",
-          "Sätter skor på hovarna",
-          "Rider hästen"
+          "En sorts sko som hovslagaren sätter på hoven",
+          "En gångart som bara islandshästar behärskar",
+          "Ont i magen, en av de vanligaste allvarliga åkommorna",
+          "En muskel i hästens bakben som lätt blir stel"
         ],
         "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Varför är sadeln viktig?",
+        "q": "Varför kan en häst sova stående?",
         "options": [
-          "För färgen",
-          "För att skydda ryggen",
-          "För att göra hästen snabb",
-          "För att den ska bli tyngre"
+          "För att den saknar plats att lägga sig ner i boxen",
+          "För att den kan låsa lederna i benen och snabbt fly om något händer",
+          "För att den bara sover några minuter åt gången varje natt",
+          "För att ryggen tar skada om den ligger ner för länge"
         ],
         "correct": 1
       },
       {
         "type": "inferens",
-        "q": "Vad betyder bakåtriktade öron?",
+        "q": "Varför bör man säga till innan man närmar sig en häst bakifrån?",
         "options": [
-          "Hästen är glad",
-          "Hästen sover",
-          "Hästen är hungrig",
-          "Hästen är irriterad"
+          "För att hästen annars hinner gå iväg mot hagen på egen hand",
+          "För att ljudet av steg får hästen att sluta äta sitt foder",
+          "För att hästens hörsel är betydligt sämre än dess syn",
+          "För att hästen inte ser något alls rakt bakom sig och kan bli skrämd"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vilken gångart är snabbast?",
+        "q": "Vilken gångart beskrivs som ovanligt mjuk att rida?",
         "options": [
-          "Skritt",
-          "Trav",
-          "Galopp",
-          "Stopp"
+          "Skritt, eftersom hästen går långsamt och lugnt",
+          "Galopp, eftersom hästen då rör sig som snabbast",
+          "Tölt, där hästen alltid har minst en fot i marken",
+          "Trav, eftersom benen rör sig parvis i takt"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Var sitter hästens ögon?",
+        "q": "Vad kan hästen visa med bakåtriktade öron enligt texten?",
         "options": [
-          "Framtill",
-          "Under huvudet",
-          "På sidan av huvudet",
-          "Bak på huvudet"
+          "Att den är hungrig och vill ha mer hö",
+          "Att den håller på att somna stående",
+          "Att den är irriterad eller rädd",
+          "Att den vill byta till en snabbare gångart"
         ],
         "correct": 2
       }
@@ -35019,68 +35019,68 @@
     "text": "Det finns många olika typer av hästar i världen. De skiljer sig åt i storlek, färg och användning. Vissa hästar är stora och starka, medan andra är små och snabba.\n\nEn ponny är en mindre häst som ofta används av barn. Trots sin storlek kan ponnyer vara mycket starka och uthålliga. Större hästar används ofta inom ridning, tävling och arbete.\n\nDet finns också olika raser av hästar. En ras är en grupp hästar med liknande egenskaper. Till exempel finns det raser som är bra på att hoppa och andra som passar bättre för dressyr.\n\nRaserna har uppstått genom avel, alltså genom att människor valt vilka hästar som ska få föl. Under lång tid avlades hästar för arbete: att dra plog, bära ryttare i strid eller transportera varor. När maskinerna tog över de uppgifterna började man i stället avla för sport och fritid, och det syns tydligt i dagens raser.\n\nEn vanlig indelning är kallblod och varmblod. Kallblodshästar är tyngre och lugnare och användes traditionellt till skogs- och jordbruksarbete. Varmblodshästar är lättare och snabbare och används mest inom ridsport. Indelningen har inget med kroppstemperatur att göra, utan är ett gammalt uttryck för temperament.\n\nFärgen på hästar varierar också. Vanliga färger är brun, svart, vit och grå. Vissa hästar har fläckar eller speciella mönster.\n\nHästar används i många olika sammanhang. De kan vara tävlingsdjur inom sporter som hoppning och galopp. De används också inom terapi, där människor får rida för att må bättre både fysiskt och psykiskt.\n\nI Sverige finns flera egna raser. Nordsvensk brukshäst och ardenner är kallblod som fortfarande används i skogen, och gotlandsrusset är en liten, härdig ponny som funnits på Gotland i århundraden. Att bevara sådana raser handlar delvis om kulturhistoria och delvis om att behålla genetisk variation.\n\nI vissa delar av världen används hästar fortfarande i arbete, till exempel för att dra vagnar eller arbeta på gårdar. Det visar hur mångsidiga hästar är.\n\nAvel väcker också kritik. När en viss kroppsform blir populär i tävlingssammanhang avlas den fram allt mer utpräglat, och hos vissa raser har det lett till problem med leder, andning eller fruktsamhet. Att välja efter utseende snarare än efter hälsa är ett problem som hästen delar med många andra husdjur.\n\nOavsett typ eller ras behöver alla hästar omsorg, mat och motion. De är levande varelser som kräver respekt och förståelse.\n\nAtt lära sig om olika hästar gör det lättare att ta hand om dem på rätt sätt.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad är en ponny?",
+        "type": "ord",
+        "q": "Vad betyder avel enligt texten?",
         "options": [
-          "En stor häst",
-          "En liten häst",
-          "En vild häst",
-          "En gammal häst"
+          "Att hästar tränas inför en tävling i hoppning",
+          "Att människor väljer vilka hästar som ska få föl",
+          "Att en häst byter päls när årstiden ändras",
+          "Att flera raser blandas ihop i samma hage"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad är en ras?",
+        "q": "Vad skiljer kallblod från varmblod enligt texten?",
         "options": [
-          "En plats där hästar tävlar",
-          "En sadel av ett särskilt slag",
-          "En grupp med liknande egenskaper",
-          "En färg som pälsen kan ha"
+          "Kallblod har lägre kroppstemperatur än varmblod",
+          "Kallblod finns bara i Sverige, varmblod i övriga Europa",
+          "Kallblod är tyngre och lugnare, varmblod lättare och snabbare",
+          "Kallblod kan bara ridas på vintern, varmblod på sommaren"
         ],
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vilken färg nämns i texten?",
+        "type": "inferens",
+        "q": "Varför ändrades aveln när maskinerna tog över arbetet?",
         "options": [
-          "Brun",
-          "Gul",
-          "Blå",
-          "Grön"
+          "För att hästar då behövdes för sport och fritid i stället för arbete",
+          "För att alla gamla raser försvann helt under samma period",
+          "För att hästar slutade kunna dra plogar och tunga vagnar",
+          "För att maskiner krävde att hästarna blev betydligt större"
         ],
         "correct": 0
       },
       {
-        "type": "inferens",
-        "q": "Vad kan hästar användas till i terapi?",
+        "type": "literal",
+        "q": "Vilken svensk ras beskrivs som en liten och härdig ponny?",
         "options": [
-          "Laga mat till stallet",
-          "Frakta varor mellan gårdar",
-          "Bygga hus av trä",
-          "Hjälpa människor må bättre"
+          "Nordsvensk brukshäst, som används i skogen",
+          "Ardenner, som också räknas som ett kallblod",
+          "Varmblod, som mest används inom ridsport",
+          "Gotlandsruss, som funnits på Gotland i århundraden"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vad används hästar till i vissa länder?",
+        "q": "Vilken kritik mot avel tar texten upp?",
         "options": [
-          "Dyka",
-          "Spela musik",
-          "Flyga",
-          "Dra vagnar"
+          "Att avel gör att alla hästar blir exakt likadana",
+          "Att avel kräver att hästarna hålls inomhus året om",
+          "Att avel gör hästar dyrare än de flesta andra husdjur",
+          "Att utseende kan gå före hälsa och ge problem med leder och andning"
         ],
         "correct": 3
       },
       {
-        "type": "inferens",
-        "q": "Vad behöver alla hästar?",
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap om olika hästtyper?",
         "options": [
-          "Omsorg och motion",
-          "Pengar och lyx",
-          "Kläder och skor",
-          "Bilar och vagnar"
+          "Att raserna skiljer sig åt, men att alla hästar behöver omsorg och respekt",
+          "Att bara de största raserna klarar av att arbeta på en gård",
+          "Att färgen på hästen avgör vad den kan användas till",
+          "Att svenska raser alltid är bättre lämpade än utländska"
         ],
         "correct": 0
       }
@@ -35102,68 +35102,68 @@
     "text": "Ridning är en populär aktivitet där människor samarbetar med hästar. För att rida behöver man utrustning som hjälm, sadel och träns. Hjälmen skyddar huvudet om man skulle falla av.\n\nNär man rider lär man sig att ge signaler till hästen. Det kan vara med händerna, benen eller rösten. Hästen lär sig att förstå dessa signaler genom träning.\n\nHur en häst lär sig är värt att förstå. Den lär sig framför allt av att något obehagligt upphör: när ryttaren tar i tygeln och släpper efter i samma stund som hästen svarar rätt, förstår hästen vad som efterfrågades. Timing är därför viktigare än styrka. En signal som ges för sent säger ingenting, hur tydlig den än är.\n\nStraff fungerar dåligt av samma skäl. En häst kopplar sällan ihop en tillsägelse med något som hände en stund tidigare, och en rädd häst lär sig långsammare än en lugn. Modern hästträning bygger därför mer på att belöna rätt svar än på att rätta fel.\n\nDet finns olika typer av ridning. I hoppning ska hästen ta sig över hinder. I dressyr handlar det om att utföra rörelser med precision och samspel. Båda kräver träning och tålamod.\n\nTräning är viktigt för både häst och ryttare. Hästen behöver bygga muskler och kondition, medan ryttaren måste träna balans och teknik. Det är också viktigt att vila mellan träningspassen.\n\nRyttarens vikt spelar också roll. En allmän tumregel är att ryttare och utrustning tillsammans inte bör väga mer än omkring en femtedel av hästens vikt, även om gränsen diskuteras och beror på hästens byggnad och kondition.\n\nEn tränare kan hjälpa till att utveckla ridningen. Tränaren ger råd och ser till att både häst och ryttare utvecklas på ett säkert sätt.\n\nSäkerhet är alltid viktigt vid ridning. Man ska alltid använda hjälm och följa regler i stallet. Det minskar risken för olyckor.\n\nTävling finns på alla nivåer. Lokala klubbtävlingar arrangeras för nybörjare med låga hinder och korta program, medan de högsta nivåerna kräver år av träning. Att det finns en väg uppåt i små steg är en av anledningarna till att många fortsätter länge.\n\nRidning är dessutom en av få sporter där kvinnor och män tävlar mot varandra på samma villkor, ända upp till olympisk nivå. I Sverige är samtidigt en stor majoritet av dem som rider flickor och kvinnor.\n\nRidning kan vara både roligt och utmanande. Det kräver samarbete, tålamod och respekt för hästen.\n\nMånga människor fortsätter att rida hela livet eftersom det ger både motion och glädje.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad skyddar hjälmen?",
-        "options": [
-          "Benet",
-          "Huvudet",
-          "Armarna",
-          "Ryggen"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Hur ger man signaler till hästen?",
-        "options": [
-          "Med mat och godsaker",
-          "Med händer, ben och röst",
-          "Med färger och tyger",
-          "Med lampor och ljud"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad gör man i hoppning?",
-        "options": [
-          "Springer fort",
-          "Sover länge",
-          "Hoppar hinder",
-          "Simmar långt"
-        ],
-        "correct": 2
-      },
-      {
         "type": "inferens",
-        "q": "Varför är träning viktig?",
+        "q": "Varför säger texten att timing är viktigare än styrka i ridning?",
         "options": [
-          "För att bli trött",
-          "För att tävla direkt",
-          "För att bygga styrka och teknik",
-          "För att vila"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vad gör en tränare?",
-        "options": [
-          "Städar stallet",
-          "Ger råd och hjälp",
-          "Köper hästar",
-          "Matar djur"
+          "För att en stark ryttare gör hästen rädd på lång sikt",
+          "För att en signal som ges för sent inte säger hästen någonting",
+          "För att hästen bara reagerar på ljud, aldrig på händer och ben",
+          "För att ryttaren måste hinna byta gångart innan hindret kommer"
         ],
         "correct": 1
       },
       {
         "type": "inferens",
-        "q": "Vad kräver ridning?",
+        "q": "Varför fungerar straff dåligt när man tränar en häst?",
         "options": [
-          "Mycket pengar",
-          "Tur och slump",
-          "Fullständig tystnad",
-          "Tålamod och samarbete"
+          "För att hästen då börjar lyda alla ryttare utan skillnad",
+          "För att hästen sällan kopplar tillsägelsen till det som hände tidigare",
+          "För att straff är förbjudet enligt reglerna i alla stall",
+          "För att hästen glömmer bort hela träningspasset efteråt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad är skillnaden mellan hoppning och dressyr enligt texten?",
+        "options": [
+          "I hoppning rider man ensam, medan man i dressyr alltid rider i par",
+          "I hoppning används träns, medan man i dressyr bara använder sadel",
+          "I hoppning tar sig hästen över hinder, i dressyr utförs rörelser med precision",
+          "I hoppning tävlar bara vuxna, medan dressyr är till för ungdomar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför nämner texten en tumregel om ryttarens vikt?",
+        "options": [
+          "För att lätta ryttare alltid vinner fler tävlingar",
+          "För att vikten avgör vilken hjälm man måste välja",
+          "För att hästens förmåga att bära beror på dess byggnad och kondition",
+          "För att tunga ryttare måste byta till en annan gångart"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad säger texten om ridning som tävlingssport?",
+        "options": [
+          "Att bara de högsta nivåerna räknas som riktig tävling",
+          "Att kvinnor och män tävlar mot varandra på samma villkor",
+          "Att lokala klubbtävlingar kräver flera års förberedelse",
+          "Att alla tävlingar använder hinder av samma höjd"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad är textens huvudbudskap om att träna en häst?",
+        "options": [
+          "Att styrka och beslutsamhet är det som avgör resultatet",
+          "Att den som rider mest också blir bäst automatiskt",
+          "Att hästen lär sig snabbast när ryttaren höjer rösten",
+          "Att träning bygger på timing, belöning, tålamod och respekt för hästen"
         ],
         "correct": 3
       }
@@ -35186,67 +35186,67 @@
     "questions": [
       {
         "type": "literal",
-        "q": "Vad användes hästar till förr?",
+        "q": "Var och när skedde domesticeringen av hästen enligt texten?",
         "options": [
-          "Transport och arbete",
-          "Endast till lek",
-          "Matlagning i hemmet",
-          "Musik och underhållning"
+          "På stäpperna i nuvarande Ukraina och Kazakstan för femtusen år sedan",
+          "I norra Europa strax innan järnvägen byggdes ut på 1800-talet",
+          "På Gotland under samma tid som de första städerna växte fram",
+          "I Mellanöstern ungefär samtidigt som de första vagnarna byggdes"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Vad krävs för att bygga förtroende?",
+        "q": "Varför säger texten att hästen förändrade nästan allt?",
         "options": [
-          "Stor snabbhet",
-          "Tid och tålamod",
-          "Mycket pengar",
-          "Fysisk styrka"
+          "För att hästen gav både kött och mjölk till många familjer",
+          "För att människor kunde färdas snabbare, vilket påverkade handel och krig",
+          "För att hästen kunde bära tyngre laster än någon vagn",
+          "För att hästen gjorde att människor kunde sluta att gå helt"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad är ridterapi?",
+        "type": "ord",
+        "q": "Vad betyder det att avstånd mättes i dagsritter?",
         "options": [
-          "En tävling mellan ryttare",
-          "En lek för nybörjare",
-          "En behandling med hästar",
-          "En resa till en hästgård"
+          "Att man räknade hur många hästar en resa krävde",
+          "Att man bara fick rida under dagtid, aldrig på natten",
+          "Att en sträcka beskrevs utifrån hur många dagar den tog till häst",
+          "Att alla vägar delades upp i lika långa etapper"
         ],
         "correct": 2
       },
       {
-        "type": "ord",
-        "q": "Vad betyder djurens välfärd?",
+        "type": "literal",
+        "q": "Varför minskade antalet hästar i Sverige under 1900-talets mitt?",
         "options": [
-          "Att djur arbetar",
-          "Att djur tävlar",
-          "Att djur säljs",
-          "Att djur mår bra"
+          "För att nya lagar om djurskydd gjorde det svårare att hålla häst",
+          "För att sjukdomar spred sig snabbt bland hästarna i landet",
+          "För att betesmarkerna planterades igen med skog i hela landet",
+          "För att järnvägen och senare bilen tog över hästens roll som transport"
         ],
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Hur lever hästar i naturen?",
+        "type": "inferens",
+        "q": "Varför kan en häst som står ensam bli stressad enligt texten?",
         "options": [
-          "Ensamma",
-          "I flock",
-          "I burar",
-          "Under vatten"
+          "För att den då får för lite motion under dagen",
+          "För att hästar lever i flock och behöver se och höra andra hästar",
+          "För att den inte kan låsa lederna och sova stående",
+          "För att den behöver en människa i närheten hela tiden"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
-        "q": "Vad måste människor ge hästar?",
+        "type": "sammanfatta",
+        "q": "Vilken helhetsbild ger texten av relationen mellan häst och människa?",
         "options": [
-          "Bilar och vagnar",
-          "Kläder och skor",
-          "Pengar och guld",
-          "Mat och omsorg"
+          "Att den alltid har byggt på ömsesidig omtanke och respekt",
+          "Att den saknar betydelse sedan bilen tog över transporterna",
+          "Att den handlar om sport och inget annat i dagens Sverige",
+          "Att den är mycket gammal och nyttig, men att omsorgen om djuren är ny"
         ],
         "correct": 3
       }
