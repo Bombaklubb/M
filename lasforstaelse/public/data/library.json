@@ -394,7 +394,7 @@
         "options": [
           "Att man aldrig ska låna",
           "Att man får behålla allt",
-          "Att suddgummin är hemliga utan någon som helst förändring",
+          "Att man får behålla saker man lånat om man glömmer bort det",
           "Att man ska lämna tillbaka och säga förlåt om man glömmer"
         ],
         "correct": 3
@@ -423,7 +423,7 @@
           "Bara på sten",
           "På papper och ibland på dator eller surfplatta",
           "Bara i sand",
-          "Bara på väggar, för att det skulle gå snabbare"
+          "Bara på griffeltavlor som man suddar med en trasa"
         ],
         "correct": 1
       },
@@ -464,7 +464,7 @@
         "type": "inferens",
         "q": "Varför var griffeltavlor bra?",
         "options": [
-          "För att de var mjuka utan någon som helst förändring",
+          "För att de var mjuka och gick att vika ihop i fickan",
           "För att de gav läxor",
           "För att de sjöng",
           "För att man kunde sudda och använda dem många gånger"
@@ -721,7 +721,7 @@
           "Att el kommer från godis",
           "Att naturen är liten",
           "Att många små handlingar tillsammans gör skillnad",
-          "Att små lampor lyser starkast för säkerhets skull"
+          "Att små lampor lyser starkare än de stora gör"
         ],
         "correct": 2
       }
@@ -1045,7 +1045,7 @@
         "q": "Vad visar berättelsen om att lära sig?",
         "options": [
           "Att man aldrig får räkna",
-          "Att man alltid ska ge upp för säkerhets skull",
+          "Att man ska ge upp om det inte går på en gång",
           "Att hjälp och träning kan göra att man lyckas",
           "Att rytm är farligt"
         ],
@@ -6270,7 +6270,7 @@
         "type": "literal",
         "q": "Vilket dilemma kring namn beskriver texten?",
         "options": [
-          "Att namn bör bytas till svenska namn oavsett, annars går handlingen inte att följa oavsett vad andra tyckte",
+          "Att namn alltid bör bytas till svenska, eftersom en läsare annars inte kan följa handlingen alls",
           "Att ett \"talande\" namn kan tappa sin effekt, och översättaren måste välja mellan att behålla eller anpassa.",
           "Att namn i originalet alltid saknar betydelse och därför inte kräver några val.",
           "Att namn bara översätts när de tillhör lärare, men aldrig när de tillhör elever."
@@ -6281,7 +6281,7 @@
         "type": "inferens",
         "q": "Hur beskriver texten arbetet med humor i översättning?",
         "options": [
-          "Man kan ofta ersätta ett skämt ord för ord och få exakt samma effekt för säkerhets skull",
+          "Man kan ofta ersätta ett skämt ord för ord, eftersom humor fungerar likadant i alla språk",
           "Humor bör tas bort för att undvika missförstånd i ett nytt språk.",
           "Humor kräver ibland att man skapar en ny lösning som fyller samma funktion i målspråket.",
           "Humor är alltid universell och påverkas inte av språk eller kultur."
@@ -6367,7 +6367,7 @@
           "Att moral är oviktig i kriser eftersom regler då upphör att gälla.",
           "Att det bara är resultatet som spelar roll, aldrig metoden.",
           "Att det som fungerar snabbt inte automatiskt är rätt, särskilt om det skadar någons frihet.",
-          "Att effektiva handlingar alltid är rättfärdiga om de minskar konflikter och ingenting annat"
+          "Att effektiva handlingar alltid är rättfärdiga, eftersom resultatet är det som räknas"
         ],
         "correct": 2
       },
@@ -6388,7 +6388,7 @@
         "options": [
           "Att gränser aldrig behövs eftersom människor naturligt väljer rätt.",
           "Att övertramp kan börja kännas som praktiska genvägar när de blir vanliga eller sker under stress.",
-          "Att etik alltid blir enklare när fler personer är inblandade i ett beslut men bara om det behövdes",
+          "Att etik alltid blir enklare när fler är inblandade, eftersom ansvaret då delas mellan alla",
           "Att institutioner automatiskt förhindrar all maktmissbruk."
         ],
         "correct": 1
@@ -6471,7 +6471,7 @@
         "options": [
           "Att fanfiction, fanart och tillgängliga läsformer kan ge fler perspektiv och fler sätt att delta.",
           "Att man stänger diskussioner direkt när någon uttrycker osäkerhet.",
-          "Att man bara godkänner medlemmar som kan citera hela boken utantill, för att undvika missförstånd",
+          "Att man bara godkänner medlemmar som kan citera hela boken, så att nivån hålls hög i gruppen",
           "Att man undviker alla nya tolkningar för att inte riskera konflikt."
         ],
         "correct": 0
@@ -6520,7 +6520,7 @@
         "q": "Hur tolkas dementorerna i texten?",
         "options": [
           "Som en bild av ett tillstånd där energi och mening försvinner, liknande depressionens tyngd.",
-          "Som en humoristisk detalj som mest ska göra skolmiljön mer spännande under hela den perioden",
+          "Som en humoristisk detalj vars enda syfte är att göra skolmiljön lite mer spännande",
           "Som ett bevis på att Harry aldrig känner rädsla, bara irritation.",
           "Som en symbol för att minnen alltid är positiva och därför ofarliga."
         ],
@@ -7291,7 +7291,7 @@
           "För att material kan förstöras och inte gå att använda igen",
           "För att sopor försvinner",
           "För att det blir roligare",
-          "För att det blir fler sopor, för att det skulle gå snabbare"
+          "För att det då blir fler sopor än vad bilarna kan hämta"
         ],
         "correct": 0
       },
@@ -7301,7 +7301,7 @@
         "options": [
           "För att det alltid är gratis",
           "För att sopor är varma",
-          "För att glas inte väger något men bara under vissa förutsättningar",
+          "För att glas inte väger något och därför är gratis att frakta",
           "För att det ofta behövs mindre energi än att ta nytt från naturen"
         ],
         "correct": 3
@@ -7371,7 +7371,7 @@
         "type": "inferens",
         "q": "Varför blir det bättre när Diego saktar ner?",
         "options": [
-          "För att trummor försvinner redan innan något annat hände",
+          "För att trummorna låter tystare när man spelar sakta",
           "För att de kan lyssna på varandra och spela tillsammans",
           "För att Leila blir arg",
           "För att klassen går ut"
@@ -7804,7 +7804,7 @@
         "options": [
           "Hon menade att hjälpsamhet kan ge goda saker tillbaka",
           "Hon ville ha fler bullar",
-          "Hon tyckte inte det var roligt att hjälpa av en slump",
+          "Hon tyckte inte att det var roligt att hjälpa till",
           "Hon var hungrig och tänkte bara på mat"
         ],
         "correct": 0
@@ -7963,7 +7963,7 @@
         "q": "Varför ritade de en ny karta?",
         "options": [
           "De ville att någon i framtiden ska hitta deras skatt",
-          "Meja behövde öva sig på att rita för säkerhets skull",
+          "Meja behövde öva sig på att rita raka streck",
           "De hade tappat den gamla kartan",
           "De ville göra en läxa"
         ],
@@ -9568,7 +9568,7 @@
           "För att de gör läxorna åt eleverna",
           "För att de tar bort alla bollar",
           "För att de kan hjälpa om någon blir ledsen eller om det blir bråk",
-          "För att de delar ut godis varje dag, för att undvika missförstånd"
+          "För att de delar ut godis till alla elever varje rast"
         ],
         "correct": 2
       },
@@ -10758,7 +10758,7 @@
         "q": "Vad tyckte simläraren om hur de gjorde?",
         "options": [
           "Att de borde ha vänt om",
-          "Att de borde ha skällt på någon på exakt samma sätt som förut",
+          "Att de borde ha skällt på den som lämnade grinden öppen",
           "Att de gjorde rätt som väntade lugnt och följde informationen",
           "Att de borde ha åkt taxi direkt"
         ],
@@ -11000,7 +11000,7 @@
       {
         "q": "Vad skrev eleverna i sin logg efter lektionen?",
         "options": [
-          "Vilken mat de åt till lunch på exakt samma sätt som förut",
+          "Vilken mat de åt till lunch och hur den smakade",
           "Hur många böcker de lånade",
           "Vad som gjorde pulsen hög och vad som fick den att sjunka",
           "Vilka som vann en tävling"
@@ -12389,7 +12389,7 @@
         "options": [
           "Korgen lämnas kvar i boden vid bryggan",
           "Bamse cyklar hem och ger upp letandet",
-          "Skalman gömmer korgen för säkerhets skull",
+          "Skalman gömmer korgen i sin egen ryggsäck",
           "Vargen hjälper till att städa parken som tack"
         ],
         "correct": 3,
@@ -13185,7 +13185,7 @@
         "options": [
           "Att barn inte hade någon fantasi",
           "Att vuxna förbjöd lek",
-          "Att det inte fanns några material alls men bara om det behövdes",
+          "Att det inte fanns några material alls att tillverka av",
           "Att många familjer hade mindre pengar och använde det som fanns"
         ],
         "correct": 3
@@ -13195,7 +13195,7 @@
         "q": "Varför säger texten att historia inte bara handlar om kungar och krig?",
         "options": [
           "För att kungar aldrig funnits",
-          "För att skolor inte får prata om krig, för att undvika missförstånd",
+          "För att skolor inte får prata om krig med yngre elever",
           "För att krig alltid är påhittade",
           "För att vanliga människors liv också visar hur samhället förändras"
         ],
@@ -13383,7 +13383,7 @@
         "q": "Vad hittar Sofia vid bäcken?",
         "options": [
           "En sten",
-          "Ett äpple oavsett vad andra tyckte",
+          "Ett äpple och en handfull gula löv",
           "Skräp som en plastpåse och en burk",
           "En fisk"
         ],
@@ -13417,7 +13417,7 @@
         "options": [
           "För att djur gillar skräp",
           "För att djur kan fastna i den eller tro att den är mat",
-          "För att vatten alltid blir farligt och ingenting annat",
+          "För att vatten alltid blir farligt för små djur",
           "För att plastpåsen är varm"
         ],
         "correct": 1
@@ -13922,7 +13922,7 @@
         "options": [
           "Att form, material och krafter samarbetar för att göra bron säker",
           "Att broar bara är för cyklar",
-          "Att broar inte behöver testas utan att det fick några konsekvenser",
+          "Att broar inte behöver testas om de ser stabila ut",
           "Att alla broar är lika"
         ],
         "correct": 0
@@ -13979,7 +13979,7 @@
         "q": "Varför jämför texten nätverket med en väg som kan få \"för mycket trafik\"?",
         "options": [
           "För att servrar flyttar på sig",
-          "För att internet använder bilar, för att det hade fungerat förut",
+          "För att internet skickas längs samma vägar som bilar kör på",
           "För att mycket data samtidigt kan göra att vissa paket blir sena",
           "För att wifi alltid är farligt"
         ],
