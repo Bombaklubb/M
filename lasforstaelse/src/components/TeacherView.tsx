@@ -40,14 +40,15 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
       setAuthenticated(true);
       loadLibraryStats();
     } catch (err) {
-      // Om det misslyckas, försök med lokalt lösenord (fallback)
-      if (password === 'Korsängen') {
-        setAuthenticated(true);
-        loadLibraryStats();
-        setStatsError('Kunde inte ansluta till statistikserver - visar lokal data');
-      } else {
-        setError('Fel lösenord');
-      }
+      // Här låg tidigare en kontroll mot ett lösenord skrivet rakt i koden.
+      // Den följde med i den byggda filen som varje elev laddar ner, gick att
+      // läsa i webbläsarens utvecklarverktyg, och gav åtkomst även när
+      // serverns lösenord var ett annat. Enda kontrollen är nu serverns.
+      setError(
+        err instanceof Error && err.message === 'Fel lösenord'
+          ? 'Fel lösenord'
+          : 'Kunde inte nå statistikservern. Försök igen om en stund.'
+      );
     }
 
     setLoading(false);
