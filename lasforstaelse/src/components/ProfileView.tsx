@@ -81,6 +81,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
           <h1 className="text-3xl font-extrabold text-indigo-900 dark:text-indigo-300">Min profil</h1>
           <button
             onClick={onClose}
+            aria-label="Stäng profilen"
             className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-full transition"
           >
             <svg

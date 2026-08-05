@@ -34,7 +34,11 @@ export const SetupView: React.FC<SetupViewProps> = ({
 }) => {
   const [textCounts, setTextCounts] = useState<Record<number, number>>({});
   const [loading, setLoading] = useState(true);
-  const [selectedGrade, setSelectedGrade] = useState<number>(4);
+  // Förvalet utgick alltid från nivå 4, så en elev i åk 1 fick byta varje
+  // gång. Utgå från den nivå eleven senast läste när den är känd.
+  const [selectedGrade, setSelectedGrade] = useState<number>(
+    lastCompletedText?.grade ?? 4
+  );
 
   useEffect(() => {
     getTextCountByGrade().then((counts) => {
@@ -211,6 +215,8 @@ export const SetupView: React.FC<SetupViewProps> = ({
                   <motion.button
                     key={item.grade}
                     onClick={() => setSelectedGrade(item.grade)}
+                    aria-label={getGradeLabel(item.grade)}
+                    aria-pressed={item.grade === selectedGrade}
                     className={cn(
                       "relative py-2 md:py-3 rounded-xl font-bold text-sm transition-all duration-200",
                       item.grade === selectedGrade

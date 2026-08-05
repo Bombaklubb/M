@@ -28,6 +28,10 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
   // istället för ett inaktuellt värde fångat i en gammal closure.
   const speakingRef = useRef(false);
   const pausedRef = useRef(false);
+  // Sätts av utterance.onstart. Används bara för att kunna visa ett besked när
+  // uppläsningen aldrig kommer igång – aldrig för att avbryta den.
+  const startedRef = useRef(false);
+  const [ingenUppläsning, setIngenUppläsning] = useState(false);
 
   useEffect(() => { speakingRef.current = speaking; }, [speaking]);
   useEffect(() => { pausedRef.current = paused; }, [paused]);
@@ -92,9 +96,14 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     });
   }, []);
 
-  const startFallbackTimer = useCallback((speechRate: number) => {
+  // startFromElapsed = hur långt in i uppläsningen vi redan är, i millisekunder.
+  // Vid återupptagning efter paus måste tidslinjen fortsätta där den pausades.
+  // Tidigare nollställdes starttiden här, vilket skrev över den justering som
+  // togglePause precis hade gjort – markeringen hoppade då tillbaka till första
+  // ordet medan ljudet fortsatte mitt inne i texten.
+  const startFallbackTimer = useCallback((speechRate: number, startFromElapsed = 0) => {
     const timings = getWordTimings(speechRate);
-    startTimeRef.current = performance.now();
+    startTimeRef.current = performance.now() - startFromElapsed;
 
     const tick = () => {
       if (!speakingRef.current || pausedRef.current) return;
@@ -121,6 +130,7 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     setSpeaking(false);
     setPaused(false);
     setCurrentWordIndex(-1);
+    setIngenUppläsning(false);
     utteranceRef.current = null;
     boundaryWorkedRef.current = false;
   }, [supported]);
@@ -129,18 +139,20 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     stop();
   }, [text, stop]);
 
-  const speak = useCallback(() => {
-    if (!supported) return;
-    window.speechSynthesis.cancel();
-    if (timerRef.current) cancelAnimationFrame(timerRef.current);
-    boundaryWorkedRef.current = false;
-
+  // Bygger en utterance med all händelsehantering samlad på ett ställe.
+  // Start och hastighetsbyte byggde tidigare varsin kopia, som hann glida isär.
+  const buildUtterance = useCallback((speechRate: number) => {
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'sv-SE';
-    utterance.rate = rate;
+    utterance.rate = speechRate;
     if (swedishVoiceRef.current) {
       utterance.voice = swedishVoiceRef.current;
     }
+
+    utterance.onstart = () => {
+      startedRef.current = true;
+      setIngenUppläsning(false);
+    };
 
     utterance.onboundary = (event) => {
       if (event.name === 'word') {
@@ -155,42 +167,59 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
       }
     };
 
-    utterance.onend = () => {
+    const avsluta = () => {
       if (timerRef.current) cancelAnimationFrame(timerRef.current);
       setSpeaking(false);
       setPaused(false);
       setCurrentWordIndex(-1);
       utteranceRef.current = null;
     };
+    utterance.onend = avsluta;
+    utterance.onerror = avsluta;
 
-    utterance.onerror = () => {
-      if (timerRef.current) cancelAnimationFrame(timerRef.current);
-      setSpeaking(false);
-      setPaused(false);
-      setCurrentWordIndex(-1);
-      utteranceRef.current = null;
-    };
+    return utterance;
+  }, [text]);
 
+  const startSpeaking = useCallback((speechRate: number) => {
+    if (!supported) return;
+    window.speechSynthesis.cancel();
+    if (timerRef.current) cancelAnimationFrame(timerRef.current);
+    boundaryWorkedRef.current = false;
+    startedRef.current = false;
+
+    const utterance = buildUtterance(speechRate);
     utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
     setSpeaking(true);
     setPaused(false);
     setCurrentWordIndex(0);
+    setIngenUppläsning(false);
 
-    setTimeout(() => {
+    window.setTimeout(() => {
       if (!boundaryWorkedRef.current) {
-        startFallbackTimer(rate);
+        startFallbackTimer(speechRate);
       }
     }, 200);
-  }, [supported, text, rate, startFallbackTimer]);
+
+    // Saknar enheten installerade röster rapporterar webbläsaren ändå att
+    // talsyntes finns, och uppläsningen startar aldrig. Utan det här beskedet
+    // ser eleven bara knappen växla till Pausa/Stoppa utan att höra något.
+    // Uppläsningen avbryts inte – en långsam röstmotor får komma igång sent.
+    window.setTimeout(() => {
+      if (!startedRef.current && !boundaryWorkedRef.current) {
+        setIngenUppläsning(true);
+      }
+    }, 3000);
+  }, [supported, buildUtterance, startFallbackTimer]);
+
+  const speak = useCallback(() => startSpeaking(rate), [startSpeaking, rate]);
 
   const togglePause = useCallback(() => {
     if (!supported) return;
     if (paused) {
       window.speechSynthesis.resume();
       if (!boundaryWorkedRef.current) {
-        startTimeRef.current = performance.now() - pausedAtRef.current;
-        startFallbackTimer(rate);
+        startFallbackTimer(rate, pausedAtRef.current);
       }
       setPaused(false);
     } else {
@@ -201,52 +230,14 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     }
   }, [supported, paused, rate, startFallbackTimer]);
 
+  // Byte av hastighet startar om uppläsningen med den nya farten. Sker det
+  // under en paus måste pausläget släppas, annars visar knappen "Fortsätt"
+  // medan ljudet spelar och ordmarkeringen står stilla.
   const handleRateChange = (newRate: number) => {
     setRate(newRate);
     if (speaking) {
-      window.speechSynthesis.cancel();
-      if (timerRef.current) cancelAnimationFrame(timerRef.current);
-      boundaryWorkedRef.current = false;
-
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'sv-SE';
-      utterance.rate = newRate;
-      if (swedishVoiceRef.current) {
-        utterance.voice = swedishVoiceRef.current;
-      }
-      utterance.onboundary = (event) => {
-        if (event.name === 'word') {
-          boundaryWorkedRef.current = true;
-          const charIndex = event.charIndex;
-          const wordIdx = wordsRef.current.findIndex(
-            (w) => charIndex >= w.start && charIndex < w.end
-          );
-          if (wordIdx !== -1) {
-            setCurrentWordIndex(wordIdx);
-          }
-        }
-      };
-      utterance.onend = () => {
-        if (timerRef.current) cancelAnimationFrame(timerRef.current);
-        setSpeaking(false);
-        setPaused(false);
-        setCurrentWordIndex(-1);
-      };
-      utterance.onerror = () => {
-        if (timerRef.current) cancelAnimationFrame(timerRef.current);
-        setSpeaking(false);
-        setPaused(false);
-        setCurrentWordIndex(-1);
-      };
-      utteranceRef.current = utterance;
-      window.speechSynthesis.speak(utterance);
-      setCurrentWordIndex(0);
-
-      setTimeout(() => {
-        if (!boundaryWorkedRef.current) {
-          startFallbackTimer(newRate);
-        }
-      }, 200);
+      pausedAtRef.current = 0;
+      startSpeaking(newRate);
     }
   };
 
@@ -359,6 +350,16 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
               </button>
             ))}
           </div>
+
+          {ingenUppläsning && (
+            <p
+              role="status"
+              className="w-full text-xs text-amber-700 dark:text-amber-300"
+            >
+              Uppläsningen kom inte igång. Enheten verkar sakna en installerad
+              röst – texten går fortfarande att läsa som vanligt.
+            </p>
+          )}
         </div>
       )}
 
