@@ -6173,7 +6173,7 @@
     "text": "I Harry Potter-böckerna är det lätt att fastna för dueller, magiska föremål och stora avslöjanden. Men en stor del av seriens spänning kommer från något mer igenkännligt: hur makt fungerar i vardagen. Hogwarts är inte bara en äventyrsplats, utan också en institution med regler, rangordning och informella normer. Därför blir skolan en bra miljö för att undersöka hur människor anpassar sig när auktoritet känns både nödvändig och hotfull.\n\nEtt tydligt exempel är hur \"säkerhet\" används som argument. När hotet från Voldemort växer, blir det lättare att acceptera inskränkningar: fler kontroller, hårdare straff och misstänksamhet mot avvikare. Det här är inte unikt för trollkarlsvärlden. I många samhällen legitimeras nya regler genom att de presenteras som ett skydd mot en yttre fiende. Problemet är att rädslan ofta sprider sig inåt. Plötsligt börjar människor leta efter skyldiga bland sina egna, och gränsen mellan försvar och förtryck suddas ut.\n\nDolores Umbridge fungerar som en symbol för den här typen av makt. Hon behöver inte kasta stora förbannelser för att förändra skolan. I stället styr hon genom formulär, dekret och straff som paketeras som \"ordning\". Hennes makt är byråkratisk: den låter korrekt på papper, men blir brutal i praktiken. Hon får också människor att själva övervaka varandra. När elever rapporterar, viskar och gissar vem som är illojal skapas ett klimat där många lydigt följer regler de egentligen ogillar.\n\nSamtidigt visar serien att motstånd inte alltid är dramatiskt. Det kan handla om att vägra spela med i ryktesspridning, att dela information ansvarsfullt, eller att organisera sig utan att förlora sin etik. Dumbledores armé blir intressant just för att gruppen tränar försvar, men också tränar ett slags civilkurage: att agera tillsammans när institutionen sviker.\n\nSerien är dock inte en enkel lärobok om \"onda\" och \"goda\" makthavare. Många karaktärer samarbetar med fel personer av rädsla, bekvämlighet eller lojalitet. Andra tar risker men gör misstag. Det skapar en mer realistisk bild: i en pressad situation är det inte bara mod som avgör, utan även vilka informationskällor man litar på, vilka man vill skydda och vilka konsekvenser man är beredd att ta.\n\nOckså språket bär på makt. Ministeriets skrivelser låter sakliga och opersonliga, medan motståndet talar om enskilda människor. Skillnaden gör tydligt vem som räknar i antal och vem som räknar i namn.\n\nAtt läsa Harry Potter med fokus på makt gör därför berättelsen mindre sagolik och mer politiskt relevant. Magin blir inte huvudpoängen, utan ett verktyg som förstärker sådant som redan finns i mänskliga relationer: rädsla, kontroll, grupptillhörighet och möjligheten att säga nej.",
     "questions": [
       {
-        "type": "literal",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudsakliga fokus när den tolkar Harry Potter?",
         "options": [
           "Hur makt och auktoritet fungerar i vardagen, särskilt i en institution som Hogwarts.",
@@ -7169,7 +7169,7 @@
     "text": "Skolan har funnits länge, men den har inte alltid sett ut som i dag. Förr hade många barn inte skolplikt. Det betyder att de inte behövde gå i skolan varje dag. Många barn hjälpte till hemma eller arbetade.\n\nNär skolor fanns kunde klassrummen vara annorlunda. Det kunde vara fler elever i samma rum och mindre plats. Ibland skrev man på små tavlor, och man kunde ha bläckpennor. Läraren kunde vara sträng och barnen hade andra regler.\n\nI dag har vi skolplikt i Sverige. Det betyder att barn ska gå i skolan. Skolan ska hjälpa alla att lära sig läsa, skriva och räkna. I skolan finns ofta böcker, datorer och olika ämnen som NO, SO, bild och idrott.\n\nMen en sak är lika: barn har alltid behövt öva och lära sig nya saker. De har också behövt vänner och trygga vuxna. När du tänker på förr kan du jämföra. Då blir historia något som handlar om människors liv, inte bara om gamla saker.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder skolplikt?",
         "options": [
           "Att man får välja själv om man vill lära sig",
@@ -7252,7 +7252,7 @@
     "text": "När vi slänger saker kallas det sopor. Men många sopor kan bli nya saker om vi sorterar dem rätt. Att sortera betyder att lägga samma slags material tillsammans. Då kan man återvinna, alltså göra nytt av gammalt.\n\nPapper kan bli nytt papper. Plast kan bli ny plast, till exempel en hink eller en leksak. Glas kan smältas och bli nya flaskor.\n\nOm allt blandas i samma påse blir det svårare att återvinna. Matrester kan göra papper blött och smutsigt. Då kan papperet inte användas igen. Därför är det bra att ha olika kärl hemma och i skolan.\n\nNär vi återvinner sparar vi energi och natur. Det behövs ofta mindre energi att göra något av gammalt material än att ta nytt från naturen. Om vi tar mindre från naturen kan skogar, djur och vatten må bättre.\n\nDu kan hjälpa till genom att sortera din yoghurtburk, din papperslapp och ditt äppelskrutt. Det är små saker, men när många gör det blir det en stor skillnad.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder att sortera sopor?",
         "options": [
           "Att bränna papper",
@@ -8721,7 +8721,7 @@
     "text": "Att säga förlåt betyder att man visar att man ångrar något man gjort. Det kan vara när man har råkat säga något taskigt eller gjort någon ledsen. Ett bra förlåt kan vara att säga vad man ångrar och att försöka göra det bättre. Man kan också fråga: \"Hur kan jag hjälpa?\" När man vågar säga förlåt kan vänskap bli starkare.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder det att säga förlåt?",
         "options": [
           "Att man springer snabbare",
@@ -8887,7 +8887,7 @@
     "text": "Mod betyder inte att man aldrig är rädd. Mod kan vara att våga göra något även när det känns pirrigt. Det kan vara att räcka upp handen i klassen eller säga ifrån när någon blir retad. Ibland är mod att be om hjälp. När man tränar på mod blir det lättare nästa gång, eftersom man märker att man klarade det.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder mod enligt texten?",
         "options": [
           "Att alltid vinna över alla andra",
@@ -13307,7 +13307,7 @@
           "Att bränna allt direkt"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vilket material tar texten upp som exempel på något som sparar mycket energi att återvinna?",
@@ -14658,7 +14658,7 @@
           "Laga och göra helt igen"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad verkar texten vilja visa om kroppen?",
@@ -14738,7 +14738,7 @@
           "Att vattnet rinner nedåt"
         ],
         "correct": 2,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför kallar texten det ett kretslopp?",
@@ -14818,7 +14818,7 @@
           "Att ingen ville rösta"
         ],
         "correct": 2,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad visar berättelsen om hur beslut kan fattas i en grupp?",
@@ -15100,7 +15100,7 @@
         "correct": 3
       },
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder densitet enligt texten?",
         "options": [
           "Hur varmt något är",
@@ -15255,7 +15255,7 @@
     "text": "Orden rättvist och lika låter nästan som samma sak, men de betyder inte alltid exakt samma. När vi pratar om etik handlar det ofta om hur vi behandlar varandra och hur vi tar beslut som påverkar fler än en person. Då kan skillnaden mellan rättvist och lika bli viktig.\n\nAtt något är lika betyder att alla får samma sak. Till exempel: alla får exakt tio minuter på en dator, eller alla får samma antal pennor. Det kan kännas enkelt. Men ibland blir det ändå inte rättvist, eftersom människor kan ha olika behov.\n\nRättvist betyder att man försöker skapa en bra situation för alla, även om det inte blir exakt samma för alla. Tänk dig att tre personer ska nå upp till en hylla. En är lång, en är medellång och en är kort. Om alla får samma pall, kanske den långa personen inte behöver den alls, medan den korta personen fortfarande inte når. Om man vill vara rättvis kan man ge olika stöd: kanske den korta får en högre pall, den medellånga en liten pall och den långa ingen. Då får alla möjlighet att nå.\n\nI skolan kan detta hända ofta. En elev kanske behöver extra tid på ett prov, eller får lyssna på en text istället för att läsa. Någon annan kanske behöver sitta på en lugn plats för att kunna koncentrera sig. Det är inte fusk om målet är att alla ska få en rimlig chans att visa vad de kan.\n\nSamtidigt kan rättvisa kännas svårt, eftersom det kräver att man tänker efter. Vem behöver vad? Hur kan man veta att det är rimligt? Därför behövs regler och samtal. Det är också viktigt att skilja på behov och önskningar.\n\nEtt sätt att tänka är att fråga: Vad är målet? Om målet är att alla ska få samma tid med en spelkonsol hemma kan det vara lika som gäller. Om målet är att alla ska kunna göra läxan kan det vara rättvist att någon får mer hjälp.\n\nNär man diskuterar etik kan man också komma ihåg att rättvisa kan se olika ut i olika situationer. Ibland är det mest rättvist att behandla alla lika. I andra situationer är det mest rättvist att behandla människor olika, för att alla ska få en ärlig chans.\n\nAtt förstå skillnaden kan göra det lättare att lösa konflikter. I stället för att bara säga \"det är orättvist!\" kan man fråga: Menar jag att det inte är lika? Eller menar jag att någon inte får det stöd den behöver?",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder det att något är lika enligt texten?",
         "options": [
           "Att ingen får något",
@@ -16193,7 +16193,7 @@
           "Att något väger mycket"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför jämför texten celler med en motor?",
@@ -16273,7 +16273,7 @@
           "Ilsket och stressat"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad säger berättelsen om värdet av att spara gamla saker?",
@@ -16353,7 +16353,7 @@
           "Vattnets temperatur"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför är spåren av vatten på Mars viktiga enligt texten?",
@@ -16433,7 +16433,7 @@
           "Den som bestämmer utan att fråga"
         ],
         "correct": 2,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad försöker berättelsen visa om demokrati?",
@@ -16513,7 +16513,7 @@
           "Att man byter mellan olika sorters mat"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vilket verkar vara textens viktigaste budskap?",
@@ -19249,7 +19249,7 @@
           "Att han får torp och stöd men måste kunna kallas ut till krig"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför fanns det oro för bränder i staden?",
@@ -19411,7 +19411,7 @@
           "Att man tar bort saltet ur havsvatten så det kan bli dricksvatten"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför har kommunen satt upp solpaneler vid anläggningen?",
@@ -19514,7 +19514,7 @@
           "Att alla texter ska vara exakt lika långa"
         ],
         "correct": 2,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad lärde sig klassen mest av projektet enligt Jasmin?",
@@ -19595,7 +19595,7 @@
           "Att all mat smakar likadant överallt"
         ],
         "correct": 0,
-        "type": "literal"
+        "type": "inferens"
       },
       {
         "q": "Vad vill texten visa om smak som helhet?",
@@ -19676,7 +19676,7 @@
           "Att det bara gäller vissa städer"
         ],
         "correct": 2,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vilken grundfråga handlar barnarbete om enligt texten?",
@@ -19757,7 +19757,7 @@
           "En kedja av metall i naturen"
         ],
         "correct": 0,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vilken insikt vill texten ge läsaren?",
@@ -19838,7 +19838,7 @@
           "Bearbetade och förändrade digitalt"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför är bilder särskilt kraftfulla enligt texten?",
@@ -19886,7 +19886,7 @@
           "Att matchen spelas utan publik"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför nämns passningsspel som något som kräver mycket?",
@@ -19978,7 +19978,7 @@
           "Att laget försöker vinna tillbaka bollen snabbt"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad tycker Samira är det viktigaste minnet från dagen?",
@@ -20199,7 +20199,7 @@
           "Att flytta bollen framåt steg för steg"
         ],
         "correct": 3,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför droppar en mittfältare ner i början av anfallet?",
@@ -20243,7 +20243,7 @@
           "Att man aldrig får passa bakåt"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vad är textens huvudidé?",
@@ -20361,7 +20361,7 @@
           "Att Finland styr alla beslut på Åland"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför ville många ålänningar hellre höra till Sverige efter 1917?",
@@ -21732,7 +21732,7 @@
     "text": "Matsvinn betyder att mat som kunde ha ätits slängs. Det kan vara en banan som blivit brun, en portion pasta som står kvar på tallriken, eller bröd som kastas fast det hade kunnat frysas. Det kan låta som en liten sak, men när man räknar ihop allt blir det en stor miljöfråga.\n\nFör att förstå varför matsvinn påverkar miljön behöver man tänka på hela resan som maten gör. Den börjar i odling, djurhållning, fiske eller fabriker. För att producera mat behövs mark, vatten, energi och arbete. Om maten slängs har alla dessa resurser använts i onödan.\n\nNär mat hamnar i soporna kan det också bildas växthusgaser. Matavfall som bryts ner utan syre, till exempel i vissa deponier, kan skapa metan. Metan är en stark växthusgas.\n\nVarför slängs mat? En orsak är planering. Om man handlar mer än man hinner äta blir det rester som glöms bort längst in i kylskåpet. En annan orsak är missförstånd om datum. \"Bäst före\" betyder ofta att maten kan vara okej även efter datumet. \"Sista förbrukningsdag\" är däremot viktigare, särskilt för känsliga varor.\n\nLösningar finns på flera nivåer. Hemma kan man planera inköp, skriva en enkel lista, och använda rester i nya rätter. I skolan kan man jobba med tydligare information om portioner. Det viktiga är att förstå systemet och hitta smartare vanor.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder matsvinn?",
         "options": [
           "Att man äter för mycket",
@@ -22558,7 +22558,7 @@
         "correct": 0
       },
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder pollinering enligt texten?",
         "options": [
           "Att pollen flyttas mellan blommor så frön kan bildas",
@@ -22663,7 +22663,7 @@
         "correct": 0
       },
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder det att ungdomsrådet skulle vara \"rådgivande\"?",
         "options": [
           "Att rådet får bestämma utan politiker",
@@ -22962,7 +22962,7 @@
     "text": "Många som läser Harry Potter säger att Hogwarts nästan känns som en riktig plats. Det beror inte bara på magi och spännande händelser, utan på hur världen byggs upp med regler, detaljer och vardag. På Hogwarts finns lektioner som kan vara tråkiga, lärare som är olika stränga, konflikter i korridorerna och små rutiner som återkommer: uggleposten, elevhemmen, måltiderna och poängen som delas ut. När en fantasivärld har vardag blir den lättare att tro på.\n\nSamtidigt är världen inte helt logisk, och det är ofta med flit. I berättelserna finns saker som väcker frågor: Varför använder trollkarlar ibland enkla saker när de har magi? Varför är vissa problem svåra att lösa trots att det finns kraftfulla besvärjelser? Författaren låter ibland logiken böja sig för att skapa spänning eller humor. Det gör att läsaren får fylla i luckor och fundera vidare.\n\nEn viktig del av känslan är också perspektivet. Vi ser mycket genom Harrys ögon, och han kan inte allt. Han missförstår, gissar och får veta nya saker i efterhand. Därför får läsaren upptäcka världen steg för steg. Hemligheter blir inte bara information, utan något som påverkar relationer: vem man litar på, vem som döljer något och vilka rykten som sprids.\n\nDessutom finns tydliga symboler. Elevhemmen står för olika ideal: mod, kunskap, lojalitet och ambition. Men böckerna visar att ingen är bara en sak. En elev kan vara modig och samtidigt rädd. En annan kan vara smart men ändå göra dåliga val. Just den blandningen gör att Hogwarts känns som en skola där riktiga människor skulle kunna gå.\n\nTill slut handlar det om att magin inte tar bort det mänskliga. Vänskap, sorg, avundsjuka och ansvar finns kvar. När läsaren känner igen det, blir det mindre viktigt om trapporna flyttar på sig. Då blir Hogwarts en plats man kan sakna, trots att den inte finns på en karta.",
     "questions": [
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudidé?",
         "options": [
           "Att Hogwarts känns trovärdigt eftersom världen har regler, detaljer och vardagliga inslag.",
@@ -23282,7 +23282,7 @@
     "text": "Att vara fan av Harry Potter kan betyda många saker. För vissa handlar det om att läsa om böckerna och känna trygghet i en bekant berättelse. För andra handlar det om att diskutera detaljer, hitta mönster och bygga teorier. I en fandom uppstår ofta ett slags gemenskap där man känner sig mindre ensam med sina intressen.\n\nTänk dig en bokcirkel på en skola. Gruppen består av olika personer: Maja som älskar språk och jämför svenska och engelska uttryck, Leo som har dyslexi men lyssnar på ljudbok och minns scenerna exakt, och Farah som helst pratar om karaktärernas val och moral. Det finns också en pensionerad granne, Sven, som ibland kommer förbi och berättar hur han upplevde böckernas lansering när hans barn var små. I samma rum kan olika generationer och olika sätt att läsa mötas.\n\nMen gemenskapen kan också skapa problem. Ibland blir diskussioner till tävlingar: vem kan mest, vem har \"rätt\" tolkning, eller vem har läst flest extramaterial? Då kan nya personer känna sig dumma och sluta delta.\n\nEn annan fråga är gränsen mellan fantasi och verklighet. Det kan vara roligt att kalla sig ett elevhem och skämta om \"mugglarproblem\", men ibland används sådana ord för att utesluta andra. Om man vill att en fandom ska vara välkomnande behöver man tänka på tonen: skämt som känns interna kan upplevas som stängda dörrar.\n\nSamtidigt kan fandom göra verklig skillnad. Många fan-grupper samlar in pengar till välgörenhet, ordnar läsprojekt eller skapar kreativa saker som fanfiction, fanart och musik. Där tränar man skrivande, samarbete och källkritik, eftersom man lär sig skilja på text, tolkning och rykten.\n\nDet viktigaste är kanske att komma ihåg varför man började: en berättelse som väckte känslor. Om gemenskapen hjälper fler att läsa, skapa och känna sig inkluderade, då har fandom blivit mer än underhållning. Den har blivit ett sätt att bygga broar mellan människor.",
     "questions": [
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudbudskap om att vara fan?",
         "options": [
           "Att fandom kan bli en gemenskap som både kan inkludera och skapa problem, beroende på hur man beter sig.",
@@ -23622,7 +23622,7 @@
         "correct": 2
       },
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder fiatpengar?",
         "options": [
           "Pengar som har värde för att vi litar på att de har det",
@@ -23749,7 +23749,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudbudskap om rättvisa?",
         "options": [
           "Att rättvisa är omöjligt att uppnå",
@@ -24613,7 +24613,7 @@
           "När en högtid alltid firas"
         ],
         "correct": 0,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Vilket exempel visar hur Zilan kombinerar olika delar av sitt liv?",
@@ -25346,7 +25346,7 @@
           "En studie om ungdomars sömnvanor"
         ],
         "correct": 0,
-        "type": "literal"
+        "type": "ord"
       },
       {
         "q": "Varför beskrivs FOMO som paradoxalt i texten?",
@@ -25476,7 +25476,7 @@
     "text": "Antibiotika är läkemedel som används för att döda bakterier eller hindra dem från att föröka sig. När antibiotika fungerar kan de rädda liv, till exempel vid lunginflammation, blodförgiftning eller infektioner efter operationer. Men det finns ett växande problem som gör att antibiotika ibland inte biter: antibiotikaresistens. Det betyder att bakterier förändras så att de klarar av medicinen och kan fortsätta spridas.\n\nFör att förstå resistens kan du tänka på bakterier som en stor grupp där individer inte är helt lika. När antibiotika ges dör de bakterier som är känsliga, men om några råkar ha egenskaper som gör att de överlever får de ett stort försprång. De kan då föröka sig och bli fler. På så sätt blir bakterierna i gruppen mer och mer motståndskraftiga. Det här är evolution i snabb version: variation, urval och spridning.\n\nBakterier kan bli resistenta på flera sätt. Ibland uppstår slumpmässiga mutationer (små förändringar i arvsmassan) som gör att antibiotika inte längre kan påverka bakterien som förr. Bakterier kan också utbyta genetisk information med varandra, nästan som att de \"lånar\" bra lösningar. Det gör att resistens kan spridas snabbt, även mellan olika bakteriearter.\n\nResistens är inget nytt fenomen. Redan Alexander Fleming, som upptäckte penicillinet, varnade i sin nobelföreläsning 1945 för att bakterier skulle kunna vänja sig vid medlet om det användes slarvigt. Att varningen kom samtidigt med genombrottet säger något om hur väl förloppet var förstått redan från början.\n\nVarför ökar resistensen? En viktig orsak är överanvändning och felanvändning. Om antibiotika tas när det inte behövs, till exempel vid virusinfektioner som förkylning (där antibiotika inte fungerar), utsätts bakterier i kroppen ändå för läkemedlet. Då ökar chansen att resistenta bakterier överlever och sprids. Ett annat problem är om man avbryter en kur för tidigt. Då kan de starkaste bakterierna, som klarat sig längst, bli kvar och börja växa igen.\n\nResistens hänger också ihop med hur antibiotika används i samhället. I vissa delar av världen har antibiotika använts mycket inom djurhållning, ibland för att förebygga sjukdom i stora besättningar. Det kan skapa resistenta bakterier som kan spridas via mat, vatten eller kontakter mellan människor och djur. I dag arbetar många länder för att minska den typen av användning, men det kräver både regler och kontroll.\n\nKonsekvenserna kan bli stora. Om antibiotika slutar fungera blir vanliga infektioner farligare. Operationer, cancerbehandlingar och intensivvård blir också mer riskfyllda, eftersom patienter då är extra sårbara för infektioner. Det betyder inte att vi \"är tillbaka på medeltiden\", men det betyder att modern sjukvård blir svårare utan fungerande antibiotika.\n\nUtvecklingen av nya antibiotika har samtidigt gått långsamt. De flesta antibiotika vi använder i dag bygger på upptäckter från mitten av 1900-talet. En förklaring är ekonomisk: ett läkemedel som ska användas i korta kurer och helst så sällan som möjligt är mindre lönsamt än ett som tas varje dag i decennier. Därför diskuteras nya sätt att finansiera forskningen.\n\nVad kan man göra? På individnivå handlar det om att använda antibiotika på rätt sätt: bara när läkare bedömer att det behövs, och att fullfölja behandlingen enligt ordination. På samhällsnivå handlar det om smittskydd, bättre hygien i vården, snabbare tester som visar om en infektion är bakterie eller virus, samt forskning som kan ta fram nya antibiotika och alternativa behandlingar.\n\nDet viktiga är att förstå att antibiotikaresistens inte är en \"skuldfälla\" där allt ligger på en person. Det är en gemensam utmaning. Bakterier är smarta på sitt sätt: de anpassar sig. Därför behöver vi också vara smarta – med kunskap, samarbete och tydliga rutiner – för att antibiotika ska fungera även i framtiden.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder antibiotikaresistens enligt texten?",
         "options": [
           "Att kroppen slutar behöva medicin",
@@ -27320,7 +27320,7 @@
           "Att hen väljer gymnasium genom att följa kompisarnas val"
         ],
         "correct": 1,
-        "type": "literal"
+        "type": "inferens"
       },
       {
         "q": "Vilken roll spelar morfars berättelse i texten?",
@@ -28175,7 +28175,7 @@
     "text": "Sociala medier beskrivs ofta som en plats där människor \"bara delar\" bilder, åsikter och vardag. Men bakom varje flöde finns en ekonomisk logik: uppmärksamhet är en resurs. Plattformar tjänar pengar på annonser och på att användare stannar kvar så länge som möjligt. Den här logiken kallas ibland uppmärksamhetsekonomi, och den påverkar både vad du ser och hur du ser på dig själv.\n\nAlgoritmerna i sociala medier är byggda för att förutsäga vad som får dig att fortsätta scrolla. De mäter beteenden: vilka inlägg du stannar vid, vad du kommenterar, vad du delar, och vilka videor du ser klart. Det leder ofta till att innehåll som väcker starka känslor prioriteras, eftersom känslor gör oss mer benägna att reagera. Det kan vara inspiration och humor, men också ilska och rädsla.\n\nFör individen kan detta påverka identiteten. I tonåren är identitet ofta under konstruktion: man testar roller, grupper och uttryck. Sociala medier kan ge stöd, gemenskap och möjlighet att hitta människor med samma intressen. Men de kan också skapa en känsla av att man alltid blir bedömd. Om en bild får få likes kan det kännas som ett socialt misslyckande, även om det egentligen bara handlar om timing, algoritmer eller slump.\n\nEn annan effekt är jämförelse. Flöden visar sällan vardagens \"mellanscener\": väntan, misslyckanden, tråkiga dagar. De visar höjdpunkter. När man jämför sitt eget liv, med alla sina detaljer, mot andras höjdpunkter kan man känna sig sämre. Det kan skapa stress och en jakt på perfektion. Samtidigt kan människor också använda plattformar för att visa mer ärliga sidor, och då kan flöden bli en plats för igenkänning snarare än jämförelse.\n\nUppmärksamhetsekonomin påverkar också samhällsdebatten. Om starka reaktioner belönas kan nyanserade resonemang få mindre plats. Det kan leda till att extremare ståndpunkter syns mer, inte för att de är vanligast, utan för att de är mest \"engagerande\". Dessutom kan desinformation spridas snabbt när den är formulerad för att chocka eller bekräfta en grupps identitet.\n\nVad kan man göra? Först behöver man förstå att flödet inte är neutralt. Det är ett urval. Att följa olika typer av källor, att ibland söka information aktivt och att ta pauser kan minska effekterna. Man kan också fundera på sin egen roll: varför delar jag detta? Vill jag informera, uttrycka mig, eller få bekräftelse? Bekräftelse är mänskligt, men när den blir det enda måttet på värde kan den bli farlig.\n\nDet finns också forskning som nyanserar bilden. Studier av ungas mående visar sällan ett enkelt samband mellan skärmtid och psykisk ohälsa. Vad man gör verkar spela större roll än hur länge: att aktivt skriva med vänner ser ut att fungera annorlunda än att passivt scrolla genom främlingars flöden. Den som redan mår dåligt söker sig dessutom oftare till skärmen, vilket gör det svårt att avgöra vad som är orsak och vad som är följd.\n\nPå samhällsnivå diskuteras reglering: transparens kring algoritmer, krav på att skydda unga användare, och ansvar för hur hat och desinformation hanteras. Det är inte enkelt, eftersom reglering också kan påverka yttrandefrihet. Men diskussionen visar att sociala medier inte bara är privata val, utan en del av den gemensamma infrastrukturen för kommunikation.\n\nAtt förstå uppmärksamhetsekonomin är att förstå att din tid och din reaktion är värdefull. När du ser det kan du börja använda plattformar mer som verktyg och mindre som miljöer som styr dig. Identitet formas fortfarande av dig och dina relationer i verkligheten, men det blir lättare att skydda den när du vet vilka krafter som försöker fånga din uppmärksamhet.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad menas med uppmärksamhetsekonomi enligt texten?",
         "options": [
           "Att plattformar tjänar på att användare stannar kvar och ser annonser",
@@ -28258,7 +28258,7 @@
     "text": "Många använder AI-verktyg i skolan och hemma: för att sammanfatta text, skapa idéer, öva språk eller få hjälp med programmering. Men en AI-modell är inte en neutral \"sanningmaskin\". Den är en statistisk modell som tränats på stora mängder data, och därför bär den på både styrkor och begränsningar från den värld den lärt sig av. För att förstå hur AI påverkar samhället behöver man förstå begrepp som träningsdata, bias och generalisering.\n\nEn AI-modell inom språk, som en chattbot, tränas genom att läsa enorma textmängder och lära sig mönster: vilka ord som ofta följer på andra, hur argument byggs, hur berättelser brukar fungera. Modellen får inte \"förståelse\" på samma sätt som en människa, men den kan bli mycket skicklig på att förutsäga rimliga svar. Det gör den användbar, men också riskabel om man tror att den alltid har rätt.\n\nBias betyder snedvridning. Om träningsdata innehåller mer text från vissa grupper, språk eller perspektiv kan modellen bli bättre på just dessa och sämre på andra. Bias kan också handla om stereotyper. Om materialet ofta kopplar vissa yrken till vissa kön kan modellen spegla det i sina svar, även om det inte är sant eller önskvärt. Det är viktigt att förstå att bias inte alltid är medvetet \"ondska\". Det kan vara en spegel av hur information producerats och sparats historiskt.\n\nEtt annat viktigt begrepp är generalisering: förmågan att ge rimliga svar på nya situationer. En modell kan vara bra på att härma mönster men ändå göra fel när frågan kräver exakt fakta, eller när den möter ovanliga exempel. Ibland kan den \"hallucinera\", alltså skapa ett svar som låter övertygande men som inte stämmer. Därför behöver användaren en kritisk roll: kontrollera källor, jämföra med pålitliga texter och förstå att ett snyggt svar inte är samma sak som ett sant svar.\n\nAI påverkar också makt. Den som kontrollerar vilka data som används, vilka mål modellen optimeras för och vilka regler som styr användningen kan påverka hur verktyget fungerar i praktiken. Om ett företag tjänar pengar på att du spenderar tid i en app kan det designa system som maximerar engagemang, inte nödvändigtvis lärande eller välmående. På samma sätt kan en skola använda AI på ett sätt som stärker elevers självständighet - eller på ett sätt som gör elever beroende av färdiga svar.\n\nDet finns också etiska frågor om data. Många modeller tränas på texter och bilder som skapats av människor som aldrig aktivt gett sitt medgivande. Samtidigt kan AI skapa nytt innehåll som liknar det den tränats på. Det leder till konflikter om upphovsrätt och rättvisa: vem får betalt, och vem får kontroll?\n\nI gymnasiet kan AI vara ett kraftfullt verktyg om den används rätt. Du kan använda den som en samtalspartner: be den förklara begrepp på olika nivåer, skapa övningsfrågor, föreslå struktur för en text eller ge dig alternativa perspektiv. Men du behöver fortfarande tänka själv. Om du låter AI göra hela arbetet tappar du träningsmomentet som skolan egentligen handlar om: att utveckla din egen förmåga att resonera.\n\nDet finns också en miljöfråga. Att träna en stor modell kräver mycket el, och varje fråga du ställer kostar energi i ett datacenter någonstans. Mängden är liten per fråga men stor i summa, och kylningen kräver dessutom vatten.\n\nAtt förstå AI handlar alltså inte bara om teknik, utan om samhälle. Träningsdata formar modellens beteende, bias påverkar vilka som gynnas eller missgynnas, och generalisering avgör när verktyget är pålitligt. När du ser det blir AI mindre magi och mer ett system som går att granska, diskutera och använda medvetet.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder bias enligt texten?",
         "options": [
           "Att AI bara fungerar på engelska språket",
@@ -28404,7 +28404,7 @@
           "Modeller är värdeneutrala om de är matematiskt formulerade"
         ],
         "correct": 0,
-        "type": "literal"
+        "type": "sammanfatta"
       }
     ],
     "imageUrl": "https://images.unsplash.com/photo-1484981138541-3d074aa97716?w=600&h=400&fit=crop",
@@ -28741,7 +28741,7 @@
     "text": "I nyheter, reklam och sociala medier presenteras ofta siffror som om de vore självklara bevis. \"Elever som gör X får högre betyg\", \"Människor som äter Y lever längre\", \"Den här metoden fungerar eftersom kurvan går upp\". Problemet är att data kan visa samband utan att säga något säkert om orsaker. Därför är det viktigt att förstå skillnaden mellan korrelation och kausalitet.\n\nKorrelation betyder att två saker förändras tillsammans. Om glassförsäljningen ökar samtidigt som antalet solbrända personer ökar kan vi säga att det finns en korrelation. Men det betyder inte att glass orsakar solbränna. Här finns en tredje faktor: varmt väder. Den tredje faktorn kallas ibland en \"confounder\" eller en bakomliggande variabel. Den kan skapa ett samband som ser starkt ut men som egentligen beror på något annat.\n\nKausalitet betyder att en sak faktiskt orsakar en annan. För att kunna säga något om kausalitet behöver man ofta mer än observationer. Ibland behöver man experiment där man förändrar en faktor och håller andra faktorer så lika som möjligt. Det är därför randomiserade kontrollerade studier ses som en \"guldstandard\" i medicinsk forskning. Om deltagare slumpas till två grupper, och bara den ena gruppen får en behandling, kan man jämföra resultaten med mindre risk att andra skillnader förklarar effekten.\n\nMen även experiment har problem. Först är det inte alltid etiskt eller praktiskt att experimentera. Man kan till exempel inte slumpa människor till att röka i tio år för att se effekterna. Då behöver man observationsstudier, och då blir källkritiken extra viktig. Dessutom kan resultat misstolkas även när studien är korrekt. Om en effekt är statistiskt signifikant betyder det inte att den är stor eller viktig i praktiken. En liten skillnad kan bli \"signifikant\" i en enorm studie, medan en relevant skillnad kan vara svår att upptäcka i en liten studie.\n\nEtt annat problem är selektionsbias. Det innebär att de som ingår i en studie inte är representativa. Om man till exempel undersöker sambandet mellan träning och välmående genom att fråga människor på ett gym får man en grupp som redan valt att vara där. Då riskerar man att överskatta hur lätt träning är för alla, eller hur väl den fungerar för alla.\n\nVi kan också luras av hur data presenteras. En graf kan börja på en ovanlig skala och få en liten förändring att se dramatisk ut. En rubrik kan lyfta fram en trend utan att nämna att variationen är stor. Och en procent kan låta stor utan att man förstår basen. Om en risk ökar med 50% kan det låta skrämmande, men om risken gick från 2 av 10 000 till 3 av 10 000 är ökningen fortfarande liten i absoluta tal.\n\nEn besläktad fälla är att bara de studier som visar ett tydligt resultat blir publicerade. De försök som inte gav något syns aldrig, och den samlade bilden blir därför skevare än verkligheten. Fenomenet brukar kallas publiceringsbias.\n\nDet betyder inte att data är värdelöst. Tvärtom är data ett av våra bästa verktyg för att förstå världen. Men data kräver tolkning, och tolkning kräver frågor. Vem har samlat in informationen? Hur? Vilka saknas? Finns det alternativa förklaringar? Vad säger andra studier?\n\nI ett samhälle där algoritmer sorterar information och där \"statistik\" ofta används som argument är förmågan att skilja korrelation från kausalitet en form av demokratiskt självförsvar. När du lär dig tänka så blir du svårare att manipulera, och du blir bättre på att delta i diskussioner som handlar om allt från hälsa och skola till ekonomi och klimat.",
     "questions": [
       {
-        "type": "literal",
+        "type": "ord",
         "q": "Vad betyder korrelation enligt texten?",
         "options": [
           "Att en sak orsakar en annan",
@@ -35218,7 +35218,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "ord",
         "q": "Vad betyder djurens välfärd?",
         "options": [
           "Att djur arbetar",
@@ -35323,7 +35323,7 @@
         "correct": 1
       },
       {
-        "type": "sammanfatta",
+        "type": "inferens",
         "q": "Vad menas med att rättigheterna är odelbara?",
         "options": [
           "Att inget land får välja bort en konvention",
@@ -36983,7 +36983,7 @@
         "correct": 1
       },
       {
-        "type": "textbevis",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudbudskap?",
         "options": [
           "ABBA förändrade svensk och internationell popmusik",
@@ -37813,7 +37813,7 @@
         "correct": 1
       },
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vad är huvudbudskapet?",
         "options": [
           "Solsystemet skapades mycket snabbt",
@@ -38062,7 +38062,7 @@
         "correct": 3
       },
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vilket huvudbudskap förmedlar texten?",
         "options": [
           "Tennis har inte förändrats",
@@ -38228,7 +38228,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vad är textens huvudsakliga budskap?",
         "options": [
           "Eftermäle formas av flera faktorer",
@@ -38300,7 +38300,7 @@
         "correct": 2
       },
       {
-        "type": "inferens",
+        "type": "sammanfatta",
         "q": "Vilket huvudbudskap förmedlar texten?",
         "options": [
           "Demokrati har utvecklats över tid",

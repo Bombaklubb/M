@@ -126,6 +126,21 @@ lib.forEach(t => {
 
     if (!q.q || !q.q.trim()) fel.push(`${plats}: tom frågetext`);
 
+    // Frågetypen styr vad profilen visar eleven om sina lässtrategier, så en
+    // felklassad fråga ger fel vägledning. Två mönster är entydiga nog att
+    // kontrollera automatiskt; övriga gränsfall bedöms för hand.
+    const fragetext = (q.q || '').toLowerCase();
+    // "Vad betyder <ett enda ord>?" – ett ord, inte ett påstående.
+    if (/^vad betyder ["'“]?[a-zåäöé-]+["'”]?( enligt texten| i texten)?\?$/.test(fragetext)
+        && q.type && q.type !== 'ord') {
+      varningar.push(`${plats}: frågar efter ett ords betydelse men har type "${q.type}" i stället för "ord"`);
+    }
+    // Frågor om textens huvudbudskap som helhet.
+    if (/(textens |^)(huvudbudskap|huvudidé|huvudsakliga budskap)/.test(fragetext)
+        && q.type && q.type !== 'sammanfatta') {
+      varningar.push(`${plats}: frågar efter textens huvudbudskap men har type "${q.type}" i stället för "sammanfatta"`);
+    }
+
     const alt = q.options || [];
     if (alt.length !== 4) fel.push(`${plats}: ${alt.length} svarsalternativ (ska vara 4)`);
     if (alt.some(o => !o || !o.trim())) fel.push(`${plats}: tomt svarsalternativ`);
