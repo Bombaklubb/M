@@ -113,6 +113,11 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
 
   const wordDef = activeWord ? getWordDefinition(activeWord) : null;
 
+  // Många texter, särskilt i de lägre årskurserna, innehåller inga ord som
+  // finns i ordlistan. Då ska raden om understrukna ord inte visas – den lovar
+  // annars en hjälp som inte finns någonstans i texten.
+  const harKlickbaraOrd = (text.match(/[a-zåäöéA-ZÅÄÖÉ]+/g) || []).some(hasExplanation);
+
   return (
     <div ref={containerRef} className={`relative ${className}`}>
       {renderText()}
@@ -139,10 +144,12 @@ export const TextWithGlossary: React.FC<TextWithGlossaryProps> = ({ text, classN
       )}
 
       {/* Info om klickbara ord */}
-      <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2">
-        <span className="inline-block w-6 border-b-2 border-dotted border-emerald-500 dark:border-slate-300"></span>
-        <span>Klicka på understrukna ord för förklaring, eller välj dem med tabb och enter</span>
-      </div>
+      {harKlickbaraOrd && (
+        <div className="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2">
+          <span className="inline-block w-6 border-b-2 border-dotted border-emerald-500 dark:border-slate-300"></span>
+          <span>Klicka på understrukna ord för förklaring, eller välj dem med tabb och enter</span>
+        </div>
+      )}
     </div>
   );
 };

@@ -158,8 +158,41 @@ export const WORD_DICTIONARY: Record<string, WordDefinition> = {
   'tolerans': { def: 'Att acceptera olikheter', ex: 'Tolerans gör samhället bättre.' },
   'kommunikation': { def: 'Utbyte av information', ex: 'God kommunikation löser problem.' },
   'relation': { def: 'Förhållande mellan människor', ex: 'De hade en nära relation.' },
-};
 
+  // Ord för de lägre årskurserna. Ordlistan bestod tidigare nästan bara av
+  // akademiska ord, som förekommer först i gymnasietexterna – 64 av 66 texter
+  // i åk 1 hade inte ett enda klickbart ord.
+  'puls': { def: 'Hur snabbt hjärtat slår. Du kan känna den på handleden', ex: 'Efter löpningen var pulsen hög.' },
+  'refräng': { def: 'Den del av en låt som kommer tillbaka flera gånger', ex: 'Alla sjöng med i refrängen.' },
+  'material': { def: 'Det som en sak är gjord av, till exempel trä, plast eller tyg', ex: 'Vilket material är stolen gjord av?' },
+  'nervös': { def: 'Orolig och pirrig inför något som ska hända', ex: 'Han var nervös före redovisningen.' },
+  'viska': { def: 'Prata så tyst att bara den närmaste hör', ex: 'Hon viskade svaret i mitt öra.' },
+  'spår': { def: 'Märken efter någon som gått förbi, till exempel fotavtryck i snön', ex: 'Vi följde djurets spår.' },
+  'skolplikt': { def: 'Regeln som säger att alla barn måste gå i skolan', ex: 'I Sverige har vi skolplikt.' },
+  'runsten': { def: 'En sten med gamla tecken inhuggna, rest för länge sedan', ex: 'Runstenen står kvar vid vägen.' },
+  'återvinna': { def: 'Göra nya saker av gammalt material i stället för att slänga', ex: 'Glas går att återvinna många gånger.' },
+  'sortera': { def: 'Lägga saker som hör ihop i samma hög', ex: 'Vi sorterar papper för sig och plast för sig.' },
+  'mellanmål': { def: 'Något litet man äter mellan de stora målen', ex: 'Hon tog en frukt som mellanmål.' },
+  'rastvakt': { def: 'En vuxen som håller koll på skolgården under rasten', ex: 'Rastvakten hjälpte till när det blev bråk.' },
+  'uppvärmning': { def: 'Lätt rörelse som gör kroppen redo för träning', ex: 'Uppvärmningen tog några minuter.' },
+  'muskler': { def: 'Delarna i kroppen som drar ihop sig så att du kan röra dig', ex: 'Musklerna blir varma när man springer.' },
+  'syre': { def: 'En gas i luften som kroppen behöver för att leva', ex: 'Blodet transporterar syre till kroppens celler.' },
+  'stack': { def: 'Myrornas bo, ofta en hög av barr och pinnar', ex: 'Myrorna hittade tillbaka till stacken.' },
+  'recension': { def: 'En text där någon berättar vad hen tyckte om en bok eller film', ex: 'Hon skrev en recension om boken.' },
+  'bibliotekarie': { def: 'Person som arbetar på ett bibliotek och hjälper till att hitta böcker', ex: 'Bibliotekarien tipsade om en deckare.' },
+  'utgåva': { def: 'En version av en bok, till exempel en med större bokstäver', ex: 'Det finns en utgåva med stor stil.' },
+  'sork': { def: 'Ett litet gnagande djur som liknar en mus', ex: 'Spåren kom kanske från en sork.' },
+  'fabrik': { def: 'Ett stort hus där maskiner tillverkar saker', ex: 'Kakorna bakas i en fabrik.' },
+  'takt': { def: 'Musikens jämna puls, den man klappar med i', ex: 'De räknade takten: ett, två, tre, fyra.' },
+  'balans': { def: 'Att kunna hålla sig upprätt utan att ramla', ex: 'Hon tränade balans på en linje.' },
+  'experiment': { def: 'Ett test man gör för att ta reda på något', ex: 'Klassen gjorde ett experiment med vatten.' },
+  'skörd': { def: 'När man tar in det som vuxit på åkern eller i odlingen', ex: 'Utan bin blir skörden mycket mindre.' },
+  'pollen': { def: 'Det gula pulvret i blommor som behövs för att nya frön ska bildas', ex: 'Bin flyttar pollen mellan blommor.' },
+  'knut': { def: 'Ett hårt fäste på ett rep eller snöre', ex: 'Han fick inte upp knuten på hopprepet.' },
+  'tyngdkraft': { def: 'Kraften som drar allt mot marken', ex: 'Tyngdkraften får äpplet att falla.' },
+  'smälta': { def: 'Bli flytande av värme, som is som blir vatten', ex: 'Snön smälte i solen.' },
+  'undersöka': { def: 'Titta noga på något för att ta reda på hur det är', ex: 'De undersökte vad som hände i glaset.' },
+};
 // Hitta svåra ord i en text
 export function findDifficultWords(text: string): string[] {
   const words = text.toLowerCase().match(/[a-zåäö]+/gi) || [];
