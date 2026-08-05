@@ -2628,7 +2628,7 @@
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Sagostund",
-    "text": "På kvällen släcker familjen lamporna i vardagsrummet. De tänder ett litet ljus på bordet. Maja läser högt ur en sagobok. Hennes lillebror. Noor lyssnar och håller sin filt. Utanför fönstret syns månen. Den lyser lugnt över husen i natten stilla.",
+    "text": "På kvällen släcker familjen lamporna i vardagsrummet. De tänder ett litet ljus på bordet. Maja läser högt ur en sagobok. Hennes lillebror Noor lyssnar och håller sin filt. Utanför fönstret syns månen. Den lyser lugnt över husen i den stilla natten.",
     "questions": [
       {
         "type": "literal",
@@ -2698,7 +2698,7 @@
       }
     ],
     "meta": {
-      "wordCount": 40,
+      "wordCount": 41,
       "fingerprint": "tema-ak1-tema-008",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
@@ -2794,7 +2794,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Cykel till skolan",
-    "text": "En morgon missar bussen hållplatsen där. Oskar väntar. Han blir först orolig. Då kommer grannen Fatima förbi med sin cykel. Hon frågar om Oskar vill åka bakpå. De cyklar lugnt till skolan och hinner före lektionen den första idag tillsammans.",
+    "text": "En morgon missar bussen hållplatsen där Oskar väntar. Han blir först orolig. Då kommer grannen Fatima förbi med sin cykel. Hon frågar om Oskar vill åka bakpå. De cyklar lugnt till skolan och hinner fram före första lektionen. Oskar är inte orolig längre.",
     "questions": [
       {
         "type": "literal",
@@ -2864,7 +2864,7 @@
       }
     ],
     "meta": {
-      "wordCount": 40,
+      "wordCount": 43,
       "fingerprint": "tema-ak1-tema-010",
       "generatedAt": "2026-03-14T00:00:00.000Z",
       "model": "manual"
