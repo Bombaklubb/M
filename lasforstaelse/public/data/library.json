@@ -30703,68 +30703,68 @@
     "text": "Människokroppen behöver energi för att fungera. Denna energi kommer från maten vi äter. När vi bryter ner maten i kroppen omvandlas den till näringsämnen som kan användas av cellerna.\n\nNedbrytningen börjar redan i munnen. Saliven innehåller ämnen som börjar bryta ner stärkelse, och därför kan en bit bröd smaka lite sött om man tuggar länge. I magsäcken fortsätter arbetet med hjälp av magsyra, och i tunntarmen tas näringen upp genom tarmväggen och förs vidare ut i blodet.\n\nKolhydrater, fetter och proteiner är de viktigaste energikällorna. Kolhydrater ger snabb energi, medan fetter lagras och används senare. Proteiner används främst för att bygga upp kroppen, men kan också ge energi. Kroppen behöver dessutom vitaminer och mineraler. De ger ingen energi i sig, men utan dem fungerar inte processerna som frigör energin ur maten.\n\nNär kroppen behöver energi sker kemiska processer i cellerna. Syre spelar en viktig roll i dessa processer. Utan syre kan kroppen inte producera energi lika effektivt. Det är därför andningen och pulsen ökar när du anstränger dig: kroppen behöver få in mer syre och transportera ut det till musklerna snabbare.\n\nBlodet sköter transporten. De röda blodkropparna binder syret i lungorna och släpper det där det behövs. Samtidigt tar de med sig koldioxid tillbaka, som är en restprodukt från energiproduktionen och som andas ut igen. På så sätt hänger andning, blodomlopp och energi ihop i ett enda kretslopp.\n\nHjärnan är särskilt beroende av en jämn tillförsel. Den utgör bara ett par procent av kroppsvikten men använder omkring en femtedel av all energi. Till skillnad från musklerna kan hjärnan knappt lagra något, vilket är en av förklaringarna till att det blir svårare att koncentrera sig när man är hungrig.\n\nFysisk aktivitet ökar energibehovet. Därför behöver personer som tränar mer också äta mer. Samtidigt är det viktigt att äta varierat för att få i sig alla näringsämnen. Behovet skiljer sig dessutom en hel del mellan olika människor. Ålder, kroppsstorlek och hur mycket man rör sig under dagen påverkar hur mycket energi som går åt under en dag, och därför finns det inget enda svar som passar alla.\n\nHur snabbt energin blir tillgänglig skiljer sig mellan olika sorters mat. Socker och vitt bröd tas upp snabbt och höjer blodsockret på kort tid, men effekten klingar också av fort. Grovt bröd, gryn och baljväxter bryts ner långsammare, vilket ger en jämnare tillförsel under längre tid. Det är en av anledningarna till att en frukost med gröt håller längre än en med enbart söta flingor.\n\nKroppen har dessutom ett eget lager att ta av. Överskott av kolhydrater sparas i levern och i musklerna, och det lagret räcker ungefär ett dygn. När det börjar ta slut går kroppen i högre grad över till att använda fett i stället.\n\nEn balanserad kost och regelbunden rörelse hjälper kroppen att fungera optimalt. Balanserad betyder inte att varje måltid måste vara perfekt, utan att helheten över tid innehåller det kroppen behöver. Sömnen hör också hit: när vi sover fylls energilagren långsamt på igen, och kroppen hinner reparera det som har slitits under dagen.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Var kommer energi ifrån?",
+        "type": "inferens",
+        "q": "Varför kan en bit bröd smaka sött om man tuggar länge?",
         "options": [
-          "Luft",
-          "Vatten",
-          "Mat",
-          "Sömn"
+          "För att tuggandet värmer upp brödet i munnen",
+          "För att magsyran hinner tränga upp i munhålan",
+          "För att saliven börjar bryta ner stärkelsen redan där",
+          "För att smaklökarna blir känsligare med tiden"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vilken roll har vitaminer och mineraler enligt texten?",
+        "options": [
+          "De är kroppens främsta källa till snabb energi",
+          "De ersätter behovet av proteiner i kosten",
+          "De ger ingen energi själva men behövs för att frigöra den ur maten",
+          "De lagras i levern och används först efter ett dygn"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vilket ämne ger snabb energi?",
+        "q": "Vad gör de röda blodkropparna enligt texten?",
         "options": [
-          "Vitaminer",
-          "Fett",
-          "Kolhydrater",
-          "Protein"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vad behövs för energiproduktion?",
-        "options": [
-          "Ljus",
-          "Koldioxid",
-          "Salt",
-          "Syre"
+          "De bryter ner stärkelse på väg genom tunntarmen",
+          "De lagrar överskott av kolhydrater i musklerna",
+          "De producerar den energi som cellerna behöver",
+          "De binder syre i lungorna och tar med koldioxid tillbaka"
         ],
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vad händer vid träning?",
+        "type": "inferens",
+        "q": "Varför blir det svårare att koncentrera sig när man är hungrig?",
         "options": [
-          "Ökat behov",
-          "Mindre behov",
-          "Ingen skillnad",
-          "Samma behov"
+          "För att hjärnan knappt kan lagra energi och behöver jämn tillförsel",
+          "För att magsyran stör signalerna mellan cellerna i kroppen",
+          "För att kroppen då prioriterar musklerna framför hjärnan",
+          "För att syreupptaget minskar när magsäcken är tom"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vad används protein främst till?",
+        "type": "inferens",
+        "q": "Varför håller en frukost med gröt längre än en med söta flingor?",
         "options": [
-          "Bygga kroppen",
-          "Ge snabb energi",
-          "Lagra fett",
-          "Kyler kroppen"
+          "För att grova livsmedel bryts ner långsammare och ger jämnare tillförsel",
+          "För att gröt innehåller betydligt fler vitaminer och mineraler",
+          "För att socker inte alls kan användas som energi av kroppen",
+          "För att gröt fyller magsäcken under en längre tid av dagen"
         ],
         "correct": 0
       },
       {
         "type": "sammanfatta",
-        "q": "Vad är viktigt för hälsa?",
+        "q": "Vad menar texten med att kosten ska vara balanserad?",
         "options": [
-          "Bara träning",
-          "Socker",
-          "Endast vila",
-          "Balanserad kost"
+          "Att varje enskild måltid behöver innehålla allt kroppen behöver",
+          "Att man bör äta exakt lika mycket vid varje måltid under dagen",
+          "Att energin helst ska komma från kolhydrater snarare än fett",
+          "Att helheten över tid ska innehålla det kroppen behöver"
         ],
         "correct": 3
       }
@@ -30786,68 +30786,68 @@
     "text": "I ett samhälle lever människor tillsammans trots att de kan ha olika bakgrund, åsikter och livssituationer. För att det ska fungera behövs regler, respekt och förståelse.\n\nRegler fyller flera funktioner. De gör vardagen förutsägbar, så att man vet vad som gäller i trafiken, i skolan och på en arbetsplats. De skyddar också den som är i underläge. Utan gemensamma regler skulle den starkaste eller den mest högljudda ofta få bestämma, oavsett vad som är rimligt.\n\nDemokrati innebär att människor får vara med och bestämma genom val. Alla röster ska ha lika värde. Samtidigt innebär det ansvar att lyssna på andra och respektera beslut. Demokrati handlar inte bara om att räkna röster. Om majoriteten alltid fick bestämma allt skulle mindre grupper riskera att aldrig få igenom något. Därför finns rättigheter som gäller även när de flesta tycker något annat, till exempel rätten att uttrycka en avvikande åsikt.\n\nMångfald är en styrka i samhället. När människor med olika erfarenheter möts kan nya idéer uppstå. Det kan handla om språk, kultur eller olika sätt att leva. I en grupp där alla har samma bakgrund är det lätt att missa problem som ingen råkat stöta på. En grupp med skilda erfarenheter upptäcker oftare vad som inte fungerar för andra än en själv.\n\nSamtidigt är mångfald inte automatiskt enkelt. Att förstå varandra kräver ansträngning, och missförstånd uppstår oftare när människor har olika referenser. Skillnaden mellan grupper som fungerar och grupper som fastnar handlar sällan om hur lika medlemmarna är, utan om hur de hanterar det som skiljer.\n\nKonflikter kan uppstå, men de kan lösas genom dialog. Att prata med varandra och försöka förstå olika perspektiv är viktigt. En konflikt behöver inte betyda att någon har fel. Ofta har båda sidor rimliga skäl, men utgår från olika saker: den ena tänker på rättvisa, den andra på trygghet. När det blir tydligt vad oenigheten egentligen gäller blir den också lättare att lösa.\n\nEtt begrepp som ofta nämns i sammanhanget är inkludering. Att vara inkluderad betyder mer än att få vara med. Det innebär att ens perspektiv faktiskt räknas när något ska bestämmas. En elev kan sitta med i en grupp utan att någon frågar vad hen tycker, och då är personen närvarande men inte delaktig.\n\nMycket av det som håller ihop ett samhälle sker utanför politiken. Föreningar, idrottsklubbar och grannar som hjälps åt bygger tillit mellan människor som annars kanske aldrig hade mötts. Forskare brukar kalla detta för socialt kapital. Det visar sig ofta vara avgörande just när något går fel: i områden där människor känner varandra löses problem snabbare, eftersom någon vet vem man ska fråga och vem som kan hjälpa till.\n\nGenom att visa hänsyn och samarbeta kan människor skapa ett tryggt och fungerande samhälle där fler känner sig inkluderade. Det arbetet blir aldrig helt färdigt. Samhällen förändras när nya människor kommer, när tekniken ändrar hur vi möts och när det som togs för självklart börjar ifrågasättas. Just därför är förmågan att lyssna på varandra och ompröva sina egna slutsatser minst lika viktig som själva reglerna.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad krävs för att leva tillsammans?",
+        "type": "inferens",
+        "q": "Varför skyddar gemensamma regler den som är i underläge?",
         "options": [
-          "Respekt",
-          "Tystnad",
-          "Likhet",
-          "Enighet"
+          "För att annars skulle den starkaste eller mest högljudda få bestämma",
+          "För att reglerna alltid skrivs av dem som har minst makt",
+          "För att den som är i underläge slipper följa lika många regler",
+          "För att regler gör att alla grupper blir precis lika stora"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vad innebär demokrati?",
+        "type": "inferens",
+        "q": "Varför räcker det inte att räkna röster i en demokrati?",
         "options": [
-          "En enda person bestämmer",
-          "Ingen alls får rösta",
-          "Alla får vara med och bestämma",
-          "Endast ledare bestämmer"
+          "För att det tar för lång tid att räkna alla röster noggrant",
+          "För att röster från olika delar av landet väger olika tungt",
+          "För att mindre grupper annars aldrig skulle få igenom något",
+          "För att valresultatet ändå måste godkännas av en domstol"
         ],
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vad kan mångfald leda till?",
+        "type": "inferens",
+        "q": "Varför upptäcker en grupp med skilda erfarenheter fler problem?",
         "options": [
-          "Färre idéer",
-          "Konflikter alltid",
-          "Nya idéer",
-          "Ingen förändring"
+          "För att den nästan alltid är större än en mer enhetlig grupp",
+          "För att medlemmarna oftare är oense och därför granskar mer",
+          "För att en grupp med samma bakgrund lätt missar det ingen själv råkat ut för",
+          "För att gruppen då har tillgång till fler språk och referenser"
         ],
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Hur kan konflikter lösas?",
+        "type": "inferens",
+        "q": "Vad avgör enligt texten om en grupp fungerar eller fastnar?",
         "options": [
-          "Ignorera",
-          "Bråka",
-          "Undvika",
-          "Dialog"
+          "Hur många medlemmar gruppen består av från början",
+          "Hur lika medlemmarna är varandra i bakgrund och åsikt",
+          "Hur tydligt gruppens regler har skrivits ner i förväg",
+          "Hur gruppen hanterar det som skiljer medlemmarna åt"
         ],
         "correct": 3
       },
       {
         "type": "ord",
-        "q": "Vad betyder inkludering?",
+        "q": "Vad betyder inkludering enligt texten?",
         "options": [
-          "Bara några få deltar",
-          "Ingen alls deltar",
-          "Endast vissa får delta",
-          "Alla känner sig delaktiga"
+          "Att alla i en grupp behandlas på exakt samma sätt",
+          "Att så många som möjligt får plats i varje grupp",
+          "Att den som vill vara med aldrig behöver nekas",
+          "Att ens perspektiv faktiskt räknas när något ska bestämmas"
         ],
         "correct": 3
       },
       {
         "type": "sammanfatta",
-        "q": "Vad är textens huvudbudskap?",
+        "q": "Vilken slutsats drar texten om arbetet med att leva tillsammans?",
         "options": [
-          "Att samlevnad bygger på respekt, dialog och verklig delaktighet",
-          "Att regler alltid bör vara så få som möjligt i ett samhälle",
-          "Att konflikter bäst undviks genom att låta majoriteten avgöra",
-          "Att människor fungerar bäst tillsammans när de liknar varandra"
+          "Att det aldrig blir färdigt och kräver förmåga att ompröva",
+          "Att det är avslutat när reglerna väl har blivit tydliga",
+          "Att det främst är politikernas ansvar att hålla igång",
+          "Att det blir enklare ju mer lika invånarna blir varandra"
         ],
         "correct": 0
       }
@@ -32031,68 +32031,68 @@
     "text": "Fotboll är en av världens mest populära sporter och spelas i nästan alla länder. Sporten kräver både fysisk uthållighet och samarbete mellan spelare. Målet är att göra fler mål än motståndaren.\n\nEn del av förklaringen till spridningen är att fotboll ställer små krav på utrustning. Det behövs i praktiken bara en boll och en yta att spela på. Två tröjor kan bli ett mål. Det gör att sporten går att spela nästan var som helst, oavsett hur mycket pengar som finns.\n\nReglerna är också förhållandevis få. En match är nittio minuter lång, spelarna får inte använda händerna om de inte är målvakt, och offsideregeln hindrar anfallare från att ställa sig och vänta framför motståndarens mål. Att grunderna går att lära sig på några minuter bidrar till att nya spelare snabbt kan vara med.\n\nFotboll har också en viktig social roll. Den kan förena människor från olika bakgrunder och skapa gemenskap. Många ungdomar deltar i lag och lär sig viktiga värderingar som respekt och lagarbete. I ett lag måste man samarbeta med personer man inte själv har valt, och det i sig är en övning som få andra sammanhang ger.\n\nFör många föreningar sträcker sig verksamheten längre än till träningarna. Ledare håller kontakt med skolor, ordnar läxhjälp eller ser till att den som inte har råd med utrustning ändå kan delta. Föreningen blir då en mötesplats i området snarare än enbart ett idrottslag.\n\nDamfotbollen har vuxit kraftigt under senare decennier. Under en period var den till och med förbjuden i flera länder, med motiveringen att sporten inte skulle passa kvinnor. När förbuden hävdes tog utvecklingen fart, och publiksiffrorna för landskamper och mästerskap har ökat snabbt under 2000-talet.\n\nProfessionell fotboll är en stor industri med klubbar, ligor och internationella turneringar. Spelare kan bli kända och inspirera andra. Pengarna kommer framför allt från tv-avtal, sponsorer och biljetter. Det har gjort de största klubbarna ekonomiskt starka, men också ökat avståndet till mindre klubbar som inte kan konkurrera om samma spelare.\n\nSamtidigt finns utmaningar, som press på spelare och risk för skador. Det är viktigt att träna på ett säkert sätt och att ha balans mellan sport och andra delar av livet. Knäskador är vanliga i fotboll, och forskningen visar att särskilda uppvärmningsprogram kan minska risken märkbart. För unga spelare finns dessutom en risk att specialisera sig för tidigt, vilket både ökar skaderisken och gör att många slutar innan de blivit vuxna.\n\nSupporterkulturen är en egen del av sporten. På läktaren skapas sånger, ramsor och traditioner som förs vidare mellan generationer, och för många handlar tillhörigheten lika mycket om laget som om orten eller familjen. Samtidigt finns en baksida, där rivalitet kan slå över i hot och våld, och både klubbar och förbund lägger i dag stora resurser på att motverka det.\n\nFotbollens betydelse sträcker sig därför bortom planen och påverkar både individer och samhällen. Sporten kan skapa gemenskap och glädje, men den speglar samtidigt de problem som finns i samhället runt omkring: frågor om pengar, om rättvisa och om vem som egentligen får ta plats.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad är målet i fotboll?",
+        "type": "inferens",
+        "q": "Varför har fotboll kunnat spridas till nästan alla länder?",
         "options": [
-          "Att springa mest",
-          "Att göra mål",
-          "Att passa bollen",
-          "Att försvara"
+          "För att reglerna är fler och tydligare än i andra sporter",
+          "För att det i praktiken bara krävs en boll och en yta att spela på",
+          "För att sporten kräver mindre uthållighet än många andra",
+          "För att matcherna alltid är exakt nittio minuter långa"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad kräver fotboll?",
+        "q": "Vad hindrar offsideregeln enligt texten?",
         "options": [
-          "Endast god bollteknik",
-          "Tur och slump i matchen",
-          "Endast fysisk styrka",
-          "Samarbete och uthållighet"
+          "Att målvakten lämnar sitt eget straffområde under spel",
+          "Att spelarna använder händerna när de tar emot bollen",
+          "Att en match avgörs innan de nittio minuterna har gått",
+          "Att anfallare ställer sig och väntar framför motståndarens mål"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad kan fotboll skapa?",
+        "q": "Varför beskrivs lagsport som en övning få andra sammanhang ger?",
         "options": [
-          "Gemenskap",
-          "Stress",
-          "Problem",
-          "Konflikter"
+          "För att man måste samarbeta med personer man inte själv valt",
+          "För att man tränar tillsammans flera gånger varje vecka",
+          "För att alla i laget måste behärska exakt samma färdigheter",
+          "För att man lär sig att vinna och förlora inför en publik"
         ],
         "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vad är professionell fotboll?",
+        "q": "Vad hände med damfotbollen enligt texten?",
         "options": [
-          "Ett spel utan regler",
-          "Skolspel",
-          "En industri",
-          "En hobby"
+          "Den har alltid haft samma förutsättningar som herrfotbollen",
+          "Den växte först när tv-avtalen började omfatta även den",
+          "Den var förbjuden i flera länder och tog fart när förbuden hävdes",
+          "Den spelas fortfarande med andra regler än herrfotbollen"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vilken risk finns?",
+        "q": "Vilken risk med tidig specialisering nämner texten?",
         "options": [
-          "Skador",
-          "Tristess",
-          "Regn",
-          "Kyla"
+          "Att skaderisken ökar och att många slutar innan de blir vuxna",
+          "Att spelarna får svårare att lära sig reglerna ordentligt",
+          "Att föreningarna tappar kontakten med skolorna i området",
+          "Att laget blir beroende av ett fåtal enskilda spelare"
         ],
         "correct": 0
       },
       {
         "type": "sammanfatta",
-        "q": "Vad är huvudbudskapet?",
+        "q": "Vilken helhetsbild av fotbollen ger texten?",
         "options": [
-          "Fotboll är bara lek",
-          "Fotboll påverkar samhället",
-          "Fotboll är farligt",
-          "Fotboll är enkelt"
+          "Att sporten främst bör ses som underhållning och inget mer",
+          "Att den skapar gemenskap men också speglar samhällets problem",
+          "Att de ekonomiska frågorna har gjort sporten mindre viktig",
+          "Att sportens värde ligger i att den är enkel att lära sig"
         ],
         "correct": 1
       }
