@@ -120,11 +120,42 @@ lib.forEach(t => {
     fel.push(`${id}: texten slutar utan skiljetecken – ...${t.text.trim().slice(-40)}`);
   }
 
+  // Ersättningstecknet U+FFFD betyder att tecken gått förlorade i något
+  // tidigare steg. Det syns som en svart romb mitt i ett ord: "för m<?><?>nga".
+  const strangar = [['titel', t.title], ['texten', t.text]];
+  (t.questions || []).forEach((q, qi) => {
+    strangar.push([`fråga ${qi + 1}`, q.q]);
+    (q.options || []).forEach((o, oi) => strangar.push([`fråga ${qi + 1} alternativ ${'ABCD'[oi]}`, o]));
+  });
+  strangar.forEach(([var_, s]) => {
+    if (typeof s !== 'string') return;
+    const i = s.indexOf('�');
+    if (i !== -1) {
+      fel.push(`${id}: trasigt tecken i ${var_} – ...${s.slice(Math.max(0, i - 25), i + 25)}...`);
+    }
+  });
+
   // Punkter insprängda mitt i en mening lämnar efter sig meningar som består
   // av ett enda ord. Två åk 1-texter var skadade så: "Katten. Maja bor hos.
   // Leo." Utropstecken och frågetecken undantas, eftersom "Plask!" och "Hur?"
   // är avsiktliga.
-  const meningar = (t.text || '').split(/(?<=[.!?])\s+/).map(m => m.trim());
+  // Delaren tar hänsyn till avslutande citattecken, så att «"Hur kan jag
+  // hjälpa?" Nästa mening» räknas som två meningar och inte som en.
+  const meningar = (t.text || '').split(/(?<=[.!?]["”]?)\s+/).map(m => m.trim());
+
+  // Meningslängden ska följa årskursen. Fem åk 5-texter hade exakt tio
+  // meningar på exakt trettio ord vardera – nästan dubbelt så långa som
+  // gymnasietexternas – vilket pressat ihop satser utan skiljetecken.
+  // Taket ligger på ungefär 1,6 gånger årskursens riktvärde, så bara verkliga
+  // avvikelser flaggas.
+  const MENINGSTAK = { 1: 12, 2: 14, 3: 17, 4: 19, 5: 21, 6: 22, 7: 22, 8: 23, 9: 24, 10: 26 };
+  const riktiga = meningar.filter(Boolean);
+  if (riktiga.length && MENINGSTAK[t.grade]) {
+    const snitt = (t.text.trim().split(/\s+/).length) / riktiga.length;
+    if (snitt > MENINGSTAK[t.grade]) {
+      varningar.push(`${id}: meningarna är i snitt ${snitt.toFixed(1)} ord, taket för åk ${t.grade} är ${MENINGSTAK[t.grade]}`);
+    }
+  }
   const enOrdsMeningar = meningar.filter((m, i) => {
     if (!/^[A-ZÅÄÖ][a-zåäöé]+\.$/.test(m)) return false;
     // "J.R.R. Tolkien." delas av meningsdelaren i två bitar. Är föregående
