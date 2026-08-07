@@ -34023,68 +34023,68 @@
     "text": "Industrialiseringen var en period av stora förändringar som började i slutet av 1700-talet. Under denna tid gick samhället från jordbruk till industriell produktion. Förändringen började i Storbritannien och spred sig därifrån till övriga Europa och Nordamerika.\n\nAtt just Storbritannien blev först berodde på flera saker som sammanföll. Landet hade gott om stenkol, ett bankväsen som kunde låna ut pengar till nya företag, och kolonier som både levererade råvaror och köpte färdiga varor. Textilindustrin blev den första stora industrigrenen. Där ersattes handvävstolar av maskiner som en enda arbetare kunde sköta flera av samtidigt.\n\nNya maskiner, som ångmaskinen, gjorde det möjligt att producera varor snabbare och billigare. Ångmaskinen var avgörande eftersom den inte var beroende av rinnande vatten. En fabrik behövde inte längre ligga vid ett vattendrag, utan kunde placeras där arbetskraften och transporterna fanns. Fabriker växte fram i städerna och många människor flyttade dit för att arbeta.\n\nStäderna växte snabbare än de hann byggas ut. Bostäderna blev trånga, avloppen bristfälliga och sjukdomar spreds lätt. För många familjer innebar flytten från landsbygden både högre lön och sämre livsmiljö på samma gång.\n\nArbetsvillkoren var ofta svåra. Många arbetade långa dagar under farliga förhållanden. Maskinerna saknade skydd, och olyckor var vanliga. Barnarbete var också vanligt. Barn var billiga att anställa och små nog att krypa in under maskinerna och rensa bort trådrester medan de fortfarande gick.\n\nSamtidigt ledde industrialiseringen till ekonomisk tillväxt och teknisk utveckling. Nya transportmedel som järnvägar gjorde det lättare att resa och transportera varor. Järnvägen förändrade också tidsuppfattningen: när tåg skulle mötas på samma spår behövde klockorna visa samma tid i hela landet, och den lokala soltiden ersattes av gemensam tidsräkning.\n\nI Sverige kom industrialiseringen senare, ungefär från mitten av 1800-talet. Här byggde den till en början på skogen och järnmalmen snarare än på textilier. Sågverk längs Norrlandskusten och gruvor i Bergslagen drog till sig arbetare, och stora grupper flyttade från landsbygden. Samtidigt utvandrade omkring en miljon svenskar till Nordamerika, många av dem för att jordbruket inte kunde försörja alla.\n\nIndustrialiseringen förändrade också familjelivet i grunden. Tidigare hade arbete och hem hört ihop: gården eller verkstaden låg där familjen bodde, och alla bidrog med det de kunde efter ålder och förmåga. Med fabriken skildes arbetsplatsen från hemmet för första gången. Arbetsdagen fick fasta tider som klockan bestämde i stället för dagsljuset och årstiderna, och därmed uppstod också något nytt: fritid, alltså en tid som var tydligt skild från arbetet.\n\nMed tiden infördes lagar för att förbättra arbetsvillkoren. Barnarbete begränsades, arbetsdagen kortades och skyddsregler för maskiner infördes. Fackföreningar bildades för att kämpa för arbetarnas rättigheter. Genom att många gick samman fick de en förhandlingsstyrka som ingen enskild arbetare hade, och strejken blev ett verktyg för att driva igenom krav.\n\nIndustrialiseringen har haft stor betydelse för det moderna samhället och påverkar oss fortfarande idag. Massproduktionen som började då är grunden för hur varor tillverkas nu. Men den lade också grunden för användningen av fossila bränslen i stor skala, vilket är en huvudorsak till dagens klimatförändringar. Perioden visar därför något som ofta återkommer i historien: samma utveckling kan innebära både framsteg och problem, och vilken sida som väger tyngst beror på vem man frågar, var i världen man befinner sig och hur långt fram i tiden man väljer att se.",
     "questions": [
       {
-        "type": "literal",
-        "q": "När började industrialiseringen?",
+        "type": "inferens",
+        "q": "Varför blev just Storbritannien först med industrialiseringen?",
         "options": [
-          "I slutet av 1700-talet",
-          "I början av 1900-talet",
-          "I mitten av 1800-talet",
-          "I början av 2000-talet"
+          "Landet hade stenkol, ett bankväsen och kolonier som gav råvaror och köpte varor",
+          "Landet hade som enda land i Europa tillgång till rinnande vatten",
+          "Landet hade förbjudit allt hantverksarbete i sina större städer",
+          "Landet hade en betydligt större befolkning än sina grannländer"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vad möjliggjorde snabbare produktion?",
+        "type": "inferens",
+        "q": "Varför var ångmaskinen så avgörande enligt texten?",
         "options": [
-          "Handarbete",
-          "Ångmaskinen",
-          "Djurkraft",
-          "Vatten"
+          "Den gjorde att fabrikerna kunde drivas helt utan arbetare",
+          "Den frigjorde fabriken från att behöva ligga vid ett vattendrag",
+          "Den minskade antalet olyckor vid maskinerna i fabrikerna",
+          "Den gjorde det möjligt att bygga järnvägar genom hela landet"
         ],
         "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vad hände med städerna?",
+        "q": "Varför anställdes barn i fabrikerna enligt texten?",
         "options": [
-          "De minskade",
-          "De blev tomma",
-          "De växte",
-          "De försvann"
+          "De var de enda som kunde sköta de nya vävmaskinerna",
+          "De hade rätt att arbeta färre timmar än de vuxna hade",
+          "De var billiga och små nog att krypa in under maskinerna",
+          "De behövde inte gå i skolan förrän efter tolv års ålder"
         ],
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Hur var arbetsvillkoren?",
+        "type": "inferens",
+        "q": "Varför förändrade järnvägen tidsuppfattningen?",
         "options": [
-          "Alltid bra",
-          "Mycket korta dagar",
-          "Säkra och enkla",
-          "Ofta svåra"
+          "För att resorna blev så mycket kortare än de varit förut",
+          "För att stationerna behövde öppettider som passade alla",
+          "För att arbetarna nu kunde pendla betydligt längre sträckor",
+          "För att tåg som möts på samma spår kräver samma tid i hela landet"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vad bildades för att hjälpa arbetare?",
+        "q": "Vad byggde den svenska industrialiseringen på till en början?",
         "options": [
-          "Yrkesskolor",
-          "Fackföreningar",
-          "Storföretag",
-          "Sparbanker"
+          "Textilier, precis som i Storbritannien några decennier tidigare",
+          "Skogen och järnmalmen, med sågverk längs kusten och gruvor i Bergslagen",
+          "Kolgruvor i södra Sverige och import av råvaror från kolonier",
+          "Verkstadsindustri och tillverkning av färdiga maskiner för export"
         ],
         "correct": 1
       },
       {
         "type": "sammanfatta",
-        "q": "Vad är textens huvudidé?",
+        "q": "Vilken slutsats om historisk utveckling drar texten i slutet?",
         "options": [
-          "Industrialiseringen var oviktig",
-          "Den förändrade samhället mycket",
-          "Den stoppade utveckling",
-          "Den gällde bara fabriker"
+          "Att framstegen med tiden alltid väger tyngre än problemen",
+          "Att samma utveckling kan innebära både framsteg och problem",
+          "Att industrialiseringens följder är helt avslutade i dag",
+          "Att klimatfrågan saknar koppling till 1700-talets fabriker"
         ],
         "correct": 1
       }
@@ -34106,68 +34106,68 @@
     "text": "Människokroppen behöver energi för att fungera. Denna energi kommer från maten vi äter. När vi bryter ner maten omvandlas den till energi som kroppen kan använda.\n\nAll energi i cellerna passerar genom en och samma molekyl, som brukar förkortas ATP. Man kan se ATP som kroppens gemensamma valuta: oavsett om energin ursprungligen kom från en smörgås eller från kroppens fettlager måste den växlas till ATP innan en muskel kan använda den. Musklerna har bara ett litet lager ATP sparat, tillräckligt för ett par sekunders hårt arbete. Därför måste det hela tiden fyllas på.\n\nDet finns olika energisystem i kroppen. Vid korta och intensiva aktiviteter används främst snabba energisystem som inte kräver syre. Vid längre aktiviteter används system som behöver syre, vilket kallas aerob energi.\n\nSystemen är inte tre separata motorer som slås av och på, utan de arbetar hela tiden samtidigt i olika proportioner. Vid en maximal spurt på tio sekunder står de snabba systemen för nästan allt. Vid ett lopp på några minuter tar det system över som bryter ner kolhydrater utan syre, och som biprodukt bildas laktat. Vid längre arbete, som en löprunda på en timme, dominerar det aeroba systemet.\n\nLaktat har länge haft dåligt rykte och beskrevs förr som orsaken till träningsvärk. Den förklaringen har forskningen övergett. Laktat försvinner ur blodet inom en timme efter träningen, medan träningsvärken kommer först ett dygn senare och beror på små skador i muskelfibrerna.\n\nKolhydrater, fett och proteiner är viktiga näringsämnen. Kolhydrater ger snabb energi, medan fett används vid längre aktiviteter. Proteiner används främst för att bygga upp kroppen. Kroppens kolhydratlager räcker ungefär en till två timmars hårt arbete, medan fettlagren räcker betydligt längre även hos en vältränad person. Det förklarar varför uthållighetsidrottare ofta äter under själva tävlingen.\n\nTräning påverkar hur effektivt kroppen använder energi. Regelbunden träning kan förbättra både styrka och uthållighet. Vid uthållighetsträning ökar antalet mitokondrier i muskelcellerna, alltså de delar där den syrekrävande energiproduktionen sker. Hjärtat blir också starkare och pumpar ut mer blod per slag. Det är därför en vältränad person ofta har lägre vilopuls.\n\nVila och återhämtning är också viktiga. Utan tillräcklig vila kan kroppen inte reparera sig. Själva förbättringen sker inte under passet utan i timmarna och dygnen efteråt, när kroppen bygger upp sig något starkare än innan. Sömnen har en särskild roll här, eftersom mycket av reparationsarbetet pågår då. Den som tränar hårt varje dag utan återhämtning kan därför bli sämre i stället för bättre.\n\nVilket bränsle kroppen väljer beror på hur hårt arbetet är. Vid låg intensitet, som under en lugn promenad, kommer en stor del av energin från kroppens fett. Ju hårdare arbetet blir, desto större andel tas från kolhydraterna, eftersom de går snabbare att omsätta till användbar energi. Vätska spelar också roll för hur systemen fungerar. Redan en liten vätskeförlust försämrar prestationen märkbart, eftersom blodet blir trögare att pumpa runt och kroppen får svårare att göra sig av med överskottsvärmen.\n\nGenom att förstå kroppens energisystem kan vi träna smartare och må bättre. Kunskapen gör det lättare att förstå varför olika typer av träning ger olika resultat, varför måltider före och efter ett pass spelar roll, och varför en vilodag inte alls är bortkastad tid utan tvärtom en nödvändig del av själva träningen.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Varifrån får kroppen energi?",
+        "type": "ord",
+        "q": "Vad menas med att ATP är kroppens gemensamma valuta?",
         "options": [
-          "Sömn",
-          "Mat",
-          "Vatten",
-          "Luft"
+          "Att ATP kan lagras i mycket stora mängder i musklerna",
+          "Att all energi måste växlas till ATP innan en muskel kan använda den",
+          "Att ATP bara bildas när kroppen får tillräckligt med syre",
+          "Att ATP finns i maten och tas upp direkt genom tarmen"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "När används snabba energisystem?",
+        "type": "inferens",
+        "q": "Varför beskrivs energisystemen inte som tre separata motorer?",
         "options": [
-          "Vid vila",
-          "Vid långsam gång",
-          "Vid intensiva aktiviteter",
-          "Vid sömn"
+          "För att bara ett av dem används av en otränad person",
+          "För att de byts ut mot varandra efter exakt tio sekunder",
+          "För att de arbetar samtidigt men i olika proportioner",
+          "För att kroppen själv kan välja vilket den vill använda"
         ],
         "correct": 2
       },
       {
         "type": "literal",
-        "q": "Vad kräver aerob energi?",
+        "q": "Vad säger texten om laktat och träningsvärk?",
         "options": [
-          "Syre",
-          "Fett",
-          "Socker",
-          "Vila"
+          "Laktat försvinner inom en timme medan värken kommer ett dygn senare",
+          "Laktat bildas först när träningsvärken redan har uppstått",
+          "Laktat är den enda kända orsaken till träningsvärk i dag",
+          "Laktat och träningsvärk uppstår samtidigt under hårt arbete"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vad ger snabb energi?",
+        "type": "inferens",
+        "q": "Varför äter uthållighetsidrottare under själva tävlingen?",
         "options": [
-          "Fett",
-          "Protein",
-          "Vitaminer",
-          "Kolhydrater"
+          "För att vätskan är viktigare än energin under långa lopp",
+          "För att magen fungerar sämre om den är alldeles tom",
+          "För att fettlagren tar slut snabbare än kolhydratlagren",
+          "För att kolhydratlagret bara räcker ett par timmars hårt arbete"
         ],
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vad förbättrar träning?",
+        "type": "inferens",
+        "q": "Varför har en vältränad person ofta lägre vilopuls?",
         "options": [
-          "Endast kroppsvikten",
-          "Hårets växtkraft",
-          "Styrka och uthållighet",
-          "Synen på avstånd"
+          "För att musklerna kräver mindre syre än hos otränade",
+          "För att blodet innehåller fler röda blodkroppar än vanligt",
+          "För att hjärtat blivit starkare och pumpar mer blod per slag",
+          "För att kroppen har lärt sig att spara på sina fettlager"
         ],
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Varför är vila viktig?",
+        "type": "inferens",
+        "q": "Varför kan den som tränar hårt varje dag bli sämre i stället för bättre?",
         "options": [
-          "För att bli trött",
-          "För att reparera kroppen",
-          "För att minska energi",
-          "För att undvika mat"
+          "För att musklerna vänjer sig vid samma sorts belastning",
+          "För att förbättringen sker under återhämtningen, inte under passet",
+          "För att kroppen då börjar använda fett i stället för kolhydrater",
+          "För att vätskeförlusten hinner byggas upp från dag till dag"
         ],
         "correct": 1
       }
