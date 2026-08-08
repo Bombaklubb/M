@@ -25967,81 +25967,81 @@
   },
   {
     "id": "ak9-lotr-001",
-    "grade": 4,
+    "grade": 9,
     "genre": "faktatext",
     "theme": "Kultur",
     "title": "Trilogins uppbyggnad och handling",
-    "text": "Sagan om ringen är en trilogi skriven av den brittiske författaren J.R.R. Tolkien. Verket publicerades i tre delar: \"Sagan om ringen: Härskarringen\", \"Sagan om ringen: Sagan om de två tornen\" och \"Sagan om ringen: Konungens återkomst\". Trots att böckerna ofta kallas en trilogi var de från början tänkta som ett sammanhängande verk, men delades upp av praktiska och ekonomiska skäl.\n\nBerättelsen utspelar sig i den fiktiva världen Midgård och kretsar kring den mäktiga ringen som smiddes av den mörke härskaren Sauron. Ringen ger sin bärare stor makt men korrumperar samtidigt den som använder den. När hobbiten Frodo får ansvaret att förstöra ringen inleds en farofylld resa mot Domedagsberget i landet Mordor.\n\nUnder resans gång bildas Ringens brödraskap, bestående av representanter från olika folk: hobbitar, människor, en alv, en dvärg och en trollkarl. Deras mål är gemensamt, men deras vägar skiljs åt när hotet från Sauron växer.\n\nTrilogin växlar mellan storslagna krigsscener och personliga skildringar av rädsla, tvivel och hopp. Genom att följa flera parallella handlingar skapas en komplex struktur där små handlingar får stora konsekvenser.\n\nSagan om ringen handlar inte enbart om kampen mellan gott och ont, utan också om ansvar, vänskap och uppoffring. Det är samspelet mellan dessa teman som ger berättelsen dess djup och långvariga betydelse i litteraturhistorien.",
+    "text": "Sagan om ringen är skriven av den brittiske författaren och språkforskaren J.R.R. Tolkien och gavs ut i tre delar under 1954 och 1955. Att verket ofta kallas en trilogi är egentligen missvisande. Tolkien skrev det som en enda sammanhängande berättelse, men förlaget delade upp den av praktiska och ekonomiska skäl. Papper var dyrt efter kriget, och risken med en mycket tjock bok av en oprövad romanförfattare bedömdes som för stor.\n\nBerättelsen utspelar sig i den påhittade världen Midgård och kretsar kring en ring som smiddes i hemlighet av den mörke härskaren Sauron. Ringen ger sin bärare stor makt, men den påverkar samtidigt bäraren och bryter gradvis ned hans omdöme. När hobbiten Frodo får ansvaret att förstöra den inleds en lång och farlig resa mot Domedagsberget i Mordor, det enda ställe där ringen kan förgöras.\n\nUnder resans gång bildas Ringens brödraskap med representanter för olika folk: fyra hobbitar, två människor, en alv, en dvärg och en trollkarl. Sammansättningen är ingen tillfällighet. Att uppdraget kräver samarbete mellan folk som annars håller avstånd till varandra är en av bokens bärande tankar.\n\nStrukturen är ovanlig. Efter brödraskapets upplösning delas berättelsen i två trådar som följs var för sig under långa avsnitt: Frodo och Sam på väg mot Mordor, och de övriga i kriget om Gondor och Rohan. Tekniken kallas ibland flätning och innebär att läsaren får veta vad som hänt på ett ställe först långt efter att det inträffat. Det skapar spänning, men också en särskild sorts oro, eftersom läsaren vet mer än karaktärerna gör.\n\nTolkien ramar dessutom in berättelsen. Enligt bokens förord ska texten vara en översättning av Västmarks röda bok, en krönika nedtecknad av Bilbo, Frodo och Sam. Greppet är gammalt i litteraturen och används här för att ge berättelsen sken av att vara ett historiskt dokument snarare än en påhittad historia.\n\nVerket avslutas inte där man kunde vänta sig. Efter att ringen förstörts återvänder hobbitarna hem och finner Fylke skövlat och styrt av inkräktare. Kapitlet om hur de återtar sitt hemland saknas helt i filmatiseringen, men för Tolkien var det viktigt. Det visar att kriget når även den plats som skildrats som skyddad, och att de fyra som kommer tillbaka inte längre är desamma som gav sig av.\n\nTill boken hör också omfattande bilagor med tidsräkning, släkttavlor, skriftsystem och en översikt över Midgårds tidigare historia. De behövs inte för att förstå handlingen, men de visar hur mycket material som fanns bakom det som faktiskt berättas.\n\nVerket har översatts till svenska två gånger. Åke Ohlmarks översättning från 1959 var länge den enda och gav många av de namn svenska läsare känner igen, men den kritiserades för att lägga till ord och bilder som saknades i originalet. Erik Anderssons nyöversättning från 2004 låg närmare Tolkiens text och ändrade flera inarbetade namn, vilket väckte hätsk debatt bland läsare som vuxit upp med den äldre versionen. Diskussionen visar hur mycket en översättning formar bilden av ett verk.\n\nMottagandet var till en början delat. Flera kritiker avfärdade boken som barnslig, medan andra såg den som något alldeles nytt. Den stora spridningen kom under 1960-talet, särskilt bland studenter i USA, och sedan dess har verket sällan varit ur tryck.\n\nSagan om ringen växlar mellan storslagna krigsskildringar och nära beskrivningar av rädsla, tvivel och trötthet. Genom de parallella handlingarna byggs en struktur där små handlingar får stora följder, och där det avgörande sällan utförs av den mäktigaste. Boken handlar därför inte enbart om kampen mellan gott och ont, utan lika mycket om ansvar, vänskap och uppoffring.",
     "questions": [
       {
         "type": "literal",
-        "q": "Varför delades verket upp i tre delar?",
+        "q": "Varför gavs verket ut i tre delar i stället för som en bok?",
         "options": [
-          "Av praktiska och ekonomiska skäl",
-          "För att läsarna krävde det",
-          "På grund av censur",
-          "För att Tolkien ändrade handlingen"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Vad är ringens främsta egenskap enligt texten?",
-        "options": [
-          "Den gör bäraren odödlig",
-          "Den ger makt men korrumperar",
-          "Den kan tala med djur",
-          "Den lyser i mörkret"
+          "Tolkien skrev delarna med flera års mellanrum och lämnade in dem var för sig",
+          "Förlaget delade upp verket av praktiska och ekonomiska skäl efter kriget",
+          "Varje del skildrar en egen huvudperson och kunde därför läsas fristående",
+          "Läsarna hade i förväg fått rösta om hur verket skulle ges ut på marknaden"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad heter platsen där ringen måste förstöras?",
+        "type": "ord",
+        "q": "Vad innebär flätning som berättarteknik enligt texten?",
         "options": [
-          "Vattnadal",
-          "Gondor",
-          "Domedagsberget",
-          "Isengård"
+          "Att berättelsen hoppar mellan olika tidsplan inom ett och samma kapitel",
+          "Att flera författare turas om att skriva var sin del av berättelsen",
+          "Att två handlingstrådar följs var för sig under långa avsnitt åt gången",
+          "Att samma händelse skildras flera gånger ur olika personers perspektiv"
         ],
         "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Hur skildras berättelsens struktur?",
+        "q": "Varför skapar den delade handlingen en särskild oro hos läsaren?",
         "options": [
-          "Genom dagboksanteckningar",
-          "Genom brev mellan karaktärer",
-          "Som en enkel rak handling",
-          "Genom parallella handlingar"
+          "Därför att läsaren vet mer om läget än vad karaktärerna själva gör",
+          "Därför att läsaren tvingas hålla reda på ovanligt många namn samtidigt",
+          "Därför att slutet avslöjas redan i bokens inledande kapitel",
+          "Därför att de två trådarna motsäger varandra på flera punkter"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad ska Västmarks röda bok föreställa enligt bokens förord?",
+        "options": [
+          "En samling kartor som Tolkien ritade innan han började skriva",
+          "Ett register över alla folk och släkter som förekommer i Midgård",
+          "Den bilaga där tidsräkningen och skriftsystemen presenteras",
+          "En krönika nedtecknad av Bilbo, Frodo och Sam som texten översatts från"
         ],
         "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Vad är ett centralt tema i trilogin?",
+        "q": "Varför var kapitlet om Fylkes återtagande viktigt för Tolkien?",
         "options": [
-          "Teknisk utveckling",
-          "Ansvar och uppoffring",
-          "Ekonomisk tillväxt",
-          "Vetenskapliga upptäckter"
+          "Det knyter ihop de två handlingstrådar som skilts åt tidigare i verket",
+          "Det visar att kriget når även den plats som skildrats som skyddad",
+          "Det ger läsaren en förklaring till hur ringen en gång kom till Fylke",
+          "Det förbereder de bilagor som avslutar den sista av de tre delarna"
         ],
         "correct": 1
       },
       {
         "type": "sammanfatta",
-        "q": "Vilket påstående sammanfattar textens huvudidé bäst?",
+        "q": "Vilket drag i strukturen framhåller texten som mest utmärkande för verket?",
         "options": [
-          "Verket kombinerar stora slag med personliga prövningar",
-          "Berättelsen saknar djupare teman",
-          "Trilogin är en enkel äventyrsberättelse",
-          "Böckerna handlar enbart om krig"
+          "Att små handlingar får stora följder och sällan utförs av den mäktigaste",
+          "Att krigsskildringarna tar allt större plats ju längre berättelsen fortskrider",
+          "Att varje folk i Midgård får ett eget avsnitt tillägnat sin historia",
+          "Att berättelsen följer en enda huvudperson från början till slut"
         ],
         "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 210,
+      "wordCount": 578,
       "fingerprint": "ak9-lotr-001",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
@@ -26050,81 +26050,81 @@
   },
   {
     "id": "ak9-lotr-002",
-    "grade": 4,
+    "grade": 9,
     "genre": "faktatext",
     "theme": "Kultur",
     "title": "Karaktärsutveckling i trilogin",
-    "text": "En av de mest framträdande aspekterna i Sagan om ringen är karaktärernas utveckling. Frodo börjar som en relativt obekymrad hobbit i Fylke men förändras gradvis under ringens tyngd.\n\nSamwise Gamgi framstår först som en lojal följeslagare, men hans roll växer successivt. I de mest kritiska ögonblicken visar han mod och handlingskraft som är avgörande för uppdragets framgång. Genom Sam betonas vikten av trofasthet och vardagligt hjältemod.\n\nAragorn representerar en annan typ av utveckling. Han introduceras som en kringvandrande vandrare, men det avslöjas gradvis att han är arvtagare till Gondors tron. Hans resa handlar om att acceptera sitt ansvar och kliva fram som ledare. Denna utveckling speglar temat om att växa in i sin roll.\n\nÄven bifigurer som Boromir och Gollum har komplexa personligheter. Boromirs fall visar hur även goda avsikter kan korrumperas av maktbegär. Gollum är en tragisk gestalt som både väcker avsky och medkänsla. Hans inre konflikt mellan Sméagol och Gollum illustrerar ringens splittrande kraft.\n\nGenom dessa karaktärer utforskar Tolkien hur människor – och andra folk – reagerar under press. Vissa bryts ner, andra stärks. Förändringarna är sällan enkla eller entydiga, vilket ger berättelsen psykologiskt djup.\n\nKaraktärsutvecklingen gör att läsaren engageras känslomässigt. Det är inte bara världens öde som står på spel, utan också individernas moraliska val och personliga kamp.",
+    "text": "En av de mest omtalade sidorna av Sagan om ringen är hur karaktärerna förändras. Litteraturvetare brukar skilja mellan platta och runda gestalter: de platta förblir sig lika och fyller en funktion, medan de runda rör sig och kan överraska. Tolkien använder båda sorterna, och det är rörelsen hos de runda som bär bokens allvar.\n\nFrodo börjar som en någorlunda bekymmersfri hobbit i Fylke. Under resan tär ringen på honom, och förändringen går åt ett annat håll än i de flesta äventyrsberättelser. Han blir inte starkare av sina prövningar utan tystare, tunnare och alltmer upptagen av bördan. Det ovanliga är slutet. När uppdraget är utfört återhämtar han sig aldrig helt, utan lämnar till sist Midgård. Boken vägrar därmed den lösning som annars är vanlig, att den som lidit får sin belöning i form av ett gott liv därhemma.\n\nSamwise Gamgi framstår först som en trogen följeslagare i bakgrunden. Hans roll växer efter hand, och i de mest kritiska stunderna är det han som handlar. Genom Sam lyfts en särskild sorts hjältemod fram, det som består i uthållighet och lojalitet snarare än i strid och glans. Att han är trädgårdsmästare och den ende av de fyra som återvänder till ett vanligt liv är knappast en tillfällighet.\n\nAragorn utvecklas i motsatt riktning mot Frodo. Han presenteras som en kringvandrande främling med ett smeknamn som antyder misstänksamhet, och det framgår gradvis att han är arvtagare till Gondors tron. Hans väg handlar om att acceptera ett ansvar han länge undvikit. Där Frodos utveckling går mot förlust går Aragorns mot att träda in i en roll som väntat på honom.\n\nMerry och Pippin är till en början nästan komiska inslag. Sedan de skilts från de övriga hamnar de var för sig i sammanhang som tvingar fram allvar, och båda återvänder som personer med egen auktoritet. Just därför blir det avslutande kapitlet om Fylke möjligt: de har hunnit bli sådana som andra följer.\n\nBland bifigurerna är Boromir och Gollum de mest sammansatta. Boromir vill försvara sitt folk, och det är den goda avsikten som gör honom mottaglig för ringens lockelse. Hans fall och senare ånger ger honom en tragisk värdighet i stället för rollen som förrädare. Gollum väcker på en gång avsky och medlidande. Hans växlingar mellan namnen Sméagol och Gollum är inte bara ett uttryck för galenskap, utan visar en splittring där en rest av det ursprungliga jaget fortfarande gör motstånd.\n\nÉowyn utgör ett eget spår. Hon skildras som instängd i en roll hon inte valt och söker hellre en död i strid än ett liv i väntan. Hennes vändning kommer inte genom segern på slagfältet utan efteråt, när hon väljer att leva.\n\nEtt återkommande drag är att Tolkien visar förändring genom handling snarare än genom att beskriva känslor inifrån. Läsaren får sällan veta vad en gestalt tänker. I stället visas vad hon gör när hon är trött, rädd eller frestad, och bedömningen läggs därmed hos läsaren.\n\nEtt av bokens mest omtalade avsnitt är när Gollum kommer nära att vända om. Han finner Frodo och Sam sovande och rör vid sin herres knä i något som liknar ömhet. Sam vaknar och tilltalar honom hårt, och ögonblicket går förlorat. Scenen visar att även de mest förhärdade gestalterna hålls öppna, och att en möjlighet kan stängas av en tillfällighet.\n\nGenom dessa gestalter undersöker Tolkien hur olika personer reagerar under press. Vissa bryts ned, andra växer, och några gör bådadera. Det som står på spel är inte enbart världens öde, utan enskilda personers val i ögonblick av trötthet och rädsla.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Hur förändras Frodo under berättelsen?",
+        "type": "ord",
+        "q": "Vad skiljer en platt gestalt från en rund enligt textens beskrivning?",
         "options": [
-          "Han förblir helt opåverkad",
-          "Han blir kung",
-          "Han påverkas psykiskt av ringens börda",
-          "Han lämnar uppdraget tidigt"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vad symboliserar Samwise enligt texten?",
-        "options": [
-          "Militär strategi och taktik",
-          "Trofasthet och vardagligt hjältemod",
-          "Politiskt ledarskap i krig",
-          "Teknisk kunskap om vapen"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vad handlar Aragorns utveckling främst om?",
-        "options": [
-          "Att lämna Midgård",
-          "Att undvika ansvar",
-          "Att finna en magisk skatt",
-          "Att acceptera sin roll som ledare"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inferens",
-        "q": "Vad visar Boromirs öde?",
-        "options": [
-          "Att mod alltid räcker",
-          "Att maktbegär kan korrumpera även goda personer",
-          "Att människor inte påverkas av ringen",
-          "Att han saknar lojalitet från början"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "inferens",
-        "q": "Hur framställs Gollum?",
-        "options": [
-          "Som en tragisk gestalt med inre konflikt",
-          "Som en hjälte utan brister",
-          "Som en entydigt ond figur",
-          "Som en komisk karaktär"
+          "Den platta förblir sig lik och fyller en funktion, den runda kan överraska",
+          "Den platta beskrivs kortfattat, den runda får många sidor text ägnade åt sig",
+          "Den platta finns med i hela verket, den runda försvinner efter första delen",
+          "Den platta är påhittad av författaren, den runda bygger på en verklig person"
         ],
         "correct": 0
       },
       {
-        "type": "sammanfatta",
-        "q": "Vad är textens huvudfokus?",
+        "type": "inferens",
+        "q": "Varför beskrivs Frodos utveckling som ovanlig för en äventyrsberättelse?",
         "options": [
-          "Ringens tekniska egenskaper och kraft",
-          "De stora slagen och striderna",
-          "Karaktärernas moraliska och psykologiska utveckling",
-          "Midgårds geografi och kartor"
+          "Han byter roll med sin följeslagare halvvägs genom berättelsen",
+          "Han vägrar från början att ta emot det uppdrag som erbjuds honom",
+          "Han blir inte starkare av sina prövningar och återhämtar sig aldrig helt",
+          "Han förändras inte alls trots allt han utsätts för under resan"
         ],
         "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken sorts hjältemod lyfts fram genom Samwise Gamgi?",
+        "options": [
+          "Det som bygger på skicklighet i strid och kunskap om vapen",
+          "Det som består i uthållighet och lojalitet snarare än i glans",
+          "Det som växer fram ur en längtan efter ära och erkännande",
+          "Det som förutsätter en hög ställning och rätten att befalla"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför framhåller texten att Merry och Pippin förändras under sin tid åtskilda från de övriga?",
+        "options": [
+          "Därför att de annars hade fallit för samma frestelse som Boromir gjorde",
+          "Därför att de behövde lära sig hitta i Midgård utan hjälp av kartor",
+          "Därför att förändringen förklarar varför de kan leda återtagandet av Fylke",
+          "Därför att de därigenom blir mer lika varandra än de var i början"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Boromirs fall om hur ringen verkar på människor?",
+        "options": [
+          "Att den bara påverkar dem som redan söker makt för egen räkning",
+          "Att den saknar verkan på den som är beredd att dö för sitt folk",
+          "Att den verkar starkast på den som burit den under lång tid",
+          "Att en god avsikt kan vara just det som öppnar för maktbegäret"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad undersöker Tolkien genom gestalternas förändringar enligt texten?",
+        "options": [
+          "Hur olika personer reagerar under press, där vissa bryts ned och andra växer",
+          "Hur folken i Midgård skiljer sig åt i fråga om seder och traditioner",
+          "Hur en berättelse kan hålla ihop trots att den följer många personer",
+          "Hur ledarskap bör utövas när ett samhälle befinner sig i krig"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 211,
+      "wordCount": 581,
       "fingerprint": "ak9-lotr-002",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
@@ -26133,81 +26133,81 @@
   },
   {
     "id": "ak9-lotr-003",
-    "grade": 4,
+    "grade": 9,
     "genre": "faktatext",
     "theme": "Kultur",
     "title": "Teman och symbolik",
-    "text": "Sagan om ringen innehåller en rik symbolik som har analyserats av litteraturforskare i decennier. Ett centralt tema är kampen mellan gott och ont, men Tolkien undviker en förenklad uppdelning. Ondskan representeras inte bara av yttre fiender som Sauron utan också av den inre frestelsen att använda ringen för egna syften.\n\nRingen fungerar som en symbol för absolut makt. Den lockar genom att erbjuda kontroll och styrka, men priset är att bärarens moral gradvis bryts ner.\n\nEtt annat viktigt tema är hoppets betydelse i mörka tider. Trots överväldigande motstånd fortsätter karaktärerna att kämpa. Små handlingar av mod, särskilt från till synes obetydliga figurer, får avgörande konsekvenser. Tolkien betonar därmed att även den minsta person kan påverka historiens gång.\n\nNaturens roll är också framträdande. Skogar, berg och floder skildras som levande miljöer med egen betydelse. Kontrasten mellan det industriella Isengård och de gröna landskapen i Fylke kan ses som en kritik mot oreflekterad industrialisering.\n\nVänskap och gemenskap utgör ytterligare ett genomgående tema. Ringens brödraskap visar hur samarbete mellan olika folk är nödvändigt för att möta hotet. Skillnader i kultur och bakgrund övervinns genom ett gemensamt mål.\n\nGenom denna mångfacetterade symbolik förblir trilogin öppen för tolkning. Läsaren inbjuds att reflektera över makt, moral och ansvar i både den fiktiva världen och i verkligheten.",
+    "text": "Sagan om ringen har analyserats av litteraturforskare i decennier, och tolkningarna har ofta gått i riktningar som Tolkien själv motsatte sig. I förordet till andra upplagan skriver han rakt ut att han inte tycker om allegori. Verket ska alltså inte läsas som en förklädd skildring av något annat. I stället använde han begreppet tillämplighet: läsaren är fri att känna igen sitt eget sammanhang i berättelsen, men igenkänningen finns hos läsaren och inte som en dold nyckel lagd av författaren.\n\nDen vanligaste feltolkningen gäller andra världskriget. Ringen skulle vara atombomben och Mordor ett bestämt land. Tolkien avvisade läsningen och påpekade att stora delar av verket skrevs innan kriget bröt ut. Däremot bar han med sig ett annat krig. Han stred vid Somme 1916 och förlorade de flesta av sina närmaste vänner. Skildringarna av utmattning, lera och långa väntetider mellan skräckfyllda ögonblick har ofta lästs mot den bakgrunden.\n\nKampen mellan gott och ont är ett bärande tema, men uppdelningen är mindre enkel än ryktet gör gällande. Ondskan finns inte bara hos yttre fiender utan lika mycket i frestelsen att använda ringen för egna syften, och den frestelsen drabbar just dem som vill väl. Ringen fungerar som en symbol för makt som inte går att använda utan att den använder tillbaka.\n\nBarmhärtighet är kanske det tema som betyder mest för handlingen. Bilbo skonar Gollum trots att han kunde ha dödat honom, och Frodo gör senare samma val. Besluten framstår som oförsiktiga, men det är just Gollums närvaro i slutet som gör att ringen till sist förstörs. Nåden får därmed en följd som ingen kunde räkna ut i förväg, och den blir avgörande på ett sätt som styrkan aldrig är.\n\nHoppets betydelse i mörka tider löper genom hela verket. Karaktärerna kämpar vidare utan rimliga utsikter att lyckas, och små handlingar av mod från till synes obetydliga gestalter får avgörande följder. Tolkien använde själv ordet eukatastrof om den oväntade vändning till det bättre som kommer när allt tycks förlorat, och menade att just den vändningen är sagans egentliga uppgift.\n\nNaturen har en framträdande plats. Skogar, berg och floder skildras som miljöer med egen vilja snarare än som kulisser. Kontrasten mellan det sotiga Isengård, där träd huggs ned för att driva maskiner, och de gröna landskapen i Fylke har ofta lästs som kritik av en industrialisering som ingen tänkt efter kring.\n\nVänskap och gemenskap utgör ett fjärde genomgående tema. Brödraskapet visar att hotet bara kan mötas om folk som annars håller avstånd väljer att samarbeta, och skillnaderna mellan dem övervinns inte genom att suddas ut utan genom ett gemensamt mål.\n\nEtt besläktat drag har kallats den långa reträtten. Alverna och deras bundsförvanter vet att världen sakta förlorar sin skönhet och att varje seger bara skjuter upp nederlaget. Att ändå kämpa vidare framställs inte som naivt utan som det enda hedervärda.\n\nTanken har rötter i den nordiska litteratur Tolkien undervisade om. I de fornnordiska kvädena vinner inte det goda till slut, men hjälten står ändå kvar på förlorande sida. Tolkien beundrade den hållningen och kallade den ett mod som inte behöver hopp om seger för att vara mod. Skillnaden är att han lät sina egna berättelser lämna utrymme för en oväntad räddning.\n\nI sina brev pekade Tolkien själv ut ett tema han menade var det verkliga: döden och odödligheten. Människorna i Midgård är dödliga och avundas alverna, medan alverna är bundna till världen och till sist tröttnar på den. Läst så handlar boken mindre om krig och mer om hur man förhåller sig till att tiden tar slut.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad symboliserar ringen främst?",
+        "type": "ord",
+        "q": "Vad menar Tolkien med tillämplighet, till skillnad från allegori?",
         "options": [
-          "Evig vänskap",
-          "Absolut makt",
-          "Naturens kraft",
-          "Teknologisk utveckling"
+          "Att berättelsen kan användas i undervisning om litteraturhistoria",
+          "Att varje läsare bör tolka symbolerna på exakt samma sätt som forskarna",
+          "Att igenkänningen finns hos läsaren och inte som en dold nyckel från författaren",
+          "Att verket går att läsa i valfri ordning utan att sammanhanget går förlorat"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
-        "q": "Hur framställs ondskan i texten?",
+        "q": "Vilket argument använde Tolkien mot tolkningen att ringen står för atombomben?",
         "options": [
-          "Som ett missförstånd",
-          "Som humoristisk",
-          "Enbart som yttre fiender",
-          "Som både yttre hot och inre frestelse"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inferens",
-        "q": "Vad betonas genom de små karaktärernas mod?",
-        "options": [
-          "Att även den minsta kan påverka",
-          "Att ödet är förutbestämt",
-          "Att styrka är oviktig",
-          "Att bara kungar förändrar historien"
+          "Att stora delar av verket skrevs innan andra världskriget bröt ut",
+          "Att han aldrig hade läst något om vapnet när han skrev boken",
+          "Att ringen beskrivs som gammal och därmed inte kan syfta på ny teknik",
+          "Att han själv aldrig deltagit i något krig och saknade sådan erfarenhet"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Vad kan kontrasten mellan Fylke och Isengård tolkas som?",
+        "q": "Varför beskriver texten barmhärtigheten som avgörande på ett sätt som styrkan aldrig är?",
         "options": [
-          "En slumpmässig miljöbeskrivning",
-          "En karta över Europa",
-          "En kritik mot industrialisering",
-          "En religiös symbol"
+          "Därför att de skonade fienderna senare byter sida och strider för det goda",
+          "Därför att de oförsiktiga besluten att skona Gollum är det som räddar uppdraget",
+          "Därför att styrka aldrig används av någon av huvudpersonerna i verket",
+          "Därför att barmhärtighet är det enda vapen som biter på ringens bärare"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
-        "type": "inferens",
-        "q": "Varför är trilogin öppen för tolkning?",
+        "type": "ord",
+        "q": "Vad betecknar ordet eukatastrof i Tolkiens användning?",
         "options": [
-          "Den är ofullständig",
-          "Den har flera författare",
-          "Den saknar tydliga teman",
-          "Den innehåller rik symbolik"
+          "En katastrof som drabbar hela världen samtidigt och utan förvarning",
+          "Ett slut där både det goda och det onda går under tillsammans",
+          "En berättelse som saknar tydlig upplösning och lämnas öppen",
+          "Den oväntade vändningen till det bättre när allt tycks förlorat"
         ],
         "correct": 3
       },
       {
-        "type": "sammanfatta",
-        "q": "Vad är textens huvudsakliga fokus?",
+        "type": "inferens",
+        "q": "Hur kan kontrasten mellan Isengård och Fylke förstås enligt texten?",
         "options": [
-          "Böckernas publiceringshistoria",
-          "Teman och symbolik i berättelsen",
-          "Filmatiseringarnas effekter",
-          "Militära strategier"
+          "Som en beskrivning av hur olika folk väljer att bygga sina samhällen",
+          "Som ett sätt att visa hur långt sällskapet färdas under berättelsen",
+          "Som kritik av en industrialisering som ingen har tänkt efter kring",
+          "Som en påminnelse om att naturen alltid segrar över tekniken till slut"
         ],
-        "correct": 1
+        "correct": 2
+      },
+      {
+        "type": "forfattarens-syfte",
+        "q": "Varför avslutar texten med det tema Tolkien själv pekade ut i sina brev?",
+        "options": [
+          "För att visa att verket rör något annat än krig, nämligen döden och tiden",
+          "För att visa att brev är en mer pålitlig källa än publicerade förord",
+          "För att visa att forskarna missat alla de teman som finns i verket",
+          "För att visa att Tolkien ändrade uppfattning om sin bok med åren"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 210,
+      "wordCount": 581,
       "fingerprint": "ak9-lotr-003",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
@@ -26216,81 +26216,81 @@
   },
   {
     "id": "ak9-lotr-004",
-    "grade": 4,
+    "grade": 9,
     "genre": "faktatext",
     "theme": "Kultur",
     "title": "Miljöer och världsbygge",
-    "text": "En avgörande faktor bakom Sagan om ringens genomslag är det omfattande världsbygget. Tolkien skapade inte enbart en bakgrund till handlingen, utan en hel värld med detaljerad historia, språk och geografi. Kartor över Midgård hjälper läsaren att följa karaktärernas långa resor.\n\nFylke framställs som en idyllisk landsbygd där hobbitar lever i fred och enkelhet. Kontrasten är stark mot Mordor, ett kargt och mörkt landskap präglat av aska och vulkanisk aktivitet. Dessa miljöer förstärker berättelsens moraliska dimensioner.\n\nStäder som Minas Tirith och fästningar som Helms klyfta bidrar till känslan av historisk tyngd. Arkitekturen och de gamla traditionerna antyder en lång och komplex bakgrund. Läsaren möter ruiner och minnen från tidigare epoker, vilket skapar en känsla av att världen existerade långt före huvudpersonernas tid.\n\nSpråken spelar också en central roll. Tolkien konstruerade flera alvspråk med egen grammatik och ljudlära. Dessa språk ger kulturerna i Midgård en särskild identitet och bidrar till autenticitet.\n\nVärldsbygget är inte enbart dekorativt, utan påverkar handlingen. Geografin avgör vilka vägar som är möjliga, och historiska konflikter påverkar relationerna mellan olika folk. På så sätt blir miljön en aktiv del av berättelsen.\n\nDet är denna noggrannhet som gör att läsaren kan uppleva Midgård som en levande och trovärdig värld. Världsbygget skapar en illusion av realism trots att berättelsen tillhör fantasylitteraturen.",
+    "text": "En avgörande orsak till att Sagan om ringen fått sådant genomslag är världsbygget. Tolkien skapade inte en bakgrund till handlingen utan en värld med egen historia, geografi och språk, och placerade sedan berättelsen i den.\n\nOrdningen är viktig och ovanlig. Tolkien var språkforskare till yrket och konstruerade språk för nöjes skull långt innan han skrev om Midgård. I efterhand beskrev han det som att berättelserna kom till för att ge språken en värld att existera i, inte tvärtom. De två mest utarbetade alvspråken, quenya och sindarin, har egen grammatik, ljudlära och historisk utveckling, och de är släkt med varandra på det sätt som verkliga språk är. Namnen i böckerna är därför sällan påhittade på måfå. De betyder något inom sitt eget system.\n\nFylke framställs som en fredlig landsbygd där hobbitar lever enkelt och en aning trångsynt. Kontrasten mot Mordor är stark: ett kargt och mörkt landskap av aska och vulkanisk aktivitet. Miljöerna bär berättelsens moraliska laddning utan att någon behöver förklara den.\n\nStäder som Minas Tirith och fästningar som Helms klyfta ger en känsla av historisk tyngd. Arkitekturen och de gamla sedvänjorna antyder en lång bakgrund, och läsaren möter ständigt ruiner och minnen från tidigare skeden. Ett återkommande drag är att storhetstiden ligger bakom. Gondor är svagare än förr, alverna lämnar världen, och mycket av det som beskrivs är rester. Det ger berättelsen en ton av vemod som skiljer den från äventyr där världen väntar på att erövras.\n\nKartorna är inte utsmyckning. Avstånden i Midgård är beräknade, och Tolkien förde bok över hur långt sällskapet färdades varje dygn och vilken månfas som rådde. Det gör att geografin faktiskt styr handlingen: vissa vägar är stängda, och vissa möten sker för att två grupper råkar röra sig mot samma pass. När läsaren följer med på kartan stämmer tiden.\n\nOckså växtligheten är genomarbetad. Tolkien namnger blommor och träd, och skogarna har olika karaktär. Gamla skogen är misstänksam, Lothlórien tidlös, Fangorn urgammal och vaken. Ententerna, trädherdarna som till slut går till angrepp mot Isengård, är kanske det tydligaste uttrycket för hans egen fäst vid träd.\n\nBakom allt detta ligger ett stort material som aldrig gavs ut under hans livstid: skapelseberättelser, kungalängder, kalendrar och skriftsystem. Läsaren möter bara en bråkdel, men bråkdelen fungerar just därför att resten finns. Effekten liknar den man får av att se en ruin och förstå att den en gång var hel.\n\nKartorna kom till under arbetets gång och inte i förväg. Tolkiens son Christopher ritade om dem flera gånger när handlingen ändrades, och far och son brevväxlade om avstånd och namn. Efter Tolkiens död 1973 fortsatte Christopher att ge ut det efterlämnade materialet, från Silmarillion 1977 till en lång rad volymer med utkast och varianter. Genom dem går det att följa hur namn, folk och händelser bytt skepnad under årtiondena, och hur mycket av det som verkar självklart i boken är resultatet av att en tidigare version ratats. Att materialet redigerats fram i efterhand betyder också att Midgård aldrig blev riktigt färdigt.\n\nI essän Om sagor beskrev Tolkien vad han var ute efter. En berättelse ska bygga en andra värld som läsaren kan tro på så länge man befinner sig i den. Trovärdigheten kommer inte av att världen är realistisk, utan av att den är följdriktig: reglerna gäller, historien hänger ihop, och ingenting införs bara för att det passar just då.\n\nDet är den noggrannheten som gör att Midgård upplevs som en plats som fanns före berättelsen och skulle finnas kvar efter den, trots att alltsammans är påhittat.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad kännetecknar Tolkiens världsbygge?",
+        "q": "I vilken ordning kom språken och berättelserna till enligt Tolkiens egen beskrivning?",
         "options": [
-          "Brist på detaljer",
-          "Detaljerad historia och geografi",
-          "Enbart muntliga traditioner",
-          "Fokus på modern teknik"
+          "Berättelserna skrevs först, och språken lades till för att fylla ut världen",
+          "Språken och berättelserna växte fram parallellt under samma arbetsperiod",
+          "Språken fanns först, och berättelserna kom till för att ge dem en värld",
+          "Språken skapades av andra forskare och lånades in i berättelserna"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför framhåller texten att namnen i böckerna sällan är påhittade på måfå?",
+        "options": [
+          "Därför att de är hämtade från verkliga platser i norra Europa",
+          "Därför att de betyder något inom de konstruerade språkens eget system",
+          "Därför att läsaren annars skulle få svårt att hålla isär de många folken",
+          "Därför att Tolkien lät sina studenter föreslå namnen under arbetets gång"
         ],
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Hur beskrivs Fylke?",
+        "type": "inferens",
+        "q": "Vilken verkan får det att storhetstiden i Midgård ligger bakom i tiden?",
         "options": [
-          "Som en krigszon",
-          "Som en industriell stad",
-          "Som en fredlig landsbygd",
-          "Som ett ökenlandskap"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Vad bidrar ruiner och gamla traditioner till?",
-        "options": [
-          "Känslan av historisk tyngd",
-          "Komisk effekt",
-          "Snabbare tempo",
-          "Mindre trovärdighet"
+          "Berättelsen får en ton av vemod som skiljer den från erövringsäventyr",
+          "Berättelsen blir svårare att följa eftersom läsaren saknar bakgrunden",
+          "Berättelsen framstår som mer verklig än andra fantasyböcker gör",
+          "Berättelsen kan läsas i valfri ordning utan att sammanhanget går förlorat"
         ],
         "correct": 0
       },
       {
-        "type": "inferens",
-        "q": "Varför skapade Tolkien egna språk?",
+        "type": "literal",
+        "q": "På vilket sätt påverkar kartorna själva handlingen enligt texten?",
         "options": [
-          "För att dölja handlingen",
-          "För att förenkla berättelsen",
-          "För att ge kulturerna identitet",
-          "För att undvika översättningar"
+          "De gör det möjligt för läsaren att hitta tillbaka till tidigare kapitel",
+          "De visar vilka folk som en gång levde i de områden som nu ligger öde",
+          "De anger hur lång tid varje del av berättelsen tar att läsa igenom",
+          "De gör att vissa vägar är stängda och att möten sker vid samma pass"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "inferens",
-        "q": "Hur påverkar geografin handlingen?",
+        "q": "Varför fungerar den bråkdel av materialet som läsaren faktiskt möter?",
         "options": [
-          "Den har ingen betydelse",
-          "Den avgör möjliga vägar och konflikter",
-          "Den förändras ständigt",
-          "Den ersätts av kartor i slutet"
+          "Därför att den valts ut av förlaget som de mest spännande avsnitten",
+          "Därför att resten finns, ungefär som en ruin visar att något varit helt",
+          "Därför att den är skriven i en enklare stil än det övriga materialet",
+          "Därför att den upprepas flera gånger under berättelsens gång"
         ],
         "correct": 1
       },
       {
         "type": "sammanfatta",
-        "q": "Vad är textens huvudpoäng?",
+        "q": "Varifrån kommer trovärdigheten i en påhittad värld enligt essän Om sagor?",
         "options": [
-          "Att miljön är oviktig",
-          "Att världsbygget skapar trovärdighet",
-          "Att trilogin saknar karta",
-          "Att språken är slumpmässiga"
+          "Från att världen är följdriktig, inte från att den är realistisk",
+          "Från att världen liknar den läsaren redan känner till från sin vardag",
+          "Från att författaren förklarar sina regler tydligt i ett förord",
+          "Från att berättelsen håller sig till en enda plats genom hela verket"
         ],
-        "correct": 1
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 210,
+      "wordCount": 578,
       "fingerprint": "ak9-lotr-004",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
@@ -26299,81 +26299,81 @@
   },
   {
     "id": "ak9-lotr-005",
-    "grade": 4,
+    "grade": 9,
     "genre": "faktatext",
     "theme": "Kultur",
     "title": "Makt, ansvar och moral",
-    "text": "I Sagan om ringen är frågan om makt och ansvar central. Ringen erbjuder enorm kraft, men den som bär den riskerar att förlora sin moraliska kompass. Detta skapar ett etiskt dilemma: är det rätt att använda ondskans verktyg för att bekämpa ondskan själv?\n\nFrodo accepterar uppdraget att bära ringen trots att han inte söker makt. Hans beslut grundas i en känsla av ansvar snarare än ambition. Samtidigt visar berättelsen att även den mest godhjärtade individ kan påverkas av frestelse.\n\nGandalf och Galadriel avstår medvetet från att ta ringen när de erbjuds den. De inser att deras goda avsikter inte skulle skydda dem från dess inflytande. Genom deras val betonas vikten av självinsikt och återhållsamhet.\n\nBoromirs försök att ta ringen illustrerar motsatsen. Han motiveras av viljan att försvara sitt folk, men hans handling visar hur lätt goda syften kan förvandlas till maktbegär. Hans senare ånger ger dock karaktären en tragisk värdighet.\n\nBerättelsen visar att verklig styrka inte alltid ligger i att dominera andra, utan i att avstå från makt. Det är genom uppoffring och samarbete som hotet till slut kan besegras.\n\nTrilogin ställer därmed frågor som sträcker sig bortom fantasyns värld. Hur bör makt användas? När blir ambition farlig? Genom sina karaktärers val uppmuntrar Tolkien läsaren att reflektera över moral och ansvar även i den egna verkligheten.",
+    "text": "Frågan om makt och ansvar löper genom hela Sagan om ringen. Ringen erbjuder enorm kraft, men den som bär den riskerar att förlora sitt omdöme. Därav det etiska problem som boken kretsar kring: går det att använda ondskans verktyg mot ondskan själv utan att bli den man bekämpar?\n\nRådslaget i Vattnadal formulerar frågan öppet. Alternativen prövas ett efter ett. Att gömma ringen fungerar bara tillfälligt, att kasta den i havet skjuter upp problemet, och att använda den mot Sauron är det farligaste av allt. Beslutet att förstöra den är därför ingen självklarhet, utan slutsatsen av ett resonemang där alla vägar är dåliga.\n\nFrodo åtar sig uppdraget utan att söka makt. Hans beslut vilar på ansvarskänsla snarare än ärelystnad, och han påpekar själv att han inte känner vägen. Samtidigt visar berättelsen att godhet inte skyddar mot frestelse. Det är lätt att missa hur boken faktiskt slutar. Vid Domedagsberget klarar Frodo inte av att kasta ringen i elden, utan tar den för egen räkning. Han misslyckas alltså med det han utsetts att göra.\n\nAtt uppdraget ändå lyckas beror på Gollum, som i sin girighet biter av fingret med ringen och faller ned i elden. Utgången knyts därmed till de tidigare besluten att skona honom. Bilbo skonade Gollum, Frodo gjorde detsamma, och Gandalf säger tidigt att Gollum kan ha en uppgift kvar att fylla. Barmhärtigheten var oförsiktig när den visades och avgörande i efterhand.\n\nSlutet ger också en tydlig moralisk poäng. Ingen är stark nog att bära den yttersta makten och sedan lägga den ifrån sig frivilligt. Det som räddar Midgård är inte viljestyrka, utan följderna av tidigare nåd.\n\nGandalf och Galadriel avstår medvetet när ringen erbjuds dem. Deras skäl är inte att de skulle sakna kraft att använda den, utan tvärtom att de har den. En stark bärare med goda avsikter skulle bli en ny mörk härskare, och just det är vad de säger. Faramir hör till samma mönster. Han avstår från att föra ringen till Gondor trots att hans far skulle ha krävt det.\n\nRingen fungerar dessutom olika beroende på vem som bär den. Den lovar var och en just det som frestar honom mest. Sam, som bär den en kort tid, ser för sitt inre en trädgård som täcker hela Mordor och inser i samma stund att önskan är för stor för honom. Att han lämnar tillbaka ringen utan strid är ett av bokens tystaste men mest betydelsefulla ögonblick.\n\nGenom att låta frestelsen se olika ut för olika gestalter undviker Tolkien den enkla uppdelningen i starka och svaga. Ingen står emot för att han är motståndskraftig, utan för att han hinner se vad erbjudandet skulle kosta.\n\nBoromir utgör motbilden. Han drivs av viljan att försvara sitt folk, och det är den goda avsikten som öppnar för maktbegäret. Hans försök att ta ringen bryter brödraskapet, men hans ånger och död till försvar av Merry och Pippin ger honom en tragisk värdighet.\n\nEtt annat drag i boken är att de mäktiga sällan avgör saken. Kungar och trollkarlar strider och håller ställningar, men det avgörande sker hos två hobbitar som ingen räknar med. Tolkien återkommer till tanken att den till synes obetydlige kan väga tyngst, och att den mäktige därför inte bör lita till sin styrka.\n\nBoken ställer på så vis frågor som räcker långt utanför fantasyns värld. Hur bör makt användas? När blir en god avsikt farlig? Och vad betyder det att en berättelse låter sin hjälte misslyckas i sista stund, men ändå låter saken sluta väl?",
     "questions": [
       {
         "type": "literal",
-        "q": "Vilket etiskt dilemma lyfts i texten?",
+        "q": "Varför beskrivs beslutet att förstöra ringen som slutsatsen av ett resonemang?",
         "options": [
-          "Om teknik ska förbjudas",
-          "Om man ska använda ondskans verktyg mot ondskan",
-          "Om krig alltid är rätt",
-          "Om vänskap är viktigare än lagar"
+          "Därför att rådslaget prövar övriga alternativ och finner alla vägar dåliga",
+          "Därför att Gandalf i förväg bestämt vad rådslaget skulle komma fram till",
+          "Därför att alternativet att använda ringen aldrig fördes fram på mötet",
+          "Därför att Frodo krävde att få uppdraget innan andra hann säga något"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "literal",
-        "q": "Vad motiverar Frodos beslut att bära ringen?",
+        "q": "Vad händer med Frodo vid Domedagsberget?",
         "options": [
-          "Maktbegär",
-          "Rädsla för kritik",
-          "Känsla av ansvar",
-          "Önskan om rikedom"
+          "Han kastar ringen i elden men skadas svårt av hettan i samma stund",
+          "Han överlämnar ringen till Sam, som utför det sista steget åt honom",
+          "Han klarar inte av att kasta ringen i elden utan tar den för egen räkning",
+          "Han förlorar ringen på vägen upp och hittar den aldrig igen"
         ],
         "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Varför avstår Gandalf och Galadriel från ringen?",
+        "q": "Vilken slutsats drar texten av att Gollum är den som till sist förstör ringen?",
         "options": [
-          "De är rädda för Sauron",
-          "De förstår att de kan korrumperas",
-          "De saknar mod",
-          "De vill lämna Midgård"
+          "Att uppdraget hade kunnat utföras av vem som helst i sällskapet",
+          "Att Gandalf måste ha planerat händelseförloppet från allra första början",
+          "Att girighet i vissa lägen är ett mer pålitligt drivmedel än godhet",
+          "Att de tidigare besluten att skona honom blev avgörande i efterhand"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför avstår Gandalf och Galadriel från ringen när den erbjuds dem?",
+        "options": [
+          "Därför att de saknar den kraft som krävs för att använda den rätt",
+          "Därför att de har kraften och därför skulle bli nya mörka härskare",
+          "Därför att de redan har lovat Frodo att inte röra den under resan",
+          "Därför att ringen bara fungerar för den som burit den från början"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
-        "q": "Vad visar Boromirs handling?",
+        "type": "forfattarens-syfte",
+        "q": "Varför tar texten upp att kungar och trollkarlar sällan avgör saken?",
         "options": [
-          "Att han är helt ond",
-          "Att han saknar lojalitet",
-          "Att goda syften kan leda fel",
-          "Att ringen är ofarlig"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "inferens",
-        "q": "Hur definieras verklig styrka enligt texten?",
-        "options": [
-          "Att dominera andra",
-          "Att samla rikedom",
-          "Att avstå från makt när det behövs",
-          "Att vinna alla strider"
+          "För att visa att stridsscenerna spelar en mindre roll i verket än man tror",
+          "För att visa att Tolkien saknade intresse för de mäktiga gestalterna",
+          "För att visa tanken att den till synes obetydlige kan väga tyngst",
+          "För att visa att brödraskapet var för litet för att kunna göra skillnad"
         ],
         "correct": 2
       },
       {
         "type": "sammanfatta",
-        "q": "Vad uppmanas läsaren att göra?",
+        "q": "Vilken moralisk poäng ger slutet enligt texten?",
         "options": [
-          "Att ignorera moraliska frågor",
-          "Att analysera språken",
-          "Att jämföra filmerna med böckerna",
-          "Att reflektera över moral och ansvar"
+          "Att den som visar tålamod till slut alltid får sin belöning",
+          "Att ondskan bara kan besegras med hjälp av dess egna verktyg",
+          "Att den starkaste viljan är det som avgör en konflikts utgång",
+          "Att ingen är stark nog att bära den yttersta makten och lägga den ifrån sig"
         ],
         "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 216,
+      "wordCount": 575,
       "fingerprint": "ak9-lotr-005",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
