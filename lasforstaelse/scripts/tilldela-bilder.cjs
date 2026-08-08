@@ -47,6 +47,26 @@ const HANDPLOCKAT = {
   'ak10-rosa-005': 'photo-1541844053589-346841d0b34c',
   'ak10-obama-002': 'photo-1541872703-74c5e44368f9', // Obama i Vita huset
   'ak10-obama-003': 'photo-1541872703-74c5e44368f9',
+
+  // Texter där två motiv väger lika i poängsättningen och den sittande bilden
+  // därför får stå kvar fast den passar sämre. "Plast i havet" träffar
+  // huvudmotivet både hos dykaren ("hav") och hos plastbilden ("plast"), så
+  // differensen blir noll och bytesvillkoret slår aldrig till. För en text om
+  // nedskräpning är ett korallrev dessutom en motsägelse mot innehållet.
+  'ak6-miljo-02': 'photo-1526951521990-620dc14c214b', // plastskräp på strand
+  'ak6-miljo-09': 'photo-1526951521990-620dc14c214b',
+  'ak5-tema-015': 'photo-1526951521990-620dc14c214b',
+  'ak1-miljo-05': 'photo-1611284446314-60a58ac0deb9', // sopkärl för sortering
+  'ak8-tema-016': 'photo-1562089727-90aa996a6f18', // smältande is
+  'ak8-tema-001-b': 'photo-1562089727-90aa996a6f18',
+  'ak8-tema-022': 'photo-1611273426858-450d8e3c9fce', // utsläpp från industri
+  'ak6-tema-020': 'photo-1661953029179-e1b0dc900490', // vågor mot strand, Åland
+
+  // Tre texter som fastnat på Obama-bilden utan att handla om honom. De saknar
+  // ord som katalogen känner igen, så automatiken hade inget bättre att välja.
+  'ak7-tema-012': 'photo-1532012197267-da84d127e765', // bokserie som fenomen
+  'ak8-tema-006': 'photo-1552581234-26160f608093', // elevråd som möts om mobilregler
+  'gym-berattelse-val-004': 'photo-1434030216411-0b793f4b4173', // elev som skriver uppsats
 };
 
 const POANG = { titel: 10, tema: 6, genre: 2, text: 2 };
@@ -186,9 +206,16 @@ function main() {
     // Byt om bilden är trasig, eller om den nya bilden träffar titelns
     // huvudmotiv och är klart bättre än den som sitter där nu. Marginalen
     // gör att en text vars bild redan fungerar lämnas i fred.
-    const byt = arDod
-      ? arReserv || nyPoang > 0
-      : nyPoang >= POANG.titel + HUVUDMOTIV && nyPoang - nuPoang >= 8;
+    // En handplockad bild är ett medvetet val och ska alltid gälla. Utan det
+    // undantaget faller den på samma marginalkrav som automatiken: "Plast i
+    // havet" träffar huvudmotivet både hos dykarbilden ("hav") och hos
+    // plastbilden ("plast"), differensen blir noll och listan får ingen effekt
+    // just i de fall den finns till för.
+    const byt = handplockad
+      ? true
+      : arDod
+        ? arReserv || nyPoang > 0
+        : nyPoang >= POANG.titel + HUVUDMOTIV && nyPoang - nuPoang >= 8;
     if (!byt) continue;
 
     anvandning.set(nuId, Math.max(0, (anvandning.get(nuId) || 1) - 1));

@@ -292,6 +292,77 @@ const RESERV = {
   standard: 'photo-1456513080510-7bf3a84b82f8',
 };
 
+// ---------------------------------------------------------------------------
+// Tillägg: avlastning av de mest återanvända motiven.
+//
+// Efter förra omgången hade ingen text en trasig eller uppenbart felaktig bild,
+// men 437 texter delade fortfarande motiv med varandra: tretton texter satt på
+// samma bild av sopsortering, tolv på samma kommunbild och elva på samma
+// AI-bild. Bilderna nedan har samma nyckelord som de överbelastade, och
+// eftersom bastaBild() vid lika poäng väljer det motiv som använts minst
+// fördelar tilldelningen ut texterna av sig själv.
+//
+// Var och en är nedladdad och granskad. Av de fyra första sopsorteringsbilder
+// som söktes fram var bara en användbar: de andra visade en skräpig gata med en
+// utslängd kontorsstol, en stenvägg där kärlen var en bisak, och en villagata
+// där de knappt syntes. Alt-texten sa "trash bins" om alla fyra.
+// ---------------------------------------------------------------------------
+const KATALOG_TILLAGG = [
+  // Miljö och sortering
+  { id: 'photo-1611284446314-60a58ac0deb9', desc: 'tre sopkärl märkta kompost, avfall och återvinning', kw: ['sortera', 'sopor', 'återvinning', 'avfall', 'skräp'] },
+
+  // Rymd
+  { id: 'photo-1701014159143-09482059f571', desc: 'tre planeter mot stjärnhimmel', kw: ['planet', 'rymd', 'solsystem', 'universum'] },
+  { id: 'photo-1696384036025-c7d7b7f6584d', desc: 'röd planet med måne mot stjärnhimmel', kw: ['mars', 'planet', 'rymd'] },
+  { id: 'photo-1700159915592-004562ddcf6f', desc: 'planet i blått ljus över stjärnfält', kw: ['planet', 'rymd', 'universum', 'galax'] },
+
+  // Musik
+  { id: 'photo-1512733596533-7b00ccf8ebaf', desc: 'pianotangenter i närbild', kw: ['piano', 'musik', 'instrument', 'ton'] },
+  { id: 'photo-1556379118-7034d926d258', desc: 'stränginstrument och trummor upphängda på vägg', kw: ['instrument', 'musik', 'gitarr', 'trumma'] },
+
+  // Sång och rytm
+  { id: 'photo-1774266854775-4831c6c516b3', desc: 'barn i skolkläder som klappar takten', kw: ['klappa', 'rytm', 'sång', 'kör', 'takt', 'samling'] },
+
+  // Nyheter och media
+  { id: 'photo-1573812195421-50a396d17893', desc: 'staplade dagstidningar sedda från kanten', kw: ['tidning', 'nyhet', 'media', 'rubrik'] },
+  { id: 'photo-1495020689067-958852a7765e', desc: 'person läser tidning på en bänk', kw: ['tidning', 'läsa', 'nyhet', 'media', 'press'] },
+
+  // Teknik och AI
+  { id: 'photo-1562408590-e32931084e23', desc: 'kretskort med komponenter i blått ljus', kw: ['ai', 'artificiell', 'intelligens', 'algoritm', 'dator', 'chip'] },
+
+  // Samhälle
+  { id: 'photo-1780396269429-e20eaa1a1cd2', desc: 'fullmäktigesal med bänkar i halvcirkel', kw: ['kommun', 'fullmäktige', 'demokrati', 'beslut', 'politik', 'råd'] },
+
+  // Andra omgången
+  { id: 'photo-1769321309472-bd13cccc7767', desc: 'barn går ensamt längs en gata om hösten', kw: ['skolväg', 'gata', 'promenad', 'trottoar', 'övergångsställe'] },
+  { id: 'photo-1709924168698-620ea32c3488', desc: 'bibliotekssal med bokhyllor i trä', kw: ['bibliotek', 'bokhylla', 'låna', 'böcker'] },
+  { id: 'photo-1653112521311-a09057757049', desc: 'bäck som rinner genom grönskande skog', kw: ['bäck', 'å', 'vattendrag', 'ström', 'flod'] },
+  { id: 'photo-1667264501379-c1537934c7ab', desc: 'serverrack med kablar i mörkt rum', kw: ['server', 'internet', 'datacenter', 'nätverk', 'uppkoppling'] },
+  { id: 'photo-1661953029179-e1b0dc900490', desc: 'vågor som rullar in mot sandstrand', kw: ['våg', 'strand', 'hav', 'kust', 'sand'] },
+
+  // Tredje omgången: två motiv bar upp texter de inte hörde ihop med.
+  //
+  // Tolv texter satt på en dykare bland tropiska fiskar. För "En bok om havet"
+  // fungerade den, men nio klimattexter och två om sopsortering fick ett
+  // korallrev, och för "Plast i havet" blev en vacker undervattensbild
+  // dessutom en motsägelse mot innehållet.
+  //
+  // Tio texter satt på Barack Obama i telefon. Fyra av dem handlar om Obama.
+  // De övriga var "Hjälparen på övergångsstället" och "Tävlingen med äpplen"
+  // i åk 2, en text om Harry Potter och en om ett grupparbete.
+  { id: 'photo-1526951521990-620dc14c214b', desc: 'plastskräp uppspolat på strand med palmer', kw: ['plast', 'skräp', 'nedskräpning', 'förorening', 'strand'] },
+  { id: 'photo-1562089727-90aa996a6f18', desc: 'smältande isflak framför snöklädda berg', kw: ['klimat', 'smälter', 'is', 'glaciär', 'uppvärmning'] },
+  { id: 'photo-1611273426858-450d8e3c9fce', desc: 'fabriksskorsten med rök över industriområde', kw: ['utsläpp', 'koldioxid', 'fabrik', 'industri', 'skorsten'] },
+  { id: 'photo-1552862750-746b8f6f7f25', desc: 'tänd glödlampa mot mörkblå bakgrund', kw: ['lampa', 'ljus', 'energi', 'ström', 'el', 'spara'] },
+  { id: 'photo-1541580696095-f37f93131a92', desc: 'person som går över ett övergångsställe', kw: ['övergångsställe', 'trafik', 'gata', 'korsning', 'gå'] },
+  { id: 'photo-1600626333392-59a20e646d97', desc: 'korg med röda och gröna äpplen', kw: ['äpple', 'frukt', 'skörd', 'plocka'] },
+  { id: 'photo-1475721027785-f74eccf877e2', desc: 'mikrofon framför en publik', kw: ['tal', 'mikrofon', 'publik', 'retorik', 'framträdande', 'röst'] },
+];
+
+// Tillägget läggs sist, så att befintliga tilldelningar med samma poäng ligger
+// kvar och bara överflödet flyttas till de nya motiven.
+KATALOG.push(...KATALOG_TILLAGG.filter((b) => !KATALOG.some((k) => k.id === b.id)));
+
 const KATALOG_MAP = new Map(KATALOG.map((b) => [b.id, b]));
 
 module.exports = { KATALOG, KATALOG_MAP, RESERV, url, BAS, SUFFIX };
