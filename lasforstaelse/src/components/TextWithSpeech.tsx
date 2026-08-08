@@ -127,6 +127,8 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     if (!supported) return;
     window.speechSynthesis.cancel();
     if (timerRef.current) cancelAnimationFrame(timerRef.current);
+    speakingRef.current = false;
+    pausedRef.current = false;
     setSpeaking(false);
     setPaused(false);
     setCurrentWordIndex(-1);
@@ -169,6 +171,8 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
 
     const avsluta = () => {
       if (timerRef.current) cancelAnimationFrame(timerRef.current);
+      speakingRef.current = false;
+      pausedRef.current = false;
       setSpeaking(false);
       setPaused(false);
       setCurrentWordIndex(-1);
@@ -190,6 +194,8 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     const utterance = buildUtterance(speechRate);
     utteranceRef.current = utterance;
     window.speechSynthesis.speak(utterance);
+    speakingRef.current = true;
+    pausedRef.current = false;
     setSpeaking(true);
     setPaused(false);
     setCurrentWordIndex(0);
@@ -205,8 +211,11 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     // talsyntes finns, och uppläsningen startar aldrig. Utan det här beskedet
     // ser eleven bara knappen växla till Pausa/Stoppa utan att höra något.
     // Uppläsningen avbryts inte – en långsam röstmotor får komma igång sent.
+    // Kontrollen mot speakingRef behövs för den som trycker Lyssna och sedan
+    // Stoppa inom tre sekunder: utan den dök beskedet upp efteråt, mitt i en
+    // tyst app som ingen längre försökte lyssna på.
     window.setTimeout(() => {
-      if (!startedRef.current && !boundaryWorkedRef.current) {
+      if (speakingRef.current && !startedRef.current && !boundaryWorkedRef.current) {
         setIngenUppläsning(true);
       }
     }, 3000);
@@ -218,6 +227,12 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
     if (!supported) return;
     if (paused) {
       window.speechSynthesis.resume();
+      // pausedRef sätts här och inte bara via effekten som speglar state.
+      // startFallbackTimer schemalägger en animationsruta direkt, och den
+      // rutan kan hinna före effekten. Låg då pausedRef kvar på true avbröt
+      // tick() sig själv på första varvet och ordmarkeringen kom aldrig
+      // igång igen efter en paus.
+      pausedRef.current = false;
       if (!boundaryWorkedRef.current) {
         startFallbackTimer(rate, pausedAtRef.current);
       }
@@ -226,6 +241,7 @@ export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({
       window.speechSynthesis.pause();
       if (timerRef.current) cancelAnimationFrame(timerRef.current);
       pausedAtRef.current = performance.now() - startTimeRef.current;
+      pausedRef.current = true;
       setPaused(true);
     }
   }, [supported, paused, rate, startFallbackTimer]);

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchTeacherStats, type TeacherStats } from '../services/analyticsService';
+import { getTextCountByGrade } from '../services/libraryService';
 import { RefreshCw, LogOut, Monitor, Calendar } from 'lucide-react';
 import { JaktLinks } from './JaktLinks';
 
@@ -68,23 +69,17 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
   const loadLibraryStats = async () => {
     try {
-      const response = await fetch('/data/library.json');
-      const texts = await response.json();
+      // Hämtade tidigare library.json direkt. Filen är 2 MB och eleven har
+      // oftast redan laddat den, så räkningen går via libraryService som
+      // återanvänder den cachade kopian. getTextCountByGrade svarar alltid
+      // för nivå 1–10, även de utan texter, så nollnivåer syns i tabellen.
+      const counts = await getTextCountByGrade();
 
-      const counts: Record<number, number> = {};
-      texts.forEach((text: { grade: number }) => {
-        counts[text.grade] = (counts[text.grade] || 0) + 1;
-      });
-
-      const gradeArray = Object.entries(counts)
-        .map(([grade, count]) => ({ grade: parseInt(grade), count }))
-        .sort((a, b) => a.grade - b.grade);
-
-      if (!gradeArray.find(g => g.grade === 10)) {
-        gradeArray.push({ grade: 10, count: 0 });
-      }
-
-      setGradeCounts(gradeArray);
+      setGradeCounts(
+        Object.entries(counts)
+          .map(([grade, count]) => ({ grade: parseInt(grade), count }))
+          .sort((a, b) => a.grade - b.grade)
+      );
     } catch (err) {
       console.error('Kunde inte ladda biblioteket:', err);
     }
