@@ -732,7 +732,7 @@
       "generatedAt": "2026-02-07T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1552862750-746b8f6f7f25?w=600&h=400&fit=crop"
   },
   {
     "id": "ak1-miljo-05",
@@ -809,7 +809,7 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 59
     }
@@ -1547,7 +1547,7 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&h=400&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1541580696095-f37f93131a92?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 77
     }
@@ -1953,7 +1953,7 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1552862750-746b8f6f7f25?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 77
     }
@@ -9457,7 +9457,7 @@
       "generatedAt": "2026-02-04T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1541580696095-f37f93131a92?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-skola-003",
@@ -10204,7 +10204,7 @@
       "generatedAt": "2026-03-13T12:58:05.128Z",
       "model": "claude"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1600626333392-59a20e646d97?w=600&h=400&fit=crop"
   },
   {
     "id": "ak3-tema-006",
@@ -16927,7 +16927,7 @@
         "type": "inferens"
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1526951521990-620dc14c214b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 208
     }
@@ -18223,7 +18223,7 @@
         "correct": 0
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1526951521990-620dc14c214b?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 315
     }
@@ -18309,7 +18309,7 @@
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1526951521990-620dc14c214b?w=600&h=400&fit=crop"
   },
   {
     "id": "ak6-musik-05",
@@ -20662,7 +20662,7 @@
         "type": "sammanfatta"
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1661953029179-e1b0dc900490?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 320
     },
@@ -21721,7 +21721,7 @@
       "generatedAt": "2026-02-06T00:00:00.000Z",
       "model": "chatgpt"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-miljo-02",
@@ -23108,7 +23108,7 @@
         "correct": 2
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&h=400&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 304
     }
@@ -24742,7 +24742,7 @@
         "type": "literal"
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&h=400&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1552581234-26160f608093?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 309
     }
@@ -28970,7 +28970,7 @@
         "type": "literal"
       }
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&h=400&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop",
     "meta": {
       "wordCount": 587
     }
@@ -30526,7 +30526,7 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1562089727-90aa996a6f18?w=600&h=400&fit=crop"
   },
   {
     "id": "ak7-tema-022",
@@ -31356,7 +31356,7 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1562089727-90aa996a6f18?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-017",
@@ -32601,7 +32601,7 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1562089727-90aa996a6f18?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-002-b",
@@ -33514,7 +33514,7 @@
       "generatedAt": "2026-03-28T00:00:00.000Z",
       "model": "manual"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600&h=400&fit=crop"
   },
   {
     "id": "ak8-tema-023",
@@ -36004,7 +36004,7 @@
       "generatedAt": "2026-04-14T00:00:00.000Z",
       "model": "manual"
     },
-    "imageUrl": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&h=400&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop"
   },
   {
     "id": "ak10-obama-005",

@@ -339,6 +339,24 @@ const KATALOG_TILLAGG = [
   { id: 'photo-1653112521311-a09057757049', desc: 'bäck som rinner genom grönskande skog', kw: ['bäck', 'å', 'vattendrag', 'ström', 'flod'] },
   { id: 'photo-1667264501379-c1537934c7ab', desc: 'serverrack med kablar i mörkt rum', kw: ['server', 'internet', 'datacenter', 'nätverk', 'uppkoppling'] },
   { id: 'photo-1661953029179-e1b0dc900490', desc: 'vågor som rullar in mot sandstrand', kw: ['våg', 'strand', 'hav', 'kust', 'sand'] },
+
+  // Tredje omgången: två motiv bar upp texter de inte hörde ihop med.
+  //
+  // Tolv texter satt på en dykare bland tropiska fiskar. För "En bok om havet"
+  // fungerade den, men nio klimattexter och två om sopsortering fick ett
+  // korallrev, och för "Plast i havet" blev en vacker undervattensbild
+  // dessutom en motsägelse mot innehållet.
+  //
+  // Tio texter satt på Barack Obama i telefon. Fyra av dem handlar om Obama.
+  // De övriga var "Hjälparen på övergångsstället" och "Tävlingen med äpplen"
+  // i åk 2, en text om Harry Potter och en om ett grupparbete.
+  { id: 'photo-1526951521990-620dc14c214b', desc: 'plastskräp uppspolat på strand med palmer', kw: ['plast', 'skräp', 'nedskräpning', 'förorening', 'strand'] },
+  { id: 'photo-1562089727-90aa996a6f18', desc: 'smältande isflak framför snöklädda berg', kw: ['klimat', 'smälter', 'is', 'glaciär', 'uppvärmning'] },
+  { id: 'photo-1611273426858-450d8e3c9fce', desc: 'fabriksskorsten med rök över industriområde', kw: ['utsläpp', 'koldioxid', 'fabrik', 'industri', 'skorsten'] },
+  { id: 'photo-1552862750-746b8f6f7f25', desc: 'tänd glödlampa mot mörkblå bakgrund', kw: ['lampa', 'ljus', 'energi', 'ström', 'el', 'spara'] },
+  { id: 'photo-1541580696095-f37f93131a92', desc: 'person som går över ett övergångsställe', kw: ['övergångsställe', 'trafik', 'gata', 'korsning', 'gå'] },
+  { id: 'photo-1600626333392-59a20e646d97', desc: 'korg med röda och gröna äpplen', kw: ['äpple', 'frukt', 'skörd', 'plocka'] },
+  { id: 'photo-1475721027785-f74eccf877e2', desc: 'mikrofon framför en publik', kw: ['tal', 'mikrofon', 'publik', 'retorik', 'framträdande', 'röst'] },
 ];
 
 // Tillägget läggs sist, så att befintliga tilldelningar med samma poäng ligger
