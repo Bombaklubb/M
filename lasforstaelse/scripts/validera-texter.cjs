@@ -23,6 +23,20 @@ const GILTIGA_TYPER = [
 ];
 const GILTIGA_GENRER = ['berättelse', 'faktatext'];
 
+// Enordsmeningar som lästs i sitt sammanhang och befunnits avsiktliga.
+//
+// Regeln längre ned letar efter punkter som hamnat mitt i en mening, och den
+// ska inte tystas – den vaktar en verklig skada. Men i berättande text är en
+// ensam mening ibland ett stilgrepp, och då är varningen brus. Varje post här
+// har granskats för hand, inte tystats för att bli av med en rad i utskriften.
+//
+// gy-etik-05: "Nora kände hur magen vände sig. Plagiat. Ett ord som lät som en
+// dom." Meningen efter kallar det uttryckligen "Ett ord", vilket bara går ihop
+// om ordet står ensamt. Att slå ihop meningarna skulle förstöra greppet.
+//
+// Formatet är `<textens id> <meningen inklusive punkt>`.
+const GRANSKADE_ENORDSMENINGAR = new Set(['gy-etik-05 Plagiat.']);
+
 // Målintervall för antal ord per årskurs (åk 10 = gymnasiet).
 const ORDINTERVALL = {
   1: [40, 60], 2: [65, 90], 3: [150, 165], 4: [200, 220], 5: [300, 320],
@@ -161,7 +175,8 @@ lib.forEach(t => {
     // "J.R.R. Tolkien." delas av meningsdelaren i två bitar. Är föregående
     // mening slut på en ensam versal med punkt är brytningen ett artefakt.
     const innan = meningar[i - 1] || '';
-    return !/\b[A-ZÅÄÖ]\.$/.test(innan);
+    if (/\b[A-ZÅÄÖ]\.$/.test(innan)) return false;
+    return !GRANSKADE_ENORDSMENINGAR.has(`${id} ${m}`);
   });
   if (enOrdsMeningar.length) {
     varningar.push(`${id}: mening med bara ett ord – ${enOrdsMeningar.join(' ')} (kan vara en felplacerad punkt)`);
