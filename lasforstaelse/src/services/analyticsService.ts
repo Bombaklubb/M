@@ -84,23 +84,36 @@ export function trackError(questionType: string): void {
 
 // Session-tid tracker
 let sessionStartTime: number | null = null;
+let sessionIgang = false;
 
 export function startSession(): void {
+  // Funktionen anropas från en useEffect, och i React.StrictMode körs effekter
+  // två gånger under utveckling. Utan den här spärren skapades då två intervall
+  // och två uppsättningar lyssnare, så tiden räknades dubbelt.
+  if (sessionIgang) return;
+  sessionIgang = true;
+
   sessionStartTime = Date.now();
 
-  // Skicka tid när användaren lämnar sidan
+  // Skicka tid när användaren lämnar sidan.
+  //
+  // Både beforeunload och pagehide registreras för att täcka olika webbläsare,
+  // men i de flesta avfyras båda vid samma navigering. sessionStartTime
+  // nollställs därför direkt, så att den andra händelsen inte skickar samma
+  // tid en gång till och blåser upp tiden i lärarstatistiken.
   const handleUnload = () => {
-    if (sessionStartTime) {
-      const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
-      // Använd sendBeacon för att garantera att data skickas
-      if (navigator.sendBeacon) {
-        const data = JSON.stringify({
-          type: 'session_time',
-          deviceId: getAnonymousDeviceId(),
-          data: { timeSeconds: Math.min(seconds, 3600) }, // Max 1 timme
-        });
-        navigator.sendBeacon('/api/stats/track', data);
-      }
+    if (sessionStartTime === null) return;
+    const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
+    sessionStartTime = null;
+
+    // Använd sendBeacon för att garantera att data skickas
+    if (navigator.sendBeacon) {
+      const data = JSON.stringify({
+        type: 'session_time',
+        deviceId: getAnonymousDeviceId(),
+        data: { timeSeconds: Math.min(seconds, 3600) }, // Max 1 timme
+      });
+      navigator.sendBeacon('/api/stats/track', data);
     }
   };
 
