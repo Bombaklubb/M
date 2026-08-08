@@ -5751,81 +5751,81 @@
   },
   {
     "id": "ak10-ai-001",
-    "grade": 4,
+    "grade": 10,
     "genre": "faktatext",
     "theme": "teknik",
     "title": "Vad är artificiell intelligens?",
-    "text": "Artificiell intelligens, ofta förkortat AI, syftar på datorprogram som kan utföra uppgifter som traditionellt kräver mänsklig intelligens. Dessa uppgifter inkluderar inlärning, problemlösning, mönsterigenkänning och beslutsfattande. Till skillnad från vanliga program som följer fördefinierade regler kan AI-system lära sig från data och anpassa sitt beteende över tid.\n\nDet finns olika typer av AI. Svag AI, eller smal AI, är specialiserad på en enda uppgift, till exempel att rekommendera filmer eller identifiera ansikten i fotografier. Stark AI, som ännu inte existerar, skulle kunna utföra alla intellektuella uppgifter som en människa kan. Mellan dessa ytterligheter utvecklas generativa AI-system som kan producera text, bilder och musik.\n\nMaskininlärning är en central teknik inom AI. Istället för att programmeras med explicita regler tränas systemen på stora mängder data. Genom att identifiera mönster kan de sedan göra förutsägelser eller beslut om ny information. Djupinlärning, en form av maskininlärning inspirerad av hjärnans struktur, har möjliggjort stora framsteg inom bild- och språkbehandling.\n\nAI-system påverkar redan vår vardag på många sätt. Sökmotorer, sociala mediers flöden och översättningsverktyg drivs av AI. Inom sjukvården används AI för att analysera medicinska bilder, och inom transport utvecklas självkörande fordon.\n\nSamtidigt väcker tekniken frågor om transparens och kontroll. Hur fattar ett AI-system sina beslut? Vem ansvarar när ett system gör fel? Dessa frågor blir allt viktigare i takt med att AI integreras i fler samhällsområden.",
+    "text": "Artificiell intelligens, ofta förkortat AI, är ett samlingsnamn för datorprogram som utför uppgifter vi normalt förknippar med mänskligt tänkande: att lära av erfarenhet, känna igen mönster, lösa problem och fatta beslut. Gränsen är rörlig. Det som en gång räknades som avancerad AI, som att spela schack eller tyda handskriven text, uppfattas i dag ofta som vanlig programmering. Fenomenet har ett eget namn: AI-effekten, att tekniken slutar kallas intelligent så snart den fungerar.\n\nSkillnaden mot traditionella program ligger i hur reglerna kommer till. Ett vanligt program följer instruktioner som en människa skrivit i förväg. Ett AI-system tränas i stället på data, och reglerna växer fram ur materialet. Den som bygger ett system för att skilja katter från hundar skriver aldrig ned vad som utmärker en katt. I stället visas systemet hundratusentals bilder med facit, och det justerar successivt sina egna inställningar tills felen blir tillräckligt få.\n\nUnder 1900-talets senare hälft dominerade en annan ansats. Symbolisk AI byggde på logiska regler och kunskap som experter matade in för hand. Metoden fungerade i avgränsade sammanhang men blev ohanterlig så snart världen blev rörig. Genombrottet kom när billig beräkningskraft och stora datamängder gjorde det möjligt att låta statistiska metoder ta över.\n\nMaskininlärning är den centrala tekniken, och djupinlärning en gren av den. Där sker beräkningarna i många lager, efter en struktur löst inspirerad av nervceller. Varje lager fångar något mer sammansatt än det föregående: först kanter och färgskiftningar, sedan former, till sist objekt. Just den skiktningen förklarar framstegen inom bild- och språkbehandling.\n\nDet är brukligt att skilja mellan smal och generell AI. Smal AI löser en avgränsad uppgift åt gången: rekommenderar en film, skriver ut vad någon säger, upptäcker avvikelser i en röntgenbild. All AI som används i dag är smal, hur imponerande den än verkar. Generell AI, ett system med mänsklig bredd i sitt tänkande, existerar inte, och forskarna är oense om hur nära den ligger. Däremellan står de generativa modellerna, som producerar text, bild och ljud utifrån mönster i sitt träningsmaterial.\n\nHär finns en viktig begränsning. En språkmodell förutsäger vilket ord som sannolikt följer på det föregående. Det ger ofta korrekta svar, eftersom korrekta formuleringar är vanliga i träningsdata, men systemet har ingen kontroll mot verkligheten inbyggd. När underlaget saknas fyller det ändå i något rimligt klingande. Fenomenet kallas hallucination och är inte ett fel som kan programmeras bort, utan en följd av hur metoden fungerar.\n\nTräningsdata är därför inte en neutral resurs. Vad en modell kan svara på avgörs av vad som fanns i materialet, och materialet speglar vilka språk som skrivits mycket på nätet och vems perspektiv som fått plats. En modell som mött få texter på ett minoritetsspråk presterar sämre på just det språket.\n\nAI påverkar redan vardagen. Sökmotorernas rangordning, flödena i sociala medier, översättningsverktyg, röststyrning och stavningskontroll drivs av modeller av det här slaget. Inom sjukvården används de för att markera misstänkta förändringar i medicinska bilder, inom transport för att tolka omgivningen i fordon som kör själva.\n\nJu fler beslut som förbereds av sådana system, desto viktigare blir två frågor. Den första gäller insyn: går det att rekonstruera varför systemet kom fram till just det svaret? I en djupinlärningsmodell är beslutet utspritt över miljoner justerade värden, och någon läsbar motivering finns inte. Den andra gäller ansvar. När ett system gör fel är det sällan uppenbart vem som ska svara: den som byggde modellen, den som valde träningsdata, den som köpte in systemet eller den som följde dess rekommendation.\n\nAtt förstå AI handlar därför mindre om att veta hur beräkningarna går till, och mer om att kunna bedöma vad ett system faktiskt kan svara på, vad det bara verkar kunna svara på, och vem som bär följderna när det tar fel.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad skiljer AI från vanliga datorprogram?",
+        "type": "ord",
+        "q": "Vad betyder uttrycket AI-effekten som texten beskriver?",
         "options": [
-          "AI kräver mer minne",
-          "AI fungerar utan elektricitet",
-          "AI är alltid snabbare",
-          "AI kan lära sig från data"
+          "Att tekniken kräver allt större beräkningskraft för varje steg",
+          "Att tekniken blir mer träffsäker ju fler människor som använder den",
+          "Att tekniken slutar kallas intelligent så snart den fungerar",
+          "Att tekniken sprids fortare än vad lagstiftningen hinner med"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad utmärkte den symboliska ansatsen inom AI?",
+        "options": [
+          "Logiska regler och kunskap som experter matade in för hand",
+          "Statistiska metoder tränade på mycket stora datamängder",
+          "Beräkningar i många lager efter nervcellernas förebild",
+          "Program som skapade text och bild utifrån mönster i material"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Texten kallar hallucinationer en följd av metoden snarare än ett fel som går att rätta. Vad talar starkast för den beskrivningen?",
+        "options": [
+          "Att systemen sällan får tillräckligt med träningsdata att arbeta med",
+          "Att användarna oftast ställer frågor som saknar ett bestämt svar",
+          "Att beräkningarna sker i lager som ingen utvecklare kan granska",
+          "Att systemet väljer sannolika ord utan att pröva dem mot verkligheten"
         ],
         "correct": 3
       },
       {
         "type": "literal",
-        "q": "Vad kallas AI som är specialiserad på en enda uppgift?",
+        "q": "Varför beskrivs all AI som används i dag som smal?",
         "options": [
-          "Svag AI",
-          "Superdator",
-          "Stark AI",
-          "Generativ AI"
+          "Därför att den bara kan köras på särskilt kraftfull utrustning",
+          "Därför att varje system löser en avgränsad uppgift åt gången",
+          "Därför att den ännu inte fått fäste utanför forskningen",
+          "Därför att den saknar förmåga att förändras över tid"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad är maskininlärning?",
+        "type": "inferens",
+        "q": "Varför blir frågan om insyn särskilt svår i en djupinlärningsmodell?",
         "options": [
-          "Fysisk datorutrustning",
-          "Robotar som bygger datorer",
-          "System som tränas på data",
-          "Program med fasta regler"
+          "Därför att modellens kod hålls hemlig av företaget bakom den",
+          "Därför att modellen ändrar sina svar varje gång den används",
+          "Därför att beslutet är utspritt över miljoner justerade värden",
+          "Därför att modellen aldrig sparar underlaget för sina beslut"
         ],
         "correct": 2
       },
       {
-        "type": "inferens",
-        "q": "Varför nämns hjärnans struktur i texten?",
+        "type": "sammanfatta",
+        "q": "Vilket påstående ligger närmast textens slutsats om vad det innebär att förstå AI?",
         "options": [
-          "Som inspiration för djupinlärning",
-          "För att visa att AI är medvetet",
-          "Som historisk bakgrund",
-          "För att kritisera AI"
+          "Att kunna bedöma vad ett system kan svara på och vem som bär följderna",
+          "Att kunna följa hur beräkningarna i systemets olika lager går till",
+          "Att kunna skilja mellan de företag som utvecklar de största modellerna",
+          "Att kunna avgöra när generell AI kommer att bli tekniskt möjlig"
         ],
         "correct": 0
-      },
-      {
-        "type": "inferens",
-        "q": "Varför lyfts frågan om ansvar?",
-        "options": [
-          "Eftersom AI alltid gör rätt",
-          "Eftersom det är oklart vem som ansvarar för fel",
-          "Eftersom ingen använder AI",
-          "Eftersom AI har juridiska rättigheter"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "sammanfatta",
-        "q": "Vilket påstående sammanfattar texten bäst?",
-        "options": [
-          "AI är en enkel teknik utan utmaningar",
-          "AI omfattar system som lär sig och påverkar samhället",
-          "AI existerar endast i forskning",
-          "AI är farligare än användbart"
-        ],
-        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 220,
+      "wordCount": 612,
       "fingerprint": "ak10-ai-001",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
@@ -5834,81 +5834,81 @@
   },
   {
     "id": "ak10-ai-002",
-    "grade": 4,
+    "grade": 10,
     "genre": "faktatext",
     "theme": "teknik",
     "title": "AI i arbetslivet",
-    "text": "Artificiell intelligens förändrar arbetsmarknaden på flera sätt. Vissa arbetsuppgifter automatiseras, vilket leder till att traditionella roller försvinner eller omdefinieras. Samtidigt skapas nya yrken som kräver kompetens inom dataanalys, AI-utveckling och etisk granskning av algoritmiska system.\n\nHistoriskt har teknologiska skiften alltid inneburit både förlust och tillkomst av jobb. Industrialiseringen ersatte hantverk med fabriksarbete, medan digitaliseringen skapade helt nya branscher. AI-revolutionen följer ett liknande mönster, men förändringens hastighet är större än tidigare.\n\nYrken med rutinmässiga och repetitiva uppgifter är särskilt utsatta. Dataregistrering, enklare kundtjänst och vissa administrativa funktioner kan redan i dag utföras av AI-system. Samtidigt är yrken som kräver kreativitet, empati och komplex social interaktion svårare att automatisera.\n\nEn viktig fråga är hur samhället ska hantera övergångsperioden. Utbildningssystem behöver anpassas för att förbereda kommande generationer på en arbetsmarknad där livslångt lärande blir normen. Omskolning av befintlig arbetskraft är också avgörande.\n\nDet finns olika perspektiv på AI:s effekter. Vissa betonar produktivitetsvinster och möjligheten att frigöra människor från tråkiga uppgifter. Andra varnar för ökad ojämlikhet om AI-vinster koncentreras till ett fåtal företag och individer.\n\nOavsett perspektiv står det klart att AI kommer att påverka hur vi arbetar. Förmågan att samarbeta med AI-system, förstå deras begränsningar och reflektera kritiskt över deras resultat blir allt viktigare kompetenser.",
+    "text": "Artificiell intelligens förändrar arbetsmarknaden, men inte riktigt på det sätt som rubrikerna antyder. Den vanliga bilden är att hela yrken försvinner. Arbetsmarknadsforskare beskriver hellre förändringen på uppgiftsnivå: varje yrke består av en uppsättning arbetsmoment, och tekniken tar över några av dem medan andra blir kvar. En radiolog som slutar mäta tumörstorlek för hand ägnar inte mindre tid åt patienter, utan mer.\n\nHistoriskt har varje teknikskifte följt ett liknande mönster. Vävstolen ersatte handvävaren men skapade fabriken. Persondatorn gjorde skrivbiträdet överflödigt och gav upphov till branscher som inte hade något namn tjugo år tidigare. Nettoresultatet har hittills varit fler arbetstillfällen, inte färre.\n\nDet som skiljer det pågående skiftet är hastigheten. Industrialiseringen sträckte sig över generationer. De senaste årens språkmodeller nådde hundratals miljoner användare på månader. En omställning som får ta trettio år kan tas upp av att unga utbildas annorlunda. En som tar fem år måste hanteras av dem som redan är mitt i yrkeslivet.\n\nVilka uppgifter som är utsatta följer inte den intuitiva skalan från enkelt till svårt. Rutinmässiga och regelstyrda moment automatiserades redan under digitaliseringens första våg: fakturahantering, dataregistrering, enklare kundtjänst. Det nya är att även kvalificerade skrivbordsuppgifter berörs, som att sammanfatta ett underlag, formulera ett första utkast eller översätta en text. Samtidigt står yrken som kräver fysisk närvaro i oförutsägbara miljöer emot förvånansvärt väl. Att montera en ställning på ett tak eller trösta ett barn i förskolan är svårare att automatisera än att skriva en rapportsammanfattning. Fenomenet är känt som Moravecs paradox: det som är lätt för människor är ofta svårt för maskiner, och tvärtom.\n\nEmpati och sammansatt socialt samspel hör till det svåraste. Ett system kan producera formuleringar som låter empatiska, men i yrken där en bedömning ska bäras av någon, som ett besked till en anhörig eller ett beslut om en elevs stöd, är det inte formuleringen som är kärnan. Kärnan är att en ansvarig människa står bakom den.\n\nÖvergångsperioden är den svåra delen. Utbildningssystem är byggda för att förbereda unga för ett yrkesliv, inte för att skola om fyrtioåringar. Livslångt lärande blir därför mer än en fras: det förutsätter finansiering, tid och att arbetsgivare räknar omskolning som en investering snarare än en kostnad. Länder som byggt ut omställningsstöd har historiskt klarat strukturomvandlingar med mindre social skada än länder som låtit marknaden ensam sköta anpassningen.\n\nDet är dessutom svårt att mäta effekten medan den pågår. Produktivitetsstatistik fångar förändringar med flera års fördröjning, och de företag som infört verktygen tidigt är sällan representativa för resten. Mycket av det som sägs om AI:s inverkan på arbetsmarknaden bygger därför på enkäter om förväntningar snarare än på utfall som gått att räkna.\n\nPerspektiven på effekterna går isär. Optimisterna pekar på produktivitet: om samma arbete kan utföras på kortare tid frigörs resurser till annat, och slitsamma moment försvinner. Kritikerna invänder att produktivitetsvinsten inte fördelar sig av sig själv. Om vinsterna tillfaller ägare av kapital och plattformar medan lönerna står stilla ökar ojämlikheten även när ekonomin växer. Vem som tar hem vinsten är en politisk fråga, inte en teknisk.\n\nEn tredje position undviker båda ytterligheterna. Den framhåller att effekten beror på hur systemen införs. Ett verktyg som ges till medarbetare för att slippa det mest slitsamma ger ett annat resultat än samma verktyg infört för att minska bemanningen, trots att tekniken är identisk.\n\nDet som ändå framstår som säkert är att kraven på kompetens förskjuts. Att arbeta bra tillsammans med ett AI-system förutsätter att man vet vad det är dåligt på: när det låter säkert utan att ha täckning, när dess förslag bygger på ett material som inte liknar den egna verksamheten, och när ett svar måste kontrolleras innan det används. Den förmågan är inte teknisk i första hand, utan en form av källkritik.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vilka yrken är särskilt utsatta för automatisering?",
+        "q": "Varför beskriver arbetsmarknadsforskare förändringen på uppgiftsnivå i stället för yrkesnivå?",
         "options": [
-          "Rutinmässiga och repetitiva jobb",
-          "Kreativa yrken inom konst",
-          "Sociala yrken inom vården",
-          "Chefspositioner i företag"
+          "Därför att antalet yrken i statistiken har minskat kraftigt på senare år",
+          "Därför att tekniken tar över vissa arbetsmoment medan andra blir kvar",
+          "Därför att arbetsgivare sällan vill uppge vilka yrken de har anställda i",
+          "Därför att de flesta yrken består av ungefär lika många arbetsmoment"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad jämförs AI-revolutionen med i texten?",
+        "type": "ord",
+        "q": "Vad innebär Moravecs paradox som texten beskriver?",
         "options": [
-          "Tidigare teknologiska skiften",
-          "Politiska revolutioner",
-          "Kulturella trender",
-          "Klimatförändringar"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "inferens",
-        "q": "Varför betonas livslångt lärande?",
-        "options": [
-          "För att utbildning blir billigare",
-          "För att alla ska bli AI-utvecklare",
-          "För att pensionsåldern höjs",
-          "För att arbetsmarknaden förändras snabbt"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inferens",
-        "q": "Vad innebär varningen om ökad ojämlikhet?",
-        "options": [
-          "Att utbildning blir sämre",
-          "Att AI är tekniskt begränsad",
-          "Att vinsterna kan fördelas ojämnt",
-          "Att alla förlorar på AI"
+          "Att en teknik blir billigare ju fler uppgifter den klarar av att lösa",
+          "Att produktivitetsvinster sällan syns i statistiken förrän långt efteråt",
+          "Att det som är lätt för människor ofta är svårt för maskiner, och tvärtom",
+          "Att arbetslösheten stiger på kort sikt men faller tillbaka på lång sikt"
         ],
         "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Varför är empati svår att automatisera?",
+        "q": "Varför menar texten att omställningens hastighet spelar större roll än dess omfattning?",
         "options": [
-          "Den kräver mänsklig förståelse",
-          "Den är tekniskt enkel",
-          "Den behövs inte i arbetslivet",
-          "AI har redan ersatt den"
+          "Därför att en snabb omställning drabbar dem som redan är mitt i yrkeslivet",
+          "Därför att en snabb omställning skapar färre nya yrken än en långsam",
+          "Därför att snabba skiften alltid leder till lägre löner inom hela ekonomin",
+          "Därför att snabba skiften gör att tekniken hinner bli föråldrad i förtid"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Vad är kärnan i invändningen mot att se produktivitetsvinster som självklart goda?",
+        "options": [
+          "Att vinsterna sällan blir så stora som förespråkarna räknat med i förväg",
+          "Att arbete som utförs snabbare nästan alltid håller sämre kvalitet",
+          "Att vinsterna kan tillfalla några få medan lönerna står stilla",
+          "Att produktivitet är ett mått som saknar betydelse i tjänsteyrken"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "forfattarens-syfte",
+        "q": "Varför tar texten upp att samma verktyg kan införas på två olika sätt?",
+        "options": [
+          "För att visa att tekniken ensam inte avgör vad följden för de anställda blir",
+          "För att visa att arbetsgivare i regel väljer det billigaste alternativet",
+          "För att visa att verktygen fungerar sämre än vad tillverkarna påstår",
+          "För att visa att det behövs fler tekniska standarder på arbetsplatser"
         ],
         "correct": 0
       },
       {
         "type": "sammanfatta",
-        "q": "Vad är textens huvudbudskap?",
+        "q": "Vilken kompetens framhåller texten som avgörande i ett arbetsliv med AI?",
         "options": [
-          "AI tar över alla jobb som finns i landet",
-          "AI påverkar arbetsmarknaden men skapar också möjligheter",
-          "AI har ingen effekt alls på arbetslivet",
-          "Endast programmerare påverkas av AI"
+          "Att kunna bygga egna modeller anpassade efter arbetsplatsens behov",
+          "Att kunna bedöma när ett system låter säkert utan att ha täckning",
+          "Att kunna arbeta snabbare än de system som införs på arbetsplatsen",
+          "Att kunna välja mellan de leverantörer som erbjuder liknande verktyg"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 202,
+      "wordCount": 611,
       "fingerprint": "ak10-ai-002",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
@@ -5917,81 +5917,81 @@
   },
   {
     "id": "ak10-ai-003",
-    "grade": 4,
+    "grade": 10,
     "genre": "faktatext",
     "theme": "etik",
     "title": "Etiska utmaningar med AI",
-    "text": "I takt med att AI-system får större inflytande över beslut som påverkar människors liv uppstår en rad etiska frågor. Dessa handlar om rättvisa, transparens, integritet och ansvar. Att hantera dessa utmaningar är avgörande för att säkerställa att AI-utvecklingen gynnar samhället som helhet.\n\nEtt centralt problem är algoritmisk bias. AI-system tränas på historisk data, vilket innebär att de kan ärva och förstärka befintliga fördomar. Om ett rekryteringsverktyg tränas på data där män dominerat kommer det att favorisera manliga kandidater. Liknande problem har identifierats inom kreditbedömning, brottsförutsägelse och ansiktsigenkänning.\n\nTransparens är en annan utmaning. Många AI-system, särskilt djupinlärningsmodeller, fungerar som svarta lådor vars beslut är svåra att förklara. När ett AI-system nekar någon ett lån eller föreslår en diagnos är det problematiskt om beslutet inte kan motiveras.\n\nIntegritetsfrågor aktualiseras av AI:s förmåga att analysera stora mängder persondata. Ansiktsigenkänning i offentliga miljöer, prediktiv polisverksamhet och personlig reklam baserad på beteendeanalys väcker frågor om övervakningens gränser.\n\nVem bär ansvaret när ett AI-system orsakar skada? Om en självkörande bil orsakar en olycka är det tillverkaren, programmeraren eller användaren som ska hållas ansvarig? Nuvarande rättssystem är inte alltid anpassade för dessa situationer.\n\nFör att möta utmaningarna utvecklas olika ramverk för etisk AI. Principer som rättvisa, förklarbarhet och ansvarsskyldighet lyfts fram. Regleringar som EU:s AI-förordning syftar till att säkerställa att högrisk-AI uppfyller grundläggande krav.",
+    "text": "När AI-system börjar förbereda beslut som påverkar människors liv, som vem som kallas till anställningsintervju, vem som beviljas lån eller vilken patient som prioriteras, flyttas gamla etiska frågor in i ny form. De handlar om rättvisa, insyn, integritet och ansvar, och de går inte att lösa med bättre teknik ensam.\n\nDet mest omtalade problemet är algoritmisk snedvridning, ofta kallad bias. Ett system tränas på historiska data, och historien är sällan neutral. Om ett rekryteringsverktyg lär sig av tidigare anställningsbeslut i en bransch där män dominerat kommer det att uppfatta manliga meriter som tecken på framgång. Systemet är inte fördomsfullt i någon mänsklig mening. Det återger det mönster det fått se.\n\nJust därför är problemet svårt. Att stryka kön ur datamaterialet hjälper sällan, eftersom andra uppgifter kan fungera som ersättningar för det som togs bort: en idrottsförening, ett uppehåll i meritförteckningen, ett bostadsområde. Liknande mönster har påvisats inom kreditbedömning, brottsförutsägelse och ansiktsigenkänning.\n\nRättvisa visar sig dessutom vara flera saker samtidigt. Ska ett system ha lika stor andel felaktiga avslag i alla grupper, eller lika stor andel korrekta godkännanden? Matematiskt går det i regel inte att uppfylla båda kraven samtidigt om grupperna skiljer sig åt i utfall. Valet mellan dem är ett värdeval, och det kan inte lämnas över till en modell.\n\nInsyn är en annan utmaning. Många system, särskilt djupinlärningsmodeller, beskrivs som svarta lådor: beslutet är utspritt över miljoner värden och låter sig inte översättas till en läsbar motivering. Det spelar liten roll för en filmrekommendation men mycket stor roll när någon nekas ett lån eller får en föreslagen diagnos. Det finns metoder för att i efterhand peka ut vad som verkar ha påverkat ett enskilt beslut, men sådana förklaringar är rekonstruktioner, inte protokoll över vad som faktiskt hände.\n\nIntegritetsfrågorna aktualiseras av att systemen blir bättre ju mer data de får. Ansiktsigenkänning i offentliga miljöer, förutsägande polisverksamhet och reklam byggd på beteendeanalys väcker frågan var övervakningens gräns går. En särskild svårighet är att uppgifter som var för sig verkar harmlösa kan bli känsliga när de förs samman. Köpmönster, rörelsemönster och söktermer kan tillsammans avslöja sådant som ingen av delarna avslöjar ensam.\n\nAnsvarsfrågan har inget självklart svar. När en självkörande bil orsakar en olycka finns flera kandidater: tillverkaren, den som utvecklade programvaran, den som valde träningsdata, den som satt bakom ratten. Rättssystem är byggda kring uppsåt och oaktsamhet hos människor och passar illa när skadan uppstår ur ett samspel mellan många aktörer och ett system som ingen av dem fullt ut överblickar. Risken är ett ansvarsvakuum där var och en pekar på nästa led.\n\nEn fjärde fråga gäller varifrån träningsdata kommer. Mycket av materialet har samlats in från öppna delar av nätet utan att de som skrev det tillfrågats. Att en text är åtkomlig är inte detsamma som att den är fri att använda, och frågan prövas nu i domstolar på flera håll.\n\nEtt besläktat problem kallas automationsbias. När ett system oftast har rätt tenderar människor att sluta granska det. Kravet på att en människa ska fatta det slutliga beslutet blir då en formalitet: personen trycker på knappen men gör ingen egen bedömning. Skyddet finns på pappret men inte i praktiken.\n\nFör att möta detta har olika ramverk växt fram. Återkommande principer är rättvisa, förklarbarhet, mänsklig kontroll och ansvarsskyldighet. EU:s AI-förordning bygger på en risktrappa: ju större risk för människors rättigheter, desto hårdare krav på dokumentation, datakvalitet och tillsyn, medan vissa användningar förbjuds helt.\n\nRegler är dock trubbiga verktyg mot en teknik som ändras snabbare än lagstiftning hinner skrivas. Därför brukar man framhålla att etiken måste finnas i utvecklingsarbetet självt: i valet av data, i besluten om vad systemet inte ska användas till, och i viljan att avstå från en tillämpning som fungerar tekniskt men inte går att försvara.",
     "questions": [
       {
         "type": "literal",
-        "q": "Vad är algoritmisk bias?",
+        "q": "Varför hjälper det sällan att stryka kön ur ett rekryteringsverktygs träningsdata?",
         "options": [
-          "En programmeringsteknik",
-          "En typ av datavirus",
-          "Att AI ärver fördomar från träningsdata",
-          "En mätmetod för AI-prestanda"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "literal",
-        "q": "Varför kallas vissa AI-system för svarta lådor?",
-        "options": [
-          "De är fysiskt svarta",
-          "Deras beslut är svåra att förklara",
-          "De saknar strömförsörjning",
-          "De är hemligstämplade"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "literal",
-        "q": "Vilket exempel ges på integritetsproblem?",
-        "options": [
-          "Väderrapporter i mobilen",
-          "Bibliotekssystem för utlåning",
-          "Skolundervisning på distans",
-          "Ansiktsigenkänning i offentliga miljöer"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "inferens",
-        "q": "Varför är ansvarsfrågan komplicerad?",
-        "options": [
-          "Eftersom AI har juridisk status",
-          "Eftersom AI aldrig gör fel",
-          "Eftersom flera aktörer är inblandade",
-          "Eftersom lagen förbjuder AI"
+          "Därför att systemet ändå får uppgiften från arbetsgivaren i ett senare steg",
+          "Därför att modellen behöver uppgiften för att kunna göra en rättvis bedömning",
+          "Därför att andra uppgifter kan fungera som ersättningar för den som togs bort",
+          "Därför att lagen kräver att uppgiften finns kvar i underlaget till beslutet"
         ],
         "correct": 2
       },
       {
         "type": "inferens",
-        "q": "Vad är syftet med EU:s AI-förordning?",
+        "q": "Varför menar texten att valet mellan olika rättvisemått inte kan lämnas till en modell?",
         "options": [
-          "Att öka AI-utvecklingens hastighet",
-          "Att ta bort transparenskrav",
-          "Att förbjuda all AI",
-          "Att säkerställa grundläggande krav för högrisk-AI"
+          "Därför att måtten i regel inte går att uppfylla samtidigt och valet är ett värdeval",
+          "Därför att modellerna ännu saknar tillräcklig beräkningskraft för sådana avvägningar",
+          "Därför att måtten alltid ger samma resultat oavsett vilket av dem som väljs",
+          "Därför att lagstiftningen redan har bestämt vilket av måtten som ska användas"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad menas med att ett AI-system beskrivs som en svart låda?",
+        "options": [
+          "Att systemets kod är skyddad av upphovsrätt och inte får granskas utifrån",
+          "Att systemet är byggt för att arbeta utan uppkoppling mot omvärlden",
+          "Att systemet sparar sina beslut i ett format som bara tillverkaren kan läsa",
+          "Att beslutet är utspritt över miljoner värden och inte går att motivera"
         ],
         "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad innebär automationsbias enligt texten?",
+        "options": [
+          "Att ett system som oftast har rätt gör att människor slutar granska det",
+          "Att ett system ärver de fördomar som finns i dess träningsmaterial",
+          "Att ett system svarar snabbare än en människa hinner läsa underlaget",
+          "Att ett system anpassar sina svar efter vad användaren verkar vilja höra"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför lyfter texten fram risken för ett ansvarsvakuum?",
+        "options": [
+          "Därför att skadan uppstår ur ett samspel som ingen enskild part överblickar",
+          "Därför att självkörande fordon ännu inte omfattas av några trafikregler",
+          "Därför att tillverkarna i avtal friskriver sig från allt ansvar för skador",
+          "Därför att domstolar saknar teknisk kompetens att pröva den här typen av mål"
+        ],
+        "correct": 0
       },
       {
         "type": "sammanfatta",
-        "q": "Vilken är textens huvudtes?",
+        "q": "Vilket påstående sammanfattar bäst textens syn på förhållandet mellan regler och etik?",
         "options": [
-          "AI saknar etiska problem",
-          "AI-utvecklingen kräver etiska ramverk",
-          "Endast transparens är viktigt",
-          "Reglering är onödig"
+          "Regler räcker om de skärps i takt med att tekniken utvecklas vidare",
+          "Regler är trubbiga, så etiken måste finnas i utvecklingsarbetet självt",
+          "Regler bör undvikas eftersom de hindrar att ny teknik kommer till nytta",
+          "Regler bör ersättas av frivilliga åtaganden från de företag som bygger AI"
         ],
         "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 217,
+      "wordCount": 617,
       "fingerprint": "ak10-ai-003",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
@@ -6000,81 +6000,81 @@
   },
   {
     "id": "ak10-ai-004",
-    "grade": 4,
+    "grade": 10,
     "genre": "faktatext",
     "theme": "samhälle",
     "title": "AI och demokratin",
-    "text": "Artificiell intelligens har potential att både stärka och underminera demokratiska processer. Å ena sidan kan AI användas för att förbättra offentlig förvaltning, öka medborgares tillgång till information och effektivisera beslutsfattande. Å andra sidan finns risker kopplade till desinformation, övervakning och maktkoncentration.\n\nSociala mediers algoritmer, som drivs av AI, påverkar vilken information medborgare exponeras för. Systemens mål att maximera engagemang kan leda till att sensationellt eller polariserande innehåll sprids snabbare än nyanserade nyheter. Filterbubbor uppstår när användare främst ser innehåll som bekräftar deras befintliga åsikter.\n\nGenerativ AI har gjort det enklare att skapa övertygande falskt innehåll. Deepfakes, alltså manipulerade video- eller ljudinspelningar, kan användas för att sprida desinformation om politiska motståndare. Detta utmanar medborgarnas förmåga att bedöma informationens trovärdighet.\n\nSamtidigt kan AI stödja faktakontroll och identifiering av desinformation. Automatiserade system kan flagga misstänkt innehåll för mänsklig granskning. Utmaningen är att balansera effektivitet med risken för censur av legitima åsikter.\n\nÖvervakningsteknik som ansiktsigenkänning och prediktiv analys kan användas av auktoritära regimer för att kontrollera medborgare. Men även i demokratier väcker sådan teknik frågor om avvägningen mellan säkerhet och frihet.\n\nMaktkoncentration är ytterligare en demokratisk utmaning. De företag som kontrollerar AI-utvecklingen och tillgången till data får stort inflytande. Frågan om hur denna makt ska regleras och balanseras är central för demokratins framtid.",
+    "text": "Artificiell intelligens kan både stärka och försvaga demokratiska processer, och ofta gör den bådadera samtidigt. Samma teknik som gör det möjligt att sortera miljontals inlägg för att hitta hot mot en förtroendevald kan användas för att producera hoten. Det som avgör utfallet är sällan tekniken i sig, utan vem som kontrollerar den och i vilket syfte.\n\nDen mest genomgripande påverkan sker i det tysta, i rangordningen av innehåll. Sociala mediers flöden styrs av modeller som strävar efter engagemang: tid på plattformen, klick, delningar. Ingen har bestämt att upprört innehåll ska spridas mer än nyanserat, men eftersom det upprörda engagerar mer blir det den effekt målsättningen ger.\n\nFilterbubblor uppstår när en användare främst möter det som bekräftar vad hen redan tycker. Forskningen är mer delad om bubblornas styrka än debatten låter påskina. Flera studier tyder på att människor möter mer motstridig information på nätet än utanför det, men att mötet oftare sker i konflikt än i samtal.\n\nGenerativ AI har sänkt tröskeln för att tillverka övertygande falskt material. Deepfakes, alltså manipulerade video- eller ljudinspelningar, kan lägga ord i munnen på en politiker dagarna före ett val, när tiden att dementera saknas. Den allvarligaste effekten är kanske inte att människor tror på förfalskningar, utan att äkta upptagningar kan avfärdas som förfalskningar. När allt kan vara tillverkat blir bevis förhandlingsbara. Fenomenet brukar kallas lögnarens utdelning.\n\nAI används också åt andra hållet. Automatiserade system kan flagga misstänkt innehåll för mänsklig granskning och söka upp spridningsmönster som tyder på samordnade kampanjer. Svårigheten är avvägningen. Ett system som är strängt nog att fånga desinformation kommer också att fånga satir, minoritetsspråk och legitima åsikter som råkar likna det förbjudna. Att lägga gränsdragningen hos privata företag utan insyn är i sig ett demokratiskt problem.\n\nÖvervakningstekniken utgör en tredje front. Ansiktsigenkänning i realtid och förutsägande analys ger auktoritära regimer verktyg som tidigare krävde stora personalstyrkor. Men frågan är inte bortkopplad från demokratier. En kamera som känner igen efterlysta personer känner också igen alla andra, och vetskapen om att man kan bli igenkänd på en demonstration förändrar viljan att delta. Effekten kallas nedkylning och drabbar rättigheter som formellt är helt intakta.\n\nRiktad politisk reklam är ett fjärde område. Med tillräckligt detaljerad kunskap om enskilda väljare går det att visa olika budskap för olika grupper, formulerade efter vad var och en antas reagera på. Det behöver inte innebära att någon ljuger. Men när ett parti säger en sak till en grupp och något annat till en annan, utan att någon utomstående kan se båda budskapen, försvinner den gemensamma offentlighet där påståenden brukar prövas mot varandra. Flera länder har därför infört krav på öppna register över politisk annonsering.\n\nMaktkoncentrationen är kanske den mest strukturella utmaningen. Att träna de största modellerna kräver beräkningskraft, data och kapital som endast ett fåtal aktörer förfogar över. Därmed hamnar avgörande beslut hos företag som ingen har röstat fram: vad ett system ska vägra svara på, vilka språk det ska behärska, vilka värderingar som byggs in i dess standardsvar. Att makten är privat gör den inte olaglig, men den ligger utanför de kanaler genom vilka medborgare normalt kan utkräva ansvar.\n\nMotmedlen brukar delas i tre. Reglering ställer krav på insyn, märkning av syntetiskt innehåll och tillsyn. Institutionell motståndskraft handlar om oberoende medier, väl fungerande valmyndigheter och domstolar som klarar trycket när resultat ifrågasätts. Medborgerlig beredskap, slutligen, handlar om källkritik: att kunna fråga varifrån en uppgift kommer och vem som tjänar på att den sprids.\n\nIngen av dessa räcker ensam, och alla tre är långsamma jämfört med tekniken. Just den obalansen, att verktygen utvecklas på månader medan institutioner byggs under decennier, är det som gör frågan brådskande snarare än enbart teknisk.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad är filterbubbor enligt texten?",
-        "options": [
-          "Särskilda säkerhetsåtgärder online",
-          "Fysiska skydd för datorer",
-          "En särskild typ av AI-algoritm",
-          "När användare främst ser bekräftande innehåll"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "literal",
-        "q": "Vad är deepfakes?",
-        "options": [
-          "Manipulerade video- eller ljudinspelningar",
-          "Vanliga konton på sociala medier",
-          "Verktyg för att faktakontrollera",
-          "Verkliga nyhetsrapporter i tv"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "literal",
-        "q": "Hur kan AI stödja faktakontroll?",
-        "options": [
-          "Genom att stänga sociala medier",
-          "Genom att ta bort alla algoritmer",
-          "Genom att blockera all information",
-          "Genom att flagga misstänkt innehåll"
-        ],
-        "correct": 3
-      },
-      {
         "type": "inferens",
-        "q": "Varför kan maximerat engagemang vara problematiskt?",
+        "q": "Varför sprids upprört innehåll mer än nyanserat, enligt textens förklaring?",
         "options": [
-          "Det gör användare produktiva",
-          "Det kan sprida polariserande innehåll",
-          "Det minskar informationstillgången",
-          "Det förbjuds av lag"
+          "Därför att plattformarna medvetet valt att gynna konflikter mellan användare",
+          "Därför att modellerna strävar efter engagemang, och det upprörda engagerar mer",
+          "Därför att nyanserat innehåll är dyrare att producera för avsändarna",
+          "Därför att användare i regel läser det upprörda innehållet betydligt snabbare"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
-        "q": "Varför är maktkoncentration ett demokratiskt problem?",
+        "type": "ord",
+        "q": "Vad betyder uttrycket lögnarens utdelning i texten?",
         "options": [
-          "Eftersom AI företag har stort inflytande",
-          "Eftersom AI är för dyrt",
-          "Eftersom alla har lika tillgång",
-          "Eftersom regleringar saknas helt"
+          "Att falskt material sprids fortare än sanningsenligt material på nätet",
+          "Att den som ljuger ofta får ekonomisk vinning av desinformationen",
+          "Att äkta upptagningar kan avfärdas som förfalskningar när allt kan tillverkas",
+          "Att en dementi når betydligt färre människor än det ursprungliga påståendet"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken svårighet lyfter texten fram med automatisk granskning av innehåll?",
+        "options": [
+          "Att systemen kräver mer beräkningskraft än plattformarna har tillgång till",
+          "Att systemen bara fungerar på de största och mest spridda språken",
+          "Att systemen arbetar för långsamt för att hinna före en spridning",
+          "Att ett strängt system också fångar satir och legitima åsikter"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför framhåller texten att nedkylning drabbar rättigheter som formellt är intakta?",
+        "options": [
+          "Därför att lagen ändras utan att medborgarna hinner uppmärksamma det",
+          "Därför att domstolar sällan prövar mål som handlar om övervakning",
+          "Därför att rätten finns kvar men vetskapen om igenkänning minskar deltagandet",
+          "Därför att rättigheterna gäller alla utom dem som är efterlysta av polisen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "forfattarens-syfte",
+        "q": "Varför nämner texten att företagen bakom de största modellerna inte är framröstade?",
+        "options": [
+          "För att visa att deras beslut ligger utanför medborgarnas möjlighet att utkräva ansvar",
+          "För att visa att företagen bryter mot de regler som gäller inom unionen",
+          "För att visa att de anställda på företagen saknar demokratisk skolning",
+          "För att visa att företagen borde ersättas av myndigheter i statlig regi"
         ],
         "correct": 0
       },
       {
         "type": "sammanfatta",
-        "q": "Vad är textens centrala budskap?",
+        "q": "Vad gör frågan brådskande enligt textens avslutning?",
         "options": [
-          "Demokrati påverkas inte av teknik",
-          "AI är enbart positivt för demokratin",
-          "AI har både möjligheter och risker för demokratin",
-          "AI bör förbjudas i politiken"
+          "Att verktygen utvecklas på månader medan institutioner byggs under decennier",
+          "Att antalet användare på de största plattformarna växer för varje år",
+          "Att de tre motmedlen motverkar varandra när de införs samtidigt",
+          "Att desinformation numera sprids av fler länder än tidigare i historien"
         ],
-        "correct": 2
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 209,
+      "wordCount": 602,
       "fingerprint": "ak10-ai-004",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
@@ -6083,81 +6083,81 @@
   },
   {
     "id": "ak10-ai-005",
-    "grade": 4,
+    "grade": 10,
     "genre": "faktatext",
     "theme": "framtid",
     "title": "AI:s framtid – möjligheter och osäkerheter",
-    "text": "Framtiden för artificiell intelligens är föremål för intensiv debatt bland forskare, teknikföretag och samhällsanalytiker. Medan vissa ser möjligheter till genombrott som kan lösa globala problem, varnar andra för existentiella risker.\n\nOptimisterna pekar på AI:s potential inom medicin, klimatforskning och vetenskaplig upptäckt. AI kan analysera molekylära strukturer för att utveckla nya läkemedel, optimera energisystem för att minska utsläpp och accelerera forskning inom fysik och biologi. Dessa tillämpningar kan förbättra livskvaliteten för miljarder människor.\n\nAndra forskare fokuserar på risker. En central oro gäller så kallad artificiell generell intelligens (AGI) – system med mänsklig nivå av kognitiva förmågor. Om sådana system utvecklas utan tillräckliga säkerhetsåtgärder kan konsekvenserna bli oförutsägbara. Frågor om kontroll och målstyrning blir då avgörande.\n\nPå kortare sikt finns mer konkreta utmaningar. Hur säkerställer vi att AI-system är robusta och pålitliga? Hur förhindrar vi missbruk av tekniken för desinformation eller cyberattacker? Hur fördelar vi nyttan av AI på ett rättvist sätt?\n\nInternationell samordning blir allt viktigare. AI-kapplöpningen mellan länder och företag riskerar att prioritera hastighet framför säkerhet. Initiativ för gemensamma standarder och regler växer fram, men implementeringen är utmanande.\n\nFramtiden är inte förutbestämd. Genom aktiva val kring forskning, reglering och utbildning kan samhället påverka hur AI utvecklas. Att engagera sig i dessa frågor är därför inte bara en angelägenhet för experter, utan för alla medborgare.",
+    "text": "Få frågor delar forskarvärlden så tydligt som vad artificiell intelligens kommer att innebära. Oenigheten gäller inte bara vad som kan hända, utan hur snart, och hur mycket det över huvud taget går att veta i förväg. Det är värt att minnas att prognoser om AI har dålig träffsäkerhet i båda riktningarna. Maskinöversättning mellan språk beskrevs på 1960-talet som något som skulle vara löst inom några år. Textgenerering av dagens kvalitet bedömdes av många ligga decennier bort så sent som för tio år sedan.\n\nOptimisternas argument bygger på att flaskhalsen i vetenskapen ofta är förmågan att söka igenom enorma möjlighetsrum. Att hitta en molekyl som binder till ett visst protein, att pröva materialkombinationer för bättre batterier, att söka mönster i klimatdata: i alla dessa fall är antalet tänkbara alternativ större än vad forskare hinner testa. System som kan rangordna kandidater innan de prövas i laboratorium kortar tiden från idé till resultat. Ett tidigt exempel är förutsägelser av hur proteiner viker sig, ett problem som varit öppet i femtio år och där tillgången till förutsägelser förändrat arbetssättet i hela forskningsfält.\n\nRiskargumenten rör sig på två tidsskalor, och de blandas ofta ihop. Den mer avlägsna gäller artificiell generell intelligens, förkortat AGI: system med mänsklig bredd i sina kognitiva förmågor. Oron handlar inte om att ett sådant system skulle bli illvilligt, utan om målstyrning. Ett system som effektivt strävar mot ett mål som är något annat än vad konstruktören avsåg kan orsaka skada helt utan avsikt, och ju kapablare systemet är desto svårare blir det att korrigera i efterhand. Kritiker invänder att resonemanget vilar på antaganden om en teknik som inte finns, och att uppmärksamheten drar resurser från problem som redan är verkliga.\n\nDe kortsiktiga utmaningarna är mer konkreta. Robusthet: system som fungerar utmärkt på data som liknar träningsmaterialet kan bete sig oförutsägbart utanför det. Missbruk: samma verktyg som skriver en artikel skriver ett övertygande bedrägeriförsök, och samma kodgenerator som hjälper en utvecklare hjälper en angripare. Fördelning: nyttan tillfaller inte automatiskt dem som behöver den mest, och de flesta modeller tränas på och för ett fåtal språk och kulturer.\n\nInternationell samordning framhålls ofta som lösningen, men villkoren är svåra. En kapplöpning där hastighet ger fördel skapar ett tryck att prioritera lansering framför granskning, och den som avstår riskerar bara att förlora försprånget till någon annan. Jämförelser görs ibland med kontrollen av kärnvapen, men liknelsen haltar. Klyvbart material är svårt att framställa och går att räkna, medan en färdigtränad modell kan kopieras och spridas utan att någon märker det.\n\nEn del av oenigheten handlar om hur förmåga ska mätas. Ett system kan klara ett prov som är svårt för människor och samtidigt misslyckas med en uppgift som ett barn löser, vilket gör att samma resultat kan läsas som bevis både för snabba framsteg och för grundläggande begränsningar. Utan mått som alla accepterar blir debatten om hur långt tekniken nått delvis en debatt om vad man valt att mäta.\n\nOsäkerheten i sig har blivit ett argument i debatten. Den ena sidan menar att man inte bör reglera hårt något man inte förstår, eftersom regler riskerar att träffa fel och cementera dagens aktörer. Den andra menar att just okunskapen motiverar försiktighet, på samma sätt som inom läkemedel, där ett preparat måste visas vara säkert innan det släpps snarare än tvärtom.\n\nDet som förenar de flesta bedömare är att utvecklingen inte är förutbestämd. Vilka tillämpningar som får finansiering, vilka krav som ställs på granskning, vad skolan lär ut och vad allmänheten accepterar formar tillsammans utfallet. Att engagera sig i frågorna är därför inte ett expertansvar utan ett medborgerligt, och det förutsätter förmågan att skilja mellan vad som är känt, vad som är omtvistat och vad som ännu bara är antaganden.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad är AGI enligt texten?",
+        "type": "forfattarens-syfte",
+        "q": "Varför inleder texten med två exempel på prognoser som slagit fel?",
         "options": [
-          "Ett programmeringsspråk",
-          "En regleringsmyndighet",
-          "En AI-företagsgrupp",
-          "System med mänsklig kognitiv nivå"
+          "För att visa att forskare inom fältet sällan är överens med varandra",
+          "För att visa att bedömningar av tekniken har missat i båda riktningarna",
+          "För att visa att maskinöversättning är svårare än textgenerering",
+          "För att visa att utvecklingen har gått långsammare än vad många hoppats"
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "literal",
-        "q": "Vilka positiva tillämpningar nämns?",
+        "q": "Vilken flaskhals i vetenskapen menar optimisterna att AI kan lätta på?",
         "options": [
-          "Militära tillämpningar",
-          "Sociala medier och reklam",
-          "Medicin, klimatforskning och vetenskap",
-          "Underhållning och spel"
+          "Bristen på forskare med tillräcklig utbildning inom flera olika fält",
+          "Kostnaden för den utrustning som krävs i moderna laboratorier",
+          "Förmågan att söka igenom fler alternativ än vad forskare hinner testa",
+          "Svårigheten att få forskningsresultat publicerade i ledande tidskrifter"
         ],
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vad riskerar AI-kapplöpningen att leda till?",
+        "type": "inferens",
+        "q": "Varför handlar oron kring AGI om målstyrning snarare än om illvilja?",
         "options": [
-          "Att hastighet prioriteras före säkerhet",
-          "Långsammare teknikutveckling",
-          "Färre AI-forskare",
-          "Bättre internationellt samarbete"
+          "Därför att ett system kan orsaka skada utan avsikt när målet blir fel satt",
+          "Därför att illvilja förutsätter ett medvetande som forskarna kan mäta",
+          "Därför att målen bestäms av lagstiftaren och inte av konstruktören",
+          "Därför att ett kapabelt system alltid följer sina instruktioner exakt"
         ],
         "correct": 0
       },
       {
         "type": "inferens",
-        "q": "Varför är målstyrning viktig för AGI?",
+        "q": "Varför haltar jämförelsen med kontrollen av kärnvapen?",
         "options": [
-          "För att spara energi",
-          "För att säkerställa att systemet agerar som avsett",
-          "För att öka beräkningshastigheten",
-          "För att minska kostnader"
+          "Därför att kärnvapen aldrig har omfattats av några internationella avtal",
+          "Därför att en färdigtränad modell kan kopieras utan att någon märker det",
+          "Därför att AI-forskning bedrivs av fler länder än kärnvapenforskning gjorde",
+          "Därför att kärnvapen utvecklades under en period utan digital teknik"
         ],
         "correct": 1
       },
       {
-        "type": "inferens",
-        "q": "Vad menar texten med att framtiden inte är förutbestämd?",
+        "type": "literal",
+        "q": "Hur beskriver texten skillnaden mellan de två sidorna i frågan om reglering?",
         "options": [
-          "Att forskare saknar kunskap",
-          "Att reglering är omöjlig",
-          "Att AI inte fungerar",
-          "Att samhällets val påverkar utvecklingen"
+          "Den ena vill reglera nationellt, den andra vill reglera mellan länder",
+          "Den ena litar på forskarna, den andra litar på de folkvalda församlingarna",
+          "Den ena vill reglera nu, den andra vill vänta tills tekniken är färdig",
+          "Den ena ser okunskap som skäl att avvakta, den andra som skäl till försiktighet"
         ],
         "correct": 3
       },
       {
         "type": "sammanfatta",
-        "q": "Vad uppmanar texten läsaren att göra?",
+        "q": "Vilken slutsats drar texten av att utvecklingen inte är förutbestämd?",
         "options": [
-          "Att undvika all AI",
-          "Att lita på att experter löser problemen",
-          "Att engagera sig i frågor om AI:s utveckling",
-          "Att fokusera på andra frågor"
+          "Att experternas bedömningar bör väga tyngre än allmänhetens uppfattningar",
+          "Att det är svårt att säga något meningsfullt om teknikens framtid",
+          "Att engagemang i frågorna är ett medborgerligt och inte bara ett expertansvar",
+          "Att forskningen bör inriktas på de risker som redan har visat sig verkliga"
         ],
         "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 214,
+      "wordCount": 612,
       "fingerprint": "ak10-ai-005",
       "generatedAt": "2026-02-27T00:00:00.000Z",
       "model": "claude"
