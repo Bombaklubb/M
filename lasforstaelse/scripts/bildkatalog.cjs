@@ -332,6 +332,13 @@ const KATALOG_TILLAGG = [
 
   // Samhälle
   { id: 'photo-1780396269429-e20eaa1a1cd2', desc: 'fullmäktigesal med bänkar i halvcirkel', kw: ['kommun', 'fullmäktige', 'demokrati', 'beslut', 'politik', 'råd'] },
+
+  // Andra omgången
+  { id: 'photo-1769321309472-bd13cccc7767', desc: 'barn går ensamt längs en gata om hösten', kw: ['skolväg', 'gata', 'promenad', 'trottoar', 'övergångsställe'] },
+  { id: 'photo-1709924168698-620ea32c3488', desc: 'bibliotekssal med bokhyllor i trä', kw: ['bibliotek', 'bokhylla', 'låna', 'böcker'] },
+  { id: 'photo-1653112521311-a09057757049', desc: 'bäck som rinner genom grönskande skog', kw: ['bäck', 'å', 'vattendrag', 'ström', 'flod'] },
+  { id: 'photo-1667264501379-c1537934c7ab', desc: 'serverrack med kablar i mörkt rum', kw: ['server', 'internet', 'datacenter', 'nätverk', 'uppkoppling'] },
+  { id: 'photo-1661953029179-e1b0dc900490', desc: 'vågor som rullar in mot sandstrand', kw: ['våg', 'strand', 'hav', 'kust', 'sand'] },
 ];
 
 // Tillägget läggs sist, så att befintliga tilldelningar med samma poäng ligger
