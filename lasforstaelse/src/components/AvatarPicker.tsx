@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AVATAR_OPTIONS } from '../types';
 
 interface AvatarPickerProps {
@@ -14,6 +14,18 @@ export const AvatarPicker: React.FC<AvatarPickerProps> = ({
   onClose,
   isModal = false,
 }) => {
+  // Som modal lägger sig väljaren över hela sidan och blockerar allt bakom.
+  // Då förväntar sig de flesta att Escape stänger den, precis som köprutan i
+  // butiken gör. Utan det sitter den som bara använder tangentbordet fast.
+  useEffect(() => {
+    if (!isModal || !onClose) return;
+    const vidTangent = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', vidTangent);
+    return () => document.removeEventListener('keydown', vidTangent);
+  }, [isModal, onClose]);
+
   const content = (
     <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-5 md:p-7 shadow-[0_8px_30px_rgba(79,70,229,0.12)] border-2 border-indigo-100 dark:border-slate-700">
       {isModal && (

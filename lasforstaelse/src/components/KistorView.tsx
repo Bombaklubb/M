@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { User, Chest, GamificationData } from '../types';
 import {
   CHEST_META,
@@ -242,6 +242,17 @@ function RewardPopup({
   result: RewardResult;
   onClose: () => void;
 }) {
+  // Popupen täcker hela sidan och går bara att stänga med "Toppen!"-knappen.
+  // Escape stänger den likt köprutan i butiken, så att den som navigerar med
+  // tangentbord inte behöver leta upp knappen.
+  useEffect(() => {
+    const vidTangent = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', vidTangent);
+    return () => document.removeEventListener('keydown', vidTangent);
+  }, [onClose]);
+
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       <div

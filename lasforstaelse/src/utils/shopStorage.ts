@@ -48,11 +48,37 @@ export function loadShop(): ShopData {
   try {
     const raw = localStorage.getItem(storageKey());
     if (!raw) return defaultShop();
-    const merged = { ...defaultShop(), ...(JSON.parse(raw) as Partial<ShopData>) };
-    return migrateLegacyAvatarIndices(merged);
+    return migrateLegacyAvatarIndices(normalisera(JSON.parse(raw)));
   } catch {
     return defaultShop();
   }
+}
+
+// En enkel sammanslagning med standardvärdena räckte inte: ett sparat fält
+// vinner över standardvärdet även när det är null. Låg det ett null i
+// ownedFrames kastade isOwned på list.includes(...) och butiken blev vit.
+// Ett spent som inte är ett tal gav i stället NaN i plånboken, och då gick
+// ingenting att köpa. Varje fält kontrolleras därför för sig.
+function normalisera(rad: unknown): ShopData {
+  const grund = defaultShop();
+  if (!rad || typeof rad !== 'object') return grund;
+  const d = rad as Partial<ShopData>;
+
+  // ownedAvatars kan innehålla gamla numeriska index och rensas inte här –
+  // migreringen nedan gör om dem till id:n innan de används.
+  const lista = (v: unknown, fallback: string[]) => (Array.isArray(v) ? v : fallback);
+  const utrustad = (v: unknown) => (typeof v === 'string' ? v : null);
+
+  return {
+    spent: typeof d.spent === 'number' && Number.isFinite(d.spent) ? d.spent : grund.spent,
+    ownedAvatars: lista(d.ownedAvatars, grund.ownedAvatars),
+    ownedFrames: lista(d.ownedFrames, grund.ownedFrames).filter((v) => typeof v === 'string'),
+    equippedFrame: utrustad(d.equippedFrame),
+    ownedEffects: lista(d.ownedEffects, grund.ownedEffects).filter((v) => typeof v === 'string'),
+    equippedEffect: utrustad(d.equippedEffect),
+    ownedThemes: lista(d.ownedThemes, grund.ownedThemes).filter((v) => typeof v === 'string'),
+    equippedTheme: utrustad(d.equippedTheme),
+  };
 }
 
 /**

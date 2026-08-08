@@ -421,10 +421,46 @@ export function loadGamification(): GamificationData {
   try {
     const raw = localStorage.getItem(gamificationStorageKey());
     if (!raw) return defaultGamificationData();
-    return JSON.parse(raw) as GamificationData;
+    return normaliseraGamification(JSON.parse(raw));
   } catch {
     return defaultGamificationData();
   }
+}
+
+// Varje anropare gör gam.chests.filter(...) och [...gam.pointsMilestonesRewarded]
+// utan att kontrollera något. Saknas ett fält kraschar appen till vit sida –
+// och det sker i resultatflödet, precis efter att elevens svar sparats. Sparad
+// data kan vara ofullständig: den kan komma från en äldre version av appen,
+// eller ha skrivits halvvägs när lagringen tog slut. Därför fylls varje fält på
+// från standardvärdena i stället för att litas på rakt av.
+function normaliseraGamification(rad: unknown): GamificationData {
+  const grund = defaultGamificationData();
+  if (!rad || typeof rad !== 'object') return grund;
+  const d = rad as Partial<GamificationData>;
+
+  return {
+    // Kistor utan id eller typ går inte att visa eller öppna, och en okänd typ
+    // slår mot CHEST_META och ger undefined mitt i renderingen. De sållas bort.
+    chests: Array.isArray(d.chests)
+      ? d.chests.filter(
+          (c): c is Chest =>
+            !!c && typeof c.id === 'string' && typeof c.type === 'string' && c.type in CHEST_META
+        )
+      : grund.chests,
+    gamificationBadges: Array.isArray(d.gamificationBadges)
+      ? d.gamificationBadges.filter((b): b is string => typeof b === 'string')
+      : grund.gamificationBadges,
+    textsCompleted:
+      typeof d.textsCompleted === 'number' && Number.isFinite(d.textsCompleted)
+        ? d.textsCompleted
+        : grund.textsCompleted,
+    pointsMilestonesRewarded: Array.isArray(d.pointsMilestonesRewarded)
+      ? d.pointsMilestonesRewarded.filter((p): p is number => typeof p === 'number')
+      : grund.pointsMilestonesRewarded,
+    textMilestonesRewarded: Array.isArray(d.textMilestonesRewarded)
+      ? d.textMilestonesRewarded.filter((p): p is number => typeof p === 'number')
+      : grund.textMilestonesRewarded,
+  };
 }
 
 export function saveGamification(data: GamificationData): void {

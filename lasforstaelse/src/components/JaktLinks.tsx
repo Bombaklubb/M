@@ -57,11 +57,23 @@ export const JaktLinks: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Menyn gick bara att stänga genom att klicka någon annanstans med musen.
+  useEffect(() => {
+    if (!isOpen) return;
+    const vidTangent = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+    document.addEventListener('keydown', vidTangent);
+    return () => document.removeEventListener('keydown', vidTangent);
+  }, [isOpen]);
+
   return (
     <div className="relative inline-block z-50" ref={dropdownRef}>
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
+        aria-expanded={isOpen}
+        aria-haspopup="menu"
         className="flex items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer pointer-events-auto select-none"
       >
         <span>🔗</span>

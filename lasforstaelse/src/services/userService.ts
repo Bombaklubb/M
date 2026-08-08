@@ -50,12 +50,47 @@ export function loadUser(): User | null {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
-      return JSON.parse(stored) as User;
+      return normaliseraUser(JSON.parse(stored));
     }
   } catch (error) {
     console.error('Kunde inte ladda användare:', error);
   }
   return null;
+}
+
+// Koden gör user.completedTexts.filter(...) och user.badges.some(...) på ett
+// fyrtiotal ställen utan att kontrollera något. Saknas ett fält i det sparade
+// värdet blir det vit sida i stället för app. Sparad data kan sakna fält: den
+// kan komma från en äldre version, eller ha skrivits halvvägs när lagringen
+// tog slut. Fälten fylls därför på i stället för att litas på rakt av.
+//
+// Namnet är undantaget – det är elevens identitet och nyckeln till all annan
+// lagring. Saknas det är det inte en användare, och då är null rätt svar.
+function normaliseraUser(rad: unknown): User | null {
+  if (!rad || typeof rad !== 'object') return null;
+  const d = rad as Partial<User>;
+  if (typeof d.name !== 'string' || d.name.trim() === '') return null;
+
+  const now = new Date().toISOString();
+  return {
+    name: d.name,
+    avatar: typeof d.avatar === 'string' && d.avatar ? d.avatar : AVATAR_OPTIONS[0],
+    totalPoints:
+      typeof d.totalPoints === 'number' && Number.isFinite(d.totalPoints) ? d.totalPoints : 0,
+    badges: Array.isArray(d.badges) ? d.badges.filter((b): b is Badge => !!b && !!b.type) : [],
+    completedTexts: Array.isArray(d.completedTexts)
+      ? d.completedTexts.filter((t): t is CompletedText => !!t && typeof t.title === 'string')
+      : [],
+    perfectScoreStreak:
+      typeof d.perfectScoreStreak === 'number' && Number.isFinite(d.perfectScoreStreak)
+        ? d.perfectScoreStreak
+        : 0,
+    gradesCompleted: Array.isArray(d.gradesCompleted)
+      ? d.gradesCompleted.filter((g): g is number => typeof g === 'number')
+      : [],
+    createdAt: typeof d.createdAt === 'string' ? d.createdAt : now,
+    lastActivity: typeof d.lastActivity === 'string' ? d.lastActivity : now,
+  };
 }
 
 /**
@@ -401,7 +436,14 @@ export function getAllUsers(): User[] {
   try {
     const stored = localStorage.getItem(ALL_USERS_KEY);
     if (stored) {
-      return JSON.parse(stored) as User[];
+      const rader = JSON.parse(stored);
+      // Samma påfyllning som loadUser. Listan är dessutom inloggningsvägen på
+      // en delad Chromebook: en post utan namn fick tidigare findUserByName att
+      // kasta, och eleven loggades in som ny användare med noll poäng trots att
+      // all progress fanns kvar i lagringen.
+      return Array.isArray(rader)
+        ? rader.map(normaliseraUser).filter((u): u is User => u !== null)
+        : [];
     }
   } catch (error) {
     console.error('Kunde inte ladda alla användare:', error);

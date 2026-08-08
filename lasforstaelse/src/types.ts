@@ -144,7 +144,6 @@ export interface User {
   lastActivity: string;
 }
 
-// Meddelande från elev till lärare
 // Badge-definitioner
 export const BADGE_DEFINITIONS: Record<BadgeType, Omit<Badge, 'earnedAt'>> = {
   [BadgeType.FIRST_TEXT]: {

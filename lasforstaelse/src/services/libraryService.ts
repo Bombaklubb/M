@@ -2,6 +2,13 @@ import { LibraryText, CompletedText } from '../types';
 
 let libraryCache: LibraryText[] | null = null;
 
+// Pågående hämtning. Cachen sätts först när nedladdningen är klar, så två
+// anrop som överlappar startade tidigare var sin nedladdning av en 2 MB-fil.
+// Det händer på riktigt: startsidan räknar texter per nivå samtidigt som
+// eleven hinner trycka Starta. Nollställs efteråt, så att ett misslyckat
+// försök går att göra om.
+let pagaendeHamtning: Promise<LibraryText[]> | null = null;
+
 /**
  * Ladda biblioteket från JSON-filen
  */
@@ -10,6 +17,16 @@ export async function loadLibrary(): Promise<LibraryText[]> {
     return libraryCache;
   }
 
+  if (!pagaendeHamtning) {
+    pagaendeHamtning = hamtaBibliotek().finally(() => {
+      pagaendeHamtning = null;
+    });
+  }
+
+  return pagaendeHamtning;
+}
+
+async function hamtaBibliotek(): Promise<LibraryText[]> {
   try {
     const response = await fetch('/data/library.json');
     if (!response.ok) {
