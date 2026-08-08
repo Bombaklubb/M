@@ -14105,7 +14105,7 @@
     "genre": "faktatext",
     "theme": "tv-spel",
     "title": "Att spela tillsammans i Fortnite",
-    "text": "Många barn och vuxna tycker om att spela Fortnite tillsammans. Spelet gör det möjligt att bilda lag med två, tre eller fyra spelare. När man spelar i lag är samarbete viktigt. Spelarna kan prata med varandra genom headset och planera hur de ska röra sig på kartan.\n\nOm en spelare blir träffad kan lagkamrater hjälpa till att rädda personen. Det gör att man behöver tänka på varandra och inte bara på sig själv. Vissa lag delar upp roller, till exempel att en samlar material medan en annan letar efter bra utrustning.\n\nSamtidigt är det viktigt att följa regler och visa respekt. På nätet kan man möta människor man inte känner. Därför ska man inte dela personlig information. Det är också viktigt att ta pauser och inte spela för länge.\n\nFortnite kan vara roligt och socialt, men det kräver ansvar. Genom att samarbeta, vara schysst och tänka på säkerheten kan spelandet bli en positiv upplevelse för många.",
+    "text": "Många barn och vuxna tycker om att spela Fortnite tillsammans. I spelet kan man bilda lag med två, tre eller fyra spelare. När man spelar i lag är samarbete viktigt. Spelarna kan prata med varandra genom headset. Då kan de planera hur de ska röra sig på kartan.\n\nOm en spelare blir träffad kan lagkamrater hjälpa till att rädda personen. Därför behöver man tänka på varandra och inte bara på sig själv. Vissa lag delar upp roller. En samlar material medan en annan letar efter bra utrustning.\n\nSamtidigt är det viktigt att följa regler och visa respekt. På nätet möter man människor man inte känner. Därför ska man inte dela personlig information. Det är också viktigt att ta pauser och inte spela för länge.\n\nFortnite kan vara roligt och socialt, men det kräver ansvar. Genom att samarbeta, vara schysst och tänka på säkerheten blir spelandet en positiv upplevelse för många.",
     "questions": [
       {
         "type": "literal",
@@ -14175,7 +14175,7 @@
       }
     ],
     "meta": {
-      "wordCount": 156,
+      "wordCount": 150,
       "fingerprint": "ak4-tema-002",
       "generatedAt": "2026-02-28T00:00:00.000Z",
       "model": "claude"
@@ -16138,7 +16138,7 @@
     "genre": "faktatext",
     "theme": "kroppen",
     "title": "Varför hjärtat slår",
-    "text": "Ditt hjärta slår ungefär hundratusen gånger varje dag utan att du behöver tänka på det. Det är en muskel som aldrig vilar, och dess uppgift är att pumpa blod genom hela kroppen.\n\nBlodet transporterar syre från lungorna till alla kroppens celler. Cellerna behöver syre för att kunna arbeta, ungefär som en motor behöver bränsle. När cellerna har använt syret skickas blodet tillbaka till hjärtat och vidare till lungorna för att hämta nytt syre.\n\nHjärtat har fyra rum: två förmak och två kammare. Höger sida tar emot blod som behöver nytt syre och skickar det till lungorna. Vänster sida tar emot syrerikt blod och pumpar ut det i kroppen. Klaffar mellan rummen ser till att blodet bara flödar åt rätt håll.\n\nNär du springer eller blir rädd slår hjärtat snabbare, för att kroppen behöver mer syre. När du vilar lugnar det ner sig.\n\nHjärtat börjar slå redan innan vi föds och fortsätter hela livet. Det gör det till en av kroppens mest uthålliga muskler.",
+    "text": "Ditt hjärta slår ungefär hundratusen gånger varje dag. Du behöver inte tänka på det. Hjärtat är en muskel som aldrig vilar. Dess uppgift är att pumpa blod genom hela kroppen.\n\nBlodet transporterar syre från lungorna till alla kroppens celler. Cellerna behöver syre för att kunna arbeta, ungefär som en motor behöver bränsle. När cellerna har använt syret skickas blodet tillbaka till hjärtat. Sedan går det vidare till lungorna för att hämta nytt syre.\n\nHjärtat har fyra rum: två förmak och två kammare. Höger sida tar emot blod som behöver nytt syre och skickar det till lungorna. Vänster sida tar emot syrerikt blod och pumpar ut det i kroppen. Klaffar mellan rummen ser till att blodet bara flödar åt rätt håll.\n\nNär du springer eller blir rädd slår hjärtat snabbare. Kroppen behöver då mer syre. När du vilar lugnar det ner sig.\n\nHjärtat börjar slå redan innan vi föds. Det fortsätter hela livet. Därför är det en av kroppens mest uthålliga muskler.",
     "questions": [
       {
         "q": "Hur många gånger slår hjärtat ungefär per dag?",
@@ -16209,7 +16209,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 163
+      "wordCount": 161
     }
   },
   {
@@ -16298,7 +16298,7 @@
     "genre": "faktatext",
     "theme": "rymden",
     "title": "Planeten Mars – vår röda granne",
-    "text": "Mars kallas ibland den röda planeten eftersom dess yta är täckt av järnoxid, ett ämne som ger en roströd färg. Mars är den fjärde planeten från solen och en av jordens närmaste grannar i rymden.\n\nPlaneten är ungefär hälften så stor som jorden. Dess atmosfär är mycket tunn och består mest av koldioxid, vilket gör att det inte finns tillräckligt med luft för människor att andas. Temperaturen kan sjunka till minus hundratrettio grader på vintern.\n\nÄndå har Mars likheter med jorden. Den har årstider, istäcken vid polerna och vulkaner.\n\nForskare har skickat flera robotfordon, så kallade rovers, till Mars för att undersöka ytan. De har hittat spår som tyder på att det en gång kan ha funnits flytande vatten där. Det har gjort att många undrar om det funnits enkla livsformer på planeten.\n\nI framtiden planerar rymdorganisationer att skicka människor till Mars. Det skulle vara den längsta rymdresan som människor gjort, och resan dit tar ungefär sju månader.",
+    "text": "Mars kallas ibland den röda planeten. Ytan är täckt av järnoxid. Det är ett ämne som ger en roströd färg. Mars är den fjärde planeten från solen. Den är också en av jordens närmaste grannar i rymden.\n\nPlaneten är ungefär hälften så stor som jorden. Dess atmosfär är mycket tunn. Den består mest av koldioxid. Därför finns det inte tillräckligt med luft för människor att andas. På vintern kan temperaturen sjunka till minus hundratrettio grader.\n\nÄndå har Mars likheter med jorden. Där finns årstider, istäcken vid polerna och vulkaner.\n\nForskare har skickat flera robotfordon till Mars. De kallas rovers och undersöker ytan. De har hittat spår som tyder på att det en gång kan ha funnits flytande vatten där. Det har gjort att många undrar om det funnits enkla livsformer på planeten.\n\nI framtiden planerar rymdorganisationer att skicka människor till Mars. Det skulle bli den längsta rymdresan som människor gjort. Resan dit tar ungefär sju månader.",
     "questions": [
       {
         "q": "Varför kallas Mars den röda planeten?",
@@ -16369,7 +16369,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1696384036025-c7d7b7f6584d?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 158
+      "wordCount": 156
     }
   },
   {
@@ -16458,7 +16458,7 @@
     "genre": "faktatext",
     "theme": "mat och hälsa",
     "title": "Varför behöver kroppen olika sorters mat?",
-    "text": "Maten vi äter ger kroppen energi och byggstenar. Men kroppen behöver många olika ämnen för att fungera bra, och inget enskilt livsmedel innehåller allt.\n\nKolhydrater finns i bröd, pasta, ris och potatis. De ger snabb energi och är särskilt viktiga för hjärnan. Protein finns i kött, fisk, bönor och ägg. Kroppen använder protein för att bygga och reparera muskler och andra vävnader.\n\nFett behövs också, även om det ibland har dåligt rykte. Fett hjälper kroppen att ta upp vissa vitaminer och skyddar inre organ. Det finns i till exempel nötter, olivolja och fisk.\n\nVitaminer och mineraler behövs i mindre mängder men är ändå nödvändiga. Järn hjälper blodet att transportera syre, och C-vitamin stärker immunförsvaret. Frukt och grönsaker innehåller många av dessa ämnen.\n\nVatten är också avgörande. Kroppen består till stor del av vatten, och det behövs för nästan alla funktioner.\n\nAtt äta varierat är nyckeln. Genom att blanda olika sorters mat får kroppen det den behöver för att växa, tänka och röra sig.",
+    "text": "Maten vi äter ger kroppen energi och byggstenar. Kroppen behöver många olika ämnen för att fungera bra. Inget enskilt livsmedel innehåller allt.\n\nKolhydrater finns i bröd, pasta, ris och potatis. De ger snabb energi. De är särskilt viktiga för hjärnan. Protein finns i kött, fisk, bönor och ägg. Kroppen använder protein för att bygga och reparera muskler och andra vävnader.\n\nFett behövs också, även om det ibland har dåligt rykte. Fett hjälper kroppen att ta upp vissa vitaminer. Det skyddar också inre organ. Fett finns i nötter, olivolja och fisk.\n\nVitaminer och mineraler behövs i mindre mängder. Ändå är de nödvändiga. Järn hjälper blodet att transportera syre. C-vitamin stärker immunförsvaret. Frukt och grönsaker innehåller många av dessa ämnen.\n\nVatten är också avgörande. Kroppen består till stor del av vatten. Det behövs för nästan alla funktioner.\n\nAtt äta varierat är nyckeln. Genom att blanda olika sorters mat får kroppen det den behöver för att växa, tänka och röra sig.",
     "questions": [
       {
         "q": "Vad ger kolhydrater kroppen?",
@@ -16529,7 +16529,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 163
+      "wordCount": 158
     }
   },
   {
@@ -17664,7 +17664,7 @@
   {
     "id": "ak5-tema-025",
     "title": "Fans och gemenskap",
-    "text": "Englands rugbylandslag har supportrar i alla åldrar. På matchdagar fylls gatorna runt arenan av människor som bär vita tröjor med den röda rosen.\n\nBland fansen finns personer med olika bakgrund. Det finns också fans med funktionsvariationer som deltar tack vare tillgängliga platser på arenan.\n\nMånga beskriver matcherna som mer än bara sport. Det är en social händelse där man träffar andra och delar glädje och besvikelse. När laget vinner firar supportrarna tillsammans, och när laget förlorar stöttar de varandra.\n\nBarn som Amir, Ella och Noa kan drömma om att själva spela i landslaget en dag. De ser spelare med olika kroppstyper och erfarenheter, vilket visar att det finns flera sätt att bidra till ett lag.\n\nRugbyns traditioner är viktiga för fansen. De sjunger sånger före matchen och applåderar även motståndarna. Respekt är en central del av kulturen.\n\nGenom åren har landslaget blivit en symbol för gemenskap. Oavsett var i landet man bor kan man känna samhörighet när England spelar.",
+    "text": "Englands rugbylandslag har supportrar i alla åldrar. På matchdagar fylls gatorna runt arenan. Många bär vita tröjor med den röda rosen.\n\nBland fansen finns personer med olika bakgrund. Där finns också fans med funktionsvariationer. De kan delta tack vare tillgängliga platser på arenan.\n\nMånga beskriver matcherna som mer än bara sport. Det är en social händelse. Man träffar andra och delar glädje och besvikelse. När laget vinner firar supportrarna tillsammans. När laget förlorar stöttar de varandra.\n\nBarn som Amir, Ella och Noa kan drömma om att själva spela i landslaget. De ser spelare med olika kroppstyper och erfarenheter. Det visar att det finns flera sätt att bidra till ett lag.\n\nRugbyns traditioner är viktiga för fansen. De sjunger sånger före matchen. De applåderar även motståndarna. Respekt är en central del av kulturen.\n\nGenom åren har landslaget blivit en symbol för gemenskap. Var man än bor i landet kan man känna samhörighet när England spelar.",
     "grade": 3,
     "category": "Sport",
     "questions": [
@@ -17737,7 +17737,7 @@
     ],
     "imageUrl": "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600&h=400&fit=crop",
     "meta": {
-      "wordCount": 159
+      "wordCount": 154
     },
     "genre": "faktatext",
     "theme": "Sport"
