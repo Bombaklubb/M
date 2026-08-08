@@ -96,6 +96,18 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
     }
   }, [authenticated]);
 
+  // Inloggningsrutan är en modal som blockerar hela sidan. Escape ska stänga
+  // den precis som Avbryt-knappen. Efter inloggning gäller det inte längre –
+  // då är lärarvyn en egen vy, och ett tryck av misstag skulle kasta ut läraren.
+  useEffect(() => {
+    if (authenticated) return;
+    const vidTangent = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', vidTangent);
+    return () => document.removeEventListener('keydown', vidTangent);
+  }, [authenticated, onClose]);
+
   // Login-skärm
   if (!authenticated) {
     return (
@@ -118,11 +130,17 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
             }}
             onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
             placeholder="Lösenord"
+            // Placeholdern räcker inte som etikett: den försvinner när fältet
+            // fylls i och läses inte konsekvent av skärmläsare.
+            aria-label="Lösenord till lärarvyn"
+            aria-invalid={error ? true : undefined}
+            aria-describedby={error ? 'lararvy-fel' : undefined}
             className="w-full p-4 border-2 border-slate-200 dark:border-slate-600 rounded-xl mb-4 focus:border-emerald-500 focus:outline-none bg-white dark:bg-slate-700 text-slate-800 dark:text-white"
             autoFocus
           />
 
-          {error && <p className="text-red-600 text-sm mb-4">{error}</p>}
+          {/* role="alert" gör att felet läses upp direkt när det dyker upp. */}
+          {error && <p id="lararvy-fel" role="alert" className="text-red-600 text-sm mb-4">{error}</p>}
 
           <div className="flex gap-3">
             <button
