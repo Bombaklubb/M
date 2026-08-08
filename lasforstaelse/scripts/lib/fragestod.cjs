@@ -14,6 +14,24 @@
 // ord slår den till, och då får ändringen granskas för hand i stället för att
 // glida igenom.
 
+// Frågeord och metaord som finns i nästan varje frågeformulering. De säger
+// ingenting om vad texten måste innehålla: en fråga som börjar "Vilket område
+// handlar texten om" faller inte för att ordet "vilket" strukits ur texten.
+// Utan undantaget larmar spärren på slumpmässiga sammanträffanden, och då blir
+// den brus i stället för skydd.
+const UTAN_INNEHALL = new Set([
+  'vilket',
+  'vilken',
+  'vilka',
+  'vilkas',
+  'varför',
+  'varifrån',
+  'enligt',
+  'texten',
+  'textens',
+  'stycket',
+]);
+
 function normalisera(s) {
   return s.toLowerCase().replace(/[^a-zåäöéA-ZÅÄÖÉ0-9\s-]/g, ' ');
 }
@@ -21,7 +39,7 @@ function normalisera(s) {
 function ord(s) {
   return normalisera(s)
     .split(/\s+/)
-    .filter((o) => o.replace(/[^a-zåäöé]/g, '').length >= 5);
+    .filter((o) => o.replace(/[^a-zåäöé]/g, '').length >= 5 && !UTAN_INNEHALL.has(o));
 }
 
 /** Ord som en fråga eller dess facit hänger på och som finns i texten. */
