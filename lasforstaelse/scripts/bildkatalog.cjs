@@ -292,6 +292,52 @@ const RESERV = {
   standard: 'photo-1456513080510-7bf3a84b82f8',
 };
 
+// ---------------------------------------------------------------------------
+// Tillägg: avlastning av de mest återanvända motiven.
+//
+// Efter förra omgången hade ingen text en trasig eller uppenbart felaktig bild,
+// men 437 texter delade fortfarande motiv med varandra: tretton texter satt på
+// samma bild av sopsortering, tolv på samma kommunbild och elva på samma
+// AI-bild. Bilderna nedan har samma nyckelord som de överbelastade, och
+// eftersom bastaBild() vid lika poäng väljer det motiv som använts minst
+// fördelar tilldelningen ut texterna av sig själv.
+//
+// Var och en är nedladdad och granskad. Av de fyra första sopsorteringsbilder
+// som söktes fram var bara en användbar: de andra visade en skräpig gata med en
+// utslängd kontorsstol, en stenvägg där kärlen var en bisak, och en villagata
+// där de knappt syntes. Alt-texten sa "trash bins" om alla fyra.
+// ---------------------------------------------------------------------------
+const KATALOG_TILLAGG = [
+  // Miljö och sortering
+  { id: 'photo-1611284446314-60a58ac0deb9', desc: 'tre sopkärl märkta kompost, avfall och återvinning', kw: ['sortera', 'sopor', 'återvinning', 'avfall', 'skräp'] },
+
+  // Rymd
+  { id: 'photo-1701014159143-09482059f571', desc: 'tre planeter mot stjärnhimmel', kw: ['planet', 'rymd', 'solsystem', 'universum'] },
+  { id: 'photo-1696384036025-c7d7b7f6584d', desc: 'röd planet med måne mot stjärnhimmel', kw: ['mars', 'planet', 'rymd'] },
+  { id: 'photo-1700159915592-004562ddcf6f', desc: 'planet i blått ljus över stjärnfält', kw: ['planet', 'rymd', 'universum', 'galax'] },
+
+  // Musik
+  { id: 'photo-1512733596533-7b00ccf8ebaf', desc: 'pianotangenter i närbild', kw: ['piano', 'musik', 'instrument', 'ton'] },
+  { id: 'photo-1556379118-7034d926d258', desc: 'stränginstrument och trummor upphängda på vägg', kw: ['instrument', 'musik', 'gitarr', 'trumma'] },
+
+  // Sång och rytm
+  { id: 'photo-1774266854775-4831c6c516b3', desc: 'barn i skolkläder som klappar takten', kw: ['klappa', 'rytm', 'sång', 'kör', 'takt', 'samling'] },
+
+  // Nyheter och media
+  { id: 'photo-1573812195421-50a396d17893', desc: 'staplade dagstidningar sedda från kanten', kw: ['tidning', 'nyhet', 'media', 'rubrik'] },
+  { id: 'photo-1495020689067-958852a7765e', desc: 'person läser tidning på en bänk', kw: ['tidning', 'läsa', 'nyhet', 'media', 'press'] },
+
+  // Teknik och AI
+  { id: 'photo-1562408590-e32931084e23', desc: 'kretskort med komponenter i blått ljus', kw: ['ai', 'artificiell', 'intelligens', 'algoritm', 'dator', 'chip'] },
+
+  // Samhälle
+  { id: 'photo-1780396269429-e20eaa1a1cd2', desc: 'fullmäktigesal med bänkar i halvcirkel', kw: ['kommun', 'fullmäktige', 'demokrati', 'beslut', 'politik', 'råd'] },
+];
+
+// Tillägget läggs sist, så att befintliga tilldelningar med samma poäng ligger
+// kvar och bara överflödet flyttas till de nya motiven.
+KATALOG.push(...KATALOG_TILLAGG.filter((b) => !KATALOG.some((k) => k.id === b.id)));
+
 const KATALOG_MAP = new Map(KATALOG.map((b) => [b.id, b]));
 
 module.exports = { KATALOG, KATALOG_MAP, RESERV, url, BAS, SUFFIX };
