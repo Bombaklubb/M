@@ -12,12 +12,6 @@ import { redis, KEY_PREFIX, getTodayKey, getDateKey } from '../lib/redis';
 // Lösenord för lärarvy (samma som befintligt)
 const TEACHER_PASSWORD = process.env.TEACHER_PASSWORD || 'Korsängen';
 
-interface DailyStats {
-  date: string;
-  visitors: number;
-  tasks: number;
-}
-
 // Ingen Access-Control-Allow-Origin här. Appen och endpointen ligger på samma
 // domän, så webbläsaren behöver ingen CORS-header för att anropet ska gå fram.
 // Tidigare stod det '*', vilket lät vilken webbplats som helst skicka
@@ -67,7 +61,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { password } = req.body;
+  // req.body är undefined när anropet saknar kropp. Destrukturering av
+  // undefined kastar, och det sker före try-blocket nedan – lärarvyn fick då
+  // ett oförklarat 500 i stället för 401.
+  const { password } = (req.body || {}) as { password?: unknown };
 
   const vidarebefordrad = req.headers['x-forwarded-for'];
   const ip = (Array.isArray(vidarebefordrad) ? vidarebefordrad[0] : vidarebefordrad || 'okand')
@@ -92,57 +89,59 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const today = getTodayKey();
 
-    // Hämta antal aktiva just nu (keys med TTL)
-    const activeKeys = await redis.keys(`${KEY_PREFIX}active:*`);
+    // Dagens siffror. Här låg också en hgetall på dagens feltyper vars resultat
+    // aldrig användes – feltyperna räknas i fjortondagarsslingan nedan.
+    const [activeKeys, visitorsToday, tasksRa, timeRa, errorsRa] = await Promise.all([
+      redis.keys(`${KEY_PREFIX}active:*`), // aktiva just nu = nycklar med TTL
+      redis.scard(`${KEY_PREFIX}visitors:${today}`),
+      redis.get<number>(`${KEY_PREFIX}tasks:${today}`),
+      redis.get<number>(`${KEY_PREFIX}time:${today}`),
+      redis.get<number>(`${KEY_PREFIX}total_errors:${today}`),
+    ]);
     const activeNow = activeKeys.length;
+    const tasksToday = tasksRa || 0;
+    const totalTimeToday = timeRa || 0;
+    const totalErrorsToday = errorsRa || 0;
 
-    // Hämta unika besökare idag
-    const visitorsToday = await redis.scard(`${KEY_PREFIX}visitors:${today}`);
+    // Hämta statistik för senaste 14 dagarna.
+    //
+    // Dagarna hämtades tidigare en i taget, med fyra väntande anrop per dag och
+    // ett femte varv för feltyperna – runt sjuttio round-trips i följd innan
+    // svaret gick iväg. Läsningarna är oberoende av varandra, så de görs nu
+    // samtidigt. Läraren väntar på den långsammaste, inte på summan.
+    const dagar = await Promise.all(
+      Array.from({ length: 14 }, (_, i) => getDateKey(i)).map(async (dateKey) => {
+        const [visitors, tasks, time, errors, dayErrors] = await Promise.all([
+          redis.scard(`${KEY_PREFIX}visitors:${dateKey}`),
+          redis.get<number>(`${KEY_PREFIX}tasks:${dateKey}`),
+          redis.get<number>(`${KEY_PREFIX}time:${dateKey}`),
+          redis.get<number>(`${KEY_PREFIX}total_errors:${dateKey}`),
+          redis.hgetall<Record<string, number>>(`${KEY_PREFIX}errors:${dateKey}`),
+        ]);
+        return {
+          visitors,
+          tasks: tasks || 0,
+          time: time || 0,
+          errors: errors || 0,
+          dayErrors: dayErrors || {},
+        };
+      })
+    );
 
-    // Hämta uppgifter gjorda idag
-    const tasksToday = (await redis.get<number>(`${KEY_PREFIX}tasks:${today}`)) || 0;
-
-    // Hämta total tid idag (i sekunder)
-    const totalTimeToday = (await redis.get<number>(`${KEY_PREFIX}time:${today}`)) || 0;
-
-    // Hämta fel idag
-    const totalErrorsToday = (await redis.get<number>(`${KEY_PREFIX}total_errors:${today}`)) || 0;
-
-    // Hämta feltyper (vanligaste fel)
-    const errorsMap = await redis.hgetall<Record<string, number>>(`${KEY_PREFIX}errors:${today}`) || {};
-
-    // Hämta statistik för senaste 14 dagarna
-    const dailyStats: DailyStats[] = [];
     let totalVisitors = 0;
     let totalTasks = 0;
     let totalTime = 0;
     let totalErrors = 0;
 
-    for (let i = 0; i < 14; i++) {
-      const dateKey = getDateKey(i);
-      const visitors = await redis.scard(`${KEY_PREFIX}visitors:${dateKey}`);
-      const tasks = (await redis.get<number>(`${KEY_PREFIX}tasks:${dateKey}`)) || 0;
-      const time = (await redis.get<number>(`${KEY_PREFIX}time:${dateKey}`)) || 0;
-      const errors = (await redis.get<number>(`${KEY_PREFIX}total_errors:${dateKey}`)) || 0;
-
-      dailyStats.push({
-        date: dateKey,
-        visitors,
-        tasks,
-      });
-
-      totalVisitors += visitors;
-      totalTasks += tasks;
-      totalTime += time;
-      totalErrors += errors;
-    }
-
     // Aggregera alla feltyper från senaste 14 dagarna
     const allErrors: Record<string, number> = {};
-    for (let i = 0; i < 14; i++) {
-      const dateKey = getDateKey(i);
-      const dayErrors = await redis.hgetall<Record<string, number>>(`${KEY_PREFIX}errors:${dateKey}`) || {};
-      for (const [type, count] of Object.entries(dayErrors)) {
+
+    for (const dag of dagar) {
+      totalVisitors += dag.visitors;
+      totalTasks += dag.tasks;
+      totalTime += dag.time;
+      totalErrors += dag.errors;
+      for (const [type, count] of Object.entries(dag.dayErrors)) {
         allErrors[type] = (allErrors[type] || 0) + (count as number);
       }
     }
