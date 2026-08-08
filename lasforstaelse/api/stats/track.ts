@@ -36,6 +36,30 @@ function setCorsHeaders(res: VercelResponse) {
   res.setHeader('Vary', 'Origin');
 }
 
+/**
+ * Kroppen tolkas efter Content-Type: application/json ger ett objekt, text/plain
+ * ger en sträng och allt annat en Buffer. Sessionstiden skickas med sendBeacon
+ * när eleven lämnar sidan, och en sendBeacon utan Blob sätter text/plain. Då kom
+ * kroppen fram som en sträng, event.type blev undefined och anropet avvisades
+ * med 400 – all lästid under fem minuter försvann ur lärarstatistiken.
+ *
+ * Klienten skickar numera en Blob med rätt typ. Strängen och bufferten tolkas
+ * ändå här, så att gamla flikar som fortfarande kör den förra versionen av
+ * appen inte tappar sin tid.
+ */
+function lasKropp(kropp: unknown): TrackEvent | null {
+  if (!kropp) return null;
+  if (typeof kropp === 'object' && !Buffer.isBuffer(kropp)) return kropp as TrackEvent;
+
+  try {
+    const text = Buffer.isBuffer(kropp) ? kropp.toString('utf8') : String(kropp);
+    const tolkad = JSON.parse(text);
+    return tolkad && typeof tolkad === 'object' ? (tolkad as TrackEvent) : null;
+  } catch {
+    return null;
+  }
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   setCorsHeaders(res);
 
@@ -50,10 +74,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const event: TrackEvent = req.body;
+    const event = lasKropp(req.body);
     const today = getTodayKey();
 
-    if (!event.type || !event.deviceId) {
+    if (!event || !event.type || !event.deviceId) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 

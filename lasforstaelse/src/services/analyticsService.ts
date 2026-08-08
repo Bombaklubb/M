@@ -106,14 +106,22 @@ export function startSession(): void {
     const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
     sessionStartTime = null;
 
-    // Använd sendBeacon för att garantera att data skickas
+    // Använd sendBeacon för att garantera att data skickas.
+    //
+    // Innehållet måste skickas som en Blob med typen application/json. En
+    // sendBeacon med bara en sträng sätter Content-Type till text/plain, och
+    // då tolkade servern inte kroppen som JSON: anropet avvisades med 400 och
+    // all lästid under fem minuter försvann ur lärarstatistiken.
     if (navigator.sendBeacon) {
       const data = JSON.stringify({
         type: 'session_time',
         deviceId: getAnonymousDeviceId(),
         data: { timeSeconds: Math.min(seconds, 3600) }, // Max 1 timme
       });
-      navigator.sendBeacon('/api/stats/track', data);
+      navigator.sendBeacon(
+        '/api/stats/track',
+        new Blob([data], { type: 'application/json' })
+      );
     }
   };
 
