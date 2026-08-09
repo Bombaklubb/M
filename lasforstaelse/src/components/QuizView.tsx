@@ -6,6 +6,7 @@ import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
 import { TextWithGlossary } from './TextWithGlossary';
+import { TextImage } from './TextImage';
 import { TextWithSpeech } from './TextWithSpeech';
 
 interface QuizViewProps {
@@ -226,16 +227,7 @@ export const QuizView: React.FC<QuizViewProps> = ({
                   </div>
                 </div>
               {/* Bild till texten */}
-              {text.imageUrl && (
-                <div className="mb-4">
-                  <img
-                    src={text.imageUrl}
-                    alt={`Bild till ${text.title}`}
-                    loading="lazy"
-                    className="w-full max-h-64 object-cover rounded-lg bg-slate-100 dark:bg-slate-700"
-                  />
-                </div>
-              )}
+              {text.imageUrl && <TextImage src={text.imageUrl} title={text.title} />}
                 <div className="prose prose-lg max-w-none dark:prose-invert">
                   {karaokeMode ? (
                     <TextWithSpeech

@@ -238,6 +238,24 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
   const [toast, setToast] = useState<string | null>(null);
   const { darkMode } = useDarkMode();
 
+  // Visar toningen i flikradens högerkant så länge det finns flikar utanför
+  // synfältet. Mäts i stället för att antas, eftersom det beror på fönstrets
+  // bredd och på hur långt eleven redan rullat.
+  const flikRadRef = useRef<HTMLDivElement>(null);
+  const [merFlikar, setMerFlikar] = useState(false);
+
+  const uppdateraFlikRullning = () => {
+    const el = flikRadRef.current;
+    if (!el) return;
+    setMerFlikar(el.scrollWidth - el.clientWidth - el.scrollLeft > 8);
+  };
+
+  useEffect(() => {
+    uppdateraFlikRullning();
+    window.addEventListener('resize', uppdateraFlikRullning);
+    return () => window.removeEventListener('resize', uppdateraFlikRullning);
+  }, []);
+
   useEffect(() => {
     setUser(loadUser());
     setShop(loadShop());
@@ -476,28 +494,53 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
         {/* Flikar */}
         {/* Fem flikar på en Chromebook i 1366 px är gott om plats, men i en smal
             fönsterbredd trängdes texten ihop till oläslighet. Raden får därför
-            rulla i sidled i stället för att krympa. */}
-        <div
-          className="flex overflow-x-auto bg-white/80 dark:bg-slate-800/80 rounded-2xl mb-5 sticky top-0 z-10 backdrop-blur"
-          style={{ border: '1px solid rgba(99,102,241,0.30)', boxShadow: '0 2px 12px rgba(99,102,241,0.10)' }}
-          role="tablist"
-          aria-label="Kategorier i affären"
-        >
-          {TABS.map(t => (
-            <button
-              key={t.id}
-              onClick={() => setTab(t.id)}
-              role="tab"
-              aria-selected={tab === t.id}
-              className={`flex-1 shrink-0 flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-3 text-xs sm:text-sm font-bold whitespace-nowrap transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-indigo-400 ${
-                tab === t.id ? 'text-white' : 'text-indigo-700/80 dark:text-indigo-300 hover:text-indigo-700 dark:hover:text-white'
-              }`}
-              style={tab === t.id ? { background: 'linear-gradient(135deg,#6366f1,#4f46e5)' } : undefined}
+            rulla i sidled i stället för att krympa.
+
+            Att den rullar måste också synas. På 375 px låg "Mina köp" utanför
+            kanten utan någon antydan om att det fanns mer, och den fliken hade
+            i praktiken varit omöjlig att hitta för ett barn. Toningen till
+            höger försvinner när man rullat hela vägen. */}
+        <div className="relative mb-5 sticky top-0 z-10">
+          <div
+            ref={flikRadRef}
+            onScroll={uppdateraFlikRullning}
+            className="flex overflow-x-auto bg-white/80 dark:bg-slate-800/80 rounded-2xl backdrop-blur"
+            style={{ border: '1px solid rgba(99,102,241,0.30)', boxShadow: '0 2px 12px rgba(99,102,241,0.10)' }}
+            role="tablist"
+            aria-label="Kategorier i affären"
+          >
+            {TABS.map(t => (
+              <button
+                key={t.id}
+                onClick={() => setTab(t.id)}
+                role="tab"
+                aria-selected={tab === t.id}
+                className={`flex-1 shrink-0 flex items-center justify-center gap-1.5 min-h-[44px] px-3 py-3 text-xs sm:text-sm font-bold whitespace-nowrap transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-indigo-400 ${
+                  tab === t.id ? 'text-white' : 'text-indigo-700/80 dark:text-indigo-300 hover:text-indigo-700 dark:hover:text-white'
+                }`}
+                style={tab === t.id ? { background: 'linear-gradient(135deg,#6366f1,#4f46e5)' } : undefined}
+              >
+                <span aria-hidden="true">{t.icon}</span>
+                <span>{t.label}</span>
+              </button>
+            ))}
+          </div>
+
+          {merFlikar && (
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute right-0 top-0 bottom-0 w-12 rounded-r-2xl flex items-center justify-end pr-1.5 text-indigo-500 dark:text-indigo-300 font-black"
+              style={{
+                // Toningen måste följa flikradens egen bakgrund, annars blir det
+                // ett vitt streck i mörkt läge.
+                background: darkMode
+                  ? 'linear-gradient(to right, rgba(30,41,59,0) 0%, rgba(30,41,59,0.85) 55%, rgba(30,41,59,0.95) 100%)'
+                  : 'linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 55%, rgba(255,255,255,0.95) 100%)',
+              }}
             >
-              <span aria-hidden="true">{t.icon}</span>
-              <span>{t.label}</span>
-            </button>
-          ))}
+              ›
+            </div>
+          )}
         </div>
 
         {/* Teman ritas bara i ljust läge, eftersom en ljus bakgrundsbild skulle
