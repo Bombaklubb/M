@@ -77,11 +77,6 @@ export function trackSessionTime(seconds: number): void {
   }
 }
 
-// Spåra specifikt fel-typ
-export function trackError(questionType: string): void {
-  trackEvent('error', { questionType });
-}
-
 // Session-tid tracker
 let sessionStartTime: number | null = null;
 let sessionIgang = false;

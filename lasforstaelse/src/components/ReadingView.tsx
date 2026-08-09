@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { LibraryText } from '../types';
 import { TextWithSpeech } from './TextWithSpeech';
+import { TextImage } from './TextImage';
 
 interface ReadingViewProps {
   text: LibraryText;
@@ -45,16 +46,7 @@ export const ReadingView: React.FC<ReadingViewProps> = ({ text, onStartQuiz }) =
       </div>
 
       {/* Bild till texten */}
-      {text.imageUrl && (
-        <div className="mb-6">
-          <img
-            src={text.imageUrl}
-            alt={`Bild till ${text.title}`}
-            loading="lazy"
-            className="w-full max-h-72 object-cover rounded-2xl shadow-lg bg-slate-100 dark:bg-slate-700"
-          />
-        </div>
-      )}
+      {text.imageUrl && <TextImage src={text.imageUrl} title={text.title} className="mb-6" />}
 
       {/* Text size selector */}
       <div className="flex items-center justify-end gap-2 mb-4">

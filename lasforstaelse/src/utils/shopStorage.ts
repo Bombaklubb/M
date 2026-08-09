@@ -126,12 +126,6 @@ function ownedListKey(kind: ShopKind): keyof ShopData {
   }
 }
 
-export function isOwned(kind: ShopKind, key: string): boolean {
-  const shop = loadShop();
-  const list = shop[ownedListKey(kind)] as string[];
-  return list.includes(key);
-}
-
 export interface BuyResult {
   ok: boolean;
   balance: number;

@@ -193,13 +193,6 @@ export const WORD_DICTIONARY: Record<string, WordDefinition> = {
   'smälta': { def: 'Bli flytande av värme, som is som blir vatten', ex: 'Snön smälte i solen.' },
   'undersöka': { def: 'Titta noga på något för att ta reda på hur det är', ex: 'De undersökte vad som hände i glaset.' },
 };
-// Hitta svåra ord i en text
-export function findDifficultWords(text: string): string[] {
-  const words = text.toLowerCase().match(/[a-zåäö]+/gi) || [];
-  const uniqueWords = [...new Set(words)];
-  return uniqueWords.filter(word => WORD_DICTIONARY[word.toLowerCase()]);
-}
-
 // Kolla om ett ord har en förklaring
 export function hasExplanation(word: string): boolean {
   return !!WORD_DICTIONARY[word.toLowerCase()];
@@ -208,10 +201,4 @@ export function hasExplanation(word: string): boolean {
 // Hämta förklaring för ett ord
 export function getWordDefinition(word: string): WordDefinition | null {
   return WORD_DICTIONARY[word.toLowerCase()] || null;
-}
-
-// Bakåtkompatibilitet
-export function getExplanation(word: string): string | null {
-  const def = WORD_DICTIONARY[word.toLowerCase()];
-  return def ? def.def : null;
 }
