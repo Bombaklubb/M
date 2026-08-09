@@ -21,6 +21,71 @@ export const RARITY_RING: Record<Rarity, string> = {
   mythic: 'from-fuchsia-500 via-purple-600 to-amber-400',
 };
 
+/**
+ * Sällsynthetens utseende i butiken.
+ *
+ * Alla kort såg likadana ut förut: vit ruta, samma kant, samma skugga. Att en
+ * legendarisk vara kostade tio gånger mer syntes bara i priset, och för en elev
+ * som ännu inte läser siffror snabbt fanns ingen skillnad alls. Här får varje
+ * steg en egen färg på både kanten, skenet och plattan bakom varan, så att
+ * skillnaden går att se på håll.
+ *
+ * Färgen är aldrig ensam bärare av information – texten i chipet säger samma
+ * sak, vilket krävs för den som inte skiljer färgerna åt.
+ */
+export const RARITY_STYLE: Record<Rarity, {
+  /** Bakgrund på plattan bakom varan. */
+  pedestal: string;
+  /** Kortets kantfärg. */
+  border: string;
+  /** Sken runt kortet. */
+  glow: string;
+  /** Färg på priset i ljust läge. Mörk nog för 4,5:1 mot vitt kort. */
+  accent: string;
+  /**
+   * Samma accent för mörkt läge. Behövs som eget värde: färgen sätts som
+   * inline-stil, och en inline-stil går inte att åsidosätta med Tailwinds
+   * dark:-klasser. Utan den blev priset nästan osynligt på ett mörkt kort.
+   */
+  accentDark: string;
+}> = {
+  common: {
+    pedestal: 'linear-gradient(150deg,#f8fafc,#e2e8f0)',
+    border: 'rgba(100,116,139,0.30)',
+    glow: 'rgba(100,116,139,0.14)',
+    accent: '#475569',
+    accentDark: '#cbd5e1',
+  },
+  rare: {
+    pedestal: 'linear-gradient(150deg,#eff6ff,#bfdbfe)',
+    border: 'rgba(59,130,246,0.45)',
+    glow: 'rgba(59,130,246,0.20)',
+    accent: '#1d4ed8',
+    accentDark: '#93c5fd',
+  },
+  epic: {
+    pedestal: 'linear-gradient(150deg,#faf5ff,#e9d5ff)',
+    border: 'rgba(168,85,247,0.45)',
+    glow: 'rgba(168,85,247,0.22)',
+    accent: '#7e22ce',
+    accentDark: '#d8b4fe',
+  },
+  legendary: {
+    pedestal: 'linear-gradient(150deg,#fffbeb,#fde68a)',
+    border: 'rgba(245,158,11,0.55)',
+    glow: 'rgba(245,158,11,0.28)',
+    accent: '#b45309',
+    accentDark: '#fcd34d',
+  },
+  mythic: {
+    pedestal: 'linear-gradient(150deg,#fdf4ff,#fbcfe8 45%,#fde68a)',
+    border: 'rgba(217,70,239,0.55)',
+    glow: 'rgba(217,70,239,0.30)',
+    accent: '#a21caf',
+    accentDark: '#f0abfc',
+  },
+};
+
 // Avatarer
 export type AvatarGroup =
   | 'Utvalda' | 'Djur' | 'Skoltema' | 'Fordon' | 'Fantasi' | 'Roligt' | 'Säsong';

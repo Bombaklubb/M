@@ -2,7 +2,8 @@ import React from 'react';
 import { User } from '../types';
 import { BookLogo } from './BookLogo';
 import { useDarkMode } from '../contexts/DarkModeContext';
-import { getWalletBalance } from '../utils/shopStorage';
+import { getWalletBalance, getEquippedFrame, getEquippedEffect } from '../utils/shopStorage';
+import FramedAvatar from './FramedAvatar';
 
 interface HeaderProps {
   user: User;
@@ -19,6 +20,12 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
 
   // Plånbokssaldo = livstidspoäng − spenderat i butiken
   const walletBalance = getWalletBalance();
+
+  // Ram och effekt från butiken. Headern visade tidigare bara emojin, så en elev
+  // som köpt en effekt och tryckt "Använd" såg ingen skillnad någonstans utom på
+  // profilsidan. Varan såg ut att vara trasig. Här syns den på varje skärm.
+  const frameId = getEquippedFrame();
+  const effectId = getEquippedEffect();
 
   return (
     <header className="bg-white dark:bg-slate-800 shadow-sm border-b border-slate-200 dark:border-slate-700">
@@ -88,7 +95,14 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
             className="flex items-center space-x-1 md:space-x-2 bg-indigo-50 dark:bg-indigo-900/30 px-3 md:px-4 py-2 rounded-full border border-indigo-200 dark:border-indigo-700 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
             aria-label={`Profil för ${user.name}`}
           >
-            <span className="text-lg md:text-xl">{user.avatar || '👤'}</span>
+            {/* Partiklarna i en effekt ritas utanför avatarens ruta, så knappen
+                får inte klippa dem. Därför ingen overflow-hidden här. */}
+            <FramedAvatar
+              emoji={user.avatar || '👤'}
+              size={30}
+              frameId={frameId}
+              effectId={effectId}
+            />
             <span className="font-bold text-slate-700 dark:text-white text-sm md:text-base hidden sm:inline">{user.name}</span>
           </button>
 
