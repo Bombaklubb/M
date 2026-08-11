@@ -92,7 +92,7 @@ export default function CoinGame({ questions, onComplete }: Props) {
     }
     return (
       base +
-      "border-gray-100 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-400 dark:text-gray-500"
+      "border-gray-100 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-400 dark:text-gray-400"
     );
   }
 

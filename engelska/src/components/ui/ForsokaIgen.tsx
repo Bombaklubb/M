@@ -121,7 +121,7 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
             <p className="font-bold text-gray-700 dark:text-gray-200 text-lg">
               Inga fel att öva på!
             </p>
-            <p className="text-gray-400 dark:text-gray-500 text-sm mt-1">
+            <p className="text-gray-400 dark:text-gray-400 text-sm mt-1">
               Kör vidare med fler kapitel!
             </p>
           </div>

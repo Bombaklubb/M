@@ -32,7 +32,7 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
     if (idx === selected && selected !== exercise.correctIndex) {
       return base + "border-red-400 bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300 animate-shake";
     }
-    return base + "border-gray-100 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-400 dark:text-gray-500";
+    return base + "border-gray-100 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-400 dark:text-gray-400";
   }
 
   return (
@@ -113,7 +113,7 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
               exercise.options[selected!] ?? "",
               exercise.options[exercise.correctIndex]
             )}
-            className="btn-primary bg-blue-500 hover:bg-blue-600 animate-slide-up"
+            className="btn-primary bg-blue-600 hover:bg-blue-700 animate-slide-up"
           >
             {isLast ? "Visa resultat →" : "Nästa fråga →"}
           </button>

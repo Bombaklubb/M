@@ -151,7 +151,7 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
         <div className="flex justify-end pt-2">
           <button
             onClick={() => onAnswer(state === "correct", input, exercise.answer)}
-            className="btn-primary bg-blue-500 hover:bg-blue-600 animate-slide-up"
+            className="btn-primary bg-blue-600 hover:bg-blue-700 animate-slide-up"
           >
             {isLast ? "Visa resultat →" : "Nästa fråga →"}
           </button>

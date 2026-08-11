@@ -104,7 +104,7 @@ function ActionButton({
         className={`w-full py-2 rounded-xl text-sm font-black transition-all active:scale-95 cursor-pointer disabled:cursor-not-allowed ${
           affordable
             ? "text-white bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600"
-            : "text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-700"
+            : "text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-gray-700"
         }`}
       >
         {affordable ? "Köp" : "För dyrt"}
@@ -168,7 +168,7 @@ function DefaultCard({
       <div className="flex items-center justify-between gap-1 mb-1">
         <span className="text-sm font-black text-gray-800 dark:text-gray-100 truncate">{label}</span>
       </div>
-      <div className="text-xs font-bold mb-2.5 text-gray-400 dark:text-gray-500">Gratis</div>
+      <div className="text-xs font-bold mb-2.5 text-gray-400 dark:text-gray-400">Gratis</div>
       <button
         onClick={onUse}
         disabled={active}
@@ -207,7 +207,7 @@ export default function ButikPage() {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <p className="text-gray-500 dark:text-gray-400 mb-4">Du är inte inloggad.</p>
-          <Link href="/" className="btn-primary bg-blue-500 hover:bg-blue-600">
+          <Link href="/" className="btn-primary bg-blue-600 hover:bg-blue-700">
             Gå till startsidan
           </Link>
         </div>
@@ -423,7 +423,7 @@ export default function ButikPage() {
               key={t.id}
               onClick={() => setTab(t.id)}
               className={`flex-1 flex items-center justify-center gap-1.5 py-3 text-xs sm:text-sm font-bold transition-colors cursor-pointer ${
-                tab === t.id ? "text-white bg-en-600" : "text-en-700/70 dark:text-en-400/70 hover:text-en-700"
+                tab === t.id ? "text-white bg-en-600" : "text-en-700 dark:text-en-300 hover:text-en-700"
               }`}
               aria-pressed={tab === t.id}
             >

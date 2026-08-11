@@ -305,7 +305,7 @@ function SamlaMyntGame({ stageId, stageName, student }: {
             : feedback === "wrong"   ? "border-red-400 bg-red-50 dark:bg-red-900/20"
             : "border-gray-200 dark:border-gray-700"
           }`}>
-            <p className="text-gray-400 dark:text-gray-500 text-xs mb-1">🇸🇪 Vad heter det på engelska?</p>
+            <p className="text-gray-400 dark:text-gray-400 text-xs mb-1">🇸🇪 Vad heter det på engelska?</p>
             <p className="text-gray-900 dark:text-gray-100 text-2xl font-black">{q.sv}</p>
             {feedback === "wrong" && (
               <p className="text-red-500 text-sm mt-1 font-semibold">Rätt svar: <span className="font-black">{q.en}</span></p>

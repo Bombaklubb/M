@@ -33,7 +33,10 @@ function pickWord(stageId: string) {
 function HangmanGame({ stageId, stageName, stageEmoji, student }: {
   stageId: string; stageName: string; stageEmoji: string; student: StudentData | null;
 }) {
-  const [word, setWord] = useState(() => pickWord(stageId));
+  // Ordet slumpas fram på klienten. Tidigare skedde det i useState-initieraren,
+  // vilket kördes både på servern och i webbläsaren med olika resultat → React
+  // rapporterade hydration mismatch och byggde om hela trädet.
+  const [word, setWord] = useState("");
   const [guessed, setGuessed] = useState<Set<string>>(new Set());
   const [wins, setWins] = useState(0);
   const [played, setPlayed] = useState(0);
@@ -41,9 +44,12 @@ function HangmanGame({ stageId, stageName, stageEmoji, student }: {
   const [awarded, setAwarded] = useState<number | null>(null);
   const [lucky, setLucky] = useState<LuckyBonus | null>(null);
 
+  useEffect(() => { setWord(pickWord(stageId)); }, [stageId]);
+
   const wrongGuesses = [...guessed].filter(l => !word.includes(l));
   const livesLeft = MAX_LIVES - wrongGuesses.length;
-  const isWon = word.split("").every(l => guessed.has(l));
+  // word === "" innan effekten hunnit köra – räkna inte det som vinst.
+  const isWon = word.length > 0 && word.split("").every(l => guessed.has(l));
   const isLost = livesLeft <= 0;
   const phase = isWon ? "won" : isLost ? "lost" : "playing";
 

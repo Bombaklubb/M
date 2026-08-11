@@ -302,7 +302,7 @@ export default function GrammarModulePage({ params }: Props) {
             <div className="flex justify-end border-t border-gray-100 dark:border-gray-700 pt-3 sm:pt-4">
               <button
                 onClick={() => setPhase("exercises")}
-                className="btn-primary bg-blue-500 hover:bg-blue-600 w-full sm:w-auto justify-center"
+                className="btn-primary bg-blue-600 hover:bg-blue-700 w-full sm:w-auto justify-center"
               >
                 Börja övningen →
               </button>
@@ -348,7 +348,7 @@ export default function GrammarModulePage({ params }: Props) {
         <div className="card min-h-[260px] sm:min-h-[300px]">
           {/* Exercise counter + type badge */}
           <div className="flex items-center justify-between mb-6">
-            <span className="text-sm text-gray-400 dark:text-gray-500 font-medium">
+            <span className="text-sm text-gray-400 dark:text-gray-400 font-medium">
               {currentIndex + 1} / {totalExercises}
             </span>
             {currentExercise && (
