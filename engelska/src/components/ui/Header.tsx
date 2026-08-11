@@ -186,7 +186,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             {/* Dark mode toggle */}
             <button
               onClick={toggle}
-              className="p-2.5 rounded-xl text-en-400 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 dark:hover:text-gray-200 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-en-200"
+              className="p-2.5 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 dark:hover:text-gray-200 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-en-200"
               aria-label={dark ? "Ljust läge" : "Mörkt läge"}
             >
               {dark ? <IconSun className="w-5 h-5" /> : <IconMoon className="w-5 h-5" />}
@@ -195,7 +195,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             {/* Logout */}
             <button
               onClick={handleLogout}
-              className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold text-en-400 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-500 dark:hover:text-red-400 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-red-200"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold text-en-600 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-500 dark:hover:text-red-400 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-red-200"
             >
               <IconLogOut className="w-4 h-4" />
               <span>Logga ut</span>
@@ -204,7 +204,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             {/* Mobile logout (icon only) */}
             <button
               onClick={handleLogout}
-              className="sm:hidden p-2.5 rounded-xl text-en-400 dark:text-gray-400 hover:bg-red-50 hover:text-red-500 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-red-200"
+              className="sm:hidden p-2.5 rounded-xl text-en-600 dark:text-gray-400 hover:bg-red-50 hover:text-red-500 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-red-200"
               aria-label="Logga ut"
             >
               <IconLogOut className="w-5 h-5" />
@@ -215,7 +215,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
         {!student && (
           <button
             onClick={toggle}
-            className="p-2.5 rounded-xl text-en-400 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 transition-all cursor-pointer"
+            className="p-2.5 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 transition-all cursor-pointer"
             aria-label={dark ? "Ljust läge" : "Mörkt läge"}
           >
             {dark ? <IconSun className="w-5 h-5" /> : <IconMoon className="w-5 h-5" />}

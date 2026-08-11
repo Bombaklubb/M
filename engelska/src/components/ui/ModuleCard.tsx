@@ -112,9 +112,9 @@ export default function ModuleCard({
             <IconLock className="w-5 h-5" />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="font-bold text-indigo-300 dark:text-gray-400 text-sm">{title}</h3>
+            <h3 className="font-bold text-indigo-600 dark:text-gray-300 text-sm">{title}</h3>
             {prevModuleTitle && (
-              <p className="text-xs text-indigo-300 dark:text-gray-500 mt-0.5 font-medium">
+              <p className="text-xs text-indigo-600 dark:text-gray-300 mt-0.5 font-medium">
                 Klara &quot;{prevModuleTitle}&quot; först
               </p>
             )}
@@ -259,13 +259,13 @@ export default function ModuleCard({
                   <IconCheck className="w-3 h-3" /> Klar
                 </span>
               )}
-              <span className="badge bg-indigo-50 dark:bg-gray-700 text-indigo-400 dark:text-gray-400 text-xs ml-auto flex-shrink-0 border-2 border-indigo-100 dark:border-gray-600 flex items-center gap-1">
+              <span className="badge bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-gray-300 text-xs ml-auto flex-shrink-0 border-2 border-indigo-100 dark:border-gray-600 flex items-center gap-1">
                 {kindInfo?.icon}
                 <span>{kindInfo?.label}</span>
               </span>
             </div>
 
-            <p className="text-sm mt-1 truncate font-medium text-indigo-400 dark:text-gray-400">{description}</p>
+            <p className="text-sm mt-1 truncate font-medium text-indigo-600 dark:text-gray-300">{description}</p>
 
             <div className="mt-3 flex items-center gap-3">
               <div className="flex-1">
@@ -285,7 +285,7 @@ export default function ModuleCard({
                   <NumberTicker value={progress.points} duration={600} suffix="p" />
                 </span>
               ) : (
-                <span className="text-sm font-bold flex-shrink-0 text-indigo-400 dark:text-gray-500 group-hover:text-indigo-600 transition-colors">
+                <span className="text-sm font-bold flex-shrink-0 text-indigo-600 dark:text-gray-300 group-hover:text-indigo-600 transition-colors">
                   Starta →
                 </span>
               )}

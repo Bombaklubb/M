@@ -17,20 +17,28 @@ const DIRECTIONS: Cell[] = [
 ];
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-function buildGrid(wordList: string[]): { grid: string[][]; placements: Placement[]; gridSize: number } {
-  const longestWord = Math.max(...wordList.map((w) => w.length));
-  const GRID_SIZE = Math.max(MIN_GRID_SIZE, longestWord + 2);
-  const grid: string[][] = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill(""));
+/**
+ * Ett försök att placera alla ord i ett rutnät av given storlek.
+ * Returnerar null om något ord inte fick plats.
+ */
+function tryBuildGrid(
+  words: string[],
+  gridSize: number
+): { grid: string[][]; placements: Placement[] } | null {
+  const grid: string[][] = Array.from({ length: gridSize }, () => Array(gridSize).fill(""));
   const placements: Placement[] = [];
 
-  for (const word of wordList.map((w) => w.toUpperCase())) {
+  // Placera längsta orden först – de är svårast och bör få välja plats fritt.
+  const ordered = [...words].sort((a, b) => b.length - a.length);
+
+  for (const word of ordered) {
     let placed = false;
     for (let attempt = 0; attempt < 400 && !placed; attempt++) {
       const [dr, dc] = DIRECTIONS[Math.floor(Math.random() * DIRECTIONS.length)];
       const rowMin = dr > 0 ? 0 : dr < 0 ? word.length - 1 : 0;
-      const rowMax = dr > 0 ? GRID_SIZE - word.length : dr < 0 ? GRID_SIZE - 1 : GRID_SIZE - 1;
+      const rowMax = dr > 0 ? gridSize - word.length : dr < 0 ? gridSize - 1 : gridSize - 1;
       const colMin = dc > 0 ? 0 : dc < 0 ? word.length - 1 : 0;
-      const colMax = dc > 0 ? GRID_SIZE - word.length : dc < 0 ? GRID_SIZE - 1 : GRID_SIZE - 1;
+      const colMax = dc > 0 ? gridSize - word.length : dc < 0 ? gridSize - 1 : gridSize - 1;
       if (rowMin > rowMax || colMin > colMax) continue;
       const row = rowMin + Math.floor(Math.random() * (rowMax - rowMin + 1));
       const col = colMin + Math.floor(Math.random() * (colMax - colMin + 1));
@@ -38,7 +46,7 @@ function buildGrid(wordList: string[]): { grid: string[][]; placements: Placemen
       let valid = true;
       for (let i = 0; i < word.length; i++) {
         const r = row + i * dr, c = col + i * dc;
-        if (r < 0 || r >= GRID_SIZE || c < 0 || c >= GRID_SIZE) { valid = false; break; }
+        if (r < 0 || r >= gridSize || c < 0 || c >= gridSize) { valid = false; break; }
         if (grid[r][c] && grid[r][c] !== word[i]) { valid = false; break; }
         cells.push([r, c]);
       }
@@ -48,13 +56,52 @@ function buildGrid(wordList: string[]): { grid: string[][]; placements: Placemen
         placed = true;
       }
     }
+    if (!placed) return null; // ordet fick inte plats – försök med större rutnät
   }
 
-  for (let r = 0; r < GRID_SIZE; r++)
-    for (let c = 0; c < GRID_SIZE; c++)
-      if (!grid[r][c]) grid[r][c] = LETTERS[Math.floor(Math.random() * LETTERS.length)];
+  return { grid, placements };
+}
 
-  return { grid, placements, gridSize: GRID_SIZE };
+/**
+ * Bygger ett rutnät där ALLA ord garanterat finns.
+ *
+ * Tidigare hoppades ord som inte fick plats tyst över, men de stod kvar i
+ * listan eleven skulle hitta – då gick modulen aldrig att slutföra. Nu görs
+ * flera försök med gradvis större rutnät, och det bästa försöket används som
+ * sista utväg (WordSearch räknar då mot placements, inte mot ordlistan).
+ */
+function buildGrid(wordList: string[]): { grid: string[][]; placements: Placement[]; gridSize: number } {
+  const words = wordList.map((w) => w.toUpperCase());
+  const longestWord = Math.max(...words.map((w) => w.length));
+  const baseSize = Math.max(MIN_GRID_SIZE, longestWord + 2);
+
+  let best: { grid: string[][]; placements: Placement[]; gridSize: number } | null = null;
+
+  for (let extra = 0; extra <= 6; extra++) {
+    const gridSize = baseSize + extra;
+    // Flera omgångar per storlek – placeringen är slumpad.
+    for (let round = 0; round < 3; round++) {
+      const result = tryBuildGrid(words, gridSize);
+      if (result) {
+        best = { ...result, gridSize };
+        break;
+      }
+    }
+    if (best) break;
+  }
+
+  // Nödfall (bör aldrig inträffa): ta med så många ord som möjligt.
+  if (!best) {
+    const grid: string[][] = Array.from({ length: baseSize + 6 }, () => Array(baseSize + 6).fill(""));
+    best = { grid, placements: [], gridSize: baseSize + 6 };
+  }
+
+  // Fyll tomma rutor med slumpbokstäver
+  for (let r = 0; r < best.gridSize; r++)
+    for (let c = 0; c < best.gridSize; c++)
+      if (!best.grid[r][c]) best.grid[r][c] = LETTERS[Math.floor(Math.random() * LETTERS.length)];
+
+  return best;
 }
 
 function cellKey(r: number, c: number) { return `${r},${c}`; }
@@ -121,7 +168,9 @@ export default function WordSearch({ words, onComplete }: Props) {
         setFlash(null);
         setSelecting(null);
         setHoverCell(null);
-        if (newFound.size === words.length) onComplete(true);
+        // Räkna mot orden som faktiskt placerats i rutnätet, så en elev
+        // aldrig kan fastna om ett ord mot förmodan saknas.
+        if (newFound.size === placements.length) onComplete(true);
       }, 600);
     } else {
       setFlash({ cells, correct: false });
@@ -131,7 +180,7 @@ export default function WordSearch({ words, onComplete }: Props) {
         setHoverCell(null);
       }, 400);
     }
-  }, [selecting, grid, placements, foundWords, words.length, onComplete]);
+  }, [selecting, grid, placements, foundWords, onComplete]);
 
   function getCellClass(r: number, c: number): string {
     const key = cellKey(r, c);
@@ -183,7 +232,7 @@ export default function WordSearch({ words, onComplete }: Props) {
         {/* Word list */}
         <div className="flex-1 min-w-0">
           <h3 className="font-bold text-gray-700 dark:text-gray-200 text-sm mb-3">
-            Hittade ord: {foundWords.size}/{words.length}
+            Hittade ord: {foundWords.size}/{placements.length}
           </h3>
           <div className="space-y-2">
             {words.map(({ word, clue }) => {

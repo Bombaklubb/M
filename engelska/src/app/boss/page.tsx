@@ -349,12 +349,25 @@ function BossPageInner() {
       const currentStudent = student!;
 
       if (passed) {
-        const bonusChest: Chest = {
-          id: `chest_boss_${Date.now()}`,
-          type: boss.rewardChestType as ChestType,
-          earnedAt: new Date().toISOString(),
-          opened: false,
-        };
+        const winCounts = currentGam.bossWinCounts ?? {};
+        const prevWins = winCounts[boss.id] ?? 0;
+        const earnedPoints = prevWins === 0 ? Math.min(boss.rewardPoints, 200)
+                           : prevWins === 1 ? 50
+                           : 0;
+        const newWinCounts = { ...winCounts, [boss.id]: prevWins + 1 };
+
+        // Kistan följer samma trappa som poängen (2 första vinsterna). Utan detta
+        // gick bossen att spela om i all oändlighet för obegränsat med kistor,
+        // vilket kringgick poängtrappan helt.
+        const bonusChest: Chest | null = prevWins < 2
+          ? {
+              id: `chest_boss_${Date.now()}`,
+              type: boss.rewardChestType as ChestType,
+              earnedAt: new Date().toISOString(),
+              opened: false,
+            }
+          : null;
+
         const newBadges = currentGam.badges.includes(boss.rewardBadgeId)
           ? currentGam.badges
           : [...currentGam.badges, boss.rewardBadgeId];
@@ -363,16 +376,9 @@ function BossPageInner() {
           ? beatenBefore
           : [...beatenBefore, boss.id];
 
-        const winCounts = currentGam.bossWinCounts ?? {};
-        const prevWins = winCounts[boss.id] ?? 0;
-        const earnedPoints = prevWins === 0 ? Math.min(boss.rewardPoints, 200)
-                           : prevWins === 1 ? 50
-                           : 0;
-        const newWinCounts = { ...winCounts, [boss.id]: prevWins + 1 };
-
         const newGam: GamificationData = {
           ...currentGam,
-          chests: [...currentGam.chests, bonusChest],
+          chests: bonusChest ? [...currentGam.chests, bonusChest] : currentGam.chests,
           badges: newBadges,
           bossWins: currentGam.bossWins + 1,
           bossesBeaten: newBossesBeaten,
