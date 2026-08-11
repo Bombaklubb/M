@@ -45,7 +45,7 @@ export default function RootLayout({
           style={{ background: "rgba(0,0,0,0.05)", backdropFilter: "blur(4px)" }}>
           <a
             href="mailto:martin.akdogan@enkoping.se"
-            className="text-[11px] font-bold text-white/80 dark:text-white/70 pointer-events-auto hover:text-white transition-colors"
+            className="text-[11px] font-bold text-white/80 dark:text-white/70 pointer-events-auto hover:text-white transition-colors py-3.5 -my-1.5 inline-flex items-center"
           >
             Kontakt: martin.akdogan@enkoping.se
           </a>

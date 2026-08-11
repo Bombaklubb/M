@@ -54,7 +54,7 @@ export default function JakterMenu() {
       )}
       <button
         onClick={() => setOpen((v) => !v)}
-        className="text-[11px] font-bold text-white/80 dark:text-white/70 hover:text-white transition-colors cursor-pointer"
+        className="text-[11px] font-bold text-white/80 dark:text-white/70 hover:text-white transition-colors cursor-pointer py-3.5 -my-1.5 px-2 -mx-1 inline-flex items-center"
       >
         Jaktlänkar ▴
       </button>

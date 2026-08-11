@@ -190,7 +190,7 @@ export default function SpellingModulePage({ params }: Props) {
           <div className="max-w-3xl mx-auto px-4 py-6">
             <Link
               href={`/world/${stageId}`}
-              className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors"
+              className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1"
             >
               ← {stage.name}
             </Link>
@@ -258,7 +258,7 @@ export default function SpellingModulePage({ params }: Props) {
         <div className="max-w-3xl mx-auto px-4 py-6">
           <Link
             href={`/world/${stageId}`}
-            className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors"
+            className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1"
           >
             ← {stage.name}
           </Link>

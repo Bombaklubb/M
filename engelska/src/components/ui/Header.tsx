@@ -116,7 +116,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
           className="flex items-center gap-2.5 hover:scale-105 transition-transform min-w-0 flex-shrink-0"
         >
           <div
-            className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden"
+            className="w-11 h-11 rounded-xl flex items-center justify-center overflow-hidden"
             style={{
               background: "linear-gradient(135deg, #2563eb, #1e40af)",
               boxShadow: "0 3px 0 0 rgba(30,64,175,0.4), inset 0 1px 0 rgba(255,255,255,0.2)"
@@ -137,7 +137,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             <Link
               href="/kistor"
               title="Hemliga kistor"
-              className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-b from-amber-100 to-amber-50 dark:from-amber-900/40 dark:to-amber-800/20 border-2 border-amber-300 dark:border-amber-600 hover:border-amber-400 hover:scale-110 transition-all touch-manipulation cursor-pointer text-amber-600 dark:text-amber-400"
+              className="relative flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-b from-amber-100 to-amber-50 dark:from-amber-900/40 dark:to-amber-800/20 border-2 border-amber-300 dark:border-amber-600 hover:border-amber-400 hover:scale-110 transition-all touch-manipulation cursor-pointer text-amber-600 dark:text-amber-400"
               style={{ boxShadow: "0 3px 0 0 rgba(245, 158, 11, 0.2), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)" }}
             >
               <IconChest className="w-5 h-5" />

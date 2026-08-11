@@ -132,7 +132,7 @@ export default function WorldPage({ params }: Props) {
         <div className="max-w-5xl mx-auto px-4 py-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 text-white/80 hover:text-white text-sm bg-black/20 hover:bg-black/30 px-3 py-1.5 rounded-full transition-colors mb-4"
+            className="inline-flex items-center gap-1.5 text-white/80 hover:text-white text-sm bg-black/20 hover:bg-black/30 px-4 py-3 rounded-full transition-colors mb-4"
           >
             ← Tillbaka
           </Link>
@@ -193,7 +193,7 @@ export default function WorldPage({ params }: Props) {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative flex items-center gap-1.5 px-4 py-2 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                className={`relative flex items-center gap-1.5 px-4 py-3.5 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer ${
                   activeTab === tab.id
                     ? `${stage.colorClass} text-white shadow-md`
                     : "text-gray-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white/60 dark:hover:bg-gray-700/50"

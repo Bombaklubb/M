@@ -101,7 +101,7 @@ function ActionButton({
       <button
         onClick={onBuy}
         disabled={!affordable}
-        className={`w-full py-2 rounded-xl text-sm font-black transition-all active:scale-95 cursor-pointer disabled:cursor-not-allowed ${
+        className={`w-full py-3 rounded-xl text-sm font-black transition-all active:scale-95 cursor-pointer disabled:cursor-not-allowed ${
           affordable
             ? "text-white bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600"
             : "text-gray-500 dark:text-gray-300 bg-gray-100 dark:bg-gray-700"
@@ -114,7 +114,7 @@ function ActionButton({
   return (
     <button
       onClick={onEquip}
-      className={`w-full py-2 rounded-xl text-sm font-black transition-all active:scale-95 cursor-pointer ${
+      className={`w-full py-3 rounded-xl text-sm font-black transition-all active:scale-95 cursor-pointer ${
         equipped
           ? "text-white bg-gradient-to-b from-emerald-500 to-emerald-600"
           : "text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 border-2 border-emerald-300 dark:border-emerald-700"
@@ -172,7 +172,7 @@ function DefaultCard({
       <button
         onClick={onUse}
         disabled={active}
-        className={`w-full py-2 rounded-xl text-sm font-black transition-all active:scale-95 cursor-pointer disabled:cursor-default ${
+        className={`w-full py-3 rounded-xl text-sm font-black transition-all active:scale-95 cursor-pointer disabled:cursor-default ${
           active
             ? "text-white bg-gradient-to-b from-emerald-500 to-emerald-600"
             : "text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 border-2 border-emerald-300 dark:border-emerald-700"
