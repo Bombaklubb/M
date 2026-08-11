@@ -132,6 +132,18 @@ export function setAvatar(data: StudentData, avatarId: string): StudentData {
 }
 
 /**
+ * Lägger till extrapoäng (t.ex. från en mystery box) OCH sparar dem.
+ * Använd denna i stället för att bara uppdatera React-state – annars
+ * försvinner poängen vid nästa sidladdning.
+ */
+export function addBonusPoints(data: StudentData, points: number): StudentData {
+  if (points <= 0) return data;
+  const updated = { ...data, totalPoints: data.totalPoints + points };
+  saveStudent(updated);
+  return updated;
+}
+
+/**
  * Returns the ISO string for when the current session started,
  * or null if no session is active.
  */

@@ -10,7 +10,7 @@ import ResultModal from "@/components/ui/ResultModal";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
-import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier, saveExercisePosition, loadExercisePosition, clearExercisePosition } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier, addBonusPoints, saveExercisePosition, loadExercisePosition, clearExercisePosition } from "@/lib/storage";
 import { rollLuckyBonus, type LuckyBonus } from "@/lib/luckyBonus";
 import { recordError } from "@/lib/errorBank";
 import {
@@ -205,10 +205,7 @@ export default function GrammarModulePage({ params }: Props) {
         saveGamification(newGam);
 
         // Apply mystery box points to student
-        if (mysteryPoints > 0) {
-          const withMystery = { ...updated, totalPoints: updated.totalPoints + mysteryPoints };
-          setStudent(withMystery);
-        }
+        if (mysteryPoints > 0) setStudent(addBonusPoints(updated, mysteryPoints));
 
         if (firstChest) setChestEarned(firstChest.type as ChestType);
         if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);

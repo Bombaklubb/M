@@ -13,7 +13,7 @@ import {
   loadGamification,
   saveGamification,
   getModuleProgress,
-  getRepeatMultiplier,
+  getRepeatMultiplier, addBonusPoints
 } from "@/lib/storage";
 import { rollLuckyBonus, type LuckyBonus } from "@/lib/luckyBonus";
 import {
@@ -186,8 +186,7 @@ export default function SpelModulePage({ params }: Props) {
       if (achievementBadgesSpel.length > 0) newGamSpel.badges = [...newGamSpel.badges, ...achievementBadgesSpel];
       saveGamification(newGamSpel);
 
-      if (mysteryPoints > 0)
-        setStudent({ ...updated, totalPoints: updated.totalPoints + mysteryPoints });
+      if (mysteryPoints > 0) setStudent(addBonusPoints(updated, mysteryPoints));
       if (firstChest) setChestEarned(firstChest.type as ChestType);
       if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);
       if (mystery) setMysteryBox(mystery);

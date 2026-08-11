@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import type { MysteryBoxReward, ChestType } from "@/lib/types";
 import { CHEST_META } from "@/lib/gamification";
 
@@ -21,6 +21,17 @@ function ChestImage({ type }: { type: ChestType }) {
 
 export default function MysteryBoxPopup({ reward, onClose }: MysteryBoxPopupProps) {
   const [opened, setOpened] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  // Flytta fokus till dialogen och låt Escape stänga den (tillgänglighet).
+  useEffect(() => {
+    dialogRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onClose]);
 
   function handleOpen() {
     setOpened(true);
@@ -31,7 +42,12 @@ export default function MysteryBoxPopup({ reward, onClose }: MysteryBoxPopupProp
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-4 animate-fade-in">
       <div
-        className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-sm w-full text-center"
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Du hittade en mystisk låda"
+        tabIndex={-1}
+        className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-sm w-full text-center focus:outline-none"
         style={{
           border: "3px solid #a855f7",
           boxShadow: "0 8px 32px rgba(168,85,247,0.3), 0 2px 8px rgba(0,0,0,0.2)",

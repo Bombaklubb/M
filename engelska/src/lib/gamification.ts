@@ -173,7 +173,10 @@ export const ALL_BADGES = [
   { id: "first_steps",    label: "Första steget",    emoji: "🌟" },
   { id: "grammar_star",   label: "Grammatikstjärna", emoji: "⭐" },
   { id: "spelling_ace",   label: "Stavningsmästare", emoji: "🔤" },
-  { id: "reading_pro",    label: "Läsproffs",        emoji: "📖" },
+  // OBS: id:t behålls ("reading_pro") för bakåtkompatibilitet – mystery box kan
+  // redan ha delat ut det. Läsförståelse finns inte i Engelskajakten (se Läsjakten),
+  // så badgen är omkopplad till spelmodulerna som annars saknade utmärkelse.
+  { id: "reading_pro",    label: "Spelmästare",      emoji: "🎮" },
   { id: "curious_learner",label: "Nyfiken elev",     emoji: "🔍" },
   { id: "word_wizard",    label: "Ordtrollkarl",     emoji: "🪄" },
   { id: "dedicated",      label: "Flitig elev",      emoji: "💪" },
@@ -188,7 +191,7 @@ export const BADGE_HOW_TO_EARN: Record<string, string> = {
   first_steps:     "Slutför din första modul",
   grammar_star:    "Slutför 5 grammatikmoduler",
   spelling_ace:    "Slutför 3 stavningsmoduler eller besegra Stavningstrollet 🧌",
-  reading_pro:     "Slutför 3 läsförståelsemoduler",
+  reading_pro:     "Klara 3 spelmoduler (Samla mynt)",
   curious_learner: "Slutför moduler i 3 olika stadier",
   word_wizard:     "Slutför 3 ordsökningar eller besegra Ordmästaren 🧙",
   dedicated:       "Slutför 10 moduler totalt",
@@ -565,6 +568,31 @@ function makeChest(type: ChestType): Chest {
   };
 }
 
+/**
+ * Kisttyper i stigande värde. Används för att hitta en ersättningstyp när
+ * taket för en typ är nått – annars skulle milstolpen passera obemärkt och
+ * eleven förlora belöningen för alltid (villkoret prev < m && new >= m kan
+ * bara bli sant en gång).
+ */
+const CHEST_TYPE_ORDER: ChestType[] = ["wood", "silver", "gold", "ruby", "diamond", "emerald", "hemlig"];
+
+/** Ger önskad typ om det finns plats, annars närmaste typ som har plats (aldrig null i praktiken). */
+function chestTypeWithRoom(
+  wanted: ChestType,
+  countByType: (t: ChestType) => number
+): ChestType | null {
+  if (countByType(wanted) < MAX_CHESTS_PER_TYPE) return wanted;
+  const idx = CHEST_TYPE_ORDER.indexOf(wanted);
+  // Sök nedåt först (nedgradering), sedan uppåt.
+  for (let d = 1; d < CHEST_TYPE_ORDER.length; d++) {
+    const lower = CHEST_TYPE_ORDER[idx - d];
+    if (lower && countByType(lower) < MAX_CHESTS_PER_TYPE) return lower;
+    const higher = CHEST_TYPE_ORDER[idx + d];
+    if (higher && countByType(higher) < MAX_CHESTS_PER_TYPE) return higher;
+  }
+  return null; // alla typer fulla (210 kistor) – extremt osannolikt
+}
+
 /** Returns chest types earned at new totalPoints compared to previous. */
 export function chestsEarnedFromPoints(
   prevPoints: number,
@@ -581,10 +609,10 @@ export function chestsEarnedFromPoints(
     if (
       prevPoints < m.points &&
       newPoints >= m.points &&
-      !alreadyRewarded.includes(m.points) &&
-      countByType(m.type) < MAX_CHESTS_PER_TYPE
+      !alreadyRewarded.includes(m.points)
     ) {
-      earned.push({ chest: makeChest(m.type), milestone: m.points });
+      const type = chestTypeWithRoom(m.type, countByType);
+      if (type) earned.push({ chest: makeChest(type), milestone: m.points });
     }
   }
   return earned;
@@ -606,10 +634,10 @@ export function chestsEarnedFromExercises(
     if (
       prevCount < m.exercises &&
       newCount >= m.exercises &&
-      !alreadyRewarded.includes(m.exercises) &&
-      countByType(m.type) < MAX_CHESTS_PER_TYPE
+      !alreadyRewarded.includes(m.exercises)
     ) {
-      earned.push({ chest: makeChest(m.type), milestone: m.exercises });
+      const type = chestTypeWithRoom(m.type, countByType);
+      if (type) earned.push({ chest: makeChest(type), milestone: m.exercises });
     }
   }
   return earned;
@@ -864,21 +892,21 @@ export function checkAchievementBadges(
   const stages = Object.values(student.stages);
 
   const grammarDone   = stages.reduce((n, s) => n + Object.values(s.grammarModules    ?? {}).filter((m) => m.completed).length, 0);
-  const readingDone   = stages.reduce((n, s) => n + Object.values(s.readingModules    ?? {}).filter((m) => m.completed).length, 0);
   const spellingDone  = stages.reduce((n, s) => n + Object.values(s.spellingModules   ?? {}).filter((m) => m.completed).length, 0);
   const wsearchDone   = stages.reduce((n, s) => n + Object.values(s.wordsearchModules ?? {}).filter((m) => m.completed).length, 0);
-  const totalDone     = grammarDone + readingDone + spellingDone + wsearchDone;
+  const spelDone      = stages.reduce((n, s) => n + Object.values(s.spelModules       ?? {}).filter((m) => m.completed).length, 0);
+  const totalDone     = grammarDone + spellingDone + wsearchDone + spelDone;
 
   const stagesActive  = stages.filter((s) =>
     Object.values(s.grammarModules    ?? {}).some((m) => m.completed) ||
-    Object.values(s.readingModules    ?? {}).some((m) => m.completed) ||
     Object.values(s.spellingModules   ?? {}).some((m) => m.completed) ||
-    Object.values(s.wordsearchModules ?? {}).some((m) => m.completed)
+    Object.values(s.wordsearchModules ?? {}).some((m) => m.completed) ||
+    Object.values(s.spelModules       ?? {}).some((m) => m.completed)
   ).length;
 
   if (!has("first_steps")     && totalDone    >= 1)  newBadges.push("first_steps");
   if (!has("grammar_star")    && grammarDone   >= 5)  newBadges.push("grammar_star");
-  if (!has("reading_pro")     && readingDone   >= 3)  newBadges.push("reading_pro");
+  if (!has("reading_pro")     && spelDone      >= 3)  newBadges.push("reading_pro");
   if (!has("spelling_ace")    && spellingDone  >= 3)  newBadges.push("spelling_ace");
   if (!has("curious_learner") && stagesActive  >= 3)  newBadges.push("curious_learner");
   if (!has("word_wizard")     && wsearchDone   >= 3)  newBadges.push("word_wizard");

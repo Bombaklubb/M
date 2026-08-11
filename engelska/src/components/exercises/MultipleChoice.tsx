@@ -90,6 +90,15 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
         ))}
       </div>
 
+      {/* Annonserar resultatet för skärmläsare (syns inte visuellt – ✓/✗ visas i knappen) */}
+      <div role="status" aria-live="polite" className="sr-only">
+        {revealed
+          ? selected === exercise.correctIndex
+            ? "Rätt svar!"
+            : `Fel. Rätt svar är ${exercise.options[exercise.correctIndex]}.`
+          : ""}
+      </div>
+
       {revealed && exercise.explanation && (
         <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-4 text-sm text-blue-800 dark:text-blue-200 animate-slide-up">
           💡 {exercise.explanation}

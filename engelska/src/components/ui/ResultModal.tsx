@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import type { ChestType } from "@/lib/types";
 import { CHEST_META } from "@/lib/gamification";
 import { getModuleCompleteFeedback } from "@/lib/feedback";
@@ -44,11 +45,27 @@ export default function ResultModal({
 }: ResultModalProps) {
   const pct = Math.round((totalCorrect / totalQuestions) * 100);
   const passed = pct >= 60;
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  // Flytta fokus till dialogen och låt Escape gå vidare (tillgänglighet).
+  useEffect(() => {
+    dialogRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onContinue();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [onContinue]);
 
   return (
     <div className="fixed inset-0 bg-indigo-900/40 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
       <div
-        className="relative bg-white dark:bg-gray-800 rounded-4xl p-8 max-w-md w-full text-center animate-slide-up border-4 border-indigo-100 dark:border-gray-700"
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Resultat: ${totalCorrect} av ${totalQuestions} rätt`}
+        tabIndex={-1}
+        className="relative bg-white dark:bg-gray-800 rounded-4xl p-8 max-w-md w-full text-center animate-slide-up border-4 border-indigo-100 dark:border-gray-700 focus:outline-none"
         style={{
           boxShadow: "0 10px 0 0 rgba(99, 102, 241, 0.15), 0 20px 40px -8px rgba(99, 102, 241, 0.25), inset 0 4px 8px 0 rgba(255, 255, 255, 0.8)"
         }}
