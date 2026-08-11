@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { EFFECT_MAP, type EffectMotion } from "@/lib/shop";
 
 const ANIM: Record<EffectMotion, string> = {
@@ -8,6 +9,19 @@ const ANIM: Record<EffectMotion, string> = {
   twinkle: "shop-twinkle",
 };
 
+/** Följer systeminställningen "minska rörelse" och uppdaterar vid ändring. */
+function usePrefersReducedMotion(): boolean {
+  const [reduced, setReduced] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReduced(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setReduced(e.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+  return reduced;
+}
+
 /**
  * Ritar en animerad partikeleffekt (snö, hjärtan, glitter …) ovanpå sin
  * relativt positionerade förälder. Partiklarna är rent dekorativa och fångar
@@ -15,9 +29,12 @@ const ANIM: Record<EffectMotion, string> = {
  * så att server- och klientrendering alltid matchar.
  */
 export default function EffectOverlay({ effectId }: { effectId: string | null }) {
+  const reducedMotion = usePrefersReducedMotion();
   if (!effectId) return null;
   const effect = EFFECT_MAP[effectId];
   if (!effect) return null;
+  // Rent dekorativa partiklar – rita inget alls vid "minska rörelse".
+  if (reducedMotion) return null;
 
   const anim = ANIM[effect.motion];
   const isTwinkle = effect.motion === "twinkle";

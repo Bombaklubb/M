@@ -81,18 +81,23 @@ export default function HomePage() {
       setStudent(s);
     }
     setLoading(false);
-    // Fetch total module counts per stage for the progress rings
-    Promise.all(
-      STAGES.map((s) =>
-        fetch(`/content/${s.id}/content.json`)
-          .then((r) => r.json())
-          .then((d) => [
-            s.id,
-            (d.grammar?.length ?? 0) + (d.spelling?.length ?? 0) + (d.wordsearch?.length ?? 0),
-          ] as [string, number])
-          .catch(() => [s.id, 0] as [string, number])
+    // Modulantal per stadie för progressringarna. Läser en liten manifest-fil
+    // (~0,6 kB) i stället för alla fyra content.json (~916 kB).
+    fetch("/content/manifest.json")
+      .then((r) => r.json())
+      .then((m: Record<string, Record<string, number>>) =>
+        setTotals(
+          Object.fromEntries(
+            STAGES.map((s) => {
+              const c = m[s.id];
+              // Läsförståelse hör till Läsjakten och visas inte här – räknas därför inte.
+              const total = c ? (c.grammar ?? 0) + (c.spelling ?? 0) + (c.wordsearch ?? 0) : 0;
+              return [s.id, total] as [string, number];
+            })
+          )
+        )
       )
-    ).then((entries) => setTotals(Object.fromEntries(entries)));
+      .catch(() => setTotals({}));
   }, []);
 
   function handleNameChange(value: string) {

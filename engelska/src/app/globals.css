@@ -263,6 +263,19 @@
   50%       { transform: scale(1.15); opacity: 1; }
 }
 
+/* Respektera systeminställningen "minska rörelse" (WCAG 2.3.3).
+   Viktigt för elever med t.ex. ADHD, migrän eller vestibulära besvär. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { @apply bg-transparent; }

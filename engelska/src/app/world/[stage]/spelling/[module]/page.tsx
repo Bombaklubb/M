@@ -10,7 +10,7 @@ import ResultModal from "@/components/ui/ResultModal";
 import MultipleChoice from "@/components/exercises/MultipleChoice";
 import FillInBlank from "@/components/exercises/FillInBlank";
 import BuildSentence from "@/components/exercises/BuildSentence";
-import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier } from "@/lib/storage";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier, addBonusPoints } from "@/lib/storage";
 import { rollLuckyBonus, type LuckyBonus } from "@/lib/luckyBonus";
 import { recordError } from "@/lib/errorBank";
 import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, checkAchievementBadges, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
@@ -146,7 +146,7 @@ export default function SpellingModulePage({ params }: Props) {
         const achievementBadgesSp = checkAchievementBadges(updated, newGamSp);
         if (achievementBadgesSp.length > 0) newGamSp.badges = [...newGamSp.badges, ...achievementBadgesSp];
         saveGamification(newGamSp);
-        if (mysteryPoints > 0) setStudent({ ...updated, totalPoints: updated.totalPoints + mysteryPoints });
+        if (mysteryPoints > 0) setStudent(addBonusPoints(updated, mysteryPoints));
         if (firstChest) setChestEarned(firstChest.type as ChestType);
         if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);
         if (mystery) setMysteryBox(mystery);

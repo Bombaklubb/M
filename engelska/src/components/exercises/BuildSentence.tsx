@@ -153,6 +153,8 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
       {/* Feedback */}
       {state !== "idle" && (
         <div
+          role="status"
+          aria-live="polite"
           className={`rounded-xl p-4 border animate-slide-up ${
             state === "correct"
               ? "bg-green-50 dark:bg-green-900/30 border-green-200 dark:border-green-700 text-green-800 dark:text-green-300"
