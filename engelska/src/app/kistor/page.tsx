@@ -420,7 +420,7 @@ export default function KistorPage() {
 
       {/* Page header */}
       <div className="max-w-3xl mx-auto px-4 pt-5 pb-2">
-        <Link href="/" className="inline-flex items-center gap-1.5 text-white/75 hover:text-white/80 text-xs mb-4 transition-colors">
+        <Link href="/" className="inline-flex items-center gap-1.5 text-white/75 hover:text-white/80 text-xs mb-4 transition-colors py-3.5 -my-2">
           ← Tillbaka
         </Link>
         <div className="flex items-center gap-3 mb-6">

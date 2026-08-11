@@ -424,7 +424,7 @@ function BossPageInner() {
         <Header student={student} />
         <div className="text-white" style={{ background: boss.gradient }}>
           <div className="max-w-3xl mx-auto px-4 py-6">
-            <Link href="/kistor" className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors">
+            <Link href="/kistor" className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1">
               ← Hemliga kistor
             </Link>
             <div className="flex items-center gap-3">

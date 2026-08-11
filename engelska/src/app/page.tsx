@@ -362,7 +362,7 @@ export default function HomePage() {
                       </div>
                       <ShimmerButton
                         background="linear-gradient(135deg, #dc2626, #b91c1c)"
-                        className="text-sm px-4 py-1.5 rounded-xl"
+                        className="text-sm px-4 py-3 rounded-xl"
                         style={{ boxShadow: "0 3px 0 0 rgba(185,28,28,0.35)" }}
                       >
                         Öppna →
