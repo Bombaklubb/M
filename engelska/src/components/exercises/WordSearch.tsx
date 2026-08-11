@@ -242,7 +242,7 @@ export default function WordSearch({ words, onComplete }: Props) {
                   key={word}
                   className={`flex items-start gap-2 text-sm transition-all ${found ? "opacity-50" : ""}`}
                 >
-                  <span className={`font-mono font-bold flex-shrink-0 ${found ? "line-through text-gray-400 dark:text-gray-500" : "text-blue-700 dark:text-blue-300"}`}>
+                  <span className={`font-mono font-bold flex-shrink-0 ${found ? "line-through text-gray-400 dark:text-gray-400" : "text-blue-700 dark:text-blue-300"}`}>
                     {found ? "✓" : "○"} {word.toUpperCase()}
                   </span>
                   <span className="text-gray-500 dark:text-gray-400 text-xs">{clue}</span>

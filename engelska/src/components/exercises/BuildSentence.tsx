@@ -143,7 +143,7 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
           <button
             onClick={checkAnswer}
             disabled={placed.length !== exercise.words.length}
-            className="btn-primary bg-blue-500 hover:bg-blue-600 disabled:bg-gray-200 disabled:text-gray-400 text-sm"
+            className="btn-primary bg-blue-600 hover:bg-blue-700 disabled:bg-gray-200 disabled:text-gray-400 text-sm"
           >
             Kontrollera ✓
           </button>
@@ -180,7 +180,7 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
               placed.map((i) => exercise.words[i]).join(" "),
               correctSentence
             )}
-            className="btn-primary bg-blue-500 hover:bg-blue-600 animate-slide-up"
+            className="btn-primary bg-blue-600 hover:bg-blue-700 animate-slide-up"
           >
             {isLast ? "Visa resultat →" : "Nästa fråga →"}
           </button>

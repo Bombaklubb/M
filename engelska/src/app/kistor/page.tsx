@@ -85,7 +85,7 @@ function ChestCard({ chest, onOpen }: { chest: Chest; onOpen: (id: string) => vo
         <ChestImage type={chest.type} className="w-16 h-12 mb-1" />
       </div>
       <span className="text-[10px] font-bold text-white/90">{meta.label}</span>
-      <span className="text-[9px] text-white/50 mt-0.5">Tryck för att öppna</span>
+      <span className="text-[9px] text-white/75 mt-0.5">Tryck för att öppna</span>
 
       <style jsx>{`
         @keyframes shake {
@@ -179,7 +179,7 @@ function TrofHylla({ chests }: { chests: Chest[] }) {
         >
           <div className="text-5xl mb-3 opacity-40">🪵</div>
           <p className="text-amber-300/60 text-sm font-medium">Hyllan är tom</p>
-          <p className="text-white/30 text-xs mt-1">Öppna kistor och fyll hyllan med troféer!</p>
+          <p className="text-white/70 text-xs mt-1">Öppna kistor och fyll hyllan med troféer!</p>
         </div>
       </section>
     );
@@ -213,7 +213,7 @@ function TrofHylla({ chests }: { chests: Chest[] }) {
           className="flex items-center gap-2 px-3 py-1.5 rounded-xl ml-auto"
           style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
         >
-          <span className="text-white/50 text-xs">Totalt</span>
+          <span className="text-white/75 text-xs">Totalt</span>
           <span className="text-white font-bold text-sm">{opened.length}</span>
         </div>
       </div>
@@ -353,7 +353,7 @@ function SectionTitle({ emoji, title, subtitle }: { emoji: string; title: string
       </span>
       <div>
         <h2 className="text-base font-black text-white leading-tight">{title}</h2>
-        {subtitle && <p className="text-white/40 text-xs">{subtitle}</p>}
+        {subtitle && <p className="text-white/70 text-xs">{subtitle}</p>}
       </div>
     </div>
   );
@@ -420,7 +420,7 @@ export default function KistorPage() {
 
       {/* Page header */}
       <div className="max-w-3xl mx-auto px-4 pt-5 pb-2">
-        <Link href="/" className="inline-flex items-center gap-1.5 text-white/50 hover:text-white/80 text-xs mb-4 transition-colors">
+        <Link href="/" className="inline-flex items-center gap-1.5 text-white/75 hover:text-white/80 text-xs mb-4 transition-colors">
           ← Tillbaka
         </Link>
         <div className="flex items-center gap-3 mb-6">
@@ -432,7 +432,7 @@ export default function KistorPage() {
           </div>
           <div>
             <h1 className="text-xl font-black text-white">Hemliga Kistor</h1>
-            <p className="text-white/50 text-xs">Öppna kistor och bygg din trofhylla</p>
+            <p className="text-white/75 text-xs">Öppna kistor och bygg din trofhylla</p>
           </div>
         </div>
       </div>
@@ -461,7 +461,7 @@ export default function KistorPage() {
                       style={{ width: `${Math.min(100, (gam.exercisesCompleted / BOSS_UNLOCK_THRESHOLD) * 100)}%` }}
                     />
                   </div>
-                  <span className="text-white/40 text-xs">{gam.exercisesCompleted}/{BOSS_UNLOCK_THRESHOLD}</span>
+                  <span className="text-white/70 text-xs">{gam.exercisesCompleted}/{BOSS_UNLOCK_THRESHOLD}</span>
                 </div>
               </div>
             </div>
@@ -527,8 +527,8 @@ export default function KistorPage() {
               style={{ background: "rgba(255,255,255,0.05)", border: "1px dashed rgba(255,255,255,0.15)" }}
             >
               <div className="text-4xl mb-3 opacity-40">🎁</div>
-              <p className="text-white/50 text-sm font-medium">Inga oöppnade kistor</p>
-              <p className="text-white/30 text-xs mt-1">Slutför övningar och nå poängmål för att tjäna kistor</p>
+              <p className="text-white/75 text-sm font-medium">Inga oöppnade kistor</p>
+              <p className="text-white/70 text-xs mt-1">Slutför övningar och nå poängmål för att tjäna kistor</p>
             </div>
           ) : (
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
@@ -568,11 +568,11 @@ export default function KistorPage() {
                   <span className={`text-3xl mb-1.5 leading-none ${earned ? "" : "grayscale opacity-30"}`}>
                     {earned ? badge.emoji : "🔒"}
                   </span>
-                  <span className={`text-[10px] font-bold leading-snug ${earned ? "text-violet-200" : "text-white/35"}`}>
+                  <span className={`text-[10px] font-bold leading-snug ${earned ? "text-violet-200" : "text-white/70"}`}>
                     {badge.label}
                   </span>
                   {!earned && BADGE_HOW_TO_EARN[badge.id] && (
-                    <span className="text-[9px] text-white/25 mt-1 leading-tight">
+                    <span className="text-[9px] text-white/70 mt-1 leading-tight">
                       {BADGE_HOW_TO_EARN[badge.id]}
                     </span>
                   )}
@@ -591,7 +591,7 @@ export default function KistorPage() {
           >
             {/* Point milestones */}
             <div>
-              <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Poängmål</p>
+              <p className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-2">Poängmål</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {([
                   { type: "wood"    as ChestType, value: "10 – 200 p",                               bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
@@ -606,7 +606,7 @@ export default function KistorPage() {
                     <ChestImage type={row.type} className="w-10 h-8 flex-shrink-0" />
                     <div>
                       <p className="text-white/80 text-xs font-bold">{CHEST_META[row.type].label}</p>
-                      <p className="text-white/50 text-[10px] leading-tight mt-0.5">{row.value}</p>
+                      <p className="text-white/75 text-[10px] leading-tight mt-0.5">{row.value}</p>
                     </div>
                   </div>
                 ))}
@@ -615,7 +615,7 @@ export default function KistorPage() {
 
             {/* Exercise milestones */}
             <div>
-              <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-2">Övningsmål</p>
+              <p className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-2">Övningsmål</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {([
                   { type: "wood"    as ChestType, value: "1 – 55 övningar",                  bg: "rgba(120,53,15,0.4)",   border: "rgba(217,119,6,0.3)"   },
@@ -630,7 +630,7 @@ export default function KistorPage() {
                     <ChestImage type={row.type} className="w-10 h-8 flex-shrink-0" />
                     <div>
                       <p className="text-white/80 text-xs font-bold">{CHEST_META[row.type].label}</p>
-                      <p className="text-white/50 text-[10px] leading-tight mt-0.5">{row.value}</p>
+                      <p className="text-white/75 text-[10px] leading-tight mt-0.5">{row.value}</p>
                     </div>
                   </div>
                 ))}
@@ -645,7 +645,7 @@ export default function KistorPage() {
               <span className="text-xl leading-none">🎁</span>
               <div>
                 <p className="text-white/80 text-xs font-bold">Mysterykista</p>
-                <p className="text-white/50 text-[10px] mt-0.5">Extra hög chans i början – upp till 50% de första övningarna!</p>
+                <p className="text-white/75 text-[10px] mt-0.5">Extra hög chans i början – upp till 50% de första övningarna!</p>
               </div>
             </div>
           </div>

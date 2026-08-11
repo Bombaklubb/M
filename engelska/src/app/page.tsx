@@ -352,7 +352,7 @@ export default function HomePage() {
                             </span>
                           </span>
                         ) : (
-                          <span className="text-sm font-semibold text-gray-400 dark:text-gray-500 flex items-center gap-1.5">
+                          <span className="text-sm font-semibold text-gray-400 dark:text-gray-400 flex items-center gap-1.5">
                             <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                               <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>

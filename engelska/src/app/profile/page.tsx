@@ -51,7 +51,7 @@ export default function ProfilePage() {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <p className="text-gray-500 dark:text-gray-400 mb-4">Du är inte inloggad.</p>
-          <Link href="/" className="btn-primary bg-blue-500 hover:bg-blue-600">
+          <Link href="/" className="btn-primary bg-blue-600 hover:bg-blue-700">
             Gå till startsidan
           </Link>
         </div>
@@ -63,10 +63,14 @@ export default function ProfilePage() {
     const s = student!.stages[stageId];
     const grammarMods = Object.values(s.grammarModules);
     const spellingMods = Object.values(s.spellingModules ?? {});
-    const all = [...grammarMods, ...spellingMods];
+    // Ordsökningar och mynt-spel saknades tidigare helt här – en elev som gjort
+    // dem såg varken poängen eller modulerna på sin profil.
+    const wordsearchMods = Object.values(s.wordsearchModules ?? {});
+    const spelMods = Object.values(s.spelModules ?? {});
+    const all = [...grammarMods, ...spellingMods, ...wordsearchMods, ...spelMods];
     const completed = all.filter((m) => m.completed).length;
     const totalPoints = all.reduce((sum, m) => sum + m.points, 0);
-    return { completed, totalPoints, grammarMods, spellingMods };
+    return { completed, totalPoints, grammarMods, spellingMods, wordsearchMods, spelMods };
   }
 
   const joinDate = new Date(student.createdAt).toLocaleDateString("sv-SE");
@@ -154,9 +158,9 @@ export default function ProfilePage() {
           <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">📊 Progression per stadie</h2>
           <div className="space-y-3">
             {STAGES.map((stage) => {
-              const { completed, totalPoints, grammarMods, spellingMods } =
+              const { completed, totalPoints, grammarMods, spellingMods, wordsearchMods, spelMods } =
                 getStageStats(stage.id);
-              const total = grammarMods.length + spellingMods.length;
+              const total = grammarMods.length + spellingMods.length + wordsearchMods.length + spelMods.length;
               const pct = total > 0 ? (completed / total) * 100 : 0;
 
               return (
@@ -170,7 +174,7 @@ export default function ProfilePage() {
                       </div>
                       <div className="text-right">
                         <div className="font-bold text-amber-600 dark:text-amber-400">⭐ {totalPoints}</div>
-                        <div className="text-xs text-gray-400 dark:text-gray-500">
+                        <div className="text-xs text-gray-400 dark:text-gray-400">
                           {completed}/{total === 0 ? "?" : total} moduler
                         </div>
                       </div>
@@ -190,22 +194,21 @@ export default function ProfilePage() {
                     />
 
                     {/* Detailed breakdown */}
-                    {(grammarMods.length > 0 || spellingMods.length > 0) && (
-                      <div className="mt-3 grid grid-cols-2 gap-2">
-                        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-2 text-xs text-center">
-                          <div className="font-semibold dark:text-gray-100">
-                            {grammarMods.filter((m) => m.completed).length}/
-                            {grammarMods.length}
+                    {(grammarMods.length > 0 || spellingMods.length > 0 || wordsearchMods.length > 0 || spelMods.length > 0) && (
+                      <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2">
+                        {([
+                          { label: "📝 Grammatik", mods: grammarMods },
+                          { label: "✏️ Stavning",  mods: spellingMods },
+                          { label: "🔍 Ordsök",    mods: wordsearchMods },
+                          { label: "🪙 Spel",      mods: spelMods },
+                        ] as const).filter((g) => g.mods.length > 0).map((g) => (
+                          <div key={g.label} className="bg-gray-50 dark:bg-gray-700 rounded-lg p-2 text-xs text-center">
+                            <div className="font-semibold dark:text-gray-100">
+                              {g.mods.filter((m) => m.completed).length}/{g.mods.length}
+                            </div>
+                            <div className="text-gray-500 dark:text-gray-400">{g.label}</div>
                           </div>
-                          <div className="text-gray-500 dark:text-gray-400">📝 Grammatik</div>
-                        </div>
-                        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-2 text-xs text-center">
-                          <div className="font-semibold dark:text-gray-100">
-                            {spellingMods.filter((m) => m.completed).length}/
-                            {spellingMods.length}
-                          </div>
-                          <div className="text-gray-500 dark:text-gray-400">✏️ Stavning</div>
-                        </div>
+                        ))}
                       </div>
                     )}
                   </div>
@@ -227,7 +230,7 @@ export default function ProfilePage() {
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-xl">{stage.emoji}</span>
                     <h3 className="font-semibold text-gray-900 dark:text-gray-100">{stage.name}</h3>
-                    <span className="ml-auto text-xs text-gray-400 dark:text-gray-500">
+                    <span className="ml-auto text-xs text-gray-400 dark:text-gray-400">
                       {unlockedCount}/{stageAchievements.length}
                     </span>
                   </div>
@@ -250,10 +253,10 @@ export default function ProfilePage() {
                               : <span className="text-xl flex-shrink-0">{unlocked ? a.icon : "🔒"}</span>;
                           })()}
                           <div className="min-w-0">
-                            <p className={`text-xs font-semibold leading-tight ${unlocked ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-500"}`}>
+                            <p className={`text-xs font-semibold leading-tight ${unlocked ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-400"}`}>
                               {a.title}
                             </p>
-                            <p className="text-xs text-gray-400 dark:text-gray-500 leading-tight truncate">{a.description}</p>
+                            <p className="text-xs text-gray-400 dark:text-gray-400 leading-tight truncate">{a.description}</p>
                           </div>
                         </div>
                       );
@@ -268,7 +271,7 @@ export default function ProfilePage() {
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-xl">🌍</span>
                 <h3 className="font-semibold text-gray-900 dark:text-gray-100">Globala utmärkelser</h3>
-                <span className="ml-auto text-xs text-gray-400 dark:text-gray-500">
+                <span className="ml-auto text-xs text-gray-400 dark:text-gray-400">
                   {ACHIEVEMENTS.filter((a) => a.stageId === "global" && isUnlocked(a, student!)).length}/
                   {ACHIEVEMENTS.filter((a) => a.stageId === "global").length}
                 </span>
@@ -292,10 +295,10 @@ export default function ProfilePage() {
                           : <span className="text-xl flex-shrink-0">{unlocked ? a.icon : "🔒"}</span>;
                       })()}
                       <div className="min-w-0">
-                        <p className={`text-xs font-semibold leading-tight ${unlocked ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-500"}`}>
+                        <p className={`text-xs font-semibold leading-tight ${unlocked ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-400"}`}>
                           {a.title}
                         </p>
-                        <p className="text-xs text-gray-400 dark:text-gray-500 leading-tight truncate">{a.description}</p>
+                        <p className="text-xs text-gray-400 dark:text-gray-400 leading-tight truncate">{a.description}</p>
                       </div>
                     </div>
                   );
