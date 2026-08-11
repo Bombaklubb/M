@@ -63,7 +63,9 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
     if (!currentEntry) return;
     if (isCorrect) {
       clearError(student.name, stageId, currentEntry.id);
-      const pts = Math.floor(Math.random() * 26) + 25;
+      // 5–15 p. Måste vara lägre än de 15 p ett direkt rätt svar ger i en vanlig
+      // övning – annars lönar det sig att svara fel med flit och rätta efteråt.
+      const pts = Math.floor(Math.random() * 11) + 5;
       const fresh = loadStudent();
       if (fresh) { fresh.totalPoints += pts; saveStudent(fresh); }
       setEarnedPoints(pts);

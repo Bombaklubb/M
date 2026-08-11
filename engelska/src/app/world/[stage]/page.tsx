@@ -170,13 +170,13 @@ export default function WorldPage({ params }: Props) {
                   {done && (
                     <BorderBeam size={80} duration={6} colorFrom="#ffffff" colorTo="rgba(255,255,255,0.4)" borderWidth={1.5} />
                   )}
-                  <div className={`flex justify-center mb-0.5 ${done ? stage.textClass : "text-gray-500 dark:text-gray-400"}`}>
+                  <div className={`flex justify-center mb-0.5 ${done ? stage.textClass : "text-gray-600 dark:text-gray-300"}`}>
                     {icon}
                   </div>
                   <div className={`text-lg font-black ${done ? stage.textClass : "text-gray-900 dark:text-gray-100"}`}>
                     <NumberTicker value={count} duration={600} suffix={`/${total}`} />
                   </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-300">{label}</div>
                 </div>
               );
             })}
@@ -196,7 +196,7 @@ export default function WorldPage({ params }: Props) {
                 className={`relative flex items-center gap-1.5 px-4 py-2 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer ${
                   activeTab === tab.id
                     ? `${stage.colorClass} text-white shadow-md`
-                    : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white/60 dark:hover:bg-gray-700/50"
+                    : "text-gray-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-200 hover:bg-white/60 dark:hover:bg-gray-700/50"
                 }`}
                 style={activeTab === tab.id ? { boxShadow: "0 3px 0 0 rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.2)" } : {}}
               >
@@ -328,7 +328,7 @@ export default function WorldPage({ params }: Props) {
             <div className="mb-6 text-center">
               <div className="text-4xl mb-2">🎮</div>
               <h2 className="text-xl font-black text-gray-900 dark:text-gray-100">Spel</h2>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">Träna engelskan med roliga spel!</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">Träna engelskan med roliga spel!</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[

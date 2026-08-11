@@ -705,7 +705,7 @@ export function openWoodChest(): {
   description: string;
   bonusChest?: Chest;
 } {
-  const pts = Math.floor(Math.random() * 101) + 20; // 20-120
+  const pts = Math.floor(Math.random() * 101) + 20; // 20-120 (wood)
   return { points: pts, description: `+${pts} poäng` };
 }
 
@@ -716,7 +716,7 @@ export function openSilverChest(badges: string[]): {
   bonusChest?: Chest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 101) + 20; // 20-120
+  const pts = Math.floor(Math.random() * 151) + 50; // 50-200 (silver)
   const available = ALL_BADGES.filter(
     (b) => b.id !== "boss_slayer" && !badges.includes(b.id)
   );
@@ -748,8 +748,8 @@ export function openGoldChest(badges: string[]): {
   bonusChest?: Chest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 101) + 20; // 20-120
-  const available = ALL_BADGES.filter((b) => !badges.includes(b.id));
+  const pts = Math.floor(Math.random() * 281) + 120; // 120-400 (gold)
+  const available = ALL_BADGES.filter((b) => b.id !== "boss_slayer" && !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
     : null;
@@ -778,8 +778,8 @@ export function openRubyChest(badges: string[]): {
   bonusChest?: Chest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 101) + 20; // 20-120
-  const available = ALL_BADGES.filter((b) => !badges.includes(b.id));
+  const pts = Math.floor(Math.random() * 351) + 250; // 250-600 (ruby)
+  const available = ALL_BADGES.filter((b) => b.id !== "boss_slayer" && !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
     : null;
@@ -799,8 +799,8 @@ export function openDiamondChest(badges: string[]): {
   bonusChest?: Chest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 101) + 20; // 20-120
-  const available = ALL_BADGES.filter((b) => !badges.includes(b.id));
+  const pts = Math.floor(Math.random() * 601) + 400; // 400-1000 (diamond)
+  const available = ALL_BADGES.filter((b) => b.id !== "boss_slayer" && !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
     : null;
@@ -820,8 +820,8 @@ export function openEmeraldChest(badges: string[]): {
   bonusChest?: Chest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 101) + 20; // 20-120
-  const available = ALL_BADGES.filter((b) => !badges.includes(b.id));
+  const pts = Math.floor(Math.random() * 801) + 700; // 700-1500 (emerald)
+  const available = ALL_BADGES.filter((b) => b.id !== "boss_slayer" && !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
     : null;
@@ -841,8 +841,8 @@ export function openHemligChest(badges: string[]): {
   bonusChest?: Chest;
   description: string;
 } {
-  const pts = Math.floor(Math.random() * 101) + 20; // 20-120
-  const available = ALL_BADGES.filter((b) => !badges.includes(b.id));
+  const pts = Math.floor(Math.random() * 1301) + 1200; // 1200-2500 (hemlig)
+  const available = ALL_BADGES.filter((b) => b.id !== "boss_slayer" && !badges.includes(b.id));
   const badge = available.length > 0
     ? available[Math.floor(Math.random() * available.length)]
     : null;
