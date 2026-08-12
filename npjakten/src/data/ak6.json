@@ -441,12 +441,12 @@
           "options": [
             "Att isen är farlig att åka på.",
             "Att isen är vacker och inbjudande.",
-            "Att det nyligen har snöat.",
+            "Att isen är gammal och grå.",
             "Att sjön är full av socker."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
-          "explanation": "Att isen ”glittrade som om någon strött socker över den” är en vacker, lockande bild – det är den som får Liv och Sigge att vilja åka. Faran kommer senare i texten, och då beskrivs isen i stället som mörk och blank."
+          "explanation": "Bilden med sockret handlar om hur isen ser ut: den glittrar och lockar. Att isen skulle vara gammal och grå motsägs av just ordet ”glittrade”. Att den är farlig förstår läsaren först senare i texten."
         },
         {
           "kind": "multiple-choice",
@@ -793,13 +793,13 @@
           "prompt": "Vilken åsikt för skribenten fram i insändaren?",
           "options": [
             "Skolan borde börja klockan nio i stället för klockan åtta.",
-            "Eleverna borde få sova på lektionerna.",
-            "Skoldagen borde bli kortare.",
-            "Väckarklockor borde förbjudas."
+            "Skolan borde börja senare bara under vinterhalvåret.",
+            "Högstadiet borde börja senare, men lågstadiet som vanligt.",
+            "Skolan borde börja senare och sluta tidigare."
           ],
           "correctIndex": 0,
           "aspect": "Hitta efterfrågad information",
-          "explanation": "Skribenten skriver rakt ut: ”Därför tycker jag att skolan borde börja klockan nio i stället för klockan åtta.” Hon vill alltså flytta fram starten, inte korta ner själva skoldagen – den kan tvärtom ”packas smartare”."
+          "explanation": "Skribenten är tydlig med exakt vad hen vill: att skoldagen ska börja klockan nio i stället för åtta. Rubriken säger bara att skolan ska börja senare – vilka klockslag det gäller står i själva texten."
         },
         {
           "kind": "open",

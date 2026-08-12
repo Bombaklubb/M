@@ -141,15 +141,15 @@
           "id": 7,
           "maxPoints": 1,
           "category": "TI",
-          "prompt": "Varför kommer Ludde tillbaka till Otto?",
+          "prompt": "Otto svarar ”Jättebra” när Sara frågar hur helgen har gått, men säger inget om att Ludde sprang i väg. Vad visar det om Otto? Kryssa för rätt alternativ.",
           "options": [
-            "Han hör prasslet och vill ha godis.",
-            "Han hittar inte hem själv.",
-            "Han är trött efter att ha sprungit.",
-            "Katten jagar bort honom."
+            "Han hade glömt bort att Ludde sprang i väg.",
+            "Han vill helst inte berätta om det som gick fel.",
+            "Han tyckte inte att Ludde sprang i väg på riktigt.",
+            "Han var arg på Sara."
           ],
-          "correctIndex": 0,
-          "explanation": "Otto prasslade med godispåsen, och strax efter kom Ludde springande. Han hörde ljudet och ville ha godis."
+          "correctIndex": 1,
+          "explanation": "Otto berättar bara om promenaderna för Sara. Samma kväll berättar han allt för mamma – ”till och med det där om katten”. Att han sparar den delen till mamma visar att han helst inte vill berätta om missen för Sara."
         },
         {
           "kind": "multiple-choice",
@@ -556,11 +556,11 @@
           "options": [
             "En bok och en lampa.",
             "Sin kudde, sin ficklampa och sin nalle.",
-            "En smörgås och en filt.",
+            "Sin sovsäck och sin mobiltelefon.",
             "Sin storebror Milo."
           ],
           "correctIndex": 1,
-          "explanation": "I texten räknas det upp: Vera tog med sin kudde, sin ficklampa och sin nallebjörn. Smörgåsen och filten nämns senare, men det är inte det hon packar med sig."
+          "explanation": "I texten står det rakt ut vad Vera tog med sig: ”sin kudde, sin ficklampa och sin nallebjörn”. Någon sovsäck eller mobil nämns aldrig."
         },
         {
           "kind": "multiple-choice",

@@ -375,8 +375,23 @@
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
         {
-          "kind": "open",
+          "kind": "multiple-choice",
           "id": 3,
+          "maxPoints": 2,
+          "prompt": "Berättaren skriver om Jocke: ”Han var en människa, lika rädd och vilsen som jag, bara lite längre och med moppe.” Vilken effekt får den avslutande detaljen ”och med moppe”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Den drar ner den stora insikten till något vardagligt och lite lustigt.",
+            "Den visar att Jocke är rikare än berättaren.",
+            "Den förklarar varför Sandra lämnade Jocke.",
+            "Den betyder att berättaren vill ha en egen moppe."
+          ],
+          "correctIndex": 0,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Meningen bygger upp en allvarlig insikt – att storebrodern också är rädd och vilsen – och avslutar med en vardaglig detalj. Kontrasten gör tonen både varm och lite komisk, och håller texten fri från patos."
+        },
+        {
+          "kind": "open",
+          "id": 4,
           "maxPoints": 4,
           "pointSteps": [
             0,
@@ -392,21 +407,6 @@
             { "points": 4, "answer": "Dålig storebror: ”– Du kan inte hänga med i dag, sa han en morgon utan att titta upp från spegeln.” Här gör han sig av med lillebrodern för Sandras skull. Bra storebror: ”Han lärde mig att lägga om kedjan på moppen, att vissla genom tänderna.” Där tar han hand om lillebrodern och lär honom saker." }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
-        },
-        {
-          "kind": "multiple-choice",
-          "id": 4,
-          "maxPoints": 2,
-          "prompt": "Vilket berättarperspektiv är det i texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
-          "options": [
-            "förstapersonsperspektiv",
-            "tredjepersonsperspektiv",
-            "allvetande berättare",
-            "en blandning av olika perspektiv"
-          ],
-          "correctIndex": 0,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag",
-          "explanation": "Hela berättelsen återges av ett ”jag” som är med i händelserna: ”Jag följde efter honom överallt.” Vi får bara tillgång till berättarens egna känslor och gissningar om Jocke, vilket är typiskt för förstapersonsperspektiv och skiljer det från en allvetande berättare."
         },
         {
           "kind": "open",
@@ -951,20 +951,18 @@
         {
           "kind": "open",
           "id": 3,
-          "maxPoints": 4,
+          "maxPoints": 2,
           "pointSteps": [
             0,
-            2,
-            4
+            2
           ],
           "lines": 6,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
           "prompt": "Dikten är uppbyggd kring orden ”Bakom mig” (andra strofen) och ”Framför mig” (tredje strofen). Vad ställs mot varandra i de två stroferna, och vad säger den uppbyggnaden om jagets situation?",
-          "guidance": "Ge 4 poäng om svaret både visar VAD som ställs mot varandra och VAD uppbyggnaden säger. Bakom jaget finns hemmet och barndomens trygghet, som är varm och tydlig (köksfönstren som lyser, rösten som ropar namnet, vanten). Framför jaget ligger det okända och otydliga (dis, ingen gata, inget hus, en stig som tappar bort sig). Uppbyggnaden visar att jaget står mitt emellan, i ett vägskäl: det som lämnas syns klart medan framtiden är suddig – och ändå väljer jaget att gå. Ge 2 poäng för enbart det ena ledet. Ge 0 poäng för svar som bara återberättar vad som står.",
+          "guidance": "Ge 2 poäng om svaret visar vad som ställs mot varandra: bakom jaget finns hemmet och tryggheten (köksfönstren som lyser, rösten som ropar namnet, vanten), framför ligger det okända och otydliga (dis, ingen gata, inget hus, en stig som tappar bort sig). Det räcker att kontrasten framgår med stöd i dikten. Ge 0 poäng för svar som bara återberättar vad som står i stroferna.",
           "scoreExamples": [
             { "points": 0, "answer": "I andra strofen står det om hemmet och i tredje strofen om andra sidan av bron." },
-            { "points": 2, "answer": "Bakom jaget finns hemmet med köksfönstren som lyser och någon som ropar hans namn. Framför ligger andra sidan i dis, där han inte ser någon gata eller något hus." },
-            { "points": 4, "answer": "Stroferna ställer det trygga mot det okända. Bakom jaget lyser köksfönstren och en röst ropar hans namn – barndomen är varm och tydlig, som ”en vante jag snart har växt ur”. Framför ligger allt ”i dis”: ingen gata, inget hus, bara ”en stig som tappar bort sig”. Uppbyggnaden gör att jaget står mitt emellan, i ett vägskäl. Det han lämnar ser han klart, men framtiden är suddig – och ändå tar han steget." }
+            { "points": 2, "answer": "Stroferna ställer det trygga mot det okända. Bakom jaget lyser köksfönstren och en röst ropar hans namn, medan allt framför ligger ”i dis”: ingen gata, inget hus, bara ”en stig som tappar bort sig”." }
           ]
         },
         {
@@ -1017,22 +1015,20 @@
         {
           "kind": "open",
           "id": 7,
-          "maxPoints": 6,
+          "maxPoints": 4,
           "pointSteps": [
             0,
             2,
-            4,
-            6
+            4
           ],
           "lines": 8,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
-          "prompt": "Dikten handlar om en förändring i livet. Beskriv hur dikten gestaltar denna förändring genom sitt bildspråk. Ge minst tre bilder ur dikten och förklara kort vad var och en uttrycker.",
-          "guidance": "Ge 6 poäng om svaret tydligt förklarar hur förändringen gestaltas och ger minst tre bilder med förklaring. Ge 4 poäng för två bilder med förklaring, 2 poäng för en. Ge 0 poäng om inga bilder förklaras. Exempel på bilder: isen som bryter upp (tiden går/något släpper), köksfönstren och rösten (barndomens trygghet), vanten man växt ur (att man blivit för stor för barndomen), andra sidan i dis (den okända framtiden), ”bron bär” (mod/tillit), vintern som far mot havet (att släppa det gamla).",
+          "prompt": "Dikten handlar om en förändring i livet. Beskriv hur dikten gestaltar denna förändring genom sitt bildspråk. Ge minst två bilder ur dikten och förklara kort vad var och en uttrycker.",
+          "guidance": "Ge 4 poäng om svaret förklarar hur förändringen gestaltas och ger minst två bilder med förklaring. Ge 2 poäng för en bild med förklaring. Ge 0 poäng om ingen bild förklaras. Exempel på bilder: isen som bryter upp (tiden går/något släpper), köksfönstren och rösten (barndomens trygghet), vanten man växt ur (att man blivit för stor för barndomen), andra sidan i dis (den okända framtiden), ”bron bär” (mod/tillit), vintern som far mot havet (att släppa det gamla).",
           "scoreExamples": [
             { "points": 0, "answer": "Dikten handlar om en person som går över en bro på våren och allt förändras." },
             { "points": 2, "answer": "Isen som ”bryter upp” visar att något i jagets liv håller på att släppa och att tiden går." },
-            { "points": 4, "answer": "Förändringen syns i bildspråket. Isen som ”bryter upp, flak för flak” visar att något släpper och att tiden går. ”Andra sidan i dis” står för framtiden som är oklar och okänd för jaget." },
-            { "points": 6, "answer": "Dikten gestaltar förändringen genom flera bilder. Isen som ”bryter upp, flak för flak” visar att något i livet håller på att släppa och att tiden går. ”En vante jag snart har växt ur” står för barndomen som jaget blivit för stor för. ”Andra sidan i dis” är den okända framtiden, och ”bron bär” visar att jaget vågar och litar på att det går att ta steget. Tillsammans gör bilderna att man förstår att jaget lämnar barndomen och går mot vuxenlivet." }
+            { "points": 4, "answer": "Förändringen syns i bildspråket. Isen som ”bryter upp, flak för flak” visar att något släpper och att tiden går. ”En vante jag snart har växt ur” står för barndomen som jaget blivit för stor för, och ”andra sidan i dis” för framtiden som ännu är oklar." }
           ]
         }
       ]
@@ -1221,6 +1217,179 @@
             { "points": 2, "answer": "Texten har intervjucitat, till exempel när Noa säger ”Hör du? Det skrapar lite.” Citaten gör att man hör hennes egen röst." },
             { "points": 4, "answer": "Texten har intervjucitat, som när Noa säger ”Hör du? Det skrapar lite.”, vilket gör henne levande. Den har också en miljöbeskrivning – ”Det luktar olja och gummi i garaget” – som sätter scenen för läsaren." },
             { "points": 6, "answer": "Skribenten bygger upp porträttet på flera sätt. Ingressen sammanfattar det viktigaste och lockar läsaren. Miljöbeskrivningen ”Det luktar olja och gummi i garaget” sätter scenen så att man ser verkstaden framför sig. Intervjucitaten, både från Noa och från Adin och mamman, gör texten levande och trovärdig genom att vi hör flera röster. Dessutom ger faktarutan ”NOA LINDE” snabb fakta om vem hon är. Tillsammans gör allt detta att läsaren får en tydlig bild av Noa." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ak9-b-ai-i-skolan",
+      "delprov": "Delprov B: läsförståelse – argumenterande text",
+      "textType": "argumenterande",
+      "title": "Sluta fråga om vi ska använda AI – fråga hur",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&h=506&fit=crop",
+        "alt": "Elever som arbetar vid en dator.",
+        "fallback": "/images/debatt.svg"
+      },
+      "ingress": "Skolan är på väg att göra ett stort misstag, skriver signaturen skolvardag_25. Förbud löser ingenting – lär oss använda verktygen i stället.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Varje gång jag säger att jag använder AI när jag pluggar får jag samma blick tillbaka. Den där blicken som betyder: jaha, så du fuskar.",
+            "Jag förstår misstänksamheten. Men jag tror att skolan är på väg att göra ett stort misstag. I stället för att förbjuda de här verktygen borde skolan lära oss att använda dem – på riktigt, med krav och med kritik."
+          ]
+        },
+        {
+          "paragraphs": [
+            "För det första: förbud fungerar inte. Verktygen ligger i varje ficka och kostar ingenting. Ett förbud gör dem inte omöjliga att använda, bara omöjliga att prata om. Det enda skolan uppnår är att eleverna slutar berätta hur de arbetar – och då kan ingen lärare hjälpa dem att göra det klokt."
+          ]
+        },
+        {
+          "paragraphs": [
+            "För det andra handlar det om rättvisa. Den som har föräldrar med tid och utbildning har alltid haft en förklarare hemma vid köksbordet. Alla har inte det. För den som pluggar ensam kan ett program som förklarar samma sak för femte gången, utan att sucka, vara skillnaden mellan att förstå och att ge upp.",
+            "Ett förbud drabbar alltså inte alla lika. Det drabbar hårdast dem som redan har det tuffast."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Men eleverna kommer ju att fuska, invänder någon. Ja, en del kommer att göra det. Så har det alltid varit. Det har fuskats med avskrifter, med gamla prov och med syskons gamla uppsatser långt innan någon hört talas om AI.",
+            "Skillnaden är att fusket nu syns i uppgifterna vi får. Om en uppgift kan lösas på tio sekunder av ett program, då säger det något om uppgiften.",
+            "När miniräknaren kom var oron precis densamma: nu skulle ingen längre lära sig räkna. Lösningen blev inte förbud, utan nya prov – en del med räknare och en del utan. Ingen hävdar i dag att matematiken gick under. Samma väg borde vi gå nu."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Till sist: vi ska ut i ett arbetsliv där de här verktygen redan är vardag. Att lämna skolan utan att ha lärt sig granska vad ett program påstår är som att lämna den utan att ha lärt sig granska en källa på nätet. Programmen har fel ibland, och de har fel med samma självsäkra röst som när de har rätt.",
+            "Det svåra är alltså inte att ställa frågan. Det svåra är att avgöra om svaret håller. Just det borde vara skolans uppgift att lära oss."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Så sluta fråga om vi ska använda AI i skolan. Vi gör det redan. Fråga i stället hur vi ska göra det – och lär oss det.",
+            "Skolledningar: skriv era riktlinjer tillsammans med oss elever i stället för om oss. Ni har mer att vinna på det än ni tror."
+          ]
+        }
+      ],
+      "byline": [
+        "Av signaturen skolvardag_25",
+        "ungdomsdebatt.se, 2026",
+        "Text skriven för NP-jakten."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 2,
+          "aspect": "Hitta efterfrågad information",
+          "prompt": "Vilken åsikt driver skribenten i texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Att AI bör förbjudas i skolan tills forskningen är klar.",
+            "Att skolan ska lära eleverna använda AI i stället för att förbjuda det.",
+            "Att elever ska få använda AI på prov utan några regler.",
+            "Att lärare borde använda AI för att rätta prov."
+          ],
+          "correctIndex": 1,
+          "explanation": "Skribenten skriver rakt ut: ”I stället för att förbjuda de här verktygen borde skolan lära oss att använda dem – på riktigt, med krav och med kritik.” Texten kräver alltså regler och kritiskt tänkande, inte frihet utan gränser."
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "lines": 4,
+          "aspect": "Hitta efterfrågad information",
+          "note": "Du måste skriva två argument för att få full poäng.",
+          "prompt": "Skribenten ger flera argument för sin åsikt. Skriv två av argumenten.",
+          "guidance": "Ge 1 poäng per korrekt argument, max 2 poäng. Argument i texten: 1) förbud fungerar inte – verktygen finns i varje telefon och eleverna slutar bara berätta hur de arbetar, 2) rättvisa – den som saknar hjälp hemma drabbas hårdast av ett förbud, 3) arbetslivet – eleverna ska ut i ett arbetsliv där verktygen är vardag och måste kunna granska svaren. Ge 0 poäng för svar som bara upprepar åsikten utan argument.",
+          "scoreExamples": [
+            { "points": 0, "answer": "Han tycker att skolan ska sluta förbjuda AI och lära ut det i stället." },
+            { "points": 1, "answer": "Han skriver att ett förbud inte fungerar, eftersom verktygen finns i alla elevers telefoner ändå." },
+            { "points": 2, "answer": "Ett argument är att förbud inte fungerar – verktygen finns i varje ficka, och eleverna slutar bara berätta hur de arbetar. Ett annat är att ett förbud är orättvist, eftersom det drabbar hårdast dem som inte har någon som kan förklara hemma." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 2,
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "prompt": "Hur bemöter skribenten invändningen att eleverna kommer att fuska? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Genom att förneka att det förekommer fusk.",
+            "Genom att hävda att fusk är mindre allvarligt i dag.",
+            "Genom att medge att det sker, men peka på att fusk funnits långt före AI och att uppgifterna behöver ändras.",
+            "Genom att föreslå hårdare straff för den som fuskar."
+          ],
+          "correctIndex": 2,
+          "explanation": "Skribenten börjar med att ge invändningen delvis rätt – ”Ja, en del kommer att göra det” – och vänder den sedan: fusk har alltid förekommit, och att en uppgift kan lösas på tio sekunder ”säger något om uppgiften”. Att erkänna motståndarens poäng och ändå driva sin tes är ett vanligt argumenterande grepp."
+        },
+        {
+          "kind": "open",
+          "id": 4,
+          "maxPoints": 4,
+          "pointSteps": [
+            0,
+            2,
+            4
+          ],
+          "lines": 6,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "prompt": "Skribenten jämför AI med miniräknaren. Förklara vad jämförelsen ska övertyga läsaren om, och varför den är effektiv i texten.",
+          "guidance": "Ge 4 poäng om svaret både förklarar VAD jämförelsen ska visa (att oron för ny teknik har funnits förr, att den visade sig obefogad, och att lösningen då blev nya prov i stället för förbud – alltså bör man göra likadant nu) OCH varför den är effektiv (den bygger på något läsaren redan accepterar, gör tesen svårare att avfärda och flyttar frågan från om till hur). Ge 2 poäng för ett av leden. Ge 0 poäng för svar som bara återberättar att miniräknaren nämns.",
+          "scoreExamples": [
+            { "points": 0, "answer": "Han skriver att när miniräknaren kom var många oroliga för att ingen skulle lära sig räkna." },
+            { "points": 2, "answer": "Jämförelsen ska visa att man varit orolig för ny teknik förut, och att lösningen då blev nya sorters prov i stället för förbud. Alltså borde skolan göra likadant med AI." },
+            { "points": 4, "answer": "Jämförelsen ska övertyga läsaren om att dagens oro inte är ny: när miniräknaren kom trodde man också att ingen skulle lära sig räkna, men lösningen blev prov med och utan räknare – inte förbud. Den är effektiv eftersom nästan alla i dag håller med om att miniräknaren var ofarlig. Skribenten utgår alltså från något läsaren redan accepterar och gör det svårt att avfärda tesen, samtidigt som frågan flyttas från om tekniken ska användas till hur." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 2,
+          "aspect": "Dra enkla slutsatser",
+          "prompt": "Vad menar skribenten med meningen ”Om en uppgift kan lösas på tio sekunder av ett program, då säger det något om uppgiften.”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "Att uppgiften är för lätt och behöver göras om.",
+            "Att programmet är opålitligt och räknar för snabbt.",
+            "Att eleverna borde få mer tid på sig.",
+            "Att läraren har rättat uppgiften för slarvigt."
+          ],
+          "correctIndex": 0,
+          "explanation": "Meningen flyttar skulden från eleven till uppgiften: om ett program klarar den på tio sekunder prövar den inte särskilt mycket, och då är det uppgiften som behöver ändras. Skribenten säger inget om att programmet skulle vara opålitligt just här – den poängen kommer först senare i texten."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 2,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "prompt": "Vilket drag i textens avslutning är typiskt för en argumenterande text? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "options": [
+            "En sammanfattning av alla fakta som nämnts.",
+            "En direkt uppmaning riktad till en utpekad mottagare.",
+            "En personlig minnesbild från skribentens barndom.",
+            "En fråga som lämnas obesvarad åt läsaren."
+          ],
+          "correctIndex": 1,
+          "explanation": "Texten slutar med ett tydligt tilltal: ”Skolledningar: skriv era riktlinjer tillsammans med oss elever …”. Att avsluta med en uppmaning till den som kan bestämma är ett klassiskt drag i argumenterande texter. Någon obesvarad fråga lämnas inte – skribenten svarar själv: ”Fråga i stället hur.”"
+        },
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            2
+          ],
+          "lines": 4,
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "prompt": "Vem vänder sig texten framför allt till, och hur märks det i språket? Ge exempel ur texten.",
+          "guidance": "Ge 2 poäng om svaret både anger mottagaren (skolan, skolledningar, vuxna som bestämmer i skolan) och ger språkligt stöd: det direkta tilltalet ”Skolledningar:” och ”Ni har mer att vinna på det än ni tror”, samt att skribenten talar om sig själv och andra elever som ”vi” och ”oss”. Ge 0 poäng om bara mottagaren anges utan exempel, eller om exempel ges utan att mottagaren framgår.",
+          "scoreExamples": [
+            { "points": 0, "answer": "Texten vänder sig till alla som är intresserade av skolan och AI." },
+            { "points": 2, "answer": "Texten vänder sig framför allt till skolledningar och vuxna som bestämmer i skolan. Det märks i slutet, där skribenten tilltalar dem direkt: ”Skolledningar: skriv era riktlinjer tillsammans med oss elever i stället för om oss. Ni har mer att vinna på det än ni tror.” Skribenten skriver också ”vi” och ”oss” om eleverna, vilket visar att hon eller han talar som elev till de vuxna." }
           ]
         }
       ]
