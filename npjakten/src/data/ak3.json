@@ -300,15 +300,15 @@
           "id": 1,
           "maxPoints": 1,
           "category": "L",
-          "prompt": "Vad gör igelkotten när den blir rädd?",
+          "prompt": "Hur många taggar har igelkotten på ryggen, enligt texten? Kryssa för rätt alternativ.",
           "options": [
-            "Den springer upp i ett träd.",
-            "Den rullar ihop sig till en taggig boll.",
-            "Den gräver ner sig i marken.",
-            "Den låter högt för att skrämmas."
+            "Ungefär tio.",
+            "Ungefär hundra.",
+            "Flera tusen.",
+            "Fler än en miljon."
           ],
-          "correctIndex": 1,
-          "explanation": "I texten står det att igelkotten rullar ihop sig till en taggig boll när den blir rädd. Då vågar nästan inga djur röra den."
+          "correctIndex": 2,
+          "explanation": "I stycket om taggarna står det: ”Igelkottens rygg är täckt av flera tusen taggar.” Det är många fler än hundra, men inte så många som en miljon."
         },
         {
           "kind": "multiple-choice",
@@ -1373,30 +1373,30 @@
           "id": 8,
           "maxPoints": 1,
           "category": "L",
-          "prompt": "Hur ofta ska man borsta tänderna?",
+          "prompt": "Hur länge ska man borsta tänderna, enligt texten? Kryssa för rätt alternativ.",
           "options": [
-            "En gång i veckan.",
-            "Bara när man ätit godis.",
-            "Två gånger om dagen.",
-            "Fem gånger om dagen."
+            "I trettio sekunder.",
+            "I två minuter.",
+            "I tio minuter.",
+            "Tills tandkrämen tar slut."
           ],
-          "correctIndex": 2,
-          "explanation": "I texten står det att man ska borsta tänderna två gånger om dagen, på morgonen och på kvällen."
+          "correctIndex": 1,
+          "explanation": "I stycket om hur du tar hand om dina tänder står det: ”Borsta i två minuter och använd tandkräm med fluor.” Svaret står alltså rakt ut i texten."
         },
         {
           "kind": "multiple-choice",
           "id": 9,
           "maxPoints": 1,
           "category": "L",
-          "prompt": "Vad gör fluor?",
+          "prompt": "Vad hjälper fluor till med, förutom att göra emaljen starkare? Kryssa för rätt alternativ.",
           "options": [
-            "Det gör emaljen starkare.",
-            "Det gör tandkrämen söt.",
-            "Det tar bort mjölktänder.",
-            "Det färgar tänderna vita."
+            "Att göra tandkrämen söt.",
+            "Att få mjölktänderna att lossna.",
+            "Att laga små skador innan de blir hål.",
+            "Att göra tänderna vitare."
           ],
-          "correctIndex": 0,
-          "explanation": "Fluor gör emaljen starkare och hjälper till att laga små skador innan de blir hål."
+          "correctIndex": 2,
+          "explanation": "Texten säger att fluor ”gör emaljen starkare och hjälper till att laga små skador innan de blir hål”. Det är alltså två saker fluor gör, och frågan gäller den andra."
         },
         {
           "kind": "multiple-choice",

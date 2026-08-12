@@ -149,11 +149,11 @@
             "Att boken är för värdefull för att lånas ut.",
             "Att han tänker träna ännu hårdare till nästa år.",
             "Att han har förstått att man måste spela sitt eget spel.",
-            "Att han vill hindra berättaren från att läsa den."
+            "Att han vill glömma förlusten så fort som möjligt."
           ],
           "correctIndex": 2,
           "aspect": "Dra enkla slutsatser",
-          "explanation": "Boken är den Albin plagierat sitt parti ur, och nu ställer han den utom räckhåll för sig själv – ”dit ingen av oss nådde utan stege”. Det blir en tyst gest som visar att han tagit till sig samma insikt som berättaren fick av Ruth: att man ska spela sitt eget spel i stället för att härma någon annans."
+          "explanation": "Albin har själv ställt undan boken han spelade efter utantill. Att lägga bort facit är hans sätt att visa att han förstått Ruths råd: man måste spela sitt eget spel. Att han skulle vilja glömma förlusten motsägs av att han räcker fram handen, säger ”snyggt spelat” och bjuder på bullarna."
         }
       ],
       "image": {
@@ -431,14 +431,14 @@
           "maxPoints": 2,
           "prompt": "I slutet står det att de ”inte behövde” prata om det som hänt, för ”vi hade ju vårt språk”. Vad menas med det? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "De talar ett hemligt språk som de hittat på.",
+            "De har lovat varandra att aldrig prata om det som hände.",
             "De förstår varandra utan ord, genom sin nära relation.",
             "De vill inte prata med varandra längre.",
             "De pratar bara genom att vissla."
           ],
           "correctIndex": 1,
           "aspect": "Dra enkla slutsatser",
-          "explanation": "”Vårt språk” syftar på det som beskrivs tidigt i texten: ”ett helt språk av blickar och nickar som ingen vuxen kunde förstå”, och på visslingarna vid bron. Det är alltså inget påhittat hemligt språk med egna ord, utan en närhet som gör att bröderna förstår varandra utan att behöva säga något."
+          "explanation": "Det ”språk” som menas är blickarna och nickarna som beskrivs tidigare i texten – de förstår varandra utan att säga något, tack vare hur nära de står varandra. Något löfte om att aldrig prata om saken nämns aldrig i texten."
         }
       ],
       "image": {
@@ -959,12 +959,12 @@
           ],
           "lines": 6,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
-          "prompt": "Diktens ”bro” kan tolkas som mer än en verklig bro. Förklara vad bron och det att gå över den kan stå för, och stöd din tolkning med något ur dikten.",
-          "guidance": "Ge 4 poäng om svaret ger en rimlig tolkning (bron = övergången från barndom/det trygga till vuxenliv/det okända; att gå över = att våga lämna och gå vidare) OCH stöder den med något ur dikten (t.ex. köksfönstren, vanten man växt ur, andra sidan i dis, ”bron bär”). Ge 2 poäng för en rimlig tolkning utan textstöd, eller textstöd utan tydlig tolkning. Ge 0 poäng för svar som bara återberättar.",
+          "prompt": "Dikten är uppbyggd kring orden ”Bakom mig” (andra strofen) och ”Framför mig” (tredje strofen). Vad ställs mot varandra i de två stroferna, och vad säger den uppbyggnaden om jagets situation?",
+          "guidance": "Ge 4 poäng om svaret både visar VAD som ställs mot varandra och VAD uppbyggnaden säger. Bakom jaget finns hemmet och barndomens trygghet, som är varm och tydlig (köksfönstren som lyser, rösten som ropar namnet, vanten). Framför jaget ligger det okända och otydliga (dis, ingen gata, inget hus, en stig som tappar bort sig). Uppbyggnaden visar att jaget står mitt emellan, i ett vägskäl: det som lämnas syns klart medan framtiden är suddig – och ändå väljer jaget att gå. Ge 2 poäng för enbart det ena ledet. Ge 0 poäng för svar som bara återberättar vad som står.",
           "scoreExamples": [
-            { "points": 0, "answer": "Det är en bro över ett vatten på våren och jaget går över den." },
-            { "points": 2, "answer": "Bron står nog för att gå från barndomen till att bli vuxen. Det handlar om att lämna något och gå vidare." },
-            { "points": 4, "answer": "Bron står för övergången från barndomen till vuxenlivet, och att gå över den betyder att våga lämna det trygga och gå mot något nytt. Det syns i att jaget lämnar ”köksfönstren hemma” och ”en vante jag snart har växt ur” bakom sig, medan andra sidan ligger ”i dis” – framtiden är okänd, men jaget tar ändå steget och ”bron bär”." }
+            { "points": 0, "answer": "I andra strofen står det om hemmet och i tredje strofen om andra sidan av bron." },
+            { "points": 2, "answer": "Bakom jaget finns hemmet med köksfönstren som lyser och någon som ropar hans namn. Framför ligger andra sidan i dis, där han inte ser någon gata eller något hus." },
+            { "points": 4, "answer": "Stroferna ställer det trygga mot det okända. Bakom jaget lyser köksfönstren och en röst ropar hans namn – barndomen är varm och tydlig, som ”en vante jag snart har växt ur”. Framför ligger allt ”i dis”: ingen gata, inget hus, bara ”en stig som tappar bort sig”. Uppbyggnaden gör att jaget står mitt emellan, i ett vägskäl. Det han lämnar ser han klart, men framtiden är suddig – och ändå tar han steget." }
           ]
         },
         {
