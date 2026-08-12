@@ -71,7 +71,8 @@
             "Att huset är byggt av sten."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Uttrycket ”ett hus som har gett upp” är ett bildligt sätt att säga att huset är slitet och övergivet – fönstren är förbommade och färgen släpper i stora sjok. Det står ingenstans att huset ska rivas eller är till salu; det är Melkers känsla för förfallet som författaren vill gestalta."
         },
         {
           "kind": "multiple-choice",
@@ -85,7 +86,8 @@
             "Han är arg på pappa och vägrar hjälpa till."
           ],
           "correctIndex": 2,
-          "aspect": "Dra enkla slutsatser"
+          "aspect": "Dra enkla slutsatser",
+          "explanation": "Melker tänker på kompisarna och lägenheten han lämnat, och han säger bara ”Mmm” när pappa frågar om huset är fint. Han är alltså inte lika glad som pappa, men han är inte heller arg – han hjälper ju till att bära in lådorna."
         },
         {
           "kind": "open",
@@ -113,7 +115,8 @@
             "Att byn är alldeles stilla och tyst."
           ],
           "correctIndex": 3,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "När byn ”ser ut att hålla andan” betyder det att allt är alldeles stilla: ingen bil kör förbi och ingen människa syns. Det handlar alltså inte om luften eller om vädret, utan om tystnaden."
         },
         {
           "kind": "open",
@@ -140,7 +143,8 @@
             "... funderar Melker på vad Margit ska tro."
           ],
           "correctIndex": 0,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Melker svarar Tuva och tänker sedan att svaret ”lät surare än jag hade tänkt mig” – han kommenterar alltså hur han själv lät. Det är hans egen röst han reagerar på, inte Tuvas."
         },
         {
           "kind": "multiple-choice",
@@ -154,7 +158,8 @@
             "Hon är ointresserad och vill bara sälja sina varor."
           ],
           "correctIndex": 1,
-          "aspect": "Dra enkla slutsatser"
+          "aspect": "Dra enkla slutsatser",
+          "explanation": "Margit säger långsamt: ”Ja, ja. Det har många försökt sedan Signes tid” – hon låter tveksam och antyder att andra har misslyckats. Hon är alltså varken säker på att det går bra eller arg."
         },
         {
           "kind": "multiple-choice",
@@ -168,7 +173,8 @@
             "Det står på en skylt utanför bageriet."
           ],
           "correctIndex": 2,
-          "aspect": "Dra enkla slutsatser"
+          "aspect": "Dra enkla slutsatser",
+          "explanation": "Tuva säger det själv: ”Margit berättade det för min mormor i morse.” Nyheter sprids snabbt i byn, precis som när Margit redan visste att Melker var bagarens pojke."
         },
         {
           "kind": "open",
@@ -270,7 +276,8 @@
             "Att glasögonmästarna ofta fick betalt i djur."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Jämförelsen med en mjölkko visar hur enormt dyra glasögonen var – kon var ju något som en vanlig familj var ”helt beroende av för att få mat på bordet”. Det handlar alltså inte om vad kor kostade, utan om att glasögon var en förmögenhet."
         },
         {
           "kind": "open",
@@ -297,7 +304,8 @@
             "En italiensk mästare på 1400-talet."
           ],
           "correctIndex": 0,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "I texten står det att ”vem som tillverkade det allra första paret går inte att säga” och att ingen av berättelserna har kunnat bevisas. Venedig nämns visserligen i texten, men som en stad som tidigt tillverkade bra linser – inte som uppfinnare."
         },
         {
           "kind": "open",
@@ -337,7 +345,8 @@
             "De kunde bara användas av munkar i kloster."
           ],
           "correctIndex": 2,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Texten berättar att de tidiga glasögonen ”saknade skalmar och fick i stället klämmas fast över näsroten eller hållas i ett skaft”. Skalmarna kom först på 1700-talet."
         },
         {
           "kind": "open",
@@ -364,7 +373,8 @@
             "Stycket beskriver glasögonens väg från Italien till Sverige."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Det första stycket handlar om läsestenar, alltså om tiden innan glasögonen fanns. Det ger läsaren en bakgrund som gör resten av texten lättare att förstå – det sammanfattar inte hela artikeln."
         }
       ],
       "image": {
@@ -435,7 +445,8 @@
             "Att sjön är full av socker."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Att isen ”glittrade som om någon strött socker över den” är en vacker, lockande bild – det är den som får Liv och Sigge att vilja åka. Faran kommer senare i texten, och då beskrivs isen i stället som mörk och blank."
         },
         {
           "kind": "multiple-choice",
@@ -449,7 +460,8 @@
             "Sigge vill åka längre ut än Liv."
           ],
           "correctIndex": 1,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "Liv är den som ”alltid var först, alltid längst ut”, medan Sigge stannar vid vassen för att han lovat att hålla sig nära land. De är alltså olika: en som vågar mycket och en som är försiktig."
         },
         {
           "kind": "open",
@@ -477,7 +489,8 @@
             "Att isen redan hade brustit."
           ],
           "correctIndex": 2,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Liknelsen ”som åska under vattnet” får oss att höra ett djupt, kraftigt och skrämmande ljud. Det åskar inte på riktigt, och isen har inte brustit ännu – Liv står ju kvar på den."
         },
         {
           "kind": "open",
@@ -504,7 +517,8 @@
             "För att hålla sig varm."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Sigge minns broschyren: ”Lägg dig ner och sprid ut armarna, så fördelas tyngden.” När tyngden sprids över en större yta blir trycket på isen mindre på varje ställe."
         },
         {
           "kind": "multiple-choice",
@@ -518,7 +532,8 @@
             "Liv var arg på Sigge."
           ],
           "correctIndex": 1,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "Livs röst var ”inte alls den vanliga” just när isen knakar, och strax innan hade hon stått alldeles stilla för första gången den dagen. Det visar att hon blivit rädd – tidigare skrattade hon åt Sigges varningar."
         },
         {
           "kind": "open",
@@ -545,7 +560,8 @@
             "De var arga på varandra."
           ],
           "correctIndex": 1,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "Skrattet kom efter att faran var över, men de var fortfarande skakade – därför lät det ”darrigt”, nästan som gråt. Det var alltså lättnad blandad med rädsla, inte att något var jätteroligt."
         },
         {
           "kind": "multiple-choice",
@@ -559,7 +575,8 @@
             "Att alltid stanna vid stranden."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Precis innan de skildes vid grinden säger Liv: ”Jag lyssnar nästa gång. Det lovar jag.” Hon lovar alltså inte att sluta åka skridskor eller att stanna vid stranden."
         },
         {
           "kind": "open",
@@ -635,7 +652,8 @@
             "Att samla snö på vintern."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Texten säger att klorofyllet gör bladen gröna, men att det ”har också ett mycket viktigare jobb: det fångar in solljus”. Att bladen blir gröna stämmer alltså, men det är inte den viktigaste uppgiften enligt texten."
         },
         {
           "kind": "open",
@@ -676,7 +694,8 @@
             "De bildas när det blir kallt."
           ],
           "correctIndex": 1,
-          "aspect": "Dra enkla slutsatser"
+          "aspect": "Dra enkla slutsatser",
+          "explanation": "I texten står det att de gula och orangea färgerna ”har funnits i bladen hela sommaren” men varit dolda bakom det gröna. Det är de röda färgerna som trädet tillverkar på hösten – inte de gula."
         },
         {
           "kind": "multiple-choice",
@@ -690,7 +709,8 @@
             "Ett sätt att samla vatten."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Forskarna tror att det röda ”fungerar som ett slags solskydd” som skyddar bladet medan trädet tar tillvara de sista näringsämnena. Insekter och vatten nämns inte i det sammanhanget."
         },
         {
           "kind": "open",
@@ -718,7 +738,8 @@
             "De fäller barren på sommaren i stället."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Texten förklarar att barren är ”som hoprullade, vaxade löv som tål kylan”, och därför kan barrträden behålla dem året runt. Granen är alltså grön på vintern tack vare barrens byggnad – inte för att den saknar klorofyll."
         },
         {
           "kind": "multiple-choice",
@@ -732,7 +753,8 @@
             "Det förklarar varför löven blir röda."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Det första stycket förklarar vad klorofyll och fotosyntes är, alltså sådant man behöver veta innan man kan förstå varför löven byter färg. Det är en bakgrund, inte en sammanfattning av hela texten."
         }
       ],
       "image": {
@@ -776,7 +798,8 @@
             "Väckarklockor borde förbjudas."
           ],
           "correctIndex": 0,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Skribenten skriver rakt ut: ”Därför tycker jag att skolan borde börja klockan nio i stället för klockan åtta.” Hon vill alltså flytta fram starten, inte korta ner själva skoldagen – den kan tvärtom ”packas smartare”."
         },
         {
           "kind": "open",
@@ -805,7 +828,8 @@
             "För att göra texten längre."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Genom att hänvisa till sömnforskare får skribenten stöd av någon som kan ämnet, och då blir argumentet mer trovärdigt. Forskarna bestämmer förstås inte skolans tider – de bidrar bara med kunskap."
         },
         {
           "kind": "multiple-choice",
@@ -819,7 +843,8 @@
             "Att forskningen om sömn är osäker."
           ],
           "correctIndex": 2,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Motargumentet står i näst sista stycket: en del vuxna menar att skoldagen då ”skulle sluta senare och krocka med träningar och föräldrarnas arbetstider”. Det är det enda invändning skribenten tar upp och bemöter."
         },
         {
           "kind": "open",
@@ -846,7 +871,8 @@
             "Att servera frukost i skolan."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "I sista stycket uppmanar skribenten rektorerna att ”testa senare skolstart under en termin och mät resultatet”. Uppmaningen riktas alltså till dem som kan ändra schemat."
         },
         {
           "kind": "multiple-choice",
@@ -860,7 +886,8 @@
             "Att övertyga läsaren om att skolan borde börja senare."
           ],
           "correctIndex": 3,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Texten är en insändare där skribenten driver en åsikt med argument och avslutar med en uppmaning – syftet är att övertyga. Sömnforskningen nämns visserligen, men bara som stöd för åsikten."
         }
       ],
       "image": {
@@ -921,7 +948,8 @@
             "Att förvara kottar och pinnar."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Ingressen förklarar att bin, humlor och nyckelpigor ”har allt svårare att hitta boplatser” och att man kan hjälpa dem med ett insektshotell. Hotellet är alltså till för att insekterna ska kunna bygga bo där – inte för att fånga dem."
         },
         {
           "kind": "multiple-choice",
@@ -935,7 +963,8 @@
             "Högt uppe i ett träd."
           ],
           "correctIndex": 2,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Steg 5 säger: ”Häng upp hotellet på en solig plats som är skyddad från regn, gärna mot söder och minst en meter över marken.” Det ska alltså varken vara skuggigt, inomhus eller nödvändigtvis högt uppe i ett träd."
         },
         {
           "kind": "open",
@@ -963,7 +992,8 @@
             "För att lådan inte ska repas."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "I steg 2 står anledningen direkt efter uppmaningen: ”Vassa kanter kan skada insekternas vingar.” Det handlar alltså om insekternas säkerhet, inte om utseendet."
         },
         {
           "kind": "ordering",
@@ -995,7 +1025,8 @@
             "För att visa att det är bråttom."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Uppmaningsformen (såga, slipa, fyll, häng) gör att texten talar direkt till dig som läser och talar om vad du ska göra, steg för steg. Det är typiskt för instruerande texter – inte ett sätt att låta sträng."
         },
         {
           "kind": "open",
@@ -1022,7 +1053,8 @@
             "Hotellet har blivit tyngre."
           ],
           "correctIndex": 0,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Under ”Tips!” står det: ”Ett rör som blivit igenmurat med lera är ett gott tecken: då har ett bi lagt ägg där inne.” Leran är alltså tecknet man ska hålla utkik efter."
         }
       ],
       "image": {
@@ -1080,7 +1112,8 @@
             "På att den ofta sitter på marken."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Texten säger att ”det enklaste sättet att känna igen den är på siluetten”: de långa, smala vingarna är böjda bakåt. Stjärten nämns också, men den är kort och kluven – inte lång."
         },
         {
           "kind": "open",
@@ -1122,7 +1155,8 @@
             "Nästan tre år."
           ],
           "correctIndex": 3,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "I stycket ”Ett liv i luften” står det att en ung tornseglare ”kan vara i luften i nästan tre år i sträck”, från att den lämnar boet tills den själv ska häcka."
         },
         {
           "kind": "multiple-choice",
@@ -1136,7 +1170,8 @@
             "Den flyger högre än alla andra fåglar."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Namnet förklaras i texten: fågeln häckar i håligheter högt upp, ”under takpannor, i ventiler och i gamla torn, vilket har gett fågeln dess namn”. Det handlar alltså om var den bor, inte om segling till havs."
         },
         {
           "kind": "open",
@@ -1160,11 +1195,12 @@
           "options": [
             "För att tornseglaren är farlig.",
             "För att beskriva fågelns snabba, spetsiga form på ett målande sätt.",
-            "För att tornseglaren liknar en pilbåge.",
+            "För att fågelns stjärt är spetsig som en pilspets.",
             "För att fågeln bara flyger rakt fram."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Bilden ”en svart pil” är ett målande sätt att beskriva hur snabb och spetsig fågeln ser ut mot himlen. Det stämmer att texten även liknar vingarna vid en spänd pilbåge, men frågan gäller varför just pil-bilden används i inledningen."
         },
         {
           "kind": "multiple-choice",
@@ -1178,7 +1214,8 @@
             "De ställer frågor som läsaren ska besvara."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Underrubrikerna – Utseende, Ett liv i luften, Boet och flytten – talar om vad varje del handlar om, så att läsaren snabbt hittar rätt information. De sammanfattar alltså inte hela texten."
         }
       ],
       "image": {

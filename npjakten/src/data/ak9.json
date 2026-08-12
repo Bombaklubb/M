@@ -69,7 +69,8 @@
             "Berättaren vill vinna kanelbullar på konditoriet."
           ],
           "correctIndex": 1,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "Redan i första meningen slår berättaren fast sitt syfte: ”bestämde jag mig för att förgöra min kusin Albin ... över ett schackbräde, med vittnen”. Att lära sig schacket är bara medlet – berättaren kan från början bara namnet på springaren. Kanelbullarna kommer först senare, genom vadslagningen, och är alltså inte drivkraften."
         },
         {
           "kind": "open",
@@ -119,7 +120,8 @@
             "en blandning av olika perspektiv"
           ],
           "correctIndex": 0,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Berättaren berättar om sina egna tankar och känslor med ordet ”jag” (”Jag drömde om att en enda gång få se det slockna”), vilket är kännetecknet för förstapersonsperspektiv. Vi får aldrig veta vad Albin tänker inuti, bara vad berättaren ser och tolkar – därför är det ingen allvetande berättare."
         },
         {
           "kind": "open",
@@ -150,7 +152,8 @@
             "Att han vill hindra berättaren från att läsa den."
           ],
           "correctIndex": 2,
-          "aspect": "Dra enkla slutsatser"
+          "aspect": "Dra enkla slutsatser",
+          "explanation": "Boken är den Albin plagierat sitt parti ur, och nu ställer han den utom räckhåll för sig själv – ”dit ingen av oss nådde utan stege”. Det blir en tyst gest som visar att han tagit till sig samma insikt som berättaren fick av Ruth: att man ska spela sitt eget spel i stället för att härma någon annans."
         }
       ],
       "image": {
@@ -234,7 +237,8 @@
             "Att spelarna blir trötta av för lite sömn."
           ],
           "correctIndex": 0,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Ekenstams resultat sammanfattas i hennes egna ord: ”Kroppen arbetar för fullt, även om det inte syns från läktaren.” Jämförelsen med rallyföraren gäller pulsnivån, inte hur mycket spelarna rör sig, och skytten nämns för musarmens finmotorik – inte för synen."
         },
         {
           "kind": "multiple-choice",
@@ -248,7 +252,8 @@
             "Andra länder har redan jämställt e-sportare med idrottare."
           ],
           "correctIndex": 2,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "Ekenstams argument bygger på en jämförelse med idrotter som redan är erkända: ”Vi räknar schack som sport i Sverige”, och hon pekar också på att skytte och curling ”handlar mer om koncentration och precision än om flås”. Att proffslagen har fysträning är spelarnas eget argument mot Hederström, inte hennes, och publikens storlek nämner hon aldrig."
         },
         {
           "kind": "open",
@@ -279,7 +284,8 @@
             "Den förklarar varför publiken är viktigare än forskarna."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Jämförelsen påminner om att gränsen för vad som räknas som sport har flyttats förr: en gång fick kvinnor inte springa maraton, i dag höjer unga på ögonbrynen åt det. Poängen är alltså att synen kan ändras igen – jämförelsen bevisar ingenting om OS, utan öppnar för möjligheten."
         }
       ],
       "image": {
@@ -348,7 +354,8 @@
             "Berättaren slutar bry sig om Jocke helt och hållet."
           ],
           "correctIndex": 0,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "I början är Jocke ”det coolaste som existerade” och berättaren en ”satellit” kring en planet. I slutet formuleras förändringen rakt ut: ”Jocke inte var en planet. Han var en människa, lika rädd och vilsen som jag.” Att berättaren skulle sluta bry sig stämmer inte – han går ju med Jocke till bron just när det är som tyngst."
         },
         {
           "kind": "open",
@@ -398,7 +405,8 @@
             "en blandning av olika perspektiv"
           ],
           "correctIndex": 0,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Hela berättelsen återges av ett ”jag” som är med i händelserna: ”Jag följde efter honom överallt.” Vi får bara tillgång till berättarens egna känslor och gissningar om Jocke, vilket är typiskt för förstapersonsperspektiv och skiljer det från en allvetande berättare."
         },
         {
           "kind": "open",
@@ -429,7 +437,8 @@
             "De pratar bara genom att vissla."
           ],
           "correctIndex": 1,
-          "aspect": "Dra enkla slutsatser"
+          "aspect": "Dra enkla slutsatser",
+          "explanation": "”Vårt språk” syftar på det som beskrivs tidigt i texten: ”ett helt språk av blickar och nickar som ingen vuxen kunde förstå”, och på visslingarna vid bron. Det är alltså inget påhittat hemligt språk med egna ord, utan en närhet som gör att bröderna förstår varandra utan att behöva säga något."
         }
       ],
       "image": {
@@ -512,7 +521,8 @@
             "Att lyssnande passar bäst för den som har dyslexi."
           ],
           "correctIndex": 0,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Lindqvist sammanfattar själv sitt resultat: ”När du har förstått orden, oavsett om du sett eller hört dem, gör hjärnan i stort sett samma arbete.” Att dyslexi nämns är ett tillägg om vem ljudboken hjälper – inte vad hjärnforskningen visade – och något om minne eller tempo säger hon aldrig."
         },
         {
           "kind": "multiple-choice",
@@ -526,7 +536,8 @@
             "Det är svårare att förstå en bok man lyssnar på."
           ],
           "correctIndex": 1,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "Lindqvist stödjer sig på ett historiskt argument: ”människan har lyssnat på berättelser i tiotusentals år, långt innan skriften ens fanns”, och att läsa med ögonen är därför den nya uppfinningen. Att unga föredrar att lyssna och att försäljningen ökat står i textens inledning, men används inte av henne som motivering."
         },
         {
           "kind": "open",
@@ -557,7 +568,8 @@
             "Det visar att serietidningar var farliga för barn."
           ],
           "correctIndex": 1,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Exemplet visar ett mönster: varje gång ett nytt sätt att läsa dykt upp har någon varnat för det, ”ändå lärde sig generation efter generation att läsa”. Det fungerar som en tröst till den oroliga, inte som ett bevis för att ljudboken skulle vara bättre än den tryckta boken."
         }
       ],
       "image": {
@@ -617,7 +629,8 @@
             "För att sömnforskare rekommenderade det."
           ],
           "correctIndex": 1,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Texten anger motivet direkt: omställningen infördes 1980 ”med motiveringen att ljusare kvällar skulle spara energi”, eftersom vakna människor i dagsljus behöver mindre belysning. Sömnforskarna kommer in först senare i texten, och då som motståndare till omställningen."
         },
         {
           "kind": "open",
@@ -648,7 +661,8 @@
             "Att man blir pigg av att vinna en timmes sömn."
           ],
           "correctIndex": 1,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "Mini-jetlag beskrivs som att ”människans inre dygnsrytm styrs av ljuset, och när klockan plötsligt flyttas en timme hamnar kroppen i otakt” i flera dagar. Ordet handlar alltså om kroppens klocka, inte om flygresor – jetlag används här bara som en jämförelse."
         },
         {
           "kind": "open",
@@ -681,7 +695,8 @@
             "De flesta länder i Europa har redan vintertid."
           ],
           "correctIndex": 0,
-          "aspect": "Hitta efterfrågad information"
+          "aspect": "Hitta efterfrågad information",
+          "explanation": "Motiveringen står i tredje avsnittet: ”Morgonljuset är nämligen viktigast för dygnsrytmen – det är det som ställer kroppens inre klocka.” Ljusa sommarkvällar är tvärtom det man förlorar med vintertid, och energifrågan är enligt texten i dag försumbar."
         },
         {
           "kind": "multiple-choice",
@@ -695,7 +710,8 @@
             "Den avslutas med en överraskande vändning."
           ],
           "correctIndex": 2,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Avslutningen gör det som en utredande text ska göra: ”Väger man samman perspektiven framträder en tydlig bild”, och slutsatsen byggs på de argument som redan redovisats. Texten uppmanar aldrig läsaren till handling och innehåller inga personliga anekdoter – sådant hör hemma i argumenterande respektive berättande texter."
         }
       ],
       "image": {
@@ -739,7 +755,8 @@
             "Skribentens föräldrar tjatar om läkaryrket."
           ],
           "correctIndex": 1,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "Skribenten förklarar själv varför pressen ökat: ”nu går jag i nian, gymnasievalet närmar sig som ett tåg i tidtabell, och plötsligt förväntas svaret vara på riktigt”. Tidigare räckte det med astronaut eller veterinär. Det handlar alltså inte om att drömmarna tagit slut, utan om att svaret nu får konsekvenser."
         },
         {
           "kind": "open",
@@ -789,7 +806,8 @@
             "Frågan borde handla om betyg i stället för yrken."
           ],
           "correctIndex": 1,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "Invändningen utvecklas i fjärde stycket: frågan ”låter som om man bara blir något en gång, som om yrket vore en gjutform man hälls i vid arton”, samtidigt som framtidens yrken ”möjligen inte ens finns ännu”. Kritiken gäller alltså frågans antaganden, inte vem som ställer den eller vid vilken ålder."
         },
         {
           "kind": "open",
@@ -820,7 +838,8 @@
             "Skribenten uppmanar läsaren att välja gymnasium tidigt."
           ],
           "correctIndex": 0,
-          "aspect": "Sammanföra och tolka information och idéer samt reflektera"
+          "aspect": "Sammanföra och tolka information och idéer samt reflektera",
+          "explanation": "I sista stycket landar skribenten i något eget – ”man måste inte veta vad man vill bli, men man bör veta vad man vill ta reda på härnäst” – men lämnar samtidigt fortsättningen öppen med orden ”Resten får visa sig”. Skribenten säger alltså inte att frågan är omöjlig att fundera på; tvärtom är hela texten en sådan fundering."
         },
         {
           "kind": "multiple-choice",
@@ -834,7 +853,8 @@
             "Saklig fakta utan personliga exempel."
           ],
           "correctIndex": 2,
-          "aspect": "Granska och värdera innehåll, språk och textuella drag"
+          "aspect": "Granska och värdera innehåll, språk och textuella drag",
+          "explanation": "Det typiska för en resonerande text är att tankar prövas mot varandra, och texten är uppbyggd just så: ”Å ena sidan förstår jag poängen med att ha ett mål”, ”Men å andra sidan”, ”Samtidigt vill jag inte göra det för enkelt för mig”. En text som driver en enda tes rakt igenom är i stället argumenterande, och personliga exempel som mamman och farfar hör tvärtom hemma här."
         }
       ],
       "image": {
@@ -905,7 +925,8 @@
             "Att jaget fryser och vill skynda hem.",
             "Att våren gör vädret varmare."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Isen bryter upp i mars, samtidigt som jaget står i ett vägskäl mellan hemmet bakom och ”andra sidan” framför sig – uppbrottet i naturen speglar alltså uppbrottet i livet. Att våren gör det varmare är förstås bokstavligt sant, men frågan gäller vad bilden står för, och dikten kopplar isen till det som släpper i jagets tillvaro."
         },
         {
           "kind": "open",
@@ -951,14 +972,15 @@
           "id": 4,
           "maxPoints": 2,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
-          "prompt": "Dikten är skriven på fri vers och bygger mycket på bilder. Vilket språkligt drag är mest framträdande? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
+          "prompt": "Dikten är skriven på fri vers. Vilket språkligt drag är mest framträdande? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Liknelser och bildspråk.",
             "Fackord och statistik.",
             "Repliker och dialog.",
             "Instruktioner i punktform."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Dikten arbetar genomgående med bilder och liknelser: ljudet av isen är ”som av papper / som någon långsamt river sönder”, och rösten är ”varm som en vante jag snart har växt ur”. Något fackspråk, någon dialog eller några instruktioner finns inte i dikten."
         },
         {
           "kind": "open",
@@ -989,7 +1011,8 @@
             "”Framför mig ligger andra sidan i dis.”",
             "”Så tar jag steget. Bron bär.”"
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Vanten är ett plagg man växer ur som barn, och raden ”varm som en vante jag snart har växt ur” säger att tryggheten hemma fortfarande är varm men snart för liten. Raden om bron och steget handlar om själva uppbrottet, medan disen framför handlar om framtiden – men det är vanten som pekar tydligast på barndomen."
         },
         {
           "kind": "open",
@@ -1076,7 +1099,7 @@
       "byline": [
         "Av Daria Holm",
         "Mellanbygdens Tidning, 2026",
-        "Reportage skrivet för NP-jakten."
+        "Text skriven för NP-jakten."
       ],
       "questions": [
         {
@@ -1110,7 +1133,8 @@
             "Fler än 60.",
             "Fler än 600."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Siffran står både i ingressen, ”På ett år har det blivit över sextio cyklar”, och i faktarutan: ”Har lagat: Över 60 cyklar på ett år.” Det är alltså fler än 60 – inte 600, vilket skulle vara mer än en cykel om dagen."
         },
         {
           "kind": "open",
@@ -1143,7 +1167,8 @@
             "Hon tycker att gamla cyklar borde slängas.",
             "Hon lagar bara cyklar åt sina egna kompisar."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Noa berättar om sin dröm: ”att få låna en lokal av kommunen och lära andra ungdomar att laga”, och hon säger ”Tänk om vi vore tio stycken i stället för en.” Att hon skulle göra det för pengar motsägs av att hon skänker bort cyklarna gratis, och hon ger dem till nyinflyttade och yngre barn i området – inte bara till kompisar."
         },
         {
           "kind": "open",
@@ -1174,7 +1199,8 @@
             "Novell.",
             "Faktatext ur en uppslagsbok."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten har allt som kännetecknar ett reportage: en miljöbeskrivning som sätter scenen (”Det luktar olja och gummi i garaget”), intervjucitat från flera personer, underrubriker och en faktaruta. En insändare hade i stället drivit skribentens egen åsikt, och en novell hade varit påhittad skönlitteratur."
         },
         {
           "kind": "open",
