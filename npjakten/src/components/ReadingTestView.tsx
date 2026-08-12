@@ -377,6 +377,14 @@ export default function ReadingTestView({
             <p className="mt-1 font-serif text-4xl font-bold text-np-dark">
               {score} / {scoredMaxPoints} poäng
             </p>
+            {allOpenScored && scoredMaxPoints > 0 && (
+              <p className="mt-2 text-sm text-stone-600">
+                Det är {Math.round((score / scoredMaxPoints) * 100)} % av poängen. Som
+                jämförelse brukar gränsen för godkänt (E) på de riktiga proven ligga
+                runt 50–60 % av maxpoängen – men gränserna sätts om varje år, så det
+                här är bara en fingervisning.
+              </p>
+            )}
             {!allOpenScored && (
               <p className="mt-2 text-sm text-stone-600">
                 {unscoredCount} öppna{" "}
@@ -525,6 +533,16 @@ function QuestionView({
               </button>
             );
           })}
+          {reviewing && q.explanation && (
+            <div className="mt-3 rounded-md border-l-4 border-np bg-np-light p-4">
+              <p className="text-sm font-bold uppercase tracking-wide text-np">
+                Därför är det rätt
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-stone-700">
+                {q.explanation}
+              </p>
+            </div>
+          )}
         </div>
       ) : q.kind === "open" ? (
         <div className="mt-4 pl-2 sm:pl-20">
