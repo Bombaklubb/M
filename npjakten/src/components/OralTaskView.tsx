@@ -1,21 +1,44 @@
 import { useEffect, useState } from "react";
 import type { OralTask } from "../types";
 import IllustrationImg from "./IllustrationImg";
+import StrategyTips from "./StrategyTips";
+import ReadAloudButton from "./ReadAloudButton";
+import OralObservationSheet from "./OralObservationSheet";
 
 interface Props {
   task: OralTask;
   gradeLabel: string;
+  teacherMode: boolean;
   onBack: () => void;
 }
 
 // Muntligt delprov A: gruppsamtal. Appen ger struktur, samtalskort och
 // självskattning – själva samtalet sker i klassrummet.
-export default function OralTaskView({ task, gradeLabel, onBack }: Props) {
+export default function OralTaskView({
+  task,
+  gradeLabel,
+  teacherMode,
+  onBack,
+}: Props) {
   const [checked, setChecked] = useState<boolean[]>(() =>
     task.assessmentPoints.map(() => false)
   );
   // Kort-utskrift: döljer allt utom kort-arket (samma mönster som facit)
   const [cardsMode, setCardsMode] = useState(false);
+  // Lärarens observationsschema
+  const [obsMode, setObsMode] = useState(false);
+
+  useEffect(() => {
+    if (!obsMode) return;
+    const off = () => setObsMode(false);
+    window.addEventListener("afterprint", off);
+    window.print();
+    const timer = setTimeout(off, 1000);
+    return () => {
+      window.removeEventListener("afterprint", off);
+      clearTimeout(timer);
+    };
+  }, [obsMode]);
 
   useEffect(() => {
     if (!cardsMode) return;
@@ -31,13 +54,22 @@ export default function OralTaskView({ task, gradeLabel, onBack }: Props) {
   }, [cardsMode]);
 
   return (
-    <div className={"mx-auto max-w-3xl" + (cardsMode ? " print-cards" : "")}>
+    <div
+      className={
+        "mx-auto max-w-3xl" +
+        (cardsMode ? " print-cards" : "") +
+        (obsMode ? " print-facit" : "")
+      }
+    >
       <button
+        type="button"
         onClick={onBack}
         className="no-print mb-4 text-sm font-medium text-np hover:underline"
       >
         ← Tillbaka till delproven
       </button>
+
+      <StrategyTips variant="muntligt" />
 
       <div className="paper">
         <p className="text-right text-xs italic text-stone-500">
@@ -49,20 +81,36 @@ export default function OralTaskView({ task, gradeLabel, onBack }: Props) {
         <div className="mt-6 flex items-start justify-between gap-4">
           <h1 className="font-serif text-3xl font-bold">{task.title}</h1>
           <span className="no-print mt-1 flex shrink-0 flex-col items-end gap-1">
+            <ReadAloudButton
+              label="Lyssna på instruktionen"
+              chunks={[task.title, ...task.intro, ...task.steps]}
+            />
             <button
+              type="button"
               onClick={() => window.print()}
               title="Skriv ut hela materialet"
-              className="text-sm font-medium text-stone-400 transition hover:text-np hover:underline"
+              className="text-sm font-medium text-stone-500 transition hover:text-np hover:underline"
             >
               🖨 Skriv ut
             </button>
             <button
+              type="button"
               onClick={() => setCardsMode(true)}
               title="Skriv ut bara samtalskorten, att klippa isär"
-              className="text-xs font-medium text-stone-300 transition hover:text-np hover:underline"
+              className="text-xs font-medium text-stone-500 transition hover:text-np hover:underline"
             >
               Skriv ut samtalskorten
             </button>
+            {teacherMode && (
+              <button
+                type="button"
+                onClick={() => setObsMode(true)}
+                title="Skriv ut observationsschema (för läraren)"
+                className="text-xs font-medium text-stone-500 transition hover:text-np hover:underline"
+              >
+                Skriv ut observationsschema
+              </button>
+            )}
           </span>
         </div>
 
@@ -149,12 +197,14 @@ export default function OralTaskView({ task, gradeLabel, onBack }: Props) {
             </li>
           ))}
         </ul>
-        {checked.every(Boolean) && (
+        {checked.length > 0 && checked.every(Boolean) && (
           <p className="mt-4 rounded bg-np-light p-3 text-center font-bold text-np">
             Snyggt jobbat! Ni fick med allt som ett bra samtal behöver. 🎉
           </p>
         )}
       </div>
+      {/* Lärarens observationsschema – syns bara vid den utskriften */}
+      {obsMode && <OralObservationSheet task={task} gradeLabel={gradeLabel} />}
     </div>
   );
 }

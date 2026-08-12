@@ -1,103 +1,189 @@
-import { useEffect, useState } from "react";
-import { grades } from "./data/grades";
+import { useCallback, useEffect, useState } from "react";
+import type { Grade } from "./types";
+import { gradeMeta, loadGrade } from "./data/grades";
+import type { GradeId } from "./data/grades";
 import StartPage from "./components/StartPage";
 import GradePage from "./components/GradePage";
 import ReadingTestView from "./components/ReadingTestView";
 import WritingTaskView from "./components/WritingTaskView";
 import OralTaskView from "./components/OralTaskView";
 import PresentationTaskView from "./components/PresentationTaskView";
+import ReadingSettings from "./components/ReadingSettings";
 
 type View =
   | { name: "start" }
-  | { name: "grade"; gradeId: string }
-  | { name: "reading"; gradeId: string; testId: string }
-  | { name: "writing"; gradeId: string; taskId: string }
-  | { name: "oral"; gradeId: string; taskId: string };
+  | { name: "grade"; gradeId: GradeId }
+  | { name: "reading"; gradeId: GradeId; testId: string }
+  | { name: "writing"; gradeId: GradeId; taskId: string }
+  | { name: "oral"; gradeId: GradeId; taskId: string };
+
+// Lärarläge aktiveras med ?larare i adressen. Då visas facit och
+// bedömningsmallar, som annars inte ska vara nåbara för eleven.
+const teacherMode =
+  typeof window !== "undefined" &&
+  new URLSearchParams(window.location.search).has("larare");
+
+const START: View = { name: "start" };
 
 export default function App() {
-  const [view, setView] = useState<View>({ name: "start" });
+  const [view, setView] = useState<View>(START);
+  const [grade, setGrade] = useState<Grade | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  // Navigering som också lägger vyn i webbläsarhistoriken, så att
+  // bakåtknappen går tillbaka i appen i stället för att lämna den.
+  const navigate = useCallback((next: View) => {
+    setView(next);
+    window.history.pushState(next, "");
+  }, []);
+
+  useEffect(() => {
+    window.history.replaceState(START, "");
+    const onPop = (e: PopStateEvent) => setView((e.state as View) ?? START);
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [view]);
 
-  const grade =
-    view.name !== "start" ? grades.find((g) => g.id === view.gradeId) : undefined;
+  // Ladda aktuell årskurs vid behov (en årskurs i taget)
+  const gradeId = view.name === "start" ? null : view.gradeId;
+  useEffect(() => {
+    if (!gradeId) {
+      setGrade(null);
+      return;
+    }
+    if (grade?.id === gradeId) return;
+    let cancelled = false;
+    setLoading(true);
+    loadGrade(gradeId)
+      .then((g) => {
+        if (!cancelled) setGrade(g);
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [gradeId, grade?.id]);
+
+  const backToGrade = () =>
+    gradeId ? navigate({ name: "grade", gradeId }) : navigate(START);
+
+  // Slår upp ett prov/en uppgift och går tillbaka till årskursvyn om id:t
+  // inte finns, i stället för att krascha.
+  const find = <T extends { id: string }>(list: T[] | undefined, id: string) => {
+    const hit = list?.find((x) => x.id === id);
+    if (!hit) {
+      queueMicrotask(backToGrade);
+      return null;
+    }
+    return hit;
+  };
+
+  const readyGrade = grade && grade.id === gradeId ? grade : null;
 
   return (
     <div className="min-h-screen">
       <header className="np-pattern text-white no-print">
-        <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-3xl items-center justify-between gap-3 px-6 py-4">
           <button
-            onClick={() => setView({ name: "start" })}
+            type="button"
+            onClick={() => navigate(START)}
             className="text-left font-serif text-2xl font-bold tracking-tight"
           >
             NP-jakten
           </button>
-          <span className="hidden text-sm font-medium opacity-90 sm:block">
-            Träna på nationella proven i svenska
-          </span>
+          <ReadingSettings />
         </div>
       </header>
 
       <main className="px-3 py-8 sm:px-6">
         {view.name === "start" && (
-          <StartPage onSelectGrade={(gradeId) => setView({ name: "grade", gradeId })} />
+          <StartPage
+            grades={gradeMeta}
+            onSelectGrade={(id) => navigate({ name: "grade", gradeId: id })}
+          />
         )}
 
-        {view.name === "grade" && grade && (
+        {view.name !== "start" && !readyGrade && (
+          <p className="text-center text-sm text-stone-500">
+            {loading ? "Laddar övningar …" : ""}
+          </p>
+        )}
+
+        {view.name === "grade" && readyGrade && (
           <GradePage
-            grade={grade}
-            onBack={() => setView({ name: "start" })}
+            grade={readyGrade}
+            onBack={() => navigate(START)}
             onOpenReading={(testId) =>
-              setView({ name: "reading", gradeId: grade.id, testId })
+              navigate({ name: "reading", gradeId: readyGrade.id, testId })
             }
             onOpenWriting={(taskId) =>
-              setView({ name: "writing", gradeId: grade.id, taskId })
+              navigate({ name: "writing", gradeId: readyGrade.id, taskId })
             }
             onOpenOral={(taskId) =>
-              setView({ name: "oral", gradeId: grade.id, taskId })
+              navigate({ name: "oral", gradeId: readyGrade.id, taskId })
             }
           />
         )}
 
-        {view.name === "reading" && grade && (
-          <ReadingTestView
-            key={view.testId}
-            test={grade.reading.find((t) => t.id === view.testId)!}
-            gradeId={grade.id}
-            gradeLabel={grade.label}
-            onBack={() => setView({ name: "grade", gradeId: grade.id })}
-          />
-        )}
+        {view.name === "reading" &&
+          readyGrade &&
+          (() => {
+            const test = find(readyGrade.reading, view.testId);
+            if (!test) return null;
+            return (
+              <ReadingTestView
+                key={view.testId}
+                test={test}
+                gradeId={readyGrade.id}
+                gradeLabel={readyGrade.label}
+                teacherMode={teacherMode}
+                onBack={backToGrade}
+              />
+            );
+          })()}
 
-        {view.name === "writing" && grade && (
-          <WritingTaskView
-            key={view.taskId}
-            task={grade.writing.find((t) => t.id === view.taskId)!}
-            gradeLabel={grade.label}
-            onBack={() => setView({ name: "grade", gradeId: grade.id })}
-          />
-        )}
+        {view.name === "writing" &&
+          readyGrade &&
+          (() => {
+            const task = find(readyGrade.writing, view.taskId);
+            if (!task) return null;
+            return (
+              <WritingTaskView
+                key={view.taskId}
+                task={task}
+                gradeLabel={readyGrade.label}
+                teacherMode={teacherMode}
+                onBack={backToGrade}
+              />
+            );
+          })()}
 
         {view.name === "oral" &&
-          grade &&
+          readyGrade &&
           (() => {
-            const task = grade.oral!.find((t) => t.id === view.taskId)!;
+            const task = find(readyGrade.oral, view.taskId);
+            if (!task) return null;
             const Viewer =
               task.kind === "presentation" ? PresentationTaskView : OralTaskView;
             return (
               <Viewer
                 key={view.taskId}
                 task={task}
-                gradeLabel={grade.label}
-                onBack={() => setView({ name: "grade", gradeId: grade.id })}
+                gradeLabel={readyGrade.label}
+                teacherMode={teacherMode}
+                onBack={backToGrade}
               />
             );
           })()}
       </main>
 
-      <footer className="no-print pb-10 text-center text-xs text-stone-400">
+      <footer className="no-print pb-10 text-center text-xs text-stone-500">
         NP-jakten – övningsuppgifter i de nationella provens format. Allt innehåll är
         nyskrivet övningsmaterial.
       </footer>

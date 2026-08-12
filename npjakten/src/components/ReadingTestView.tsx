@@ -5,12 +5,14 @@ import IllustrationImg from "./IllustrationImg";
 import StrategyTips from "./StrategyTips";
 import FacitSheet from "./FacitSheet";
 import ReadAloudButton from "./ReadAloudButton";
-import { saveTestResult } from "../lib/results";
+import { clearTestResult, saveTestResult } from "../lib/results";
+import { safeGetJson, safeRemove, safeSet } from "../lib/storage";
 
 interface Props {
   test: ReadingTest;
   gradeId: string;
   gradeLabel: string;
+  teacherMode: boolean;
   onBack: () => void;
 }
 
@@ -25,20 +27,18 @@ interface SavedProgress {
   reviewing?: boolean;
 }
 
-function loadProgress(key: string): SavedProgress {
-  try {
-    const raw = localStorage.getItem(key);
-    const parsed = raw ? JSON.parse(raw) : null;
-    return parsed && typeof parsed === "object" ? parsed : {};
-  } catch {
-    return {};
-  }
-}
-
-export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: Props) {
-  const progressKey = `npjakten-lasa-${test.id}`;
+export default function ReadingTestView({
+  test,
+  gradeId,
+  gradeLabel,
+  teacherMode,
+  onBack,
+}: Props) {
+  const progressKey = `npjakten-lasa-${gradeId}-${test.id}`;
   // Läses en gång per mount (komponenten remountas per prov via key)
-  const [saved] = useState<SavedProgress>(() => loadProgress(progressKey));
+  const [saved] = useState<SavedProgress>(() =>
+    safeGetJson<SavedProgress>(progressKey, {})
+  );
 
   const [mcAnswers, setMcAnswers] = useState<Record<number, number>>(
     () => saved.mc ?? {}
@@ -56,6 +56,8 @@ export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: P
   const [reviewing, setReviewing] = useState(() => saved.reviewing ?? false);
   // Facit-utskrift: döljer elevhäftena och skriver ut FacitSheet i stället
   const [facitMode, setFacitMode] = useState(false);
+  // Hindrar autosparningen från att återskapa nyckeln efter "Gör om provet"
+  const [justReset, setJustReset] = useState(false);
   // På små skärmar visas texten och uppgifterna som flikar i stället
   // för under varandra, så att eleven slipper scrolla fram och tillbaka.
   const [mobileTab, setMobileTab] = useState<"text" | "questions">("text");
@@ -97,10 +99,39 @@ export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: P
     .filter((q) => q.kind === "open")
     .every((q) => selfPoints[q.id] !== undefined);
 
+  const unscoredCount = test.questions.filter(
+    (q) => q.kind === "open" && selfPoints[q.id] === undefined
+  ).length;
+
+  // Maxpoäng för det som faktiskt är rättat – samma nämnare som statistiken,
+  // så att eleven inte ser två olika resultat för samma prov.
+  const scoredMaxPoints = test.questions.reduce(
+    (sum, q) =>
+      q.kind === "open" && selfPoints[q.id] === undefined ? sum : sum + q.maxPoints,
+    0
+  );
+
+  // Rättar provet, men varnar först om uppgifter är obesvarade – annars är
+  // det lätt att av misstag avslöja hela facit.
+  const startReview = () => {
+    const left = test.questions.length - answeredCount;
+    if (
+      left > 0 &&
+      !window.confirm(
+        `Du har ${left} obesvarade ${left === 1 ? "uppgift" : "uppgifter"}. ` +
+          "Rättar du nu visas alla rätta svar. Vill du rätta ändå?"
+      )
+    )
+      return;
+    setJustReset(false);
+    setReviewing(true);
+  };
+
   // Spara resultatet till statistiken när provet rättas, och uppdatera det
-  // varje gång eleven sätter poäng på en öppen fråga.
+  // varje gång eleven sätter poäng på en öppen fråga. Ett prov som rättats
+  // helt utan svar sparas inte – annars förgiftas statistiken av nollor.
   useEffect(() => {
-    if (!reviewing) return;
+    if (!reviewing || answeredCount === 0) return;
     saveTestResult({
       testId: test.id,
       gradeId,
@@ -115,28 +146,27 @@ export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: P
       })),
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [reviewing, selfPoints]);
+  }, [reviewing, selfPoints, answeredCount]);
 
-  // Spara pågående svar löpande så att eleven inte tappar dem vid omladdning
+  // Spara pågående svar löpande så att eleven inte tappar dem vid omladdning.
+  // `justReset` hindrar den pendlande skrivningen från att återskapa nyckeln
+  // direkt efter att eleven valt "Gör om provet".
   useEffect(() => {
+    if (justReset) return;
     const timer = setTimeout(() => {
-      try {
-        localStorage.setItem(
-          progressKey,
-          JSON.stringify({
-            mc: mcAnswers,
-            open: openAnswers,
-            order: orderAnswers,
-            self: selfPoints,
-            reviewing,
-          } satisfies SavedProgress)
-        );
-      } catch {
-        // localStorage kan vara avstängt – provet fungerar ändå
-      }
+      safeSet(
+        progressKey,
+        JSON.stringify({
+          mc: mcAnswers,
+          open: openAnswers,
+          order: orderAnswers,
+          self: selfPoints,
+          reviewing,
+        } satisfies SavedProgress)
+      );
     }, 400);
     return () => clearTimeout(timer);
-  }, [progressKey, mcAnswers, openAnswers, orderAnswers, selfPoints, reviewing]);
+  }, [justReset, progressKey, mcAnswers, openAnswers, orderAnswers, selfPoints, reviewing]);
 
   // Facit-utskrift: skriv ut när läget aktiverats och återställ efteråt.
   useEffect(() => {
@@ -211,19 +241,24 @@ export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: P
               ]}
             />
             <button
+              type="button"
               onClick={() => window.print()}
               title="Skriv ut texten och frågorna"
-              className="text-sm font-medium text-stone-400 transition hover:text-np hover:underline"
+              className="text-sm font-medium text-stone-500 transition hover:text-np hover:underline"
             >
               🖨 Skriv ut
             </button>
-            <button
-              onClick={() => setFacitMode(true)}
-              title="Skriv ut facit och bedömningsmall (för läraren)"
-              className="text-xs font-medium text-stone-300 transition hover:text-np hover:underline"
-            >
-              Skriv ut facit
-            </button>
+            {/* Facit är lärarmaterial och visas bara i lärarläge (?larare) */}
+            {teacherMode && (
+              <button
+                type="button"
+                onClick={() => setFacitMode(true)}
+                title="Skriv ut facit och bedömningsmall (för läraren)"
+                className="text-xs font-medium text-stone-500 transition hover:text-np hover:underline"
+              >
+                Skriv ut facit
+              </button>
+            )}
           </span>
         </div>
 
@@ -319,11 +354,16 @@ export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: P
 
         {!reviewing ? (
           <div className="no-print mt-10 border-t border-stone-200 pt-6 text-center">
-            <p className="mb-3 text-sm text-stone-500">
+            <p className="mb-1 text-sm text-stone-500">
               Du har besvarat {answeredCount} av {test.questions.length} uppgifter.
             </p>
+            <p className="mb-3 text-xs text-stone-500">
+              När du rättar låses dina svar och alla rätta svar visas. Öppna frågor
+              sätter du poäng på själv med hjälp av bedömningsanvisningen.
+            </p>
             <button
-              onClick={() => setReviewing(true)}
+              type="button"
+              onClick={startReview}
               className="rounded-md bg-np px-8 py-3 font-bold text-white transition hover:bg-np-dark"
             >
               Rätta provet
@@ -335,26 +375,42 @@ export default function ReadingTestView({ test, gradeId, gradeLabel, onBack }: P
               Ditt resultat
             </p>
             <p className="mt-1 font-serif text-4xl font-bold text-np-dark">
-              {score} / {maxPoints} poäng
+              {score} / {scoredMaxPoints} poäng
             </p>
+            {allOpenScored && scoredMaxPoints > 0 && (
+              <p className="mt-2 text-sm text-stone-600">
+                Det är {Math.round((score / scoredMaxPoints) * 100)} % av poängen. Som
+                jämförelse brukar gränsen för godkänt (E) på de riktiga proven ligga
+                runt 50–60 % av maxpoängen – men gränserna sätts om varje år, så det
+                här är bara en fingervisning.
+              </p>
+            )}
             {!allOpenScored && (
               <p className="mt-2 text-sm text-stone-600">
-                Glöm inte att sätta poäng på dina öppna svar här ovanför – jämför med
-                bedömningsanvisningen, precis som en lärare gör.
+                {unscoredCount} öppna{" "}
+                {unscoredCount === 1 ? "uppgift är" : "uppgifter är"} inte rättade än
+                och räknas inte med. Sätt poäng på dem här ovanför – jämför med
+                bedömningsanvisningen, precis som en lärare gör. Provets maxpoäng är{" "}
+                {maxPoints}.
               </p>
             )}
             <button
+              type="button"
               onClick={() => {
+                if (
+                  !window.confirm(
+                    "Vill du göra om provet? Dina svar och ditt resultat rensas."
+                  )
+                )
+                  return;
+                setJustReset(true);
                 setMcAnswers({});
                 setOpenAnswers({});
                 setOrderAnswers({});
                 setSelfPoints({});
                 setReviewing(false);
-                try {
-                  localStorage.removeItem(progressKey);
-                } catch {
-                  // ignorera – nollställningen av state räcker
-                }
+                safeRemove(progressKey);
+                clearTestResult(gradeId, test.id);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               className="mt-4 rounded-md border-2 border-np px-6 py-2 font-bold text-np transition hover:bg-white"
@@ -406,7 +462,19 @@ function QuestionView({
           </p>
         </div>
         <p className="whitespace-pre-line pt-1 font-medium leading-relaxed">
-          <span className="font-bold">{q.id}.</span> {q.prompt}
+          <span className="font-bold">{q.id}.</span> {q.prompt}{" "}
+          <ReadAloudButton
+            compact
+            chunks={[
+              `Uppgift ${q.id}.`,
+              q.prompt,
+              ...(q.kind === "open" && q.note ? [q.note] : []),
+              ...(q.kind === "multiple-choice"
+                ? q.options.map((o, i) => `${LETTERS[i]}. ${o}`)
+                : []),
+              ...(q.kind === "ordering" ? q.items : []),
+            ]}
+          />
           {reviewing && q.kind === "multiple-choice" && q.category && (
             <span
               className="ml-2 rounded bg-stone-100 px-1.5 py-0.5 text-xs font-semibold text-stone-500"
@@ -445,9 +513,15 @@ function QuestionView({
             return (
               <button
                 key={index}
-                onClick={() => onSelectMc(index)}
-                disabled={reviewing}
-                className={`flex w-full items-center gap-3 rounded border-2 p-3 text-left transition ${style}`}
+                type="button"
+                onClick={() => !reviewing && onSelectMc(index)}
+                // aria-disabled i stället för disabled: efter rättning ska
+                // alternativen fortfarande gå att nå med tangentbord/skärmläsare
+                aria-disabled={reviewing}
+                aria-pressed={selected}
+                className={`flex w-full items-center gap-3 rounded border-2 p-3 text-left transition ${style} ${
+                  reviewing ? "cursor-default" : ""
+                }`}
               >
                 <span
                   className={
@@ -459,7 +533,7 @@ function QuestionView({
                         : "border-stone-400 text-stone-600")
                   }
                 >
-                  {LETTERS[index]}
+                  {reviewing && isCorrect ? "✓" : LETTERS[index]}
                 </span>
                 <span className="text-sm sm:text-base">{option}</span>
                 {reviewing && isCorrect && (
@@ -471,6 +545,16 @@ function QuestionView({
               </button>
             );
           })}
+          {reviewing && q.explanation && (
+            <div className="mt-3 rounded-md border-l-4 border-np bg-np-light p-4">
+              <p className="text-sm font-bold uppercase tracking-wide text-np">
+                Därför är det rätt
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-stone-700">
+                {q.explanation}
+              </p>
+            </div>
+          )}
         </div>
       ) : q.kind === "open" ? (
         <div className="mt-4 pl-2 sm:pl-20">
@@ -478,10 +562,16 @@ function QuestionView({
           <textarea
             value={openAnswer}
             onChange={(e) => onChangeOpen(e.target.value)}
-            disabled={reviewing}
+            // readOnly i stället för disabled: svaret ska gå att läsa och
+            // markera med tangentbord även efter rättning
+            readOnly={reviewing}
             rows={q.lines}
+            aria-label={`Ditt svar på uppgift ${q.id}`}
             placeholder="Skriv ditt svar här ..."
-            className="w-full resize-y rounded border-2 border-stone-300 bg-white p-3 font-serif leading-relaxed focus:border-np focus:outline-none disabled:bg-stone-50"
+            className={
+              "w-full resize-y rounded border-2 border-stone-300 p-3 font-serif leading-relaxed focus-visible:border-np focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-np " +
+              (reviewing ? "bg-stone-50" : "bg-white")
+            }
           />
           {reviewing && (
             <div className="mt-3 rounded-md border-l-4 border-np bg-np-light p-4">
@@ -557,8 +647,11 @@ function QuestionView({
                   {q.items.map((_, pos) => (
                     <button
                       key={pos}
-                      onClick={() => onSelectOrder(itemIndex, pos + 1)}
-                      disabled={reviewing}
+                      type="button"
+                      onClick={() => !reviewing && onSelectOrder(itemIndex, pos + 1)}
+                      aria-disabled={reviewing}
+                      aria-label={`Mening ${LETTERS[itemIndex]}: nummer ${pos + 1}`}
+                      aria-pressed={chosen === pos + 1}
                       className={
                         "h-8 w-8 rounded border-2 text-sm font-bold transition " +
                         (chosen === pos + 1

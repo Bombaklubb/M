@@ -1,4 +1,5 @@
 import type { ReadingAspect } from "../types";
+import { safeGetJson, safeSet } from "./storage";
 
 // Sparade provresultat i localStorage. Endast senaste försöket per prov
 // behålls – panelen ska visa "hur ligger jag till nu", inte historik.
@@ -23,26 +24,27 @@ export interface TestResult {
 
 const KEY = "npjakten-resultat-v1";
 
+// Nyckeln innehåller årskursen så att prov-id som råkar sammanfalla
+// mellan årskurser inte skriver över varandra.
+const entryKey = (gradeId: string, testId: string) => `${gradeId}:${testId}`;
+
 function readAll(): Record<string, TestResult> {
-  try {
-    const raw = localStorage.getItem(KEY);
-    if (!raw) return {};
-    const parsed = JSON.parse(raw);
-    return parsed && typeof parsed === "object" ? parsed : {};
-  } catch {
-    return {};
-  }
+  return safeGetJson<Record<string, TestResult>>(KEY, {});
 }
 
 export function saveTestResult(result: TestResult): void {
-  try {
-    const all = readAll();
-    all[result.testId] = result;
-    localStorage.setItem(KEY, JSON.stringify(all));
-  } catch {
-    // localStorage kan vara avstängt (privat läge) – statistiken är
-    // en bonusfunktion, så vi låter provet fungera ändå.
-  }
+  const all = readAll();
+  all[entryKey(result.gradeId, result.testId)] = result;
+  safeSet(KEY, JSON.stringify(all));
+}
+
+// Tar bort ett enskilt provresultat, t.ex. när eleven gör om provet.
+export function clearTestResult(gradeId: string, testId: string): void {
+  const all = readAll();
+  delete all[entryKey(gradeId, testId)];
+  // Äldre poster sparades utan årskursprefix – städa bort dem också
+  delete all[testId];
+  safeSet(KEY, JSON.stringify(all));
 }
 
 export function loadResults(gradeId?: string): TestResult[] {
@@ -51,13 +53,9 @@ export function loadResults(gradeId?: string): TestResult[] {
 }
 
 export function clearResults(gradeId: string): void {
-  try {
-    const all = readAll();
-    for (const id of Object.keys(all)) {
-      if (all[id].gradeId === gradeId) delete all[id];
-    }
-    localStorage.setItem(KEY, JSON.stringify(all));
-  } catch {
-    // se ovan
+  const all = readAll();
+  for (const id of Object.keys(all)) {
+    if (all[id]?.gradeId === gradeId) delete all[id];
   }
+  safeSet(KEY, JSON.stringify(all));
 }

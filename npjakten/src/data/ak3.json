@@ -58,7 +58,8 @@
             "Han heter Lurvig.",
             "Han heter Sara."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "I texten står det att Sara har med sig sin hund Ludde. Lurvig är bara ett ord som beskriver hur han ser ut."
         },
         {
           "kind": "multiple-choice",
@@ -72,7 +73,8 @@
             "Hon har ont i benet och kan inte gå.",
             "Hon ska börja ett nytt jobb."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Sara säger själv: ”Jag ska resa bort över helgen.” Därför behöver hon någon som passar Ludde."
         },
         {
           "kind": "multiple-choice",
@@ -86,7 +88,8 @@
             "Mamma tycker att en hund är ett stort ansvar.",
             "Otto är allergisk mot hundar."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Mamma svarar ”Inte än” och säger att en hund är ett stort ansvar. Det står alltså inte att hon ogillar hundar."
         },
         {
           "kind": "multiple-choice",
@@ -100,7 +103,8 @@
             "En fågel.",
             "En glasstrut."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "I texten står det att Ludde fick syn på en katt och sprang efter den. Glasstruten nosade han bara på innan."
         },
         {
           "kind": "multiple-choice",
@@ -114,7 +118,8 @@
             "Otto har blivit förkyld.",
             "Otto är hungrig."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "När det sticker i ögonen och klumpen i halsen växer är man nära att börja gråta. Otto var ledsen för att Ludde var borta."
         },
         {
           "kind": "multiple-choice",
@@ -128,21 +133,23 @@
             "Han ska ringa till Sara.",
             "Han ska prassla med godispåsen."
           ],
-          "correctIndex": 3
+          "correctIndex": 3,
+          "explanation": "Sara sa: ”Om Ludde springer i väg ska du prassla med godispåsen.” Då kommer han alltid tillbaka."
         },
         {
           "kind": "multiple-choice",
           "id": 7,
           "maxPoints": 1,
           "category": "TI",
-          "prompt": "Varför kommer Ludde tillbaka till Otto?",
+          "prompt": "Otto svarar ”Jättebra” när Sara frågar hur helgen har gått, men säger inget om att Ludde sprang i väg. Vad visar det om Otto? Kryssa för rätt alternativ.",
           "options": [
-            "Han hör prasslet och vill ha godis.",
-            "Han hittar inte hem själv.",
-            "Han är trött efter att ha sprungit.",
-            "Katten jagar bort honom."
+            "Han hade glömt bort att Ludde sprang i väg.",
+            "Han vill helst inte berätta om det som gick fel.",
+            "Han tyckte inte att Ludde sprang i väg på riktigt.",
+            "Han var arg på Sara."
           ],
-          "correctIndex": 0
+          "correctIndex": 1,
+          "explanation": "Otto berättar bara om promenaderna för Sara. Samma kväll berättar han allt för mamma – ”till och med det där om katten”. Att han sparar den delen till mamma visar att han helst inte vill berätta om missen för Sara."
         },
         {
           "kind": "multiple-choice",
@@ -156,7 +163,8 @@
             "Han blev arg på Ludde.",
             "Han började frysa."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Att pusta ut betyder att man slappnar av när något jobbigt är över. Otto hade fått tillbaka Ludde och kände sig lugn."
         },
         {
           "kind": "multiple-choice",
@@ -170,7 +178,8 @@
             "Sara har sagt att Ludde ska ha två.",
             "Otto vill bli av med godiset."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Otto var så glad och lättad att Ludde kom tillbaka att han gav en godis extra. Det står inget om att Sara bestämt två."
         },
         {
           "kind": "multiple-choice",
@@ -184,7 +193,8 @@
             "Att Otto ska få en egen hund.",
             "Att resan var jobbig."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Sara säger: ”Du får gärna passa Ludde fler gånger.” Hon tycker att Otto har skött det bra."
         },
         {
           "kind": "multiple-choice",
@@ -198,7 +208,8 @@
             "Han tror att han snart kan få en egen hund.",
             "Han ska få godis av Sara."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Mamma säger ”Vi får se till sommaren”, och för Otto låter det nästan som ett ja. Därför ler han."
         },
         {
           "kind": "multiple-choice",
@@ -212,7 +223,8 @@
             "Att han tycker om katter.",
             "Att han ofta tappar bort saker."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Otto tog hand om Ludde alldeles själv, även när det blev svårt. Det visar att han kan ta ansvar."
         },
         {
           "kind": "ordering",
@@ -288,14 +300,15 @@
           "id": 1,
           "maxPoints": 1,
           "category": "L",
-          "prompt": "Vad gör igelkotten när den blir rädd?",
+          "prompt": "Hur många taggar har igelkotten på ryggen, enligt texten? Kryssa för rätt alternativ.",
           "options": [
-            "Den springer upp i ett träd.",
-            "Den rullar ihop sig till en taggig boll.",
-            "Den gräver ner sig i marken.",
-            "Den låter högt för att skrämmas."
+            "Ungefär tio.",
+            "Ungefär hundra.",
+            "Flera tusen.",
+            "Fler än en miljon."
           ],
-          "correctIndex": 1
+          "correctIndex": 2,
+          "explanation": "I stycket om taggarna står det: ”Igelkottens rygg är täckt av flera tusen taggar.” Det är många fler än hundra, men inte så många som en miljon."
         },
         {
           "kind": "multiple-choice",
@@ -309,7 +322,8 @@
             "De skyddar igelkotten mot fiender.",
             "De gör så att igelkotten kan klättra."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Texten säger att taggarna är igelkottens bästa skydd mot fiender. De används alltså inte för att hitta mat."
         },
         {
           "kind": "multiple-choice",
@@ -323,7 +337,8 @@
             "På morgonen.",
             "Hela dygnet."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "På dagen sover igelkotten, och när det blir mörkt vaknar den. Därför är den vaken på natten."
         },
         {
           "kind": "multiple-choice",
@@ -337,7 +352,8 @@
             "Att sova hela natten.",
             "Att jaga andra djur."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "I texten står det: djur som är vakna på natten kallas nattaktiva. Det handlar alltså inte om att vara rädd för mörkret."
         },
         {
           "kind": "multiple-choice",
@@ -351,7 +367,8 @@
             "Gräs och löv.",
             "Fisk och musslor."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten räknar upp att igelkotten äter insekter, sniglar och maskar."
         },
         {
           "kind": "multiple-choice",
@@ -365,7 +382,8 @@
             "Den ska klara sig utan mat hela vintern.",
             "Den ska hålla taggarna varma."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "På vintern finns nästan ingen mat, och då sover igelkotten. Därför måste den äta upp sig i förväg så att den klarar sig."
         },
         {
           "kind": "multiple-choice",
@@ -379,7 +397,8 @@
             "Den tycker inte om att vara ute när det är mörkt.",
             "Den är trött efter sommaren."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Texten förklarar att det nästan inte finns några insekter, sniglar eller maskar på vintern. Därför sover igelkotten i stället."
         },
         {
           "kind": "multiple-choice",
@@ -393,7 +412,8 @@
             "Uppe i ett träd.",
             "I en fågelholk."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Igelkotten kryper in i en hög med löv på hösten och vaknar inte förrän på våren."
         },
         {
           "kind": "multiple-choice",
@@ -407,7 +427,8 @@
             "Den är blöt och kall.",
             "Den är pigg och mätt."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "I texten står det att igelkotten har blivit mager och genast måste börja leta mat igen. Rund och tjock är den innan vintern."
         },
         {
           "kind": "multiple-choice",
@@ -421,7 +442,8 @@
             "Det är jobbigt att kratta löv.",
             "Fåglarna bygger bon av löven."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten tipsar om att låta en hög med löv ligga kvar, för då kan en igelkott sova där."
         },
         {
           "kind": "multiple-choice",
@@ -435,7 +457,8 @@
             "Mjölken lockar till sig katter.",
             "Mjölken gör taggarna mjuka."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten säger tydligt att igelkotten får ont i magen av mjölk. Vatten är bäst för en törstig igelkott."
         },
         {
           "kind": "multiple-choice",
@@ -449,7 +472,8 @@
             "Visa hur man kan hjälpa igelkotten.",
             "Beskriva hur igelkotten ser ut."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Sista stycket ger tips: låt lövhögen ligga, ställ ut vatten och ge inte mjölk. Det handlar alltså om hur man kan hjälpa igelkotten."
         }
       ],
       "image": {
@@ -520,7 +544,8 @@
             "Få en egen igelkott.",
             "Sova inne hos Milo."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Redan i början står det att Vera ville sova i tält på gården, alldeles själv, en hel natt."
         },
         {
           "kind": "multiple-choice",
@@ -531,10 +556,11 @@
           "options": [
             "En bok och en lampa.",
             "Sin kudde, sin ficklampa och sin nalle.",
-            "En smörgås och en filt.",
+            "Sin sovsäck och sin mobiltelefon.",
             "Sin storebror Milo."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "I texten står det rakt ut vad Vera tog med sig: ”sin kudde, sin ficklampa och sin nallebjörn”. Någon sovsäck eller mobil nämns aldrig."
         },
         {
           "kind": "multiple-choice",
@@ -548,7 +574,8 @@
             "Hon ville visa Milo att hon vågade.",
             "Hon var aldrig rädd för mörkret."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Milo sa att hon skulle bli rädd i mörkret, och Vera ville visa att hon vågade. I slutet förstår vi att hon ändå var lite rädd."
         },
         {
           "kind": "multiple-choice",
@@ -562,7 +589,8 @@
             "Ett prassel.",
             "Ett tjut."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "I texten står det ”Prassel, prassel” om ljudet från buskarna bakom tältet."
         },
         {
           "kind": "multiple-choice",
@@ -576,7 +604,8 @@
             "Vera var arg.",
             "Vera frös."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "När hjärtat slår hårt är man ofta rädd. Vera kröp ihop under filten och kramade nallen så hårt hon kunde."
         },
         {
           "kind": "multiple-choice",
@@ -590,7 +619,8 @@
             "Hon hittade inte vägen i mörkret.",
             "Milo hade redan somnat."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Vera tänkte att Milo skulle säga ”vad var det jag sa” hela morgonen. Hon ville inte att han skulle få rätt."
         },
         {
           "kind": "multiple-choice",
@@ -604,7 +634,8 @@
             "En igelkott.",
             "Milo."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "När Vera lyste ut i mörkret satt en liten igelkott och nosade på ett äpple. Det var den som hade prasslat."
         },
         {
           "kind": "multiple-choice",
@@ -618,7 +649,8 @@
             "Milo tittade ut genom fönstret.",
             "Äpplet smakade gott."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Vera skrattade när hon förstod att hon varit rädd för en liten igelkott som åt äpplen. Det var alltså inget farligt."
         },
         {
           "kind": "multiple-choice",
@@ -632,7 +664,8 @@
             "Den åt upp äpplet.",
             "Den fräste."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "I texten står det att igelkotten rullade ihop sig till en liten boll när ljuset träffade den."
         },
         {
           "kind": "multiple-choice",
@@ -646,7 +679,8 @@
             "Precis lika läskigt som förut.",
             "Kallt och blött."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten säger att mörkret inte längre kändes så farligt. Vera hade ju sett vad ljudet kom från."
         },
         {
           "kind": "multiple-choice",
@@ -660,7 +694,8 @@
             "Vera var aldrig rädd för någonting.",
             "Vera tänkte sova ute igen nästa natt."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Vera säger att hon inte är rädd för någonting. Ordet ”nästan” visar att hon faktiskt var lite rädd, men vågade ändå."
         },
         {
           "kind": "multiple-choice",
@@ -674,7 +709,8 @@
             "Att hon inte tycker om sin storebror.",
             "Att hon aldrig blir trött."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Vera var rädd i mörkret, men vågade titta ut och sova kvar hela natten. Det är att vara modig."
         },
         {
           "kind": "ordering",
@@ -759,7 +795,8 @@
             "I ett träd.",
             "I ett bo av gräs."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "I texten står det att många myror bor i en myrstack, som ser ut som en hög med barr och pinnar."
         },
         {
           "kind": "multiple-choice",
@@ -773,7 +810,8 @@
             "Att lägga ägg.",
             "Att gräva gångar."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Texten säger att drottningens enda jobb är att lägga ägg."
         },
         {
           "kind": "multiple-choice",
@@ -787,7 +825,8 @@
             "För att myrorna lever länge.",
             "För att myrorna hittar mat."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Drottningen lägger ägg hela tiden, och därför kommer det nya myror i stacken."
         },
         {
           "kind": "multiple-choice",
@@ -801,7 +840,8 @@
             "De ser maten på långt håll.",
             "De gräver en gång dit."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "En myra som hittat mat lämnar ett luktspår, och de andra myrorna följer spåret. Myror kan inte prata med varandra som vi gör."
         },
         {
           "kind": "multiple-choice",
@@ -815,7 +855,8 @@
             "För att de andra myrorna ska hitta maten.",
             "För att märka ut sin egen mat."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Texten säger att de andra myrorna kan följa spåret till maten. Spåret går visserligen hem till stacken, men det är gjort för kompisarnas skull."
         },
         {
           "kind": "multiple-choice",
@@ -829,7 +870,8 @@
             "Väldigt stark – den kan bära mer än den själv väger.",
             "Precis lika stark som en människa."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "I texten står det att en myra kan bära saker som väger mycket mer än den själv."
         },
         {
           "kind": "multiple-choice",
@@ -843,7 +885,8 @@
             "För att myror ibland bär bilar.",
             "För att människor är starkare än myror."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Bilen är ett exempel som hjälper oss förstå hur otroligt stark en myra är jämfört med sin lilla storlek. Myror bär förstås inte riktiga bilar."
         },
         {
           "kind": "multiple-choice",
@@ -857,7 +900,8 @@
             "Bara barr och pinnar.",
             "Frön och nötter."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten säger att myror tycker om sådant som är sött, men att de också äter små insekter."
         },
         {
           "kind": "multiple-choice",
@@ -871,7 +915,8 @@
             "Den torkar ut.",
             "Den blir full av sten."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "När myrorna gräver sina gångar luckras jorden upp, så att växterna trivs bättre."
         },
         {
           "kind": "multiple-choice",
@@ -885,7 +930,8 @@
             "De bygger bon åt fåglar.",
             "De skrämmer bort farliga djur."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Sista stycket säger att myrorna luckrar jorden och städar skogen genom att äta upp döda insekter."
         },
         {
           "kind": "multiple-choice",
@@ -899,7 +945,8 @@
             "Att de är stora djur.",
             "Att de tävlar mot varandra."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Ett lag är många som arbetar tillsammans, och flitig betyder att man jobbar mycket. Myrorna hjälps åt i stacken."
         },
         {
           "kind": "multiple-choice",
@@ -913,7 +960,8 @@
             "Hur man blir av med myror hemma.",
             "Var i världen det finns flest myror."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten berättar var myror bor, hur de arbetar och varför de är viktiga i naturen."
         }
       ],
       "image": {
@@ -979,7 +1027,8 @@
             "På skolgården.",
             "På staketet."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "I texten står det att Noor fick syn på fågelungen i gräset under den stora björken."
         },
         {
           "kind": "multiple-choice",
@@ -993,7 +1042,8 @@
             "Lyfta upp den i trädet.",
             "Ringa till fröken."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Noor säger: ”Vi tar hem den, den behöver hjälp!”"
         },
         {
           "kind": "multiple-choice",
@@ -1007,7 +1057,8 @@
             "Mamma har sagt att de inte får ha husdjur.",
             "Fågelungen ser farlig ut."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Ali kom ihåg från skolan att fågelföräldrarna brukar vara i närheten och inte vågar komma fram om man står för nära."
         },
         {
           "kind": "multiple-choice",
@@ -1021,7 +1072,8 @@
             "För att kunna se ungen utan att skrämma fåglarna.",
             "För att vänta på fröken."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Texten säger att de därifrån kunde se ungen utan att skrämma någon. Katten kom fram först senare."
         },
         {
           "kind": "multiple-choice",
@@ -1035,7 +1087,8 @@
             "En annan fågel.",
             "Noor."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Det prasslade i rabatten, och fram smög grannens katt Misse."
         },
         {
           "kind": "multiple-choice",
@@ -1049,7 +1102,8 @@
             "Han är glad att se Misse.",
             "Han vill att fågelungen ska flyga."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Katten kröp närmare fågelungen, och Ali ville skrämma bort den. Misse hoppade högt och försvann över staketet."
         },
         {
           "kind": "multiple-choice",
@@ -1063,7 +1117,8 @@
             "Hon matar ungen.",
             "Hon bygger ett nytt bo."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "I texten står det att fågeln satte sig bredvid ungen och matade den."
         },
         {
           "kind": "multiple-choice",
@@ -1077,7 +1132,8 @@
             "Hon skulle dyka.",
             "Hon var arg på Ali."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Att hålla andan betyder att man är spänd och alldeles tyst. Noor ville inte störa fåglarna."
         },
         {
           "kind": "multiple-choice",
@@ -1091,7 +1147,8 @@
             "En skata.",
             "En mås."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Ali säger i texten: ”Det är en gråsparv.”"
         },
         {
           "kind": "multiple-choice",
@@ -1105,7 +1162,8 @@
             "Borta utan ett spår.",
             "Högt uppe på en gren."
           ],
-          "correctIndex": 3
+          "correctIndex": 3,
+          "explanation": "Nästa dag var gräset tomt, och högt uppe på en gren satt fågelungen och kvittrade."
         },
         {
           "kind": "multiple-choice",
@@ -1119,7 +1177,8 @@
             "Arg på katten.",
             "Trött och hungrig."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Först blev Noor orolig, men sedan såg hon att ungen kunde flyga och vinkade till fåglarna hela vägen. Då känner man sig glad och lättad."
         },
         {
           "kind": "multiple-choice",
@@ -1133,7 +1192,8 @@
             "Att katter inte tycker om fåglar.",
             "Att gråsparvar inte kan flyga."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Ali visste att man inte ska röra fågelungar, för föräldrarna är i närheten. I slutet klarar sig ungen precis som han sa."
         },
         {
           "kind": "ordering",
@@ -1215,7 +1275,8 @@
             "Visdomständer.",
             "Småtänder."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Texten börjar med att de första tänderna kallas mjölktänder."
         },
         {
           "kind": "multiple-choice",
@@ -1229,7 +1290,8 @@
             "Trettio.",
             "Trettiotvå."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "I texten står det att mjölktänderna är tjugo stycken. Det är en vuxen som har 28 till 32 tänder."
         },
         {
           "kind": "multiple-choice",
@@ -1243,7 +1305,8 @@
             "Alla tänder byts ut på en gång.",
             "Man slutar borsta tänderna."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten säger att mjölktänderna börjar lossna, en i taget, när man är ungefär sex år."
         },
         {
           "kind": "multiple-choice",
@@ -1257,7 +1320,8 @@
             "Emalj.",
             "Syra."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Tandens yta kallas emalj, och den är det hårdaste som finns i kroppen. Karies är i stället namnet på hål i tänderna."
         },
         {
           "kind": "multiple-choice",
@@ -1271,7 +1335,8 @@
             "För att bakterierna inte ska få plats.",
             "För att tandläkaren ska kunna laga dem."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten förklarar att emaljen behöver vara hård för att tänderna ska tugga mat varje dag i många år."
         },
         {
           "kind": "multiple-choice",
@@ -1285,7 +1350,8 @@
             "De flyttar till en annan tand.",
             "De gör emaljen starkare."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "När du äter sött äter bakterierna också, och då bildar de en syra som fräter på emaljen."
         },
         {
           "kind": "multiple-choice",
@@ -1299,35 +1365,38 @@
             "Bakterierna är lediga på lördagar.",
             "Man borstar tänderna oftare på helgen."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten säger att tänderna mår bäst om det söta kommer sällan, till exempel på lördagar."
         },
         {
           "kind": "multiple-choice",
           "id": 8,
           "maxPoints": 1,
           "category": "L",
-          "prompt": "Hur ofta ska man borsta tänderna?",
+          "prompt": "Hur länge ska man borsta tänderna, enligt texten? Kryssa för rätt alternativ.",
           "options": [
-            "En gång i veckan.",
-            "Bara när man ätit godis.",
-            "Två gånger om dagen.",
-            "Fem gånger om dagen."
+            "I trettio sekunder.",
+            "I två minuter.",
+            "I tio minuter.",
+            "Tills tandkrämen tar slut."
           ],
-          "correctIndex": 2
+          "correctIndex": 1,
+          "explanation": "I stycket om hur du tar hand om dina tänder står det: ”Borsta i två minuter och använd tandkräm med fluor.” Svaret står alltså rakt ut i texten."
         },
         {
           "kind": "multiple-choice",
           "id": 9,
           "maxPoints": 1,
           "category": "L",
-          "prompt": "Vad gör fluor?",
+          "prompt": "Vad hjälper fluor till med, förutom att göra emaljen starkare? Kryssa för rätt alternativ.",
           "options": [
-            "Det gör emaljen starkare.",
-            "Det gör tandkrämen söt.",
-            "Det tar bort mjölktänder.",
-            "Det färgar tänderna vita."
+            "Att göra tandkrämen söt.",
+            "Att få mjölktänderna att lossna.",
+            "Att laga små skador innan de blir hål.",
+            "Att göra tänderna vitare."
           ],
-          "correctIndex": 0
+          "correctIndex": 2,
+          "explanation": "Texten säger att fluor ”gör emaljen starkare och hjälper till att laga små skador innan de blir hål”. Det är alltså två saker fluor gör, och frågan gäller den andra."
         },
         {
           "kind": "multiple-choice",
@@ -1341,7 +1410,8 @@
             "En tandläkare.",
             "En mjölktand."
           ],
-          "correctIndex": 1
+          "correctIndex": 1,
+          "explanation": "Texten förklarar att hål i tänderna också kallas karies."
         },
         {
           "kind": "multiple-choice",
@@ -1355,7 +1425,8 @@
             "Tänderna blir hårdare av besöket.",
             "Man slipper borsta tänderna sedan."
           ],
-          "correctIndex": 0
+          "correctIndex": 0,
+          "explanation": "Tandläkaren ser sådant du inte kan se själv, och ju tidigare ett hål upptäcks desto lättare är det att laga."
         },
         {
           "kind": "multiple-choice",
@@ -1369,7 +1440,8 @@
             "Hur tänderna fungerar och hur man tar hand om dem.",
             "Skillnaden mellan barn och vuxna."
           ],
-          "correctIndex": 2
+          "correctIndex": 2,
+          "explanation": "Texten handlar om mjölktänder, emalj, bakterier, borstning och tandläkaren – alltså hur tänderna fungerar och hur man tar hand om dem."
         }
       ]
     }

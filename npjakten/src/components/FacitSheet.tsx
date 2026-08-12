@@ -47,10 +47,17 @@ export default function FacitSheet({ test, gradeLabel }: Props) {
             </p>
 
             {q.kind === "multiple-choice" && (
-              <p className="mt-2 text-sm">
-                <span className="font-bold">Rätt svar:</span>{" "}
-                {LETTERS[q.correctIndex]}. {q.options[q.correctIndex]}
-              </p>
+              <>
+                <p className="mt-2 text-sm">
+                  <span className="font-bold">Rätt svar:</span>{" "}
+                  {LETTERS[q.correctIndex]}. {q.options[q.correctIndex]}
+                </p>
+                {q.explanation && (
+                  <p className="mt-1 text-sm leading-relaxed">
+                    <span className="font-bold">Förklaring:</span> {q.explanation}
+                  </p>
+                )}
+              </>
             )}
 
             {q.kind === "ordering" && (

@@ -18,6 +18,9 @@ export interface MultipleChoiceQuestion {
   // Åk 3: L = lokalisering av information, TI = tolkning och integrering
   category?: "L" | "TI";
   aspect?: ReadingAspect; // åk 9: uppgiftstyp enligt bedömningsmallen
+  // Varför det rätta svaret är rätt. Visas vid rättning så att eleven lär
+  // sig något av att ha svarat fel, inte bara ser rött.
+  explanation?: string;
 }
 
 // Åk 3, delprov B: sista uppgiften – numrera meningarna i rätt ordning
@@ -143,6 +146,7 @@ export interface OralTask {
   cards?: string[]; // samtalskort – frågor/påståenden att dra (samtal)
   topics?: string[]; // ämnesförslag att välja bland (presentation)
   listenerTasks?: string[]; // lyssnarnas uppgift (presentation)
+  needsQuestion?: boolean; // anförandet avslutas med en fråga till gruppen
   assessmentPoints: string[]; // vad läraren lyssnar efter (självskattning)
 }
 

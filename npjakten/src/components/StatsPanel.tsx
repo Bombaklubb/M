@@ -13,6 +13,9 @@ interface Bucket {
   maxPoints: number;
 }
 
+// Minsta antal poäng i en hink innan appen uttalar sig om stark/svag
+const MIN_POINTS_FOR_VERDICT = 6;
+
 const CATEGORY_LABELS: Record<"L" | "TI", string> = {
   L: "Lokalisera information",
   TI: "Tolka och integrera",
@@ -100,47 +103,69 @@ export default function StatsPanel({ grade, onOpenReading }: Props) {
       </div>
 
       <div className="mt-4 space-y-4">
-        {[...buckets.values()].map((b) => {
-          const pct = Math.round((b.points / b.maxPoints) * 100);
-          const weak = pct < 60;
-          const trainTests = weak ? testsFor(b.label) : [];
-          return (
-            <div key={b.label}>
-              <div className="flex items-baseline justify-between gap-2">
-                <p className="text-sm font-semibold text-stone-700">{b.label}</p>
-                <p
-                  className={
-                    "text-sm font-bold " + (weak ? "text-amber-700" : "text-np")
-                  }
-                >
-                  {pct} % ({b.points}/{b.maxPoints} p)
-                </p>
+        {[...buckets.values()]
+          .sort((a, b) => a.label.localeCompare(b.label, "sv"))
+          .map((b) => {
+            const pct = Math.round((b.points / b.maxPoints) * 100);
+            // Under ~6 poäng är underlaget för litet för ett omdöme – en enda
+            // missad fråga skulle annars ge "0 % – träna mer".
+            const enoughData = b.maxPoints >= MIN_POINTS_FOR_VERDICT;
+            const weak = enoughData && pct < 60;
+            const trainTests = weak ? testsFor(b.label) : [];
+            return (
+              <div key={b.label}>
+                <div className="flex items-baseline justify-between gap-2">
+                  <p className="text-sm font-semibold text-stone-700">{b.label}</p>
+                  <p
+                    className={
+                      "text-sm font-bold " +
+                      (!enoughData
+                        ? "text-stone-500"
+                        : weak
+                          ? "text-amber-700"
+                          : "text-np")
+                    }
+                  >
+                    {pct} % ({b.points}/{b.maxPoints} p)
+                  </p>
+                </div>
+                <div className="mt-1 h-3 overflow-hidden rounded-full bg-stone-200">
+                  <div
+                    className={
+                      "h-full " +
+                      (!enoughData ? "bg-stone-400" : weak ? "bg-amber-500" : "bg-np")
+                    }
+                    style={{ width: `${pct}%` }}
+                  />
+                </div>
+                {!enoughData && (
+                  <p className="mt-1 text-xs text-stone-500">
+                    För få uppgifter för att säga något säkert än – gör fler prov.
+                  </p>
+                )}
+                {weak && trainTests.length > 0 && (
+                  <p className="mt-1 text-xs text-stone-600">
+                    <span className="font-semibold text-amber-700">
+                      ▲ Behöver tränas.
+                    </span>{" "}
+                    Träna mer:{" "}
+                    {trainTests.map((t, i) => (
+                      <span key={t.id}>
+                        {i > 0 && " · "}
+                        <button
+                          type="button"
+                          onClick={() => onOpenReading(t.id)}
+                          className="font-semibold text-np hover:underline"
+                        >
+                          {t.title}
+                        </button>
+                      </span>
+                    ))}
+                  </p>
+                )}
               </div>
-              <div className="mt-1 h-3 overflow-hidden rounded-full bg-stone-200">
-                <div
-                  className={"h-full " + (weak ? "bg-amber-500" : "bg-np")}
-                  style={{ width: `${pct}%` }}
-                />
-              </div>
-              {weak && trainTests.length > 0 && (
-                <p className="mt-1 text-xs text-stone-600">
-                  Träna mer:{" "}
-                  {trainTests.map((t, i) => (
-                    <span key={t.id}>
-                      {i > 0 && " · "}
-                      <button
-                        onClick={() => onOpenReading(t.id)}
-                        className="font-semibold text-np hover:underline"
-                      >
-                        {t.title}
-                      </button>
-                    </span>
-                  ))}
-                </p>
-              )}
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-np/20 pt-3">

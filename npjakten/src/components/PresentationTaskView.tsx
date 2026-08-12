@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import type { OralTask } from "../types";
 import IllustrationImg from "./IllustrationImg";
+import { safeGetJson, safeSet } from "../lib/storage";
+import StrategyTips from "./StrategyTips";
+import ReadAloudButton from "./ReadAloudButton";
+import OralObservationSheet from "./OralObservationSheet";
 
 interface Props {
   task: OralTask;
   gradeLabel: string;
+  teacherMode: boolean;
   onBack: () => void;
 }
 
@@ -21,13 +26,7 @@ interface SupportNotes {
 }
 
 function loadNotes(key: string): SupportNotes {
-  try {
-    const raw = localStorage.getItem(key);
-    const parsed = raw ? JSON.parse(raw) : null;
-    return parsed && typeof parsed === "object" ? parsed : {};
-  } catch {
-    return {};
-  }
+  return safeGetJson<SupportNotes>(key, {});
 }
 
 // Ett fält på stödkortet. Vid utskrift med tomt innehåll visas skrivlinjer
@@ -53,7 +52,8 @@ function SupportField({
         onChange={(e) => onChange(e.target.value)}
         rows={rows}
         placeholder={hint}
-        className="no-print mt-1 w-full resize-y rounded border-2 border-stone-200 bg-white p-2 font-serif leading-relaxed focus:border-np focus:outline-none"
+        aria-label={label}
+        className="no-print mt-1 w-full resize-y rounded border-2 border-stone-200 bg-white p-2 font-serif leading-relaxed focus-visible:border-np focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-np"
       />
       {/* Utskriftsversion: ifyllda stödord eller skrivlinjer */}
       <div className="hidden print:block">
@@ -73,7 +73,12 @@ function SupportField({
 
 // Individuell muntlig presentation: eleven väljer ämne, förbereder ett
 // stödkort med stödord och håller anförandet för en mindre grupp.
-export default function PresentationTaskView({ task, gradeLabel, onBack }: Props) {
+export default function PresentationTaskView({
+  task,
+  gradeLabel,
+  teacherMode,
+  onBack,
+}: Props) {
   const storageKey = `npjakten-presentation-${task.id}`;
   const [notes, setNotes] = useState<SupportNotes>(() => loadNotes(storageKey));
   const [checked, setChecked] = useState<boolean[]>(() =>
@@ -81,15 +86,25 @@ export default function PresentationTaskView({ task, gradeLabel, onBack }: Props
   );
   // Stödkorts-utskrift: döljer allt utom stödkortet (samma mönster som facit)
   const [supportMode, setSupportMode] = useState(false);
+  // Lärarens observationsschema
+  const [obsMode, setObsMode] = useState(false);
+
+  useEffect(() => {
+    if (!obsMode) return;
+    const off = () => setObsMode(false);
+    window.addEventListener("afterprint", off);
+    window.print();
+    const timer = setTimeout(off, 1000);
+    return () => {
+      window.removeEventListener("afterprint", off);
+      clearTimeout(timer);
+    };
+  }, [obsMode]);
 
   // Autospara förberedelserna så att inget försvinner
   useEffect(() => {
     const timer = setTimeout(() => {
-      try {
-        localStorage.setItem(storageKey, JSON.stringify(notes));
-      } catch {
-        // localStorage kan vara avstängt – övningen fungerar ändå
-      }
+      safeSet(storageKey, JSON.stringify(notes));
     }, 400);
     return () => clearTimeout(timer);
   }, [notes, storageKey]);
@@ -111,18 +126,27 @@ export default function PresentationTaskView({ task, gradeLabel, onBack }: Props
     setNotes((prev) => ({ ...prev, [field]: value }));
 
   const chosenTopic = notes.ownTopic?.trim() || notes.topic || "";
-  // Åk 9-anföranden avslutas med en fråga till gruppen; fältet visas när
-  // uppgiften nämner en fråga i sina steg.
-  const hasQuestionStep = task.steps.some((s) => s.toLowerCase().includes("fråga"));
+  // Åk 9-anföranden avslutas med en fråga till gruppen. Styrs av en explicit
+  // flagga i innehållet, inte av hur stegen råkar vara formulerade.
+  const hasQuestionStep = task.needsQuestion === true;
 
   return (
-    <div className={"mx-auto max-w-3xl" + (supportMode ? " print-support" : "")}>
+    <div
+      className={
+        "mx-auto max-w-3xl" +
+        (supportMode ? " print-support" : "") +
+        (obsMode ? " print-facit" : "")
+      }
+    >
       <button
+        type="button"
         onClick={onBack}
         className="no-print mb-4 text-sm font-medium text-np hover:underline"
       >
         ← Tillbaka till delproven
       </button>
+
+      <StrategyTips variant="muntligt" />
 
       <div className="paper">
         <p className="text-right text-xs italic text-stone-500">
@@ -134,20 +158,36 @@ export default function PresentationTaskView({ task, gradeLabel, onBack }: Props
         <div className="mt-6 flex items-start justify-between gap-4">
           <h1 className="font-serif text-3xl font-bold">{task.title}</h1>
           <span className="no-print mt-1 flex shrink-0 flex-col items-end gap-1">
+            <ReadAloudButton
+              label="Lyssna på instruktionen"
+              chunks={[task.title, ...task.intro, ...task.steps]}
+            />
             <button
+              type="button"
               onClick={() => window.print()}
               title="Skriv ut hela materialet"
-              className="text-sm font-medium text-stone-400 transition hover:text-np hover:underline"
+              className="text-sm font-medium text-stone-500 transition hover:text-np hover:underline"
             >
               🖨 Skriv ut
             </button>
             <button
+              type="button"
               onClick={() => setSupportMode(true)}
               title="Skriv ut bara stödkortet, att hålla i handen"
-              className="text-xs font-medium text-stone-300 transition hover:text-np hover:underline"
+              className="text-xs font-medium text-stone-500 transition hover:text-np hover:underline"
             >
               Skriv ut stödkortet
             </button>
+            {teacherMode && (
+              <button
+                type="button"
+                onClick={() => setObsMode(true)}
+                title="Skriv ut observationsschema (för läraren)"
+                className="text-xs font-medium text-stone-500 transition hover:text-np hover:underline"
+              >
+                Skriv ut observationsschema
+              </button>
+            )}
           </span>
         </div>
 
@@ -191,6 +231,7 @@ export default function PresentationTaskView({ task, gradeLabel, onBack }: Props
                 return (
                   <button
                     key={topic}
+                    type="button"
                     onClick={() =>
                       setNotes((prev) => ({ ...prev, topic, ownTopic: "" }))
                     }
@@ -211,7 +252,8 @@ export default function PresentationTaskView({ task, gradeLabel, onBack }: Props
               value={notes.ownTopic ?? ""}
               onChange={(e) => set("ownTopic")(e.target.value)}
               placeholder="… eller skriv ett eget ämne här"
-              className="mt-3 w-full rounded border-2 border-stone-200 p-2 font-serif focus:border-np focus:outline-none"
+              aria-label="Eget ämne"
+              className="mt-3 w-full rounded border-2 border-stone-200 p-2 font-serif focus-visible:border-np focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-np"
             />
           </div>
         )}
@@ -323,12 +365,14 @@ export default function PresentationTaskView({ task, gradeLabel, onBack }: Props
             </li>
           ))}
         </ul>
-        {checked.every(Boolean) && (
+        {checked.length > 0 && checked.every(Boolean) && (
           <p className="mt-4 rounded bg-np-light p-3 text-center font-bold text-np">
             Snyggt jobbat! Du fick med allt som en bra presentation behöver. 🎉
           </p>
         )}
       </div>
+      {/* Lärarens observationsschema – syns bara vid den utskriften */}
+      {obsMode && <OralObservationSheet task={task} gradeLabel={gradeLabel} />}
     </div>
   );
 }

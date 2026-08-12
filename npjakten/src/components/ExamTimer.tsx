@@ -7,18 +7,25 @@ interface Props {
 // Valfri tidtagning som efterliknar provets tidsbegränsning.
 // Eleven väljer tid, klockan räknar ner och varnar de sista fem minuterna.
 export default function ExamTimer({ presets }: Props) {
+  // Räknar mot en fast sluttid i stället för att räkna ner sekund för sekund.
+  // Webbläsare bromsar timers i bakgrundsflikar, vilket annars gör att
+  // klockan tappar minuter när eleven byter flik.
+  const [deadline, setDeadline] = useState<number | null>(null);
   const [secondsLeft, setSecondsLeft] = useState<number | null>(null);
-  const [running, setRunning] = useState(false);
 
   useEffect(() => {
-    if (!running || secondsLeft === null) return;
-    if (secondsLeft <= 0) {
-      setRunning(false);
-      return;
-    }
-    const t = setTimeout(() => setSecondsLeft((s) => (s === null ? null : s - 1)), 1000);
-    return () => clearTimeout(t);
-  }, [running, secondsLeft]);
+    if (deadline === null) return;
+    const tick = () =>
+      setSecondsLeft(Math.max(0, Math.round((deadline - Date.now()) / 1000)));
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, [deadline]);
+
+  const start = (min: number) => {
+    setDeadline(Date.now() + min * 60 * 1000);
+    setSecondsLeft(min * 60);
+  };
 
   if (secondsLeft === null) {
     return (
@@ -29,16 +36,14 @@ export default function ExamTimer({ presets }: Props) {
         {presets.map((min) => (
           <button
             key={min}
-            onClick={() => {
-              setSecondsLeft(min * 60);
-              setRunning(true);
-            }}
+            type="button"
+            onClick={() => start(min)}
             className="rounded border-2 border-np px-3 py-1 font-bold text-np transition hover:bg-np hover:text-white"
           >
             {min} min
           </button>
         ))}
-        <span className="text-stone-400">(valfritt)</span>
+        <span className="text-stone-500">(valfritt)</span>
       </div>
     );
   }
@@ -50,6 +55,7 @@ export default function ExamTimer({ presets }: Props) {
 
   return (
     <div
+      aria-live="polite"
       className={
         "sticky top-2 z-20 mb-4 flex items-center justify-between gap-3 rounded-md border-2 px-4 py-2 shadow-page " +
         (timeIsUp
@@ -79,9 +85,10 @@ export default function ExamTimer({ presets }: Props) {
         </span>
       )}
       <button
+        type="button"
         onClick={() => {
           setSecondsLeft(null);
-          setRunning(false);
+          setDeadline(null);
         }}
         className="rounded border border-stone-300 px-3 py-1 text-sm font-semibold text-stone-600 hover:bg-stone-100"
       >

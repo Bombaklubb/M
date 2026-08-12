@@ -7,7 +7,25 @@ const MAX_CHUNK = 250;
 
 function splitLong(chunk: string): string[] {
   if (chunk.length <= MAX_CHUNK) return [chunk];
-  return chunk.split(/(?<=[.!?…])\s+/).filter((s) => s.trim().length > 0);
+  const parts: string[] = [];
+  for (const sentence of chunk.split(/(?<=[.!?…])\s+/)) {
+    if (sentence.length <= MAX_CHUNK) {
+      parts.push(sentence);
+      continue;
+    }
+    // Mening utan skiljetecken kan fortfarande vara för lång – dela på ord
+    let buf = "";
+    for (const word of sentence.split(/\s+/)) {
+      if ((buf + " " + word).trim().length > MAX_CHUNK) {
+        parts.push(buf.trim());
+        buf = word;
+      } else {
+        buf = (buf + " " + word).trim();
+      }
+    }
+    if (buf) parts.push(buf);
+  }
+  return parts.filter((s) => s.trim().length > 0);
 }
 
 export function useSpeech(chunks: string[]) {
@@ -35,6 +53,17 @@ export function useSpeech(chunks: string[]) {
     if (!supported) return;
     return () => window.speechSynthesis.cancel();
   }, [supported]);
+
+  // Chrome kan tysta kön utan att vare sig onend eller onerror hörs av.
+  // Stäm av mot webbläsarens eget tillstånd så att knappen inte fastnar.
+  useEffect(() => {
+    if (!supported || !playing) return;
+    const id = setInterval(() => {
+      const s = window.speechSynthesis;
+      if (!s.speaking && !s.pending) setPlaying(false);
+    }, 1000);
+    return () => clearInterval(id);
+  }, [supported, playing]);
 
   const stop = () => {
     if (supported) window.speechSynthesis.cancel();

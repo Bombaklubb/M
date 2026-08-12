@@ -1,10 +1,11 @@
-import { grades } from "../data/grades";
+import type { GradeId, GradeMeta } from "../data/grades";
 
 interface Props {
-  onSelectGrade: (gradeId: string) => void;
+  grades: GradeMeta[];
+  onSelectGrade: (gradeId: GradeId) => void;
 }
 
-export default function StartPage({ onSelectGrade }: Props) {
+export default function StartPage({ grades, onSelectGrade }: Props) {
   return (
     <div className="mx-auto max-w-3xl">
       <div className="paper">
@@ -24,6 +25,7 @@ export default function StartPage({ onSelectGrade }: Props) {
           {grades.map((grade) => (
             <button
               key={grade.id}
+              type="button"
               disabled={!grade.available}
               onClick={() => onSelectGrade(grade.id)}
               className={
@@ -42,9 +44,7 @@ export default function StartPage({ onSelectGrade }: Props) {
               </span>
               <p className="mt-3 font-semibold">{grade.label}</p>
               <p className="mt-1 text-sm text-stone-500">
-                {grade.available
-                  ? `${grade.reading.length} läsprov · ${grade.writing.length} skrivuppgifter`
-                  : "Kommer snart"}
+                {grade.available ? "Läsa · Skriva · Muntligt" : "Kommer snart"}
               </p>
             </button>
           ))}
