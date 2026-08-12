@@ -1685,6 +1685,7 @@
       "id": "ak9-a-anforande",
       "delprov": "Delprov A: tala – anförande",
       "kind": "presentation",
+      "needsQuestion": true,
       "title": "Håll ett anförande",
       "image": {
         "src": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=900&h=506&fit=crop",

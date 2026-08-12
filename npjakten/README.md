@@ -6,10 +6,13 @@ Träna inför nationella proven i svenska för årskurs 3, 6 och 9.
 - **Skriva:** olika texttyper med skrivyta, autosparat utkast och självbedömning
 - **Muntligt:** gruppsamtal med samtalskort samt individuell presentation med stödkort
 
-Övrigt: provläge med tidtagning, uppläsning av texten (talsyntes), utskrift av prov,
-facit och samtalskort, samt "Min statistik" per uppgiftstyp (sparas lokalt i webbläsaren).
+Övrigt: provläge med tidtagning, uppläsning av texter, frågor och instruktioner
+(talsyntes), läsinställningar för större text/mer luft/lättläst typsnitt, utskrift av
+prov, facit, samtalskort och stödkort, samt "Min statistik" per uppgiftstyp (sparas
+lokalt i webbläsaren).
 
-Lärarläge: lägg till `?larare` i adressen för att visa facit och bedömningsmallar.
+Lärarläge: lägg till `?larare` i adressen för att visa facit, bedömningsstöd för
+skrivuppgifter och observationsschema för de muntliga delarna.
 
 ## Utveckling
 

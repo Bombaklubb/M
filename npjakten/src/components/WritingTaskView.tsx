@@ -3,14 +3,23 @@ import type { WritingTask } from "../types";
 import ExamTimer from "./ExamTimer";
 import IllustrationImg from "./IllustrationImg";
 import { safeGet, safeSet } from "../lib/storage";
+import StrategyTips from "./StrategyTips";
+import ReadAloudButton from "./ReadAloudButton";
+import WritingFacitSheet from "./WritingFacitSheet";
 
 interface Props {
   task: WritingTask;
   gradeLabel: string;
+  teacherMode: boolean;
   onBack: () => void;
 }
 
-export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
+export default function WritingTaskView({
+  task,
+  gradeLabel,
+  teacherMode,
+  onBack,
+}: Props) {
   const storageKey = `npjakten-skriva-${task.id}`;
 
   // Checklistan kan vara nivåindelad (åk 3) eller platt (åk 6/9). Vi arbetar
@@ -29,6 +38,20 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
     () => safeGet(storageKey + "-rubrik") ?? ""
   );
   const [copied, setCopied] = useState(false);
+  // Lärarens bedömningsstöd: döljer elevmaterialet vid utskrift
+  const [facitMode, setFacitMode] = useState(false);
+
+  useEffect(() => {
+    if (!facitMode) return;
+    const off = () => setFacitMode(false);
+    window.addEventListener("afterprint", off);
+    window.print();
+    const timer = setTimeout(off, 1000);
+    return () => {
+      window.removeEventListener("afterprint", off);
+      clearTimeout(timer);
+    };
+  }, [facitMode]);
 
   // Spara utkastet löpande så att eleven inte tappar sin text
   useEffect(() => {
@@ -99,10 +122,16 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
   };
 
   return (
-    <div className="mx-auto max-w-3xl">
-      <button onClick={onBack} className="mb-4 text-sm font-medium text-np hover:underline">
+    <div className={"mx-auto max-w-3xl" + (facitMode ? " print-facit" : "")}>
+      <button
+        type="button"
+        onClick={onBack}
+        className="no-print mb-4 text-sm font-medium text-np hover:underline"
+      >
         ← Tillbaka till delproven
       </button>
+
+      <StrategyTips variant="skriva" />
 
       {/* Uppgiftshäftet */}
       <div className="paper">
@@ -112,7 +141,33 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
           {task.delprov}
         </p>
 
-        <h1 className="mt-6 font-serif text-3xl font-bold">{task.title}</h1>
+        <div className="mt-6 flex items-start justify-between gap-4">
+          <h1 className="font-serif text-3xl font-bold">{task.title}</h1>
+          <span className="no-print mt-1 flex shrink-0 flex-col items-end gap-1">
+            <ReadAloudButton
+              label="Lyssna på uppgiften"
+              chunks={[task.title, ...task.intro, ...task.doThis, ...task.remember]}
+            />
+            <button
+              type="button"
+              onClick={() => window.print()}
+              title="Skriv ut uppgiften och skrivytan"
+              className="text-sm font-medium text-stone-500 transition hover:text-np hover:underline"
+            >
+              🖨 Skriv ut
+            </button>
+            {teacherMode && (
+              <button
+                type="button"
+                onClick={() => setFacitMode(true)}
+                title="Skriv ut bedömningsstöd (för läraren)"
+                className="text-xs font-medium text-stone-500 transition hover:text-np hover:underline"
+              >
+                Skriv ut bedömningsstöd
+              </button>
+            )}
+          </span>
+        </div>
 
         {task.image && (
           <IllustrationImg
@@ -444,6 +499,8 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
           </div>
         </div>
       )}
+      {/* Lärarens bedömningsstöd – syns bara vid den utskriften */}
+      {facitMode && <WritingFacitSheet task={task} gradeLabel={gradeLabel} />}
     </div>
   );
 }

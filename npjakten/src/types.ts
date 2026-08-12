@@ -146,6 +146,7 @@ export interface OralTask {
   cards?: string[]; // samtalskort – frågor/påståenden att dra (samtal)
   topics?: string[]; // ämnesförslag att välja bland (presentation)
   listenerTasks?: string[]; // lyssnarnas uppgift (presentation)
+  needsQuestion?: boolean; // anförandet avslutas med en fråga till gruppen
   assessmentPoints: string[]; // vad läraren lyssnar efter (självskattning)
 }
 

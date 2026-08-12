@@ -67,3 +67,17 @@ body {
     display: none !important;
   }
 }
+
+/* Läsinställningar (dyslexistöd). Aktiveras via klasser på <html>. */
+:root.text-lg-mode .paper {
+  font-size: 1.125rem;
+}
+:root.spacing-mode .paper p,
+:root.spacing-mode .paper li {
+  line-height: 2;
+  letter-spacing: 0.01em;
+}
+:root.sans-mode .font-serif,
+:root.sans-mode .paper {
+  font-family: ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
+}

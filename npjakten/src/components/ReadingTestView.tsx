@@ -462,7 +462,19 @@ function QuestionView({
           </p>
         </div>
         <p className="whitespace-pre-line pt-1 font-medium leading-relaxed">
-          <span className="font-bold">{q.id}.</span> {q.prompt}
+          <span className="font-bold">{q.id}.</span> {q.prompt}{" "}
+          <ReadAloudButton
+            compact
+            chunks={[
+              `Uppgift ${q.id}.`,
+              q.prompt,
+              ...(q.kind === "open" && q.note ? [q.note] : []),
+              ...(q.kind === "multiple-choice"
+                ? q.options.map((o, i) => `${LETTERS[i]}. ${o}`)
+                : []),
+              ...(q.kind === "ordering" ? q.items : []),
+            ]}
+          />
           {reviewing && q.kind === "multiple-choice" && q.category && (
             <span
               className="ml-2 rounded bg-stone-100 px-1.5 py-0.5 text-xs font-semibold text-stone-500"
