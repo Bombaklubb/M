@@ -43,8 +43,11 @@ export default function GradePage({
         <h1 className="mt-1 font-serif text-3xl font-bold">Välj delprov</h1>
 
         {/* Flikar: delprovslistan eller elevens statistik */}
-        <div className="mt-4 inline-flex gap-1 rounded-md bg-stone-200 p-1">
+        <div role="tablist" className="mt-4 inline-flex gap-1 rounded-md bg-stone-200 p-1">
           <button
+            type="button"
+            role="tab"
+            aria-selected={tab === "delprov"}
             onClick={() => setTab("delprov")}
             className={
               "rounded px-4 py-1.5 text-sm font-bold transition " +
@@ -54,6 +57,9 @@ export default function GradePage({
             Delprov
           </button>
           <button
+            type="button"
+            role="tab"
+            aria-selected={tab === "statistik"}
             onClick={() => setTab("statistik")}
             className={
               "rounded px-4 py-1.5 text-sm font-bold transition " +

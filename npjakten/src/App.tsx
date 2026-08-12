@@ -14,6 +14,12 @@ type View =
   | { name: "writing"; gradeId: string; taskId: string }
   | { name: "oral"; gradeId: string; taskId: string };
 
+// Lärarläge aktiveras med ?larare i adressen. Då visas facit och
+// bedömningsmallar, som annars inte ska vara nåbara för eleven.
+const teacherMode =
+  typeof window !== "undefined" &&
+  new URLSearchParams(window.location.search).has("larare");
+
 export default function App() {
   const [view, setView] = useState<View>({ name: "start" });
 
@@ -67,6 +73,7 @@ export default function App() {
             test={grade.reading.find((t) => t.id === view.testId)!}
             gradeId={grade.id}
             gradeLabel={grade.label}
+            teacherMode={teacherMode}
             onBack={() => setView({ name: "grade", gradeId: grade.id })}
           />
         )}

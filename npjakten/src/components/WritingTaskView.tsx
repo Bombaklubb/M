@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { WritingTask } from "../types";
 import ExamTimer from "./ExamTimer";
 import IllustrationImg from "./IllustrationImg";
+import { safeGet, safeSet } from "../lib/storage";
 
 interface Props {
   task: WritingTask;
@@ -18,28 +19,26 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
     ? task.checklistGroups.flatMap((g) => g.items)
     : task.checklist ?? [];
 
-  const [text, setText] = useState<string>(
-    () => localStorage.getItem(storageKey) ?? ""
-  );
+  const [text, setText] = useState<string>(() => safeGet(storageKey) ?? "");
   const [checked, setChecked] = useState<boolean[]>(() =>
     flatChecklist.map(() => false)
   );
   const [showChecklist, setShowChecklist] = useState(false);
   const [openExample, setOpenExample] = useState<number | null>(null);
   const [ownHeading, setOwnHeading] = useState<string>(
-    () => localStorage.getItem(storageKey + "-rubrik") ?? ""
+    () => safeGet(storageKey + "-rubrik") ?? ""
   );
   const [copied, setCopied] = useState(false);
 
   // Spara utkastet löpande så att eleven inte tappar sin text
   useEffect(() => {
-    const timer = setTimeout(() => localStorage.setItem(storageKey, text), 400);
+    const timer = setTimeout(() => safeSet(storageKey, text), 400);
     return () => clearTimeout(timer);
   }, [text, storageKey]);
 
   // Spara även elevens egen rubrik
   useEffect(() => {
-    localStorage.setItem(storageKey + "-rubrik", ownHeading);
+    safeSet(storageKey + "-rubrik", ownHeading);
   }, [ownHeading, storageKey]);
 
   const wordCount = useMemo(
@@ -216,12 +215,12 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
         </div>
       </div>
 
-      <div className="mt-4">
+      <div className="no-print mt-4">
         <ExamTimer presets={[40, 60, 80]} />
       </div>
 
       {/* Skrivytan */}
-      <div className="paper mt-4">
+      <div className="paper print-page-break mt-4">
         <div className="flex flex-wrap items-center justify-between gap-2 border-b-2 border-np pb-3">
           <h2 className="font-serif text-2xl font-bold">Skriv din text här</h2>
           <span className="rounded bg-stone-100 px-3 py-1 text-sm font-semibold text-stone-600">
@@ -232,23 +231,48 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
         {task.fixedHeading ? (
           <p className="mt-5 font-serif text-xl font-bold">{task.fixedHeading}</p>
         ) : (
-          <input
-            type="text"
-            value={ownHeading}
-            onChange={(e) => setOwnHeading(e.target.value)}
-            placeholder="Skriv din rubrik här ..."
-            className="mt-5 w-full border-b-2 border-stone-300 pb-1 font-serif text-xl font-bold focus:border-np focus:outline-none"
-          />
+          <>
+            <input
+              type="text"
+              value={ownHeading}
+              onChange={(e) => setOwnHeading(e.target.value)}
+              aria-label="Rubrik på din text"
+              placeholder="Skriv din rubrik här ..."
+              className="no-print mt-5 w-full border-b-2 border-stone-300 pb-1 font-serif text-xl font-bold focus-visible:border-np focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-np"
+            />
+            {/* Utskrift: rubriken som text, annars en skrivlinje */}
+            <div className="hidden print:block">
+              {ownHeading.trim() ? (
+                <p className="mt-5 font-serif text-xl font-bold">{ownHeading}</p>
+              ) : (
+                <div className="mt-8 border-b border-stone-400" />
+              )}
+            </div>
+          </>
         )}
 
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
           rows={18}
+          aria-label="Skriv din text här"
           placeholder="Planera först: hur ska din text börja, vad ska hända och hur ska den sluta? Börja sedan skriva ..."
-          className="mt-3 w-full resize-y rounded border-2 border-stone-200 bg-white p-3 font-serif leading-relaxed focus:border-np focus:outline-none"
+          className="no-print mt-3 w-full resize-y rounded border-2 border-stone-200 bg-white p-3 font-serif leading-relaxed focus-visible:border-np focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-np"
         />
-        <p className="mt-1 text-xs text-stone-400">
+        {/* Utskrift: hela elevtexten (textarea klipps annars av) eller
+            skrivlinjer att skriva på för hand */}
+        <div className="hidden print:block">
+          {text.trim() ? (
+            <p className="mt-3 whitespace-pre-line font-serif leading-loose">{text}</p>
+          ) : (
+            <div className="mt-6 space-y-8">
+              {Array.from({ length: 18 }, (_, i) => (
+                <div key={i} className="border-b border-stone-400" />
+              ))}
+            </div>
+          )}
+        </div>
+        <p className="no-print mt-1 text-xs text-stone-500">
           Din text sparas automatiskt i webbläsaren på den här enheten.
         </p>
 
@@ -330,7 +354,7 @@ export default function WritingTaskView({ task, gradeLabel, onBack }: Props) {
                 ))}
               </ul>
             )}
-            {checked.every(Boolean) && (
+            {checked.length > 0 && checked.every(Boolean) && (
               <p className="mt-4 rounded bg-white p-3 text-center font-bold text-np">
                 Snyggt jobbat! Din text uppfyller alla punkter på checklistan. 🎉
               </p>

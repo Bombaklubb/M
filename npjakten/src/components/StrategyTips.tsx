@@ -1,18 +1,17 @@
 import { useState } from "react";
+import { safeGet, safeSet } from "../lib/storage";
 
 const HIDE_KEY = "npjakten-tips-dold-v1";
 
 // Lässtrategier grundade i vanliga poängtapp i de nationella provens
 // bedömningsmallar. Går att dölja permanent – valet sparas i webbläsaren.
 export default function StrategyTips() {
-  const [visible, setVisible] = useState(
-    () => localStorage.getItem(HIDE_KEY) !== "1"
-  );
+  const [visible, setVisible] = useState(() => safeGet(HIDE_KEY) !== "1");
 
   if (!visible) return null;
 
   const dismiss = () => {
-    localStorage.setItem(HIDE_KEY, "1");
+    safeSet(HIDE_KEY, "1");
     setVisible(false);
   };
 

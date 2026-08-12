@@ -1188,8 +1188,8 @@
           ],
           "lines": 8,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
-          "prompt": "Beskriv hur skribenten bygger upp porträttet av Noa. Ge minst tre kännetecken för ett reportage som finns i artikeln (till exempel ingress, intervjucitat, faktaruta, miljöbeskrivning eller mellanrubriker) och förklara kort vad varje sak tillför texten.",
-          "guidance": "Ge 6 poäng om svaret pekar ut minst tre kännetecken för ett reportage och förklarar vad de tillför. Ge 4 poäng för två, 2 poäng för ett. Ge 0 poäng om inget kännetecken pekas ut/förklaras. Exempel: ingress (sammanfattar och lockar), miljöbeskrivning (”det luktar olja och gummi …” sätter scenen), intervjucitat (Noas och andras röster gör texten levande och trovärdig), faktaruta (ger snabb fakta om personen), mellanrubriker (delar upp texten).",
+          "prompt": "Beskriv hur skribenten bygger upp porträttet av Noa. Ge minst tre kännetecken för ett reportage som finns i artikeln (till exempel ingress, intervjucitat, faktaruta, miljöbeskrivning eller underrubriker) och förklara kort vad varje sak tillför texten.",
+          "guidance": "Ge 6 poäng om svaret pekar ut minst tre kännetecken för ett reportage och förklarar vad de tillför. Ge 4 poäng för två, 2 poäng för ett. Ge 0 poäng om inget kännetecken pekas ut/förklaras. Exempel: ingress (sammanfattar och lockar), miljöbeskrivning (”det luktar olja och gummi …” sätter scenen), intervjucitat (Noas och andras röster gör texten levande och trovärdig), faktaruta (ger snabb fakta om personen), underrubriker (delar upp texten).",
           "scoreExamples": [
             { "points": 0, "answer": "Det är ett reportage om en tjej som lagar cyklar." },
             { "points": 2, "answer": "Texten har intervjucitat, till exempel när Noa säger ”Hör du? Det skrapar lite.” Citaten gör att man hör hennes egen röst." },

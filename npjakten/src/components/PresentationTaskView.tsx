@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { OralTask } from "../types";
 import IllustrationImg from "./IllustrationImg";
+import { safeGetJson, safeSet } from "../lib/storage";
 
 interface Props {
   task: OralTask;
@@ -21,13 +22,7 @@ interface SupportNotes {
 }
 
 function loadNotes(key: string): SupportNotes {
-  try {
-    const raw = localStorage.getItem(key);
-    const parsed = raw ? JSON.parse(raw) : null;
-    return parsed && typeof parsed === "object" ? parsed : {};
-  } catch {
-    return {};
-  }
+  return safeGetJson<SupportNotes>(key, {});
 }
 
 // Ett fält på stödkortet. Vid utskrift med tomt innehåll visas skrivlinjer
@@ -85,11 +80,7 @@ export default function PresentationTaskView({ task, gradeLabel, onBack }: Props
   // Autospara förberedelserna så att inget försvinner
   useEffect(() => {
     const timer = setTimeout(() => {
-      try {
-        localStorage.setItem(storageKey, JSON.stringify(notes));
-      } catch {
-        // localStorage kan vara avstängt – övningen fungerar ändå
-      }
+      safeSet(storageKey, JSON.stringify(notes));
     }, 400);
     return () => clearTimeout(timer);
   }, [notes, storageKey]);
@@ -323,7 +314,7 @@ export default function PresentationTaskView({ task, gradeLabel, onBack }: Props
             </li>
           ))}
         </ul>
-        {checked.every(Boolean) && (
+        {checked.length > 0 && checked.every(Boolean) && (
           <p className="mt-4 rounded bg-np-light p-3 text-center font-bold text-np">
             Snyggt jobbat! Du fick med allt som en bra presentation behöver. 🎉
           </p>

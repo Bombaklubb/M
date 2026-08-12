@@ -149,7 +149,7 @@ export default function OralTaskView({ task, gradeLabel, onBack }: Props) {
             </li>
           ))}
         </ul>
-        {checked.every(Boolean) && (
+        {checked.length > 0 && checked.every(Boolean) && (
           <p className="mt-4 rounded bg-np-light p-3 text-center font-bold text-np">
             Snyggt jobbat! Ni fick med allt som ett bra samtal behöver. 🎉
           </p>
