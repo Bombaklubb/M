@@ -37,6 +37,10 @@ export function useGameStore(userName: string) {
   const storageKey = storageKeyFor(userName);
   const [state, setState] = useState<GameState>(() => loadState(storageKey));
 
+  // Ett resultat räknas som "klarat" först vid minst 50 % rätt.
+  // Utan gränsen delas diplomet ut även till den som svarat fel på allt.
+  const PASS_PERCENT = 50;
+
   const addXP = useCallback((amount: number) => {
     setState(prev => {
       const newXP = prev.xp + amount;
@@ -47,13 +51,29 @@ export function useGameStore(userName: string) {
     });
   }, [storageKey]);
 
+  // Full XP första gången, kraftigt reducerad vid omspel – annars kan man
+  // farma maxnivå genom att spela samma modul om och om igen.
+  const awardModuleXP = useCallback((moduleId: number, xpEarned: number) => {
+    setState(prev => {
+      const alreadyPlayed = prev.moduleHighScores[moduleId] !== undefined;
+      const amount = alreadyPlayed ? Math.round(xpEarned * 0.25) : xpEarned;
+      const newXP = prev.xp + amount;
+      const next: GameState = { ...prev, xp: newXP, level: xpToLevel(newXP) };
+      saveState(storageKey, next);
+      return next;
+    });
+  }, [storageKey]);
+
   const completeModule = useCallback((moduleId: number, score: number, badgeName?: string) => {
     setState(prev => {
-      const today = new Date().toISOString().split('T')[0];
+      // Lokalt datum (sv-SE ger YYYY-MM-DD) – toISOString är UTC och
+      // skulle räkna kvällspass efter kl. 22 som gårdagens dag.
+      const today = new Date().toLocaleDateString('sv-SE');
+      const yesterday = new Date(Date.now() - 86400000).toLocaleDateString('sv-SE');
       const alreadyCompletedToday = prev.lastPlayedDate === today;
       const newStreak = alreadyCompletedToday
         ? prev.streak
-        : prev.lastPlayedDate === new Date(Date.now() - 86400000).toISOString().split('T')[0]
+        : prev.lastPlayedDate === yesterday
           ? prev.streak + 1
           : 1;
 
@@ -61,7 +81,8 @@ export function useGameStore(userName: string) {
         ? [...prev.badges, badgeName]
         : prev.badges;
 
-      const updatedModules = prev.completedModules.includes(moduleId)
+      const passed = score >= PASS_PERCENT;
+      const updatedModules = !passed || prev.completedModules.includes(moduleId)
         ? prev.completedModules
         : [...prev.completedModules, moduleId];
 
@@ -89,5 +110,5 @@ export function useGameStore(userName: string) {
     setState(next);
   }, [storageKey]);
 
-  return { state, addXP, completeModule, resetProgress };
+  return { state, addXP, awardModuleXP, completeModule, resetProgress };
 }

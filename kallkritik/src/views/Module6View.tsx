@@ -70,25 +70,29 @@ export function Module6View({ onComplete, onExit }: ModuleViewProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userVote, setUserVote] = useState<UserVote>(null);
   const [revealed, setRevealed] = useState(false);
-  const [scores, setScores] = useState<boolean[]>([]);
+  const [scores, setScores] = useState<number[]>([]);
 
   const items = MODULE6_ITEMS;
   const currentItem = items[currentIndex];
-  const correctScore = scores.filter(Boolean).length;
-  const xpEarned = correctScore * 10;
-  const earnedBadge = correctScore >= 8 ? { name: 'Snabbdomaren', icon: '⚡' } : null;
+  // "Osäker" ger halv poäng – att erkänna osäkerhet är bättre än att gissa fel.
+  // Samma princip som i Källkollen.
+  const scoreSum = scores.reduce((a, b) => a + b, 0);
+  const correctScore = Math.round(scoreSum * 10) / 10;
+  const xpEarned = Math.round(scoreSum * 10);
+  const earnedBadge = scoreSum >= 8 ? { name: 'Snabbdomaren', icon: '⚡' } : null;
 
   function handleVote(vote: UserVote) {
     if (revealed || !vote) return;
-    const isCorrect = vote === currentItem.verdict;
+    const points = vote === currentItem.verdict ? 1 : vote === 'osaker' ? 0.5 : 0;
     setUserVote(vote);
     setRevealed(true);
-    setScores(prev => [...prev, isCorrect]);
+    setScores(prev => [...prev, points]);
   }
 
   function handleNext() {
+    if (phase === 'result') return;
     if (currentIndex + 1 >= items.length) {
-      onComplete(Math.round((correctScore / items.length) * 100), xpEarned, earnedBadge?.name);
+      onComplete(Math.round((scoreSum / items.length) * 100), xpEarned, earnedBadge?.name);
       setPhase('result');
     } else {
       setCurrentIndex(i => i + 1);
@@ -154,6 +158,7 @@ export function Module6View({ onComplete, onExit }: ModuleViewProps) {
                 <div className="bg-xp/15 border border-xp/30 rounded-lg p-2 text-center">
                   <div className="text-lg mb-0.5">❓</div>
                   <div className="text-xp font-semibold">Osäker</div>
+                  <div className="text-[10px] text-muted-foreground mt-0.5">halv poäng</div>
                 </div>
                 <div className="bg-danger/15 border border-danger/30 rounded-lg p-2 text-center">
                   <div className="text-lg mb-0.5">❌</div>
@@ -169,7 +174,7 @@ export function Module6View({ onComplete, onExit }: ModuleViewProps) {
             </div>
             <div className="flex items-center justify-center gap-3 bg-xp/10 rounded-xl px-4 py-3 mb-6">
               <Zap className="w-5 h-5 text-xp shrink-0" />
-              <p className="text-sm text-xp font-medium">10 påståenden · Max 100 XP · Märke vid 8/10</p>
+              <p className="text-sm text-xp font-medium">10 påståenden · Max 100 XP · Märke vid 8/10<br/>Att svara "Osäker" ger halv poäng – bättre än att gissa fel!</p>
             </div>
             <div className="flex gap-3">
               <Button variant="secondary" onClick={onExit} size="lg" className="flex-1">
@@ -340,7 +345,7 @@ export function Module6View({ onComplete, onExit }: ModuleViewProps) {
                       {isCorrect
                         ? 'Rätt! +10 XP'
                         : userVote === 'osaker'
-                        ? 'Osäker – det var ' + (currentItem.verdict === 'sant' ? 'sant!' : 'fake!')
+                        ? 'Osäker (+5 XP) – det var ' + (currentItem.verdict === 'sant' ? 'sant!' : 'fake!')
                         : 'Fel! Det var ' + (currentItem.verdict === 'sant' ? 'sant!' : 'fake!')}
                     </div>
                     <div className="text-xs text-muted-foreground">

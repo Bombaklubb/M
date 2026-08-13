@@ -8,7 +8,7 @@ export const MODULE6_ITEMS: SantEllerFakeItem[] = [
     content: 'Albert Einstein fick underkänt i matematik som ung – och hittade på relativitetsteorin trots det',
     source: 'Delades viralt på sociala medier',
     verdict: 'fake',
-    explanation: 'FALSKT – Populär myt! Einstein var faktiskt duktig på matematik redan som ung. Han fick höga betyg. Myten spred sig efter att ett betygssystem tolkades fel: i Schweiz beteknade högsta betyget "6", som i Tyskland var sämsta. Det ledde till förvirring.',
+    explanation: 'FALSKT – Populär myt! Einstein var faktiskt duktig på matematik redan som ung. Han fick höga betyg. Myten spred sig efter att ett betygssystem tolkades fel: i Schweiz betecknade "6" det högsta betyget, medan 6 i Tyskland var det sämsta. Det ledde till förvirring.',
     discussionPrompt: 'Varför tror ni att "misslyckade genier"-berättelser sprids lätt? Vad säger det om vad vi värdesätter?',
   },
   {
@@ -16,7 +16,7 @@ export const MODULE6_ITEMS: SantEllerFakeItem[] = [
     type: 'statistic',
     typeLabel: 'Statistik',
     content: 'Jordens befolkning passerade 8 miljarder människor under 2022',
-    source: 'FN:s befolkningssekretariat',
+    source: 'FN:s befolkningsavdelning (UN DESA)',
     verdict: 'sant',
     explanation: 'SANT! Jordens befolkning nådde 8 miljarder den 15 november 2022, enligt FN. Det är en historisk milstolpe – för 200 år sedan var vi bara 1 miljard.',
     discussionPrompt: 'Hur förändrar 8 miljarder människor vår planets utmaningar kring mat, vatten och energi?',
@@ -28,7 +28,7 @@ export const MODULE6_ITEMS: SantEllerFakeItem[] = [
     content: '🚨 BRYT: Microsoft har köpt TikTok för 50 miljarder dollar! Alla era data är nu hos Bill Gates 🚨',
     source: '@nyhetsdump på X/Twitter',
     verdict: 'fake',
-    explanation: 'FALSKT – Detta är ett falskt påstående. Det har diskuterats att TikTok kan tvingas säljas i USA, men inget sådant köp har skett. Obs: utropstecken, emojier och "BRYT" är klassiska tecken på clickbait och desinformation.',
+    explanation: 'FALSKT – Detta är ett falskt påstående. TikToks USA-verksamhet har bytt ägare, men till ett helt annat konsortium – och summan i inlägget är påhittad. Obs: utropstecken, emojier och "BRYT" är klassiska tecken på clickbait och desinformation.',
     discussionPrompt: 'Vilka ord och tecken i inlägget borde ha fått er att bli misstänksamma direkt?',
   },
   {
@@ -38,7 +38,7 @@ export const MODULE6_ITEMS: SantEllerFakeItem[] = [
     content: 'Bläckfiskar (oktopus) har tre hjärtan',
     source: 'Marinbiologisk fakta',
     verdict: 'sant',
-    explanation: 'SANT! Bläckfiskar har faktiskt tre hjärtan: ett hjärta pumpar syresatt blod till kroppen, och två gälhjärtan pumpar blod genom gälarna. Deras blod är också blåt eftersom det innehåller hemocyanin istället för hemoglobin.',
+    explanation: 'SANT! Bläckfiskar har faktiskt tre hjärtan: ett hjärta pumpar syresatt blod till kroppen, och två gälhjärtan pumpar blod genom gälarna. Deras blod är också blått eftersom det innehåller hemocyanin istället för hemoglobin.',
     discussionPrompt: 'Konstiga djurfakta låter ofta falska men stämmer! Hur kan vi skilja på troligt och otroligt?',
   },
   {
@@ -58,7 +58,7 @@ export const MODULE6_ITEMS: SantEllerFakeItem[] = [
     content: '"Det är aldrig för sent att bli vad du kunnat ha blivit." – Albert Einstein',
     source: 'Spridda som inspirationscitat på sociala medier',
     verdict: 'fake',
-    explanation: 'FALSKT – Einstein sa aldrig det här. Citatet tillskrivs faktiskt den brittiska författaren George Eliot. Det är extremt vanligt att falska citat tillskrivs kända tänkare som Einstein, Churchill eller Gandhi – för att de verkar mer trovärdiga.',
+    explanation: 'FALSKT – Einstein sa aldrig det här. Citatet brukar tillskrivas den brittiska författaren George Eliot, men inte heller det går att belägga – forskare har aldrig hittat meningen i hennes texter. Ett falskt citat kan alltså vara falskt i flera led. Det är extremt vanligt att falska citat tillskrivs kända tänkare som Einstein, Churchill eller Gandhi – för att de verkar mer trovärdiga.',
     discussionPrompt: 'Varför tillskrivs falska citat ofta till kända och kloka människor? Påverkar det hur vi uppfattar budskapet?',
   },
   {
@@ -88,7 +88,7 @@ export const MODULE6_ITEMS: SantEllerFakeItem[] = [
     content: 'Hajar har funnits på Jordens hav i över 400 miljoner år – de är äldre än träd',
     source: 'Paleontologisk forskning',
     verdict: 'sant',
-    explanation: 'SANT – och fascinerande! Hajar har existerat sedan ungefär 450 miljoner år sedan. Träd uppstod för ca 350 miljoner år sedan. Det innebär att hajar var ett etablerat djurslag i 100 miljoner år INNAN det första trädet växte upp!',
+    explanation: 'SANT – och fascinerande! Hajliknande djur har funnits i ungefär 450 miljoner år. De första riktiga träden dök upp för ca 385 miljoner år sedan. Hajarna hade alltså simmat i haven i omkring 65 miljoner år innan det första trädet växte upp på land.',
     discussionPrompt: 'Vad säger det om biologisk framgång att hajar fortfarande finns kvar medan de flesta djurarter som levde då är utdöda?',
   },
   {

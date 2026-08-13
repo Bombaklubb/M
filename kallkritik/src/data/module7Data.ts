@@ -75,7 +75,7 @@ export const MODULE7_QUESTIONS: Module7Question[] = [
     source: 'HälsoTips24.com',
     sourceType: 'Hälsoblogg',
     sourceIcon: '💊',
-    question: 'Vilka TWÅ problem finns med den här källan? (Välj det mest kompletta svaret)',
+    question: 'Vilka TVÅ problem finns med den här källan? (Välj det mest kompletta svaret)',
     options: [
       { id: 'a', text: 'Informationen är gammal och det saknas källhänvisning till den nämnda studien' },
       { id: 'b', text: 'Artikeln handlar om förkylning, inte en allvarlig sjukdom' },
@@ -90,9 +90,9 @@ export const MODULE7_QUESTIONS: Module7Question[] = [
   {
     id: 'm7-3',
     discussionPrompt: 'Betyder ekonomiskt intresse att företaget ljuger? Hur bör man tänka i stället?',
-    scenario: 'Du läser om ett kontrovers kring ett läkemedel. Tre nyhetsartiklar från SVT, The Guardian och NRK beskriver alla samma problem. En artikel från läkemedelsföretagets egna hemsida säger att läkemedlet är helt säkert.',
+    scenario: 'Du läser om en kontrovers kring ett läkemedel. Tre nyhetsartiklar från SVT, The Guardian och NRK beskriver alla samma problem. En artikel från läkemedelsföretagets egen hemsida säger att läkemedlet är helt säkert.',
     source: 'LäkemedelsföretagetAB.se',
-    sourceType: 'Företagets egna hemsida',
+    sourceType: 'Företagets egen hemsida',
     sourceIcon: '🏢',
     question: 'Varför ska du vara extra kritisk mot företagets artikel?',
     options: [
@@ -109,7 +109,7 @@ export const MODULE7_QUESTIONS: Module7Question[] = [
   {
     id: 'm7-4',
     discussionPrompt: 'Kan man ljuga med sann statistik? Hur skyddar man sig mot halva sanningar?',
-    scenario: 'En hemsida publicerar statistik om invandring. Siffrorna stämmer, men artikeln väljer bara ut de negativa statistikarna och nämner aldrig de positiva. Rubriken lyder: "Sanningen de inte vill att du ska veta."',
+    scenario: 'En hemsida publicerar statistik om invandring. Siffrorna stämmer, men artikeln redovisar bara de uppgifter som stöder skribentens slutsats och utelämnar dem som talar emot. Rubriken lyder: "Sanningen de inte vill att du ska veta."',
     source: 'SanningsBladet.se',
     sourceType: 'Opinionswebbplats',
     sourceIcon: '📢',

@@ -89,19 +89,19 @@ export function HomeView({ gameState, onNavigate }: HomeViewProps) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-              className="mt-4 bg-gradient-to-r from-amber-400 to-orange-400 border-[3px] border-amber-500 rounded-[20px] px-5 py-4 shadow-[0_6px_0_0_rgba(245,158,11,0.4)]"
+              className="mt-4 bg-gradient-to-r from-amber-300 to-orange-300 border-[3px] border-amber-500 rounded-[20px] px-5 py-4 shadow-[0_6px_0_0_rgba(245,158,11,0.4)]"
             >
               <div className="flex items-center gap-4 mb-3">
-                <Trophy className="w-8 h-8 text-white shrink-0" />
+                <Trophy className="w-8 h-8 text-amber-900 shrink-0" />
                 <div>
-                  <div className="font-extrabold text-white" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
+                  <div className="font-extrabold text-amber-950" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
                     Alla moduler klara!
                   </div>
-                  <div className="text-sm text-amber-100 font-semibold">
+                  <div className="text-sm text-amber-950 font-semibold">
                     Du har genomfört hela Källkritikjakten. Imponerande!
                   </div>
                 </div>
-                <Star className="w-6 h-6 text-white ml-auto opacity-80 shrink-0" />
+                <Star className="w-6 h-6 text-amber-800 ml-auto shrink-0" />
               </div>
               <button
                 onClick={() => onNavigate('diploma')}
@@ -164,7 +164,7 @@ export function HomeView({ gameState, onNavigate }: HomeViewProps) {
               Använd de fyra grundfrågorna på en sajt eller ett konto du själv valt
             </div>
           </div>
-          <ChevronRight className="w-5 h-5 text-gray-300 shrink-0" />
+          <ChevronRight className="w-5 h-5 text-gray-500 shrink-0" />
         </button>
       </motion.div>
 
@@ -199,7 +199,7 @@ export function HomeView({ gameState, onNavigate }: HomeViewProps) {
               <h3 className="text-base font-extrabold text-gray-700 leading-tight" style={{ fontFamily: "'Baloo 2', sans-serif" }}>
                 Tema {trackIndex + 1}: {track.title}
               </h3>
-              <p className="text-xs font-semibold text-gray-500 truncate">{track.desc}</p>
+              <p className="text-xs font-semibold text-gray-600">{track.desc}</p>
             </div>
             <span className={`ml-auto shrink-0 text-xs font-extrabold rounded-full border-2 px-3 py-1 ${
               track.moduleIds.every(id => gameState.completedModules.includes(id))

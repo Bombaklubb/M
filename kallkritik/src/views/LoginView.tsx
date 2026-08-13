@@ -57,7 +57,7 @@ export function LoginView({ onLogin }: LoginViewProps) {
               autoFocus
               autoComplete="off"
               maxLength={30}
-              className="w-full rounded-2xl border-[3px] border-indigo-100 bg-indigo-50/50 px-4 py-3 text-base font-bold text-gray-700 placeholder:text-gray-300 placeholder:font-semibold focus:outline-none focus:border-indigo-300 text-center mb-4"
+              className="w-full rounded-2xl border-[3px] border-indigo-100 bg-indigo-50/50 px-4 py-3 text-base font-bold text-gray-700 placeholder:text-gray-500 placeholder:font-semibold focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-center mb-4"
               style={{ fontFamily: "'Baloo 2', sans-serif" }}
             />
             <Button type="submit" variant="primary" size="lg" fullWidth disabled={!canSubmit} className="gap-2">

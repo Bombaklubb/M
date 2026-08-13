@@ -24,6 +24,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
   const [segmentStates, setSegmentStates] = useState<SegmentState[]>([]);
   const [checked, setChecked] = useState(false);
   const [totalFound, setTotalFound] = useState(0);
+  const [totalFalseAlarms, setTotalFalseAlarms] = useState(0);
   const [totalXP, setTotalXP] = useState(0);
   const [hintShown, setHintShown] = useState(false);
 
@@ -51,6 +52,7 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
   }
 
   function handleCheck() {
+    if (checked) return;
     let foundCount = 0;
     let falseAlarms = 0;
     currentText.segments.forEach((seg, i) => {
@@ -58,16 +60,23 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
       if (seg.isDecoy && segmentStates[i]?.selected) falseAlarms++;
     });
     setTotalFound(prev => prev + foundCount);
+    setTotalFalseAlarms(prev => prev + falseAlarms);
     setTotalXP(prev => prev + Math.max(0, foundCount - falseAlarms) * 15);
     setChecked(true);
   }
 
+  // Nettopoäng: hittade fel minus felaktigt markerade lockbeten.
+  // Utan avdraget skulle man få 100 % genom att klicka på allt.
+  const netFound = Math.max(0, totalFound - totalFalseAlarms);
+  const netPercent = Math.round((netFound / Math.max(allErrors, 1)) * 100);
+
   function handleNext() {
+    if (phase === 'result') return;
     if (textIndex + 1 >= texts.length) {
-      const badge = allErrors > 0 && totalFound / allErrors >= 0.8
+      const badge = netPercent >= 80
         ? { name: 'Faktakollaren', icon: '🔍' }
         : null;
-      onComplete(Math.round((totalFound / Math.max(allErrors, 1)) * 100), totalXP, badge?.name);
+      onComplete(netPercent, totalXP, badge?.name);
       setPhase('result');
     } else {
       setTextIndex(i => i + 1);
@@ -84,18 +93,19 @@ export default function Module2View({ onComplete, onExit }: ModuleViewProps) {
     setHintShown(false);
     setSegmentStates([]);
     setTotalFound(0);
+    setTotalFalseAlarms(0);
     setTotalXP(0);
   }
 
   if (phase === 'result') {
-    const badge = allErrors > 0 && totalFound / allErrors >= 0.8
+    const badge = netPercent >= 80
       ? { name: 'Faktakollaren', icon: '🔍' }
       : null;
     return (
       <ResultSummary
         moduleName="Hitta felet"
         moduleId={2}
-        score={totalFound}
+        score={netFound}
         totalQuestions={allErrors}
         xpEarned={totalXP}
         newBadge={badge}

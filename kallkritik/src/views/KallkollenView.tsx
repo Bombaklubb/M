@@ -93,7 +93,7 @@ export function KallkollenView({ onNavigate }: KallkollenViewProps) {
           value={sourceName}
           onChange={e => setSourceName(e.target.value)}
           placeholder="t.ex. naturfakta.se eller @hälsokontot"
-          className="w-full rounded-xl border-2 border-indigo-100 bg-indigo-50/50 px-3 py-2.5 text-sm font-semibold text-gray-700 placeholder:text-gray-300 focus:outline-none focus:border-indigo-300"
+          className="w-full rounded-xl border-2 border-indigo-100 bg-indigo-50/50 px-3 py-2.5 text-sm font-semibold text-gray-700 placeholder:text-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
         />
       </div>
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, GraduationCap, Users, MessageCircle, Backpack, PlayCircle } from 'lucide-react';
@@ -15,6 +15,13 @@ export function LessonGuideModal({ moduleId, moduleTitle, open, onClose }: Lesso
   const guide = LESSON_GUIDES[moduleId];
   if (!guide) return null;
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open, onClose]);
+
   return createPortal(
     <AnimatePresence>
       {open && (
@@ -30,6 +37,8 @@ export function LessonGuideModal({ moduleId, moduleTitle, open, onClose }: Lesso
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 40, opacity: 0, scale: 0.97 }}
             transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+            role="dialog"
+            aria-modal="true"
             onClick={e => e.stopPropagation()}
             className="w-full sm:max-w-lg max-h-[88vh] overflow-y-auto bg-white border-[3px] border-indigo-200 rounded-t-[24px] sm:rounded-[24px] shadow-[0_8px_0_0_rgba(99,102,241,0.25)]"
           >

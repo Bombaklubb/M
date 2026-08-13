@@ -42,7 +42,7 @@ export const MODULE9_QUESTIONS: Module9Question[] = [
       { id: 'd', text: 'Det är okej om du ändrar några ord' },
     ],
     correctId: 'b',
-    explanation: 'Att klistra in AI-genererad text som din egna utan att berätta att det är AI-skrivet är fusk – precis som att kopiera från en annan elevs uppsats. Det spelar ingen roll att AI inte är en "person". Du luras att tyckas ha lärt dig och tänkt något du inte gjort.',
+    explanation: 'Att klistra in AI-genererad text som din egna utan att berätta att det är AI-skrivet är fusk – precis som att kopiera från en annan elevs uppsats. Det spelar ingen roll att AI inte är en "person". Du får det att se ut som att du lärt dig och tänkt något du inte har gjort.',
     tip: 'Om du använder AI i ett skolarbete: berätta alltid hur, citera det som en källa, och se till att du förstår och kan förklara allt du lämnar in.',
     category: 'plagiat',
   },

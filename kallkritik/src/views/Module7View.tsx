@@ -301,7 +301,7 @@ export function Module7View({ onComplete, onExit }: ModuleViewProps) {
               } else if (opt.id === selected && opt.id !== current.correctId) {
                 className = 'w-full text-left rounded-[20px] border-[3px] border-rose-400 bg-rose-50 shadow-[0_4px_0_0_rgba(244,63,94,0.3)] p-4 text-sm font-bold text-rose-700';
               } else {
-                className = 'w-full text-left rounded-[20px] border-[3px] border-gray-100 bg-gray-50 p-4 text-sm font-medium text-gray-400';
+                className = 'w-full text-left rounded-[20px] border-[3px] border-gray-100 bg-gray-50 p-4 text-sm font-medium text-gray-600';
               }
 
               return (

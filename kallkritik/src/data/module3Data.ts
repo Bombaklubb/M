@@ -107,7 +107,7 @@ export const MODULE3_SOURCES: SourceItem[] = [
     biasDescription: 'Kommersiell tidning – men med redaktionella riktlinjer',
     purpose: 'Rapportera om ny forskning',
     correctTrust: 'green',
-    explanation: 'Grön signal. Etablerad tidning med namngiven journalist, datum och hänvisning till specifik forskning. Kolla gärna originalstudien för att verifiera, men grundtrovärdigheteten är hög.',
+    explanation: 'Grön signal. Etablerad tidning med namngiven journalist, datum och hänvisning till specifik forskning. Kolla gärna originalstudien för att verifiera, men grundtrovärdigheten är hög.',
     criteria: [
       { label: 'Namngiven journalist', met: true, description: 'Anna Lindqvist – kontaktbar och ansvarig' },
       { label: 'Datum angivet', met: true, description: '15 maj 2025 – nyligen publicerad' },

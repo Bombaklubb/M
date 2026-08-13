@@ -65,7 +65,7 @@ export default function App() {
 
 function AppShell({ user, onLogout }: { user: string; onLogout: () => void }) {
   const [currentView, setCurrentView] = useState<View>('home');
-  const { state, addXP, completeModule, resetProgress } = useGameStore(user);
+  const { state, awardModuleXP, completeModule, resetProgress } = useGameStore(user);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -77,7 +77,7 @@ function AppShell({ user, onLogout }: { user: string; onLogout: () => void }) {
 
   function handleModuleComplete(moduleId: number) {
     return (scorePercent: number, xpEarned: number, badgeName?: string) => {
-      addXP(xpEarned);
+      awardModuleXP(moduleId, xpEarned);
       completeModule(moduleId, scorePercent, badgeName);
       // Ingen navigering här – modulen visar sin resultatsida tills
       // eleven själv väljer "Hem" eller "Spela igen".

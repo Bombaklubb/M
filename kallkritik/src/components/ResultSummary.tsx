@@ -27,7 +27,7 @@ export function ResultSummary({
   onHome,
 }: ResultSummaryProps) {
   const mission = moduleId !== undefined ? LESSON_GUIDES[moduleId]?.mission : undefined;
-  const percentage = Math.round((score / totalQuestions) * 100);
+  const percentage = totalQuestions > 0 ? Math.round((score / totalQuestions) * 100) : 0;
   const isGreat = percentage >= 80;
   const isGood = percentage >= 50;
 
@@ -49,7 +49,7 @@ export function ResultSummary({
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
         className="w-full max-w-md"
       >
-        <div className="bg-card border border-border rounded-3xl p-8 text-center">
+        <div className="clay-card p-8 text-center">
           {/* Emoji */}
           <motion.div
             initial={{ scale: 0 }}
@@ -60,8 +60,8 @@ export function ResultSummary({
             {emoji}
           </motion.div>
 
-          <h2 className="text-2xl font-bold text-foreground mb-1">{text}</h2>
-          <p className="text-muted-foreground mb-6 text-sm">{moduleName} avklarad</p>
+          <h2 className="text-2xl font-extrabold text-gray-800 mb-1" style={{ fontFamily: "'Baloo 2', sans-serif" }}>{text}</h2>
+          <p className="text-gray-500 font-semibold mb-6 text-sm">{moduleName} avklarad</p>
 
           {/* Score circle */}
           <div className="relative w-28 h-28 mx-auto mb-6">
@@ -79,8 +79,8 @@ export function ResultSummary({
               />
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <span className="text-3xl font-bold text-foreground">{percentage}%</span>
-              <span className="text-xs text-muted-foreground">{score}/{totalQuestions}</span>
+              <span className="text-3xl font-extrabold text-gray-800">{percentage}%</span>
+              <span className="text-xs font-bold text-gray-500">{score}/{totalQuestions}</span>
             </div>
           </div>
 
@@ -117,11 +117,11 @@ export function ResultSummary({
               <motion.div
                 key={star}
                 initial={{ scale: 0, rotate: -30 }}
-                animate={{ scale: star <= Math.ceil(percentage / 34) ? 1 : 0.5, rotate: 0 }}
+                animate={{ scale: star <= (percentage >= 80 ? 3 : percentage >= 50 ? 2 : 1) ? 1 : 0.5, rotate: 0 }}
                 transition={{ delay: 0.6 + star * 0.1, type: 'spring' }}
               >
                 <Star
-                  className={`w-7 h-7 ${star <= Math.ceil(percentage / 34) ? 'text-xp fill-xp' : 'text-muted'}`}
+                  className={`w-7 h-7 ${star <= (percentage >= 80 ? 3 : percentage >= 50 ? 2 : 1) ? 'text-xp fill-xp' : 'text-muted'}`}
                 />
               </motion.div>
             ))}

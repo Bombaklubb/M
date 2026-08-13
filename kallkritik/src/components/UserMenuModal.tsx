@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Flame, Zap, Trophy, BarChart2, LogOut } from 'lucide-react';
@@ -18,6 +18,13 @@ export function UserMenuModal({ open, onClose, gameState, userName, onNavigateSt
   const { current, next, progress } = xpForNextLevel(gameState.xp);
   const levelTitle = getLevelTitle(gameState.level);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open, onClose]);
+
   return createPortal(
     <AnimatePresence>
       {open && (
@@ -33,6 +40,8 @@ export function UserMenuModal({ open, onClose, gameState, userName, onNavigateSt
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: -16, opacity: 0, scale: 0.97 }}
             transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+            role="dialog"
+            aria-modal="true"
             onClick={e => e.stopPropagation()}
             className="w-full max-w-sm mt-16 sm:mt-0 bg-white border-[3px] border-indigo-200 rounded-[24px] shadow-[0_8px_0_0_rgba(99,102,241,0.25)] overflow-hidden"
           >
