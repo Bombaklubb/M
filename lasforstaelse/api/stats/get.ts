@@ -112,21 +112,31 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         redis.get<number>(`${KEY_PREFIX}time:${today}`),
         redis.get<number>(`${KEY_PREFIX}total_errors:${today}`),
       ]);
-    // Mängden med alla enheter började föras först nu. Historiken finns dock
-    // kvar i dagsmängderna, som aldrig har fått någon utgångstid, så första
-    // gången bygger vi totalen ur dem i stället för att börja om från noll.
-    // Unionen görs på servern och räknas därefter en gång.
+    // Mängden med alla enheter började föras först när den här versionen togs
+    // i bruk. Historiken finns dock kvar i dagsmängderna, som aldrig har fått
+    // någon utgångstid, så första gången bygger vi totalen ur dem i stället för
+    // att börja om från noll. Unionen görs på servern och räknas därefter en
+    // gång.
+    //
+    // Villkoret var först att totalen skulle vara noll. Det höll inte: track.ts
+    // börjar lägga till enheter direkt efter deployen, så hann någon besöka
+    // appen innan läraren öppnade statistiken var totalen redan skild från noll
+    // och historiken hämtades aldrig. Lärarvyn visade då två unika enheter
+    // totalt men sex inloggade i dag. En egen nyckel avgör i stället om
+    // migreringen är gjord, oberoende av hur många som hunnit besöka appen.
     let alla = enheterTotalt;
-    if (alla === 0) {
+    const migreringsnyckel = `${KEY_PREFIX}visitors_all_migrerad`;
+    if (!(await redis.get(migreringsnyckel))) {
       const dagsnycklar = (await redis.keys(`${KEY_PREFIX}visitors:*`)).filter(
         (k) => k !== ALLA_ENHETER
       );
       if (dagsnycklar.length) {
-        // sunionstore vill ha nycklarna som separata argument. Typningen i
-        // klienten kräver minst en, vilket är garanterat av kontrollen ovan.
-        await redis.sunionstore(ALLA_ENHETER, dagsnycklar[0], ...dagsnycklar.slice(1));
+        // Målmängden är själv med bland källorna, så de enheter som redan hunnit
+        // registreras finns kvar. sunionstore skriver annars över målet.
+        await redis.sunionstore(ALLA_ENHETER, ALLA_ENHETER, ...dagsnycklar);
         alla = await redis.scard(ALLA_ENHETER);
       }
+      await redis.set(migreringsnyckel, today);
     }
 
     const tasksToday = tasksRa || 0;
