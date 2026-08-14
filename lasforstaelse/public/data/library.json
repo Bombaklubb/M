@@ -5957,15 +5957,15 @@
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vad innebär automationsbias enligt texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att kravet på mänsklig kontroll kan bli en formalitet?",
         "options": [
-          "Att ett system som oftast har rätt gör att människor slutar granska det",
-          "Att ett system ärver de fördomar som finns i dess träningsmaterial",
-          "Att ett system svarar snabbare än en människa hinner läsa underlaget",
-          "Att ett system anpassar sina svar efter vad användaren verkar vilja höra"
+          "Systemet är inte fördomsfullt i någon mänsklig mening.",
+          "När ett system oftast har rätt tenderar människor att sluta granska det.",
+          "Risken är ett ansvarsvakuum där var och en pekar på nästa led.",
+          "En fjärde fråga gäller varifrån träningsdata kommer."
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -6029,15 +6029,15 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vilken svårighet lyfter texten fram med automatisk granskning av innehåll?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att övervakning kan påverka rättigheter som formellt är oförändrade?",
         "options": [
-          "Att systemen kräver mer beräkningskraft än plattformarna har tillgång till",
-          "Att systemen bara fungerar på de största och mest spridda språken",
-          "Att systemen arbetar för långsamt för att hinna före en spridning",
-          "Att ett strängt system också fångar satir och legitima åsikter"
+          "Effekten kallas nedkylning och drabbar rättigheter som formellt är helt intakta.",
+          "Att lägga gränsdragningen hos privata företag utan insyn är i sig ett demokratiskt problem.",
+          "Flera länder har därför infört krav på öppna register över politisk annonsering.",
+          "Reglering ställer krav på insyn, märkning av syntetiskt innehåll och tillsyn."
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -9797,7 +9797,7 @@
     "genre": "berättelse",
     "theme": "natur",
     "title": "Äppelträdet i trädgården",
-    "text": "På hösten mognar många äpplen i Sverige. I en trädgård i Uppsala står ett gammalt äppelträd som familjen Karim tar hand om. Varje september plockar barnen Amina och Leo frukterna tillsammans med sin mormor. De lägger äpplena i stora korgar. Vissa äpplen är röda, andra gröna eller gula. Mormor berättar att olika sorter smakar olika. En del är söta och andra är lite sura. Familjen använder äpplena till många saker. De bakar äppelpaj, kokar äppelmos och gör juice. Några äpplen sparar de i en sval källare så att de håller längre. Amina tycker bäst om pajen medan Leo gillar att dricka kall äppeljuice efter skolan. Mormor säger att äpplen är nyttiga eftersom de innehåller vitaminer och fibrer. Därför försöker familjen äta frukt nästan varje dag under hösten. De delar ibland frukten med grannar som bor nära. På så sätt går inget äpple till spillo. Barnen lär sig också hur träd sköts och varför skörden skiljer sig mellan olika år.",
+    "text": "På hösten mognar många äpplen i Sverige. I en trädgård i Uppsala står ett gammalt äppelträd som familjen Karim tar hand om. Varje september plockar barnen Amina och Leo frukterna tillsammans med sin mormor. De lägger äpplena i stora korgar. Vissa äpplen är röda, andra gröna eller gula. Mormor berättar att olika sorter smakar olika. En del är söta och andra är lite sura. \n\nFamiljen använder äpplena till många saker. De bakar äppelpaj, kokar äppelmos och gör juice. Några äpplen sparar de i en sval källare så att de håller längre. Amina tycker bäst om pajen medan Leo gillar att dricka kall äppeljuice efter skolan. \n\nMormor säger att äpplen är nyttiga eftersom de innehåller vitaminer och fibrer. Därför försöker familjen äta frukt nästan varje dag under hösten. De delar ibland frukten med grannar som bor nära. På så sätt går inget äpple till spillo. Barnen lär sig också hur träd sköts och varför skörden skiljer sig mellan olika år.",
     "questions": [
       {
         "type": "literal",
@@ -9822,15 +9822,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilken färg kan äpplen ha enligt texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar att äpplen kan se olika ut?",
         "options": [
-          "Blå eller ljusblå",
-          "Röda, gröna eller gula",
-          "Lila och mörklila",
-          "Svarta eller gråa"
+          "Familjen använder äpplena till många saker.",
+          "Mormor berättar att olika sorter smakar olika.",
+          "Vissa äpplen är röda, andra gröna eller gula.",
+          "De delar ibland frukten med grannar som bor nära."
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
@@ -11019,7 +11019,7 @@
   {
     "id": "ak3-tema-016",
     "title": "Affischen på fritids",
-    "text": "På fritids kommer Elin och Amir in i musikrummet. På bordet ligger en affisch med fyra färgglada figurer. Det är Dolly Style, ett popband som klär sig som godis. De har stora rosetter, glittriga kläder och peruker i starka färger. Elin har hört deras låt på radion och nynnar direkt. Amir säger att musiken låter glad, som när man hoppar studsmatta. De tittar på en musikvideo på surfplattan. I videon dansar bandet i ett rum med ballonger och lampor som blinkar. Elin märker att alla i bandet har egna färger. Amir undrar hur länge det tar att sminka sig så mycket. Pedagogen Sara berättar att många gillar Dolly Style för att de vågar vara sig själva. Bandet sjunger om vänskap och att man kan vara olika. Efter mellis gör barnen egna \"Dolly\"-armband av pärlor. Elin väljer rosa och blå. Amir tar grönt och gult. När de är klara sätter de upp armbanden på affischen och skriver: \"Välkommen hit!\"",
+    "text": "På fritids kommer Elin och Amir in i musikrummet. På bordet ligger en affisch med fyra färgglada figurer. Det är Dolly Style, ett popband som klär sig som godis. De har stora rosetter, glittriga kläder och peruker i starka färger. Elin har hört deras låt på radion och nynnar direkt. Amir säger att musiken låter glad, som när man hoppar studsmatta. \n\nDe tittar på en musikvideo på surfplattan. I videon dansar bandet i ett rum med ballonger och lampor som blinkar. Elin märker att alla i bandet har egna färger. Amir undrar hur länge det tar att sminka sig så mycket. Pedagogen Sara berättar att många gillar Dolly Style för att de vågar vara sig själva. Bandet sjunger om vänskap och att man kan vara olika. \n\nEfter mellis gör barnen egna \"Dolly\"-armband av pärlor. Elin väljer rosa och blå. Amir tar grönt och gult. När de är klara sätter de upp armbanden på affischen och skriver: \"Välkommen hit!\"",
     "grade": 3,
     "category": "Kultur",
     "questions": [
@@ -11181,7 +11181,7 @@
   {
     "id": "ak3-tema-018",
     "title": "Spellistan med refränger",
-    "text": "På biblioteket finns en hylla med musikböcker. Fatima lånar en bok om popmusik och läser om hur en refräng fungerar. Hon får en idé och gör en spellista hemma. Först lägger hon in en Dolly Style-låt med snabb rytm och glada ord. Sedan väljer hon en lugnare låt från ett annat band. När morfar kommer på besök får han lyssna. Morfar säger att Dolly Style påminner honom om karneval, eftersom allt är färgglatt och fullt av energi. Fatima frågar varför refrängen fastnar i huvudet. Morfar förklarar att refrängen ofta upprepas och har en enkel melodi. De testar genom att klappa med händerna varje gång refrängen börjar. Fatima märker att hon lär sig texten snabbare när hon klappar. Nästa dag berättar hon för sin kompis Viggo i skolan. De bestämmer att göra en egen liten dans till första versen och en annan till refrängen. Till sist skriver hon ner tre ord som beskriver musiken: \"glitter\", \"dans\" och \"tillsammans\".",
+    "text": "På biblioteket finns en hylla med musikböcker. Fatima lånar en bok om popmusik och läser om hur en refräng fungerar. Hon får en idé och gör en spellista hemma. Först lägger hon in en Dolly Style-låt med snabb rytm och glada ord. Sedan väljer hon en lugnare låt från ett annat band. \n\nNär morfar kommer på besök får han lyssna. Morfar säger att Dolly Style påminner honom om karneval, eftersom allt är färgglatt och fullt av energi. Fatima frågar varför refrängen fastnar i huvudet. Morfar förklarar att refrängen ofta upprepas och har en enkel melodi. De testar genom att klappa med händerna varje gång refrängen börjar. Fatima märker att hon lär sig texten snabbare när hon klappar. \n\nNästa dag berättar hon för sin kompis Viggo i skolan. De bestämmer att göra en egen liten dans till första versen och en annan till refrängen. Till sist skriver hon ner tre ord som beskriver musiken: \"glitter\", \"dans\" och \"tillsammans\".",
     "grade": 3,
     "category": "Kultur",
     "questions": [
@@ -11262,7 +11262,7 @@
   {
     "id": "ak3-tema-019",
     "title": "Dolly-dans på kulturhuset",
-    "text": "På kulturhuset ordnas en dansworkshop som heter \"Dolly-dans\". Ledaren heter Kim och använder hen som pronomen. I gruppen finns många olika barn. Tuva har hörapparat och står nära högtalaren för att känna basen. Oliver sitter i rullstol och visar hur man kan göra snabba armrörelser i stället för hopp. Kim säger att alla rörelser räknas, bara man följer takten. Först tränar de en enkel serie: klapp, snurr, pek, och ett steg åt sidan. Sedan sätter de på en Dolly Style-låt med mycket glitterkänsla. Barnen skrattar när de försöker hålla samma tempo. Kim påminner dem om att paus också är en del av dansen. Några barn vill ha peruker, men Kim säger att det räcker med en färg man gillar. Tuvas mamma filmar en kort stund och skickar till morfar, som ler på skärmen. Efteråt får alla välja ett färgband till handleden. Oliver tar silver. Tuva väljer lila. Kim säger: \"Ni gjorde dansen till er egen.\"",
+    "text": "På kulturhuset ordnas en dansworkshop som heter \"Dolly-dans\". Ledaren heter Kim och använder hen som pronomen. I gruppen finns många olika barn. Tuva har hörapparat och står nära högtalaren för att känna basen. Oliver sitter i rullstol och visar hur man kan göra snabba armrörelser i stället för hopp. Kim säger att alla rörelser räknas, bara man följer takten. \n\nFörst tränar de en enkel serie: klapp, snurr, pek, och ett steg åt sidan. Sedan sätter de på en Dolly Style-låt med mycket glitterkänsla. Barnen skrattar när de försöker hålla samma tempo. Kim påminner dem om att paus också är en del av dansen. Några barn vill ha peruker, men Kim säger att det räcker med en färg man gillar. \n\nTuvas mamma filmar en kort stund och skickar till morfar, som ler på skärmen. Efteråt får alla välja ett färgband till handleden. Oliver tar silver. Tuva väljer lila. Kim säger: \"Ni gjorde dansen till er egen.\"",
     "grade": 3,
     "category": "Värdegrund",
     "questions": [
@@ -11343,7 +11343,7 @@
   {
     "id": "ak3-tema-020",
     "title": "En egen poptext",
-    "text": "Linus hittar en gammal glittrig penna i en låda. Han bestämmer sig för att skriva en egen poptext, inspirerad av Dolly Style. Först skriver han en vers om en grå måndag när regnet faller. Sedan vill han att refrängen ska kännas som färg. Han skriver ord som \"rosa\", \"mod\" och \"hej!\". Lillasyster Maja hjälper till och föreslår att refrängen ska upprepas två gånger, så den blir lätt att minnas. Pappa spelar tre ackord på gitarr och Linus sjunger ovanpå. De märker att texten låter bättre när orden passar rytmen. Linus suddar och byter plats på några rader. Till slut har de en låt om att våga gå in på skolgården även om man är ny. Linus tänker att Dolly Style också sjunger om att hitta sin plats. Nästa dag läser han upp den för sin kompis Aisha. Hon säger att låten känns både snäll och stark, precis som en kram. Han sparar texten i sin skrivbok.",
+    "text": "Linus hittar en gammal glittrig penna i en låda. Han bestämmer sig för att skriva en egen poptext, inspirerad av Dolly Style. Först skriver han en vers om en grå måndag när regnet faller. Sedan vill han att refrängen ska kännas som färg. Han skriver ord som \"rosa\", \"mod\" och \"hej!\". \n\nLillasyster Maja hjälper till och föreslår att refrängen ska upprepas två gånger, så den blir lätt att minnas. Pappa spelar tre ackord på gitarr och Linus sjunger ovanpå. De märker att texten låter bättre när orden passar rytmen. Linus suddar och byter plats på några rader. \n\nTill slut har de en låt om att våga gå in på skolgården även om man är ny. Linus tänker att Dolly Style också sjunger om att hitta sin plats. Nästa dag läser han upp den för sin kompis Aisha. Hon säger att låten känns både snäll och stark, precis som en kram. Han sparar texten i sin skrivbok.",
     "grade": 3,
     "category": "Kultur",
     "questions": [
@@ -18259,15 +18259,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilket exempel på slitage nämns som kan skapa små partiklar?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att mikroplast kan komma från tvätt av kläder?",
         "options": [
-          "När bildäck slits",
-          "När trä ruttnar",
-          "När glas smälter",
-          "När sten spricker"
+          "När bildäck slits bildas små partiklar som kan hamna i dagvatten.",
+          "Vissa kläder av syntetmaterial kan släppa ifrån sig mikrofibrer vid tvätt.",
+          "Dessa små delar kan gå igenom reningsverk och hamna i sjöar och hav.",
+          "Dels kan djur fastna i större plastbitar eller missta plast för mat."
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -19635,15 +19635,15 @@
         "type": "literal"
       },
       {
-        "q": "Hur många barn arbetar globalt enligt FN?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att barnarbete fortfarande är utbrett i världen?",
         "options": [
-          "Ungefär 500 miljoner",
-          "Ungefär 10 miljoner",
-          "Ungefär 50 miljoner",
-          "Ungefär 160 miljoner"
+          "Senare skärptes reglerna för barnarbete ytterligare.",
+          "Många av dem arbetar under farliga förhållanden.",
+          "Enligt FN arbetar fortfarande ungefär 160 miljoner barn globalt.",
+          "Organisationer arbetar för att minska barnarbete."
         ],
-        "correct": 3,
-        "type": "literal"
+        "correct": 2
       },
       {
         "q": "Vilka orsaker till barnarbete nämns i texten?",
@@ -20942,15 +20942,15 @@
         "type": "literal"
       },
       {
-        "q": "Vem var Big Mama Thornton enligt texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att svarta artister inte fick samma erkännande som Elvis?",
         "options": [
-          "Elvis egen musiklärare under skoltiden i Memphis",
-          "En radiovärd som bara spelade countrymusik",
-          "Elvis mormor som sjöng i kyrkans kör",
-          "En svart artist som spelat in låtar som Elvis senare gjorde till stora hits"
+          "Elvis själv uttryckte respekt för de svarta musiker som inspirerat honom.",
+          "Fler människor började lyssna på rhythm and blues och upptäckte svarta artister.",
+          "Musiken blev en av de första kulturella krafterna som började sudda ut rasliga gränser i USA.",
+          "En vit sångare fick mycket uppmärksamhet för musik som de själva hade utvecklat under lång tid."
         ],
-        "correct": 3,
-        "type": "literal"
+        "correct": 3
       },
       {
         "q": "Vilken positiv effekt hade Elvis musik på segregationens gränser?",
@@ -21660,13 +21660,13 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad kallas det när havet blir surare av att ta upp mer koldioxid?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att havet blir surare av koldioxid?",
         "options": [
-          "Nedkylning",
-          "Övergödning",
-          "Havsförsurning",
-          "Avdunstning"
+          "Haven tar upp en stor del av den extra koldioxiden.",
+          "Om plankton påverkas kan det i sin tur påverka hela näringskedjor.",
+          "När koldioxid löses i vatten bildas kolsyra och havet blir surare.",
+          "Ökat upptag kan handla om att skydda skogar och våtmarker."
         ],
         "correct": 2
       },
@@ -24384,15 +24384,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad gjorde det möjligt för ett självstyre att växa fram i norra Irak?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att självstyret i norra Irak växte fram under yttre skydd?",
         "options": [
-          "En överenskommelse som slöts direkt mellan regionen och grannländerna",
-          "Ett beslut i det irakiska parlamentet omedelbart efter attacken mot Halabja",
-          "En folkomröstning som hölls i regionen under året efter Gulfkriget",
-          "En flygförbudszon som upprättades efter Gulfkriget 1991"
+          "Efter Gulfkriget 1991 upprättades en flygförbudszon över norra Irak.",
+          "Under skyddet av den växte ett självstyre fram, och 1992 hölls val till ett regionalt parlament.",
+          "Kort därefter förlorade regionen kontrollen över flera omtvistade områden.",
+          "Politiken har växlat med regeringar och med hur säkerhetsläget bedömts."
         ],
-        "correct": 3
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -25236,15 +25236,15 @@
     "text": "Skog täcker ungefär sjuttio procent av Sveriges yta. Men skogens betydelse går långt bortom det vi ser.\n\nTräd binder koldioxid. Genom fotosyntesen tar de upp koldioxid från luften. De omvandlar den till syre och organiskt material. En vuxen gran kan binda hundratals kilo koldioxid under sin livstid. Det gör skogen till en av våra viktigaste kolsänkor. En kolsänka är en plats som lagrar kol och bromsar klimatförändringarna.\n\nSkogen är också hem åt tusentals arter. I en svensk granskog lever hackspettar, ekorrar, svampar, lavar och insekter. Många av dessa arter är beroende av gammal skog med döda träd. Sådan skog kallas naturskog och har inte avverkats.\n\nMen skogen används också som resurs. Sverige är ett av världens största exportländer av papper och trävaror. Skogsindustrin sysselsätter tiotusentals människor. Konflikten mellan att bruka och bevara skogen är en av vår tids stora frågor.\n\nEn del forskare menar att vi behöver mer skyddad skog. Bara så klarar vi klimatmålen och bevarar biologisk mångfald. Andra hävdar att hållbart skogsbruk kan kombinera produktion med naturvård. Då planterar man nya träd och avverkar med hänsyn.\n\nDet som är tydligt är att skogen spelar en avgörande roll. Den renar luften vi andas, lagrar vatten, minskar erosion och erbjuder platser för rekreation. Att förstå skogen är att förstå sambanden mellan människa och natur.",
     "questions": [
       {
-        "q": "Hur stor del av Sveriges yta täcks ungefär av skog?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att skogen bromsar klimatförändringarna?",
         "options": [
-          "Nittio procent",
-          "Trettio procent",
-          "Femtio procent",
-          "Sjuttio procent"
+          "Sådan skog kallas naturskog och har inte avverkats.",
+          "En kolsänka är en plats som lagrar kol och bromsar klimatförändringarna.",
+          "Skogsindustrin sysselsätter tiotusentals människor.",
+          "Då planterar man nya träd och avverkar med hänsyn."
         ],
-        "correct": 3,
-        "type": "literal"
+        "correct": 1
       },
       {
         "q": "Vad är en kolsänka?",
@@ -25556,7 +25556,7 @@
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "När skärmarna slocknar",
-    "text": "När tunnelbanan stannade mellan två stationer var det som om staden höll andan. Skärmarna blinkade \"tekniskt fel\", men i vagnen var felet snarare mänskligt: alla tittade ner i sina telefoner, som om ett nätverk var viktigare än luft. En kvinna mitt emot mig började prata, först trevande, sedan med en märklig självklarhet. Hon berättade att hon arbetade med att granska kommunens nya system för ansiktsigenkänning. \"Det sägs att det bara ska öka tryggheten\", sa hon, \"men trygghet är ett ord som kan betyda nästan vad som helst.\" Hon beskrev hur kameror placerats vid skolor och torg, hur data lagras \"tillfälligt\" och hur undantag tenderar att bli rutin. När ljuset fladdrade till hördes ett kort skratt längst bak. Någon sa att hederliga människor inte har något att dölja. Kvinnan höjde ögonbrynen. \"Hederlighet är inte ett passerkort till ett fritt samhälle\", svarade hon. \"Frihet bygger på att du kan tänka fel, ändra dig, vara anonym en stund – utan att någon gör en profil av din tvekan.\" Tåget rullade igång igen. Jag såg hur flera lade undan sina telefoner, inte av lydnad, utan av nyfikenhet. När vi nådde nästa station tackade kvinnan för samtalet, som om det varit planerat. Jag gick av med en obekväm känsla: att framtiden ibland smyger in just när skärmarna slocknar.",
+    "text": "När tunnelbanan stannade mellan två stationer var det som om staden höll andan. Skärmarna blinkade \"tekniskt fel\", men i vagnen var felet snarare mänskligt: alla tittade ner i sina telefoner, som om ett nätverk var viktigare än luft. En kvinna mitt emot mig började prata, först trevande, sedan med en märklig självklarhet. Hon berättade att hon arbetade med att granska kommunens nya system för ansiktsigenkänning. \"Det sägs att det bara ska öka tryggheten\", sa hon, \"men trygghet är ett ord som kan betyda nästan vad som helst.\" Hon beskrev hur kameror placerats vid skolor och torg, hur data lagras \"tillfälligt\" och hur undantag tenderar att bli rutin. \n\nNär ljuset fladdrade till hördes ett kort skratt längst bak. Någon sa att hederliga människor inte har något att dölja. Kvinnan höjde ögonbrynen. \"Hederlighet är inte ett passerkort till ett fritt samhälle\", svarade hon. \"Frihet bygger på att du kan tänka fel, ändra dig, vara anonym en stund – utan att någon gör en profil av din tvekan.\" Tåget rullade igång igen. \n\nJag såg hur flera lade undan sina telefoner, inte av lydnad, utan av nyfikenhet. När vi nådde nästa station tackade kvinnan för samtalet, som om det varit planerat. Jag gick av med en obekväm känsla: att framtiden ibland smyger in just när skärmarna slocknar.",
     "questions": [
       {
         "type": "literal",
@@ -25639,7 +25639,7 @@
     "genre": "berättelse",
     "theme": "vetenskap",
     "title": "Biologisk skuld",
-    "text": "I laboratoriet luktade det desinfektion och varm plast. På bänken stod ett akvarium där zebrafiskar rörde sig i mjuka bågar. Min handledare, Farah, pekade på en skärm där färgade prickar pulserade. \"Det där är genuttryck\", sa hon, \"som en karta över vad cellerna tror att de är.\" Projektet handlade om CRISPR, men inte den förenklade versionen som populärvetenskapen ofta säljer: saxen som klipper bort sjukdomar. Här var det snarare en grammatikkontroll i livets text, full av felstavningar och dubbeltydigheter. När vi ändrade en sekvens för att minska risken för en ärftlig hjärtsjukdom, dök en oväntad effekt upp i ett helt annat organ. Farah kallade det \"biologisk skuld\": varje förbättring betalas någonstans, ibland av någon annan. På seminariet den eftermiddagen kom etiken in som en kall luftström. En doktorand frågade vem som skulle få råd med de nya behandlingarna. En annan undrade om det var rimligt att kalla det \"bot\" när man samtidigt skapade nya sårbarheter. Jag tänkte på fiskarna som fortsatte simma, ovetande om att vi justerat deras framtid med en pipett. När jag gick hem passerade jag en reklamaffisch för \"optimerad hälsa\". Men jag mindes Farahs karta: celler som \"tror\" något. Kanske är vår största risk inte att vi kan förändra livet, utan att vi börjar tro att livet är ett projekt som alltid måste förbättras.",
+    "text": "I laboratoriet luktade det desinfektion och varm plast. På bänken stod ett akvarium där zebrafiskar rörde sig i mjuka bågar. Min handledare, Farah, pekade på en skärm där färgade prickar pulserade. \"Det där är genuttryck\", sa hon, \"som en karta över vad cellerna tror att de är.\" Projektet handlade om CRISPR, men inte den förenklade versionen som populärvetenskapen ofta säljer: saxen som klipper bort sjukdomar. Här var det snarare en grammatikkontroll i livets text, full av felstavningar och dubbeltydigheter. När vi ändrade en sekvens för att minska risken för en ärftlig hjärtsjukdom, dök en oväntad effekt upp i ett helt annat organ. Farah kallade det \"biologisk skuld\": varje förbättring betalas någonstans, ibland av någon annan. \n\nPå seminariet den eftermiddagen kom etiken in som en kall luftström. En doktorand frågade vem som skulle få råd med de nya behandlingarna. En annan undrade om det var rimligt att kalla det \"bot\" när man samtidigt skapade nya sårbarheter. Jag tänkte på fiskarna som fortsatte simma, ovetande om att vi justerat deras framtid med en pipett. \n\nNär jag gick hem passerade jag en reklamaffisch för \"optimerad hälsa\". Men jag mindes Farahs karta: celler som \"tror\" något. Kanske är vår största risk inte att vi kan förändra livet, utan att vi börjar tro att livet är ett projekt som alltid måste förbättras.",
     "questions": [
       {
         "type": "literal",
@@ -25722,7 +25722,7 @@
     "genre": "berättelse",
     "theme": "filosofi",
     "title": "Att välja tystnaden",
-    "text": "På filosofilektionen skrev läraren ett citat på tavlan: \"Vi är fria, men ändå bundna.\" Ingen räckte upp handen. Efteråt följde jag min kompis Samira till biblioteket. Hon skulle skriva en debattartikel om \"valfrihet\" i gymnasievalet. \"Alla säger att vi får välja\", muttrade hon, \"men man väljer ju inom en meny någon annan bestämt.\" Hon pekade på en hylla med böcker om existentialism. Vi drog ut en tunn volym där det stod att frihet inte är att slippa begränsningar, utan att bära ansvaret för sina val även när alternativen känns orättvisa. På vägen hem såg vi en man stå utanför matbutiken med en skylt om att han behövde pengar. Folk gick förbi snabbt, som om hans närvaro var ett test de inte bett om. Samira stannade. Hon gav honom en macka från sin påse och pratade en stund. När vi gick vidare sa hon: \"Jag vet inte om det hjälper, men att inte göra något känns som att välja också.\" Den kvällen tänkte jag på citatet igen. Kanske är det just så: vi är fria i våra handlingar, men bundna av konsekvenser, normer och andras blickar. Friheten är inte en dörr som står öppen; den är en passage där man måste gå, även när man darrar. Och varje gång man låtsas att man inte väljer, väljer man ändå tystnaden.",
+    "text": "På filosofilektionen skrev läraren ett citat på tavlan: \"Vi är fria, men ändå bundna.\" Ingen räckte upp handen. Efteråt följde jag min kompis Samira till biblioteket. Hon skulle skriva en debattartikel om \"valfrihet\" i gymnasievalet. \"Alla säger att vi får välja\", muttrade hon, \"men man väljer ju inom en meny någon annan bestämt.\" Hon pekade på en hylla med böcker om existentialism. Vi drog ut en tunn volym där det stod att frihet inte är att slippa begränsningar, utan att bära ansvaret för sina val även när alternativen känns orättvisa. \n\nPå vägen hem såg vi en man stå utanför matbutiken med en skylt om att han behövde pengar. Folk gick förbi snabbt, som om hans närvaro var ett test de inte bett om. Samira stannade. Hon gav honom en macka från sin påse och pratade en stund. När vi gick vidare sa hon: \"Jag vet inte om det hjälper, men att inte göra något känns som att välja också.\" Den kvällen tänkte jag på citatet igen. \n\nKanske är det just så: vi är fria i våra handlingar, men bundna av konsekvenser, normer och andras blickar. Friheten är inte en dörr som står öppen; den är en passage där man måste gå, även när man darrar. Och varje gång man låtsas att man inte väljer, väljer man ändå tystnaden.",
     "questions": [
       {
         "type": "literal",
@@ -26317,15 +26317,15 @@
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vad händer med Frodo vid Domedagsberget?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att Frodo inte klarar sitt uppdrag?",
         "options": [
-          "Han kastar ringen i elden men skadas svårt av hettan i samma stund",
-          "Han överlämnar ringen till Sam, som utför det sista steget åt honom",
-          "Han klarar inte av att kasta ringen i elden utan tar den för egen räkning",
-          "Han förlorar ringen på vägen upp och hittar den aldrig igen"
+          "Samtidigt visar berättelsen att godhet inte skyddar mot frestelse.",
+          "Vid Domedagsberget klarar Frodo inte av att kasta ringen i elden, utan tar den för egen räkning.",
+          "Utgången knyts därmed till de tidigare besluten att skona honom.",
+          "Det som räddar Midgård är inte viljestyrka, utan följderna av tidigare nåd."
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "inferens",
@@ -27139,15 +27139,15 @@
         "type": "literal"
       },
       {
-        "q": "Vad kännetecknar pseudovetenskap enligt texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att pseudovetenskap avvisar invändningar i stället för att pröva dem?",
         "options": [
-          "Att kritik avfärdas och påståenden inte testas ordentligt",
-          "Att den publiceras i granskade tidskrifter",
-          "Att den alltid handlar om rymdresor",
-          "Att den alltid är korrekt"
+          "Den kan använda vetenskapliga termer utan att faktiskt följa vetenskaplig metod.",
+          "Påståenden presenteras som bevisade trots att de inte har testats.",
+          "Kritik avfärdas som konspiration, och undantag förklaras med påhittade omständigheter.",
+          "Ett pseudovetenskapligt påstående saknar ofta ett sådant svar."
         ],
-        "correct": 0,
-        "type": "literal"
+        "correct": 2
       },
       {
         "q": "Varför är ordet naturlig inte alltid positivt enligt texten?",
