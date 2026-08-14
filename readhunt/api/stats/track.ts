@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { redis, KEY_PREFIX, getTodayKey } from '../lib/redis';
+import { applyCors, getClientIp, rateLimit, tooManyRequests } from '../lib/security';
 
 /**
  * GDPR-SÄKRAD STATISTIK-TRACKING
@@ -10,7 +11,7 @@ import { redis, KEY_PREFIX, getTodayKey } from '../lib/redis';
  * - Aggregerade räknare (antal besökare, uppgifter, fel, tid)
  *
  * Data som INTE lagras:
- * - IP-adresser
+ * - IP-adresser (används endast tillfälligt för rate limiting, sparas aldrig i klartext)
  * - Namn eller användarnamn
  * - Specifika svar eller resultat kopplade till individer
  * - Webbläsarfingerprints
@@ -23,19 +24,25 @@ interface TrackEvent {
     questionType?: string; // För vanligaste fel
     timeSeconds?: number; // För total tid
     correct?: boolean; // För att räkna fel
-    grade?: number; // Årskurs/stadie (1-9)
+    grade?: number; // Årskurs/stadie (1-10)
   };
 }
 
-// CORS headers
-function setCorsHeaders(res: VercelResponse) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-}
+// Rate limits. Generösa per IP eftersom en hel klass delar skolans utgående IP:
+// en elev som gör klart en text skickar ca 8 anrop, 30 elever samtidigt ≈ 240/min.
+const PER_DEVICE_PER_MIN = 60;
+const PER_IP_PER_MIN = 900;
+
+// Hur länge en enhet räknas som "aktiv nu"
+const ACTIVE_WINDOW_MS = 5 * 60 * 1000;
+
+// Tillåtna värden för questionType (hindrar att godtyckliga strängar skapar Redis-fält)
+const ALLOWED_QUESTION_TYPES = new Set(['literal', 'inference']);
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  setCorsHeaders(res);
+  if (!applyCors(req, res)) {
+    return res.status(403).json({ error: 'Origin not allowed' });
+  }
 
   // Handle preflight requests
   if (req.method === 'OPTIONS') {
@@ -51,7 +58,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const event: TrackEvent = req.body;
     const today = getTodayKey();
 
-    if (!event.type || !event.deviceId) {
+    if (!event || !event.type || !event.deviceId) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -60,56 +67,71 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(400).json({ error: 'Invalid deviceId format' });
     }
 
+    // Rate limiting: per enhet (fångar skenande klienter) och per IP (fångar spam)
+    const ip = getClientIp(req);
+    const [byDevice, byIp] = await Promise.all([
+      rateLimit(`track:dev:${event.deviceId}`, PER_DEVICE_PER_MIN, 60),
+      rateLimit(`track:ip:${ip}`, PER_IP_PER_MIN, 60),
+    ]);
+    if (!byDevice.allowed || !byIp.allowed) {
+      return tooManyRequests(res, 60);
+    }
+
     switch (event.type) {
-      case 'pageview':
+      case 'pageview': {
+        const now = Date.now();
         // Lägg till deviceId i dagens unika besökare (Set = unika värden)
         await redis.sadd(`${KEY_PREFIX}visitors:${today}`, event.deviceId);
         // Räkna totalt antal sidvisningar
         await redis.incr(`${KEY_PREFIX}pageviews:${today}`);
-        // Uppdatera senast aktiv (för "inloggade nu")
-        await redis.set(`${KEY_PREFIX}active:${event.deviceId}`, '1', { ex: 300 }); // 5 min TTL
+        // Aktiva just nu: sorterad mängd med tidsstämpel som score.
+        // Ger O(log N)-uppslag i stället för ett blockerande KEYS-anrop.
+        await redis.zadd(`${KEY_PREFIX}active`, { score: now, member: event.deviceId });
+        // Städa bort inaktuella poster så mängden inte växer obegränsat
+        await redis.zremrangebyscore(`${KEY_PREFIX}active`, 0, now - ACTIVE_WINDOW_MS);
         // Spara startdatum för statistik (endast första gången)
         await redis.setnx(`${KEY_PREFIX}stats_started`, today);
         break;
+      }
 
-      case 'task_complete':
+      case 'task_complete': {
         // Öka räknaren för uppgifter gjorda
         await redis.incr(`${KEY_PREFIX}tasks:${today}`);
         // Spåra användning per årskurs/stadie
-        if (event.data?.grade && event.data.grade >= 1 && event.data.grade <= 10) {
-          await redis.hincrby(`${KEY_PREFIX}grades`, `grade_${event.data.grade}`, 1);
+        const grade = Number(event.data?.grade);
+        if (Number.isInteger(grade) && grade >= 1 && grade <= 10) {
+          await redis.hincrby(`${KEY_PREFIX}grades`, `grade_${grade}`, 1);
         }
         // Om det var fel, öka felräknaren
-        if (event.data?.correct === false && event.data?.questionType) {
-          await redis.hincrby(
-            `${KEY_PREFIX}errors:${today}`,
-            event.data.questionType,
-            1
-          );
+        if (event.data?.correct === false && ALLOWED_QUESTION_TYPES.has(event.data?.questionType || '')) {
+          await redis.hincrby(`${KEY_PREFIX}errors:${today}`, event.data!.questionType!, 1);
           await redis.incr(`${KEY_PREFIX}total_errors:${today}`);
         }
         break;
+      }
 
-      case 'session_time':
+      case 'session_time': {
         // Lägg till tid till total tid
-        if (event.data?.timeSeconds && event.data.timeSeconds > 0) {
+        const seconds = Number(event.data?.timeSeconds);
+        if (Number.isFinite(seconds) && seconds > 0) {
           await redis.incrby(
             `${KEY_PREFIX}time:${today}`,
-            Math.min(event.data.timeSeconds, 3600) // Max 1 timme per session
+            Math.min(Math.floor(seconds), 3600) // Max 1 timme per session
           );
         }
         break;
+      }
 
-      case 'error':
+      case 'error': {
         // Spåra feltyper för "vanligaste fel"
-        if (event.data?.questionType) {
-          await redis.hincrby(
-            `${KEY_PREFIX}errors:${today}`,
-            event.data.questionType,
-            1
-          );
+        if (ALLOWED_QUESTION_TYPES.has(event.data?.questionType || '')) {
+          await redis.hincrby(`${KEY_PREFIX}errors:${today}`, event.data!.questionType!, 1);
         }
         break;
+      }
+
+      default:
+        return res.status(400).json({ error: 'Unknown event type' });
     }
 
     return res.status(200).json({ success: true });
