@@ -1,6 +1,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { createHash, timingSafeEqual } from 'node:crypto';
-import { redis, KEY_PREFIX, getTodayKey, getDateKey } from '../lib/redis';
+import {
+  redis, KEY_PREFIX, getTodayKey, getDateKey, ALLA_ENHETER, AKTIVA, AKTIV_FONSTER_MS,
+} from '../lib/redis';
 
 /**
  * GDPR-SÄKRAD STATISTIK-HÄMTNING
@@ -91,14 +93,42 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     // Dagens siffror. Här låg också en hgetall på dagens feltyper vars resultat
     // aldrig användes – feltyperna räknas i fjortondagarsslingan nedan.
-    const [activeKeys, visitorsToday, tasksRa, timeRa, errorsRa] = await Promise.all([
-      redis.keys(`${KEY_PREFIX}active:*`), // aktiva just nu = nycklar med TTL
-      redis.scard(`${KEY_PREFIX}visitors:${today}`),
-      redis.get<number>(`${KEY_PREFIX}tasks:${today}`),
-      redis.get<number>(`${KEY_PREFIX}time:${today}`),
-      redis.get<number>(`${KEY_PREFIX}total_errors:${today}`),
-    ]);
-    const activeNow = activeKeys.length;
+    const nu = Date.now();
+    const grans = nu - AKTIV_FONSTER_MS;
+
+    // Rensa bort enheter som inte hörts av inom fönstret, så att mängden inte
+    // växer i onödan, och räkna dem som är kvar. Tidigare gjordes det med
+    // redis.keys(), som läser igenom hela nyckelrymden vid varje sidladdning i
+    // lärarvyn. En sorterad mängd med tidsstämpel som poäng ger samma svar utan
+    // att röra något annat än de egna posterna.
+    await redis.zremrangebyscore(AKTIVA, 0, grans);
+
+    const [activeNow, visitorsToday, enheterTotalt, tasksRa, timeRa, errorsRa] =
+      await Promise.all([
+        redis.zcount(AKTIVA, grans, '+inf'),
+        redis.scard(`${KEY_PREFIX}visitors:${today}`),
+        redis.scard(ALLA_ENHETER),
+        redis.get<number>(`${KEY_PREFIX}tasks:${today}`),
+        redis.get<number>(`${KEY_PREFIX}time:${today}`),
+        redis.get<number>(`${KEY_PREFIX}total_errors:${today}`),
+      ]);
+    // Mängden med alla enheter började föras först nu. Historiken finns dock
+    // kvar i dagsmängderna, som aldrig har fått någon utgångstid, så första
+    // gången bygger vi totalen ur dem i stället för att börja om från noll.
+    // Unionen görs på servern och räknas därefter en gång.
+    let alla = enheterTotalt;
+    if (alla === 0) {
+      const dagsnycklar = (await redis.keys(`${KEY_PREFIX}visitors:*`)).filter(
+        (k) => k !== ALLA_ENHETER
+      );
+      if (dagsnycklar.length) {
+        // sunionstore vill ha nycklarna som separata argument. Typningen i
+        // klienten kräver minst en, vilket är garanterat av kontrollen ovan.
+        await redis.sunionstore(ALLA_ENHETER, dagsnycklar[0], ...dagsnycklar.slice(1));
+        alla = await redis.scard(ALLA_ENHETER);
+      }
+    }
+
     const tasksToday = tasksRa || 0;
     const totalTimeToday = timeRa || 0;
     const totalErrorsToday = errorsRa || 0;
@@ -128,7 +158,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       })
     );
 
-    let totalVisitors = 0;
     let totalTasks = 0;
     let totalTime = 0;
     let totalErrors = 0;
@@ -137,7 +166,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const allErrors: Record<string, number> = {};
 
     for (const dag of dagar) {
-      totalVisitors += dag.visitors;
       totalTasks += dag.tasks;
       totalTime += dag.time;
       totalErrors += dag.errors;
@@ -188,8 +216,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       totalTimeTodaySeconds: totalTimeToday,
       totalErrorsToday,
 
-      // Totalt (14 dagar)
-      totalVisitors,
+      // Unika enheter sedan appen togs i bruk. Tidigare summerades de dagliga
+      // unika besökarna över fjorton dagar, vilket räknade samma Chromebook en
+      // gång per dag den användes. En mängd räknar varje id en gång.
+      totalVisitors: alla,
+
+      // Övriga totaler nedan gäller fjorton dagar bakåt.
       totalTasks,
       totalTime: formatTime(totalTime),
       totalTimeSeconds: totalTime,

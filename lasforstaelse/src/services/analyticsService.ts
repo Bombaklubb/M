@@ -123,6 +123,25 @@ export function startSession(): void {
   window.addEventListener('beforeunload', handleUnload);
   window.addEventListener('pagehide', handleUnload);
 
+  // Pausa sessionen när fliken göms, och starta om den när eleven kommer
+  // tillbaka.
+  //
+  // Utan detta fortsatte femminutersintervallet nedan att skicka tid från en
+  // flik som legat orörd i bakgrunden. Två saker blev fel av det: tiden räknades
+  // som lästid fastän ingen läste, och varje sådant anrop höll enheten kvar
+  // bland "inloggade nu" i lärarvyn. Nu skickas den tid som faktiskt hunnit gå,
+  // varefter mätningen ligger stilla tills fliken syns igen.
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      if (sessionStartTime === null) return;
+      const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
+      sessionStartTime = null;
+      trackSessionTime(Math.min(seconds, 3600));
+    } else {
+      sessionStartTime = Date.now();
+    }
+  });
+
   // Skicka tid var 5:e minut (för långa sessioner)
   setInterval(() => {
     if (sessionStartTime) {

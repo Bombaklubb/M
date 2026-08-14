@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { redis, KEY_PREFIX, getTodayKey } from '../lib/redis';
+import { redis, KEY_PREFIX, getTodayKey, ALLA_ENHETER, AKTIVA } from '../lib/redis';
 
 /**
  * GDPR-SÄKRAD STATISTIK-TRACKING
@@ -86,14 +86,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(400).json({ error: 'Invalid deviceId format' });
     }
 
+    // Varje händelse räknas som ett livstecken, inte bara appstarten.
+    //
+    // Tidigare sattes aktivitetsmarkeringen enbart vid pageview, med fem
+    // minuters livslängd. En elev som läste en lång text i tjugo minuter
+    // räknades därför som aktiv i fem av dem, och "inloggade nu" visade i
+    // praktiken hur många som nyss laddat om sidan. Nu skrivs tidsstämpeln vid
+    // varje anrop – start, besvarad fråga och den återkommande sessionspulsen.
+    await redis.zadd(AKTIVA, { score: Date.now(), member: event.deviceId });
+
     switch (event.type) {
       case 'pageview':
         // Lägg till deviceId i dagens unika besökare (Set = unika värden)
         await redis.sadd(`${KEY_PREFIX}visitors:${today}`, event.deviceId);
+        // ... och i mängden över alla enheter sedan start. En mängd räknar
+        // varje id en gång, hur många dagar enheten än återkommer.
+        await redis.sadd(ALLA_ENHETER, event.deviceId);
         // Räkna totalt antal sidvisningar
         await redis.incr(`${KEY_PREFIX}pageviews:${today}`);
-        // Uppdatera senast aktiv (för "inloggade nu")
-        await redis.set(`${KEY_PREFIX}active:${event.deviceId}`, '1', { ex: 300 }); // 5 min TTL
         // Spara startdatum för statistik (endast första gången)
         await redis.setnx(`${KEY_PREFIX}stats_started`, today);
         break;
