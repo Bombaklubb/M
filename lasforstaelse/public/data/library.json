@@ -428,15 +428,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad kunde man skriva med förr för länge sedan?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar att skrivtecken från förr fortfarande går att se?",
         "options": [
-          "Krita i luften",
-          "Laser",
-          "Bläck och fjäder",
-          "Mobilapp"
+          "Då kunde man använda samma tavla många gånger.",
+          "Sådana tecken finns kvar på runstenar än i dag.",
+          "För länge sedan kunde man skriva med bläck och fjäder.",
+          "Sättet ändras, men behovet att skriva finns kvar."
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
@@ -5609,13 +5609,13 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "När blir skuggan lång enligt texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar när skuggan blir kort?",
         "options": [
-          "När det är natt",
-          "När solen står högt",
-          "När solen står lågt",
-          "När det snöar"
+          "En skugga blir till när något stoppar ljuset.",
+          "Du kan testa genom att gå ut och titta på din skugga.",
+          "När solen står högt mitt på dagen blir skuggan kortare.",
+          "När solen står lågt, på morgonen eller kvällen, blir skuggan lång."
         ],
         "correct": 2
       },
@@ -5769,15 +5769,15 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vad utmärkte den symboliska ansatsen inom AI?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att ingen AI i dag har mänsklig bredd?",
         "options": [
-          "Logiska regler och kunskap som experter matade in för hand",
-          "Statistiska metoder tränade på mycket stora datamängder",
-          "Beräkningar i många lager efter nervcellernas förebild",
-          "Program som skapade text och bild utifrån mönster i material"
+          "Träningsdata är därför inte en neutral resurs.",
+          "Det är brukligt att skilja mellan smal och generell AI.",
+          "All AI som används i dag är smal, hur imponerande den än verkar.",
+          "Under 1900-talets senare hälft dominerade en annan ansats."
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -5791,13 +5791,13 @@
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Varför beskrivs all AI som används i dag som smal?",
+        "type": "forfattarens-syfte",
+        "q": "Vad vill texten framför allt att läsaren ska ta med sig?",
         "options": [
-          "Därför att den bara kan köras på särskilt kraftfull utrustning",
-          "Därför att varje system löser en avgränsad uppgift åt gången",
-          "Därför att den ännu inte fått fäste utanför forskningen",
-          "Därför att den saknar förmåga att förändras över tid"
+          "Att kunna följa hur beräkningarna i modellens lager går till",
+          "Att kunna bedöma vad ett system kan svara på och vem som ansvarar",
+          "Att kunna avgöra när generell AI blir tekniskt möjlig",
+          "Att kunna skilja de största modellernas företag från varandra"
         ],
         "correct": 1
       },
@@ -5841,13 +5841,13 @@
     "text": "Artificiell intelligens förändrar arbetsmarknaden, men inte riktigt på det sätt som rubrikerna antyder. Den vanliga bilden är att hela yrken försvinner. Arbetsmarknadsforskare beskriver hellre förändringen på uppgiftsnivå: varje yrke består av en uppsättning arbetsmoment, och tekniken tar över några av dem medan andra blir kvar. En radiolog som slutar mäta tumörstorlek för hand ägnar inte mindre tid åt patienter, utan mer.\n\nHistoriskt har varje teknikskifte följt ett liknande mönster. Vävstolen ersatte handvävaren men skapade fabriken. Persondatorn gjorde skrivbiträdet överflödigt och gav upphov till branscher som inte hade något namn tjugo år tidigare. Nettoresultatet har hittills varit fler arbetstillfällen, inte färre.\n\nDet som skiljer det pågående skiftet är hastigheten. Industrialiseringen sträckte sig över generationer. De senaste årens språkmodeller nådde hundratals miljoner användare på månader. En omställning som får ta trettio år kan tas upp av att unga utbildas annorlunda. En som tar fem år måste hanteras av dem som redan är mitt i yrkeslivet.\n\nVilka uppgifter som är utsatta följer inte den intuitiva skalan från enkelt till svårt. Rutinmässiga och regelstyrda moment automatiserades redan under digitaliseringens första våg: fakturahantering, dataregistrering, enklare kundtjänst. Det nya är att även kvalificerade skrivbordsuppgifter berörs, som att sammanfatta ett underlag, formulera ett första utkast eller översätta en text. Samtidigt står yrken som kräver fysisk närvaro i oförutsägbara miljöer emot förvånansvärt väl. Att montera en ställning på ett tak eller trösta ett barn i förskolan är svårare att automatisera än att skriva en rapportsammanfattning. Fenomenet är känt som Moravecs paradox: det som är lätt för människor är ofta svårt för maskiner, och tvärtom.\n\nEmpati och sammansatt socialt samspel hör till det svåraste. Ett system kan producera formuleringar som låter empatiska, men i yrken där en bedömning ska bäras av någon, som ett besked till en anhörig eller ett beslut om en elevs stöd, är det inte formuleringen som är kärnan. Kärnan är att en ansvarig människa står bakom den.\n\nÖvergångsperioden är den svåra delen. Utbildningssystem är byggda för att förbereda unga för ett yrkesliv, inte för att skola om fyrtioåringar. Livslångt lärande blir därför mer än en fras: det förutsätter finansiering, tid och att arbetsgivare räknar omskolning som en investering snarare än en kostnad. Länder som byggt ut omställningsstöd har historiskt klarat strukturomvandlingar med mindre social skada än länder som låtit marknaden ensam sköta anpassningen.\n\nDet är dessutom svårt att mäta effekten medan den pågår. Produktivitetsstatistik fångar förändringar med flera års fördröjning, och de företag som infört verktygen tidigt är sällan representativa för resten. Mycket av det som sägs om AI:s inverkan på arbetsmarknaden bygger därför på enkäter om förväntningar snarare än på utfall som gått att räkna.\n\nPerspektiven på effekterna går isär. Optimisterna pekar på produktivitet: om samma arbete kan utföras på kortare tid frigörs resurser till annat, och slitsamma moment försvinner. Kritikerna invänder att produktivitetsvinsten inte fördelar sig av sig själv. Om vinsterna tillfaller ägare av kapital och plattformar medan lönerna står stilla ökar ojämlikheten även när ekonomin växer. Vem som tar hem vinsten är en politisk fråga, inte en teknisk.\n\nEn tredje position undviker båda ytterligheterna. Den framhåller att effekten beror på hur systemen införs. Ett verktyg som ges till medarbetare för att slippa det mest slitsamma ger ett annat resultat än samma verktyg infört för att minska bemanningen, trots att tekniken är identisk.\n\nDet som ändå framstår som säkert är att kraven på kompetens förskjuts. Att arbeta bra tillsammans med ett AI-system förutsätter att man vet vad det är dåligt på: när det låter säkert utan att ha täckning, när dess förslag bygger på ett material som inte liknar den egna verksamheten, och när ett svar måste kontrolleras innan det används. Den förmågan är inte teknisk i första hand, utan en form av källkritik.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Varför beskriver arbetsmarknadsforskare förändringen på uppgiftsnivå i stället för yrkesnivå?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att tidigare teknikskiften också skapade arbeten?",
         "options": [
-          "Därför att antalet yrken i statistiken har minskat kraftigt på senare år",
-          "Därför att tekniken tar över vissa arbetsmoment medan andra blir kvar",
-          "Därför att arbetsgivare sällan vill uppge vilka yrken de har anställda i",
-          "Därför att de flesta yrken består av ungefär lika många arbetsmoment"
+          "Den vanliga bilden är att hela yrken försvinner.",
+          "Vävstolen ersatte handvävaren men skapade fabriken.",
+          "Det som skiljer det pågående skiftet är hastigheten.",
+          "Det är dessutom svårt att mäta effekten medan den pågår."
         ],
         "correct": 1
       },
@@ -5924,13 +5924,13 @@
     "text": "När AI-system börjar förbereda beslut som påverkar människors liv, som vem som kallas till anställningsintervju, vem som beviljas lån eller vilken patient som prioriteras, flyttas gamla etiska frågor in i ny form. De handlar om rättvisa, insyn, integritet och ansvar, och de går inte att lösa med bättre teknik ensam.\n\nDet mest omtalade problemet är algoritmisk snedvridning, ofta kallad bias. Ett system tränas på historiska data, och historien är sällan neutral. Om ett rekryteringsverktyg lär sig av tidigare anställningsbeslut i en bransch där män dominerat kommer det att uppfatta manliga meriter som tecken på framgång. Systemet är inte fördomsfullt i någon mänsklig mening. Det återger det mönster det fått se.\n\nJust därför är problemet svårt. Att stryka kön ur datamaterialet hjälper sällan, eftersom andra uppgifter kan fungera som ersättningar för det som togs bort: en idrottsförening, ett uppehåll i meritförteckningen, ett bostadsområde. Liknande mönster har påvisats inom kreditbedömning, brottsförutsägelse och ansiktsigenkänning.\n\nRättvisa visar sig dessutom vara flera saker samtidigt. Ska ett system ha lika stor andel felaktiga avslag i alla grupper, eller lika stor andel korrekta godkännanden? Matematiskt går det i regel inte att uppfylla båda kraven samtidigt om grupperna skiljer sig åt i utfall. Valet mellan dem är ett värdeval, och det kan inte lämnas över till en modell.\n\nInsyn är en annan utmaning. Många system, särskilt djupinlärningsmodeller, beskrivs som svarta lådor: beslutet är utspritt över miljoner värden och låter sig inte översättas till en läsbar motivering. Det spelar liten roll för en filmrekommendation men mycket stor roll när någon nekas ett lån eller får en föreslagen diagnos. Det finns metoder för att i efterhand peka ut vad som verkar ha påverkat ett enskilt beslut, men sådana förklaringar är rekonstruktioner, inte protokoll över vad som faktiskt hände.\n\nIntegritetsfrågorna aktualiseras av att systemen blir bättre ju mer data de får. Ansiktsigenkänning i offentliga miljöer, förutsägande polisverksamhet och reklam byggd på beteendeanalys väcker frågan var övervakningens gräns går. En särskild svårighet är att uppgifter som var för sig verkar harmlösa kan bli känsliga när de förs samman. Köpmönster, rörelsemönster och söktermer kan tillsammans avslöja sådant som ingen av delarna avslöjar ensam.\n\nAnsvarsfrågan har inget självklart svar. När en självkörande bil orsakar en olycka finns flera kandidater: tillverkaren, den som utvecklade programvaran, den som valde träningsdata, den som satt bakom ratten. Rättssystem är byggda kring uppsåt och oaktsamhet hos människor och passar illa när skadan uppstår ur ett samspel mellan många aktörer och ett system som ingen av dem fullt ut överblickar. Risken är ett ansvarsvakuum där var och en pekar på nästa led.\n\nEn fjärde fråga gäller varifrån träningsdata kommer. Mycket av materialet har samlats in från öppna delar av nätet utan att de som skrev det tillfrågats. Att en text är åtkomlig är inte detsamma som att den är fri att använda, och frågan prövas nu i domstolar på flera håll.\n\nEtt besläktat problem kallas automationsbias. När ett system oftast har rätt tenderar människor att sluta granska det. Kravet på att en människa ska fatta det slutliga beslutet blir då en formalitet: personen trycker på knappen men gör ingen egen bedömning. Skyddet finns på pappret men inte i praktiken.\n\nFör att möta detta har olika ramverk växt fram. Återkommande principer är rättvisa, förklarbarhet, mänsklig kontroll och ansvarsskyldighet. EU:s AI-förordning bygger på en risktrappa: ju större risk för människors rättigheter, desto hårdare krav på dokumentation, datakvalitet och tillsyn, medan vissa användningar förbjuds helt.\n\nRegler är dock trubbiga verktyg mot en teknik som ändras snabbare än lagstiftning hinner skrivas. Därför brukar man framhålla att etiken måste finnas i utvecklingsarbetet självt: i valet av data, i besluten om vad systemet inte ska användas till, och i viljan att avstå från en tillämpning som fungerar tekniskt men inte går att försvara.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Varför hjälper det sällan att stryka kön ur ett rekryteringsverktygs träningsdata?",
+        "type": "forfattarens-syfte",
+        "q": "Varför avslutar texten med viljan att avstå från en tillämpning?",
         "options": [
-          "Därför att systemet ändå får uppgiften från arbetsgivaren i ett senare steg",
-          "Därför att modellen behöver uppgiften för att kunna göra en rättvis bedömning",
-          "Därför att andra uppgifter kan fungera som ersättningar för den som togs bort",
-          "Därför att lagen kräver att uppgiften finns kvar i underlaget till beslutet"
+          "För att visa att teknisk utveckling bör stoppas helt",
+          "För att visa att lagstiftning alltid hinner före tekniken",
+          "För att visa att etiken måste finnas i arbetet självt",
+          "För att visa att företagen sällan bryr sig om följderna"
         ],
         "correct": 2
       },
@@ -6101,13 +6101,13 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilken flaskhals i vetenskapen menar optimisterna att AI kan lätta på?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten är belägg för att jämförelsen med kärnvapenkontroll inte håller?",
         "options": [
-          "Bristen på forskare med tillräcklig utbildning inom flera olika fält",
-          "Kostnaden för den utrustning som krävs i moderna laboratorier",
-          "Förmågan att söka igenom fler alternativ än vad forskare hinner testa",
-          "Svårigheten att få forskningsresultat publicerade i ledande tidskrifter"
+          "Osäkerheten i sig har blivit ett argument i debatten.",
+          "En del av oenigheten handlar om hur förmåga ska mätas.",
+          "Jämförelser görs ibland med kontrollen av kärnvapen, men liknelsen haltar.",
+          "Det som förenar de flesta bedömare är att utvecklingen inte är förutbestämd."
         ],
         "correct": 2
       },
@@ -6195,24 +6195,24 @@
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Hur beskrivs Umbridges makt i texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar hur Umbridge får människor att kontrollera varandra?",
         "options": [
-          "Som främst fysisk och direkt, där hon vinner genom öppna dueller varje dag",
-          "Som beroende av att hon ensam vet alla hemliga besvärjelser i skolan.",
-          "Som byråkratisk: hon styr med dekret, rutiner och \"korrekta\" formuleringar som blir hårda i praktiken.",
-          "Som svag, eftersom hon inte lyckas påverka skolans klimat över huvud taget."
+          "Problemet är att rädslan ofta sprider sig inåt.",
+          "Hon får också människor att själva övervaka varandra.",
+          "Den låter korrekt på papper, men blir brutal i praktiken.",
+          "Hon behöver inte kasta stora förbannelser för att förändra skolan."
         ],
-        "correct": 2
+        "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilket exempel på mindre dramatiskt motstånd nämns i texten?",
+        "type": "forfattarens-syfte",
+        "q": "Varför läser texten Harry Potter med fokus på makt?",
         "options": [
-          "Att eleverna alltid saboterar lektioner genom att kasta slumpmässiga förbannelser",
-          "Att lärarna vägrar undervisa och stänger alla klassrum.",
-          "Att alla vägrar använda magi under ett helt läsår för att protestera.",
-          "Att motstånd kan handla om att inte sprida rykten, dela information ansvarsfullt och organisera sig etiskt."
+          "För att visa att magin är seriens viktigaste inslag",
+          "För att förklara hur besvärjelser fungerar i böckerna",
+          "För att jämföra Hogwarts med en vanlig svensk skola",
+          "För att göra berättelsen mindre sagolik och mer politisk"
         ],
         "correct": 3
       },
@@ -6256,24 +6256,24 @@
     "text": "Att översätta Harry Potter är mer än att byta ut ord från ett språk till ett annat. Översättning är alltid en form av tolkning. Översättaren måste välja vad som ska prioriteras: rytm, humor, tydlighet, kulturella associationer eller trohet mot originalets form. I en serie som bygger mycket av sin charm på ordlekar, namn och stilskillnader mellan olika miljöer blir dessa val extra synliga.\n\nNamn är ett typiskt exempel. I originalet kan ett namn bära information om personens roll eller karaktär, ibland som en liten ledtråd. Om namnet låter \"talande\" på engelska men inte på svenska kan effekten försvinna. Då kan översättaren behålla originalet och låta läsaren missa nyansen. Alternativet är att skapa ett svenskt namn som ger en liknande signal. Båda alternativen har kostnader. Att behålla kan kännas främmande, och att anpassa kan kännas som att man förändrar författarens intention.\n\nHumor och ton är ett annat område där översättningar kan bli olika. Ett skämt kan bygga på ljudlikhet eller dubbeltydighet. Om den språkliga mekanismen inte finns i målspråket måste man skapa en ny konstruktion som fyller samma funktion: att vara rolig, passa karaktären och inte bryta berättelsens stämning. Det betyder att en skicklig översättning ibland behöver vara kreativ och \"otrogen\" på ytan för att bli trogen på djupet.\n\nKulturella referenser påverkar också hur vi tolkar en scen. Skolsystem, högtider, matvanor och sociala koder kan kännas självklara för en brittisk läsare. För en svensk kan de kräva små förtydliganden. Om texten förklarar för mycket kan den tappa tempo. Om den förklarar för lite kan den bli otydlig. Översättaren måste därför bedöma vad läsaren sannolikt redan förstår.\n\nNär läsare jämför översättningar uppstår ofta debatter om vad som är \"rätt\". Men frågan är egentligen: rätt för vilket mål? För en läsare som vill studera originalets stil kan en mer ordagrann version vara bäst. För en läsare som vill få samma känsla som originalpubliken fick kan en mer anpassad version fungera bättre. Det är därför två bra översättningar kan se olika ut.\n\nTidspress påverkar också resultatet. När en bok ges ut i många länder får översättaren ibland bara några veckor på sig. Ändringar i senare delar kan då avslöja att ett tidigt namnval blev olyckligt.\n\nAtt analysera översättning kan göra dig mer medveten om språk i stort. Du ser hur ordval styr sympati, hur humor byggs upp och hur subtila signaler skapar förväntningar. På så sätt blir översättningen inte en \"kopia\", utan en ny version av texten som bär samma berättelse genom ett annat språks möjligheter och begränsningar.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad menar texten med att översättning är en form av tolkning?",
+        "type": "forfattarens-syfte",
+        "q": "Vad vill texten framför allt att läsaren ska bli bättre på?",
         "options": [
-          "Att översättaren måste välja vad som ska prioriteras, vilket påverkar hur berättelsen uppfattas.",
-          "Att översättning alltid gör texten sämre eftersom originalspråk är överlägset.",
-          "Att översättaren ska undvika alla kulturella skillnader och skriva en helt ny handling",
-          "Att läsaren måste kunna båda språken för att få läsa den översatta boken."
+          "Att översätta böcker från engelska till svenska",
+          "Att välja vilken översättning som är den enda rätta",
+          "Att lägga märke till hur ordval styr en text",
+          "Att läsa böcker på originalspråket i stället"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vilket dilemma kring namn beskriver texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar risken med att förklara för mycket i en översättning?",
         "options": [
-          "Att namn alltid bör bytas till svenska, eftersom en läsare annars inte kan följa handlingen alls",
-          "Att ett \"talande\" namn kan tappa sin effekt, och översättaren måste välja mellan att behålla eller anpassa.",
-          "Att namn i originalet alltid saknar betydelse och därför inte kräver några val.",
-          "Att namn bara översätts när de tillhör lärare, men aldrig när de tillhör elever."
+          "För en svensk kan de kräva små förtydliganden.",
+          "Om texten förklarar för mycket kan den tappa tempo.",
+          "Om den förklarar för lite kan den bli otydlig.",
+          "Det är därför två bra översättningar kan se olika ut."
         ],
         "correct": 1
       },
@@ -6339,15 +6339,15 @@
     "text": "En av de mest intressanta frågorna i Harry Potter är inte hur stark en besvärjelse är, utan när den bör användas. Trollkarlsvärlden presenterar magi som ett kraftfullt verktyg, men den visar också att makt skapar etiska problem. Särskilt tydligt blir det i situationer där magi påverkar någon annans vilja eller minne.\n\nTa idén om minnesmagi. Om det är möjligt att radera eller förändra ett minne kan det framstå som en \"snabb lösning\" på konflikt: man slipper skam, man slipper bråk, man kan skydda någon från smärta. Men samtidigt tar man ifrån personen rätten att förstå sin egen historia. Ett minne är inte bara information, utan en del av identiteten. Att manipulera det är därför inte bara ett tekniskt ingrepp, utan ett ingrepp i en människas autonomi.\n\nSamma sak gäller besvärjelser som styr beteende. Om du kan få någon att göra något mot sin vilja, kan du också kringgå det som normalt begränsar dig: samtal, övertalning, kompromiss. Det kan kännas effektivt, särskilt när man tycker att man har \"goda skäl\". Men effektivitet är inte samma sak som rättfärdighet. I etiska termer blir frågan: kan ett gott mål rättfärdiga ett medel som skadar en annan persons frihet?\n\nBöckerna antyder olika svar beroende på sammanhang. Vissa handlingar framställs som uppenbart oacceptabla, andra hamnar i en gråzon. Det gör att läsaren tvingas tänka i principer snarare än i enkla regler. En princip kan vara samtycke: om en person inte kan säga ja på ett informerat sätt är det svårt att motivera ingrepp. En annan princip kan vara proportionalitet: även om ett problem är stort måste åtgärden vara rimlig och begränsad.\n\nDet intressanta är att serien också visar hur lätt människor normaliserar det tveksamma. Om \"alla andra\" gör något, eller om det sker i en stressad situation, kan man börja betrakta övertramp som praktiska genvägar. Därför behövs institutioner, utbildning och sociala normer som påminner om varför gränser finns. Samtidigt räcker inte institutioner alltid, eftersom de också kan missbruka makt.\n\nEn tredje princip är att den som har mest makt bär störst ansvar, eftersom den har flest sätt att lösa en situation utan tvång.\n\nI gymnasiet kan man läsa dessa frågor som en spegel av vår egen värld: teknik som kan påverka beteenden, information som kan manipuleras och socialt tryck som får människor att välja bekvämt i stället för rätt. Harry Potter blir då mindre en berättelse om trollstavar och mer en berättelse om ansvar: att kunna något är inte samma sak som att få använda det hur som helst.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vilken grundfråga säger texten är mest intressant i serien?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar varför ett minne är mer än bara information?",
         "options": [
-          "När och varför magi bör användas, särskilt när den påverkar andra människor.",
-          "Hur man kan göra en besvärjelse så stark att den aldrig kan stoppas istället",
-          "Vilket elevhem som statistiskt vinner flest poäng under skolåren.",
-          "Hur man kan bli osynlig längst tid utan att någon märker det."
+          "Samma sak gäller besvärjelser som styr beteende.",
+          "Böckerna antyder olika svar beroende på sammanhang.",
+          "Men effektivitet är inte samma sak som rättfärdighet.",
+          "Ett minne är inte bara information, utan en del av identiteten."
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inferens",
@@ -6444,15 +6444,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilken typ av konflikt nämns särskilt i Harry Potter-fandom?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar varför en fandom kan kännas trygg?",
         "options": [
-          "Konflikter om moral och representation: sympati, ursäkter och hur man ska förstå problem i berättelsen.",
-          "Konflikter om vem som äger rättigheterna till trollstavsdesign i skoluppgifter.",
-          "Konflikter om huruvida böckerna innehåller tillräckligt många diagram och tabeller",
-          "Konflikter om vilken tryckpress som användes för första upplagan i varje land."
+          "Men just därför kan gemenskapen också bli sårbar.",
+          "Samtidigt kan fandom vara kreativ och socialt viktig.",
+          "En fandom kan kännas trygg eftersom den erbjuder tillhörighet.",
+          "Samma person kan låta mer tvärsäker på ett ställe än på ett annat."
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -6527,15 +6527,15 @@
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vad symboliserar Patronusbesvärjelsen enligt texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar att rädsla kan påverka vilka beslut en person tar?",
         "options": [
-          "En genväg som gör att man slipper bearbeta känslor över huvud taget.",
-          "En metod för att radera minnen så att man aldrig behöver känna sorg.",
-          "En besvärjelse som fungerar bäst när man helt undviker andra människor",
-          "En copingstrategi som kräver träning och resurser som kan hjälpa i svåra stunder."
+          "Serien visar också hur trauma kan påverka moral.",
+          "Samtidigt visar serien att läkning sällan är linjär.",
+          "En person som är rädd kan börja rättfärdiga hårda beslut.",
+          "Det gör att karaktärernas val ibland blir svåra att bedöma."
         ],
-        "correct": 3
+        "correct": 2
       },
       {
         "type": "inferens",
@@ -6682,13 +6682,13 @@
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vem har tappat mössan?",
+        "type": "forfattarens-syfte",
+        "q": "Vad vill berättelsen framför allt få läsaren att tänka på?",
         "options": [
-          "Arvin",
-          "Bilal",
-          "Sanna",
-          "Läraren"
+          "Att man alltid ska lämna hittegods till en vuxen",
+          "Att en liten god handling kan få andra att göra likadant",
+          "Att det är viktigt att ha varma kläder på vintern",
+          "Att man inte ska lämna sina saker på marken"
         ],
         "correct": 1
       },
@@ -7180,15 +7180,15 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vad kunde barn göra förr i stället för att gå i skolan?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar att alla barn förr inte gick i skolan varje dag?",
         "options": [
-          "Arbeta eller hjälpa till hemma",
-          "Skriva långa texter på dator",
-          "Åka tunnelbana till stan",
-          "Spela tv-spel på kvällen"
+          "Många barn hjälpte till hemma eller arbetade.",
+          "När skolor fanns kunde klassrummen vara annorlunda.",
+          "Det betyder att de inte behövde gå i skolan varje dag.",
+          "Läraren kunde vara sträng och barnen hade andra regler."
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -7263,15 +7263,15 @@
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vad kan glas bli när man återvinner det?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar vad som händer om soporna blandas?",
         "options": [
-          "Nya moln",
-          "Nya flaskor",
-          "Nya träd",
-          "Ny mjölk"
+          "Matrester kan göra papper blött och smutsigt.",
+          "Då kan man återvinna, alltså göra nytt av gammalt.",
+          "Därför är det bra att ha olika kärl hemma och i skolan.",
+          "Om allt blandas i samma påse blir det svårare att återvinna."
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
@@ -7346,13 +7346,13 @@
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vilket instrument spelar Leila på?",
+        "type": "forfattarens-syfte",
+        "q": "Vad vill berättelsen framför allt visa läsaren?",
         "options": [
-          "Triangel",
-          "Trumpet",
-          "Xylofon",
-          "Gitarr"
+          "Att trummor är svårare att spela än xylofon",
+          "Att man behöver öva länge innan man kan spela",
+          "Att en låt blir bra när man lyssnar på varandra",
+          "Att musiklektionen är veckans roligaste lektion"
         ],
         "correct": 2
       },
@@ -7429,15 +7429,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad samlar ekorren på hösten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar hur ekorren använder svansen när det är kallt?",
         "options": [
-          "Vatten i flaskor",
-          "Snö",
-          "Mat som nötter och frön",
-          "Stenar"
+          "Den kan också använda svansen som en filt när det är kallt.",
+          "Ekorren har också bra hörsel och skarpa klor.",
+          "Ekorren har en lång svans som ser ut som en buske.",
+          "Den kan klättra rakt upp på en stam och hoppa långt."
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -7846,15 +7846,15 @@
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vilken sorts snö är bra för snöbollar?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar vad snö egentligen är?",
         "options": [
-          "Tung och blöt",
-          "Hård och isig",
-          "Lätt och torr",
-          "Lös och fluffig"
+          "Snö kan vara lös och fluffig eller tung och blöt.",
+          "När det är tillräckligt kallt ute kan det börja snöa.",
+          "Snö är egentligen vatten som har frusit till iskristaller uppe i molnen.",
+          "När snöflingorna blir tillräckligt tunga faller de ner mot marken."
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -8005,15 +8005,15 @@
         "type": "literal"
       },
       {
-        "q": "Var såg Alva något vitt?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar hur en enhörning ser ut?",
         "options": [
-          "På himlen",
-          "I sitt rum",
-          "Mellan träden",
-          "På vägen"
+          "Enhörningar är magiska djur som finns i sagor.",
+          "De liknar hästar men har ett långt horn i pannan.",
+          "Varje kväll tittade hon ut mot skogen och hoppades få se en.",
+          "Alva log och visste att hon aldrig skulle glömma den stunden."
         ],
-        "correct": 2,
-        "type": "literal"
+        "correct": 1
       },
       {
         "q": "Vad gjorde enhörningen vid bäcken?",
@@ -11462,15 +11462,15 @@
         "type": "literal"
       },
       {
-        "q": "Var växer kakaon?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar var kakaon växer?",
         "options": [
-          "På isiga öar",
-          "I varma länder",
-          "I kalla berg",
-          "I svenska skogar"
+          "Kakaon växer i varma länder långt från Sverige.",
+          "För att göra choklad behöver man kakao, socker och mjölk.",
+          "I dag tänker många på fika och högtider när de ser märket.",
+          "I fabriken ville de göra choklad som många skulle tycka om."
         ],
-        "correct": 1,
-        "type": "literal"
+        "correct": 0
       },
       {
         "q": "Vilken sorts choklad blev först populär?",
@@ -11554,15 +11554,15 @@
         "type": "literal"
       },
       {
-        "q": "Hur länge säljs vissa tillfälliga smaker?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar var man kan läsa hur mycket chokladkakan väger?",
         "options": [
-          "Under en kort tid",
-          "I hundra år",
-          "Alltid",
-          "Bara en dag"
+          "Chokladen är uppdelad i rutor som är lätta att bryta loss.",
+          "Ibland gör de tillfälliga smaker som bara säljs under en kort tid.",
+          "På förpackningen står det vilken smak det är och hur mycket den väger.",
+          "Många tycker om att dela en stor chokladkaka med familj eller vänner."
         ],
-        "correct": 0,
-        "type": "literal"
+        "correct": 2
       },
       {
         "q": "Vem kan man dela en chokladkaka med?",
@@ -11635,15 +11635,15 @@
         "type": "literal"
       },
       {
-        "q": "Hur transporteras bönorna ofta till fabriker?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar hur bönorna transporteras till fabrikerna?",
         "options": [
-          "Med båt",
-          "Med cykel",
-          "Med luftballong",
-          "Till fots"
+          "De växer på träd i varma länder nära ekvatorn.",
+          "De skickas med båt till fabriker i andra länder.",
+          "Till sist packas plattorna och skickas till affärer.",
+          "För att göra Marabous choklad börjar allt med kakaobönor."
         ],
-        "correct": 0,
-        "type": "literal"
+        "correct": 1
       },
       {
         "q": "Vad blandas i massan för att göra mjölkchoklad?",
@@ -13067,15 +13067,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilket år är brevet skrivet?",
+        "type": "forfattarens-syfte",
+        "q": "Varför avslutar berättelsen med vad Maja förstod?",
         "options": [
-          "2007",
-          "2020",
-          "1947",
-          "1974"
+          "För att visa att gamla brev är svåra att läsa",
+          "För att visa att människor förr kände som vi gör",
+          "För att visa att biblioteket har en utställning",
+          "För att visa att klassen tyckte om att skriva brev"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
@@ -13147,26 +13147,26 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vad kunde barn på landsbygden behöva göra i stället för att gå i skolan regelbundet?",
+        "type": "forfattarens-syfte",
+        "q": "Varför är texten skriven, enligt dess avslutning?",
         "options": [
-          "Spela musik på en scen inne i stan",
-          "Hjälpa till på gården, särskilt vid skörd",
-          "Läsa serietidningar hela dagen",
-          "Träna på ett gym efter skolan"
+          "För att visa att skolan förr var bättre än i dag",
+          "För att beskriva vilka leksaker barn hade förr",
+          "För att förklara varför skola och barns rättigheter är viktiga",
+          "För att berätta hur många barn som bodde på landsbygden"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vad nämns som något barn ibland skrev på i stället för skrivhäften?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar att det fanns ont om skolmaterial?",
         "options": [
-          "Surfplattor",
-          "Griffeltavlor",
-          "Tidningar",
-          "Affischer"
+          "Läroböcker var få, så barn kunde behöva dela.",
+          "Sjukdomar var också en större del av barndomen.",
+          "När barn väl gick i skolan var reglerna ofta strängare.",
+          "Men leksaker var ofta enklare och gjorda av det som fanns."
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "inferens",
@@ -13953,13 +13953,13 @@
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Hur beskrivs informationen ofta skickas över internet i texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten förklarar vad en server är?",
         "options": [
-          "Som vatten i ett rör",
-          "Som en enda stor låda",
-          "Som små paket",
-          "Som ljudvågor i en trumma"
+          "För att paketen ska hitta rätt används adresser.",
+          "Servern svarar genom att skicka informationen tillbaka.",
+          "En server är en kraftig dator som lagrar webbsidor, bilder och filmer.",
+          "På internet finns IP-adresser, som fungerar lite som husnummer."
         ],
         "correct": 2
       },
@@ -15089,15 +15089,15 @@
     "text": "Har du någon gång lagt en sten i vatten och sett den sjunka direkt, men sedan lagt i en bit trä som flyter? Det kan kännas som magi, men det handlar om fysik. För att förstå varför saker flyter eller sjunker behöver du känna till två viktiga ord: densitet och lyftkraft.\n\nDensitet betyder ungefär hur \"tätt packat\" något är. Tänk dig två lådor som är lika stora. I den ena finns bomull och i den andra finns sten. Lådorna tar lika mycket plats, men stenen väger mycket mer. Då säger vi att stenen har högre densitet än bomullen.\n\nVatten har också en densitet. Om ett föremål har lägre densitet än vatten brukar det flyta. Om föremålet har högre densitet än vatten brukar det sjunka. Trä har ofta lägre densitet än vatten, därför flyter många träbitar. En sten har nästan alltid högre densitet än vatten, därför sjunker den.\n\nMen det finns fler saker som spelar roll. Formen kan påverka. En stor båt av metall kan flyta, trots att metall i sig ofta har hög densitet. Hur är det möjligt? Jo, en båt har mycket luft inuti. När man räknar densitet för hela båten (metall plus luft) blir densiteten lägre än vattnets densitet. Därför kan den flyta.\n\nHär kommer lyftkraft in. Lyftkraft är den kraft som vattnet \"trycker upp\" med. När du sänker ner ett föremål i vatten tränger föremålet undan vatten. Vattnet vill tillbaka, och då uppstår en uppåtriktad kraft. Om lyftkraften är större än föremålets tyngd, flyter det. Om tyngden är större, sjunker det.\n\nDu kan testa detta hemma eller i skolan (med en vuxen om det behövs). Ta en bit aluminiumfolie. Forma den till en tät boll och lägg den i vatten – den sjunker ofta. Forma sedan samma folie som en liten skål med kanter och lägg den i vattnet. Nu flyter den lättare, eftersom formen gör att mer vatten trängs undan och att det finns luft i \"skålen\".\n\nSalt vatten är ett specialfall. När salt löses i vatten blir vattnet tyngre för sin volym, alltså tätare. Därför flyter du lättare i havet än i en insjö, och i mycket salta sjöar kan man nästan ligga på ytan utan att simma.\n\nAtt förstå flyta och sjunka hjälper oss att bygga båtar, designa flytvästar och till och med planera hur undervattensfarkoster ska röra sig. Det är ett exempel på hur vardagliga saker kan förklaras med smarta idéer, och hur naturens regler faktiskt går att lära sig.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vilka två ord nämns som viktiga för att förstå flyta och sjunka?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten förklarar flytande med hjälp av lyftkraften?",
         "options": [
-          "Ljud och ljus",
-          "Skugga och färg",
-          "Temperatur och hastighet",
-          "Densitet och lyftkraft"
+          "Om lyftkraften är större än föremålets tyngd, flyter det.",
+          "Om ett föremål har lägre densitet än vatten brukar det flyta.",
+          "Om föremålet har högre densitet än vatten brukar det sjunka.",
+          "Trä har ofta lägre densitet än vatten, därför flyter många träbitar."
         ],
-        "correct": 3
+        "correct": 0
       },
       {
         "type": "ord",
@@ -15266,13 +15266,13 @@
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vilket exempel använder texten för att förklara rättvisa?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten förklarar vad det betyder att något är lika?",
         "options": [
-          "En bussresa",
-          "Tre personer och en hylla",
-          "En snögubbe",
-          "En fotbollsmatch istället"
+          "Ett sätt att tänka är att fråga: Vad är målet?",
+          "Att något är lika betyder att alla får samma sak.",
+          "Ibland är det mest rättvist att behandla alla lika.",
+          "Då kan skillnaden mellan rättvist och lika bli viktig."
         ],
         "correct": 1
       },
@@ -15426,15 +15426,15 @@
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vad heter processen där växter gör socker av vatten, koldioxid och ljus?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar vart grodorna vandrar på våren?",
         "options": [
-          "Avdunstning",
-          "Fotosyntes",
-          "Erosion",
-          "Förmultning"
+          "Många insekter vaknar när temperaturen stiger.",
+          "Vissa fåglar, som flyttat söderut, kommer tillbaka.",
+          "Grodor och paddor vandrar till dammar för att lägga ägg.",
+          "I vattnet kan man ibland se grodrom som små geléklumpar."
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
@@ -17762,15 +17762,15 @@
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "Vilket land föreslår Leila att Emil ska ta ansvar för?",
+        "type": "forfattarens-syfte",
+        "q": "Vad vill berättelsen framför allt säga om vänskap?",
         "options": [
-          "Danmark",
-          "Finland",
-          "Island",
-          "Sverige"
+          "Att vänskap handlar om att alltid hålla med varandra",
+          "Att grupparbeten fungerar bäst när läraren delar in",
+          "Att vänskap också är att hjälpa andra att komma till tals",
+          "Att den som är tyst helst vill arbeta för sig själv"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -17845,13 +17845,13 @@
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vem står ensam vid staketet i början?",
+        "type": "forfattarens-syfte",
+        "q": "Vad vill berättelsen framför allt visa?",
         "options": [
-          "Jamal",
-          "Ali",
-          "Siri",
-          "Nora"
+          "Att fotboll passar bättre för vissa än för andra",
+          "Att vänskap ibland kräver att man säger ifrån",
+          "Att raster borde vara längre än de är i dag",
+          "Att den som är snabbast oftast får bestämma"
         ],
         "correct": 1
       },
@@ -18085,15 +18085,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vad var Sidenvägen enligt texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar varför salt var så viktigt förr?",
         "options": [
-          "Ett nät av rutter som kopplade samman delar av Asien, Mellanöstern och Europa",
-          "En hemlig tunnel under havet",
-          "En modern motorväg i Kina",
-          "En enda rak handelsväg som gick tvärs genom hela Europa"
+          "En känd del av handelshistorien är Sidenvägen.",
+          "Sjukdomar följde samma vägar som människor och last.",
+          "Salt behövdes för att konservera mat, särskilt innan kylskåp fanns.",
+          "Förr i tiden var transporter långsamma och ofta farliga."
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -18248,15 +18248,15 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vilken stor källa till plast i havet nämns som kommande från land?",
+        "type": "forfattarens-syfte",
+        "q": "Varför avslutar texten med att många små handlingar spelar roll?",
         "options": [
-          "Isberg som smälter",
-          "Skräp som följer med regnvatten ner i brunnar och vidare till vattendrag",
-          "Vulkanutbrott",
-          "Havsströmmar som skapar ny plast långt ute till havs"
+          "För att visa att problemet är omöjligt att lösa",
+          "För att förklara hur mikroplast bildas av bildäck",
+          "För att beskriva hur mycket plast som finns i haven",
+          "För att läsaren ska förstå att det egna valet betyder något"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "textbevis",
@@ -18494,15 +18494,15 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vad dricker Leila och morfar när de sätter sig ner?",
+        "type": "forfattarens-syfte",
+        "q": "Varför dröjer berättelsen så länge vid dimman och tystnaden?",
         "options": [
-          "Varm choklad",
-          "Te med honung",
-          "Saft",
-          "Kaffe"
+          "För att förklara hur dimma bildas över en myr",
+          "För att visa att bärplockning kräver mycket tålamod",
+          "För att skapa den stillhet som slutet handlar om",
+          "För att varna för att gå vilse i ett okänt landskap"
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -18577,15 +18577,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilka problem skriver Hawa upp på sitt papper?",
+        "type": "forfattarens-syfte",
+        "q": "Vad vill berättelsen framför allt få läsaren att förstå?",
         "options": [
-          "Trängsel, ljudnivå, köer vid disk och dörr",
-          "Regn, snö och blåst",
-          "Idrott, musik och bild på schemat",
-          "Betyg, prov och läxor"
+          "Att elevråd sällan får igenom sina förslag",
+          "Att ett försök kan lyckas och misslyckas samtidigt",
+          "Att möten går fortare om färre personer talar",
+          "Att den som antecknar minns mötet bäst efteråt"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "literal",
@@ -18646,26 +18646,26 @@
     "text": "Du kanske har hört vuxna prata om \"kommunen\" när de klagar på skolmaten, när en väg ska byggas om eller när biblioteket får nya öppettider. Men kommunen är inte bara ett ord – det är en viktig del av hur samhället fungerar. I Sverige är kommunen den nivå som ligger närmast invånarna, och den ansvarar för många saker som påverkar din vardag.\n\nEn kommun styrs av politiker som väljs i kommunvalet, som hålls samma dag som riksdagsvalet. De som blir valda sitter i kommunfullmäktige. Kommunfullmäktige kan jämföras med kommunens \"parlament\". Där fattas stora beslut, till exempel hur kommunens pengar ska användas. Pengarna kommer bland annat från kommunalskatt, som är den del av skatten som betalas till kommunen.\n\nKommunfullmäktige väljer i sin tur kommunstyrelsen. Kommunstyrelsen fungerar ungefär som en \"regering\" i kommunen och förbereder många frågor innan fullmäktige beslutar. För att klara alla uppgifter finns också nämnder. Det kan till exempel vara en barn- och utbildningsnämnd som ansvarar för förskolor och skolor, eller en miljönämnd som arbetar med frågor om avfall, vatten och tillsyn.\n\nKommunen har flera tydliga ansvarsområden. Ett av de största är skolan. Kommunen ansvarar för att det finns grundskolor och ofta också fritidshem. Kommunen ansvarar även för andra delar av välfärden, som äldreomsorg och stöd till personer som behöver hjälp i vardagen. Dessutom ansvarar kommunen för sådant som vägar inom tätorten, parker, idrottsanläggningar, kulturverksamhet och bibliotek.\n\nMen hur går ett beslut till? Tänk dig att invånare vill ha en ny cykelväg. Först kan frågan komma upp genom att någon lämnar ett förslag, till exempel ett medborgarförslag eller genom att politiker tar upp frågan. Tjänstepersoner (som inte är politiker) utreder sedan: Var kan cykelvägen byggas? Vad kostar det? Hur påverkas trafiken och miljön? Därefter kan en nämnd diskutera och föreslå ett beslut. Slutligen kan kommunfullmäktige besluta om pengar ska läggas på cykelvägen.\n\nEn viktig del av demokrati är att människor kan påverka. Förutom att rösta kan du till exempel delta i ungdomsråd om din kommun har det, skriva insändare, prata med politiker på möten eller lämna synpunkter när kommunen skickar ut förslag på remiss. När du blir äldre kan du också själv engagera dig i ett parti eller en förening.\n\nKommunerna skiljer sig kraftigt åt. Sverige har knappt trehundra kommuner, och den största har fler än en miljon invånare medan den minsta har färre än tvåtusen. En liten kommun har samma uppgifter som en stor: skola, äldreomsorg, vatten och räddningstjänst. Det är en av anledningarna till att små kommuner ofta samarbetar med grannkommuner.\n\nFör att skillnaderna inte ska bli för stora finns ett utjämningssystem. Kommuner med högre inkomster betalar in, och kommuner med lägre får del av pengarna. Tanken är att en elev ska kunna räkna med ungefär samma skola oavsett var i landet hen bor.\n\nKommunen samarbetar ofta med andra aktörer. Ibland samarbetar kommuner med varandra, till exempel kring räddningstjänst eller kollektivtrafik. Kommunen kan också samarbeta med företag som bygger bostäder eller med föreningar som driver idrott.\n\nVarför är det här viktigt för dig? För att många beslut som påverkar din dag görs nära dig: hur skolan organiseras, hur säkra vägarna är, var det finns fritidsaktiviteter och hur man tar hand om miljön i området. När du förstår hur kommunen fungerar blir det lättare att förstå nyheter, följa med i diskussioner och hitta sätt att göra din röst hörd.",
     "questions": [
       {
-        "type": "literal",
-        "q": "Vad heter kommunens \"parlament\" där stora beslut fattas?",
+        "type": "forfattarens-syfte",
+        "q": "Varför är texten skriven, enligt dess avslutning?",
         "options": [
-          "Kommunfullmäktige",
-          "Skolrådet",
-          "Kommunstyrelsen",
-          "Polisstationen"
+          "För att läsaren ska kunna följa nyheter och göra sin röst hörd",
+          "För att förklara varför skolmaten ofta blir kritiserad",
+          "För att beskriva hur många nämnder en kommun har",
+          "För att visa att kommunfullmäktige väljs vart fjärde år"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Vad väljer kommunfullmäktige enligt texten?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar vem som väljer kommunstyrelsen?",
         "options": [
-          "Bibliotekets böcker",
-          "Alla lärare i kommunen",
-          "Kommunstyrelsen",
-          "Sveriges riksdag"
+          "De som blir valda sitter i kommunfullmäktige.",
+          "Kommunfullmäktige väljer i sin tur kommunstyrelsen.",
+          "För att klara alla uppgifter finns också nämnder.",
+          "Därefter kan en nämnd diskutera och föreslå ett beslut."
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
@@ -21334,15 +21334,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilka celler nämns som en nyckel till att kroppen kan reagera snabbare nästa gång samma smitta kommer tillbaka?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar vad kroppen bildar efter en vaccination?",
         "options": [
-          "Minnesceller",
-          "Hudceller",
-          "Muskelfibrer",
-          "Benceller"
+          "Vissa celler fungerar som väktare och larmar.",
+          "Andra använder en ofarlig version som liknar smittan.",
+          "Samtidigt startar en process där immunförsvaret skapar antikroppar.",
+          "Vacciner kan ge biverkningar, som öm arm eller lätt feber."
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -24114,15 +24114,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilket exempel nämns på hur ett sample kan förändras?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar vad en sampling kan bestå av?",
         "options": [
-          "Det kan klippas, loopas eller tonhöjas",
-          "Det kan försvinna helt ur låten",
-          "Det kan bli till vatten",
-          "Det kan bli en målning"
+          "Det finns olika sätt att arbeta lagligt och etiskt.",
+          "Först behöver man förstå vad en sampling är rent praktiskt.",
+          "Det kan vara en trumloop, en melodi eller ett kort vokal-ljud.",
+          "Kompositionen måste fortfarande klareras, men inte inspelningen."
         ],
-        "correct": 0
+        "correct": 2
       },
       {
         "type": "literal",
@@ -24197,13 +24197,13 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Vilken roll nämns som en granskande kraft i samhället, ibland kallad \"den tredje statsmakten\"?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar vilken uppgift domstolarna har?",
         "options": [
-          "Rektorn",
-          "Media",
-          "Sportföreningar",
-          "Elevrådet"
+          "Demokrati är mer än att rösta vart fjärde år.",
+          "Domstolar kan avgöra om något bryter mot lagen.",
+          "Systemet är lagar, val, myndigheter och domstolar.",
+          "Men rättigheter kommer ofta tillsammans med ansvar."
         ],
         "correct": 1
       },
@@ -25487,13 +25487,13 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Vilket exempel nämns på en infektion där antibiotika inte fungerar, eftersom det ofta är virus?",
+        "type": "textbevis",
+        "q": "Vilken mening i texten visar följden av att avbryta en antibiotikakur för tidigt?",
         "options": [
-          "Blodförgiftning",
-          "Bakteriell lunginflammation",
-          "Förkylning",
-          "Sårinfektion efter operation"
+          "En viktig orsak är överanvändning och felanvändning.",
+          "Ett annat problem är om man avbryter en kur för tidigt.",
+          "Då ökar chansen att resistenta bakterier överlever och sprids.",
+          "Utvecklingen av nya antibiotika har samtidigt gått långsamt."
         ],
         "correct": 2
       },
