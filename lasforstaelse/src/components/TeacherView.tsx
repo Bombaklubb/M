@@ -10,6 +10,13 @@ interface TeacherViewProps {
 
 type Tab = 'stats' | 'library';
 
+/** YYYY-MM-DD till "15 april 2026". Faller tillbaka på nyckeln om den är tom. */
+function formatteraDatum(datum: string): string {
+  const d = new Date(`${datum}T00:00:00`);
+  if (Number.isNaN(d.getTime())) return datum;
+  return d.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
 export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
   const [authenticated, setAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
@@ -248,6 +255,9 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                 <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">
                   Inloggade nu
                 </div>
+                <div className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
+                  senaste 10 minuterna
+                </div>
               </div>
 
               {/* Inloggade idag */}
@@ -261,6 +271,9 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                 <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">
                   Inloggade idag
                 </div>
+                <div className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
+                  unika enheter i dag
+                </div>
               </div>
 
               {/* Unika enheter totalt */}
@@ -273,6 +286,11 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                 </div>
                 <div className="text-sm text-slate-500 dark:text-slate-400 mt-1">
                   Unika enheter
+                </div>
+                <div className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
+                  {stats?.statsStarted
+                    ? `sedan ${formatteraDatum(stats.statsStarted)}`
+                    : 'sedan start'}
                 </div>
               </div>
 
@@ -331,7 +349,13 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
                     </ul>
                     <div className="flex items-center gap-2 text-slate-400 text-sm border-t border-slate-700 pt-3">
                       <Calendar className="w-4 h-4" />
-                      <span>Läsjakten började samla in anonym statistik <strong className="text-white">15 april 2026</strong>. Data äldre än 14 dagar visas inte i grafen.</span>
+                      {/* Datumet stod tidigare hårdkodat i koden och stämde inte
+                          med när insamlingen faktiskt startade. Servern sparar
+                          startdagen första gången någon besöker appen. */}
+                      <span>Läsjakten började samla in anonym statistik{' '}
+                        <strong className="text-white">
+                          {stats?.statsStarted ? formatteraDatum(stats.statsStarted) : 'nyligen'}
+                        </strong>. Unika enheter räknas från den dagen; övriga totaler gäller de senaste 14 dagarna.</span>
                     </div>
                   </div>
                 </div>
