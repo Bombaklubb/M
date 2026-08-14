@@ -18,7 +18,7 @@ export default function Rorelsebanken() {
             >
               <span className="text-2xl">{kat.emoji}</span>
               <span className="font-extrabold text-slate-800 flex-1">{kat.namn}</span>
-              <span className="text-xs text-slate-400">{kat.lekar.length} lekar</span>
+              <span className="text-xs text-slate-500">{kat.lekar.length} lekar</span>
               <ChevronDown size={20} className={`text-brand-500 transition-transform ${aktiv ? 'rotate-180' : ''}`} />
             </button>
             {aktiv && (

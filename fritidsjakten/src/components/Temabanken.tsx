@@ -68,7 +68,7 @@ export default function Temabanken() {
           </button>
         </div>
         <div className="relative mb-3">
-          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
           <input
             value={sok}
             onChange={(e) => setSok(e.target.value)}
@@ -110,7 +110,7 @@ export default function Temabanken() {
             )
           })}
           {synligaTeman.length === 0 && (
-            <div className="col-span-full text-center text-sm text-slate-400 py-6">
+            <div className="col-span-full text-center text-sm text-slate-500 py-6">
               Inget tema matchar "{sok}".
             </div>
           )}
@@ -159,7 +159,7 @@ function EgetTemaForm({
       <div className="card p-5 w-full max-w-md animate-slide-up" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-3">
           <h3 className="font-black text-brand-800">Nytt tema</h3>
-          <button onClick={onClose} className="text-slate-400 hover:text-slate-700"><X size={20} /></button>
+          <button onClick={onClose} className="text-slate-500 hover:text-slate-700"><X size={20} /></button>
         </div>
         <div className="space-y-3">
           <div className="flex gap-2">

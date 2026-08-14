@@ -1,5 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+// Nunito självhostas (inga anrop till Google Fonts) – appen skickar därmed
+// inga besökaruppgifter vidare och fungerar även utan internet.
+import '@fontsource-variable/nunito/wght.css'
 import App from './App'
 import './index.css'
 

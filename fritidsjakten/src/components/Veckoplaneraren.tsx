@@ -76,7 +76,7 @@ export default function Veckoplaneraren() {
     <div className="animate-slide-up space-y-5">
       <div className="card p-4 space-y-4 no-print">
         <div>
-          <div className="text-sm font-bold text-slate-600 mb-2">Tema <span className="font-normal text-slate-400">(välj en eller flera)</span></div>
+          <div className="text-sm font-bold text-slate-600 mb-2">Tema <span className="font-normal text-slate-500">(välj en eller flera)</span></div>
           <div className="flex gap-2 flex-wrap">
             {allaTeman.map((t) => (
               <button key={t.id} onClick={() => toggleTema(t.id)} className={`chip ${temaIds.includes(t.id) ? 'chip-on' : 'chip-off'}`}>
@@ -103,7 +103,7 @@ export default function Veckoplaneraren() {
           {genererad ? 'Generera ny vecka' : 'Generera veckoschema'}
         </button>
         {!kanGenerera && (
-          <p className="text-xs text-slate-400 text-center">Välj minst ett tema.</p>
+          <p className="text-xs text-slate-500 text-center">Välj minst ett tema.</p>
         )}
       </div>
 
@@ -127,7 +127,7 @@ export default function Veckoplaneraren() {
                 <div className="text-xs font-bold text-brand-500 uppercase">{s.dag}</div>
               </div>
               <div className="flex-1 border-l border-brand-100 pl-3">
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-wide">{s.rubrik}</div>
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wide">{s.rubrik}</div>
                 <div className="font-extrabold text-slate-800">{s.akt.namn}</div>
                 <p className="text-sm text-slate-600">{s.akt.beskrivning}</p>
                 <div className="text-xs text-slate-500 mt-1.5">
