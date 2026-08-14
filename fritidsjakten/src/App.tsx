@@ -92,7 +92,8 @@ export default function App() {
         </p>
       </div>
 
-      <main className="max-w-3xl mx-auto px-4 py-6">
+      {/* pb-24: plats så att den fasta kontaktrutan aldrig skymmer sista innehållet */}
+      <main className="max-w-3xl mx-auto px-4 pt-6 pb-24 print:pb-6">
         {aktiv === 'hem' && (
           <div className="animate-fade-in">
             <IdagPanel onOppnaKompisuppdrag={() => setAktiv('kompisuppdrag')} />
