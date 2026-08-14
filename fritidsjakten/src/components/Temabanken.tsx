@@ -53,7 +53,9 @@ export default function Temabanken() {
     setValtId(nytt.id)
   }
 
-  function taBort(id: string) {
+  // Egna teman finns bara i den här webbläsaren – fråga innan de raderas.
+  function taBort(id: string, namn: string) {
+    if (!confirm(`Ta bort temat "${namn}"? Det går inte att ångra.`)) return
     setEgna((e) => e.filter((t) => t.id !== id))
     if (valtId === id) setValtId(null)
   }
@@ -68,7 +70,7 @@ export default function Temabanken() {
           </button>
         </div>
         <div className="relative mb-3">
-          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
           <input
             value={sok}
             onChange={(e) => setSok(e.target.value)}
@@ -81,36 +83,44 @@ export default function Temabanken() {
             const eget = t.id.startsWith('eget-')
             const favorit = favoriter.includes(t.id)
             return (
-              <button
+              // Kortet är en div med separata knappar inuti – stjärna och
+              // papperskorg måste gå att nå med tangentbord och skärmläsare.
+              <div
                 key={t.id}
-                onClick={() => setValtId(t.id)}
-                className={`card p-3 text-left flex items-center gap-3 transition-all hover:shadow-lg ${
+                className={`card p-3 flex items-center gap-1 transition-all hover:shadow-lg ${
                   valtId === t.id ? 'ring-2 ring-brand-400' : ''
                 }`}
               >
-                <span className="text-2xl">{t.emoji}</span>
-                <span className="font-bold text-slate-800 flex-1">{t.namn}</span>
-                <span
-                  onClick={(e) => { e.stopPropagation(); toggleFavorit(t.id) }}
-                  className={`p-1 ${favorit ? 'text-amber-400' : 'text-slate-300 hover:text-amber-400'}`}
-                  aria-label={favorit ? 'Ta bort favorit' : 'Markera som favorit'}
+                <button
+                  onClick={() => setValtId(t.id)}
+                  aria-pressed={valtId === t.id}
+                  className="flex items-center gap-3 flex-1 min-w-0 text-left"
+                >
+                  <span className="text-2xl">{t.emoji}</span>
+                  <span className="font-bold text-slate-800">{t.namn}</span>
+                </button>
+                <button
+                  onClick={() => toggleFavorit(t.id)}
+                  aria-pressed={favorit}
+                  className={`shrink-0 p-1 rounded-lg ${favorit ? 'text-amber-400' : 'text-slate-500 hover:text-amber-400'}`}
+                  aria-label={favorit ? `Ta bort ${t.namn} från favoriter` : `Markera ${t.namn} som favorit`}
                 >
                   <Star size={16} fill={favorit ? 'currentColor' : 'none'} />
-                </span>
+                </button>
                 {eget && (
-                  <span
-                    onClick={(e) => { e.stopPropagation(); taBort(t.id) }}
-                    className="text-slate-300 hover:text-rose-500 p-1"
-                    aria-label="Ta bort tema"
+                  <button
+                    onClick={() => taBort(t.id, t.namn)}
+                    className="shrink-0 text-slate-500 hover:text-rose-500 p-1 rounded-lg"
+                    aria-label={`Ta bort temat ${t.namn}`}
                   >
                     <Trash2 size={16} />
-                  </span>
+                  </button>
                 )}
-              </button>
+              </div>
             )
           })}
           {synligaTeman.length === 0 && (
-            <div className="col-span-full text-center text-sm text-slate-400 py-6">
+            <div className="col-span-full text-center text-sm text-slate-500 py-6">
               Inget tema matchar "{sok}".
             </div>
           )}
@@ -159,7 +169,7 @@ function EgetTemaForm({
       <div className="card p-5 w-full max-w-md animate-slide-up" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-3">
           <h3 className="font-black text-brand-800">Nytt tema</h3>
-          <button onClick={onClose} className="text-slate-400 hover:text-slate-700"><X size={20} /></button>
+          <button onClick={onClose} className="text-slate-500 hover:text-slate-700"><X size={20} /></button>
         </div>
         <div className="space-y-3">
           <div className="flex gap-2">

@@ -15,7 +15,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
+    /* Sökvägar utan baseUrl – baseUrl slutar fungera i TypeScript 7. */
     "paths": {
       "@/*": ["./src/*"]
     }

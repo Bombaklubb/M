@@ -57,7 +57,8 @@ export default function App() {
             <button
               onClick={() => setAktiv('hem')}
               className="btn-soft !py-2 !px-3 flex items-center gap-1"
-              aria-label="Tillbaka till start"
+              /* Namnet måste innehålla den synliga texten "Hem" för röststyrning. */
+              aria-label="Hem – tillbaka till start"
             >
               <ArrowLeft size={18} /> Hem
             </button>
@@ -92,7 +93,8 @@ export default function App() {
         </p>
       </div>
 
-      <main className="max-w-3xl mx-auto px-4 py-6">
+      {/* pb-24: plats så att den fasta kontaktrutan aldrig skymmer sista innehållet */}
+      <main className="max-w-3xl mx-auto px-4 pt-6 pb-24 print:pb-6">
         {aktiv === 'hem' && (
           <div className="animate-fade-in">
             <IdagPanel onOppnaKompisuppdrag={() => setAktiv('kompisuppdrag')} />

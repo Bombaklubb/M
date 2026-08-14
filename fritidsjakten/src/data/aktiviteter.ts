@@ -357,4 +357,55 @@ export const AKTIVITETER: Aktivitet[] = [
     minElever: 1, maxElever: 30, minMinuter: 5, maxMinuter: 15,
     material: ['Underlag / mattor'], kategori: 'lugn',
   },
+
+  // Snabblekar för hela (stora) avdelningen – fungerar upp till 40 elever på
+  // 5 minuter, t.ex. stunden före mellanmål eller medan alla samlas.
+  {
+    id: 'alla-som',
+    namn: 'Alla som ...',
+    beskrivning: 'Alla står i ring. Ledaren ropar "alla som har blå tröja" – de som stämmer in byter plats med varandra.',
+    platser: ['inne', 'ute'],
+    minElever: 6, maxElever: 40, minMinuter: 5, maxMinuter: 15,
+    material: [], kategori: 'samarbete',
+  },
+  {
+    id: 'klappa-rytmen',
+    namn: 'Klappa rytmen',
+    beskrivning: 'Ledaren klappar en kort rytm som alla härmar. Låt sedan barnen turas om att hitta på rytmen.',
+    platser: ['inne', 'ute'],
+    minElever: 4, maxElever: 40, minMinuter: 5, maxMinuter: 10,
+    material: [], kategori: 'rörelse',
+  },
+  {
+    id: 'namnrorelsen',
+    namn: 'Namnrörelsen',
+    beskrivning: 'Var och en säger sitt namn och gör en rörelse. Hela gruppen härmar namnet och rörelsen. Bra vid terminsstart.',
+    platser: ['inne', 'ute'],
+    minElever: 4, maxElever: 40, minMinuter: 5, maxMinuter: 15,
+    material: [], kategori: 'samarbete',
+  },
+  {
+    id: 'tyst-uppstallning',
+    namn: 'Tyst uppställning',
+    beskrivning: 'Ställ er på led i födelsedagsordning – utan att prata. Bara tecken och gester gäller.',
+    platser: ['inne', 'ute'],
+    minElever: 6, maxElever: 40, minMinuter: 5, maxMinuter: 15,
+    material: [], kategori: 'samarbete',
+  },
+  {
+    id: 'lyssna-och-rakna',
+    namn: 'Lyssna och räkna',
+    beskrivning: 'Blunda och var alldeles tysta en minut. Hur många olika ljud hörde ni? Samla in svaren efteråt.',
+    platser: ['inne', 'ute'],
+    minElever: 2, maxElever: 40, minMinuter: 5, maxMinuter: 10,
+    material: [], kategori: 'lugn',
+  },
+  {
+    id: 'ljudkarta-ute',
+    namn: 'Ljudkarta ute',
+    beskrivning: 'Stå tysta utomhus och peka åt det håll ljuden kommer ifrån – fågel, bil, vind. Prata sedan om vad som är natur och vad som är människor.',
+    platser: ['ute'],
+    minElever: 2, maxElever: 40, minMinuter: 5, maxMinuter: 15,
+    material: [], kategori: 'natur',
+  },
 ]

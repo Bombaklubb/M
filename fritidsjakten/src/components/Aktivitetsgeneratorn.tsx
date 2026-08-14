@@ -110,7 +110,7 @@ export default function Aktivitetsgeneratorn() {
             </div>
           )}
           {valtMaterial.length > 0 && !endastUtanMaterial && (
-            <p className="text-xs text-slate-400 mt-2">Visar lekar utan material + lekar som klarar sig med det du valt.</p>
+            <p className="text-xs text-slate-500 mt-2">Visar lekar utan material + lekar som klarar sig med det du valt.</p>
           )}
         </div>
 

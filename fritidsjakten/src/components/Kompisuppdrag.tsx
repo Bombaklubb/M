@@ -54,9 +54,13 @@ export default function Kompisuppdrag() {
     setVisaForm(false)
   }
 
+  // Egna uppdrag finns bara i den här webbläsaren – fråga innan de raderas.
   function taBort(id: number) {
-    setEgna((e) => e.filter((u) => u.id !== id))
-    setIndex((i) => i % Math.max(1, alla.length - 1))
+    if (!confirm('Ta bort uppdraget? Det går inte att ångra.')) return
+    const kvar = egna.filter((u) => u.id !== id)
+    setEgna(kvar)
+    // Håll index inom den nya listans längd (inbyggda + kvarvarande egna).
+    setIndex((i) => i % Math.max(1, KOMPISUPPDRAG.length + kvar.length))
   }
 
   return (
@@ -83,12 +87,12 @@ export default function Kompisuppdrag() {
       </div>
 
       {slumpat && (
-        <p className="text-center text-xs text-slate-400">
+        <p className="text-center text-xs text-slate-500">
           Tips: dagens uppdrag är samma för alla. Slumpa fram fler om ni vill ha extra utmaningar.
         </p>
       )}
 
-      <p className="text-center text-sm text-slate-400">
+      <p className="text-center text-sm text-slate-500">
         {alla.length} uppdrag i banken
         {egna.length > 0 && (
           <>
@@ -136,7 +140,7 @@ function EgetUppdragForm({
       <div className="card p-5 w-full max-w-md animate-slide-up" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-3">
           <h3 className="font-black text-brand-800">Nytt kompisuppdrag</h3>
-          <button onClick={onClose} className="text-slate-400 hover:text-slate-700"><X size={20} /></button>
+          <button onClick={onClose} className="text-slate-500 hover:text-slate-700"><X size={20} /></button>
         </div>
         <div className="space-y-3">
           <input
