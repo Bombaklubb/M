@@ -54,9 +54,13 @@ export default function Kompisuppdrag() {
     setVisaForm(false)
   }
 
+  // Egna uppdrag finns bara i den här webbläsaren – fråga innan de raderas.
   function taBort(id: number) {
-    setEgna((e) => e.filter((u) => u.id !== id))
-    setIndex((i) => i % Math.max(1, alla.length - 1))
+    if (!confirm('Ta bort uppdraget? Det går inte att ångra.')) return
+    const kvar = egna.filter((u) => u.id !== id)
+    setEgna(kvar)
+    // Håll index inom den nya listans längd (inbyggda + kvarvarande egna).
+    setIndex((i) => i % Math.max(1, KOMPISUPPDRAG.length + kvar.length))
   }
 
   return (

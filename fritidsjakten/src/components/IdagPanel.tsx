@@ -26,11 +26,16 @@ function matchande(filter: Partial<SparadeFilter>): Aktivitet[] {
   const plats = filter.plats ?? 'alla'
   const elever = filter.elever ?? 25
   const minuter = filter.minuter ?? 20
+  const valtMaterial = filter.valtMaterial ?? []
   const traffar = AKTIVITETER.filter((a) => {
     if (plats !== 'alla' && !a.platser.includes(plats)) return false
     if (elever < a.minElever || elever > a.maxElever) return false
     if (minuter < a.minMinuter) return false
     if (filter.endastUtanMaterial && a.material.length > 0) return false
+    // Samma materialregel som generatorn: aktiviteten måste rymmas inom det valda.
+    if (valtMaterial.length > 0 && a.material.length > 0) {
+      if (!a.material.every((m) => valtMaterial.includes(m))) return false
+    }
     return true
   })
   return traffar.length ? traffar : AKTIVITETER

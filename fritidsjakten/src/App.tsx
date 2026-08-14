@@ -57,7 +57,8 @@ export default function App() {
             <button
               onClick={() => setAktiv('hem')}
               className="btn-soft !py-2 !px-3 flex items-center gap-1"
-              aria-label="Tillbaka till start"
+              /* Namnet måste innehålla den synliga texten "Hem" för röststyrning. */
+              aria-label="Hem – tillbaka till start"
             >
               <ArrowLeft size={18} /> Hem
             </button>
