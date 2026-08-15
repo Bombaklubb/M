@@ -34,6 +34,10 @@ export async function POST(req: NextRequest) {
     switch (event.type) {
       case 'pageview':
         await redis.sadd(`${KEY_PREFIX}visitors:${today}`, event.deviceId);
+        // Permanent mängd över ALLA enheter som någonsin besökt appen.
+        // Dagsmängderna ovan kan bara summeras (vilket dubbelräknar
+        // återkommande elever) – den här ger verkligt unika enheter.
+        await redis.sadd(`${KEY_PREFIX}visitors:all`, event.deviceId);
         await redis.incr(`${KEY_PREFIX}pageviews:${today}`);
         // TTL 5 minuter för "aktiva nu"
         await redis.set(`${KEY_PREFIX}active:${event.deviceId}`, '1', { ex: 300 });

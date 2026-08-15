@@ -95,7 +95,8 @@ export interface TeacherStats {
   totalTimeToday: string;
   totalTimeTodaySeconds: number;
   totalErrorsToday: number;
-  totalVisitors: number;
+  uniqueDevices: number;   // verkligt unika enheter, hela historiken
+  totalVisitors: number;   // summa av dagliga besök senaste 14 dagarna
   totalTasks: number;
   totalTime: string;
   totalTimeSeconds: number;
