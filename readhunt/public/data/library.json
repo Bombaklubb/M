@@ -486,7 +486,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=380&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80"
   },
   {
     "id": "ak1-orig-002",
@@ -831,7 +831,7 @@
     "theme": "animals",
     "title": "The Small Dog",
     "text": "Emma saw a small dog in the park. The dog was brown and happy. It ran after a ball. Emma gave the dog some water before she went home.",
-    "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -993,7 +993,7 @@
     "theme": "nature",
     "title": "At the Lake",
     "text": "Lina and her dad walked to the lake after school. They saw three ducks in the water. Lina threw small stones and ate a red apple by the lake.",
-    "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1472745942893-4b9f730c7668?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -1155,7 +1155,7 @@
     "theme": "technology",
     "title": "The Little Robot",
     "text": "Alex built a small robot at school. The robot could move forward and flash green lights. An older neighbor came to see the new robot after dinner.",
-    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -2117,7 +2117,7 @@
     "theme": "animals",
     "title": "A Day at the Zoo",
     "text": "Liam visited the zoo with his class on Friday morning. They saw lions, monkeys, and tall giraffes. Liam liked the penguins best because they jumped into the cold water very fast.",
-    "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1547721064-da6cfb341d50?w=800&q=80",
     "questions": [
       {
         "type": "literal",
