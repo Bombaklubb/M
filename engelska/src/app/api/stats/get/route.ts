@@ -37,6 +37,24 @@ export async function POST(req: NextRequest) {
     const totalTimeToday = (await redis.get<number>(`${KEY_PREFIX}time:${today}`)) || 0;
     const totalErrorsToday = (await redis.get<number>(`${KEY_PREFIX}total_errors:${today}`)) || 0;
 
+    // ── Verkligt unika enheter (hela historiken) ────────────────────────────
+    // Dagsmängderna får inte summeras – en elev som varit inne 10 dagar skulle
+    // då räknas som 10 enheter. Vi håller därför en permanent mängd
+    // "visitors:all". Den fylls på vid varje besök, men för data som samlats in
+    // innan den fanns bygger vi upp den här från samtliga dagsmängder.
+    const allKey = `${KEY_PREFIX}visitors:all`;
+    let uniqueDevices = 0;
+    try {
+      const dayKeys = (await redis.keys(`${KEY_PREFIX}visitors:*`)).filter((k) => k !== allKey);
+      if (dayKeys.length > 0) {
+        // Slå ihop alla dagar + den permanenta mängden till en sanning.
+        await redis.sunionstore(allKey, allKey, ...dayKeys);
+      }
+      uniqueDevices = await redis.scard(allKey);
+    } catch {
+      uniqueDevices = 0;
+    }
+
     // Senaste 14 dagarna
     const dailyStats: { date: string; visitors: number; tasks: number }[] = [];
     let totalVisitors = 0;
@@ -80,7 +98,8 @@ export async function POST(req: NextRequest) {
       totalTimeToday: formatTime(totalTimeToday),
       totalTimeTodaySeconds: totalTimeToday,
       totalErrorsToday,
-      totalVisitors,
+      uniqueDevices,          // verkligt unika enheter, hela historiken
+      totalVisitors,          // summa av dagliga besök senaste 14 dagarna (dubbelräknar återbesök)
       totalTasks,
       totalTime: formatTime(totalTime),
       totalTimeSeconds: totalTime,

@@ -193,14 +193,19 @@ export default function LararePage() {
               value={stats?.visitorsToday ?? "–"}
               label="Inloggade idag"
             />
-            {/* Unika enheter */}
+            {/* Unika enheter – verkligt unika över hela historiken */}
             <StatCard
               accent="bg-sky-100 dark:bg-sky-900/40"
               icon={<Monitor className="w-5 h-5 text-sky-600 dark:text-sky-400" />}
-              value={stats?.totalVisitors ?? "–"}
-              label="Unika enheter"
+              value={stats?.uniqueDevices ?? "–"}
+              label="Unika enheter totalt"
             />
           </div>
+          <p className="mt-3 text-xs text-gray-500 dark:text-gray-400">
+            <strong>Unika enheter totalt</strong> räknar varje enhet en gång, oavsett hur många
+            dagar den använts. Summan av staplarna nedan blir högre eftersom en elev som är
+            inne flera dagar syns en gång per dag.
+          </p>
         </section>
 
         {/* Daglig graf */}
