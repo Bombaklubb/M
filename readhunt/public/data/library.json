@@ -6,7 +6,7 @@
     "theme": "community",
     "title": "Mickey and the Red Kite",
     "text": "Mickey Mouse lives in a cheerful town. He likes walking with Pluto and meeting friends. One sunny day, Mickey finds a red kite in the park. He flies it and laughs all afternoon.",
-    "imageUrl": "https://images.unsplash.com/photo-1597149128485-6c6898a54283?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1768637067642-2854357e57ae?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -168,7 +168,7 @@
     "theme": "nature",
     "title": "Donald's Picnic",
     "text": "Donald Duck feels excited about a lake picnic. He packs sandwiches and juice for the trip. A playful breeze moves the boat, but Donald stays calm and smiles often.",
-    "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1492092960955-8fedc95c23c6?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -249,7 +249,7 @@
     "theme": "family",
     "title": "Mirabel's Celebration",
     "text": "Mirabel from Encanto helps her family prepare for a celebration. Her cousin uses a wheelchair and joins every activity. Together they decorate rooms, sing songs, and welcome guests warmly.",
-    "imageUrl": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1602631985686-1bb0e6a8696e?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -330,7 +330,7 @@
     "theme": "community",
     "title": "Elsa's Ice Shapes",
     "text": "Elsa loves making sparkling ice shapes in Arendelle. One morning, she creates stars and flowers for the town square. Children watch happily and clap for her beautiful work.",
-    "imageUrl": "https://images.unsplash.com/photo-1612200996215-4dc78f388cfe?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1514747348279-46eb4082b804?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -738,7 +738,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=380&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1716324339623-384495f47373?w=700&h=420&fit=crop"
   },
   {
     "id": "ak1-orig-005",
@@ -912,7 +912,7 @@
     "theme": "family",
     "title": "Baking Bread",
     "text": "Noah baked bread with his grandfather in the kitchen. They mixed flour and water in a big bowl. The bread smelled very good when it was ready.",
-    "imageUrl": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1666356011542-0acf82fb16a1?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -1074,7 +1074,7 @@
     "theme": "sports",
     "title": "Playing Football",
     "text": "Maya played football with her friends on the schoolyard. She wore blue shoes and a yellow shirt. When Maya scored a goal, everyone laughed and jumped happily.",
-    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1584227327140-31a5528dee6d?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -1236,7 +1236,7 @@
     "theme": "horses",
     "title": "The Pony at the Farm",
     "text": "Lisa visits her grandma's farm every summer. Her favourite animal is a small brown pony called Nutmeg.\n\nEvery morning, Lisa gives Nutmeg an apple. The pony makes a happy sound when he sees her. Then Lisa brushes his soft coat until it shines.\n\nOne day, Nutmeg was not in his field. Lisa looked everywhere. She looked in the barn. She looked behind the big tree. No pony!\n\nThen she heard a sound from the garden. Nutmeg was standing by the apple tree, eating apples from the ground. His tummy was very round.\n\n\"Oh Nutmeg!\" Lisa laughed. \"You found the apples all by yourself!\"\n\nGrandma smiled and said, \"Tomorrow we will build a better gate.\"",
-    "imageUrl": "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579358733213-f5754c8733cf?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -1454,7 +1454,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1580560230671-61e01dfdb285?w=700&h=420&fit=crop"
   },
   {
     "id": "ak2-orig-003",
@@ -1538,7 +1538,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=380&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1772734462837-9524ce7af714?w=700&h=420&fit=crop"
   },
   {
     "id": "ak2-orig-004",
@@ -1622,7 +1622,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1650039215510-a086786c3da5?w=700&h=420&fit=crop"
   },
   {
     "id": "ak2-sverige-001",
@@ -1712,7 +1712,7 @@
     "theme": "culture",
     "title": "The Swedish Flag",
     "text": "The Swedish flag is blue with a yellow cross. People see it on holidays, schools, and boats. Midsummer is a popular celebration. Friends and families meet outdoors, eat food together, and enjoy music during the long bright days of summer in Sweden.",
-    "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1645286636903-890ce32aa287?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -1874,7 +1874,7 @@
     "theme": "society",
     "title": "Travel by Train",
     "text": "Many people travel by train in Sweden. Trains connect cities and towns across the country. They can be comfortable and easy to use. Lina, her brother Max, and their grandparent often take trains to visit museums, parks, and relatives during school breaks.",
-    "imageUrl": "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1527839321757-ad3a2f2be351?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -2036,7 +2036,7 @@
     "theme": "friendship",
     "title": "The Lost Hat",
     "text": "Ella went to the park with her brother Sam. It was windy outside. Sam lost his red hat near the swings, but a kind woman found it and gave it back to him.",
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1695561846769-fe3d04b547f4?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -2718,7 +2718,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1719701285590-68cac7ad9a49?w=700&h=420&fit=crop"
   },
   {
     "id": "ak3-orig-003",
@@ -2970,7 +2970,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1663042446293-12f4d284a7c8?w=700&h=420&fit=crop"
   },
   {
     "id": "ak3-orig-006",
@@ -3306,7 +3306,7 @@
     "theme": "sports",
     "title": "A New Team Member",
     "text": "Robin recently joined a community football team. Robin is non-binary and felt nervous before the first practice because most players already knew each other. The coach welcomed everyone and organized activities that encouraged cooperation. Soon, Robin started making friends and became more confident. During a training game, Robin made an accurate pass that led to a goal. The experience showed that supportive teammates can help new players feel included and enjoy football.",
-    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595b4c3b?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -3702,7 +3702,7 @@
       "wordCount": 54,
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1763328709918-d18a45bd562f?w=700&h=420&fit=crop"
   },
   {
     "id": "ak3-tema-005",
@@ -3783,7 +3783,7 @@
       "wordCount": 52,
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1565548058662-c345fad4aabc?w=700&h=420&fit=crop"
   },
   {
     "id": "ak4-gaming-001",
@@ -4586,7 +4586,7 @@
       "wordCount": 186,
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1613168461287-6e529b708c76?w=700&h=420&fit=crop"
   },
   {
     "id": "ak4-tema-005",
@@ -4676,7 +4676,7 @@
     "theme": "friendship",
     "title": "A Lesson in Teamwork",
     "text": "Leonardo liked starting each morning with a plan for the day in the turtles' underground home beneath New York City. One Saturday, Master Splinter asked the team to practice patience instead of combat. Raphael wanted to train with heavy equipment, while Michelangelo hoped to play a new skateboard game. Donatello suggested building a simple robot that could sort training gear. Splinter gave each turtle a different task and told them not to compare their jobs. At first, the brothers complained because the tasks seemed uneven. Later, they discovered that every task connected to a larger challenge. The robot organized supplies, the training improved strength, the game tested balance, and the planning exercise improved teamwork. When a water pipe suddenly leaked in their home, the turtles solved the problem quickly by combining all the skills they had practiced. Splinter smiled because the lesson was clear: different strengths become more useful when people work together.",
-    "imageUrl": "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1555597408-26bc8e548a46?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -5685,7 +5685,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1469573054742-64da3f2527fc?w=700&h=420&fit=crop"
   },
   {
     "id": "ak5-orig-004",
@@ -5769,7 +5769,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/flagged/photo-1575377071396-9cb0f9982776?w=700&h=420&fit=crop"
   },
   {
     "id": "ak5-orig-005",
@@ -6096,7 +6096,7 @@
       "wordCount": 244,
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1652040004005-249f3db952ab?w=700&h=420&fit=crop"
   },
   {
     "id": "ak5-tema-004",
@@ -6914,7 +6914,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1679750184902-5992e3445eed?w=700&h=420&fit=crop"
   },
   {
     "id": "ak6-tema-001",
@@ -6995,7 +6995,7 @@
       "wordCount": 261,
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=600&h=380&fit=crop"
   },
   {
     "id": "ak6-tema-002",
@@ -7076,7 +7076,7 @@
       "wordCount": 296,
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1654145167982-10c1ebde498a?w=700&h=420&fit=crop"
   },
   {
     "id": "ak6-tema-003",
@@ -7157,7 +7157,7 @@
       "wordCount": 286,
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1544044407-9d2da66393f2?w=700&h=420&fit=crop"
   },
   {
     "id": "ak6-tema-004",
@@ -7733,7 +7733,7 @@
     "theme": "dance",
     "title": "From the Streets to the Olympics",
     "text": "In the early 1970s, at block parties in the Bronx in New York, young people began dancing in a completely new way. They spun on their backs, froze in impossible positions, and battled each other with moves instead of words. The style became known as breaking — and its dancers as b-boys and b-girls.\n\nBreaking was born out of hip-hop culture, together with DJing, rap, and graffiti. For many young people in poor neighbourhoods, dance battles offered something important: a way to compete, express themselves, and earn respect without violence. A battle had winners and losers, but it followed unwritten rules — you attacked with creativity, not with fists.\n\nFor decades, breaking spread around the world through films, music videos, and later the internet. Dancers in Japan, France, South Korea, and Sweden developed their own styles and techniques. What began on cardboard sheets on a Bronx sidewalk became a global culture with international championships.\n\nIn 2024, breaking took a step that few of its pioneers could have imagined: it became an Olympic sport at the Paris Games. B-boys and b-girls from around the world competed for medals in front of a global TV audience.\n\nNot everyone in the breaking community celebrated. Some feared that strict judging rules would tame a culture built on rebellion and personal style. Others saw it as recognition, finally, of an art form that began with young people who had little more than music and imagination. Either way, the journey from street corner to Olympic stage took just fifty years.",
-    "imageUrl": "https://images.unsplash.com/photo-1547153760-18fc86324498?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1609602886239-a55db9685b7c?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -7968,7 +7968,7 @@
     "genre": "non-fiction",
     "theme": "history",
     "title": "A Voice for Equality",
-    "imageUrl": "https://images.unsplash.com/photo-1591622180330-30b4de93b5f4?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1597704097219-0f6a59def63d?w=700&h=420&fit=crop",
     "text": "Martin Luther King Jr. was one of the most influential leaders of the American Civil Rights Movement. He was born in Atlanta, Georgia, in 1929 and grew up during a time when racial segregation was common in many parts of the United States. Segregation laws separated Black and white people in schools, restaurants, buses, and other public places. King believed that these laws were unjust and should be changed. Inspired by religious teachings and the nonviolent ideas of Mahatma Gandhi, he argued that social change could be achieved without violence. During the 1950s and 1960s, King became a leading figure in campaigns that demanded equal rights for African Americans. One important event was the Montgomery Bus Boycott, which began after Rosa Parks refused to give up her seat to a white passenger. King helped organize the boycott, encouraging people to protest peacefully. The boycott lasted more than a year and eventually led to a Supreme Court decision that declared bus segregation unconstitutional. As King's influence grew, he traveled across the country giving speeches and leading demonstrations. He believed that peaceful protest could expose injustice and encourage change. However, his activism also made him a target for criticism, threats, and arrests. Despite these challenges, he continued his work because he believed equality and justice were worth fighting for. King's message reached millions of people and inspired individuals from different backgrounds to support civil rights. His leadership helped bring national attention to discrimination and inequality. Through determination, courage, and a commitment to nonviolence, Martin Luther King Jr. became a symbol of the struggle for civil rights. His legacy continues to influence discussions about equality and human rights around the world today.",
     "questions": [
       {
@@ -8049,7 +8049,7 @@
     "genre": "non-fiction",
     "theme": "history",
     "title": "The March on Washington",
-    "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1597701974172-3a99fbb4b5c5?w=700&h=420&fit=crop",
     "text": "On August 28, 1963, hundreds of thousands of people gathered in Washington, D.C., for one of the most significant demonstrations in American history. The event, known as the March on Washington for Jobs and Freedom, brought together civil rights organizations, religious groups, labor unions, and ordinary citizens. Participants wanted to draw attention to racial discrimination, unequal economic opportunities, and the need for stronger civil rights protections. Martin Luther King Jr. was one of several speakers at the event, but his speech became the most remembered. Standing near the Lincoln Memorial, King delivered what is now known as the \"I Have a Dream\" speech. In it, he described his hope for a future in which people would be judged by their character rather than the color of their skin. His words inspired many listeners and became one of the most famous speeches in modern history. The march itself was carefully planned and remained peaceful throughout the day. Organizers worked hard to ensure that participants followed guidelines promoting respect and nonviolence. News coverage brought images and speeches from the event into homes across the country, helping millions of people understand the goals of the civil rights movement. The march also increased pressure on political leaders to address racial inequality. Although discrimination did not disappear, the event helped build support for important reforms. Historians often point to the March on Washington as a turning point because it demonstrated the strength and organization of the movement. The gathering showed that large numbers of people were willing to unite behind demands for justice and equal rights. Today, the march is remembered not only for King's speech but also for the collective effort of thousands of individuals who believed change was possible. Their actions demonstrated how peaceful public demonstrations can influence public opinion and encourage political action.",
     "questions": [
       {
@@ -8130,7 +8130,7 @@
     "genre": "non-fiction",
     "theme": "society",
     "title": "Nonviolence as a Strategy",
-    "imageUrl": "https://images.unsplash.com/photo-1573676048035-9c2a72b6a12a?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1597711662967-b5dac822f5ac?w=700&h=420&fit=crop",
     "text": "One of Martin Luther King Jr.'s most important beliefs was that social change could be achieved through nonviolent action. This idea was influenced by his Christian faith and by the example of Mahatma Gandhi, who had used peaceful resistance during India's struggle for independence. King argued that violence often created more conflict, while nonviolence could expose injustice and encourage understanding. Throughout the Civil Rights Movement, activists used a variety of peaceful methods. These included marches, boycotts, sit-ins, and public speeches. During sit-ins, participants would sit in places where they were denied service because of segregation laws and refuse to leave peacefully. Such actions highlighted unfair treatment and attracted public attention. However, practicing nonviolence was often difficult. Demonstrators sometimes faced insults, arrests, and physical attacks. Despite these challenges, King encouraged supporters to remain calm and disciplined. He believed that responding peacefully would reveal the contrast between those seeking justice and those defending discrimination. Critics sometimes questioned whether nonviolence could produce meaningful results. King responded by pointing to examples where peaceful action had led to legal and social changes. He argued that lasting progress required changing both laws and attitudes. Violence might force immediate reactions, but it rarely built long-term cooperation. The philosophy of nonviolence became one of the defining features of the Civil Rights Movement and influenced other movements around the world. Leaders in different countries later adapted similar methods when advocating for human rights and political reform. King's approach demonstrated that courage does not always involve physical force. Instead, it can involve persistence, self-control, and a willingness to continue working for change despite obstacles. Today, many people study King's methods as examples of how citizens can challenge injustice while promoting respect and peaceful dialogue.",
     "questions": [
       {
@@ -8211,7 +8211,7 @@
     "genre": "non-fiction",
     "theme": "society",
     "title": "The Legacy of Martin Luther King Jr.",
-    "imageUrl": "https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1590989995665-1815e7b2c42b?w=700&h=420&fit=crop",
     "text": "Martin Luther King Jr. was assassinated in 1968, but his influence did not end with his death. Instead, his ideas continued to inspire people in the United States and around the world. During his lifetime, he helped draw attention to issues such as racial discrimination, voting rights, poverty, and social justice. After his death, many organizations, educators, and community leaders continued promoting the values he supported. One important part of King's legacy is the impact he had on civil rights legislation. The Civil Rights Act of 1964 and the Voting Rights Act of 1965 were major steps toward reducing legal discrimination in the United States. Although these laws did not solve every problem, they represented significant progress. King's speeches and writings also remain widely studied. Students analyze his arguments, language, and leadership style to better understand how communication can influence society. Beyond politics and law, King's message has inspired efforts to address inequality in many different contexts. Activists working on issues related to education, employment, disability rights, and other forms of social justice have often referenced his principles. His emphasis on dignity, equality, and peaceful action continues to resonate with people seeking change. Each year, Martin Luther King Jr. Day is observed in the United States. The holiday encourages reflection on his contributions and often includes community service activities. Many people use the occasion to discuss how King's goals remain relevant today. While societies have changed since the 1960s, debates about fairness, opportunity, and equal treatment continue. King's legacy reminds people that progress often requires participation from ordinary citizens as well as leaders. His life demonstrates how one person's vision, combined with the efforts of many others, can influence history. For this reason, Martin Luther King Jr. remains an important figure in discussions about human rights and democracy.",
     "questions": [
       {
@@ -8292,7 +8292,7 @@
     "genre": "non-fiction",
     "theme": "history",
     "title": "Challenges and Criticism",
-    "imageUrl": "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1598630954858-b0039d615691?w=700&h=420&fit=crop",
     "text": "Although Martin Luther King Jr. is widely admired today, his work was controversial during his lifetime. Many Americans supported the goals of the Civil Rights Movement, but others opposed them strongly. Some critics disagreed with King's methods, while others rejected the idea of racial equality altogether. As a result, King frequently faced hostility from individuals, organizations, and even government agencies. Public demonstrations often attracted opposition. In some cities, protesters encountered angry crowds who objected to desegregation and civil rights reforms. King himself received threatening letters and was sometimes criticized in newspapers and public debates. Despite these pressures, he continued advocating for change. He believed that avoiding difficult issues would only allow injustice to continue. Another challenge involved disagreements within the broader civil rights movement. Some activists argued that nonviolence was too slow and that stronger actions were necessary. King respected the frustration behind these views but maintained that peaceful methods offered the best chance of creating lasting progress. He worried that violence could undermine public support and increase divisions. Government agencies also monitored King's activities. Officials sometimes claimed that demonstrations might disrupt public order, while supporters argued that protest was an important democratic right. Historians continue to study these tensions to understand the complex political environment of the time. Examining criticism of King does not reduce his importance. Instead, it helps explain the obstacles he faced and the decisions he made. Social change rarely occurs without disagreement, and leaders often encounter resistance when challenging existing systems. King's experience demonstrates that pursuing justice can involve personal risks and difficult choices. By continuing his work despite criticism and threats, he showed a commitment to his principles. Understanding both the support and opposition he received provides a more complete picture of his role in history and the challenges faced by movements seeking social reform.",
     "questions": [
       {
@@ -8533,7 +8533,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1728391180319-42d0b114e010?w=700&h=420&fit=crop"
   },
   {
     "id": "ak7-orig-003",
@@ -9258,7 +9258,7 @@
     "theme": "society",
     "title": "Seventeen Likes",
     "text": "The video took Alva eleven seconds to film and four seconds to post. It would take considerably longer to undo.\n\nIt wasn't even her joke. Someone had zoomed in on Felix's worn-out shoes in the changing room and added a laughing emoji, and Alva had simply reposted it because it was already going around, because everyone else had, because it was Tuesday and she was bored. Seventeen people liked it before dinner.\n\nFelix wasn't in school on Wednesday. Or Thursday.\n\nOn Friday, their mentor held a class meeting. She didn't shout. She just read aloud, in a flat voice, the messages that had been sent — without saying who had written what. Heard like that, stripped of emojis and context, they sounded different. Crueller. Alva felt her face burn when her repost was read. Eleven seconds of her life, sounding like something a villain would say.\n\nShe found Felix's address through a classmate and stood outside his door for a long time before ringing the bell. When he opened, she didn't offer excuses, because she had promised herself she wouldn't.\n\n\"It was me. One of them, anyway. And it wasn't a joke, it was just cruelty with better lighting. I'm sorry.\"\n\nFelix looked at her for a moment. \"You're the first one who's come here,\" he said finally. He didn't say it was okay. She hadn't expected him to. But he left the door open, and after a moment, she followed him inside.",
-    "imageUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517940322679-2b003a168fd2?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -9317,7 +9317,7 @@
     "theme": "history",
     "title": "The Attic Letters",
     "text": "The house was being sold, which meant the attic had to be emptied, which meant Noah spent his autumn break carrying boxes instead of gaming. He had complained about this loudly and at length — right up until he found the suitcase.\n\nIt was leather, cracked with age, and locked. His mother broke it open with a screwdriver. Inside lay perhaps a hundred letters, bundled with string, all addressed to his great-grandmother Ester. The earliest was dated 1943.\n\nThey were from her sister, Ruth — written from Berlin during the war. Noah's German wasn't good, but his mother's was, and she read them aloud at the kitchen table, evening after evening, while the moving boxes stood forgotten. Letters about rationing, about neighbours who disappeared, about fear that hid between ordinary sentences about the weather. The last letter was dated March 1944. After that, nothing.\n\n\"What happened to her?\" Noah asked.\n\nHis mother shook her head. \"Ester never talked about it. Ever.\"\n\nNoah, who had never voluntarily done research in his life, spent the rest of his break in digital archives. He cross-referenced names, dates, transport lists. And there, in a database of survivors, he found her: Ruth Lindqvist, arrived in Sweden 1945, died in Malmö 1989. She had survived. She had lived forty minutes away.\n\nThe sisters had never found each other again. Two women, one country, forty minutes apart. Noah looked at the last letter for a long time. Then he started searching for Ruth's grandchildren.",
-    "imageUrl": "https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1447069387593-a5de0862481e?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -9846,7 +9846,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1453828423292-392a660a502f?w=700&h=420&fit=crop"
   },
   {
     "id": "ak8-space-001",
@@ -9973,7 +9973,7 @@
     "theme": "science",
     "title": "The Mystery of Black Holes",
     "text": "Black holes are among the most extreme objects in the universe. They form when massive stars collapse under their own gravity at the end of their lives. The result is a region where gravity is so intense that nothing — not even light — can escape once it crosses a boundary called the event horizon.\n\nDespite the name, black holes are not empty voids. They contain an enormous amount of mass compressed into an incredibly small space. At the centre lies the singularity, a point where our understanding of physics completely breaks down. Einstein's general relativity predicts its existence but cannot describe what happens there.\n\nBlack holes come in different sizes. Stellar black holes form from individual stars and may be only a few times larger than our Sun. Supermassive black holes, found at the centre of most galaxies, can contain billions of solar masses. The black hole at the heart of our galaxy, called Sagittarius A*, has a mass four million times that of our Sun.\n\nFor decades, black holes were theoretical. Then in 2019, the Event Horizon Telescope captured the first actual image of a black hole in the galaxy M87. The photograph showed a glowing ring of hot gas surrounding a dark central region.\n\nScientists study black holes by observing how they affect nearby matter and light. As gas spirals inward, it heats up and emits X-rays that telescopes can detect. Black holes are invisible, but their effects reveal them unmistakably.",
-    "imageUrl": "https://images.unsplash.com/photo-1700159915592-004562ddcf6f?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1761232007928-258c9bd98d66?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -10312,7 +10312,7 @@
     "theme": "environment",
     "title": "The Wolves That Changed a River",
     "text": "In 1995, fourteen grey wolves were released into Yellowstone National Park in the United States. They were the first wolves in the park for seventy years; the last ones had been shot in the 1920s, when predators were widely regarded as pests. What happened next became one of the most repeated stories in modern nature writing.\n\nWithout wolves, the park's elk population had grown very large. The elk grazed heavily along rivers and streams, eating young willow and aspen almost as fast as the trees could grow. When the wolves returned, the elk did not simply decline in number. They also changed their behaviour, avoiding the open valleys where they were easiest to hunt. Trees began to recover in those valleys. Beavers, which need willow, returned and built dams. The dams created ponds for fish and amphibians. Songbirds nested in the new growth. Riverbanks, held together by roots, eroded more slowly, so some streams became narrower and deeper.\n\nEcologists call this a trophic cascade: a change at the top of a food web that ripples downwards, altering plants, water and landforms. A short film describing the Yellowstone cascade has been watched tens of millions of times, usually under a title claiming that wolves changed the course of rivers.\n\nThe science, however, is less tidy than the film. Several researchers who study Yellowstone argue that the story has been simplified almost beyond recognition. Elk numbers were falling for other reasons too, including hunting outside the park, several dry years, and the return of bears and cougars. Willow recovery has been strong in some valleys and barely visible in others. One long-term study found that where groundwater levels had dropped, willows failed to recover even when elk were kept out entirely. The wolves mattered, these scientists say, but they were one factor among many, and the popular version leaves out the complexity that makes the research interesting.\n\nThe debate is not only academic, because wolves have returned to Europe as well. After being almost eliminated from Scandinavia, they reappeared in the 1980s and now number a few hundred across Sweden and Norway. Their return has been far more controversial than in Yellowstone, largely because the Scandinavian landscape is not a protected wilderness. It is a working landscape of forestry, farms and hunting grounds.\n\nFor a sheep farmer who loses animals, or a hunter whose dog is killed while tracking, the arguments about biodiversity can feel remote. Compensation schemes exist, but they do not cover the effort of rebuilding fences or the anxiety of not knowing what will happen next. Conservation organisations point out that wolves take a very small proportion of livestock compared with disease and traffic, and that the population remains genetically fragile. Both statements can be true at the same time, which is precisely what makes the conflict difficult. Wolves are also protected under European law, which limits how national governments are allowed to respond, and the tension between local frustration and international rules has ended up in court more than once.\n\nWhat Yellowstone really demonstrates, then, may not be that wolves rebuild rivers. It may be that removing a predator changes a landscape in ways nobody predicted, and that putting one back changes it again — unevenly, slowly, and never quite as neatly as a good story requires.",
-    "imageUrl": "https://images.unsplash.com/photo-1547407139-3c921a66005c?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1607350999170-b893fef057ea?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -10555,7 +10555,7 @@
     "theme": "sport",
     "title": "Muhammad Ali's Early Life",
     "text": "Muhammad Ali was born as Cassius Marcellus Clay Jr. in Louisville, Kentucky, in 1942. He grew up during a period when racial segregation affected many parts of American society. As a child, he was energetic, confident, and highly competitive. According to a well-known story, his interest in boxing began after his bicycle was stolen when he was twelve years old. Angry about the theft, he told a police officer that he wanted to fight the person responsible. The officer, who also trained young boxers, suggested that he first learn how to box. Clay quickly became dedicated to the sport and spent many hours practicing. His natural speed, quick reflexes, and determination helped him improve rapidly. During his teenage years, he won several amateur competitions and developed a boxing style that was different from many fighters of the time. Instead of relying mainly on power, he used movement, timing, and footwork. His success eventually earned him a place on the United States Olympic boxing team. At the 1960 Olympic Games in Rome, he won a gold medal in the light heavyweight division. The victory brought him national attention and opened the door to a professional career. Soon after turning professional, he continued winning matches and attracting media interest. Unlike many athletes, Clay openly predicted his victories and spoke confidently about his abilities. Some people found his behavior entertaining, while others considered it arrogant. However, his confidence helped create public interest in his fights. As his reputation grew, he faced stronger opponents and continued to prove himself in the ring. His combination of athletic skill, intelligence, and charisma made him one of the most talked-about young athletes in the United States. These early experiences shaped the person he would become. The challenges he faced as a young African American, his dedication to training, and his willingness to stand out from others all contributed to his future success. Before he became a world champion and a global icon, he was a determined teenager who transformed a difficult moment into the beginning of an extraordinary career.",
-    "imageUrl": "https://images.unsplash.com/photo-1517438476312-10d79c077509?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1575747515871-2e323827539e?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -10636,7 +10636,7 @@
     "theme": "history",
     "title": "Becoming Muhammad Ali",
     "text": "After establishing himself as a successful professional boxer, Cassius Clay experienced important personal changes that influenced the rest of his life. During the early 1960s, he became interested in the Nation of Islam, a religious and political movement that focused on Black identity, self-respect, and social change. At a time when racial discrimination remained a major issue in the United States, many African Americans were searching for ways to challenge inequality and gain greater recognition. Clay listened carefully to the movement's ideas and eventually decided to join. Following his victory over Sonny Liston in 1964, he announced that he would no longer use the name Cassius Clay. Instead, he adopted the name Muhammad Ali. The decision attracted widespread attention and generated strong reactions. Supporters viewed the change as an expression of religious freedom and personal identity. Critics argued that he was rejecting traditions associated with his earlier life. Ali remained firm in his decision despite the controversy. He believed that choosing his own name allowed him to define himself rather than accept labels imposed by others. His willingness to defend his beliefs became one of the most recognizable aspects of his public image. Beyond boxing, he increasingly spoke about race, religion, and equality. This was unusual for many athletes at the time because public figures often avoided political topics. Ali's comments sometimes made him controversial, but they also earned him respect from people who admired his honesty. His growing influence demonstrated that athletes could shape public discussions as well as sporting events. The name Muhammad Ali eventually became known around the world. It represented more than a personal choice; it symbolized independence and self-determination. Historians often note that the decision reflected broader social changes occurring during the civil rights era. By openly embracing a new identity, Ali showed that success in sports did not require abandoning personal convictions. Instead, he used his fame to communicate ideas that mattered to him. Whether people agreed with him or not, many recognized the courage required to take such a public stand. The transformation from Cassius Clay to Muhammad Ali marked a turning point in his life and helped establish his legacy as both an athlete and a social figure.",
-    "imageUrl": "https://images.unsplash.com/photo-1530021232320-687d8e3dba54?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1575654402720-0af3480d1fad?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -10717,7 +10717,7 @@
     "theme": "society",
     "title": "The Vietnam War Controversy",
     "text": "One of the most significant moments in Muhammad Ali's life occurred during the Vietnam War. In 1967, the United States government expected eligible men to serve in the military through the draft system. Ali refused induction into the armed forces. He explained that his religious beliefs and personal principles prevented him from participating in the conflict. His position immediately became the subject of national debate. Some Americans considered his refusal unpatriotic and believed that public figures should support military service during wartime. Others argued that he had the right to follow his conscience and practice his religion freely. The consequences for Ali were severe. He was stripped of his heavyweight boxing title and lost his boxing license in many states. As a result, he was unable to compete professionally during some of the most productive years of his athletic career. In addition, he faced legal challenges that threatened his freedom and financial stability. Despite these difficulties, Ali continued to defend his position. He spoke publicly about his beliefs and accepted the risks associated with his decision. Over time, opinions about the issue began to change. As public attitudes toward the Vietnam War became more critical, some people started viewing Ali's actions differently. In 1971, the United States Supreme Court overturned his conviction, allowing him to return fully to professional boxing. Historians often describe this episode as an important example of the relationship between sports, politics, and individual rights. Ali's choice demonstrated that athletes can influence discussions far beyond their own professions. His actions continue to generate debate because they raise questions about citizenship, responsibility, and freedom of conscience. Supporters emphasize the courage required to sacrifice a successful career in defense of personal principles. Critics maintain that national obligations should take priority during times of conflict. Regardless of perspective, the event remains a defining chapter in Ali's life. It showed that he was willing to accept significant personal costs rather than compromise his beliefs. The controversy also contributed to his lasting reputation as a figure whose impact extended beyond the boxing ring and into broader discussions about justice and individual freedom.",
-    "imageUrl": "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1722268383700-c75fb07f0b8e?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -10879,7 +10879,7 @@
     "theme": "history",
     "title": "Muhammad Ali's Legacy",
     "text": "Muhammad Ali is remembered not only as one of the greatest boxers of all time but also as a global cultural figure. His achievements inside the ring were extraordinary. He won world heavyweight championships, defeated many leading opponents, and became famous for his speed, skill, and confidence. However, his influence extended far beyond sports. Throughout his life, Ali used his public platform to discuss issues such as equality, religion, and human dignity. As a result, he became an important figure in conversations about social change. After retiring from boxing, Ali remained active in public life. He traveled internationally, participated in humanitarian projects, and supported charitable causes. In later years, he lived with Parkinson's disease, a neurological condition that affected his movement and speech. Despite these challenges, he continued appearing at public events and inspiring people around the world. Many admired the determination he showed while dealing with illness. One of the most memorable moments of his later life occurred during the opening ceremony of the 1996 Olympic Games in Atlanta, where he lit the Olympic cauldron. The image became a powerful symbol of resilience and perseverance. Historians, athletes, and journalists often debate which aspect of Ali's legacy is most important. Some emphasize his accomplishments as a boxer, while others focus on his willingness to defend his beliefs during periods of controversy. Many argue that his greatest contribution was demonstrating that athletes can influence society in meaningful ways. His life story continues to be studied because it connects sports with larger themes such as courage, identity, justice, and leadership. Schools, documentaries, and museums frequently examine his impact on both American and global history. Even people with little interest in boxing often recognize his name and understand his significance. Muhammad Ali's legacy endures because he achieved excellence in competition while also engaging with important social issues. His example encourages people to pursue their goals, think independently, and remain committed to their values. For these reasons, he remains one of the most influential sporting figures of the twentieth century and an enduring symbol of determination and principle.",
-    "imageUrl": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1620123449946-30d6efd4b8ba?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -12109,7 +12109,7 @@
     "theme": "nature",
     "title": "The Importance of the Amazon Rainforest",
     "text": "The Amazon Rainforest is the largest tropical rainforest in the world and covers a vast area of South America. Most of it is located in Brazil, but it also extends into several neighboring countries. Because of its enormous size and biological richness, the Amazon plays a crucial role in global environmental systems. Scientists often describe it as one of the most important ecosystems on Earth. The rainforest contains millions of species of plants, animals, insects, and microorganisms. Many of these species have not yet been fully studied, and some remain completely unknown to science. This biodiversity is valuable not only because it supports healthy ecosystems but also because it may provide future medicines, crops, and scientific discoveries. The Amazon also influences the global climate. Trees absorb carbon dioxide from the atmosphere and store carbon in their trunks, roots, and soil. This process helps reduce the concentration of greenhouse gases that contribute to climate change. In addition, the rainforest releases large amounts of water vapor, which affects rainfall patterns across South America. Some researchers believe that changes in the Amazon could influence weather systems far beyond the region itself. Indigenous peoples have lived in the Amazon for thousands of years. Their communities possess extensive knowledge about local plants, animals, and ecological processes. Many Indigenous groups depend on the forest for food, shelter, medicine, and cultural traditions. However, the rainforest faces significant threats. Deforestation caused by logging, agriculture, mining, and infrastructure projects has destroyed large areas of forest. When trees are removed, habitats disappear, biodiversity declines, and stored carbon is released into the atmosphere. Climate change creates additional pressure by increasing temperatures and altering rainfall patterns. Protecting the Amazon requires cooperation among governments, businesses, scientists, local communities, and international organizations. Conservation efforts include creating protected areas, supporting sustainable economic activities, and strengthening environmental laws. While challenges remain, many experts believe that preserving the Amazon is essential for both regional and global sustainability. The future of the rainforest will likely depend on decisions made during the coming decades.",
-    "imageUrl": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1701091490268-2ae3de5f5f2f?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "inference",
@@ -12271,7 +12271,7 @@
     "theme": "society",
     "title": "Indigenous Peoples and the Forest",
     "text": "Long before modern states were established in South America, Indigenous peoples lived throughout the Amazon region. Today, hundreds of Indigenous communities continue to inhabit the rainforest. These groups represent diverse languages, traditions, and cultural practices. Although their lifestyles vary, many communities maintain a close relationship with the natural environment. For generations, Indigenous peoples have developed knowledge about medicinal plants, animal behavior, seasonal changes, and sustainable resource management. This knowledge has often been passed from one generation to the next through oral traditions and daily experience. Researchers increasingly recognize that Indigenous knowledge can contribute to environmental conservation. Studies have shown that some Indigenous territories experience lower rates of deforestation than surrounding areas. Indigenous communities face numerous challenges. Expanding agriculture, illegal mining, logging operations, and infrastructure projects can threaten traditional lands and ways of life. In some regions, conflicts have emerged over land rights and access to natural resources. Environmental degradation may also affect food supplies, water quality, and cultural practices connected to the forest. Many Indigenous leaders argue that protecting their rights is closely linked to protecting the rainforest itself. International organizations and human rights groups have supported efforts to strengthen legal protections for Indigenous territories. However, implementation of these protections can vary between countries and regions. Discussions about the future of the Amazon increasingly include Indigenous perspectives because many experts believe that local knowledge is essential for effective conservation. At the same time, Indigenous communities seek opportunities for education, healthcare, and economic development while preserving cultural identity. Balancing these goals can be complex. The relationship between Indigenous peoples and the Amazon demonstrates that environmental issues are often connected to social, cultural, and political questions. Understanding this relationship helps explain why conservation is about more than protecting trees and animals. It also involves respecting human communities that have lived in the rainforest for centuries.",
-    "imageUrl": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1764620757878-742dc20d4e43?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -12352,7 +12352,7 @@
     "theme": "nature",
     "title": "Deforestation and Its Consequences",
     "text": "Deforestation is one of the most serious environmental issues affecting the Amazon Rainforest. The term refers to the large-scale removal of trees and vegetation, often to create land for agriculture, cattle ranching, mining, or infrastructure development. Although economic activities can provide jobs and income, they may also produce significant environmental costs. When forests are cleared, habitats are fragmented or destroyed. Animals may lose access to food, shelter, and breeding areas. Some species are able to adapt or move elsewhere, but others face population declines. Biodiversity loss can weaken ecosystem stability and reduce the resilience of natural systems. Deforestation also influences the climate. Trees absorb carbon dioxide during photosynthesis and store carbon over long periods. When forests are burned or cut down, much of this carbon is released back into the atmosphere. This contributes to rising greenhouse gas concentrations. Scientists are concerned that continued forest loss could alter rainfall patterns within the Amazon itself. If rainfall decreases significantly, some areas may become less capable of supporting dense rainforest vegetation. Economically, deforestation can create short-term benefits while generating long-term risks. Agricultural expansion may increase production, but environmental degradation can reduce soil quality and ecosystem services. Policymakers therefore face difficult decisions about balancing development and conservation. Governments, businesses, and environmental organizations have proposed different strategies to address the problem. These include stronger law enforcement, sustainable land-use practices, reforestation programs, and improved monitoring systems. Technological tools such as satellite imagery help researchers track changes in forest cover. Public awareness campaigns also encourage consumers to consider the environmental impacts of products linked to deforestation. The debate surrounding deforestation highlights the complexity of environmental management. There is often disagreement about priorities, responsibilities, and acceptable trade-offs. Nevertheless, many scientists agree that reducing forest loss is essential for protecting biodiversity, supporting climate stability, and promoting sustainable development in the Amazon region.",
-    "imageUrl": "https://images.unsplash.com/photo-1612599316791-451087e8f877?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1632789124528-07b43ba96460?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -12433,7 +12433,7 @@
     "theme": "society",
     "title": "The Future of the Amazon",
     "text": "The future of the Amazon Rainforest is a subject of growing international concern. Scientists, policymakers, business leaders, Indigenous representatives, and environmental organizations all recognize that decisions made today may shape the condition of the rainforest for generations. While there is broad agreement that the Amazon is important, opinions differ regarding how it should be managed and protected. One major challenge involves balancing economic development with environmental sustainability. Many people depend on agriculture, forestry, transportation, and other industries for employment and income. At the same time, excessive exploitation of natural resources can damage ecosystems and undermine long-term prosperity. As a result, researchers increasingly emphasize sustainable development approaches that seek to combine economic growth with environmental protection. Technological innovation may play an important role. Satellite monitoring, data analysis, and improved environmental management systems can help identify areas at risk and support more effective decision-making. Scientists also continue studying the rainforest to better understand ecological processes and the potential impacts of climate change. Education is another important factor. Schools, universities, and public information campaigns can increase awareness of environmental issues and encourage responsible behavior. International cooperation may also be necessary because the effects of environmental change are not limited by national borders. Climate systems, biodiversity conservation, and global markets connect countries in complex ways. Some experts warn that if deforestation and climate change continue unchecked, parts of the Amazon could experience major ecological transformations. Others highlight successful conservation initiatives that demonstrate positive outcomes are possible. These examples suggest that environmental challenges are difficult but not impossible to address. Ultimately, the future of the Amazon will depend on choices made by governments, companies, communities, and individuals. The rainforest represents both a valuable natural resource and a critical component of the Earth's environmental systems. Protecting it requires long-term thinking, scientific knowledge, and cooperation across sectors and societies. The discussion about the Amazon is therefore not only about a specific forest. It is also about how humanity chooses to manage natural resources in an increasingly interconnected world.",
-    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1530618655905-2063770256bd?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -12595,7 +12595,7 @@
     "theme": "society",
     "title": "The Last Shift",
     "text": "The kiosk had stood at the corner of Storgatan and Järnvägsgatan for fifty-one years, and Margit had stood inside it for forty of them. She knew the town through its small purchases: the night-shift nurses buying coffee at dawn, the schoolkids counting coins for saturday sweets, the lonely men who bought a paper they didn't read for thirty seconds of conversation they badly needed.\n\nThe letter from the property company was polite and final. Redevelopment. Sixty days.\n\nMargit was seventy-one and had no illusions about progress; she had watched it arrive in waves, each one taking something. The bank had become an app. The post office had become a shelf in the supermarket. People said these things were more efficient, and they were, if efficiency meant fewer places where anyone said your name.\n\nWhat surprised her was the petition. It was started by Leyla, sixteen, who bought chewing gum and oat milk and had once, two winters ago, sat in the kiosk's back room for an hour because home wasn't safe that evening and Margit had asked no questions, just made tea. Margit had forgotten the evening. Leyla had not.\n\nEight hundred signatures in a town of six thousand. Then the local paper. Then, remarkably, the property company's regional manager, who arrived in a grey suit, drank a cup of Margit's coffee, and discovered that his grandmother had bought him liquorice boats at this exact counter in 1987.\n\nThe kiosk stayed. The official reason cited 'cultural value and community function' — committee language for something the town had known all along but had never needed to say out loud until someone threatened to demolish it. Margit hired Leyla for weekends. The men still come for their unread newspapers. The coffee is still terrible. Nobody minds. It was never really about the coffee.",
-    "imageUrl": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1786175087737-9d6c238bd62d?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
@@ -13084,7 +13084,7 @@
       "model": "gpt-4o",
       "readingTime": 3
     },
-    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1637179709448-e03199d05f6e?w=700&h=420&fit=crop"
   },
   {
     "id": "ak10-orig-005",
@@ -13411,7 +13411,7 @@
       "wordCount": 466,
       "readingTime": 3
     },
-    "imageUrl": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1685984351005-a971d72c2e35?w=700&h=420&fit=crop"
   },
   {
     "id": "ak10-tema-004",
@@ -13492,7 +13492,7 @@
       "wordCount": 464,
       "readingTime": 3
     },
-    "imageUrl": "https://images.unsplash.com/photo-1495020689067-958852a7765e?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=800&q=80"
   },
   {
     "id": "ak10-tema-005",
