@@ -3,3 +3,6 @@ dist
 .DS_Store
 *.local
 .env
+
+# Genererad kontaktkarta för bildgranskning (kör scripts/bildkontroll.cjs)
+scripts/bildkontroll.html
