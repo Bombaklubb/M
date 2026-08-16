@@ -2,10 +2,13 @@
 /**
  * Genererar en HTML-kontaktkarta över alla texters bilder i Readhunt.
  *
- * Bilderna kan inte granskas från byggmiljön (images.unsplash.com ligger inte i
- * nätverkets allowlist), men de laddas fint i en vanlig webbläsare. Kartan
+ * images.unsplash.com går att nå från byggmiljön — bilderna kan alltså hämtas
+ * och granskas direkt där. Kartan är ändå kvar för mänsklig kontroll: den
  * öppnas lokalt så att en lärare kan skrolla igenom alla motiv på ett par
  * minuter, kryssa i de som visar fel sak och kopiera id-listan hit.
+ *
+ * Vill man söka fram nya bilder finns UNSPLASH_ACCESS_KEY i miljön
+ * (api.unsplash.com, 50 anrop/timme).
  *
  *   node readhunt/scripts/bildkontroll.cjs
  *   -> readhunt/scripts/bildkontroll.html
