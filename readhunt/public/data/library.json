@@ -654,7 +654,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc595d83f4?w=600&h=380&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&q=80"
   },
   {
     "id": "ak1-orig-004",
@@ -822,7 +822,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=380&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1591189863430-ab87e120f312?w=800&q=80"
   },
   {
     "id": "ak1-tema-001",
@@ -912,7 +912,7 @@
     "theme": "family",
     "title": "Baking Bread",
     "text": "Noah baked bread with his grandfather in the kitchen. They mixed flour and water in a big bowl. The bread smelled very good when it was ready.",
-    "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -1622,7 +1622,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=380&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=800&q=80"
   },
   {
     "id": "ak2-sverige-001",
@@ -1793,7 +1793,7 @@
     "theme": "animals",
     "title": "Animals in Sweden",
     "text": "Many animals live in Sweden. Moose are among the largest wild animals there. Brown bears, foxes, and deer also live in forests. Birdwatchers visit lakes and wetlands to see different species. Protecting habitats helps animals stay healthy and safe every year.",
-    "imageUrl": "https://images.unsplash.com/photo-1525382455947-f319bc05fb35?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1568162603664-fcd658421851?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -2360,7 +2360,7 @@
     "theme": "sports",
     "title": "The New Bike",
     "text": "Oscar got a new blue bike for his birthday. He rode it around the neighborhood with his neighbor Kim. They wore helmets and stopped at a small shop to buy juice.",
-    "imageUrl": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -2500,7 +2500,7 @@
     "theme": "football",
     "title": "The Last Penalty",
     "text": "It was the final match of the school cup. The score was 2–2, and now there would be a penalty shoot-out.\n\nOmar's team went first. Three players scored. The other team also scored three times. Now it was Omar's turn to take the last penalty.\n\nHis legs felt like spaghetti. The goalkeeper looked very big. The goal looked very small.\n\n\"You can do it!\" shouted his best friend Elsa from the side.\n\nOmar took a deep breath. He remembered what his coach always said: \"Don't look at the goalkeeper. Pick your corner and trust your foot.\"\n\nHe ran up and kicked the ball low into the left corner. The goalkeeper jumped the wrong way. Goal!\n\nHis whole team ran to him and everyone jumped and shouted. Omar had never smiled so much in his life. But the best part was not the trophy. The best part was when Elsa said, \"I knew you could do it.\"",
-    "imageUrl": "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -2634,7 +2634,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800&q=80"
   },
   {
     "id": "ak3-orig-002",
@@ -2802,7 +2802,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1774266854775-4831c6c516b3?w=800&q=80"
   },
   {
     "id": "ak3-orig-004",
@@ -2886,7 +2886,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1518152006812-edab29b069ac?w=800&q=80"
   },
   {
     "id": "ak3-orig-005",
@@ -2970,7 +2970,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80"
   },
   {
     "id": "ak3-orig-006",
@@ -3621,7 +3621,7 @@
       "wordCount": 47,
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1556379118-7034d926d258?w=800&q=80"
   },
   {
     "id": "ak3-tema-004",
@@ -3783,7 +3783,7 @@
       "wordCount": 52,
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?w=800&q=80"
   },
   {
     "id": "ak4-gaming-001",
@@ -4094,7 +4094,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1604187351574-c75ca79f5807?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?w=800&q=80"
   },
   {
     "id": "ak4-orig-004",
@@ -4178,7 +4178,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80"
   },
   {
     "id": "ak4-orig-005",
@@ -4262,7 +4262,7 @@
       "model": "gpt-4o",
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1552862750-746b8f6f7f25?w=800&q=80"
   },
   {
     "id": "ak4-tema-001",
@@ -4343,7 +4343,7 @@
       "wordCount": 215,
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1709924168698-620ea32c3488?w=800&q=80"
   },
   {
     "id": "ak4-tema-002",
@@ -4667,7 +4667,7 @@
       "wordCount": 184,
       "readingTime": 1
     },
-    "imageUrl": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1653112521311-a09057757049?w=800&q=80"
   },
   {
     "id": "ak4-tmnt-001",
@@ -4919,7 +4919,7 @@
     "theme": "environment",
     "title": "Cleaning the River",
     "text": "After a heavy storm, the turtles noticed that a small river near the city was filled with litter. Plastic bottles, bags, and broken containers floated on the water. Splinter explained that pollution could harm animals and plants. The turtles decided to help. Donatello created a floating net that collected trash without blocking fish. Leonardo organized volunteers from nearby neighborhoods. Raphael carried heavy bags of waste, and Michelangelo encouraged younger children to join the project. During the cleanup, they discovered that much of the rubbish had washed into the river from overflowing bins after the storm. The volunteers worked for two days. By the end, the water looked cleaner and local birds returned to areas they had avoided earlier. The city thanked everyone who participated. The turtles felt proud, not because they were heroes, but because they had helped their community protect nature.",
-    "imageUrl": "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1526951521990-620dc14c214b?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -5000,7 +5000,7 @@
     "theme": "gaming",
     "title": "How Video Games Are Made",
     "text": "Have you ever wondered how your favourite video game was created? Behind every game is a team of people with very different skills, often working together for several years.\n\nIt all starts with an idea. Game designers decide what the game will be about: the story, the characters, and the rules. They ask questions like: What makes this game fun? What can the player do? What happens if the player fails?\n\nThen the artists get to work. They draw the characters, build the worlds, and decide how everything should look — from giant mountains to the smallest button on the screen. Musicians and sound designers create the music and sound effects that make the game feel alive.\n\nProgrammers write the code that makes everything work. Code is a set of instructions that tells the computer exactly what to do — for example, what happens when you press a button, or how high a character can jump.\n\nBefore a game is released, testers play it over and over to find bugs. A bug is a mistake in the game, like a door that will not open or a character that gets stuck in a wall. The team fixes the bugs, tests again, and polishes the game until it is ready.\n\nSmall games can be made by just one or two people. The biggest games are built by teams of hundreds. But every game, big or small, starts the same way: with an idea and someone who wants to bring it to life.",
-    "imageUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -5853,7 +5853,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1511381939415-e44015466834?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=800&q=80"
   },
   {
     "id": "ak5-tema-001",
@@ -5934,7 +5934,7 @@
       "wordCount": 267,
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
   },
   {
     "id": "ak5-tema-002",
@@ -6015,7 +6015,7 @@
       "wordCount": 266,
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1532153955177-f59af40d6472?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800&q=80"
   },
   {
     "id": "ak5-tema-003",
@@ -6267,7 +6267,7 @@
     "theme": "friendship",
     "title": "The New Kid's Secret",
     "text": "Nobody knew much about Theo, the new kid in class 6B. He arrived in October, sat in the back row, and never raised his hand. At lunch, he disappeared. Every single day.\n\nMaja noticed because she noticed everything. On Tuesday, she followed him. Theo walked past the cafeteria, down the stairs, and slipped into the music room. Maja pressed her ear against the door. Piano music — not the simple songs they played in music class, but something fast and beautiful, like rain turning into a storm.\n\nShe opened the door without thinking. Theo stopped immediately and stared at her, his face red.\n\n\"Please don't tell anyone,\" he said.\n\n\"Why not? You're amazing!\"\n\nTheo looked down at the keys. \"At my old school, kids made fun of me for it. They called me piano boy. It was easier to just... hide it.\"\n\nMaja sat down on the bench beside him. \"Well, this isn't your old school. And I've been trying to learn that exact song for a year. Will you show me?\"\n\nFor the first time since October, Theo smiled. By December, they were playing together at the school concert — and nobody laughed. The applause lasted so long that the music teacher had to ask the audience to settle down.",
-    "imageUrl": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -6326,7 +6326,7 @@
     "theme": "nature",
     "title": "The Message in the Bottle",
     "text": "Elsa found the bottle on the beach after the storm, half-buried in seaweed and sand. Inside was a piece of paper, rolled up tight and yellowed at the edges.\n\nHer hands shook a little as she pulled out the cork. The note was short: \"My name is Anna. I am eleven years old. I live on Gotland. If you find this, please write to me.\" There was an address at the bottom — and a date. The letter had been written thirty-two years ago.\n\nElsa did the maths in her head. Anna would be forty-three years old now. Did she still live there? Did she even remember the bottle?\n\nThat evening, Elsa wrote a letter. She told Anna about the storm, the beach, and how the bottle had survived three decades at sea. She posted it the next morning, not really expecting anything.\n\nTwo weeks later, an envelope arrived. Inside was a photo of a woman with grey streaks in her hair, standing on a rocky shore. The letter read: \"Dear Elsa, I threw that bottle into the sea when I was your age. I had almost forgotten it. Thank you for reminding me that some messages just take a little longer to arrive. Would you like to be pen pals?\"\n\nElsa smiled. Some things, she thought, are worth waiting thirty-two years for.",
-    "imageUrl": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1661953029179-e1b0dc900490?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -6662,7 +6662,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&q=80"
   },
   {
     "id": "ak6-orig-003",
@@ -6746,7 +6746,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1477601263568-180e2c6d046e?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1562089727-90aa996a6f18?w=800&q=80"
   },
   {
     "id": "ak6-orig-004",
@@ -7238,7 +7238,7 @@
       "wordCount": 267,
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1483347756197-71ef80e95f73?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
   },
   {
     "id": "ak6-tema-005",
@@ -7408,7 +7408,7 @@
     "genre": "non-fiction",
     "theme": "music",
     "title": "Writing and Recording Music",
-    "imageUrl": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&q=80",
     "text": "Many listeners focus on the final version of a song, but creating music often involves a long process. Zara Larsson has participated in writing and developing many of her songs. Before a track reaches streaming services or radio stations, artists and producers may spend weeks or months improving it. The process often begins with an idea, a melody, or a short lyric. Writers experiment with different words and musical arrangements until they find a version that feels right. During recording sessions, singers may perform the same section many times. This allows producers to select the strongest performance and create a polished result. Zara has worked with musicians and producers from different countries, which has given her opportunities to learn new techniques and perspectives. Collaboration is an important part of modern pop music. Team members may contribute ideas about rhythm, lyrics, instruments, or sound effects. Technology also plays a major role. Recording equipment can capture details that audiences may never notice consciously but that help create a professional sound. Even after recording is complete, engineers continue working by mixing and mastering the music. These stages balance the volume of instruments and improve overall quality. Although the audience often hears only a three-minute song, many hours of work may be hidden behind it. Zara's career demonstrates how modern artists combine creativity with technical knowledge. Successful songs are not usually the result of a single moment of inspiration. Instead, they often develop through planning, revision, and teamwork. Understanding this process helps listeners appreciate the effort involved in music production. It also reminds young musicians that improvement takes time. Even experienced performers continue learning throughout their careers. By practicing regularly and accepting feedback, artists can continue developing their skills and creating music that connects with audiences around the world.",
     "questions": [
       {
@@ -7489,7 +7489,7 @@
     "genre": "non-fiction",
     "theme": "music",
     "title": "Performing for Large Audiences",
-    "imageUrl": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
     "text": "Live performances are an important part of Zara Larsson's career. While recordings allow listeners to enjoy music anywhere, concerts create a different experience. Thousands of people may gather in one place to hear songs performed live. Preparing for such events requires careful planning. Artists often rehearse for many hours before a tour begins. They practice singing, movement, timing, and interaction with the audience. Behind the scenes, many professionals help make a concert successful. Sound technicians manage microphones and speakers, lighting teams create visual effects, and stage crews prepare equipment. Each person has specific responsibilities. If one part of the system fails, the audience may notice problems immediately. Therefore, teamwork is essential. Zara has performed in different countries and for audiences with diverse backgrounds. Music can connect people even when they speak different languages. Fans may sing along to familiar songs and share a common experience during a performance. However, performing live can also be challenging. Artists may feel nervous before stepping onto a stage, especially when large crowds are present. Learning how to stay focused under pressure is an important skill. Many performers develop routines that help them prepare mentally. They may warm up their voices, review the schedule, and spend time concentrating before the show begins. Concert tours also involve travel and long workdays. Despite these challenges, many musicians enjoy performing because they can connect directly with listeners. Audience reactions provide immediate feedback and energy. Zara's performances are often described as energetic and engaging. Her concerts demonstrate that successful live music depends on preparation, cooperation, and confidence. For young people interested in performing arts, her experiences show that public performances involve much more than simply stepping onto a stage. Careful preparation behind the scenes plays a major role in creating memorable events.",
     "questions": [
       {
@@ -7570,7 +7570,7 @@
     "genre": "non-fiction",
     "theme": "society",
     "title": "Social Media and Modern Artists",
-    "imageUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1573152143286-0c422b4d2175?w=800&q=80",
     "text": "The music industry has changed significantly during the last two decades. In the past, artists depended heavily on television, radio, and newspapers to reach audiences. Today, social media allows performers such as Zara Larsson to communicate directly with fans. Through online platforms, artists can share updates, photographs, videos, and information about upcoming projects. This creates new opportunities for interaction. Fans can comment on posts and sometimes receive responses from the people they admire. However, social media also brings challenges. Public figures often receive large amounts of attention, both positive and negative. Learning how to manage this attention responsibly is important. Artists must think carefully about what they share online because information can spread quickly. Social media can also influence how music becomes popular. A short video clip or performance may reach millions of viewers within a short period. As a result, songs can gain attention much faster than in earlier decades. Zara Larsson has used digital platforms to communicate with audiences around the world. These tools help artists maintain connections with listeners even when they are not touring. At the same time, spending too much time online can become distracting. Many public figures try to balance their digital presence with private life. This balance can be difficult because audiences often want constant updates. Understanding social media is now an important skill for many musicians. It involves communication, creativity, and responsibility. Young people who follow artists online can learn to think critically about the information they see. Not everything shared on the internet reflects reality completely. By examining sources carefully and considering different perspectives, users can become more informed digital citizens. The experiences of modern artists demonstrate both the advantages and challenges of living in a connected world.",
     "questions": [
       {
@@ -7910,7 +7910,7 @@
     "theme": "nature",
     "title": "The Night Hike",
     "text": "The plan was simple: hike to the lake, set up camp before dark, and impress absolutely everyone with the tent Jonas had borrowed from his uncle. The execution was less simple.\n\nFirst, Jonas discovered that the tent bag contained a tent but no poles. Then Vera's phone, which held their only map, dropped to two percent battery. And then, because the universe has a sense of humour, it started to rain.\n\n\"We should go back,\" Jonas said.\n\n\"It's further back than forward,\" Vera said, pulling up her hood. \"The lake has a wind shelter. We can sleep there.\"\n\nThey walked the last hour in darkness, following the white trail markers that appeared in their torchlight like small ghosts. Neither of them said much. There was something about the forest at night that made talking feel wrong — not scary exactly, but serious, like being in a church.\n\nThe shelter was exactly where the map had promised, back when they could still see the map. They rolled out their sleeping bags, ate slightly squashed sandwiches, and listened to the rain drum on the wooden roof.\n\n\"You know what's weird?\" Vera said into the dark. \"This is going to be the part we remember. Not the tent. Not the plan. This.\"\n\nJonas thought about it. The rain, the dark forest, the sandwiches. She was right, and somehow that made the whole disaster feel like a victory.",
-    "imageUrl": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -8049,7 +8049,7 @@
     "genre": "non-fiction",
     "theme": "history",
     "title": "The March on Washington",
-    "imageUrl": "https://images.unsplash.com/photo-1525206809162-d2c5f7b3a3b5?w=600&h=380&fit=crop",
+    "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80",
     "text": "On August 28, 1963, hundreds of thousands of people gathered in Washington, D.C., for one of the most significant demonstrations in American history. The event, known as the March on Washington for Jobs and Freedom, brought together civil rights organizations, religious groups, labor unions, and ordinary citizens. Participants wanted to draw attention to racial discrimination, unequal economic opportunities, and the need for stronger civil rights protections. Martin Luther King Jr. was one of several speakers at the event, but his speech became the most remembered. Standing near the Lincoln Memorial, King delivered what is now known as the \"I Have a Dream\" speech. In it, he described his hope for a future in which people would be judged by their character rather than the color of their skin. His words inspired many listeners and became one of the most famous speeches in modern history. The march itself was carefully planned and remained peaceful throughout the day. Organizers worked hard to ensure that participants followed guidelines promoting respect and nonviolence. News coverage brought images and speeches from the event into homes across the country, helping millions of people understand the goals of the civil rights movement. The march also increased pressure on political leaders to address racial inequality. Although discrimination did not disappear, the event helped build support for important reforms. Historians often point to the March on Washington as a turning point because it demonstrated the strength and organization of the movement. The gathering showed that large numbers of people were willing to unite behind demands for justice and equal rights. Today, the march is remembered not only for King's speech but also for the collective effort of thousands of individuals who believed change was possible. Their actions demonstrated how peaceful public demonstrations can influence public opinion and encourage political action.",
     "questions": [
       {
@@ -8617,7 +8617,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
   },
   {
     "id": "ak7-orig-004",
@@ -8701,7 +8701,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80"
   },
   {
     "id": "ak7-orig-005",
@@ -8785,7 +8785,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80"
   },
   {
     "id": "ak7-tema-001",
@@ -8947,7 +8947,7 @@
       "wordCount": 491,
       "readingTime": 3
     },
-    "imageUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800&q=80"
   },
   {
     "id": "ak7-tema-003",
@@ -9190,7 +9190,7 @@
       "wordCount": 455,
       "readingTime": 3
     },
-    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=800&q=80"
   },
   {
     "id": "ak8-fic-001",
@@ -9199,7 +9199,7 @@
     "theme": "science",
     "title": "The Signal",
     "text": "The radio telescope had been Hanna's grandfather's obsession, and after he died, it became hers. It stood in the garden behind his old house — a three-metre dish he had built from scrap metal and stubbornness, pointed permanently at a patch of sky near the constellation Lyra.\n\n\"Why there?\" she had asked him once.\n\n\"Because nobody else is listening there,\" he'd said. \"Discoveries hide where nobody looks.\"\n\nEvery Sunday, Hanna cycled to the house, switched on the receiver, and recorded an hour of static. Forty-three Sundays of nothing. She kept a logbook anyway, the way he had taught her: date, time, frequency, results. Results: nothing. Nothing. Nothing.\n\nOn the forty-fourth Sunday, the static changed.\n\nIt was small — a rhythmic pulse buried in the noise, repeating every twelve seconds. Hanna's hands went cold. She checked the equipment for faults. She recorded for three more hours. The pulse stayed, steady as a heartbeat.\n\nShe knew what her teacher would say: probably a satellite, probably interference, probably nothing. And maybe it was. But as she cycled home through the dark with the recording in her backpack, she understood something about her grandfather for the first time. It wasn't really about finding aliens. It was about the forty-three empty Sundays — about being the kind of person who keeps listening when everyone else has decided there's nothing to hear.\n\nMonday morning, she emailed the recording to the observatory in Onsala. Then she turned the page in the logbook and wrote the date.",
-    "imageUrl": "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -9317,7 +9317,7 @@
     "theme": "history",
     "title": "The Attic Letters",
     "text": "The house was being sold, which meant the attic had to be emptied, which meant Noah spent his autumn break carrying boxes instead of gaming. He had complained about this loudly and at length — right up until he found the suitcase.\n\nIt was leather, cracked with age, and locked. His mother broke it open with a screwdriver. Inside lay perhaps a hundred letters, bundled with string, all addressed to his great-grandmother Ester. The earliest was dated 1943.\n\nThey were from her sister, Ruth — written from Berlin during the war. Noah's German wasn't good, but his mother's was, and she read them aloud at the kitchen table, evening after evening, while the moving boxes stood forgotten. Letters about rationing, about neighbours who disappeared, about fear that hid between ordinary sentences about the weather. The last letter was dated March 1944. After that, nothing.\n\n\"What happened to her?\" Noah asked.\n\nHis mother shook her head. \"Ester never talked about it. Ever.\"\n\nNoah, who had never voluntarily done research in his life, spent the rest of his break in digital archives. He cross-referenced names, dates, transport lists. And there, in a database of survivors, he found her: Ruth Lindqvist, arrived in Sweden 1945, died in Malmö 1989. She had survived. She had lived forty minutes away.\n\nThe sisters had never found each other again. Two women, one country, forty minutes apart. Noah looked at the last letter for a long time. Then he started searching for Ruth's grandchildren.",
-    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -9855,7 +9855,7 @@
     "theme": "science",
     "title": "The Journey to Mars",
     "text": "Mars has fascinated humans for centuries, but only in the last few decades have we seriously planned to send people there. The journey would take approximately seven months each way, making it the longest human spaceflight in history.\n\nAstronauts travelling to Mars would face extraordinary challenges. Exposure to cosmic radiation outside Earth's protective magnetic field could increase cancer risks significantly. The spacecraft would need sophisticated shielding, and scientists are exploring materials like polyethylene and water walls to absorb harmful particles.\n\nMicrogravity causes muscle and bone loss, so travellers would need daily exercise routines using resistance machines. Psychological challenges are equally serious. A crew of four to six people would be confined in a small space for over a year with no possibility of emergency return.\n\nCommunication with Earth would also be frustrating. Radio signals travel at the speed of light, but Mars can be up to 20 light-minutes away. A simple conversation would require waiting 40 minutes for a reply. Crews would need to be highly self-sufficient and make independent decisions.\n\nDespite these obstacles, space agencies and private companies are developing ambitious plans. NASA aims to land humans on Mars in the 2030s, while SpaceX envisions a permanent colony. If successful, it would be humanity's greatest exploration achievement.",
-    "imageUrl": "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1696384036025-c7d7b7f6584d?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -9914,7 +9914,7 @@
     "theme": "science",
     "title": "Life of a Star",
     "text": "Stars are not eternal. Like living things, they are born, they mature, and they die. The life cycle of a star depends almost entirely on one factor: its mass.\n\nStars form inside vast clouds of gas and dust called nebulae. Gravity pulls this material together until the pressure at the centre becomes so intense that hydrogen atoms fuse to form helium, releasing enormous energy. This process, called nuclear fusion, makes the star shine.\n\nOur Sun is a medium-sized star and has been burning for about 4.6 billion years. It will continue for another five billion years before it exhausts its hydrogen fuel. When that happens, the Sun will expand into a red giant, swallowing Mercury and Venus and possibly Earth. Eventually, it will shed its outer layers, leaving behind a dense core called a white dwarf.\n\nMassive stars live faster and die more dramatically. They burn through their fuel in millions rather than billions of years. When they exhaust their fuel, they collapse suddenly and explode in a supernova — one of the most violent events in the universe. The explosion can briefly outshine an entire galaxy.\n\nWhat remains after a supernova depends on the star's original mass. Some become neutron stars, incredibly dense objects where a teaspoon of material would weigh a billion tonnes. The most massive stars collapse completely into black holes, where gravity is so strong that nothing — not even light — can escape.",
-    "imageUrl": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -9973,7 +9973,7 @@
     "theme": "science",
     "title": "The Mystery of Black Holes",
     "text": "Black holes are among the most extreme objects in the universe. They form when massive stars collapse under their own gravity at the end of their lives. The result is a region where gravity is so intense that nothing — not even light — can escape once it crosses a boundary called the event horizon.\n\nDespite the name, black holes are not empty voids. They contain an enormous amount of mass compressed into an incredibly small space. At the centre lies the singularity, a point where our understanding of physics completely breaks down. Einstein's general relativity predicts its existence but cannot describe what happens there.\n\nBlack holes come in different sizes. Stellar black holes form from individual stars and may be only a few times larger than our Sun. Supermassive black holes, found at the centre of most galaxies, can contain billions of solar masses. The black hole at the heart of our galaxy, called Sagittarius A*, has a mass four million times that of our Sun.\n\nFor decades, black holes were theoretical. Then in 2019, the Event Horizon Telescope captured the first actual image of a black hole in the galaxy M87. The photograph showed a glowing ring of hot gas surrounding a dark central region.\n\nScientists study black holes by observing how they affect nearby matter and light. As gas spirals inward, it heats up and emits X-rays that telescopes can detect. Black holes are invisible, but their effects reveal them unmistakably.",
-    "imageUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1700159915592-004562ddcf6f?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -10091,7 +10091,7 @@
     "theme": "science",
     "title": "Searching for Other Worlds",
     "text": "The discovery of planets beyond our solar system — called exoplanets — has transformed our understanding of the universe. Before 1992, we had no confirmed evidence that other stars hosted planets. Today, astronomers have catalogued over 5,500 exoplanets, with thousands more candidates awaiting confirmation.\n\nMost exoplanets are too far away to photograph directly. Instead, scientists use indirect methods. The transit method detects tiny dips in a star's brightness as a planet passes in front of it, briefly blocking some light. The radial velocity method measures small wobbles in a star caused by a planet's gravitational pull. Both techniques require incredibly precise measurements.\n\nThe Kepler Space Telescope, launched in 2009, revolutionised the field by discovering thousands of exoplanets using the transit method. Its successor, the TESS telescope, continues this work today.\n\nScientists are particularly interested in planets within the habitable zone — the range of distances from a star where liquid water could exist on a planet's surface. Water is considered essential for life as we know it. Several rocky planets in habitable zones have been identified, including some orbiting nearby stars.\n\nThe James Webb Space Telescope, launched in 2021, can analyse the atmospheres of exoplanets by studying starlight filtered through them. Scientists hope to detect gases like oxygen or methane that might indicate biological processes.\n\nWhether life exists elsewhere in the universe remains unknown. But with thousands of worlds to examine, the search has never been more promising.",
-    "imageUrl": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1701014159143-09482059f571?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -10150,7 +10150,7 @@
     "theme": "gaming",
     "title": "The Science of Speedrunning",
     "text": "Most people finish a video game in twenty or thirty hours. Some finish it in eleven minutes. The players who do this are called speedrunners, and what they do turns out to be far more complicated than simply playing quickly.\n\nSpeedrunning means completing a game as fast as possible according to rules agreed on by a community. Some categories only require the player to reach the ending by any means available. Others demand that every item is collected first, or that no glitches are used at all. These rules matter enormously, because they decide which shortcuts count as clever and which count as cheating.\n\nThe most surprising part of speedrunning is how much of it depends on mistakes — not the player's, but the programmers'. Every large game contains bugs: small errors in the code that nobody noticed before release. Ordinary players almost never meet them. Speedrunners hunt for them deliberately. In one famous platform game, the character can pass straight through a wall if the player jumps at an exact angle on an exact frame, one sixtieth of a second long. Discovering a glitch like that can remove several minutes from a world record overnight.\n\nThis is why speedrunning communities look less like sports teams and more like research groups. Runners publish their findings in shared documents, compare recordings frame by frame, and argue about whether a new trick is genuinely faster or merely lucky. When somebody proposes a new route through a game, others test it hundreds of times before it is accepted. A world record is rarely the work of one person. It is usually the last step in years of collective investigation.\n\nVerification is taken seriously. To have a record accepted, a runner must submit an unedited video, and moderators examine it closely for signs of tampering. Cheating scandals do happen. In several well-known cases, runners were found to have spliced together their best attempts or slowed their footage slightly, and their records were deleted. Because the whole system rests on trust, the punishment for breaking it is severe.\n\nSpeedrunning has also become a form of charity. Twice a year, an event called Games Done Quick gathers hundreds of runners who play continuously for a week while viewers donate. The event has raised more than fifty million dollars for medical research and disaster relief. Competitors with disabilities take part regularly. One runner completes games using only his feet; another, who is blind, navigates entirely by sound, having memorised the audio cues of every level.\n\nCritics sometimes argue that speedrunning misses the point of games — that racing past a carefully written story wastes the work of the people who made it. Runners tend to disagree. Many say they only speedrun games they already love, and that learning a game deeply enough to break it is its own form of respect. Some developers agree. Several studios now deliberately leave old glitches in place when they release updates, knowing the community depends on them.\n\nWhat speedrunning ultimately demonstrates is that expertise can grow almost anywhere. The skills involved are patience, precise timing, careful documentation and a willingness to repeat a difficult task thousands of times. Those are the same skills valued in laboratories and workshops. The subject happens to be a video game. The method looks remarkably like science.",
-    "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -10312,7 +10312,7 @@
     "theme": "environment",
     "title": "The Wolves That Changed a River",
     "text": "In 1995, fourteen grey wolves were released into Yellowstone National Park in the United States. They were the first wolves in the park for seventy years; the last ones had been shot in the 1920s, when predators were widely regarded as pests. What happened next became one of the most repeated stories in modern nature writing.\n\nWithout wolves, the park's elk population had grown very large. The elk grazed heavily along rivers and streams, eating young willow and aspen almost as fast as the trees could grow. When the wolves returned, the elk did not simply decline in number. They also changed their behaviour, avoiding the open valleys where they were easiest to hunt. Trees began to recover in those valleys. Beavers, which need willow, returned and built dams. The dams created ponds for fish and amphibians. Songbirds nested in the new growth. Riverbanks, held together by roots, eroded more slowly, so some streams became narrower and deeper.\n\nEcologists call this a trophic cascade: a change at the top of a food web that ripples downwards, altering plants, water and landforms. A short film describing the Yellowstone cascade has been watched tens of millions of times, usually under a title claiming that wolves changed the course of rivers.\n\nThe science, however, is less tidy than the film. Several researchers who study Yellowstone argue that the story has been simplified almost beyond recognition. Elk numbers were falling for other reasons too, including hunting outside the park, several dry years, and the return of bears and cougars. Willow recovery has been strong in some valleys and barely visible in others. One long-term study found that where groundwater levels had dropped, willows failed to recover even when elk were kept out entirely. The wolves mattered, these scientists say, but they were one factor among many, and the popular version leaves out the complexity that makes the research interesting.\n\nThe debate is not only academic, because wolves have returned to Europe as well. After being almost eliminated from Scandinavia, they reappeared in the 1980s and now number a few hundred across Sweden and Norway. Their return has been far more controversial than in Yellowstone, largely because the Scandinavian landscape is not a protected wilderness. It is a working landscape of forestry, farms and hunting grounds.\n\nFor a sheep farmer who loses animals, or a hunter whose dog is killed while tracking, the arguments about biodiversity can feel remote. Compensation schemes exist, but they do not cover the effort of rebuilding fences or the anxiety of not knowing what will happen next. Conservation organisations point out that wolves take a very small proportion of livestock compared with disease and traffic, and that the population remains genetically fragile. Both statements can be true at the same time, which is precisely what makes the conflict difficult. Wolves are also protected under European law, which limits how national governments are allowed to respond, and the tension between local frustration and international rules has ended up in court more than once.\n\nWhat Yellowstone really demonstrates, then, may not be that wolves rebuild rivers. It may be that removing a predator changes a landscape in ways nobody predicted, and that putting one back changes it again — unevenly, slowly, and never quite as neatly as a good story requires.",
-    "imageUrl": "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1547407139-3c921a66005c?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -10393,7 +10393,7 @@
     "theme": "friendship",
     "title": "The Understudy",
     "text": "Nadia was given the part nobody wants. Understudy to the lead — which meant learning every line, attending every rehearsal, and almost certainly never going on stage.\n\n\"You'll be brilliant,\" said Ms Okonjo, the drama teacher, in a voice that suggested she knew exactly how disappointing this was. \"And if anything happens to Viktor, the whole thing rests on you.\"\n\nNothing was going to happen to Viktor. Viktor had played the lead in every production since year seven and had never so much as caught a cold.\n\nWhat made it harder was the way people assumed Nadia had been given the smaller role because of her hearing. She had worn a hearing aid in her left ear since she was six. It picked up voices well enough in a quiet room, but a rehearsal hall was not a quiet room, and she had learnt long ago to read faces as much as sound. When someone turned away mid-sentence, half the words vanished.\n\nSo she developed her own method. She learnt the whole play, not just the lines, but the shape of every scene: who moved where, who breathed before speaking, which gesture came before which cue. While the others waited for their entrances, scrolling on their phones, Nadia sat in the third row with the script open on her knees, watching.\n\nBy the fourth week she could predict a fumbled line two seconds before it happened. She began, quietly, to help. She would catch someone in the corridor afterwards. \"You come in a bit early on the balcony scene,\" she'd say. \"Wait for him to turn.\" People started asking her.\n\nViktor asked her too, which surprised her more than anything. He had the confidence of somebody who has never had to think about how he is perceived, and he used it, one afternoon in November, to say something honest.\n\n\"You know the play better than I do.\"\n\n\"I've had more time to watch it.\"\n\n\"That's not what I mean.\" He rubbed the back of his neck. \"I say the words. You understand them.\"\n\nOn the Thursday of performance week, Viktor's grandfather died. Ms Okonjo told the cast in the morning, and the room went very quiet, and then everybody looked at Nadia.\n\nShe was not ready. Nobody is ever ready. But she had watched the play ninety times from the third row, and when she stepped into the space where Viktor usually stood, her body already knew where to go.\n\nThe difficult part was not the lines. It was the noise: the shuffle of two hundred people, the hum of the lights, the whole soundscape she had never rehearsed in. Twice she lost a cue. Both times she found it by watching — a hand lifting, a step backwards, a mouth opening a fraction early.\n\nAfterwards, her father asked whether she had been frightened, and Nadia thought about it properly before answering.\n\n\"Not of forgetting,\" she said. \"I've never been able to rely on hearing my cue anyway. I just watch. Everyone else was suddenly doing what I do all the time.\"\n\nViktor came back for the Saturday performance and played the lead, and he was very good. But at the curtain call he stepped back and gestured towards the third row, where Nadia had returned to sit with the script open on her knees, and the applause went on considerably longer than anyone expected.",
-    "imageUrl": "https://images.unsplash.com/photo-1503095396549-807759245b35?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -10960,7 +10960,7 @@
     "theme": "psychology",
     "title": "What the Mirror Didn't Say",
     "text": "The first thing people noticed about Vincent was that he was funny. He had discovered early that a well-timed joke worked like a shield: if people were laughing, they weren't looking too closely. By ninth grade, he had perfected the act. Class clown, always on, always fine.\n\nThe truth was less entertaining. The truth was lying awake at two in the morning rehearsing conversations that would never happen. The truth was the knot in his stomach every Sunday evening, and the exhausting daily performance of being okay.\n\nIt was Ms. Lindgren, the art teacher, who noticed. Not because he stopped joking — he never stopped joking — but because of a self-portrait he'd painted in October. The assignment was to paint yourself as others see you. Most students produced flattering selfies in acrylic. Vincent painted a grinning mask, and behind it, barely visible in greys, a second face that wasn't grinning at all.\n\nShe kept him after class. He prepared a joke about modern art being open to interpretation. She looked at the painting, then at him, and said: \"You know the assignment was how others see you. This looks more like how others don't.\"\n\nThe joke evaporated. For a horrible, liberating moment, Vincent had nothing funny to say.\n\nThey talked for an hour. Then she walked with him to the school counsellor's office and waited until he went in. It wasn't a cure — those took longer, he would learn. But years later, Vincent would still think of that painting as the most honest thing he made in school: the day the mask came off, because one person had bothered to look behind it.",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1474418397713-7ede21d49118?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -11443,7 +11443,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1584118624012-df056829fbd0?w=800&q=80"
   },
   {
     "id": "ak9-orig-003",
@@ -11695,7 +11695,7 @@
       "model": "gpt-4o",
       "readingTime": 2
     },
-    "imageUrl": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80"
   },
   {
     "id": "ak9-tema-001",
@@ -12100,7 +12100,7 @@
       "wordCount": 451,
       "readingTime": 3
     },
-    "imageUrl": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=700&h=420&fit=crop"
+    "imageUrl": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80"
   },
   {
     "id": "ak10-amazon-001",
@@ -12190,7 +12190,7 @@
     "theme": "science",
     "title": "Biodiversity in the Amazon",
     "text": "The Amazon Rainforest is widely recognized as one of the most biodiverse places on the planet. Scientists estimate that it contains millions of species, including plants, insects, birds, mammals, reptiles, amphibians, and microorganisms. Many species exist nowhere else in the world. Because large areas remain difficult to access, researchers continue discovering new organisms every year. Biodiversity is important because ecosystems depend on interactions among different species. Pollinators help plants reproduce, predators regulate populations, and decomposers recycle nutrients. If one part of the system is damaged, the effects can spread throughout the ecosystem. The Amazon provides many examples of these complex relationships. Certain trees rely on specific animals to spread their seeds, while some insects can survive only on particular plant species. The rainforest also supports scientific research. Plants found in tropical forests have contributed to the development of medicines used around the world. Researchers believe that many species in the Amazon may contain compounds that could help treat diseases in the future. However, species can disappear before they are studied if habitats are destroyed. Human activities represent a major threat to biodiversity. Deforestation, illegal logging, mining, and agricultural expansion reduce the amount of available habitat. Climate change may also alter environmental conditions faster than some species can adapt. Conservation organizations emphasize that protecting biodiversity is not only about saving individual species. It is also about maintaining ecosystem functions that support human societies. Healthy forests contribute to clean water, stable climates, and sustainable resources. Scientists therefore argue that biodiversity should be viewed as a valuable global asset. Preserving it requires long-term planning, environmental education, and cooperation among many different groups. The Amazon demonstrates both the extraordinary richness of life on Earth and the challenges involved in protecting it.",
-    "imageUrl": "https://images.unsplash.com/photo-1535338454770-8be927b5a00b?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=800&q=80",
     "questions": [
       {
         "type": "inference",
@@ -12676,7 +12676,7 @@
     "theme": "environment",
     "title": "The Seed Vault",
     "text": "In the year 2089, Dr. Iris Hammar made the journey north to Svalbard with a single steel case handcuffed to her wrist. Inside, packed in vacuum-sealed foil, were the last viable seeds of seventeen crop varieties from the drowned river deltas of Bangladesh — rice that could grow in salt water, collected over three generations by farmers who no longer had a country to grow it in.\n\nThe Global Seed Vault had been her grandmother's workplace, back when it was a precaution. Now it was something closer to a library of the lost. Iris's job was officially called 'deposit coordination', but the older staff used a different phrase: keeping the promises.\n\nThe promise, as her grandmother had explained it, was simple. Every seed accepted into the mountain carried an implicit contract: that someday, someone would plant it again.\n\nWhat the public didn't know — what Iris herself hadn't known until her security clearance came through — was that withdrawals had already begun. Syria, decades ago, had been the first. Then others, as floods and blights and wars erased the genetic heritage of one region after another. The vault was no longer just receiving deposits. It was paying them out, like a bank in a long, slow emergency.\n\nIn the receiving chamber, at eighteen degrees below zero, Iris logged the Bangladeshi rice into the system. Origin: deltas that no longer appeared on current maps. Depositor: a farmers' cooperative now scattered across four countries. Withdrawal conditions: when there is somewhere to plant it.\n\nShe paused at that last field. The form required a date estimate. Her predecessor, she noticed, had developed a convention for such cases, used hundreds of times in the database. She followed it, typing the words slowly: 'When we have earned it back.'\n\nOutside, the Arctic wind scoured a mountainside that no longer held snow in summer. Inside, in the cold dark, eleven hundred million seeds waited — patient, viable, and entirely sure, in the way only seeds can be, that there would be a future worth sprouting into.",
-    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1418985991508-e47386d96a71?w=800&q=80",
     "questions": [
       {
         "type": "literal",
@@ -13168,7 +13168,7 @@
       "model": "gpt-4o",
       "readingTime": 3
     },
-    "imageUrl": "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=800&q=80"
   },
   {
     "id": "ak10-tema-001",
