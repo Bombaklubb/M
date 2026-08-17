@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
 import { ACHIEVEMENTS } from '../data/achievements';
@@ -19,9 +20,14 @@ const RARITY_BADGE: Record<string, string> = {
 
 export default function Achievements() {
   const { setView } = useApp();
-  const stats = buildAchievementStats();
-  const earned = ACHIEVEMENTS.filter(a => a.condition(stats));
-  const locked = ACHIEVEMENTS.filter(a => !a.condition(stats));
+  const stats = useMemo(() => buildAchievementStats(), []);
+  // Ett svep i stället för att köra varje villkor två gånger.
+  const { earned, locked } = useMemo(() => {
+    const e: typeof ACHIEVEMENTS = [];
+    const l: typeof ACHIEVEMENTS = [];
+    for (const a of ACHIEVEMENTS) (a.condition(stats) ? e : l).push(a);
+    return { earned: e, locked: l };
+  }, [stats]);
 
   return (
     <div className="min-h-screen">

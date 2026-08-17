@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { shuffle } from '../../utils/shuffle';
 
 export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex }: {
@@ -10,17 +10,25 @@ export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [shuffled, setShuffled] = useState(concepts);
+  const flipTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => () => { if (flipTimer.current) clearTimeout(flipTimer.current); }, []);
 
   if (concepts.length === 0) {
     return <p className="text-sm text-gray-500 text-center py-8">Inga begrepp finns för det här kapitlet.</p>;
   }
 
-  const card = shuffled[idx];
   const total = shuffled.length;
+  // Klamra indexet – annars kan card bli undefined om listan krymper.
+  const card = shuffled[Math.min(idx, total - 1)];
 
   function go(dir: 1 | -1) {
     setFlipped(false);
-    setTimeout(() => setIdx(i => (i + dir + total) % total), 150);
+    if (flipTimer.current) clearTimeout(flipTimer.current);
+    flipTimer.current = setTimeout(() => {
+      flipTimer.current = null;
+      setIdx(i => (i + dir + total) % total);
+    }, 150);
   }
 
   function handleShuffle() {
@@ -101,6 +109,7 @@ export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex
       <div className="flex items-center gap-4 mt-6">
         <button
           onClick={() => go(-1)}
+          aria-label="Föregående kort"
           className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-bold transition-all active:scale-95 cursor-pointer"
           style={{ background: `${progressHex}15`, border: `2px solid ${progressHex}30`, color: progressHex }}
         >
@@ -115,6 +124,7 @@ export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex
         </button>
         <button
           onClick={() => go(1)}
+          aria-label="Nästa kort"
           className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-bold transition-all active:scale-95 cursor-pointer"
           style={{ background: `${progressHex}15`, border: `2px solid ${progressHex}30`, color: progressHex }}
         >
@@ -128,9 +138,15 @@ export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex
           <button
             key={i}
             onClick={() => { setIdx(i); setFlipped(false); }}
-            className="w-2 h-2 rounded-full transition-all cursor-pointer"
-            style={{ background: i === idx ? progressHex : `${progressHex}30` }}
-          />
+            aria-label={`Gå till kort ${i + 1}`}
+            aria-current={i === idx ? 'true' : undefined}
+            className="w-6 h-6 flex items-center justify-center rounded-full transition-all cursor-pointer"
+          >
+            <span
+              className="block w-2 h-2 rounded-full"
+              style={{ background: i === idx ? progressHex : `${progressHex}30` }}
+            />
+          </button>
         ))}
       </div>
     </div>

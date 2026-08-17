@@ -54,6 +54,15 @@ export const AK5_RELIGION: Chapter[] = [
         { statement: 'En synagoga leds av en imam.', isTrue: false, explanation: 'Nej – en synagoga leds av en RABBI. En imam är ledare för en moské (islam).' },
         { statement: 'Jom Kippur är judendomens heligaste dag.', isTrue: true, explanation: 'Rätt! Jom Kippur kallas "försoningsdagen" och är den viktigaste och heligaste dagen i judisk kalender.' },
       ],
+      timeline: [
+        { year: 'ca 1800 f.Kr.', title: 'Abraham sluter förbund med Gud', description: 'Enligt Bibeln lovar Gud att Abrahams folk ska få landet Kanaan. Abraham räknas som stamfader i judendomen, kristendomen och islam.', wikiTitle: 'Abraham' },
+        { year: 'ca 1200 f.Kr.', title: 'Mose leder uttåget ur Egypten', description: 'Judarna befrias från slaveriet i Egypten. På berget Sinai får Mose de tio budorden av Gud.', wikiTitle: 'Mose' },
+        { year: 'ca 1000 f.Kr.', title: 'Kung David gör Jerusalem till huvudstad', description: 'David enar Israels folk. Hans son Salomo låter bygga det första templet i Jerusalem.' },
+        { year: '70 e.Kr.', title: 'Templet i Jerusalem förstörs', description: 'Romarna krossar ett judiskt uppror och bränner templet. Sedan dess samlas judarna i synagogor i stället.' },
+        { year: 'Efter år 70', title: 'Diasporan – ett folk utan land', description: 'Judarna sprids ut över världen. I nästan 2 000 år bevarar de sin tro och kultur genom Torah och synagogan.' },
+        { year: '1933–1945', title: 'Förintelsen', description: 'Nazisterna mördar sex miljoner judar under andra världskriget. Det är det värsta folkmordet i Europas historia.', wikiTitle: 'Förintelsen' },
+        { year: '1948', title: 'Staten Israel grundas', description: 'Ett judiskt hemland bildas i det område judarna kommer ifrån. Många överlevande från Förintelsen flyttar dit.', wikiTitle: 'Israel' },
+      ],
     },
     exercises: [
       {
@@ -204,6 +213,15 @@ export const AK5_RELIGION: Chapter[] = [
         { statement: 'Kristendomen är världens minsta religion.', isTrue: false, explanation: 'Nej – kristendomen är världens STÖRSTA religion med ~2,4 miljarder anhängare.' },
         { statement: 'Konfirmation är när man bekräftar sin kristna tro.', isTrue: true, explanation: 'Rätt! Konfirmation är riten när en ung person bekräftar sin kristna tro.' },
         { statement: 'Advent firas för att minnas Jesu uppståndelse.', isTrue: false, explanation: 'Nej – Advent firas som förberedelse inför Jesu ANKOMST och födslodag (jul). Påsken minns uppståndelsen.' },
+      ],
+      timeline: [
+        { year: 'ca år 0', title: 'Jesus föds i Betlehem', description: 'Jesus föds i Betlehem och växer upp i Nasaret. Vår tideräkning räknas från hans födelse.', wikiTitle: 'Jesus' },
+        { year: 'ca 30', title: 'Jesus korsfästs och uppstår', description: 'Romarna avrättar Jesus på ett kors i Jerusalem. Kristna tror att han uppstod från de döda på tredje dagen.' },
+        { year: 'ca 50–100', title: 'Nya testamentet skrivs', description: 'Lärjungarna och deras efterföljare skriver ner berättelserna om Jesus och breven till de första församlingarna.' },
+        { year: '380', title: 'Kristendomen blir statsreligion', description: 'Kejsaren gör kristendomen till Romarrikets officiella religion. Från en förföljd grupp blir de kristna rikets ledande tro.' },
+        { year: 'ca 1000', title: 'Sverige kristnas', description: 'Kung Olof Skötkonung låter döpa sig. Under 900- och 1000-talen ersätter kristendomen så småningom asatron.', wikiTitle: 'Olof Skötkonung' },
+        { year: '1054', title: 'Kyrkan delas i två', description: 'Kyrkan i väst (katolsk, med påven i Rom) och kyrkan i öst (ortodox) bryter med varandra. Delningen kallas den stora schismen.' },
+        { year: '1517', title: 'Reformationen börjar', description: 'Munken Martin Luther protesterar mot den katolska kyrkan i Tyskland. De protestantiska kyrkorna uppstår och sprids i Nordeuropa.', wikiTitle: 'Martin Luther' },
       ],
     },
     exercises: [
@@ -356,6 +374,15 @@ export const AK5_RELIGION: Chapter[] = [
         { statement: 'Muslimer fastar under Ramadan från solnedgång till gryning.', isTrue: false, explanation: 'Nej – muslimer fastar från GRYNING till SOLNEDGÅNG (alltså på dagen, inte natten).' },
         { statement: 'En moské är muslimers bönehus.', isTrue: true, explanation: 'Rätt! Moskén är muslimers bönehus och samlingsplats.' },
         { statement: 'Sunni och Shia är två inriktningar inom kristendomen.', isTrue: false, explanation: 'Nej – Sunni och Shia är de två stora inriktningarna inom ISLAM, inte kristendomen.' },
+      ],
+      timeline: [
+        { year: 'ca 570', title: 'Muhammed föds i Mekka', description: 'Islams profet föds i handelsstaden Mekka på Arabiska halvön. Han blev tidigt föräldralös.', wikiTitle: 'Muhammed' },
+        { year: '610', title: 'Den första uppenbarelsen', description: 'Muhammed får sin första uppenbarelse från Allah genom ängeln Gabriel i en grotta utanför Mekka.' },
+        { year: '622', title: 'Hijra – flykten till Medina', description: 'Muhammed och hans anhängare flyr från Mekka till Medina. Detta år är år 1 i den islamiska kalendern.' },
+        { year: '630', title: 'Muhammed återvänder till Mekka', description: 'Muhammed tar över Mekka utan större strider. Kaba blir islams heligaste plats.', wikiTitle: 'Mekka' },
+        { year: '632', title: 'Muhammed dör', description: 'Profeten dör i Medina. Nästan hela Arabiska halvön har då blivit muslimsk.' },
+        { year: 'ca 650', title: 'Koranen sammanställs', description: 'Uppenbarelserna som Muhammed fått samlas i en enda bok på arabiska – Koranen med sina 114 suror.', wikiTitle: 'Koranen' },
+        { year: '600–700-talet', title: 'Islam sprids snabbt', description: 'Genom handel och erövringar når islam Nordafrika, Spanien och långt in i Asien på bara hundra år.' },
       ],
     },
     exercises: [

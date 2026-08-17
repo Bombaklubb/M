@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { MatchingExercise } from '../../types';
 import { shuffle } from '../../utils/shuffle';
 import { CheckCircle } from 'lucide-react';
@@ -9,11 +9,23 @@ interface Props {
 }
 
 export default function MatchingPairs({ exercise, onAnswer }: Props) {
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- avsiktligt: ska bara blandas om när innehållet byts, inte vid varje rendering
   const shuffledRight = useMemo(() => shuffle(exercise.pairs), [exercise.id]);
   const [selectedLeft, setSelectedLeft] = useState<number | null>(null);
   const [matched, setMatched] = useState<{ leftIdx: number; rightIdx: number; correct: boolean }[]>([]);
   const [wrongFlash, setWrongFlash] = useState<number | null>(null);
   const [done, setDone] = useState(false);
+  // Räknare i stället för att läsa av `matched`: en felmatchning ligger kvar i
+  // listan i 700 ms, så tidigare avgjorde elevens klickhastighet om uppgiften
+  // räknades som rätt eller fel.
+  const mistakesRef = useRef(0);
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  useEffect(() => () => { timers.current.forEach(clearTimeout); timers.current = []; }, []);
+
+  function later(fn: () => void, ms: number) {
+    timers.current.push(setTimeout(fn, ms));
+  }
 
   const matchedLefts = new Set(matched.map(m => m.leftIdx));
   const matchedRights = new Set(matched.map(m => m.rightIdx));
@@ -35,8 +47,9 @@ export default function MatchingPairs({ exercise, onAnswer }: Props) {
     setSelectedLeft(null);
 
     if (!correct) {
+      mistakesRef.current += 1;
       setWrongFlash(rightIdx);
-      setTimeout(() => {
+      later(() => {
         setWrongFlash(null);
         setMatched(prev => prev.filter(m => m !== newMatch));
       }, 700);
@@ -45,8 +58,8 @@ export default function MatchingPairs({ exercise, onAnswer }: Props) {
 
     if (newMatched.filter(m => m.correct).length === exercise.pairs.length) {
       setDone(true);
-      const allCorrect = newMatched.every(m => m.correct);
-      setTimeout(() => onAnswer(allCorrect), 600);
+      const allCorrect = mistakesRef.current === 0;
+      later(() => onAnswer(allCorrect), 600);
     }
   }
 

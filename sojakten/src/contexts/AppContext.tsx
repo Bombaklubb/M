@@ -1,7 +1,9 @@
 import React, { createContext, useContext, useState } from 'react';
 import { AppView, Subject, Chapter, ExerciseSessionResult } from '../types';
-import { getProgress, getChapterProgress, saveChapterProgress, calcStars, addStats } from '../utils/storage';
-import { getChaptersForSubject, ALL_CHAPTERS } from '../data/subjects';
+import { getChapterProgress, saveChapterProgress, calcStars, addStats } from '../utils/storage';
+// Importeras från subjectMeta (inte subjects) så att kapiteldata inte hamnar
+// i startpaketet – vyerna som behöver innehållet laddas separat.
+import { SUBJECTS } from '../data/subjectMeta';
 
 type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search' | 'test' | 'flashcards' | 'sant-falskt' | 'matcha' | 'tidslinje';
 
@@ -20,8 +22,9 @@ interface AppContextValue {
   selectChapter: (chapter: Chapter) => void;
   openChapterStudy: (chapter: Chapter, tab?: StudyTab) => void;
   startExitTicket: (chapter: Chapter) => void;
+  /** Vy som Snabbkoll ska återvända till (den vy den startades från). */
+  exitTicketReturnView: AppView;
   submitChapterResult: (chapterId: string, correctAnswers: number, totalQuestions: number) => ExerciseSessionResult;
-  isChapterUnlocked: (chapterId: string) => boolean;
   getChapterProgressFor: (chapterId: string) => import('../types').ChapterProgress | null;
 }
 
@@ -39,6 +42,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [selectedSubject, setSelectedSubject] = useState<Subject | null>(null);
   const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
   const [exitTicketChapter, setExitTicketChapter] = useState<Chapter | null>(null);
+  const [exitTicketReturnView, setExitTicketReturnView] = useState<AppView>('chapter-map');
   const [lastResult, setLastResult] = useState<ExerciseSessionResult | null>(null);
   const [studyInitialTab, setStudyInitialTab] = useState<StudyTab>('concepts');
 
@@ -46,11 +50,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   function selectGrade(grade: number) {
     setSelectedGrade(grade);
-    if (grade === 4 || grade === 5 || grade === 6) {
-      setCurrentView('subject-select');
-    } else {
-      setCurrentView('grade-coming-soon');
-    }
+    setCurrentView('subject-select');
   }
 
   function selectSubject(subject: Subject) {
@@ -58,31 +58,41 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     setCurrentView('chapter-map');
   }
 
-  function openChapterStudy(chapter: Chapter, tab: StudyTab = 'concepts') {
+  /**
+   * Synkar årskurs och ämne med kapitlet som öppnas. Utan detta kan eleven hamna
+   * i ett kapitel från en annan årskurs (t.ex. via sökningen) och sedan möta en
+   * kapitelkarta där kapitlet hen just läste inte finns.
+   */
+  function syncContextTo(chapter: Chapter) {
     setSelectedChapter(chapter);
+    if (chapter.grade) setSelectedGrade(Number(chapter.grade));
+    const subject = SUBJECTS.find(s => s.id === chapter.subjectId);
+    if (subject) setSelectedSubject(subject);
+  }
+
+  function openChapterStudy(chapter: Chapter, tab: StudyTab = 'concepts') {
+    syncContextTo(chapter);
     setStudyInitialTab(tab);
-    if (chapter.summary) {
-      setCurrentView('chapter-study');
-    } else {
-      setCurrentView('chapter-exercise');
-    }
+    // Kapitel utan sammanfattning går direkt till övningarna – men bara om det
+    // finns några, annars skulle övningsvyn krascha på en tom lista.
+    if (chapter.summary) setCurrentView('chapter-study');
+    else if (chapter.exercises.length > 0) setCurrentView('chapter-exercise');
+    else setCurrentView('chapter-map');
   }
 
   function selectChapter(chapter: Chapter) {
-    setSelectedChapter(chapter);
-    setCurrentView('chapter-exercise');
+    syncContextTo(chapter);
+    if (chapter.exercises.length > 0) setCurrentView('chapter-exercise');
+    else if (chapter.summary) setCurrentView('chapter-study');
+    else setCurrentView('chapter-map');
   }
 
   function startExitTicket(chapter: Chapter) {
+    if (chapter.exercises.length === 0) return;
+    syncContextTo(chapter);
     setExitTicketChapter(chapter);
-    // Sätt även selectedChapter så att "tillbaka"-knapparna i ExitTicket
-    // (som går till chapter-study) fungerar när Snabbkoll öppnas från kapitelkartan.
-    setSelectedChapter(chapter);
+    setExitTicketReturnView(currentView === 'exit-ticket' ? 'chapter-map' : currentView);
     setCurrentView('exit-ticket');
-  }
-
-  function isChapterUnlocked(_chapterId: string): boolean {
-    return true;
   }
 
   function getChapterProgressFor(chapterId: string) {
@@ -94,7 +104,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     correctAnswers: number,
     totalQuestions: number,
   ): ExerciseSessionResult {
-    const score = Math.round((correctAnswers / totalQuestions) * 100);
+    const score = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
     const stars = calcStars(score);
     const existing = getChapterProgress(chapterId);
     const isNewBest = !existing || score > existing.bestScore;
@@ -116,9 +126,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AppContext.Provider value={{
-      currentView, selectedGrade, selectedSubject, selectedChapter, exitTicketChapter, lastResult, studyInitialTab,
+      currentView, selectedGrade, selectedSubject, selectedChapter, exitTicketChapter,
+      exitTicketReturnView, lastResult, studyInitialTab,
       setView, selectGrade, selectSubject, selectChapter, openChapterStudy, startExitTicket,
-      submitChapterResult, isChapterUnlocked, getChapterProgressFor,
+      submitChapterResult, getChapterProgressFor,
     }}>
       {children}
     </AppContext.Provider>

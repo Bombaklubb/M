@@ -10,17 +10,29 @@ const VERSION_KEY = 'so_version';
  */
 const STORAGE_VERSION = 1;
 
+/**
+ * Kapitel-id:n som bytt namn. Nyckel = gammalt id, värde = nytt id.
+ * Utan detta skulle elevens sparade resultat tappas när ett kapitel byter id.
+ */
+const RENAMED_CHAPTER_IDS: Record<string, string> = {
+  'ak5-historia-medeltiden': 'ak4-historia-medeltiden',
+};
+
+interface StoredStats {
+  totalCorrect: number;
+  totalAnswered: number;
+}
+
+/** Cachar den parsade listan så att en render med många kapitelkort inte parsar om localStorage per kort. */
+let progressCache: ChapterProgress[] | null = null;
+
 function ensureVersion(): void {
   try {
     const stored = localStorage.getItem(VERSION_KEY);
     if (stored === String(STORAGE_VERSION)) return;
-    if (stored === null && localStorage.getItem(PROGRESS_KEY) === null && localStorage.getItem(STATS_KEY) === null) {
-      // Färsk installation – stämpla bara versionen.
-      localStorage.setItem(VERSION_KEY, String(STORAGE_VERSION));
-      return;
-    }
     if (stored === null) {
-      // Data från tiden före versionsstämpeln – nuvarande format är v1, behåll datan.
+      // Antingen färsk installation eller data från tiden före versionsstämpeln.
+      // Nuvarande format är v1 i båda fallen – behåll datan och stämpla.
       localStorage.setItem(VERSION_KEY, String(STORAGE_VERSION));
       return;
     }
@@ -28,12 +40,8 @@ function ensureVersion(): void {
     localStorage.removeItem(PROGRESS_KEY);
     localStorage.removeItem(STATS_KEY);
     localStorage.setItem(VERSION_KEY, String(STORAGE_VERSION));
+    progressCache = null;
   } catch { /* localStorage kan saknas (privat läge) – kör vidare utan */ }
-}
-
-interface StoredStats {
-  totalCorrect: number;
-  totalAnswered: number;
 }
 
 function isValidProgress(p: unknown): p is ChapterProgress {
@@ -42,13 +50,40 @@ function isValidProgress(p: unknown): p is ChapterProgress {
     && typeof (p as ChapterProgress).bestScore === 'number';
 }
 
+/** Skriver om gamla kapitel-id:n och slår ihop poster om både gammalt och nytt id finns. */
+function migrateIds(list: ChapterProgress[]): { list: ChapterProgress[]; changed: boolean } {
+  let changed = false;
+  const byId = new Map<string, ChapterProgress>();
+  for (const entry of list) {
+    const newId = RENAMED_CHAPTER_IDS[entry.chapterId];
+    if (newId) changed = true;
+    const id = newId ?? entry.chapterId;
+    const existing = byId.get(id);
+    byId.set(id, existing
+      ? {
+          chapterId: id,
+          completed: existing.completed || entry.completed,
+          bestScore: Math.max(existing.bestScore, entry.bestScore),
+          stars: Math.max(existing.stars, entry.stars),
+          totalAttempts: existing.totalAttempts + entry.totalAttempts,
+        }
+      : { ...entry, chapterId: id });
+  }
+  return { list: [...byId.values()], changed };
+}
+
 export function getProgress(): ChapterProgress[] {
+  if (progressCache) return progressCache;
   ensureVersion();
   try {
     const parsed = JSON.parse(localStorage.getItem(PROGRESS_KEY) || '[]');
-    return Array.isArray(parsed) ? parsed.filter(isValidProgress) : [];
+    const valid = Array.isArray(parsed) ? parsed.filter(isValidProgress) : [];
+    const { list, changed } = migrateIds(valid);
+    if (changed) localStorage.setItem(PROGRESS_KEY, JSON.stringify(list));
+    progressCache = list;
+    return list;
   }
-  catch { return []; }
+  catch { progressCache = []; return progressCache; }
 }
 
 export function getChapterProgress(chapterId: string): ChapterProgress | null {
@@ -56,19 +91,23 @@ export function getChapterProgress(chapterId: string): ChapterProgress | null {
 }
 
 export function saveChapterProgress(progress: ChapterProgress): void {
-  const all = getProgress();
+  const all = [...getProgress()];
   const idx = all.findIndex(p => p.chapterId === progress.chapterId);
   if (idx >= 0) {
+    const prev = all[idx];
     all[idx] = {
       ...progress,
-      bestScore: Math.max(all[idx].bestScore, progress.bestScore),
-      stars: Math.max(all[idx].stars, progress.stars),
-      totalAttempts: all[idx].totalAttempts + 1,
+      // Bästa resultatet ska aldrig kunna försämras av ett sämre omtag.
+      completed: prev.completed || progress.completed,
+      bestScore: Math.max(prev.bestScore, progress.bestScore),
+      stars: Math.max(prev.stars, progress.stars),
+      totalAttempts: prev.totalAttempts + 1,
     };
   } else {
     all.push({ ...progress, totalAttempts: 1 });
   }
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(all));
+  progressCache = all;
+  try { localStorage.setItem(PROGRESS_KEY, JSON.stringify(all)); } catch { /* fullt/saknas */ }
 }
 
 export function getStats(): StoredStats {
@@ -84,20 +123,20 @@ export function getStats(): StoredStats {
 export function addStats(correct: number, total: number): StoredStats {
   const s = getStats();
   const updated = { totalCorrect: s.totalCorrect + correct, totalAnswered: s.totalAnswered + total };
-  localStorage.setItem(STATS_KEY, JSON.stringify(updated));
+  try { localStorage.setItem(STATS_KEY, JSON.stringify(updated)); } catch { /* fullt/saknas */ }
   return updated;
 }
 
 export function buildAchievementStats(): AchievementStats {
   const progress = getProgress();
   const stats = getStats();
-  const completedChapters = progress.filter(p => p.completed).length;
+  const completed = progress.filter(p => p.completed);
   const subjectCounts: Record<SubjectId, number> = { historia: 0, geografi: 0, religion: 0, samhalle: 0 };
-  progress.filter(p => p.completed).forEach(p => {
+  completed.forEach(p => {
     const subjectId = p.chapterId.split('-')[1] as SubjectId;
     if (subjectId in subjectCounts) subjectCounts[subjectId]++;
   });
-  return { completedChapters, progress, subjectCounts, ...stats };
+  return { completedChapters: completed.length, progress, subjectCounts, ...stats };
 }
 
 export function calcStars(score: number): number {

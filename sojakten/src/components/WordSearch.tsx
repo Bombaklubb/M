@@ -3,7 +3,7 @@ import { useState, useRef, useMemo } from 'react';
 interface Cell { r: number; c: number; }
 interface PlacedWord { clean: string; original: string; cells: Cell[]; }
 
-const SIZE = 12;
+const SIZE = 14;
 const DIRS = [{ dr: 0, dc: 1 }, { dr: 1, dc: 0 }, { dr: 1, dc: 1 }];
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ';
 
@@ -79,7 +79,9 @@ function snapLine(start: Cell, end: Cell): Cell[] {
 }
 
 export default function WordSearch({ words, accentColor }: { words: string[]; accentColor: string }) {
-  const { grid, placed } = useMemo(() => buildGrid(words), [words.join('|')]);
+  const wordsKey = words.join('|');
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- avsiktligt: ska bara blandas om när innehållet byts, inte vid varje rendering
+  const { grid, placed } = useMemo(() => buildGrid(words), [wordsKey]);
   const [found, setFound] = useState<string[]>([]);
   const [foundCells, setFoundCells] = useState<Map<string, string>>(new Map());
   const [selecting, setSelecting] = useState<Cell[]>([]);

@@ -55,6 +55,15 @@ export const AK5_SAMHALLE: Chapter[] = [
         { statement: 'De flesta yrken i Sverige i dag är tjänsteyrken.', isTrue: true, explanation: 'Rätt! Det blir allt färre som tillverkar varor eftersom många varor produceras i andra länder.' },
         { statement: 'Deflation innebär att priserna stiger kraftigt.', isTrue: false, explanation: 'Nej – deflation innebär att priserna SJUNKER. Det är INFLATION som innebär att priserna stiger.' },
       ],
+      timeline: [
+        { year: '1800-talet', title: 'Industrialiseringen kommer till Sverige', description: 'Fabriker byggs och människor flyttar från landsbygden till städerna för att arbeta mot lön. Arbetsdagarna är långa och lönerna låga.', wikiTitle: 'Industriella revolutionen' },
+        { year: '1898', title: 'LO bildas', description: 'Arbetarna går ihop i fackförbund för att kunna förhandla om löner och villkor tillsammans i stället för en och en.', wikiTitle: 'Landsorganisationen i Sverige' },
+        { year: '1913', title: 'Allmän pension införs', description: 'Sverige blir ett av de första länderna där alla får pension på ålderdomen – inte bara de som är rika eller har tjänat staten.' },
+        { year: '1919', title: 'Åttatimmarsdagen', description: 'En ny lag begränsar arbetsdagen till åtta timmar. Tidigare kunde en arbetsdag vara tolv timmar eller mer.' },
+        { year: '1938', title: 'Saltsjöbadsavtalet', description: 'Fack och arbetsgivare kommer överens om att förhandla i stället för att strejka och stänga fabriker. Det ger arbetsfred i Sverige.', wikiTitle: 'Saltsjöbadsavtalet' },
+        { year: '1970-talet', title: '40-timmarsveckan införs', description: 'Arbetsveckan kortas i steg till 40 timmar. Fem arbetsdagar och två lediga dagar blir det normala i Sverige.' },
+        { year: '2000-talet', title: 'Sverige blir nästan kontantlöst', description: 'Kort, Swish och mobilbank tar över. I dag betalas de flesta köp digitalt i stället för med sedlar och mynt.' },
+      ],
     },
     exercises: [
       {
@@ -238,6 +247,16 @@ export const AK5_SAMHALLE: Chapter[] = [
         { statement: 'Förintelsen var ett folkmord riktat mot romer och kristna i Europa.', isTrue: false, explanation: 'Nej – Förintelsen riktades framför allt mot JUDAR. Även romer och andra förföljdes av nazisterna.' },
         { statement: 'Meänkieli erkändes som minoritetsspråk i Sverige år 1999.', isTrue: true, explanation: 'Rätt! År 1999 bestämde riksdagen att meänkieli ska räknas som ett av Sveriges minoritetsspråk.' },
       ],
+      timeline: [
+        { year: '1809', title: 'Gränsen dras genom Tornedalen', description: 'Sverige förlorar Finland och gränsen dras längs Torne älv. Tornedalingarna splittras mellan två länder – familjer hamnar på var sin sida.' },
+        { year: '1800-talets slut', title: 'Försvenskningen börjar', description: 'Barn förbjuds att tala meänkieli och samiska i skolan. Många växer upp och tror att deras eget språk är mindre värt.', wikiTitle: 'Meänkieli' },
+        { year: '1922', title: 'Rasbiologiskt institut i Uppsala', description: 'Staten startar ett institut som delar in människor efter "ras". Samer, romer och tornedalingar mäts och pekas ut som annorlunda.' },
+        { year: '1957', title: 'Språkförbudet upphör', description: 'Förbudet mot att tala meänkieli i skolan tas bort. Men många har då redan förlorat kontakten med sitt språk.' },
+        { year: '1993', title: 'Sametinget invigs', description: 'Samerna får ett eget folkvalt parlament i Sverige som ska föra deras talan i frågor som rör dem.' },
+        { year: '1999–2000', title: 'De fem nationella minoriteterna erkänns', description: 'Riksdagen beslutar att samer, sverigefinnar, tornedalingar, judar och romer är nationella minoriteter. Deras språk får skydd i lag.' },
+        { year: '2009', title: 'Lagen om nationella minoriteter', description: 'En ny lag ger rätt till förskola och äldreomsorg på minoritetsspråk i vissa kommuner, och rätt att använda språket hos myndigheter.' },
+        { year: '2020-talet', title: 'Sannings- och försoningskommissioner', description: 'Kommissioner tillsätts för att undersöka hur den svenska staten har behandlat tornedalingar och samer. Målet är att sanningen ska komma fram.' },
+      ],
     },
     exercises: [
       {
@@ -398,6 +417,16 @@ export const AK5_SAMHALLE: Chapter[] = [
         { statement: 'Kungen stiftar lagar i Sverige.', isTrue: false, explanation: 'Nej – kungen har ingen politisk makt i Sverige. Det är riksdagen som stiftar lagar.' },
         { statement: 'Sverige väljer riksdag vart fjärde år.', isTrue: true, explanation: 'Rätt! Allmänna val hålls i Sverige vart fjärde år, alltid den andra söndagen i september.' },
         { statement: 'En advokat i rätten företräder åklagaren.', isTrue: false, explanation: 'Nej – en advokat företräder den ÅTALADE (försvarare). Åklagaren för statens talan mot den misstänkte.' },
+      ],
+      timeline: [
+        { year: '1200-talet', title: 'Landskapslagarna skrivs ner', description: 'Varje landskap – som Västergötland och Uppland – har sina egna lagar. Nu skrivs de ner i stället för att bara läras ut muntligt.' },
+        { year: 'ca 1350', title: 'En lag för hela riket', description: 'Magnus Erikssons landslag gäller i hela Sverige. Nu ska samma regler gälla oavsett vilket landskap man bor i.' },
+        { year: '1734', title: '1734 års lag', description: 'En stor gemensam lagbok för hela Sverige antas. Delar av den gäller faktiskt än i dag.' },
+        { year: '1766', title: 'Tryckfrihetsförordningen', description: 'Världens första lag om tryckfrihet antas i Sverige. Nu får man trycka och sprida information utan censur.', wikiTitle: 'Tryckfrihetsförordningen' },
+        { year: '1921', title: 'Dödsstraffet avskaffas', description: 'Sverige förbjuder dödsstraff i fredstid. Straffen ska handla om att skydda samhället, inte om hämnd.' },
+        { year: '1948', title: 'FN:s förklaring om mänskliga rättigheter', description: 'Efter andra världskriget enas världens länder om rättigheter som gäller alla människor – till exempel rätt till liv och yttrandefrihet.' },
+        { year: '1974', title: 'Sveriges nuvarande regeringsform', description: 'En ny grundlag slår fast att all offentlig makt utgår från folket. Kungen får inte längre någon politisk makt.' },
+        { year: '2020', title: 'Barnkonventionen blir svensk lag', description: 'FN:s barnkonvention från 1989 blir lag i Sverige. Myndigheter och domstolar måste ta hänsyn till barnets bästa.', wikiTitle: 'Barnkonventionen' },
       ],
     },
     exercises: [
@@ -563,6 +592,15 @@ export const AK5_SAMHALLE: Chapter[] = [
         { statement: 'En podcast är ett ljudprogram man lyssnar på när man vill.', isTrue: true, explanation: 'Rätt! Podcasts är förinspelade ljudprogram man kan lyssna på i sin egen takt.' },
         { statement: 'Alla som publicerar nyheter i Sverige behöver en ansvarig utgivare.', isTrue: true, explanation: 'Rätt! Den ansvarige utgivaren bär juridiskt ansvar för det som publiceras.' },
         { statement: 'En filterbubbla innebär att man möter många olika sorters åsikter.', isTrue: false, explanation: 'Nej – filterbubblan innebär tvärtom att man bara ser likartade åsikter och perspektiv.' },
+      ],
+      timeline: [
+        { year: 'ca 1450', title: 'Tryckpressen uppfinns', description: 'Johann Gutenberg i Tyskland bygger en press med lösa bokstäver. Nu kan böcker tryckas i många exemplar i stället för att skrivas för hand.', wikiTitle: 'Johann Gutenberg' },
+        { year: '1645', title: 'Sveriges första tidning', description: 'Post- och Inrikes Tidningar börjar ges ut. Den räknas som världens äldsta tidning som fortfarande finns kvar.' },
+        { year: '1766', title: 'Tryckfrihetsförordningen', description: 'Sverige får världens första lag om tryckfrihet. Man får skriva och sprida information utan att staten först godkänner den.', wikiTitle: 'Tryckfrihetsförordningen' },
+        { year: '1925', title: 'Radion når svenska hem', description: 'Regelbundna radiosändningar startar i Sverige. För första gången kan nyheter nå hela landet samma dag.' },
+        { year: '1956', title: 'TV-sändningarna börjar', description: 'Sverige får regelbunden TV. Familjer samlas framför en enda kanal och ser samma nyheter och program.' },
+        { year: '1990-talet', title: 'Internet blir vanligt', description: 'Webben kommer till svenska hem och skolor. Vem som helst kan nu både hitta och publicera information.' },
+        { year: '2000-talet', title: 'Sociala medier och algoritmer', description: 'Instagram, YouTube och TikTok tar över. Algoritmer väljer vad du ser – och gör källkritik viktigare än någonsin.' },
       ],
     },
     exercises: [
