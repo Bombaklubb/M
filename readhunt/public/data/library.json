@@ -6316,7 +6316,7 @@
     "genre": "fiction",
     "theme": "friendship",
     "title": "The New Kid's Secret",
-    "text": "Nobody knew much about Theo, the new kid in class 6B. He arrived in October, sat in the back row, and never raised his hand. At lunch, he disappeared. Every single day.\n\nMaja noticed because she noticed everything. On Tuesday, she followed him. Theo walked past the cafeteria, down the stairs, and slipped into the music room. Maja pressed her ear against the door. Piano music — not the simple songs they played in music class, but something fast and beautiful, like rain turning into a storm.\n\nShe opened the door without thinking. Theo stopped immediately and stared at her, his face red.\n\n\"Please don't tell anyone,\" he said.\n\n\"Why not? You're amazing!\"\n\nTheo looked down at the keys. \"At my old school, kids made fun of me for it. They called me piano boy. It was easier to just... hide it.\"\n\nMaja sat down on the bench beside him. \"Well, this isn't your old school. And I've been trying to learn that exact song for a year. Will you show me?\"\n\nFor the first time since October, Theo smiled. By December, they were playing together at the school concert — and nobody laughed. The applause lasted so long that the music teacher had to ask the audience to settle down.",
+    "text": "Nobody knew much about Theo, the new kid in class 6B. He arrived in October, sat in the back row, and never raised his hand. At lunch, he disappeared. Every single day.\n\nMaja noticed because she noticed everything. On Tuesday, she followed him. Theo walked past the cafeteria, down the stairs, and slipped into the music room. Maja pressed her ear against the door. Piano music — not the simple songs they played in music class, but something fast and beautiful, like rain turning into a storm.\n\nShe opened the door without thinking. Theo stopped immediately and stared at her, his face red.\n\n\"Please don't tell anyone,\" he said.\n\n\"Why not? You're amazing!\"\n\nTheo looked down at the keys. \"At my old school, kids made fun of me for it. They called me piano boy. It was easier to just... hide it.\"\n\nMaja sat down on the bench beside him. \"Well, this isn't your old school. And I've been trying to learn that exact song for a year. Will you show me?\"\n\nSo they met every lunch after that. Theo would play a line, then stop and let Maja try it. She was slower than she wanted to be. Her left hand kept forgetting what her right hand was doing, and twice she stood up and said she was hopeless.\n\n\"You're not hopeless,\" Theo said. \"You just want to be good today. It took me four years.\"\n\nThat surprised her. She had assumed the music simply lived in his fingers. Instead he described a practice notebook and hours of scales.\n\nIn November, the music teacher found them. She had heard the piano through the wall. She listened to Theo play the whole piece without interrupting, and when he finished she asked whether he would consider playing at the winter concert.\n\nTheo said no. He said no again the next day, and the day after that. What changed his mind was not the teacher. It was Maja, who signed them both up as a duet and told him afterwards, so that saying no would mean letting her down as well.\n\n\"That,\" Theo said, \"is not fair.\"\n\n\"No,\" Maja agreed. \"But you'll do it.\"\n\nFor the first time since October, Theo smiled. By December, they were playing together at the school concert — and nobody laughed. The applause lasted so long that the music teacher had to ask the audience to settle down.",
     "imageUrl": "https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?w=800&q=80",
     "questions": [
       {
@@ -6362,11 +6362,33 @@
           "He moved back to his old school"
         ],
         "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How long had Theo been learning to play?",
+        "options": [
+          "A few months",
+          "One year",
+          "Four years",
+          "Since he was five"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "How did Maja get Theo to agree to perform?",
+        "options": [
+          "She signed them up together so refusing would let her down",
+          "She asked the music teacher to insist",
+          "She promised to play the difficult part herself",
+          "She told the class about his talent"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 211,
-      "readingTime": 1
+      "wordCount": 401,
+      "readingTime": 3
     }
   },
   {
@@ -6375,57 +6397,79 @@
     "genre": "fiction",
     "theme": "nature",
     "title": "The Message in the Bottle",
-    "text": "Elsa found the bottle on the beach after the storm, half-buried in seaweed and sand. Inside was a piece of paper, rolled up tight and yellowed at the edges.\n\nHer hands shook a little as she pulled out the cork. The note was short: \"My name is Anna. I am eleven years old. I live on Gotland. If you find this, please write to me.\" There was an address at the bottom — and a date. The letter had been written thirty-two years ago.\n\nElsa did the maths in her head. Anna would be forty-three years old now. Did she still live there? Did she even remember the bottle?\n\nThat evening, Elsa wrote a letter. She told Anna about the storm, the beach, and how the bottle had survived three decades at sea. She posted it the next morning, not really expecting anything.\n\nTwo weeks later, an envelope arrived. Inside was a photo of a woman with grey streaks in her hair, standing on a rocky shore. The letter read: \"Dear Elsa, I threw that bottle into the sea when I was your age. I had almost forgotten it. Thank you for reminding me that some messages just take a little longer to arrive. Would you like to be pen pals?\"\n\nElsa smiled. Some things, she thought, are worth waiting thirty-two years for.",
+    "text": "Elsa found the bottle on the beach after the storm, half-buried in seaweed and sand. Inside was a piece of paper, rolled up tight and yellowed at the edges.\n\nHer hands shook a little as she pulled out the cork. The note was short: \"My name is Anna. I am eleven years old. I live on Gotland. If you find this, please write to me.\" There was an address at the bottom — and a date. The letter had been written thirty-two years ago.\n\nElsa did the maths in her head. Anna would be forty-three years old now. Did she still live there? Did she even remember the bottle?\n\nThat evening, Elsa wrote a letter. She told Anna about the storm, the beach, and how the bottle had survived three decades at sea. She posted it the next morning, not really expecting anything.\n\nFinding the address was harder than writing the letter. The street existed, but Elsa could not tell from a map whether the house did. Her mother suggested sending it anyway. \"Post offices are good at this,\" she said. \"Better than the internet, sometimes.\"\n\nSo Elsa copied the address exactly as Anna had written it, thirty-two years of ink and damp making some letters difficult to read. She guessed at one number and hoped.\n\nThen she waited. The waiting was worse than she expected. She checked the letterbox before school and again after, and after four days she decided the house had been torn down, or that Anna had moved to another country, or that a stranger had opened the letter and thrown it away. She also read about ocean currents, and learned that a bottle can circle the Baltic for years without ever reaching land.\n\nHer older brother said she was being ridiculous. \"It took the bottle three decades. Give the postman a week.\"\n\nOn the ninth day there was still nothing. Elsa stopped checking, which is exactly when it came.\n\nTwo weeks later, an envelope arrived. Inside was a photo of a woman with grey streaks in her hair, standing on a rocky shore. The letter read: \"Dear Elsa, I threw that bottle into the sea when I was your age. I had almost forgotten it. Thank you for reminding me that some messages just take a little longer to arrive. Would you like to be pen pals?\"\n\nElsa smiled. Some things, she thought, are worth waiting thirty-two years for.",
     "imageUrl": "https://images.unsplash.com/photo-1661953029179-e1b0dc900490?w=800&q=80",
     "questions": [
       {
         "type": "literal",
         "q": "How long ago had the message been written?",
         "options": [
-          "Eleven years",
-          "Twenty years",
+          "Forty-three years",
           "Thirty-two years",
-          "Forty-three years"
+          "Twenty years",
+          "Eleven years"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
         "q": "What did Anna send back to Elsa?",
         "options": [
-          "Another bottle",
-          "A photo and a letter",
           "A map of Gotland",
-          "A new cork"
+          "Another bottle",
+          "A new cork",
+          "A photo and a letter"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "Why did Elsa's hands shake when she opened the bottle?",
         "options": [
-          "She was cold from the storm",
-          "She was excited and nervous",
           "She was afraid of the sea",
-          "The bottle was heavy"
+          "The bottle was heavy",
+          "She was excited and nervous",
+          "She was cold from the storm"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "What does the last line of the story mean?",
         "options": [
           "Elsa wished she had found the bottle sooner",
-          "Old bottles are valuable",
+          "Letters are faster than bottles",
           "The slow journey made the message more special",
-          "Letters are faster than bottles"
+          "Old bottles are valuable"
         ],
         "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Elsa learn about ocean currents?",
+        "options": [
+          "A bottle can circle the Baltic for years",
+          "Currents move faster after a storm",
+          "Bottles always drift towards Gotland",
+          "Most bottles sink within a month"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did Elsa stop checking the letterbox?",
+        "options": [
+          "She had lost interest in Anna",
+          "She had given up hope of a reply",
+          "The post stopped arriving",
+          "Her brother told her to stop"
+        ],
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 223,
-      "readingTime": 1
+      "wordCount": 404,
+      "readingTime": 3
     }
   },
   {
@@ -6434,7 +6478,7 @@
     "genre": "fiction",
     "theme": "technology",
     "title": "Grandpa Versus the Robot",
-    "text": "When Dad brought home the cleaning robot, Grandpa refused to be in the same room as it.\n\n\"That thing is spying on us,\" he muttered, watching the small round machine hum across the kitchen floor. \"In my day, we cleaned with our own two hands.\"\n\nThe robot, which the family had named Sune, bumped gently into Grandpa's slipper and changed direction. Grandpa lifted both feet onto the sofa like the floor was lava.\n\nFor a week, it was war. Grandpa blocked Sune's path with chairs. He hid it behind the curtains. Once, he even put it out on the balcony and claimed it had \"escaped on its own.\"\n\nThen, one rainy Thursday, Grandpa dropped a whole jar of lingonberry jam. Glass and red sticky jam went everywhere. His back was too stiff to bend down, and nobody else was home.\n\nSune rolled out from under the bookshelf, circled the mess twice, and cleaned up every last bit while Grandpa watched from his chair.\n\nWhen the family came home, they found Grandpa in the kitchen, feeding biscuit crumbs onto the floor one at a time.\n\n\"What are you doing?\" Dad asked.\n\nGrandpa cleared his throat. \"Sune and I have reached an agreement,\" he said. \"He does the floors. I provide the crumbs. It's called teamwork.\"",
+    "text": "When Dad brought home the cleaning robot, Grandpa refused to be in the same room as it.\n\n\"That thing is spying on us,\" he muttered, watching the small round machine hum across the kitchen floor. \"In my day, we cleaned with our own two hands.\"\n\nThe robot, which the family had named Sune, bumped gently into Grandpa's slipper and changed direction. Grandpa lifted both feet onto the sofa like the floor was lava.\n\nFor a week, it was war. Grandpa blocked Sune's path with chairs. He hid it behind the curtains. Once, he even put it out on the balcony and claimed it had \"escaped on its own.\"\n\nThen, one rainy Thursday, Grandpa dropped a whole jar of lingonberry jam. Glass and red sticky jam went everywhere. His back was too stiff to bend down, and nobody else was home.\n\nSune rolled out from under the bookshelf, circled the mess twice, and cleaned up every last bit while Grandpa watched from his chair.\n\nGrandpa did not thank Sune out loud. But he did move the chairs back where they belonged.\n\nOver the following week, small things changed. He stopped lifting his feet. He began saying \"excuse me\" when Sune tried to pass. On Wednesday, Dad found him crouched by the docking station with his reading glasses on, studying the little diagram on the underside.\n\n\"It has a brush that comes loose,\" Grandpa announced at dinner. \"Hair gets wound around it. Nobody has cleaned it since you bought it.\"\n\nHe had cleaned it. He had also, it turned out, read the entire manual, which nobody else in the house had opened.\n\nBy Friday he was scheduling it. Sune now started at ten in the morning, after the post arrived, because Grandpa had decided that was the sensible time. He wrote the schedule on a sticky note and put it on the fridge, and he complained when anyone changed the setting.\n\n\"You said it was spying on us,\" Mum reminded him.\n\n\"It is,\" said Grandpa. \"But it works hard, and it never argues. That is more than I can say for the rest of you.\"\n\nWhen the family came home, they found Grandpa in the kitchen, feeding biscuit crumbs onto the floor one at a time.\n\n\"What are you doing?\" Dad asked.\n\nGrandpa cleared his throat. \"Sune and I have reached an agreement,\" he said. \"He does the floors. I provide the crumbs. It's called teamwork.\"",
     "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
     "questions": [
       {
@@ -6442,9 +6486,9 @@
         "q": "What did the family name the cleaning robot?",
         "options": [
           "Sune",
-          "Bosse",
           "Roboten",
-          "Tjorven"
+          "Tjorven",
+          "Bosse"
         ],
         "correct": 0
       },
@@ -6453,20 +6497,20 @@
         "q": "What did Grandpa drop on the floor?",
         "options": [
           "A cup of coffee",
-          "A jar of lingonberry jam",
           "A plate of biscuits",
+          "A jar of lingonberry jam",
           "His slipper"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "Why did Grandpa lift his feet onto the sofa?",
         "options": [
-          "The floor was wet",
           "He was playing a game with the children",
+          "His feet were cold",
           "He did not want the robot to touch him",
-          "His feet were cold"
+          "The floor was wet"
         ],
         "correct": 2
       },
@@ -6474,17 +6518,39 @@
         "type": "inference",
         "q": "What changed Grandpa's mind about the robot?",
         "options": [
-          "Dad ordered him to accept it",
-          "The robot helped him when he could not clean up himself",
           "He read about robots in the newspaper",
+          "The robot helped him when he could not clean up himself",
+          "Dad ordered him to accept it",
           "The robot stopped working"
         ],
         "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Grandpa discover about the robot at dinner?",
+        "options": [
+          "A brush comes loose and collects hair",
+          "It could not reach under the sofa",
+          "It was recording the family",
+          "Its battery was almost worn out"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What shows that Grandpa took charge of the robot?",
+        "options": [
+          "He refused to let anyone else touch it",
+          "He hid it behind the curtains again",
+          "He asked Dad to return it to the shop",
+          "He set its schedule and complained when it was changed"
+        ],
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 214,
-      "readingTime": 1
+      "wordCount": 404,
+      "readingTime": 3
     }
   },
   {
@@ -6493,41 +6559,41 @@
     "genre": "non-fiction",
     "theme": "football",
     "title": "The World's Most Popular Sport",
-    "text": "Football is played and watched by more people than any other sport on Earth. FIFA, the international football federation, estimates that over 250 million people play the game, and billions more follow it as fans.\n\nGames where a ball is kicked toward a goal have existed for thousands of years, in China, ancient Greece, and medieval Europe. But modern football was born in England in 1863, when the newly formed Football Association wrote down a common set of rules. Before that, every town and school played by its own rules, which made matches between them chaotic.\n\nFrom England, the game spread quickly — often through sailors, railway workers, and traders who brought a ball with them. Today, football is played everywhere: on grass pitches, gravel yards, beaches, and streets. One reason for its popularity is its simplicity. You do not need expensive equipment. Two jackets can be goalposts, and almost anything round can be a ball.\n\nThe biggest tournament of all is the World Cup, held every four years. When the final is played, more than a billion people around the world watch at the same time — one of the few moments when so much of humanity shares the same experience.\n\nWomen's football is now growing faster than any other part of the sport. The Women's World Cup breaks new attendance records nearly every time it is held, and in many countries, more girls than boys now join football clubs.",
+    "text": "Football is played and watched by more people than any other sport on Earth. FIFA, the international football federation, estimates that over 250 million people play the game, and billions more follow it as fans.\n\nGames where a ball is kicked toward a goal have existed for thousands of years, in China, ancient Greece, and medieval Europe. But modern football was born in England in 1863, when the newly formed Football Association wrote down a common set of rules. Before that, every town and school played by its own rules, which made matches between them chaotic.\n\nFrom England, the game spread quickly — often through sailors, railway workers, and traders who brought a ball with them. Today, football is played everywhere: on grass pitches, gravel yards, beaches, and streets. One reason for its popularity is its simplicity. You do not need expensive equipment. Two jackets can be goalposts, and almost anything round can be a ball.\n\nThe biggest tournament of all is the World Cup, held every four years. When the final is played, more than a billion people around the world watch at the same time — one of the few moments when so much of humanity shares the same experience.\n\nThe professional game has changed enormously in the last fifty years. Top players once held ordinary jobs during the week and trained in the evenings. Today the biggest clubs are international businesses with medical staff, analysts, and youth academies, and a single transfer can cost more than a small town's entire budget.\n\nThat money has brought criticism as well as attention. Ticket prices in some leagues have risen faster than wages, and supporters argue that the sport is drifting away from the communities that built the clubs. Others point out that television income also funds the pitches and coaches that children use for free. In several countries, fans have bought shares in their own clubs to keep a say in how they are run.\n\nFootball is also a political story. Tournaments have been used by governments to improve their image abroad, and the choice of host country is often disputed. Journalists and human rights organisations now scrutinise those decisions closely, which was rare a generation ago.\n\nWomen's football is now growing faster than any other part of the sport. The Women's World Cup breaks new attendance records nearly every time it is held, and in many countries, more girls than boys now join football clubs.",
     "imageUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&q=80",
     "questions": [
       {
         "type": "literal",
         "q": "When and where was modern football born?",
         "options": [
-          "In Brazil in the 1900s",
-          "In Greece in ancient times",
+          "In China thousands of years ago",
           "In England in 1863",
-          "In China thousands of years ago"
+          "In Brazil in the 1900s",
+          "In Greece in ancient times"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
         "q": "How often is the World Cup held?",
         "options": [
-          "Every ten years",
-          "Every four years",
+          "Every year",
           "Every two years",
-          "Every year"
+          "Every four years",
+          "Every ten years"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "Why was a common set of rules important?",
         "options": [
+          "It made the game harder to learn",
           "Teams from different places could finally play each other properly",
-          "It allowed more players on the pitch",
           "It made footballs cheaper",
-          "It made the game harder to learn"
+          "It allowed more players on the pitch"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inference",
@@ -6539,11 +6605,33 @@
           "Professional players do not need to train"
         ],
         "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How did top players earn a living fifty years ago?",
+        "options": [
+          "They were supported by youth academies",
+          "They lived on prize money from tournaments",
+          "They were paid by national federations",
+          "They held ordinary jobs and trained in the evenings"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why do some supporters criticise the money in football?",
+        "options": [
+          "They feel the sport is drifting from its communities",
+          "It prevents clubs from signing local players",
+          "It funds pitches that children cannot use",
+          "It has made matches slower to watch"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 241,
-      "readingTime": 2
+      "wordCount": 407,
+      "readingTime": 3
     }
   },
   {
@@ -6552,7 +6640,7 @@
     "genre": "non-fiction",
     "theme": "science",
     "title": "The Community Science Fair",
-    "text": "Every autumn, the town of Brookdale organized a large community science fair where students could present inventions, experiments, and environmental projects. Schools from nearby areas participated, and hundreds of visitors attended the event each year. The fair was designed to encourage curiosity and show how science could solve everyday problems.\n\nThis year, thirteen-year-old Clara decided to study water pollution in the small river that passed through the town. She became interested in the topic after noticing fewer fish and birds near the riverbank during summer walks with her grandfather. Clara collected water samples from different locations and worked with her science teacher to analyze the results.\n\nMeanwhile, another student named Yusuf designed a machine that separated plastic waste into different categories for recycling. He explained that many recycling centers wasted time sorting materials by hand. Yusuf believed his invention could make the process faster and more efficient.\n\nPreparing for the fair required patience and teamwork. Clara struggled to organize all her research into a short presentation, while Yusuf experienced technical problems with his machine only two days before the competition. Several classmates volunteered to help both students after school.\n\nOn the day of the science fair, judges walked from table to table asking detailed questions about each project. Clara explained how chemicals from factories and farms could affect rivers and wildlife. Yusuf demonstrated how sensors inside his machine could identify different types of plastic.\n\nAlthough neither student won first prize, both received special awards for creativity and environmental awareness. More importantly, their projects inspired many younger visitors to become interested in science and environmental protection. After the event, the town council even discussed ways to improve recycling systems and reduce pollution in local waterways.",
+    "text": "Every autumn, the town of Brookdale organized a large community science fair where students could present inventions, experiments, and environmental projects. Schools from nearby areas participated, and hundreds of visitors attended the event each year. The fair was designed to encourage curiosity and show how science could solve everyday problems.\n\nThis year, thirteen-year-old Clara decided to study water pollution in the small river that passed through the town. She became interested in the topic after noticing fewer fish and birds near the riverbank during summer walks with her grandfather. Clara collected water samples from different locations and worked with her science teacher to analyze the results.\n\nMeanwhile, another student named Yusuf designed a machine that separated plastic waste into different categories for recycling. He explained that many recycling centers wasted time sorting materials by hand. Yusuf believed his invention could make the process faster and more efficient.\n\nPreparing for the fair required patience and teamwork. Clara struggled to organize all her research into a short presentation, while Yusuf experienced technical problems with his machine only two days before the competition. Several classmates volunteered to help both students after school.\n\nOn the day of the science fair, judges walked from table to table asking detailed questions about each project. Clara explained how chemicals from factories and farms could affect rivers and wildlife. Yusuf demonstrated how sensors inside his machine could identify different types of plastic.\n\nOne judge pressed Clara harder than the others. He asked how she could be sure the chemicals came from factories rather than from the road that ran beside the river. Clara admitted she could not be certain, and that she would need samples taken further upstream to answer it properly. Afterwards she worried that admitting uncertainty had cost her points.\n\nHer teacher disagreed. She explained that judges at science fairs often look for exactly that: a student who knows the limits of their own evidence. Guessing confidently is easier than saying what you do not yet know.\n\nYusuf faced a different problem. His machine sorted three types of plastic correctly but confused a fourth, and he had chosen to demonstrate it anyway rather than hide the fault.\n\nAlthough neither student won first prize, both received special awards for creativity and environmental awareness. More importantly, their projects inspired many younger visitors to become interested in science and environmental protection. After the event, the town council even discussed ways to improve recycling systems and reduce pollution in local waterways.",
     "questions": [
       {
         "type": "literal",
@@ -6622,11 +6710,8 @@
       }
     ],
     "meta": {
-      "wordCount": 284,
-      "fingerprint": "ak6-tema-001",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
-      "readingTime": 2
+      "wordCount": 411,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80"
   },
@@ -6636,7 +6721,7 @@
     "genre": "fiction",
     "theme": "art",
     "title": "The Lost Painting",
-    "text": "For decades, an old painting hung quietly in the storage room of the Ashton City Museum. Most visitors never noticed it because it was rarely displayed. Museum workers believed the artwork had little historical value, and some even thought it was only a copy of a more famous painting.\n\nEverything changed when a new museum curator named Dr. Helena Morris began reviewing the museum's collection. While examining the painting closely, she noticed unusual details in the brushstrokes and the signature in one corner. Curious about its origin, she contacted art historians and conservation experts.\n\nThe investigation lasted several months. Experts used special cameras and scientific methods to study the layers of paint hidden beneath the surface. They discovered that earlier restoration work had covered important details and changed some of the original colors. Gradually, researchers became convinced that the painting might actually belong to a well-known nineteenth-century artist.\n\nNews of the discovery quickly spread through newspapers and social media. Some people were excited by the possibility of finding a forgotten masterpiece, while others remained skeptical and demanded stronger evidence. Dr. Morris carefully explained that scientific research often required time and patience before reaching final conclusions.\n\nEventually, international experts confirmed that the painting was authentic. The museum organized a special exhibition where visitors could learn about the artwork's history and the restoration process. Thousands of people traveled to Ashton City to see the painting for themselves.\n\nThe discovery transformed the museum's reputation and increased interest in local history and art. Dr. Morris later said the experience reminded her that valuable treasures are sometimes hidden in places people least expect. She also encouraged young students to remain curious and question assumptions instead of accepting easy answers without investigation.",
+    "text": "For decades, an old painting hung quietly in the storage room of the Ashton City Museum. Most visitors never noticed it because it was rarely displayed. Museum workers believed the artwork had little historical value, and some even thought it was only a copy of a more famous painting.\n\nEverything changed when a new museum curator named Dr. Helena Morris began reviewing the museum's collection. While examining the painting closely, she noticed unusual details in the brushstrokes and the signature in one corner. Curious about its origin, she contacted art historians and conservation experts.\n\nThe investigation lasted several months. Experts used special cameras and scientific methods to study the layers of paint hidden beneath the surface. They discovered that earlier restoration work had covered important details and changed some of the original colors. Gradually, researchers became convinced that the painting might actually belong to a well-known nineteenth-century artist.\n\nNews of the discovery quickly spread through newspapers and social media. Some people were excited by the possibility of finding a forgotten masterpiece, while others remained skeptical and demanded stronger evidence. Dr. Morris carefully explained that scientific research often required time and patience before reaching final conclusions.\n\nEventually, international experts confirmed that the painting was authentic. The museum organized a special exhibition where visitors could learn about the artwork's history and the restoration process. Thousands of people traveled to Ashton City to see the painting for themselves.\n\nNot everyone was pleased by the announcement. A rival museum in another city had claimed for years that it owned the only surviving version of the same scene, and its director wrote a long article questioning the tests. He argued that the pigments could have been added by a student of the artist rather than the artist himself.\n\nDr. Morris did not dismiss the objection. She published the full laboratory data instead, including the results that were inconclusive, and invited the rival museum to send its own specialist. The specialist came, spent three days with the painting, and eventually agreed with the findings.\n\nSeveral art historians later described that exchange as more valuable than the discovery itself, because it showed how disagreement can be settled with evidence.\n\nThe discovery transformed the museum's reputation and increased interest in local history and art. Dr. Morris later said the experience reminded her that valuable treasures are sometimes hidden in places people least expect. She also encouraged young students to remain curious and question assumptions instead of accepting easy answers without investigation.",
     "questions": [
       {
         "type": "literal",
@@ -6706,11 +6791,8 @@
       }
     ],
     "meta": {
-      "wordCount": 286,
-      "fingerprint": "ak6-tema-002",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
-      "readingTime": 2
+      "wordCount": 413,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&q=80"
   },
@@ -6720,7 +6802,7 @@
     "genre": "non-fiction",
     "theme": "environment",
     "title": "The Arctic Research Expedition",
-    "text": "A team of international scientists traveled to the Arctic to study how climate change was affecting ice, wildlife, and local communities. The expedition included researchers from several countries, each specializing in different scientific fields such as biology, meteorology, and environmental chemistry.\n\nAmong the team members was sixteen-year-old intern Maya Lindström, who had earned a place in the program after winning a national science competition. Maya hoped to gain practical experience while learning from professional researchers. Before the expedition began, the team spent weeks preparing equipment and studying safety procedures for extreme weather conditions.\n\nLife in the Arctic proved challenging. Temperatures remained far below freezing, and strong winds often delayed outdoor work. Scientists collected ice samples, measured air pollution levels, and tracked the movements of polar bears using satellite technology. Maya worked closely with a marine biologist who studied how melting ice affected fish populations.\n\nOne evening, severe weather forced the researchers to remain inside their station for almost twenty-four hours. During that time, the team discussed the long-term consequences of rising global temperatures. Some scientists warned that coastal cities around the world could face serious flooding in the future if ice continued melting rapidly.\n\nDespite the difficult conditions, the expedition achieved important results. Researchers discovered that parts of the Arctic ice were melting faster than earlier studies had predicted. They also observed changes in animal migration patterns and increasing pressure on local communities that depended on fishing and hunting.\n\nAfter returning home, Maya gave presentations at schools and environmental conferences. She explained that climate change was not only a scientific issue but also a social and economic challenge affecting millions of people worldwide. Her experiences inspired many students to become more interested in environmental science and global cooperation.",
+    "text": "A team of international scientists traveled to the Arctic to study how climate change was affecting ice, wildlife, and local communities. The expedition included researchers from several countries, each specializing in different scientific fields such as biology, meteorology, and environmental chemistry.\n\nAmong the team members was sixteen-year-old intern Maya Lindström, who had earned a place in the program after winning a national science competition. Maya hoped to gain practical experience while learning from professional researchers. Before the expedition began, the team spent weeks preparing equipment and studying safety procedures for extreme weather conditions.\n\nLife in the Arctic proved challenging. Temperatures remained far below freezing, and strong winds often delayed outdoor work. Scientists collected ice samples, measured air pollution levels, and tracked the movements of polar bears using satellite technology. Maya worked closely with a marine biologist who studied how melting ice affected fish populations.\n\nOne evening, severe weather forced the researchers to remain inside their station for almost twenty-four hours. During that time, the team discussed the long-term consequences of rising global temperatures. Some scientists warned that coastal cities around the world could face serious flooding in the future if ice continued melting rapidly.\n\nDespite the difficult conditions, the expedition achieved important results. Researchers discovered that parts of the Arctic ice were melting faster than earlier studies had predicted. They also observed changes in animal migration patterns and increasing pressure on local communities that depended on fishing and hunting.\n\nThe expedition also worked with people who had lived in the region for generations. Hunters from a nearby settlement described ice conditions their grandparents had relied on, routes that were now unsafe, and seasons that no longer arrived when expected. Their observations went back further than any of the team's instruments.\n\nAt first some researchers treated these accounts as background information rather than data. The marine biologist Maya worked with disagreed. She began recording the interviews systematically and comparing them with satellite measurements, and found that the two matched closely.\n\nMaya kept a notebook of her own. She wrote down not only measurements but also what the hunters said, and later admitted that those pages were the ones she reread most often.\n\nAfter returning home, Maya gave presentations at schools and environmental conferences. She explained that climate change was not only a scientific issue but also a social and economic challenge affecting millions of people worldwide. Her experiences inspired many students to become more interested in environmental science and global cooperation.",
     "questions": [
       {
         "type": "literal",
@@ -6790,11 +6872,8 @@
       }
     ],
     "meta": {
-      "wordCount": 288,
-      "fingerprint": "ak6-tema-003",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
-      "readingTime": 2
+      "wordCount": 410,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1562089727-90aa996a6f18?w=800&q=80"
   },
@@ -6804,7 +6883,7 @@
     "genre": "fiction",
     "theme": "technology",
     "title": "The Digital Debate",
-    "text": "At Greenwood Secondary School, teachers noticed that students were spending increasing amounts of time on social media and digital devices. Although technology helped students communicate and access information quickly, many teachers and parents worried about the effects of constant screen use on concentration, sleep, and mental health.\n\nTo explore the issue, the school organized a formal debate competition. Two teams of students prepared arguments about whether schools should limit smartphone use during the school day. One team argued that smartphones distracted students from learning and reduced face-to-face communication. The opposing team believed technology was an important educational tool that could improve research and collaboration.\n\nFourteen-year-old Jonas joined the debate team supporting stricter phone limits. He explained that many students checked messages during lessons instead of paying attention to teachers. Meanwhile, Amina argued that banning phones completely would ignore the benefits of educational apps and online resources.\n\nPreparing for the debate required students to research scientific studies, interview classmates, and analyze different viewpoints carefully. Some students were surprised to discover that experts themselves disagreed about the long-term effects of digital technology.\n\nDuring the final debate, both teams presented strong arguments and responded confidently to difficult questions from the judges. Audience members appreciated that the discussion remained respectful even when opinions differed strongly.\n\nIn the end, the judges declared the competition a tie because both teams had presented convincing evidence. More importantly, the event encouraged students to think critically about how technology influenced their daily lives. After the debate, the school introduced new guidelines encouraging balanced technology use rather than complete restrictions.",
+    "text": "At Greenwood Secondary School, teachers noticed that students were spending increasing amounts of time on social media and digital devices. Although technology helped students communicate and access information quickly, many teachers and parents worried about the effects of constant screen use on concentration, sleep, and mental health.\n\nTo explore the issue, the school organized a formal debate competition. Two teams of students prepared arguments about whether schools should limit smartphone use during the school day. One team argued that smartphones distracted students from learning and reduced face-to-face communication. The opposing team believed technology was an important educational tool that could improve research and collaboration.\n\nFourteen-year-old Jonas joined the debate team supporting stricter phone limits. He explained that many students checked messages during lessons instead of paying attention to teachers. Meanwhile, Amina argued that banning phones completely would ignore the benefits of educational apps and online resources.\n\nPreparing for the debate required students to research scientific studies, interview classmates, and analyze different viewpoints carefully. Some students were surprised to discover that experts themselves disagreed about the long-term effects of digital technology.\n\nDuring the final debate, both teams presented strong arguments and responded confidently to difficult questions from the judges. Audience members appreciated that the discussion remained respectful even when opinions differed strongly.\n\nOne moment surprised almost everyone in the hall. A judge asked Jonas whether he used his own phone during lessons. He hesitated, then admitted that he did, several times a day, and that this was part of why he had joined the team arguing for limits. He said he did not trust himself to stop without a rule.\n\nAmina's response became the most quoted line of the evening. She agreed that she also checked her phone in class, but argued that a ban would teach students nothing about managing the habit once they left school.\n\nNeither student changed position, yet the exchange shifted the room. Several teachers said afterwards that hearing students describe their own behaviour honestly was more persuasive than any statistic either team had presented. One parent admitted that she had come expecting to hear excuses and had instead heard something closer to self-criticism.\n\nIn the end, the judges declared the competition a tie because both teams had presented convincing evidence. More importantly, the event encouraged students to think critically about how technology influenced their daily lives. After the debate, the school introduced new guidelines encouraging balanced technology use rather than complete restrictions.",
     "questions": [
       {
         "type": "literal",
@@ -6874,11 +6953,8 @@
       }
     ],
     "meta": {
-      "wordCount": 260,
-      "fingerprint": "ak6-tema-004",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
-      "readingTime": 2
+      "wordCount": 406,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80"
   },
@@ -6888,7 +6964,7 @@
     "genre": "fiction",
     "theme": "community",
     "title": "The Underground Rescue",
-    "text": "Late one evening, a group of construction workers became trapped inside a tunnel beneath the city after part of the underground structure collapsed unexpectedly. Emergency services responded immediately, but rescuers quickly realized that reaching the workers safely would be extremely difficult.\n\nEngineers warned that unstable walls and falling debris could cause additional collapses. Rescue teams therefore needed to move carefully while searching for the trapped workers. Specialists from several regions arrived to assist with the operation, bringing advanced equipment designed for underground emergencies.\n\nNews about the accident spread rapidly through television broadcasts and social media. Families gathered near the rescue site waiting anxiously for updates, while reporters provided continuous coverage of the situation. Many local businesses donated food, water, and supplies to emergency workers who often remained underground for long hours.\n\nAmong the rescue team was paramedic Sofia Martinez, who had experience responding to natural disasters and mining accidents. She explained that maintaining communication with the trapped workers was essential because fear and isolation could increase stress during emergencies.\n\nAfter nearly two days of careful drilling and rescue work, teams finally created a safe passage to reach the workers. One by one, the trapped individuals were brought to the surface, where medical staff examined them for injuries and exhaustion. Fortunately, all of them survived.\n\nInvestigators later studied the causes of the collapse and discovered weaknesses in parts of the tunnel's support system. City officials promised stricter safety inspections for future construction projects.\n\nThe rescue operation received international attention because it demonstrated the importance of cooperation, planning, and specialized training during dangerous emergencies. Many people praised the bravery and determination shown by both rescuers and workers throughout the difficult experience.",
+    "text": "Late one evening, a group of construction workers became trapped inside a tunnel beneath the city after part of the underground structure collapsed unexpectedly. Emergency services responded immediately, but rescuers quickly realized that reaching the workers safely would be extremely difficult.\n\nEngineers warned that unstable walls and falling debris could cause additional collapses. Rescue teams therefore needed to move carefully while searching for the trapped workers. Specialists from several regions arrived to assist with the operation, bringing advanced equipment designed for underground emergencies.\n\nNews about the accident spread rapidly through television broadcasts and social media. Families gathered near the rescue site waiting anxiously for updates, while reporters provided continuous coverage of the situation. Many local businesses donated food, water, and supplies to emergency workers who often remained underground for long hours.\n\nAmong the rescue team was paramedic Sofia Martinez, who had experience responding to natural disasters and mining accidents. She explained that maintaining communication with the trapped workers was essential because fear and isolation could increase stress during emergencies.\n\nAfter nearly two days of careful drilling and rescue work, teams finally created a safe passage to reach the workers. One by one, the trapped individuals were brought to the surface, where medical staff examined them for injuries and exhaustion. Fortunately, all of them survived.\n\nKeeping the workers calm turned out to be as technical as the drilling. Sofia Martinez lowered a thin cable carrying a microphone and a small light, and from then on someone spoke to the trapped men every twenty minutes, whether or not there was news. She explained afterwards that silence is the most frightening thing underground, because people fill it with the worst explanation available.\n\nThe workers organised themselves too. They agreed to sleep in shifts, share the water evenly, and mark the passing hours on the wall, since none of them could see daylight. One of them, a man in his fifties who had worked in tunnels for thirty years, kept the group counting.\n\nRescuers later said the workers had done half the job themselves.\n\nInvestigators later studied the causes of the collapse and discovered weaknesses in parts of the tunnel's support system. City officials promised stricter safety inspections for future construction projects.\n\nThe rescue operation received international attention because it demonstrated the importance of cooperation, planning, and specialized training during dangerous emergencies. Many people praised the bravery and determination shown by both rescuers and workers throughout the difficult experience.",
     "questions": [
       {
         "type": "literal",
@@ -6958,11 +7034,8 @@
       }
     ],
     "meta": {
-      "wordCount": 279,
-      "fingerprint": "ak6-tema-005",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
-      "readingTime": 2
+      "wordCount": 405,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1679750184902-5992e3445eed?w=700&h=420&fit=crop"
   },
@@ -6972,7 +7045,7 @@
     "genre": "non-fiction",
     "theme": "history",
     "title": "The Hidden City Beneath the Sand",
-    "text": "For decades, archaeologists believed that the desert region near Almera contained only a few scattered ruins from ancient settlements. However, new satellite technology changed everything. Researchers studying images from space noticed unusual patterns beneath the sand, including straight lines and rectangular shapes that did not appear natural. Curious about the discovery, an international team of archaeologists organized an expedition to investigate the area.\n\nWhen the team arrived, they used ground-scanning equipment to examine the buried structures before beginning any excavation. The scans revealed streets, walls, and several large buildings hidden beneath layers of sand that had accumulated over centuries. Scientists soon realized they had discovered the remains of a forgotten trading city that may have connected different civilizations across the desert.\n\nDuring the excavation, researchers uncovered pottery, tools, jewelry, and written records carved onto stone tablets. Some of the writings described trade routes involving spices, fabrics, and precious metals transported between distant regions. Historians were especially interested in evidence suggesting that people from multiple cultures had lived together peacefully within the city.\n\nThe discovery attracted worldwide attention because it provided new information about how ancient societies communicated and exchanged knowledge. Local authorities worked together with scientists to protect the site from damage caused by tourism and illegal artifact hunters. Students from nearby schools were invited to visit the excavation and learn about archaeology through workshops and guided tours.\n\nAlthough researchers still have many unanswered questions about the city's history, the discovery demonstrated how modern technology can help uncover important parts of humanity's past that were once thought to be lost forever.",
+    "text": "For decades, archaeologists believed that the desert region near Almera contained only a few scattered ruins from ancient settlements. However, new satellite technology changed everything. Researchers studying images from space noticed unusual patterns beneath the sand, including straight lines and rectangular shapes that did not appear natural. Curious about the discovery, an international team of archaeologists organized an expedition to investigate the area.\n\nWhen the team arrived, they used ground-scanning equipment to examine the buried structures before beginning any excavation. The scans revealed streets, walls, and several large buildings hidden beneath layers of sand that had accumulated over centuries. Scientists soon realized they had discovered the remains of a forgotten trading city that may have connected different civilizations across the desert.\n\nDuring the excavation, researchers uncovered pottery, tools, jewelry, and written records carved onto stone tablets. Some of the writings described trade routes involving spices, fabrics, and precious metals transported between distant regions. Historians were especially interested in evidence suggesting that people from multiple cultures had lived together peacefully within the city.\n\nThe discovery attracted worldwide attention because it provided new information about how ancient societies communicated and exchanged knowledge. Local authorities worked together with scientists to protect the site from damage caused by tourism and illegal artifact hunters. Students from nearby schools were invited to visit the excavation and learn about archaeology through workshops and guided tours.\n\nExcavation is slower than most people imagine. The team removed sand in thin layers, photographing each level before touching the next, because the position of an object often matters more than the object itself. A broken cup found on a floor tells a different story from the same cup found in a rubbish pit.\n\nTwo finds caused particular debate. One was a room containing grinding stones and storage jars but no cooking hearth, which suggested the building was a warehouse rather than a home. The other was a set of weights that did not match any standard the team recognised, hinting that traders here used their own system.\n\nNot all the questions were scientific. The team also had to decide how much to dig at all. Every excavation destroys the layer above it, and some archaeologists argued for leaving most of the city buried until better methods exist.\n\nAlthough researchers still have many unanswered questions about the city's history, the discovery demonstrated how modern technology can help uncover important parts of humanity's past that were once thought to be lost forever.",
     "questions": [
       {
         "type": "literal",
@@ -7042,8 +7115,8 @@
       }
     ],
     "meta": {
-      "wordCount": 261,
-      "readingTime": 2
+      "wordCount": 409,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=600&h=380&fit=crop"
   },
@@ -7053,7 +7126,7 @@
     "genre": "non-fiction",
     "theme": "environment",
     "title": "The Future of Urban Farming",
-    "text": "As cities continue growing around the world, experts are searching for new ways to produce food sustainably in crowded urban environments. Traditional farms often require large amounts of land, water, and transportation, making it difficult to supply fresh food efficiently to growing populations. One increasingly popular solution is urban farming, a system in which food is grown inside cities rather than in distant rural areas.\n\nUrban farms can take many forms. Some are built on rooftops, while others operate inside abandoned factories or specially designed vertical greenhouses. In vertical farms, crops are grown in stacked layers under artificial lighting. Advanced systems carefully control temperature, humidity, and nutrients, allowing plants to grow throughout the entire year regardless of weather conditions.\n\nSupporters of urban farming argue that these systems reduce transportation costs and lower pollution because food does not need to travel long distances to reach customers. Urban farms may also use less water than traditional agriculture through recycling systems that capture and reuse moisture. In addition, many schools and communities have created small local gardens to teach children about healthy eating and environmental responsibility.\n\nDespite these advantages, urban farming also faces challenges. Building advanced indoor farms can be expensive, and artificial lighting requires large amounts of electricity. Some critics question whether urban farms can produce enough food to support entire cities. Scientists and engineers continue researching new technologies to improve energy efficiency and reduce costs.\n\nIn several countries, governments and private companies have started investing heavily in urban agriculture projects. Experts believe that although urban farming may not completely replace traditional agriculture, it could become an important part of future food production systems. As climate change and population growth create new pressures on global agriculture, innovative farming methods may help societies produce food more sustainably and reliably.",
+    "text": "As cities continue growing around the world, experts are searching for new ways to produce food sustainably in crowded urban environments. Traditional farms often require large amounts of land, water, and transportation, making it difficult to supply fresh food efficiently to growing populations. One increasingly popular solution is urban farming, a system in which food is grown inside cities rather than in distant rural areas.\n\nUrban farms can take many forms. Some are built on rooftops, while others operate inside abandoned factories or specially designed vertical greenhouses. In vertical farms, crops are grown in stacked layers under artificial lighting. Advanced systems carefully control temperature, humidity, and nutrients, allowing plants to grow throughout the entire year regardless of weather conditions.\n\nSupporters of urban farming argue that these systems reduce transportation costs and lower pollution because food does not need to travel long distances to reach customers. Urban farms may also use less water than traditional agriculture through recycling systems that capture and reuse moisture. In addition, many schools and communities have created small local gardens to teach children about healthy eating and environmental responsibility.\n\nDespite these advantages, urban farming also faces challenges. Building advanced indoor farms can be expensive, and artificial lighting requires large amounts of electricity. Some critics question whether urban farms can produce enough food to support entire cities. Scientists and engineers continue researching new technologies to improve energy efficiency and reduce costs.\n\nThe numbers behind these systems are debated. Indoor farms grow food under electric light, which means their environmental value depends almost entirely on where the electricity comes from. A vertical farm powered by coal can produce lettuce with a larger climate footprint than a field crop trucked several hundred kilometres. Researchers in Sweden have pointed out that the same farm running on hydropower looks very different on paper.\n\nWater tells a happier story. Because the systems recirculate, some indoor farms use less than a tenth of the water an outdoor field needs for the same amount of lettuce, and none of it runs off into rivers carrying fertiliser.\n\nIn several countries, governments and private companies have started investing heavily in urban agriculture projects. Experts believe that although urban farming may not completely replace traditional agriculture, it could become an important part of future food production systems. As climate change and population growth create new pressures on global agriculture, innovative farming methods may help societies produce food more sustainably and reliably.",
     "questions": [
       {
         "type": "literal",
@@ -7123,8 +7196,8 @@
       }
     ],
     "meta": {
-      "wordCount": 296,
-      "readingTime": 2
+      "wordCount": 404,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1654145167982-10c1ebde498a?w=700&h=420&fit=crop"
   },
@@ -7134,7 +7207,7 @@
     "genre": "fiction",
     "theme": "sports",
     "title": "The Athlete Who Changed the Rules",
-    "text": "When seventeen-year-old wheelchair racer Elena Morales qualified for the national athletics championship, many sports journalists focused only on her disability instead of her achievements. Elena found this frustrating because she wanted people to recognize the years of training, discipline, and determination that had helped her become one of the fastest young athletes in the country.\n\nElena began competing in wheelchair racing after a car accident injured her spinal cord when she was nine years old. At first, sports became a way to rebuild her confidence and independence. Over time, however, she discovered a passion for competition and developed ambitious goals for her future. Her coach often described her as one of the most focused athletes on the team.\n\nBefore the championship, Elena noticed that several sporting facilities still lacked proper accessibility features. Some locker rooms were difficult to enter, and transportation between events often created unnecessary challenges for athletes with disabilities. Instead of remaining silent, Elena spoke publicly about the issue during interviews and social media discussions.\n\nHer comments quickly attracted attention from both athletes and sports organizations. Several professional competitors supported her message, arguing that accessibility should be considered a basic requirement rather than a special accommodation. As public pressure increased, the championship organizers agreed to improve transportation systems and redesign certain facilities before the competition began.\n\nAlthough Elena won a silver medal during the championship, many people believed her greatest achievement happened outside the race itself. By using her platform to demand fair treatment and equal access, she encouraged sports organizations to create more inclusive environments for future athletes. Elena later explained that true success in sports should not only involve winning competitions but also making opportunities available to everyone who wishes to participate.",
+    "text": "When seventeen-year-old wheelchair racer Elena Morales qualified for the national athletics championship, many sports journalists focused only on her disability instead of her achievements. Elena found this frustrating because she wanted people to recognize the years of training, discipline, and determination that had helped her become one of the fastest young athletes in the country.\n\nElena began competing in wheelchair racing after a car accident injured her spinal cord when she was nine years old. At first, sports became a way to rebuild her confidence and independence. Over time, however, she discovered a passion for competition and developed ambitious goals for her future. Her coach often described her as one of the most focused athletes on the team.\n\nBefore the championship, Elena noticed that several sporting facilities still lacked proper accessibility features. Some locker rooms were difficult to enter, and transportation between events often created unnecessary challenges for athletes with disabilities. Instead of remaining silent, Elena spoke publicly about the issue during interviews and social media discussions.\n\nHer comments quickly attracted attention from both athletes and sports organizations. Several professional competitors supported her message, arguing that accessibility should be considered a basic requirement rather than a special accommodation. As public pressure increased, the championship organizers agreed to improve transportation systems and redesign certain facilities before the competition began.\n\nChange came slowly and unevenly. The federation agreed within months to install ramps at the two largest arenas, which was announced with photographs and a press release. The smaller clubs, where most young athletes actually train, were given no funding and no deadline.\n\nElena noticed this and began asking for numbers instead of promises. How many venues had accessible changing rooms? How many had a lift to the spectator seats, so that a wheelchair user could watch a race as well as compete in one? Nobody could answer, because nobody had counted.\n\nThe survey she pushed for took a year. When the results were published, only nineteen of the country's ninety-four registered athletics facilities met all the basic requirements.\n\nAlthough Elena won a silver medal during the championship, many people believed her greatest achievement happened outside the race itself. By using her platform to demand fair treatment and equal access, she encouraged sports organizations to create more inclusive environments for future athletes. Elena later explained that true success in sports should not only involve winning competitions but also making opportunities available to everyone who wishes to participate.",
     "questions": [
       {
         "type": "literal",
@@ -7204,8 +7277,8 @@
       }
     ],
     "meta": {
-      "wordCount": 286,
-      "readingTime": 2
+      "wordCount": 405,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1544044407-9d2da66393f2?w=700&h=420&fit=crop"
   },
@@ -7215,7 +7288,7 @@
     "genre": "non-fiction",
     "theme": "science",
     "title": "The Mystery of the Northern Lights",
-    "text": "For centuries, people living in northern regions have been fascinated by the colorful lights that sometimes appear across the night sky. Different cultures created myths and stories to explain these mysterious displays, now known scientifically as the aurora borealis, or northern lights. Some communities believed the lights were messages from spirits, while others thought they represented powerful animals moving through the heavens.\n\nToday, scientists understand that the northern lights are caused by interactions between particles from the Sun and Earth's atmosphere. The Sun constantly releases streams of charged particles called solar wind. When these particles reach Earth, most are redirected by the planet's magnetic field. However, near the polar regions, some particles enter the atmosphere and collide with gases such as oxygen and nitrogen.\n\nThese collisions release energy in the form of light, creating moving patterns of green, purple, pink, and red across the sky. The exact colors depend on factors such as altitude and the type of gas involved in the collision. Strong solar storms can produce especially bright displays visible farther from the poles than usual.\n\nScientists study the northern lights not only because they are beautiful but also because they provide valuable information about space weather. Powerful solar storms can sometimes interfere with satellites, communication systems, and electrical networks on Earth. By understanding these events better, researchers hope to protect important technology from damage.\n\nToday, thousands of tourists travel to countries such as Norway, Iceland, and Canada hoping to witness the northern lights in person. Although modern science has explained much about the phenomenon, many people still describe the experience as magical and unforgettable.",
+    "text": "For centuries, people living in northern regions have been fascinated by the colorful lights that sometimes appear across the night sky. Different cultures created myths and stories to explain these mysterious displays, now known scientifically as the aurora borealis, or northern lights. Some communities believed the lights were messages from spirits, while others thought they represented powerful animals moving through the heavens.\n\nToday, scientists understand that the northern lights are caused by interactions between particles from the Sun and Earth's atmosphere. The Sun constantly releases streams of charged particles called solar wind. When these particles reach Earth, most are redirected by the planet's magnetic field. However, near the polar regions, some particles enter the atmosphere and collide with gases such as oxygen and nitrogen.\n\nThese collisions release energy in the form of light, creating moving patterns of green, purple, pink, and red across the sky. The exact colors depend on factors such as altitude and the type of gas involved in the collision. Strong solar storms can produce especially bright displays visible farther from the poles than usual.\n\nScientists study the northern lights not only because they are beautiful but also because they provide valuable information about space weather. Powerful solar storms can sometimes interfere with satellites, communication systems, and electrical networks on Earth. By understanding these events better, researchers hope to protect important technology from damage.\n\nPredicting the lights is harder than predicting rain. Space weather forecasters watch the Sun for eruptions of charged particles, but those particles take between one and three days to cross the distance to Earth, and their exact path is difficult to calculate. A forecast issued on Monday for Wednesday night may be wrong by several hundred kilometres.\n\nStrong solar storms do more than create colour. In 1989, one such storm knocked out the electricity grid in Quebec and left six million people without power for nine hours. Modern satellites, aircraft navigation, and even some pipelines can be affected, which is why several countries now fund permanent space weather monitoring.\n\nThe same storms that threaten technology are the ones that push the lights furthest south. In 1859, they were reported as far away as Cuba.\n\nToday, thousands of tourists travel to countries such as Norway, Iceland, and Canada hoping to witness the northern lights in person. Although modern science has explained much about the phenomenon, many people still describe the experience as magical and unforgettable.",
     "questions": [
       {
         "type": "literal",
@@ -7285,8 +7358,8 @@
       }
     ],
     "meta": {
-      "wordCount": 267,
-      "readingTime": 2
+      "wordCount": 401,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?w=800&q=80"
   },
@@ -7296,7 +7369,7 @@
     "genre": "non-fiction",
     "theme": "technology",
     "title": "The Rise of Digital Libraries",
-    "text": "In the past, libraries were mainly physical spaces filled with shelves of printed books, newspapers, and reference materials. Although traditional libraries continue to play an important role in education and culture, digital technology has transformed how people access information. Today, millions of books, articles, photographs, and historical documents are available online through digital libraries.\n\nDigital libraries allow users to search for information quickly from computers, tablets, or smartphones. Students can access academic materials without traveling long distances, and researchers can study rare historical documents that were previously difficult to obtain. Some digital collections even include audio recordings, videos, and interactive learning tools.\n\nDuring the COVID-19 pandemic, digital libraries became especially important because many schools and public buildings temporarily closed. Librarians worked to expand online services so people could continue reading, studying, and attending virtual educational events from home.\n\nDespite these advantages, digital libraries also raise important concerns. Not everyone has reliable internet access or modern devices, which can create inequalities in education and access to knowledge. In addition, preserving digital information over long periods can be challenging because technology changes rapidly. Experts must regularly update storage systems to prevent important files from becoming unreadable.\n\nMany librarians believe the future will involve a combination of physical and digital resources rather than one completely replacing the other. Physical libraries continue providing quiet study spaces, community events, and personal assistance, while digital collections increase access and convenience for users worldwide.\n\nAs technology continues evolving, libraries will likely remain important centers for learning, creativity, and the sharing of knowledge in both physical and digital forms.",
+    "text": "In the past, libraries were mainly physical spaces filled with shelves of printed books, newspapers, and reference materials. Although traditional libraries continue to play an important role in education and culture, digital technology has transformed how people access information. Today, millions of books, articles, photographs, and historical documents are available online through digital libraries.\n\nDigital libraries allow users to search for information quickly from computers, tablets, or smartphones. Students can access academic materials without traveling long distances, and researchers can study rare historical documents that were previously difficult to obtain. Some digital collections even include audio recordings, videos, and interactive learning tools.\n\nDuring the COVID-19 pandemic, digital libraries became especially important because many schools and public buildings temporarily closed. Librarians worked to expand online services so people could continue reading, studying, and attending virtual educational events from home.\n\nDespite these advantages, digital libraries also raise important concerns. Not everyone has reliable internet access or modern devices, which can create inequalities in education and access to knowledge. In addition, preserving digital information over long periods can be challenging because technology changes rapidly. Experts must regularly update storage systems to prevent important files from becoming unreadable.\n\nMany librarians believe the future will involve a combination of physical and digital resources rather than one completely replacing the other. Physical libraries continue providing quiet study spaces, community events, and personal assistance, while digital collections increase access and convenience for users worldwide.\n\nOne problem is rarely mentioned in discussions about digital libraries: a library does not own most of what it lends digitally. A printed book on a shelf belongs to the library for as long as it survives. An e-book is usually licensed, often for a fixed number of loans or a fixed number of years, after which the library must pay again or lose access.\n\nPublishers argue that this protects authors, since a digital file never wears out and could otherwise be lent for ever. Librarians reply that some licences cost several times the price of a printed copy and expire after twenty-six loans.\n\nThe consequence is quiet but serious. A library can lose a title from its collection without anyone removing anything from a shelf, and readers looking for an older book may find it has simply vanished from the catalogue.\n\nAs technology continues evolving, libraries will likely remain important centers for learning, creativity, and the sharing of knowledge in both physical and digital forms.",
     "questions": [
       {
         "type": "literal",
@@ -7366,8 +7439,8 @@
       }
     ],
     "meta": {
-      "wordCount": 261,
-      "readingTime": 2
+      "wordCount": 403,
+      "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=700&h=420&fit=crop"
   },
@@ -7378,7 +7451,7 @@
     "theme": "music",
     "title": "Zara Larsson's Early Years",
     "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=380&fit=crop",
-    "text": "Zara Larsson is one of Sweden's most well-known pop artists. She was born in Stockholm and showed an interest in music from an early age. As a child, she enjoyed singing and performing for family members and friends. Her talent became widely known when she participated in a television talent competition. Winning the competition gave her national attention and opened new opportunities within the music industry. However, success did not happen overnight. After the program ended, Zara continued to practice, record music, and develop her artistic style. She spent years learning about songwriting, performance, and the business side of music. Many young performers become famous for a short time and then disappear from public attention, but Zara worked hard to build a long-term career. As she grew older, she released songs that became popular both in Sweden and internationally. Her powerful voice and energetic performances helped her gain fans in many countries. Music critics often praised her ability to combine catchy melodies with strong vocals. At the same time, she learned how to handle interviews, tours, and public expectations. Life as an artist can be exciting, but it can also be demanding. Long travel schedules, recording sessions, and live performances require discipline and commitment. Zara has often spoken about the importance of believing in yourself and continuing to improve your skills. Her journey demonstrates that talent alone is rarely enough. Consistent effort, patience, and determination are also important. Today, many young people look up to her because she followed her goals and continued working even when success was uncertain. Her story shows how dedication can help someone turn a childhood passion into an international career.",
+    "text": "Zara Larsson is one of Sweden's most well-known pop artists. She was born in Stockholm and showed an interest in music from an early age. As a child, she enjoyed singing and performing for family members and friends. Her talent became widely known when she participated in a television talent competition. Winning the competition gave her national attention and opened new opportunities within the music industry. However, success did not happen overnight. After the program ended, Zara continued to practice, record music, and develop her artistic style. She spent years learning about songwriting, performance, and the business side of music. Many young performers become famous for a short time and then disappear from public attention, but Zara worked hard to build a long-term career. As she grew older, she released songs that became popular both in Sweden and internationally. Her powerful voice and energetic performances helped her gain fans in many countries. Music critics often praised her ability to combine catchy melodies with strong vocals. At the same time, she learned how to handle interviews, tours, and public expectations. Life as an artist can be exciting, but it can also be demanding. Long travel schedules, recording sessions, and live performances require discipline and commitment. Zara has often spoken about the importance of believing in yourself and continuing to improve your skills. Her journey demonstrates that talent alone is rarely enough. Consistent effort, patience, and determination are also important. What is often left out of the story is the gap in the middle. Winning a television talent competition at the age of ten brought attention, but it did not lead directly to a career. Several years passed in which she was not on television at all, finishing school like everyone else in her class and recording demos that went nowhere in particular.\n\nHer first real hit came when she was fifteen, five years after the competition. In interviews she has described that period as useful rather than wasted, because it gave her time to find out what kind of music she actually wanted to make instead of performing what an audience already expected.\n\nSweden has produced an unusual number of pop songwriters for a country of ten million people.\n\nToday, many young people look up to her because she followed her goals and continued working even when success was uncertain. Her story shows how dedication can help someone turn a childhood passion into an international career.",
     "questions": [
       {
         "type": "literal",
@@ -7448,8 +7521,8 @@
       }
     ],
     "meta": {
-      "wordCount": 275,
-      "readingTime": 2
+      "wordCount": 405,
+      "readingTime": 3
     }
   },
   {
@@ -7459,7 +7532,7 @@
     "theme": "music",
     "title": "Writing and Recording Music",
     "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&q=80",
-    "text": "Many listeners focus on the final version of a song, but creating music often involves a long process. Zara Larsson has participated in writing and developing many of her songs. Before a track reaches streaming services or radio stations, artists and producers may spend weeks or months improving it. The process often begins with an idea, a melody, or a short lyric. Writers experiment with different words and musical arrangements until they find a version that feels right. During recording sessions, singers may perform the same section many times. This allows producers to select the strongest performance and create a polished result. Zara has worked with musicians and producers from different countries, which has given her opportunities to learn new techniques and perspectives. Collaboration is an important part of modern pop music. Team members may contribute ideas about rhythm, lyrics, instruments, or sound effects. Technology also plays a major role. Recording equipment can capture details that audiences may never notice consciously but that help create a professional sound. Even after recording is complete, engineers continue working by mixing and mastering the music. These stages balance the volume of instruments and improve overall quality. Although the audience often hears only a three-minute song, many hours of work may be hidden behind it. Zara's career demonstrates how modern artists combine creativity with technical knowledge. Successful songs are not usually the result of a single moment of inspiration. Instead, they often develop through planning, revision, and teamwork. Understanding this process helps listeners appreciate the effort involved in music production. It also reminds young musicians that improvement takes time. Even experienced performers continue learning throughout their careers. By practicing regularly and accepting feedback, artists can continue developing their skills and creating music that connects with audiences around the world.",
+    "text": "Many listeners focus on the final version of a song, but creating music often involves a long process. Zara Larsson has participated in writing and developing many of her songs. Before a track reaches streaming services or radio stations, artists and producers may spend weeks or months improving it. The process often begins with an idea, a melody, or a short lyric. Writers experiment with different words and musical arrangements until they find a version that feels right. During recording sessions, singers may perform the same section many times. This allows producers to select the strongest performance and create a polished result. Zara has worked with musicians and producers from different countries, which has given her opportunities to learn new techniques and perspectives. Collaboration is an important part of modern pop music. Team members may contribute ideas about rhythm, lyrics, instruments, or sound effects. Technology also plays a major role. Recording equipment can capture details that audiences may never notice consciously but that help create a professional sound. Even after recording is complete, engineers continue working by mixing and mastering the music. These stages balance the volume of instruments and improve overall quality. Although the audience often hears only a three-minute song, many hours of work may be hidden behind it. Zara's career demonstrates how modern artists combine creativity with technical knowledge. Successful songs are not usually the result of a single moment of inspiration. Instead, they often develop through planning, revision, and teamwork. Understanding this process helps listeners appreciate the effort involved in music production. It also reminds young musicians that improvement takes time. Songwriting is more collaborative than most listeners assume. A single pop track may list four or five writers, and modern credits often include people who contributed only a melody line or a rhythmic idea. This has changed how royalties are divided, and occasionally led to disputes years after a song was released.\n\nSessions rarely produce a finished song in one sitting. Writers often work in short bursts over several days, recording rough voice memos on a phone and returning to them later. Many songs are abandoned entirely. A writer who releases ten tracks in a year may have started sixty. Most of them nobody will ever hear.\n\nEven experienced performers continue learning throughout their careers. By practicing regularly and accepting feedback, artists can continue developing their skills and creating music that connects with audiences around the world.",
     "questions": [
       {
         "type": "literal",
@@ -7529,8 +7602,8 @@
       }
     ],
     "meta": {
-      "wordCount": 295,
-      "readingTime": 2
+      "wordCount": 402,
+      "readingTime": 3
     }
   },
   {
@@ -7540,7 +7613,7 @@
     "theme": "music",
     "title": "Performing for Large Audiences",
     "imageUrl": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80",
-    "text": "Live performances are an important part of Zara Larsson's career. While recordings allow listeners to enjoy music anywhere, concerts create a different experience. Thousands of people may gather in one place to hear songs performed live. Preparing for such events requires careful planning. Artists often rehearse for many hours before a tour begins. They practice singing, movement, timing, and interaction with the audience. Behind the scenes, many professionals help make a concert successful. Sound technicians manage microphones and speakers, lighting teams create visual effects, and stage crews prepare equipment. Each person has specific responsibilities. If one part of the system fails, the audience may notice problems immediately. Therefore, teamwork is essential. Zara has performed in different countries and for audiences with diverse backgrounds. Music can connect people even when they speak different languages. Fans may sing along to familiar songs and share a common experience during a performance. However, performing live can also be challenging. Artists may feel nervous before stepping onto a stage, especially when large crowds are present. Learning how to stay focused under pressure is an important skill. Many performers develop routines that help them prepare mentally. They may warm up their voices, review the schedule, and spend time concentrating before the show begins. Concert tours also involve travel and long workdays. Despite these challenges, many musicians enjoy performing because they can connect directly with listeners. Audience reactions provide immediate feedback and energy. Zara's performances are often described as energetic and engaging. Her concerts demonstrate that successful live music depends on preparation, cooperation, and confidence. For young people interested in performing arts, her experiences show that public performances involve much more than simply stepping onto a stage. Careful preparation behind the scenes plays a major role in creating memorable events.",
+    "text": "Live performances are an important part of Zara Larsson's career. While recordings allow listeners to enjoy music anywhere, concerts create a different experience. Thousands of people may gather in one place to hear songs performed live. Preparing for such events requires careful planning. Artists often rehearse for many hours before a tour begins. They practice singing, movement, timing, and interaction with the audience. Behind the scenes, many professionals help make a concert successful. Sound technicians manage microphones and speakers, lighting teams create visual effects, and stage crews prepare equipment. Each person has specific responsibilities. If one part of the system fails, the audience may notice problems immediately. Therefore, teamwork is essential. Zara has performed in different countries and for audiences with diverse backgrounds. Music can connect people even when they speak different languages. Fans may sing along to familiar songs and share a common experience during a performance. However, performing live can also be challenging. Artists may feel nervous before stepping onto a stage, especially when large crowds are present. Learning how to stay focused under pressure is an important skill. Many performers develop routines that help them prepare mentally. They may warm up their voices, review the schedule, and spend time concentrating before the show begins. Concert tours also involve travel and long workdays. Despite these challenges, many musicians enjoy performing because they can connect directly with listeners. Audience reactions provide immediate feedback and energy. Zara's performances are often described as energetic and engaging. Her concerts demonstrate that successful live music depends on preparation, cooperation, and confidence. Touring also has a cost that audiences rarely see. Singers travel through different climates, sleep in a new place most nights, and are expected to sound identical at every show. Vocal fatigue is a genuine occupational injury, and several major artists have cancelled tours on medical advice rather than risk permanent damage.\n\nBecause of this, professional touring now involves routines that look almost athletic: warm-ups before every performance, humidifiers in hotel rooms, and deliberate periods of silence during the day. Some artists travel with a vocal coach. A few build rest days into the schedule at the cost of ticket income, on the argument that a cancelled show costs more.\n\nFor young people interested in performing arts, her experiences show that public performances involve much more than simply stepping onto a stage. Careful preparation behind the scenes plays a major role in creating memorable events.",
     "questions": [
       {
         "type": "literal",
@@ -7610,8 +7683,8 @@
       }
     ],
     "meta": {
-      "wordCount": 293,
-      "readingTime": 2
+      "wordCount": 403,
+      "readingTime": 3
     }
   },
   {
@@ -7621,7 +7694,7 @@
     "theme": "society",
     "title": "Social Media and Modern Artists",
     "imageUrl": "https://images.unsplash.com/photo-1573152143286-0c422b4d2175?w=800&q=80",
-    "text": "The music industry has changed significantly during the last two decades. In the past, artists depended heavily on television, radio, and newspapers to reach audiences. Today, social media allows performers such as Zara Larsson to communicate directly with fans. Through online platforms, artists can share updates, photographs, videos, and information about upcoming projects. This creates new opportunities for interaction. Fans can comment on posts and sometimes receive responses from the people they admire. However, social media also brings challenges. Public figures often receive large amounts of attention, both positive and negative. Learning how to manage this attention responsibly is important. Artists must think carefully about what they share online because information can spread quickly. Social media can also influence how music becomes popular. A short video clip or performance may reach millions of viewers within a short period. As a result, songs can gain attention much faster than in earlier decades. Zara Larsson has used digital platforms to communicate with audiences around the world. These tools help artists maintain connections with listeners even when they are not touring. At the same time, spending too much time online can become distracting. Many public figures try to balance their digital presence with private life. This balance can be difficult because audiences often want constant updates. Understanding social media is now an important skill for many musicians. It involves communication, creativity, and responsibility. Young people who follow artists online can learn to think critically about the information they see. Not everything shared on the internet reflects reality completely. By examining sources carefully and considering different perspectives, users can become more informed digital citizens. The experiences of modern artists demonstrate both the advantages and challenges of living in a connected world.",
+    "text": "The music industry has changed significantly during the last two decades. In the past, artists depended heavily on television, radio, and newspapers to reach audiences. Today, social media allows performers such as Zara Larsson to communicate directly with fans. Through online platforms, artists can share updates, photographs, videos, and information about upcoming projects. This creates new opportunities for interaction. Fans can comment on posts and sometimes receive responses from the people they admire. However, social media also brings challenges. Public figures often receive large amounts of attention, both positive and negative. Learning how to manage this attention responsibly is important. Artists must think carefully about what they share online because information can spread quickly. Social media can also influence how music becomes popular. A short video clip or performance may reach millions of viewers within a short period. As a result, songs can gain attention much faster than in earlier decades. Zara Larsson has used digital platforms to communicate with audiences around the world. These tools help artists maintain connections with listeners even when they are not touring. At the same time, spending too much time online can become distracting. Many public figures try to balance their digital presence with private life. This balance can be difficult because audiences often want constant updates. Understanding social media is now an important skill for many musicians. It involves communication, creativity, and responsibility. Young people who follow artists online can learn to think critically about the information they see. Not everything shared on the internet reflects reality completely. There is a second cost, less often discussed than online criticism. Platforms reward frequency, which means an artist who posts rarely can lose visibility even if the music is good. Several performers have described feeling obliged to produce content that has nothing to do with their work, simply to remain in an algorithm's favour.\n\nSome have pushed back. A number of well-known musicians now hand their accounts to a team, post only around releases, or leave certain platforms entirely and accept the loss in reach. Others argue the opposite: that direct contact with listeners has freed artists from depending on record companies and radio programmers who once decided which songs the public would hear.\n\nBy examining sources carefully and considering different perspectives, users can become more informed digital citizens. The experiences of modern artists demonstrate both the advantages and challenges of living in a connected world.",
     "questions": [
       {
         "type": "literal",
@@ -7691,8 +7764,8 @@
       }
     ],
     "meta": {
-      "wordCount": 287,
-      "readingTime": 2
+      "wordCount": 401,
+      "readingTime": 3
     }
   },
   {
@@ -7702,7 +7775,7 @@
     "theme": "society",
     "title": "Inspiration and Role Models",
     "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?w=600&h=380&fit=crop",
-    "text": "Many young people search for role models who inspire them to work toward their goals. For some music fans, Zara Larsson serves as an example of determination and confidence. Although every person follows a different path, stories about successful individuals can provide motivation. One reason people admire artists is that they often overcome challenges while pursuing their ambitions. Building a career in music requires practice, patience, and resilience. Performers must continue improving even when progress feels slow. Zara's career illustrates how persistence can help someone move from local recognition to international success. However, role models are valuable for more than their achievements. They can also influence attitudes and behavior. Young people may observe how public figures communicate, handle criticism, and respond to difficulties. These observations can encourage reflection about personal choices. At the same time, it is important to remember that no role model is perfect. Every person makes mistakes and continues learning throughout life. Admiration should therefore be balanced with critical thinking. Rather than copying someone completely, individuals can identify specific qualities they respect. For example, they might appreciate creativity, discipline, kindness, or courage. Inspiration can come from many places, including family members, teachers, coaches, friends, and public figures. Different people may choose different role models depending on their interests and experiences. What matters most is finding positive examples that encourage growth and responsibility. Zara Larsson's story can remind students that success often develops gradually through effort and commitment. By setting goals, practicing regularly, and learning from setbacks, people can continue moving forward. Whether someone dreams of becoming a musician, scientist, athlete, or teacher, determination and a willingness to learn can help transform ambitions into achievements over time.",
+    "text": "Many young people search for role models who inspire them to work toward their goals. For some music fans, Zara Larsson serves as an example of determination and confidence. Although every person follows a different path, stories about successful individuals can provide motivation. One reason people admire artists is that they often overcome challenges while pursuing their ambitions. Building a career in music requires practice, patience, and resilience. Performers must continue improving even when progress feels slow. Zara's career illustrates how persistence can help someone move from local recognition to international success. However, role models are valuable for more than their achievements. They can also influence attitudes and behavior. Young people may observe how public figures communicate, handle criticism, and respond to difficulties. These observations can encourage reflection about personal choices. At the same time, it is important to remember that no role model is perfect. Every person makes mistakes and continues learning throughout life. Admiration should therefore be balanced with critical thinking. Rather than copying someone completely, individuals can identify specific qualities they respect. For example, they might appreciate creativity, discipline, kindness, or courage. Inspiration can come from many places, including family members, teachers, coaches, friends, and public figures. Different people may choose different role models depending on their interests and experiences. What matters most is finding positive examples that encourage growth and responsibility. Zara Larsson's story can remind students that success often develops gradually through effort and commitment. Researchers who study motivation have found that the most useful role models are not the most distant ones. A world-famous musician can inspire admiration, but a slightly older sibling, a local coach, or a student two years ahead in school tends to have a stronger effect on what young people actually attempt. The reason appears to be believability: it is easier to imagine doing something you have watched someone nearby do.\n\nThis has a practical consequence. Schools that pair younger students with older ones often report improvements that expensive campaigns fail to produce.\n\nIt also suggests that being a role model is not reserved for the famous. Anyone slightly further along a path can show someone else that the next step is possible.\n\nBy setting goals, practicing regularly, and learning from setbacks, people can continue moving forward. Whether someone dreams of becoming a musician, scientist, athlete, or teacher, determination and a willingness to learn can help transform ambitions into achievements over time.",
     "questions": [
       {
         "type": "literal",
@@ -7772,8 +7845,8 @@
       }
     ],
     "meta": {
-      "wordCount": 279,
-      "readingTime": 2
+      "wordCount": 402,
+      "readingTime": 3
     }
   },
   {
