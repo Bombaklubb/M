@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { RotateCcw } from 'lucide-react';
 import { shuffle } from '../../utils/shuffle';
 
@@ -7,10 +7,15 @@ export default function MatchaTab({ concepts, progressHex, accentHex }: {
   progressHex: string;
   accentHex: string;
 }) {
-  const shuffledDefs = useMemo(() => shuffle(concepts), [concepts.map(c => c.term).join()]);
+  const conceptsKey = concepts.map(c => c.term).join('|');
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- avsiktligt: ska bara blandas om när innehållet byts, inte vid varje rendering
+  const shuffledDefs = useMemo(() => shuffle(concepts), [conceptsKey]);
   const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
   const [matched, setMatched] = useState<Set<string>>(new Set());
   const [flash, setFlash] = useState<{ term: string; def: string; ok: boolean } | null>(null);
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  useEffect(() => () => { timers.current.forEach(clearTimeout); timers.current = []; }, []);
 
   if (concepts.length === 0) return <p className="text-sm text-gray-500 text-center py-8">Inga begrepp finns att matcha.</p>;
 
@@ -28,8 +33,10 @@ export default function MatchaTab({ concepts, progressHex, accentHex }: {
     if (isOk) {
       setMatched(prev => new Set([...prev, correctTerm]));
       setSelectedTerm(null);
+      // Nollställ även vid rätt – annars blir gammal flash-state kvar.
+      timers.current.push(setTimeout(() => setFlash(null), 400));
     } else {
-      setTimeout(() => { setFlash(null); setSelectedTerm(null); }, 700);
+      timers.current.push(setTimeout(() => { setFlash(null); setSelectedTerm(null); }, 700));
     }
   }
 

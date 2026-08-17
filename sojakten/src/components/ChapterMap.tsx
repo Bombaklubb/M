@@ -1,11 +1,18 @@
+import { useEffect } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getChaptersForSubjectAndGrade } from '../data/subjects';
-import { Lock, Star, ArrowLeft } from 'lucide-react';
+import { Star, ArrowLeft } from 'lucide-react';
 
 export default function ChapterMap() {
-  const { selectedSubject, selectedGrade, setView, openChapterStudy, selectChapter, startExitTicket, isChapterUnlocked, getChapterProgressFor } = useApp();
+  const { selectedSubject, selectedGrade, setView, openChapterStudy, selectChapter, startExitTicket, getChapterProgressFor } = useApp();
 
-  if (!selectedSubject) { setView('subject-select'); return null; }
+  // Navigering hör hemma i en effekt – att anropa setView under render uppdaterar
+  // AppProvider mitt i barnets rendering och kan ge en renderloop.
+  useEffect(() => {
+    if (!selectedSubject) setView('subject-select');
+  }, [selectedSubject, setView]);
+
+  if (!selectedSubject) return null;
 
   const grade = selectedGrade ?? 5;
   const chapters = getChaptersForSubjectAndGrade(selectedSubject.id, grade);
@@ -34,7 +41,7 @@ export default function ChapterMap() {
               {s.name}
             </h1>
             <p className="text-xs font-semibold opacity-60" style={{ color: s.inkHex }}>
-              Välj ett kapitel
+              Åk {grade} · Välj ett kapitel
             </p>
           </div>
         </div>
@@ -49,26 +56,22 @@ export default function ChapterMap() {
           </div>
         )}
         <div className="grid grid-cols-1 gap-3 mt-4">
-          {chapters.map((chapter, idx) => {
-            const unlocked = isChapterUnlocked(chapter.id);
+          {chapters.map(chapter => {
             const progress = getChapterProgressFor(chapter.id);
             const stars = progress?.stars ?? 0;
             const score = progress?.bestScore ?? null;
 
             return (
-              <div
-                key={chapter.id}
-                className={`clay-card p-4 transition-all ${!unlocked ? 'opacity-50' : ''}`}
-              >
+              <div key={chapter.id} className="clay-card p-4 transition-all">
                 <div className="flex items-center gap-4">
                   <div
                     className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0"
-                    style={unlocked ? {
+                    style={{
                       background: `${s.progressHex}18`,
                       border: `2px solid ${s.progressHex}40`,
-                    } : { background: '#f3f4f6' }}
+                    }}
                   >
-                    {unlocked ? chapter.emoji : <Lock size={20} className="text-gray-400" />}
+                    {chapter.emoji}
                   </div>
 
                   <div className="flex-1 min-w-0">
@@ -77,7 +80,7 @@ export default function ChapterMap() {
                       {progress?.completed && (
                         <span className="text-xs font-black text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Klar</span>
                       )}
-                      {chapter.summary && unlocked && (
+                      {chapter.summary && (
                         <span
                           className="text-xs font-black px-2 py-0.5 rounded-full"
                           style={{ background: `${s.progressHex}15`, color: s.progressHex }}
@@ -93,23 +96,17 @@ export default function ChapterMap() {
                   </div>
 
                   <div className="flex-shrink-0 text-right">
-                    {!unlocked ? (
-                      <span className="text-xs text-gray-400 font-semibold">Låst</span>
-                    ) : (
-                      <>
-                        <div className="flex gap-0.5 justify-end">
-                          {[1, 2, 3].map(st => (
-                            <Star
-                              key={st}
-                              size={16}
-                              className={stars >= st ? 'fill-amber-400 text-amber-400' : 'fill-gray-200 text-gray-200'}
-                            />
-                          ))}
-                        </div>
-                        {score !== null && (
-                          <p className="text-xs text-gray-400 mt-1 font-semibold">{score}%</p>
-                        )}
-                      </>
+                    <div className="flex gap-0.5 justify-end" aria-label={`${stars} av 3 stjärnor`}>
+                      {[1, 2, 3].map(st => (
+                        <Star
+                          key={st}
+                          size={16}
+                          className={stars >= st ? 'fill-amber-400 text-amber-400' : 'fill-gray-200 text-gray-200'}
+                        />
+                      ))}
+                    </div>
+                    {score !== null && (
+                      <p className="text-xs text-gray-400 mt-1 font-semibold">{score}%</p>
                     )}
                   </div>
                 </div>
@@ -130,45 +127,45 @@ export default function ChapterMap() {
                   </div>
                 )}
 
-                {unlocked && chapter.summary && (
-                  <div className="mt-3 grid grid-cols-3 gap-2">
-                    {([
+                {(chapter.summary || chapter.exercises.length > 0) && (
+                  <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    {chapter.summary && ([
                       { tab: 'flashcards',  label: '🃏 Flashcards',          show: true },
                       { tab: 'concepts',    label: '📘 Begrepp',             show: true },
                       { tab: 'key-points',  label: '📋 Sammanfattning',      show: true },
                       { tab: 'cause-effect',label: '⚡ Orsak & konsekvens',  show: true },
-                      { tab: 'sant-falskt', label: '✅ Sant eller falskt',   show: true },
+                      { tab: 'sant-falskt', label: '✅ Sant eller falskt',   show: !!chapter.summary.trueFalse?.length },
                       { tab: 'matcha',      label: '🔗 Matcha begrepp',      show: true },
                       { tab: 'word-search', label: '🔍 Ordsökning',          show: true },
                       { tab: 'test',        label: '✏️ Test',                show: true },
-                      { tab: 'tidslinje',   label: '📅 Tidslinje',           show: !!chapter.summary?.timeline },
+                      { tab: 'tidslinje',   label: '📅 Tidslinje',           show: !!chapter.summary.timeline?.length },
                     ] as const).filter(b => b.show).map(({ tab, label }) => (
                       <button
                         key={tab}
                         onClick={() => openChapterStudy(chapter, tab)}
-                        className="py-2 px-1 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
+                        className="min-h-[44px] py-2 px-1.5 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center leading-tight break-words hyphens-auto"
                         style={{ background: `${s.progressHex}12`, border: `2px solid ${s.progressHex}35`, color: s.progressHex }}
                       >
                         {label}
                       </button>
                     ))}
                     {chapter.exercises.length > 0 && (
-                      <button
-                        onClick={() => selectChapter(chapter)}
-                        className="py-2 px-1 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center text-white"
-                        style={{ background: s.progressHex, border: `2px solid ${s.progressHex}` }}
-                      >
-                        🎯 Öva-läge
-                      </button>
-                    )}
-                    {chapter.exercises.length > 0 && (
-                      <button
-                        onClick={() => startExitTicket(chapter)}
-                        className="py-2 px-1 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center"
-                        style={{ background: '#fef3c7', border: '2px solid #fcd34d', color: '#b45309' }}
-                      >
-                        ⚡ Snabbkoll
-                      </button>
+                      <>
+                        <button
+                          onClick={() => selectChapter(chapter)}
+                          className="min-h-[44px] py-2 px-1.5 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center text-white leading-tight break-words"
+                          style={{ background: s.progressHex, border: `2px solid ${s.progressHex}` }}
+                        >
+                          🎯 Öva-läge
+                        </button>
+                        <button
+                          onClick={() => startExitTicket(chapter)}
+                          className="min-h-[44px] py-2 px-1.5 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center leading-tight break-words"
+                          style={{ background: '#fef3c7', border: '2px solid #fcd34d', color: '#b45309' }}
+                        >
+                          ⚡ Snabbkoll
+                        </button>
+                      </>
                     )}
                   </div>
                 )}

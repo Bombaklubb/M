@@ -55,6 +55,15 @@ export const AK6_GEOGRAFI: Chapter[] = [
         { statement: 'Medelhavsklimat innebär torra somrar och regniga vintrar.', isTrue: true, explanation: 'Rätt! Medelhavsklimat har varma, torra somrar och milda, regniga vintrar.' },
         { statement: 'Om regnskogen huggs ner ökar biodiversiteten i området.', isTrue: false, explanation: 'Fel! Avskogning MINSKAR biodiversiteten drastiskt eftersom regnskogen hyser enormt många arter.' },
       ],
+      timeline: [
+        { year: '1700-talets slut', title: 'Industriella revolutionen börjar', description: 'Fabriker och ångmaskiner börjar elda kol. Här startar de stora utsläppen av koldioxid från fossila bränslen.', wikiTitle: 'Industriella revolutionen' },
+        { year: '1896', title: 'Arrhenius räknar ut växthuseffekten', description: 'Svensken Svante Arrhenius visar att mer koldioxid i luften gör jorden varmare. Han var först i världen med att räkna på det.', wikiTitle: 'Svante Arrhenius' },
+        { year: '1958', title: 'Mätningarna på Mauna Loa startar', description: 'På ett berg på Hawaii börjar forskare mäta koldioxidhalten i luften varje dag. Kurvan har stigit oavbrutet sedan dess.' },
+        { year: '1988', title: 'FN:s klimatpanel bildas', description: 'IPCC får i uppdrag att samla världens klimatforskning och rapportera vad forskarna är eniga om.' },
+        { year: '1997', title: 'Kyotoprotokollet', description: 'Världens länder lovar för första gången i ett avtal att minska sina utsläpp av växthusgaser.', wikiTitle: 'Kyotoprotokollet' },
+        { year: '2015', title: 'Parisavtalet', description: 'Nästan alla världens länder enas om att hålla uppvärmningen väl under 2 grader – helst under 1,5 grader.', wikiTitle: 'Parisavtalet' },
+        { year: '2020-talet', title: 'De varmaste åren hittills', description: 'Mätningarna visar rekordvärme, smältande glaciärer och stigande havsnivåer. Klimatförändringen märks redan i dag.' },
+      ],
     },
     exercises: [
       {

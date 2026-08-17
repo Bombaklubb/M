@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import { useApp } from '../contexts/AppContext';
-import { SUBJECTS, getChaptersForSubjectAndGrade, ALL_CHAPTERS } from '../data/subjects';
+import { getChaptersForSubjectAndGrade, getSubjectsWithContent, ALL_CHAPTERS } from '../data/subjects';
 import { getProgress } from '../utils/storage';
-import type { Subject } from '../types';
+import type { Subject, ChapterProgress } from '../types';
 import SearchModal from './SearchModal';
 
 // Minimal inline ornaments per subject
@@ -71,9 +71,10 @@ const ORNAMENTS: Record<string, React.FC> = {
   samhalle: SamhalleOrnament,
 };
 
-function SubjectCard({ subject, grade, onClick }: { subject: Subject; grade: number; onClick: () => void }) {
+function SubjectCard({ subject, grade, progress, onClick }: {
+  subject: Subject; grade: number; progress: ChapterProgress[]; onClick: () => void;
+}) {
   const chapters = getChaptersForSubjectAndGrade(subject.id, grade);
-  const progress = getProgress();
   const done = chapters.filter(c => progress.some(p => p.chapterId === c.id && p.completed)).length;
   const total = chapters.length;
   const pct = total > 0 ? Math.round((done / total) * 100) : 0;
@@ -137,17 +138,19 @@ function SubjectCard({ subject, grade, onClick }: { subject: Subject; grade: num
 }
 
 export default function SubjectSelect() {
-  const { selectSubject, setView, selectedGrade, openChapterStudy } = useApp();
+  const { setView, selectedGrade, openChapterStudy, selectSubject } = useApp();
   const grade = selectedGrade ?? 5;
   const [searchOpen, setSearchOpen] = useState(false);
 
-  function handleSearchSelect(subjectId: string, chapterId: string) {
-    const subject = SUBJECTS.find(s => s.id === subjectId);
+  // Läs sparad progress en gång per rendering i stället för en gång per ämneskort.
+  const progress = getProgress();
+  const subjects = useMemo(() => getSubjectsWithContent(grade), [grade]);
+
+  function handleSearchSelect(_subjectId: string, chapterId: string) {
     const chapter = ALL_CHAPTERS.find(c => c.id === chapterId);
-    if (subject && chapter) {
-      selectSubject(subject);
-      openChapterStudy(chapter);
-    }
+    // openChapterStudy synkar årskurs och ämne med kapitlet, så eleven inte
+    // hamnar i ett kapitel från en annan årskurs än den som är vald.
+    if (chapter) openChapterStudy(chapter);
   }
 
   return (
@@ -200,19 +203,35 @@ export default function SubjectSelect() {
         <div className="h-20 sm:h-28" />
       </div>
 
-      <main className="max-w-2xl mx-auto px-4 sm:px-6 pb-16 -mt-2 relative z-10">
+      <main className="max-w-2xl mx-auto px-4 sm:px-6 pb-24 -mt-2 relative z-10">
         <p className="text-center text-gray-500 font-semibold mb-4 text-sm">Välj ett ämne att öva på</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {SUBJECTS.map(subject => (
+          {subjects.map(subject => (
             <SubjectCard
               key={subject.id}
               subject={subject}
               grade={grade}
+              progress={progress}
               onClick={() => selectSubject(subject)}
             />
           ))}
         </div>
+
+        {subjects.length === 0 && (
+          <div className="text-center py-12 clay-card">
+            <p className="text-4xl mb-3">🚧</p>
+            <p className="font-bold text-gray-700 text-lg">Inget innehåll för Åk {grade} än</p>
+            <p className="text-gray-500 text-sm mt-1">Välj en annan årskurs så länge.</p>
+          </div>
+        )}
+
+        <button
+          onClick={() => setView('achievements')}
+          className="mt-6 w-full clay-card-sm py-3 flex items-center justify-center gap-2 text-sm font-black text-gray-600 transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+        >
+          🏆 Mina prestationer
+        </button>
       </main>
 
       {/* Contact footer */}

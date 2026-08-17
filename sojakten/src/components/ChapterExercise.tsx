@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { Exercise } from '../types';
 import AppHeader from './AppHeader';
@@ -17,21 +17,36 @@ export default function ChapterExercise() {
 
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<AnswerState[]>([]);
-  const [currentAnswer, setCurrentAnswer] = useState<AnswerState>('unanswered');
+  const [, setCurrentAnswer] = useState<AnswerState>('unanswered');
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  if (!selectedChapter || !selectedSubject) { setView('subject-select'); return null; }
+  const exercises = selectedChapter?.exercises ?? [];
+
+  useEffect(() => {
+    if (!selectedChapter || !selectedSubject) setView('subject-select');
+    else if (exercises.length === 0) setView('chapter-map');
+  }, [selectedChapter, selectedSubject, exercises.length, setView]);
+
+  // Avbryt en pågående "gå vidare"-timer om eleven lämnar vyn, annars kan den
+  // spara resultat och navigera efter att eleven redan tryckt tillbaka.
+  useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
+
+  if (!selectedChapter || !selectedSubject || exercises.length === 0) return null;
 
   const chapter = selectedChapter;
-  const exercises = chapter.exercises;
-  const exercise = exercises[currentIdx]!;
+  const exercise = exercises[currentIdx];
   const total = exercises.length;
   const correct = answers.filter(a => a === 'correct').length;
   const progressPct = Math.round((currentIdx / total) * 100);
 
+  if (!exercise) return null;
+
   function handleAnswer(isCorrect: boolean) {
+    if (timerRef.current) clearTimeout(timerRef.current);
     const state: AnswerState = isCorrect ? 'correct' : 'wrong';
     setCurrentAnswer(state);
-    setTimeout(() => {
+    timerRef.current = setTimeout(() => {
+      timerRef.current = null;
       const newAnswers = [...answers, state];
       if (currentIdx + 1 >= total) {
         submitChapterResult(
@@ -44,7 +59,7 @@ export default function ChapterExercise() {
         setCurrentIdx(currentIdx + 1);
         setCurrentAnswer('unanswered');
       }
-    }, currentAnswer === 'unanswered' ? 1200 : 0);
+    }, 1200);
   }
 
   function renderExercise(ex: Exercise) {

@@ -54,6 +54,14 @@ export const AK6_RELIGION: Chapter[] = [
         { statement: 'I Sverige måste alla tillhöra ett trossamfund.', isTrue: false, explanation: 'Fel! Religionsfriheten innebär att man INTE behöver tillhöra någon religion.' },
         { statement: 'Reinkarnation innebär att man tror att själen föds på nytt i en ny kropp efter döden.', isTrue: true, explanation: 'Rätt! Reinkarnation är en grundläggande tro inom hinduism och buddhism.' },
       ],
+      timeline: [
+        { year: '1593', title: 'Uppsala möte', description: 'Sverige bestämmer att hela landet ska ha en enda tro: den evangelisk-lutherska. Andra religioner var förbjudna.', wikiTitle: 'Uppsala möte' },
+        { year: '1860', title: 'Man får lämna Svenska kyrkan', description: 'För första gången blir det tillåtet att gå ur Svenska kyrkan – men bara om man går med i ett annat godkänt samfund.' },
+        { year: '1951', title: 'Religionsfrihet i Sverige', description: 'Nu får man tro på vad man vill – och även stå helt utanför alla trossamfund. Religionsfriheten blir lag.' },
+        { year: '1962', title: 'Skolan blir konfessionsfri', description: 'Ämnet kristendomskunskap blir religionskunskap. Skolan ska lära ut om religioner, inte fostra i en enda tro.' },
+        { year: '2000', title: 'Svenska kyrkan skiljs från staten', description: 'Sverige får ingen statskyrka längre. Alla trossamfund behandlas mer likvärdigt av staten.', wikiTitle: 'Svenska kyrkan' },
+        { year: '2000-talet', title: 'Ett mångreligiöst Sverige', description: 'Genom invandring finns i dag många religioner sida vid sida i Sverige. Samtidigt är landet ett av världens mest sekulariserade.' },
+      ],
     },
     exercises: [
       {
@@ -236,6 +244,14 @@ export const AK6_RELIGION: Chapter[] = [
         { statement: 'Bhagavad Gita är en av hinduismens viktigaste heliga texter.', isTrue: true, explanation: 'Rätt! Bhagavad Gita är en central hinduisk text om plikt, karma och befrielse.' },
         { statement: 'Kastsystemet är fortfarande lagligt i Indien.', isTrue: false, explanation: 'Fel! Kastsystemet är förbjudet i lag i Indien sedan 1950, men lever tyvärr kvar socialt på många håll.' },
       ],
+      timeline: [
+        { year: 'ca 1500–500 f.Kr.', title: 'Vedatiden', description: 'Hinduismens äldsta heliga skrifter, Veda, växer fram i norra Indien. De sjungs och lärs ut långt innan de skrivs ner.', wikiTitle: 'Veda' },
+        { year: 'ca 800–500 f.Kr.', title: 'Upanishaderna skrivs', description: 'Nya texter om Brahman, karma och reinkarnation. Här formas tanken om moksha – befrielsen från återfödelsens cykel.' },
+        { year: 'ca 200 f.Kr.–200 e.Kr.', title: 'Bhagavad Gita', description: 'En av hinduismens mest älskade texter blir till: ett samtal mellan prins Arjuna och guden Krishna om plikt och karma.', wikiTitle: 'Bhagavad Gita' },
+        { year: '400–1300-talet', title: 'Hinduismen sprids i Asien', description: 'Genom handel och kultur når hinduismen Sydostasien. Stora tempel byggs, till exempel Angkor Vat i Kambodja.' },
+        { year: '1900-talet', title: 'Gandhi och ahimsa', description: 'Mahatma Gandhi använder ahimsa – principen om icke-våld – i kampen för Indiens frihet. Indien blir självständigt 1947.' },
+        { year: '1950', title: 'Kastsystemet förbjuds i lag', description: 'Indiens nya grundlag förbjuder diskriminering på grund av kast. Men systemet lever tyvärr kvar socialt på många håll.' },
+      ],
     },
     exercises: [
       {
@@ -416,6 +432,15 @@ export const AK6_RELIGION: Chapter[] = [
         { statement: 'Dharmahjulets åtta ekrar symboliserar den åttafaldiga vägen.', isTrue: true, explanation: 'Rätt! Dharmahjulet är buddhismens symbol och hjulets åtta ekrar symboliserar den åttafaldiga vägen.' },
         { statement: 'Theravada och Mahayana är de två huvudgrenarna inom hinduismen.', isTrue: false, explanation: 'Fel! Theravada och Mahayana är de två huvudgrenarna inom BUDDHISMEN (inte hinduismen).' },
         { statement: 'Dalai Lama är den andlige ledaren för tibetansk buddhism.', isTrue: true, explanation: 'Rätt! Dalai Lama är den andlige ledaren för den tibetanska buddhismens Gelugpa-skola.' },
+      ],
+      timeline: [
+        { year: 'ca 563 f.Kr.', title: 'Siddharta Gautama föds', description: 'En prins föds i Lumbini i dagens Nepal. Han växer upp skyddad i ett palats utan att se sjukdom eller sorg.', wikiTitle: 'Buddha' },
+        { year: 'ca 528 f.Kr.', title: 'Uppvaknandet under bodhiträdet', description: 'Efter många år som sökare når Siddharta upplysning under ett fikonträd i Bodh Gaya. Han kallas nu Buddha, "den upplyste".' },
+        { year: 'ca 528 f.Kr.', title: 'Den första predikan', description: 'I Sarnath lär Buddha ut de fyra ädla sanningarna och den åttafaldiga vägen för första gången. Sanghan – munkarnas gemenskap – bildas.' },
+        { year: 'ca 483 f.Kr.', title: 'Buddha dör', description: 'Buddha dör vid ungefär 80 års ålder. Hans lära (dharma) förs vidare muntligt av munkarna.' },
+        { year: '200-talet f.Kr.', title: 'Kejsar Ashoka sprider buddhismen', description: 'Den indiske kejsaren Ashoka blir buddhist och skickar ut sändebud. Buddhismen når Sri Lanka och sprids sedan vidare i Asien.', wikiTitle: 'Ashoka' },
+        { year: 'ca 100 e.Kr.', title: 'Theravada och Mahayana skiljs åt', description: 'Buddhismen delas i två huvudgrenar. Theravada blir störst i Sydostasien, Mahayana i Östasien och Tibet.' },
+        { year: '1959', title: 'Dalai Lama flyr till Indien', description: 'Efter ett uppror mot Kina flyr Tibets andlige ledare till Indien. Där leder han den tibetanska buddhismen i exil.', wikiTitle: 'Dalai Lama' },
       ],
     },
     exercises: [

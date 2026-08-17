@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { AppProvider, useApp } from './contexts/AppContext';
 import GradeSelect from './components/GradeSelect';
-import GradeComingSoon from './components/GradeComingSoon';
-import SubjectSelect from './components/SubjectSelect';
-import ChapterMap from './components/ChapterMap';
-import ChapterStudy from './components/ChapterStudy';
-import ChapterExercise from './components/ChapterExercise';
-import ChapterResult from './components/ChapterResult';
-import ExitTicket from './components/ExitTicket';
-import Achievements from './components/Achievements';
+
+// Alla vyer utom startsidan laddas först när de behövs. Kapiteldata (~320 kB källkod)
+// hamnar därmed i ett eget paket som hämtas när eleven valt årskurs.
+const SubjectSelect   = lazy(() => import('./components/SubjectSelect'));
+const ChapterMap      = lazy(() => import('./components/ChapterMap'));
+const ChapterStudy    = lazy(() => import('./components/ChapterStudy'));
+const ChapterExercise = lazy(() => import('./components/ChapterExercise'));
+const ChapterResult   = lazy(() => import('./components/ChapterResult'));
+const ExitTicket      = lazy(() => import('./components/ExitTicket'));
+const Achievements    = lazy(() => import('./components/Achievements'));
 
 class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   constructor(props: { children: React.ReactNode }) { super(props); this.state = { hasError: false }; }
@@ -31,11 +33,18 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
   }
 }
 
+function Loading() {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <p className="text-sm font-black text-gray-400">Laddar …</p>
+    </div>
+  );
+}
+
 function AppInner() {
   const { currentView } = useApp();
   switch (currentView) {
     case 'grade-select':     return <GradeSelect />;
-    case 'grade-coming-soon': return <GradeComingSoon />;
     case 'subject-select':   return <SubjectSelect />;
     case 'chapter-map':      return <ChapterMap />;
     case 'chapter-study':    return <ChapterStudy />;
@@ -51,7 +60,9 @@ export default function App() {
   return (
     <ErrorBoundary>
       <AppProvider>
-        <AppInner />
+        <Suspense fallback={<Loading />}>
+          <AppInner />
+        </Suspense>
       </AppProvider>
     </ErrorBoundary>
   );

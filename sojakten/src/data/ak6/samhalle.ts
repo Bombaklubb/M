@@ -52,6 +52,16 @@ export const AK6_SAMHALLE: Chapter[] = [
         { statement: 'Tryckfrihetsförordningen antogs 1766 och är en av Sveriges grundlagar.', isTrue: true, explanation: 'Rätt! Tryckfrihetsförordningen 1766 är en av världens äldsta och en av Sveriges fyra grundlagar.' },
         { statement: 'En filterbubblor gör att man ser ett varierat utbud av åsikter och nyheter.', isTrue: false, explanation: 'Fel! Filterbubblor gör TVÄRTOM – man ser bara åsikter man håller med om.' },
       ],
+      timeline: [
+        { year: 'ca 1450', title: 'Tryckpressen uppfinns', description: 'Johann Gutenberg bygger en press med lösa bokstäver. Böcker och flygblad kan spridas i massor – information når plötsligt många människor.', wikiTitle: 'Johann Gutenberg' },
+        { year: '1645', title: 'Sveriges första tidning', description: 'Post- och Inrikes Tidningar börjar ges ut och räknas som världens äldsta tidning som fortfarande finns kvar.' },
+        { year: '1766', title: 'Tryckfrihetsförordningen', description: 'Sverige får världens första tryckfrihetslag. Journalister kan granska makten utan att staten först godkänner texten.', wikiTitle: 'Tryckfrihetsförordningen' },
+        { year: '1925', title: 'Radion startar i Sverige', description: 'Regelbundna radiosändningar börjar. Detta är starten på det som i dag kallas public service.' },
+        { year: '1956', title: 'TV kommer till Sverige', description: 'Regelbundna TV-sändningar inleds. I många år finns bara en eller två kanaler och nästan alla ser samma nyheter.' },
+        { year: '1990-talet', title: 'Internet öppnas för alla', description: 'Webben blir tillgänglig i hem och skolor. Nu kan vem som helst publicera utan redaktör som kontrollerar fakta först.' },
+        { year: '2000-talet', title: 'Sociala medier tar över', description: 'Facebook, YouTube, Instagram och TikTok växer fram. Algoritmer bestämmer vad du ser, och filterbubblor uppstår.' },
+        { year: 'I dag', title: 'Källkritik blir livsviktigt', description: 'Desinformation och AI-skapade bilder sprids snabbt. Att granska vem som säger något, när och varför är en demokratisk färdighet.' },
+      ],
     },
     exercises: [
       {
@@ -231,6 +241,15 @@ export const AK6_SAMHALLE: Chapter[] = [
         { statement: 'Man kan överklaga en dom från tingsrätten till hovrätten.', isTrue: true, explanation: 'Rätt! Det svenska rättssystemet har tre instanser: tingsrätt → hovrätt → Högsta domstolen.' },
         { statement: 'Vittnen i en rättegång berättar om vad de sett eller hört.', isTrue: true, explanation: 'Rätt! Vittnen spelar en viktig roll genom att berätta vad de iakttagit.' },
         { statement: 'Ungdomar under 15 år som begår brott döms till fängelse precis som vuxna.', isTrue: false, explanation: 'Fel! Under 15 år är man inte straffmyndig – socialtjänsten hanterar dessa fall, inte fängelse.' },
+      ],
+      timeline: [
+        { year: '1200-talet', title: 'Landskapslagarna skrivs ner', description: 'Varje landskap har egna lagar, till exempel Västgötalagen. Nu skrivs de ner i stället för att bara läras ut muntligt.' },
+        { year: 'ca 1350', title: 'En gemensam landslag', description: 'Magnus Erikssons landslag gäller i hela riket. Samma regler ska nu gälla oavsett var i Sverige man bor.' },
+        { year: '1734', title: '1734 års lag', description: 'En stor lagbok för hela Sverige antas. Den delas in i balkar – ett sätt att ordna lagar som används än i dag.' },
+        { year: '1921', title: 'Dödsstraffet avskaffas', description: 'Sverige förbjuder dödsstraff i fredstid. Synen på straff förändras: samhället ska skyddas, inte hämnas.' },
+        { year: '1965', title: 'Brottsbalken träder i kraft', description: 'Sveriges samlade strafflag börjar gälla. Här står vilka handlingar som är brott och vilka straff som kan dömas ut.' },
+        { year: '1974', title: 'Ny regeringsform', description: 'Grundlagen slår fast att all offentlig makt utgår från folket, och att domstolarna ska vara självständiga.' },
+        { year: '2020', title: 'Barnkonventionen blir lag', description: 'FN:s barnkonvention från 1989 blir svensk lag. Domstolar och myndigheter måste väga in vad som är bäst för barnet.', wikiTitle: 'Barnkonventionen' },
       ],
     },
     exercises: [

@@ -1,16 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { RotateCcw } from 'lucide-react';
 import Celebration from '../Celebration';
 
-export default function SantFalsktTab({ items, progressHex, accentHex }: {
+export default function SantFalsktTab({ items, progressHex }: {
   items: { statement: string; isTrue: boolean; explanation: string }[];
   progressHex: string;
-  accentHex: string;
 }) {
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState<boolean | null>(null);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
 
   if (items.length === 0) return <p className="text-sm text-gray-500 text-center py-8">Inga sant/falskt-påståenden finns för det här kapitlet.</p>;
 
@@ -21,13 +23,18 @@ export default function SantFalsktTab({ items, progressHex, accentHex }: {
     if (answered !== null) return;
     setAnswered(choice);
     if (choice === current.isTrue) setScore(s => s + 1);
-    setTimeout(() => {
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => {
+      timer.current = null;
       if (idx + 1 >= total) { setDone(true); }
       else { setIdx(i => i + 1); setAnswered(null); }
     }, 1100);
   }
 
-  function reset() { setIdx(0); setAnswered(null); setScore(0); setDone(false); }
+  function reset() {
+    if (timer.current) { clearTimeout(timer.current); timer.current = null; }
+    setIdx(0); setAnswered(null); setScore(0); setDone(false);
+  }
 
   if (done) return (
     <div className="clay-card p-6 text-center">

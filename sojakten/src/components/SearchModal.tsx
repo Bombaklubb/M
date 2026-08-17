@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { Search, X } from 'lucide-react';
 import { ALL_CHAPTERS, SUBJECTS } from '../data/subjects';
 
@@ -15,6 +15,7 @@ interface SearchResult {
   chapterId: string;
   subjectId: string;
   subjectEmoji: string;
+  grade?: string;
 }
 
 export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalProps) {
@@ -39,7 +40,7 @@ export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalPr
     return () => window.removeEventListener('keydown', handleKey);
   }, [isOpen, onClose]);
 
-  const results: SearchResult[] = (() => {
+  const results: SearchResult[] = useMemo(() => {
     if (!query.trim()) return [];
     const q = query.toLowerCase();
     const hits: SearchResult[] = [];
@@ -61,13 +62,14 @@ export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalPr
             chapterId: chapter.id,
             subjectId: subject.id,
             subjectEmoji: subject.emoji,
+            grade: chapter.grade,
           });
           if (hits.length >= 20) return hits;
         }
       }
     }
     return hits;
-  })();
+  }, [query]);
 
   if (!isOpen) return null;
 
@@ -76,6 +78,9 @@ export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalPr
       className="fixed inset-0 z-50 flex items-start justify-center pt-16 px-4"
       style={{ background: 'rgba(0,0,0,0.45)' }}
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Sök begrepp"
     >
       <div
         className="bg-white rounded-2xl shadow-xl w-full max-w-lg overflow-hidden"
@@ -126,7 +131,14 @@ export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalPr
                         <p className="text-xs text-gray-500 leading-relaxed mt-0.5 line-clamp-2">
                           {r.definition.length > 80 ? r.definition.slice(0, 80) + '…' : r.definition}
                         </p>
-                        <p className="text-xs font-semibold text-gray-400 mt-1">{r.chapterTitle}</p>
+                        <p className="text-xs font-semibold text-gray-400 mt-1">
+                          {r.chapterTitle}
+                          {r.grade && (
+                            <span className="ml-1.5 px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500">
+                              Åk {r.grade}
+                            </span>
+                          )}
+                        </p>
                       </div>
                     </div>
                   </button>

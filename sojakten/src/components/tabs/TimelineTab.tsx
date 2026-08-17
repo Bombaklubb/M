@@ -2,13 +2,12 @@ import { useState, useEffect } from 'react';
 import { TimelineEvent } from '../../types';
 import { fetchWikiImage } from '../../utils/imageCache';
 
-export default function TimelineTab({ events, progressHex, inkHex, accentHex }: {
+export default function TimelineTab({ events, progressHex }: {
   events: TimelineEvent[];
   progressHex: string;
-  inkHex: string;
-  accentHex: string;
 }) {
   const [images, setImages] = useState<Record<string, string | null>>({});
+  const eventsKey = events.map(e => e.wikiTitle ?? '').join('|');
 
   useEffect(() => {
     let cancelled = false;
@@ -21,7 +20,8 @@ export default function TimelineTab({ events, progressHex, inkHex, accentHex }: 
     }
     fetchAll();
     return () => { cancelled = true; };
-  }, [events.map(e => e.wikiTitle).join()]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- eventsKey speglar events; att lägga in arrayen skulle hämta bilder vid varje rendering
+  }, [eventsKey]);
 
   return (
     <div className="relative">
@@ -44,9 +44,9 @@ export default function TimelineTab({ events, progressHex, inkHex, accentHex }: 
               <div className="flex-1 clay-card p-4 pb-3">
                 <p className="font-heading font-bold text-gray-800 text-base mb-1">{event.title}</p>
                 {img && (
-                  <img src={img} alt={event.title}
+                  <img src={img} alt={event.title} loading="lazy" width={640} height={130}
                     className="rounded-xl object-cover w-full mb-2"
-                    style={{ maxHeight: '130px', objectPosition: 'center' }} />
+                    style={{ height: '130px', objectPosition: 'center' }} />
                 )}
                 <p className="text-sm text-gray-600 leading-relaxed">{event.description}</p>
               </div>

@@ -1,6 +1,6 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { useApp } from '../contexts/AppContext';
-import { Exercise, MultipleChoiceExercise, TrueFalseExercise, FillInExercise } from '../types';
+import { Exercise, MultipleChoiceExercise, FillInExercise } from '../types';
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 import Celebration from './Celebration';
 
@@ -20,26 +20,43 @@ function pickThree(exercises: Exercise[]): Exercise[] {
 }
 
 export default function ExitTicket() {
-  const { exitTicketChapter, setView, selectedSubject } = useApp();
+  const { exitTicketChapter, setView, selectedSubject, exitTicketReturnView } = useApp();
   const exercises = useMemo(() => exitTicketChapter ? pickThree(exitTicketChapter.exercises) : [], [exitTicketChapter]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<AnswerState[]>([]);
   const [currentAnswer, setCurrentAnswer] = useState<AnswerState>('unanswered');
   const [inputValue, setInputValue] = useState('');
   const [done, setDone] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  if (!exitTicketChapter || !selectedSubject) { setView('subject-select'); return null; }
+  useEffect(() => {
+    if (!exitTicketChapter || !selectedSubject) setView('subject-select');
+  }, [exitTicketChapter, selectedSubject, setView]);
+
+  useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
+
+  if (!exitTicketChapter || !selectedSubject) return null;
 
   const ex = exercises[currentIdx];
+  const total = exercises.length;
   const correct = answers.filter(a => a === 'correct').length;
+  // Snabbkoll startas bara för kapitel med övningar, men vyn ska ändå inte
+  // krascha om urvalet mot förmodan blir tomt.
+  if (total === 0) return null;
+
+  /** Var eleven ska hamna när Snabbkollen stängs eller är klar. */
+  function leave() {
+    setView(exitTicketReturnView === 'exit-ticket' ? 'chapter-map' : exitTicketReturnView);
+  }
 
   function handleAnswer(isCorrect: boolean) {
     if (currentAnswer !== 'unanswered') return;
     const state: AnswerState = isCorrect ? 'correct' : 'wrong';
     setCurrentAnswer(state);
-    setTimeout(() => {
+    timerRef.current = setTimeout(() => {
+      timerRef.current = null;
       const newAnswers = [...answers, state];
-      if (currentIdx + 1 >= exercises.length) {
+      if (currentIdx + 1 >= total) {
         setAnswers(newAnswers);
         setDone(true);
       } else {
@@ -57,7 +74,6 @@ export default function ExitTicket() {
         <div className="space-y-2">
           {e.options.map((opt, i) => {
             const isCorrect = i === e.correctIndex;
-            const isSelected = currentAnswer !== 'unanswered' && i === e.correctIndex;
             let cls = 'w-full text-left p-3 rounded-xl border-2 text-sm font-semibold transition-all';
             if (currentAnswer === 'unanswered') cls += ' border-gray-200 bg-white hover:bg-indigo-50 cursor-pointer';
             else if (isCorrect) cls += ' border-green-400 bg-green-50';
@@ -151,11 +167,11 @@ export default function ExitTicket() {
   if (done) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-6">
-        {correct === 3 && <Celebration />}
+        {correct === total && <Celebration />}
         <div className="max-w-sm w-full text-center">
-          <div className="text-6xl mb-4">{correct === 3 ? '🎉' : correct >= 2 ? '👍' : '💪'}</div>
+          <div className="text-6xl mb-4">{correct === total ? '🎉' : correct >= total / 2 ? '👍' : '💪'}</div>
           <h1 className="text-2xl font-heading font-bold text-gray-800 mb-2">Snabbkoll klar!</h1>
-          <p className="text-gray-500 font-semibold mb-6">{correct}/3 rätt</p>
+          <p className="text-gray-500 font-semibold mb-6">{correct}/{total} rätt</p>
           <div className="flex justify-center gap-3 mb-8">
             {answers.map((a, i) => (
               a === 'correct'
@@ -164,10 +180,10 @@ export default function ExitTicket() {
             ))}
           </div>
           <button
-            onClick={() => setView('chapter-study')}
+            onClick={leave}
             className="btn-primary-clay w-full py-4 flex items-center justify-center gap-2 font-heading text-base"
           >
-            Tillbaka till sammanfattning <ArrowRight size={18} />
+            Klar <ArrowRight size={18} />
           </button>
         </div>
       </div>
@@ -179,24 +195,28 @@ export default function ExitTicket() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="header-bar px-4 py-3 flex items-center gap-3">
-        <button onClick={() => setView('chapter-study')} className="w-10 h-10 rounded-xl bg-indigo-50 border-2 border-indigo-200 flex items-center justify-center hover:bg-indigo-100 active:scale-95 transition-all cursor-pointer">
+        <button
+          onClick={leave}
+          className="w-10 h-10 rounded-xl bg-indigo-50 border-2 border-indigo-200 flex items-center justify-center hover:bg-indigo-100 active:scale-95 transition-all cursor-pointer"
+          aria-label="Avsluta snabbkoll"
+        >
           ✕
         </button>
         <div className="flex-1">
           <p className="font-heading font-bold text-amber-600 text-base">⚡ Snabbkoll</p>
           <p className="text-xs text-gray-400 font-semibold">{exitTicketChapter.title}</p>
         </div>
-        <span className="text-sm font-black text-gray-400">{currentIdx + 1}/3</span>
+        <span className="text-sm font-black text-gray-400">{currentIdx + 1}/{total}</span>
       </header>
 
       {/* Progress */}
       <div className="h-2 bg-gray-100">
-        <div className="h-full bg-amber-400 transition-all duration-500" style={{ width: `${((currentIdx) / 3) * 100}%` }} />
+        <div className="h-full bg-amber-400 transition-all duration-500" style={{ width: `${(currentIdx / total) * 100}%` }} />
       </div>
 
       <main className="flex-1 p-4 sm:p-6 max-w-2xl w-full mx-auto">
         <div className="clay-card p-5 sm:p-6 mt-2">
-          <p className="text-xs font-black text-amber-600 uppercase tracking-wide mb-3">{LABELS[currentIdx]}</p>
+          <p className="text-xs font-black text-amber-600 uppercase tracking-wide mb-3">{LABELS[currentIdx] ?? 'Fråga'}</p>
           <p className="font-heading font-bold text-gray-800 text-lg mb-5">{ex.question}</p>
           {renderExercise(ex)}
           {currentAnswer !== 'unanswered' && ex.explanation && (

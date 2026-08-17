@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { shuffle } from '../utils/shuffle';
 import { fetchConceptImage } from '../utils/imageCache';
@@ -25,9 +25,16 @@ export default function ChapterStudy() {
   const [testAnswered, setTestAnswered] = useState<number | null>(null);
   const [testScore, setTestScore] = useState(0);
   const [testDone, setTestDone] = useState(false);
+  const testTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => () => { if (testTimer.current) clearTimeout(testTimer.current); }, []);
 
   const chapterId = selectedChapter?.id ?? '';
-  const concepts = selectedChapter?.summary?.concepts ?? [];
+  // Memoiseras så att effekter och useMemo nedan får en stabil referens.
+  const concepts = useMemo(
+    () => selectedChapter?.summary?.concepts ?? [],
+    [selectedChapter],
+  );
 
   const testQuestions = useMemo(() => {
     if (concepts.length < 2) return [];
@@ -44,7 +51,7 @@ export default function ChapterStudy() {
         options,
       };
     });
-  }, [chapterId]);
+  }, [concepts]);
 
   // Fetch Wikipedia thumbnails for all concepts on mount (cachas i sessionStorage,
   // och respekterar wikiTitle-fältet per begrepp)
@@ -61,7 +68,7 @@ export default function ChapterStudy() {
     }
     fetchImages();
     return () => { cancelled = true; };
-  }, [chapterId]);
+  }, [chapterId, concepts]);
 
   if (!selectedChapter || !selectedSubject) return null;
 
@@ -76,20 +83,23 @@ export default function ChapterStudy() {
     const idx = testQuestions[testIdx]?.options.indexOf(option) ?? -1;
     setTestAnswered(idx);
     if (option === testQuestions[testIdx]?.correct) setTestScore(n => n + 1);
-    setTimeout(() => {
+    if (testTimer.current) clearTimeout(testTimer.current);
+    testTimer.current = setTimeout(() => {
+      testTimer.current = null;
       if (testIdx + 1 >= testQuestions.length) setTestDone(true);
       else { setTestIdx(i => i + 1); setTestAnswered(null); }
     }, 900);
   }
 
   function resetTest() {
+    if (testTimer.current) { clearTimeout(testTimer.current); testTimer.current = null; }
     setTestIdx(0); setTestAnswered(null); setTestScore(0); setTestDone(false);
   }
 
   function toggleConcept(i: number) {
     setRevealedConcepts(prev => {
       const next = new Set(prev);
-      next.has(i) ? next.delete(i) : next.add(i);
+      if (next.has(i)) next.delete(i); else next.add(i);
       return next;
     });
   }
@@ -107,6 +117,19 @@ export default function ChapterStudy() {
     'tidslinje':   '📅 Tidslinje',
   };
 
+  // Bara de flikar som faktiskt har innehåll i det här kapitlet.
+  const availableTabs = (Object.keys(TAB_LABELS) as StudyTab[]).filter(tab => {
+    if (tab === 'tidslinje') return !!summary.timeline?.length;
+    if (tab === 'sant-falskt') return !!summary.trueFalse?.length;
+    return true;
+  });
+
+  /** Byter flik och nollställer testet så att poängen inte följer med mellan lägen. */
+  function switchTab(tab: StudyTab) {
+    setActiveTab(tab);
+    resetTest();
+  }
+
   return (
     <div className={`min-h-screen flex flex-col ${s.pageBgClass}`}>
       <AppHeader
@@ -118,6 +141,32 @@ export default function ChapterStudy() {
         headingFont={s.headingFont}
         titleStyle={{ color: s.inkHex }}
       />
+
+      {/* Flikväxlare – eleven kan byta övningsläge utan att gå tillbaka till kartan */}
+      <nav
+        className="sticky top-0 z-30 overflow-x-auto border-b"
+        style={{ background: `${s.progressHex}0a`, borderColor: `${s.progressHex}25` }}
+        aria-label="Övningslägen"
+      >
+        <div className="flex gap-1.5 px-3 py-2 w-max">
+          {availableTabs.map(tab => {
+            const active = tab === activeTab;
+            return (
+              <button
+                key={tab}
+                onClick={() => switchTab(tab)}
+                aria-current={active ? 'page' : undefined}
+                className="whitespace-nowrap min-h-[38px] px-3 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer"
+                style={active
+                  ? { background: s.progressHex, color: 'white', border: `2px solid ${s.progressHex}` }
+                  : { background: 'rgba(255,255,255,0.7)', color: s.progressHex, border: `2px solid ${s.progressHex}30` }}
+              >
+                {TAB_LABELS[tab]}
+              </button>
+            );
+          })}
+        </div>
+      </nav>
 
       <main className="flex-1 max-w-2xl w-full mx-auto p-4 sm:p-6 pb-10">
 
@@ -168,8 +217,9 @@ export default function ChapterStudy() {
                               <img
                                 src={img}
                                 alt={concept.term}
+                                loading="lazy" width={640} height={140}
                                 className="mt-2 mb-2 rounded-xl object-cover w-full"
-                                style={{ maxHeight: '140px', objectPosition: 'center' }}
+                                style={{ height: '140px', objectPosition: 'center' }}
                               />
                             )}
                             <p className="text-sm text-gray-600 mt-1 leading-relaxed">{concept.definition}</p>
@@ -234,7 +284,7 @@ export default function ChapterStudy() {
 
         {/* --- SANT ELLER FALSKT --- */}
         {activeTab === 'sant-falskt' && (
-          <SantFalsktTab items={summary.trueFalse ?? []} progressHex={s.progressHex} accentHex={s.accentHex} />
+          <SantFalsktTab items={summary.trueFalse ?? []} progressHex={s.progressHex} />
         )}
 
         {/* --- MATCHA BEGREPP --- */}
@@ -244,7 +294,7 @@ export default function ChapterStudy() {
 
         {/* --- TIDSLINJE --- */}
         {activeTab === 'tidslinje' && (
-          <TimelineTab events={summary.timeline ?? []} progressHex={s.progressHex} inkHex={s.inkHex} accentHex={s.accentHex} />
+          <TimelineTab events={summary.timeline ?? []} progressHex={s.progressHex} />
         )}
 
         {/* --- WORD SEARCH --- */}
