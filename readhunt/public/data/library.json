@@ -5020,7 +5020,7 @@
     "genre": "non-fiction",
     "theme": "gaming",
     "title": "How Video Games Are Made",
-    "text": "Have you ever wondered how your favourite video game was created? Behind every game is a team of people with very different skills, often working together for several years.\n\nIt all starts with an idea. Game designers decide what the game will be about: the story, the characters, and the rules. They ask questions like: What makes this game fun? What can the player do? What happens if the player fails?\n\nThen the artists get to work. They draw the characters, build the worlds, and decide how everything should look — from giant mountains to the smallest button on the screen. Musicians and sound designers create the music and sound effects that make the game feel alive.\n\nProgrammers write the code that makes everything work. Code is a set of instructions that tells the computer exactly what to do — for example, what happens when you press a button, or how high a character can jump.\n\nBefore a game is released, testers play it over and over to find bugs. A bug is a mistake in the game, like a door that will not open or a character that gets stuck in a wall. The team fixes the bugs, tests again, and polishes the game until it is ready.\n\nSmall games can be made by just one or two people. The biggest games are built by teams of hundreds. But every game, big or small, starts the same way: with an idea and someone who wants to bring it to life.",
+    "text": "Have you ever wondered how your favourite video game was created? Behind every game is a team of people with very different skills, often working together for several years.\n\nIt all starts with an idea. Game designers decide what the game will be about: the story, the characters, and the rules. They ask questions like: What makes this game fun? What can the player do? What happens if the player fails?\n\nThen the artists get to work. They draw the characters, build the worlds, and decide how everything should look — from giant mountains to the smallest button on the screen. Musicians and sound designers create the music and sound effects that make the game feel alive.\n\nProgrammers write the code that makes everything work. Code is a set of instructions that tells the computer exactly what to do — for example, what happens when you press a button, or how high a character can jump.\n\nBefore a game is released, testers play it over and over to find bugs. A bug is a mistake in the game, like a door that will not open or a character that gets stuck in a wall. The team fixes the bugs, tests again, and polishes the game until it is ready.\n\nSmall games can be made by just one or two people. The biggest games are built by teams of hundreds. But every game, big or small, starts the same way: with an idea and someone who wants to bring it to life.\n\nOnce a game is released, the work often continues. Teams read player feedback, repair problems that only appear when thousands of people play at once, and sometimes add new levels months later. Many games today are never really finished — they keep changing as long as people keep playing them. That is why a studio often keeps a small team on a game for years after launch.",
     "imageUrl": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
     "questions": [
       {
@@ -5066,10 +5066,32 @@
           "Only huge teams can make games"
         ],
         "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What happens to a game after it is released?",
+        "options": [
+          "The team starts a new project at once",
+          "Teams read feedback and repair problems",
+          "The game is never changed again",
+          "Testers finally begin playing it"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why does a studio keep a small team on a game after launch?",
+        "options": [
+          "To train new employees cheaply",
+          "Because the code must be rewritten every year",
+          "Because games keep changing while people play them",
+          "To lower the price of the game"
+        ],
+        "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 251,
+      "wordCount": 318,
       "readingTime": 2
     }
   },
@@ -5079,7 +5101,7 @@
     "genre": "non-fiction",
     "theme": "horses",
     "title": "Taking Care of a Horse",
-    "text": "Many people dream of having their own horse, but taking care of one is a big responsibility. A horse needs attention every single day, all year round.\n\nFood and water come first. A horse eats mostly grass and hay, and it needs a lot — up to ten kilograms of hay every day. It also needs fresh water, sometimes more than 30 litres a day. In winter, when the water in the trough can freeze, someone has to make sure the horse can still drink.\n\nGrooming is also important. Brushing removes dirt and loose hair, and it helps the person spot cuts or swellings early. The hooves must be cleaned out with a hoof pick, because small stones can get stuck and cause pain. Every six to eight weeks, a farrier — a hoof expert — visits to trim the hooves or change the horseshoes.\n\nHorses also need exercise and company. In the wild, horses live in herds and walk many kilometres every day. A horse that stands alone in a stable becomes bored and sometimes sick. That is why horses do best when they can be outside with other horses.\n\nTaking care of a horse takes several hours every day. But people who love horses say the friendship you get back is worth every minute.",
+    "text": "Many people dream of having their own horse, but taking care of one is a big responsibility. A horse needs attention every single day, all year round.\n\nFood and water come first. A horse eats mostly grass and hay, and it needs a lot — up to ten kilograms of hay every day. It also needs fresh water, sometimes more than 30 litres a day. In winter, when the water in the trough can freeze, someone has to make sure the horse can still drink.\n\nGrooming is also important. Brushing removes dirt and loose hair, and it helps the person spot cuts or swellings early. The hooves must be cleaned out with a hoof pick, because small stones can get stuck and cause pain. Every six to eight weeks, a farrier — a hoof expert — visits to trim the hooves or change the horseshoes.\n\nHorses also need exercise and company. In the wild, horses live in herds and walk many kilometres every day. A horse that stands alone in a stable becomes bored and sometimes sick. That is why horses do best when they can be outside with other horses.\n\nTaking care of a horse takes several hours every day. But people who love horses say the friendship you get back is worth every minute.\n\nOwning a horse is also expensive. Besides hay and bedding, there are regular visits from a vet, vaccinations, and insurance. Riding schools are therefore a common first step: students learn to handle horses without owning one. Many stables let young people help with mucking out and feeding in exchange for riding time. Instructors say this is the best way to learn, because caring for a horse teaches patience and clear communication long before anyone climbs into the saddle. In Sweden, riding is one of the largest youth sports.",
     "imageUrl": "https://images.unsplash.com/photo-1450052590821-8bf91254a353?w=800&q=80",
     "questions": [
       {
@@ -5088,19 +5110,19 @@
         "options": [
           "Up to two kilograms",
           "Up to five kilograms",
-          "Up to ten kilograms",
-          "Up to thirty kilograms"
+          "Up to thirty kilograms",
+          "Up to ten kilograms"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "literal",
         "q": "What does a farrier do?",
         "options": [
-          "Feeds the horse",
+          "Cleans the stable",
           "Takes care of the hooves and horseshoes",
-          "Trains the horse for competitions",
-          "Cleans the stable"
+          "Feeds the horse",
+          "Trains the horse for competitions"
         ],
         "correct": 1
       },
@@ -5108,28 +5130,50 @@
         "type": "inference",
         "q": "Why is brushing about more than keeping the horse clean?",
         "options": [
+          "It is required by law",
           "It makes the horse run faster",
           "It helps discover injuries early",
-          "It is required by law",
           "It keeps the horse warm in winter"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "Why do horses do best outside with other horses?",
         "options": [
           "Stables are always too small",
+          "Horses dislike people",
           "Grass only grows outdoors",
-          "Horses are herd animals that need company and movement",
-          "Horses dislike people"
+          "Horses are herd animals that need company and movement"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Which costs does the text mention besides hay and bedding?",
+        "options": [
+          "Vet visits, vaccinations and insurance",
+          "Stable rent and electricity",
+          "A new saddle every year",
+          "Transport to competitions"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do instructors recommend helping at a stable?",
+        "options": [
+          "Horses work better with young helpers",
+          "It is cheaper than buying hay",
+          "Caring for a horse teaches patience and clear communication",
+          "It guarantees a place in competitions"
         ],
         "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 216,
-      "readingTime": 1
+      "wordCount": 304,
+      "readingTime": 2
     }
   },
   {
@@ -5138,7 +5182,7 @@
     "genre": "fiction",
     "theme": "technology",
     "title": "The First Ride",
-    "text": "When Elias turned eleven, he became fascinated by motorcycles. He did not ride one himself, but he loved reading magazines, watching races, and learning how engines worked. One weekend, his aunt Sofia invited him to a motorcycle exhibition in a nearby city. The event displayed many different models, from small commuter bikes to powerful touring motorcycles designed for long journeys. Elias carefully studied each machine and asked questions about safety equipment, fuel systems, and maintenance. A mechanic explained that responsible riders spend time checking brakes, tires, and lights before every trip. Elias was surprised to learn that preparation was often more important than speed. During the exhibition, visitors could also try a riding simulator. The simulator taught balance, steering, and hazard awareness without using a real motorcycle. Elias enjoyed the challenge and improved after several attempts. Later, he attended a presentation about road safety. The speaker emphasized that helmets, protective clothing, and good judgment reduce risks significantly. On the way home, Elias realized that motorcycles were not only exciting machines. They also required knowledge, patience, and responsibility. He decided to continue learning about transportation technology and promised himself that if he ever became a rider in the future, safety would always come first.",
+    "text": "When Elias turned eleven, he became fascinated by motorcycles. He did not ride one himself, but he loved reading magazines, watching races, and learning how engines worked. One weekend, his aunt Sofia invited him to a motorcycle exhibition in a nearby city. The event displayed many different models, from small commuter bikes to powerful touring motorcycles designed for long journeys. Elias carefully studied each machine and asked questions about safety equipment, fuel systems, and maintenance. A mechanic explained that responsible riders spend time checking brakes, tires, and lights before every trip. Elias was surprised to learn that preparation was often more important than speed. During the exhibition, visitors could also try a riding simulator. The simulator taught balance, steering, and hazard awareness without using a real motorcycle. Elias enjoyed the challenge and improved after several attempts. Later, he attended a presentation about road safety. The speaker emphasized that helmets, protective clothing, and good judgment reduce risks significantly. Before leaving, Elias also visited a stand about licences. He learned that in most countries a rider must be at least sixteen for a light motorcycle and pass both a theory test and a practical test. The examiner checks not only control of the machine but also how the rider reads traffic and plans ahead. Another stand displayed electric motorcycles, which are almost silent and have no gears. Elias found them strange at first, but a rider explained that quiet engines make it easier to hear other traffic in a busy city. He wrote the details in a notebook so he would not forget them. On the way home, Elias realized that motorcycles were not only exciting machines. They also required knowledge, patience, and responsibility. He decided to continue learning about transportation technology and promised himself that if he ever became a rider in the future, safety would always come first.",
     "imageUrl": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&h=380&fit=crop",
     "questions": [
       {
@@ -5209,8 +5253,8 @@
       }
     ],
     "meta": {
-      "wordCount": 203,
-      "readingTime": 1
+      "wordCount": 308,
+      "readingTime": 2
     }
   },
   {
@@ -5219,7 +5263,7 @@
     "genre": "fiction",
     "theme": "nature",
     "title": "A Journey Across the Mountains",
-    "text": "Mina and her grandfather Lars shared an interest in motorcycles and travel. During the summer holiday, they planned a trip through several mountain regions. Mina was not old enough to ride, but she enjoyed helping with navigation and planning. Before leaving, Lars checked the motorcycle carefully. He inspected the tires, adjusted the chain, tested the lights, and packed emergency supplies. Mina created a route that included small villages, scenic viewpoints, and historical landmarks. As they traveled, the weather changed frequently. Bright sunshine could quickly become heavy rain in the mountains. Because of this, they carried waterproof clothing and followed weather forecasts closely. Along the way, they met riders from different countries who shared stories about their journeys. Some preferred long-distance touring motorcycles, while others enjoyed lighter machines for winding roads. One afternoon, a road was temporarily closed because workers were repairing a damaged bridge. Instead of becoming frustrated, Mina suggested an alternative route. The detour led them through a forest area with beautiful lakes and wildlife. By the end of the trip, both travelers agreed that flexibility had improved the adventure. They had seen impressive landscapes, learned about local history, and practiced careful travel planning. The experience taught Mina that successful journeys depend not only on transportation but also on preparation, cooperation, and the ability to adapt when unexpected situations appear.",
+    "text": "Mina and her grandfather Lars shared an interest in motorcycles and travel. During the summer holiday, they planned a trip through several mountain regions. Mina was not old enough to ride, but she enjoyed helping with navigation and planning. Before leaving, Lars checked the motorcycle carefully. He inspected the tires, adjusted the chain, tested the lights, and packed emergency supplies. Mina created a route that included small villages, scenic viewpoints, and historical landmarks. As they traveled, the weather changed frequently. Bright sunshine could quickly become heavy rain in the mountains. Because of this, they carried waterproof clothing and followed weather forecasts closely. Along the way, they met riders from different countries who shared stories about their journeys. Some preferred long-distance touring motorcycles, while others enjoyed lighter machines for winding roads. One afternoon, a road was temporarily closed because workers were repairing a damaged bridge. Instead of becoming frustrated, Mina suggested an alternative route. The detour led them through a forest area with beautiful lakes and wildlife. On the fourth day they stopped at a small museum about mountain roads. A guide explained that many of the passes were built by hand more than a hundred years ago, and that some of the old stone walls are still standing. Mina wrote the dates in her notebook. Later that day they helped a rider whose chain had come loose, and Lars showed Mina how to tighten it correctly. She was surprised how quickly a small problem could stop a whole journey. By the end of the trip, both travelers agreed that flexibility had improved the adventure. They had seen impressive landscapes, learned about local history, and practiced careful travel planning. The experience taught Mina that successful journeys depend not only on transportation but also on preparation, cooperation, and the ability to adapt when unexpected situations appear.",
     "imageUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=380&fit=crop",
     "questions": [
       {
@@ -5290,8 +5334,8 @@
       }
     ],
     "meta": {
-      "wordCount": 221,
-      "readingTime": 1
+      "wordCount": 304,
+      "readingTime": 2
     }
   },
   {
@@ -5300,7 +5344,7 @@
     "genre": "non-fiction",
     "theme": "history",
     "title": "Building a Motorcycle Museum",
-    "text": "A small town wanted to attract more visitors and celebrate its transportation history. Community leaders decided to create a motorcycle museum in an old factory building. Many residents contributed photographs, tools, riding equipment, and stories from earlier decades. Noor, a twelve-year-old student, volunteered to help organize information for visitors. She interviewed former riders and recorded details about how motorcycles had changed over time. Early models were often simpler and less comfortable than modern machines. Advances in engineering improved reliability, fuel efficiency, and safety features. Noor discovered that motorcycles had been used for many purposes, including commuting, deliveries, recreation, and competitive racing. To make the museum engaging, volunteers created interactive displays. Visitors could compare engine designs, examine historical maps, and listen to recorded interviews. One section focused on environmental developments, explaining how manufacturers have worked to reduce emissions and improve efficiency. When the museum finally opened, people from nearby regions came to explore the exhibits. Teachers organized school visits, and local businesses noticed increased activity. Noor felt proud because her research helped preserve valuable community knowledge. She learned that museums do more than display objects. They also protect stories, encourage curiosity, and help people understand how technology and society influence one another across generations.",
+    "text": "A small town wanted to attract more visitors and celebrate its transportation history. Community leaders decided to create a motorcycle museum in an old factory building. Many residents contributed photographs, tools, riding equipment, and stories from earlier decades. Noor, a twelve-year-old student, volunteered to help organize information for visitors. She interviewed former riders and recorded details about how motorcycles had changed over time. Early models were often simpler and less comfortable than modern machines. Advances in engineering improved reliability, fuel efficiency, and safety features. Noor discovered that motorcycles had been used for many purposes, including commuting, deliveries, recreation, and competitive racing. To make the museum engaging, volunteers created interactive displays. Visitors could compare engine designs, examine historical maps, and listen to recorded interviews. One section focused on environmental developments, explaining how manufacturers have worked to reduce emissions and improve efficiency. One display caused a long discussion among the volunteers. It was a helmet from the 1950s, made of thin leather with no hard shell. Noor wanted to show it beside a modern helmet so visitors could see the difference. An older rider explained that in those days many people rode without any helmet at all, and that laws requiring them came much later. The volunteers agreed that showing old equipment honestly was more useful than making the past look better than it was. They wrote a short sign explaining what had changed and why. Noor read it aloud to check that it was easy to understand. When the museum finally opened, people from nearby regions came to explore the exhibits. Teachers organized school visits, and local businesses noticed increased activity. Noor felt proud because her research helped preserve valuable community knowledge. She learned that museums do more than display objects. They also protect stories, encourage curiosity, and help people understand how technology and society influence one another across generations.",
     "imageUrl": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&h=380&fit=crop",
     "questions": [
       {
@@ -5371,8 +5415,8 @@
       }
     ],
     "meta": {
-      "wordCount": 203,
-      "readingTime": 1
+      "wordCount": 309,
+      "readingTime": 2
     }
   },
   {
@@ -5381,7 +5425,7 @@
     "genre": "non-fiction",
     "theme": "science",
     "title": "The Electric Motorcycle Project",
-    "text": "At Green Valley School, a group of students joined an after-school engineering club. Their mentor challenged them to design a model electric motorcycle that demonstrated efficient energy use. The project did not involve a full-sized vehicle. Instead, the students built a small working prototype powered by rechargeable batteries. Among the team members were Hugo, Selma, and Robin, who each contributed different skills. Hugo enjoyed mechanical design, Selma focused on research, and Robin analyzed test results. During the first trials, the prototype moved slowly and stopped frequently. The students investigated possible causes and discovered that some parts created unnecessary friction. After making adjustments, the model traveled farther on the same amount of stored energy. The team also compared different battery types and measured performance carefully. They recorded data in charts and discussed ways to improve efficiency without increasing weight. At a regional science event, the students presented their findings to judges and visitors. Many people were interested in how electric transportation could reduce emissions in the future. Although another team won the top prize, the club received recognition for clear research methods and teamwork. The experience showed that engineering often involves testing ideas repeatedly, learning from mistakes, and making gradual improvements until a better solution is achieved.",
+    "text": "At Green Valley School, a group of students joined an after-school engineering club. Their mentor challenged them to design a model electric motorcycle that demonstrated efficient energy use. The project did not involve a full-sized vehicle. Instead, the students built a small working prototype powered by rechargeable batteries. Among the team members were Hugo, Selma, and Robin, who each contributed different skills. Hugo enjoyed mechanical design, Selma focused on research, and Robin analyzed test results. During the first trials, the prototype moved slowly and stopped frequently. The students investigated possible causes and discovered that some parts created unnecessary friction. After making adjustments, the model traveled farther on the same amount of stored energy. The team also compared different battery types and measured performance carefully. They recorded data in charts and discussed ways to improve efficiency without increasing weight. The club also had to solve a problem they had not expected. The prototype was fastest when the batteries were fully charged, but the results changed as the charge dropped, which made early tests hard to compare. Robin suggested measuring every run at the same charge level. It took longer, but the numbers finally made sense. Selma found a study explaining why battery voltage falls unevenly, and the group added a short summary of it to their report. Their mentor said that noticing the flaw in their own method was the most scientific thing they had done all term. At a regional science event, the students presented their findings to judges and visitors. Many people were interested in how electric transportation could reduce emissions in the future. Although another team won the top prize, the club received recognition for clear research methods and teamwork. The experience showed that engineering often involves testing ideas repeatedly, learning from mistakes, and making gradual improvements until a better solution is achieved.",
     "imageUrl": "https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?w=600&h=380&fit=crop",
     "questions": [
       {
@@ -5452,8 +5496,8 @@
       }
     ],
     "meta": {
-      "wordCount": 206,
-      "readingTime": 1
+      "wordCount": 305,
+      "readingTime": 2
     }
   },
   {
@@ -5462,7 +5506,7 @@
     "genre": "fiction",
     "theme": "art",
     "title": "The Lost Painting",
-    "text": "Mila visited her grandfather every Saturday. He lived in a small town near the sea and spent most of his time painting pictures of boats, birds, and old buildings. One rainy afternoon, Mila noticed an empty space on the wall in his studio. A lighter square showed where a painting had once hung.\n\nHer grandfather looked worried when she asked about it. He explained that the missing painting was his favorite work. He had painted it many years earlier after traveling through northern Sweden with his best friend Elias. The painting showed a frozen lake under a sky filled with green northern lights.\n\nGrandfather believed the painting had been lost during a local art show the month before. Mila decided to help him search for it. They visited the community center, the library, and even the bakery where local artists sometimes displayed their work.\n\nAt the bakery, the owner remembered seeing a man carrying a large framed picture. Mila noticed flour on the floor leading toward a storage room. Inside, hidden behind boxes of cups and napkins, stood the missing painting.\n\nThe bakery owner apologized immediately. She explained that she had moved the painting to protect it after a pipe leaked water near the front window. Then she forgot to return it.\n\nMila's grandfather smiled with relief. Instead of feeling angry, he thanked the owner for trying to keep the painting safe. Later that evening, he told Mila that art was important, but memories connected to people mattered even more.",
+    "text": "Mila visited her grandfather every Saturday. He lived in a small town near the sea and spent most of his time painting pictures of boats, birds, and old buildings. One rainy afternoon, Mila noticed an empty space on the wall in his studio. A lighter square showed where a painting had once hung.\n\nHer grandfather looked worried when she asked about it. He explained that the missing painting was his favorite work. He had painted it many years earlier after traveling through northern Sweden with his best friend Elias. The painting showed a frozen lake under a sky filled with green northern lights.\n\nGrandfather believed the painting had been lost during a local art show the month before. Mila decided to help him search for it. They visited the community center, the library, and even the bakery where local artists sometimes displayed their work.\n\nAt the bakery, the owner remembered seeing a man carrying a large framed picture. Mila noticed flour on the floor leading toward a storage room. Inside, hidden behind boxes of cups and napkins, stood the missing painting.\n\nThe bakery owner apologized immediately. She explained that she had moved the painting to protect it after a pipe leaked water near the front window. Then she forgot to return it.\n\nMila's grandfather smiled with relief. Instead of feeling angry, he thanked the owner for trying to keep the painting safe. Before they left, the owner asked whether she could hang the painting in the bakery for a month, with a small card naming the artist. Grandfather hesitated, then agreed. He said the frozen lake had been sitting in a dark studio for years, and that a picture no one sees is only half finished.\n\nLater that evening, he told Mila that art was important, but memories connected to people mattered even more.",
     "questions": [
       {
         "type": "literal",
@@ -5532,10 +5576,7 @@
       }
     ],
     "meta": {
-      "wordCount": 250,
-      "fingerprint": "ak5-tema-001",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
+      "wordCount": 304,
       "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80"
@@ -5546,7 +5587,7 @@
     "genre": "non-fiction",
     "theme": "science",
     "title": "The Science of Sleep",
-    "text": "Many people believe that sleep is simply a time when the body rests. Scientists, however, have discovered that the brain remains very active during sleep. While sleeping, the body repairs muscles, stores memories, and prepares for the next day.\n\nDuring the night, people move through different stages of sleep. One stage is called deep sleep. In this stage, breathing slows down, and the body relaxes completely. Deep sleep is important because it helps the body recover after physical activity.\n\nAnother stage is called REM sleep. REM stands for rapid eye movement. During REM sleep, the eyes move quickly under closed eyelids, and most dreams occur. Researchers believe REM sleep helps people learn and remember information.\n\nLack of sleep can cause several problems. Students who do not sleep enough may have difficulty concentrating in school. They can also become more stressed or forgetful. Doctors often recommend that children around eleven years old sleep between nine and eleven hours each night.\n\nTechnology can also affect sleep quality. Bright screens from phones, tablets, and computers send signals to the brain that make it harder to feel tired. Experts suggest turning off screens at least one hour before bedtime.\n\nGood sleep habits are sometimes called 'sleep hygiene.' These habits include going to bed at the same time every night, avoiding large meals before sleeping, and keeping bedrooms dark and quiet.\n\nScientists continue to study sleep because they know it affects learning, emotions, and physical health. Although people spend many years of their lives sleeping, researchers still have much to discover about why sleep is so important.",
+    "text": "Many people believe that sleep is simply a time when the body rests. Scientists, however, have discovered that the brain remains very active during sleep. While sleeping, the body repairs muscles, stores memories, and prepares for the next day.\n\nDuring the night, people move through different stages of sleep. One stage is called deep sleep. In this stage, breathing slows down, and the body relaxes completely. Deep sleep is important because it helps the body recover after physical activity.\n\nAnother stage is called REM sleep. REM stands for rapid eye movement. During REM sleep, the eyes move quickly under closed eyelids, and most dreams occur. Researchers believe REM sleep helps people learn and remember information.\n\nLack of sleep can cause several problems. Students who do not sleep enough may have difficulty concentrating in school. They can also become more stressed or forgetful. Doctors often recommend that children around eleven years old sleep between nine and eleven hours each night.\n\nTechnology can also affect sleep quality. Bright screens from phones, tablets, and computers send signals to the brain that make it harder to feel tired. Experts suggest turning off screens at least one hour before bedtime.\n\nGood sleep habits are sometimes called 'sleep hygiene.' These habits include going to bed at the same time every night, avoiding large meals before sleeping, and keeping bedrooms dark and quiet.\n\nSleep needs also change with age. Teenagers naturally become tired later in the evening, which is one reason many find early school starts difficult. Some schools have tested later start times and reported that students arrived more alert and missed fewer lessons.\n\nScientists continue to study sleep because they know it affects learning, emotions, and physical health. Although people spend many years of their lives sleeping, researchers still have much to discover about why sleep is so important.",
     "questions": [
       {
         "type": "literal",
@@ -5616,10 +5657,7 @@
       }
     ],
     "meta": {
-      "wordCount": 262,
-      "fingerprint": "ak5-tema-002",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
+      "wordCount": 304,
       "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=800&q=80"
@@ -5630,7 +5668,7 @@
     "genre": "fiction",
     "theme": "community",
     "title": "A Team for Everyone",
-    "text": "At Riverdale School, the sports club had always focused on football and basketball. Many students enjoyed those activities, but others felt left out. Some students preferred quieter games, while others had physical disabilities that made certain sports difficult.\n\nOne autumn, the student council decided to create a new activity week called 'Move Together.' The goal was to design games that everyone could join.\n\nNora, who used a wheelchair, suggested wheelchair floor hockey. Amir wanted to include table tennis because players of different ages could compete together. Alex, who identified as non-binary, organized a dance workshop where students learned simple routines in groups.\n\nAt first, some students complained that the new activities would not be exciting enough. However, many changed their minds after trying them. During wheelchair hockey, students quickly discovered that controlling the chair while moving the ball required balance and teamwork.\n\nThe dance workshop became popular because students could create their own movements instead of following strict rules. Teachers noticed that students who were usually shy began speaking more confidently during group activities.\n\nThe school also invited older residents from a nearby retirement home. They taught students traditional games from different countries and shared stories about sports they had played when they were younger.\n\nBy the end of the week, students realized that competition was not the only purpose of sports. Activities could also help people cooperate, communicate, and understand each other better.\n\nThe principal decided that 'Move Together' would become a yearly tradition. The school even added several new clubs, including adaptive sports and community dance.\n\nMany students later said the week changed how they thought about physical activity. Instead of asking who was the fastest or strongest, they started asking how everyone could participate and enjoy themselves together.",
+    "text": "At Riverdale School, the sports club had always focused on football and basketball. Many students enjoyed those activities, but others felt left out. Some students preferred quieter games, while others had physical disabilities that made certain sports difficult.\n\nOne autumn, the student council decided to create a new activity week called 'Move Together.' The goal was to design games that everyone could join.\n\nNora, who used a wheelchair, suggested wheelchair floor hockey. Amir wanted to include table tennis because players of different ages could compete together. Alex, who identified as non-binary, organized a dance workshop where students learned simple routines in groups.\n\nAt first, some students complained that the new activities would not be exciting enough. However, many changed their minds after trying them. During wheelchair hockey, students quickly discovered that controlling the chair while moving the ball required balance and teamwork.\n\nThe dance workshop became popular because students could create their own movements instead of following strict rules. Teachers noticed that students who were usually shy began speaking more confidently during group activities.\n\nThe school also invited older residents from a nearby retirement home. They taught students traditional games from different countries and shared stories about sports they had played when they were younger.\n\nBy the end of the week, students realized that competition was not the only purpose of sports. Activities could also help people cooperate, communicate, and understand each other better.\n\nThe principal decided that 'Move Together' would become a yearly tradition. The school even added several new clubs, including adaptive sports and community dance.\n\nA teacher noted that attendance in PE rose during the week, including among students who usually asked to sit out.\n\nMany students later said the week changed how they thought about physical activity. Instead of asking who was the fastest or strongest, they started asking how everyone could participate and enjoy themselves together.",
     "questions": [
       {
         "type": "literal",
@@ -5700,10 +5738,7 @@
       }
     ],
     "meta": {
-      "wordCount": 291,
-      "fingerprint": "ak5-tema-003",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
+      "wordCount": 311,
       "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1469573054742-64da3f2527fc?w=700&h=420&fit=crop"
@@ -5714,7 +5749,7 @@
     "genre": "non-fiction",
     "theme": "nature",
     "title": "The Mystery of the Deep Ocean",
-    "text": "The ocean covers more than seventy percent of Earth's surface, yet scientists know less about the deep ocean than they know about the Moon. The deepest parts of the sea are difficult to explore because of freezing temperatures, complete darkness, and extremely high pressure.\n\nFor many years, researchers believed very little life could survive in such conditions. However, modern technology has changed that idea. Special underwater vehicles with strong lights and cameras have discovered unusual animals living thousands of meters below the surface.\n\nOne famous example is the anglerfish. This fish uses a glowing light near its mouth to attract prey in the darkness. Giant tube worms, another deep-sea species, survive near underwater volcanoes where hot chemicals rise from cracks in the ocean floor.\n\nScientists also study the deep ocean because it may help people understand climate change. Oceans absorb large amounts of heat and carbon dioxide from the atmosphere. Deep ocean currents move this heat around the planet and influence weather patterns.\n\nExploring the deep sea is expensive and dangerous. Research submarines must be carefully designed to survive the pressure. Even small mistakes can damage equipment.\n\nDespite these challenges, countries and universities continue sending teams to explore the ocean floor. Researchers hope to discover new species, study unknown ecosystems, and learn more about Earth's history.\n\nSome scientists believe important medical discoveries may also come from deep-sea organisms. Certain animals produce chemicals that could someday help create new medicines.\n\nAlthough humans have explored space for decades, the deep ocean remains one of the least understood places on Earth. Each expedition reveals new information and reminds scientists how much is still waiting to be discovered beneath the waves.",
+    "text": "The ocean covers more than seventy percent of Earth's surface, yet scientists know less about the deep ocean than they know about the Moon. The deepest parts of the sea are difficult to explore because of freezing temperatures, complete darkness, and extremely high pressure.\n\nFor many years, researchers believed very little life could survive in such conditions. However, modern technology has changed that idea. Special underwater vehicles with strong lights and cameras have discovered unusual animals living thousands of meters below the surface.\n\nOne famous example is the anglerfish. This fish uses a glowing light near its mouth to attract prey in the darkness. Giant tube worms, another deep-sea species, survive near underwater volcanoes where hot chemicals rise from cracks in the ocean floor.\n\nScientists also study the deep ocean because it may help people understand climate change. Oceans absorb large amounts of heat and carbon dioxide from the atmosphere. Deep ocean currents move this heat around the planet and influence weather patterns.\n\nExploring the deep sea is expensive and dangerous. Research submarines must be carefully designed to survive the pressure. Even small mistakes can damage equipment.\n\nDespite these challenges, countries and universities continue sending teams to explore the ocean floor. Researchers hope to discover new species, study unknown ecosystems, and learn more about Earth's history.\n\nSome scientists believe important medical discoveries may also come from deep-sea organisms. Certain animals produce chemicals that could someday help create new medicines.\n\nSome of the most surprising finds are not creatures at all. Researchers have mapped underwater mountains taller than any peak on land, and canyons that no map had recorded.\n\nAlthough humans have explored space for decades, the deep ocean remains one of the least understood places on Earth. Each expedition reveals new information and reminds scientists how much is still waiting to be discovered beneath the waves.",
     "questions": [
       {
         "type": "literal",
@@ -5784,10 +5819,7 @@
       }
     ],
     "meta": {
-      "wordCount": 277,
-      "fingerprint": "ak5-tema-004",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
+      "wordCount": 306,
       "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/flagged/photo-1575377071396-9cb0f9982776?w=700&h=420&fit=crop"
@@ -5798,7 +5830,7 @@
     "genre": "non-fiction",
     "theme": "food-science",
     "title": "The History of Chocolate",
-    "text": "Chocolate is one of the world's most popular foods, but its history began thousands of years ago in Central America. Ancient civilizations such as the Maya and the Aztecs used cacao beans to make a bitter drink mixed with spices and water.\n\nCacao beans were extremely valuable. In some areas, people even used them as money. Historical records show that workers could buy food or clothing with small amounts of cacao.\n\nWhen European explorers arrived in the Americas during the 1500s, they brought cacao back to Europe. At first, chocolate remained expensive because cacao plants only grew in warm climates. Wealthy families often drank hot chocolate during social gatherings.\n\nOver time, people began adding sugar and milk to improve the taste. During the Industrial Revolution, new machines made it possible to produce chocolate more quickly and cheaply. As a result, chocolate became available to more people.\n\nToday, cacao is grown in many tropical countries, especially in West Africa and South America. Farmers carefully remove cacao beans from large pods, dry them in the sun, and ship them to factories.\n\nModern chocolate production also raises important questions about fairness and the environment. Some companies now sell 'fair trade' chocolate, which aims to ensure farmers receive better pay for their work.\n\nScientists have studied chocolate as well. Dark chocolate contains substances called antioxidants, which may provide certain health benefits when eaten in small amounts. However, doctors still recommend moderation because chocolate products often contain large amounts of sugar.\n\nFrom ancient ceremonies to modern candy stores, chocolate has traveled across continents and cultures. Its long history shows how a simple bean became an important product enjoyed by millions of people around the world.",
+    "text": "Chocolate is one of the world's most popular foods, but its history began thousands of years ago in Central America. Ancient civilizations such as the Maya and the Aztecs used cacao beans to make a bitter drink mixed with spices and water.\n\nCacao beans were extremely valuable. In some areas, people even used them as money. Historical records show that workers could buy food or clothing with small amounts of cacao.\n\nWhen European explorers arrived in the Americas during the 1500s, they brought cacao back to Europe. At first, chocolate remained expensive because cacao plants only grew in warm climates. Wealthy families often drank hot chocolate during social gatherings.\n\nOver time, people began adding sugar and milk to improve the taste. During the Industrial Revolution, new machines made it possible to produce chocolate more quickly and cheaply. As a result, chocolate became available to more people.\n\nToday, cacao is grown in many tropical countries, especially in West Africa and South America. Farmers carefully remove cacao beans from large pods, dry them in the sun, and ship them to factories.\n\nModern chocolate production also raises important questions about fairness and the environment. Some companies now sell 'fair trade' chocolate, which aims to ensure farmers receive better pay for their work.\n\nScientists have studied chocolate as well. Dark chocolate contains substances called antioxidants, which may provide certain health benefits when eaten in small amounts. However, doctors still recommend moderation because chocolate products often contain large amounts of sugar.\n\nToday most cocoa is grown by small farms in West Africa, and organisations work to make sure the farmers who grow the beans receive a fair share of the price.\n\nFrom ancient ceremonies to modern candy stores, chocolate has traveled across continents and cultures. Its long history shows how a simple bean became an important product enjoyed by millions of people around the world.",
     "questions": [
       {
         "type": "literal",
@@ -5868,10 +5900,7 @@
       }
     ],
     "meta": {
-      "wordCount": 280,
-      "fingerprint": "ak5-tema-005",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
+      "wordCount": 310,
       "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=800&q=80"
@@ -5882,7 +5911,7 @@
     "genre": "fiction",
     "theme": "community",
     "title": "The Mountain Rescue Team",
-    "text": "Every winter, the small town of Silver Ridge attracted hundreds of tourists who came to ski in the nearby mountains. Although the snowy landscape looked peaceful, the area could become dangerous when storms arrived suddenly. Because of this, the town relied heavily on a volunteer mountain rescue team trained to help injured or lost visitors.\n\nFifteen-year-old Clara had always admired the rescue workers. Her mother had been part of the team for many years, and Clara often listened to stories about difficult rescues during heavy snowstorms. Wanting to contribute, Clara joined a youth training program organized by the rescue team. The participants learned how to read weather reports, use emergency radios, and safely guide people through icy conditions.\n\nOne Saturday afternoon, a powerful storm began earlier than expected while several tourists were skiing on the mountain trails. Visibility quickly became poor, and the rescue center received reports that two visitors were missing. Clara's mother and the other volunteers prepared to search the area immediately. Since Clara had completed basic safety training, she was allowed to assist at the communication center.\n\nThroughout the evening, Clara answered radio messages, updated maps, and helped organize information about the weather conditions. Although she was nervous, she remained calm and focused. Several hours later, the rescue team successfully located the missing tourists inside a small emergency shelter near the forest.\n\nThe next day, the town newspaper praised both the volunteers and the young trainees who supported the rescue effort. Clara realized that helping others did not always require dramatic actions. Sometimes responsibility, teamwork, and careful communication were just as important as bravery.",
+    "text": "Every winter, the small town of Silver Ridge attracted hundreds of tourists who came to ski in the nearby mountains. Although the snowy landscape looked peaceful, the area could become dangerous when storms arrived suddenly. Because of this, the town relied heavily on a volunteer mountain rescue team trained to help injured or lost visitors.\n\nFifteen-year-old Clara had always admired the rescue workers. Her mother had been part of the team for many years, and Clara often listened to stories about difficult rescues during heavy snowstorms. Wanting to contribute, Clara joined a youth training program organized by the rescue team. The participants learned how to read weather reports, use emergency radios, and safely guide people through icy conditions.\n\nOne Saturday afternoon, a powerful storm began earlier than expected while several tourists were skiing on the mountain trails. Visibility quickly became poor, and the rescue center received reports that two visitors were missing. Clara's mother and the other volunteers prepared to search the area immediately. Since Clara had completed basic safety training, she was allowed to assist at the communication center.\n\nThroughout the evening, Clara answered radio messages, updated maps, and helped organize information about the weather conditions. Although she was nervous, she remained calm and focused. Several hours later, the rescue team successfully located the missing tourists inside a small emergency shelter near the forest.\n\nAfterwards, Clara understood why the leader had repeated the same checklist before they set out: radios tested, batteries charged, everyone paired with a partner. It had sounded slow at the time, but during the search nobody had to ask what to do next.\n\nThe next day, the town newspaper praised both the volunteers and the young trainees who supported the rescue effort. Clara realized that helping others did not always require dramatic actions. Sometimes responsibility, teamwork, and careful communication were just as important as bravery.",
     "questions": [
       {
         "type": "literal",
@@ -5952,7 +5981,7 @@
       }
     ],
     "meta": {
-      "wordCount": 267,
+      "wordCount": 310,
       "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
@@ -5963,7 +5992,7 @@
     "genre": "non-fiction",
     "theme": "history",
     "title": "The History of Paper",
-    "text": "Today, paper is such a common material that many people rarely think about where it comes from or how important it has been throughout history. However, the invention of paper changed communication, education, and culture across the world.\n\nBefore paper became widely available, people wrote on many different materials. Ancient Egyptians used papyrus, which was made from a plant growing near the Nile River. In other regions, people carved messages into stone or wrote on animal skins called parchment. These materials were often expensive or difficult to produce.\n\nHistorians believe that paper was first developed in China around two thousand years ago. Early paper makers used natural materials such as tree bark, old fishing nets, and cloth fibers. The process involved mixing the materials with water until they formed a soft pulp. The pulp was then spread into thin sheets and left to dry.\n\nAs trade routes expanded, knowledge about paper production spread to the Middle East and later to Europe. By the fifteenth century, the invention of the printing press increased the demand for paper dramatically because books could now be produced much faster than before. This development helped more people gain access to education and scientific knowledge.\n\nModern paper production is highly industrialized, and many factories now focus on recycling to reduce environmental damage. Scientists are also researching alternative materials, such as bamboo and agricultural waste, to create more sustainable paper products in the future.\n\nAlthough digital technology has reduced the use of printed materials in some areas, paper continues to play an important role in schools, businesses, and daily life around the world.",
+    "text": "Today, paper is such a common material that many people rarely think about where it comes from or how important it has been throughout history. However, the invention of paper changed communication, education, and culture across the world.\n\nBefore paper became widely available, people wrote on many different materials. Ancient Egyptians used papyrus, which was made from a plant growing near the Nile River. In other regions, people carved messages into stone or wrote on animal skins called parchment. These materials were often expensive or difficult to produce.\n\nHistorians believe that paper was first developed in China around two thousand years ago. Early paper makers used natural materials such as tree bark, old fishing nets, and cloth fibers. The process involved mixing the materials with water until they formed a soft pulp. The pulp was then spread into thin sheets and left to dry.\n\nAs trade routes expanded, knowledge about paper production spread to the Middle East and later to Europe. By the fifteenth century, the invention of the printing press increased the demand for paper dramatically because books could now be produced much faster than before. This development helped more people gain access to education and scientific knowledge.\n\nModern paper production is highly industrialized, and many factories now focus on recycling to reduce environmental damage. Scientists are also researching alternative materials, such as bamboo and agricultural waste, to create more sustainable paper products in the future.\n\nRecycling has become part of the story too. Old paper can be pulped and pressed into new sheets several times before the fibres become too short to hold together. In many countries, more than half of all paper is now made from recycled material.\n\nAlthough digital technology has reduced the use of printed materials in some areas, paper continues to play an important role in schools, businesses, and daily life around the world.",
     "questions": [
       {
         "type": "literal",
@@ -6033,7 +6062,7 @@
       }
     ],
     "meta": {
-      "wordCount": 266,
+      "wordCount": 310,
       "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800&q=80"
@@ -6044,7 +6073,7 @@
     "genre": "non-fiction",
     "theme": "environment",
     "title": "The Community Garden Project",
-    "text": "In the center of Maplewood City, an empty parking lot stood unused for many years. Trash often collected there, and local residents complained that the area looked unsafe and unattractive. Instead of waiting for the city government to solve the problem, a group of neighbors decided to transform the space into a community garden.\n\nThe project brought together people from different backgrounds and age groups. Some volunteers had experience growing vegetables, while others knew how to build wooden benches and planting boxes. A retired engineer named Luis designed a system to collect rainwater for watering the plants. Meanwhile, two teenagers, Amira and Joel, created social media pages to share updates and invite more volunteers.\n\nDuring the first few months, the work was exhausting. The volunteers removed garbage, repaired broken fences, and prepared the soil for planting. Despite the challenges, the group continued meeting every weekend because they believed the garden could improve the neighborhood.\n\nBy summer, tomatoes, carrots, herbs, and flowers filled the once-empty lot. Families began spending time there after school and work, and local restaurants even purchased some of the fresh vegetables. The garden also became a place where residents could exchange ideas and learn from one another.\n\nCity officials later recognized the project as an example of successful community cooperation. For many volunteers, however, the most important result was not the vegetables themselves. It was the stronger sense of connection and trust that developed among people who had previously been strangers.",
+    "text": "In the center of Maplewood City, an empty parking lot stood unused for many years. Trash often collected there, and local residents complained that the area looked unsafe and unattractive. Instead of waiting for the city government to solve the problem, a group of neighbors decided to transform the space into a community garden.\n\nThe project brought together people from different backgrounds and age groups. Some volunteers had experience growing vegetables, while others knew how to build wooden benches and planting boxes. A retired engineer named Luis designed a system to collect rainwater for watering the plants. Meanwhile, two teenagers, Amira and Joel, created social media pages to share updates and invite more volunteers.\n\nDuring the first few months, the work was exhausting. The volunteers removed garbage, repaired broken fences, and prepared the soil for planting. Despite the challenges, the group continued meeting every weekend because they believed the garden could improve the neighborhood.\n\nBy summer, tomatoes, carrots, herbs, and flowers filled the once-empty lot. Families began spending time there after school and work, and local restaurants even purchased some of the fresh vegetables. The garden also became a place where residents could exchange ideas and learn from one another.\n\nNot everything grew well. The first summer, the tomato plants closest to the fence produced almost nothing, and nobody could explain why. A retired gardener suggested measuring the sunlight at different times of day. The group discovered that the fence threw a shadow over that corner all morning. They moved the tomatoes and planted lettuce there instead, which needed less light.\n\nCity officials later recognized the project as an example of successful community cooperation. For many volunteers, however, the most important result was not the vegetables themselves. It was the stronger sense of connection and trust that developed among people who had previously been strangers.",
     "questions": [
       {
         "type": "literal",
@@ -6114,7 +6143,7 @@
       }
     ],
     "meta": {
-      "wordCount": 244,
+      "wordCount": 305,
       "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1652040004005-249f3db952ab?w=700&h=420&fit=crop"
@@ -6125,7 +6154,7 @@
     "genre": "fiction",
     "theme": "technology",
     "title": "The Young Game Designer",
-    "text": "Since childhood, thirteen-year-old Naomi had loved playing adventure video games that involved solving puzzles and exploring fictional worlds. Over time, however, she became more interested in how games were created than simply playing them. She began watching online tutorials about programming, animation, and sound design.\n\nUsing free software on her laptop, Naomi started developing her own game after school. The story followed a group of explorers traveling through different planets while solving environmental problems. Players needed to cooperate, collect information, and make thoughtful decisions instead of relying on violence or competition.\n\nCreating the game was more difficult than Naomi expected. Sometimes the characters stopped moving correctly, and certain levels became impossible to complete because of programming errors. Instead of quitting, Naomi searched for solutions in online communities where experienced developers shared advice and explained common mistakes.\n\nAfter nearly a year of work, Naomi presented the game at a local technology fair. Visitors appreciated the creative graphics and the educational message about protecting natural resources. Several younger students especially enjoyed the teamwork elements because they could play together instead of competing against each other.\n\nAt the end of the event, a software company offered Naomi an opportunity to attend a summer workshop for young creators interested in technology and digital storytelling. Although Naomi was proud of the recognition, she believed the most valuable part of the experience was learning how persistence and creativity could turn an idea into reality.",
+    "text": "Since childhood, thirteen-year-old Naomi had loved playing adventure video games that involved solving puzzles and exploring fictional worlds. Over time, however, she became more interested in how games were created than simply playing them. She began watching online tutorials about programming, animation, and sound design.\n\nUsing free software on her laptop, Naomi started developing her own game after school. The story followed a group of explorers traveling through different planets while solving environmental problems. Players needed to cooperate, collect information, and make thoughtful decisions instead of relying on violence or competition.\n\nCreating the game was more difficult than Naomi expected. Sometimes the characters stopped moving correctly, and certain levels became impossible to complete because of programming errors. Instead of quitting, Naomi searched for solutions in online communities where experienced developers shared advice and explained common mistakes.\n\nAfter nearly a year of work, Naomi presented the game at a local technology fair. Visitors appreciated the creative graphics and the educational message about protecting natural resources. Several younger students especially enjoyed the teamwork elements because they could play together instead of competing against each other.\n\nNaomi's first version of the game had a problem she had not expected. Players finished the second level so quickly that they never noticed the puzzle she was most proud of. She watched three testers play without saying anything, which was harder than she thought, and then moved the puzzle to the entrance of the level. The next testers stopped, looked around, and solved it. Naomi learned to watch instead of explain.\n\nAt the end of the event, a software company offered Naomi an opportunity to attend a summer workshop for young creators interested in technology and digital storytelling. Although Naomi was proud of the recognition, she believed the most valuable part of the experience was learning how persistence and creativity could turn an idea into reality.",
     "questions": [
       {
         "type": "inference",
@@ -6195,7 +6224,7 @@
       }
     ],
     "meta": {
-      "wordCount": 238,
+      "wordCount": 310,
       "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=700&h=420&fit=crop"
@@ -6206,7 +6235,7 @@
     "genre": "non-fiction",
     "theme": "science",
     "title": "The Ocean Research Expedition",
-    "text": "Every year, marine scientists organize research expeditions to study life in the deep ocean. Although people have explored much of Earth's land, large parts of the ocean remain mysterious because they are difficult to reach. The pressure underwater is extremely high, and sunlight cannot reach the deepest areas.\n\nDuring one expedition in the Pacific Ocean, a team of researchers used a small robotic submarine equipped with cameras and sensors. The machine allowed scientists to observe underwater environments without risking human safety. Among the crew members was Dr. Hassan, a biologist specializing in deep-sea animals.\n\nAs the submarine traveled deeper, the cameras captured unusual creatures rarely seen by humans. Some fish produced their own light through a process called bioluminescence, which helps them communicate or attract prey in the darkness. The scientists also discovered colorful coral structures growing near underwater volcanic vents where temperatures were extremely high.\n\nThe expedition collected valuable information about ocean ecosystems and climate change. Researchers explained that deep oceans play an important role in regulating Earth's temperature and storing carbon dioxide. Damage to these ecosystems could affect marine life as well as global weather patterns.\n\nAfter returning home, the team shared videos and scientific data with schools and universities around the world. Dr. Hassan hoped the project would encourage more young people to become interested in marine science and environmental protection.",
+    "text": "Every year, marine scientists organize research expeditions to study life in the deep ocean. Although people have explored much of Earth's land, large parts of the ocean remain mysterious because they are difficult to reach. The pressure underwater is extremely high, and sunlight cannot reach the deepest areas.\n\nDuring one expedition in the Pacific Ocean, a team of researchers used a small robotic submarine equipped with cameras and sensors. The machine allowed scientists to observe underwater environments without risking human safety. Among the crew members was Dr. Hassan, a biologist specializing in deep-sea animals.\n\nAs the submarine traveled deeper, the cameras captured unusual creatures rarely seen by humans. Some fish produced their own light through a process called bioluminescence, which helps them communicate or attract prey in the darkness. The scientists also discovered colorful coral structures growing near underwater volcanic vents where temperatures were extremely high.\n\nThe expedition collected valuable information about ocean ecosystems and climate change. Researchers explained that deep oceans play an important role in regulating Earth's temperature and storing carbon dioxide. Damage to these ecosystems could affect marine life as well as global weather patterns.\n\nLife on board followed a strict routine. The crew worked in shifts so that instruments were never left unattended, and meals were eaten quickly between tasks. Storms interrupted the schedule twice, and equipment had to be secured before the waves grew too high. One instrument was damaged and could not be repaired at sea, so the team adjusted their plan and collected samples at shallower depths instead. Dr. Hassan explained that changing the plan without losing the purpose is a normal part of research.\n\nAfter returning home, the team shared videos and scientific data with schools and universities around the world. Dr. Hassan hoped the project would encourage more young people to become interested in marine science and environmental protection.",
     "questions": [
       {
         "type": "literal",
@@ -6276,8 +6305,8 @@
       }
     ],
     "meta": {
-      "wordCount": 224,
-      "readingTime": 1
+      "wordCount": 308,
+      "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=700&h=420&fit=crop"
   },
