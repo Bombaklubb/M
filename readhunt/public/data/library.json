@@ -9394,39 +9394,39 @@
     "genre": "fiction",
     "theme": "science",
     "title": "The Signal",
-    "text": "The radio telescope had been Hanna's grandfather's obsession, and after he died, it became hers. It stood in the garden behind his old house — a three-metre dish he had built from scrap metal and stubbornness, pointed permanently at a patch of sky near the constellation Lyra.\n\n\"Why there?\" she had asked him once.\n\n\"Because nobody else is listening there,\" he'd said. \"Discoveries hide where nobody looks.\"\n\nEvery Sunday, Hanna cycled to the house, switched on the receiver, and recorded an hour of static. Forty-three Sundays of nothing. She kept a logbook anyway, the way he had taught her: date, time, frequency, results. Results: nothing. Nothing. Nothing.\n\nOn the forty-fourth Sunday, the static changed.\n\nIt was small — a rhythmic pulse buried in the noise, repeating every twelve seconds. Hanna's hands went cold. She checked the equipment for faults. She recorded for three more hours. The pulse stayed, steady as a heartbeat.\n\nShe knew what her teacher would say: probably a satellite, probably interference, probably nothing. And maybe it was. But as she cycled home through the dark with the recording in her backpack, she understood something about her grandfather for the first time. It wasn't really about finding aliens. It was about the forty-three empty Sundays — about being the kind of person who keeps listening when everyone else has decided there's nothing to hear.\n\nMonday morning, she emailed the recording to the observatory in Onsala. Then she turned the page in the logbook and wrote the date.",
+    "text": "The radio telescope had been Hanna's grandfather's obsession, and after he died, it became hers. It stood in the garden behind his old house — a three-metre dish he had built from scrap metal and stubbornness, pointed permanently at a patch of sky near the constellation Lyra.\n\n\"Why there?\" she had asked him once.\n\n\"Because nobody else is listening there,\" he'd said. \"Discoveries hide where nobody looks.\"\n\nEvery Sunday, Hanna cycled to the house, switched on the receiver, and recorded an hour of static. Forty-three Sundays of nothing. She kept a logbook anyway, the way he had taught her: date, time, frequency, results. Results: nothing. Nothing. Nothing.\n\nOn the forty-fourth Sunday, the static changed.\n\nIt was small — a rhythmic pulse buried in the noise, repeating every twelve seconds. Hanna's hands went cold. She checked the equipment for faults. She recorded for three more hours. The pulse stayed, steady as a heartbeat.\n\nShe knew what her teacher would say: probably a satellite, probably interference, probably nothing. And maybe it was. But as she cycled home through the dark with the recording in her backpack, she understood something about her grandfather for the first time. It wasn't really about finding aliens. It was about the forty-three empty Sundays — about being the kind of person who keeps listening when everyone else has decided there's nothing to hear.\n\nShe did not sleep much that night.\n\nAt two in the morning she went back out to the garden with a torch and checked everything she could think of. The cable from the dish to the receiver was intact. The receiver was not overheating. She disconnected the antenna entirely and recorded ten minutes of nothing, to see whether the pulse was being generated inside her own equipment. It was not. When she reconnected, it was still there, twelve seconds apart, patient as a metronome.\n\nIn the house she found her grandfather's earlier logbooks, four of them, going back to before she was born. She had never read them properly. They were full of the same word — nothing, nothing, nothing — written in a hand that grew shakier towards the end and never once sounded discouraged. In the margin of one page, dated 1997, he had written: \"Interference from the road. Moved dish 2m. Worth doing properly.\"\n\nThat was the sentence that stayed with her. Not because it was profound, but because it was so ordinary. He had spent thirty years moving a dish two metres and writing down that he had done it.\n\nShe knew what the likely answers were. A satellite in a regular orbit. A neighbour's equipment. Some artefact of the receiver she had not thought of. She wrote all three possibilities in the logbook before she wrote anything else, because that was how he had taught her: guess against yourself first, and hardest.\n\nThe observatory would probably not reply. She knew that too. A teenager with a homemade dish emailing a professional facility about a repeating signal is a category of message that arrives constantly and is rarely worth answering.\n\nMonday morning, she emailed the recording to the observatory in Onsala. Then she turned the page in the logbook and wrote the date.",
     "imageUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
     "questions": [
       {
         "type": "literal",
         "q": "How often did the mysterious pulse repeat?",
         "options": [
-          "Every three seconds",
-          "Every twelve seconds",
           "Every minute",
-          "Every hour"
+          "Every hour",
+          "Every twelve seconds",
+          "Every three seconds"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "literal",
         "q": "What did Hanna record in her logbook each week?",
         "options": [
-          "Date, time, frequency, results",
+          "Maps of the stars",
           "Weather observations",
           "Her grandfather's stories",
-          "Maps of the stars"
+          "Date, time, frequency, results"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "Why did the grandfather point the telescope where 'nobody else is listening'?",
         "options": [
-          "The equipment only worked in that direction",
+          "His neighbours complained about other angles",
           "He believed discoveries are made where others do not look",
-          "It was the cheapest direction to build",
-          "His neighbours complained about other angles"
+          "The equipment only worked in that direction",
+          "It was the cheapest direction to build"
         ],
         "correct": 1
       },
@@ -9434,17 +9434,39 @@
         "type": "inference",
         "q": "What did Hanna realise about her grandfather on the way home?",
         "options": [
-          "He had already found the signal years ago",
           "He was wrong about the telescope",
           "The real point was persistence, not necessarily finding aliens",
-          "He wanted her to sell the telescope"
+          "He wanted her to sell the telescope",
+          "He had already found the signal years ago"
         ],
-        "correct": 2
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Hanna do at two in the morning?",
+        "options": [
+          "Disconnected the antenna to test her own equipment",
+          "Moved the dish two metres",
+          "Emailed the observatory in Onsala",
+          "Woke her parents to show them"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did the margin note from 1997 stay with Hanna?",
+        "options": [
+          "Its ordinariness revealed how patient he had been",
+          "It explained where the signal came from",
+          "It contained instructions for repairing the receiver",
+          "It showed her grandfather had solved the problem already"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 249,
-      "readingTime": 2
+      "wordCount": 533,
+      "readingTime": 4
     }
   },
   {
@@ -9453,57 +9475,79 @@
     "genre": "fiction",
     "theme": "society",
     "title": "Seventeen Likes",
-    "text": "The video took Alva eleven seconds to film and four seconds to post. It would take considerably longer to undo.\n\nIt wasn't even her joke. Someone had zoomed in on Felix's worn-out shoes in the changing room and added a laughing emoji, and Alva had simply reposted it because it was already going around, because everyone else had, because it was Tuesday and she was bored. Seventeen people liked it before dinner.\n\nFelix wasn't in school on Wednesday. Or Thursday.\n\nOn Friday, their mentor held a class meeting. She didn't shout. She just read aloud, in a flat voice, the messages that had been sent — without saying who had written what. Heard like that, stripped of emojis and context, they sounded different. Crueller. Alva felt her face burn when her repost was read. Eleven seconds of her life, sounding like something a villain would say.\n\nShe found Felix's address through a classmate and stood outside his door for a long time before ringing the bell. When he opened, she didn't offer excuses, because she had promised herself she wouldn't.\n\n\"It was me. One of them, anyway. And it wasn't a joke, it was just cruelty with better lighting. I'm sorry.\"\n\nFelix looked at her for a moment. \"You're the first one who's come here,\" he said finally. He didn't say it was okay. She hadn't expected him to. But he left the door open, and after a moment, she followed him inside.",
+    "text": "The video took Alva eleven seconds to film and four seconds to post. It would take considerably longer to undo.\n\nIt wasn't even her joke. Someone had zoomed in on Felix's worn-out shoes in the changing room and added a laughing emoji, and Alva had simply reposted it because it was already going around, because everyone else had, because it was Tuesday and she was bored. Seventeen people liked it before dinner.\n\nFelix wasn't in school on Wednesday. Or Thursday.\n\nOn Friday, their mentor held a class meeting. She didn't shout. She just read aloud, in a flat voice, the messages that had been sent — without saying who had written what. Heard like that, stripped of emojis and context, they sounded different. Crueller. Alva felt her face burn when her repost was read. Eleven seconds of her life, sounding like something a villain would say.\n\nThe week that followed was quieter than Alva expected, and worse for it.\n\nNobody talked about the meeting. The group chat, which normally produced two hundred messages a day, produced eleven. Someone deleted the original video, which felt less like an apology than like tidying. Two people privately messaged Alva to say the mentor had overreacted, and she agreed with them at the time, then lay awake disagreeing.\n\nShe kept returning to the numbers. Seventeen likes. She could name most of them. Several were people she considered kind — people who held doors, who noticed when someone was left out, who would have stopped it if it had happened in a corridor in front of them. That was the part she could not get past. It had not required cruel people. It had required ordinary people and four seconds.\n\nOn Wednesday, a teacher asked the class to write anonymously about what had happened. Alva wrote a paragraph she was not proud of, in which she explained that she had not made the video, had not written the caption, and had only reposted something already circulating. Reading it back, she recognised the shape of it. It was a defence, and she had not been accused of anything.\n\nThursday she wrote something else instead, on paper, not to hand in. It was shorter and did not contain the word only.\n\nHer mother asked on Friday if something was wrong. Alva said no, then asked how you apologise to someone when you cannot undo the thing you did. Her mother thought about it for longer than Alva wanted, and then said that you do not undo it, you simply go anyway, and that the going is the only part that counts.\n\nShe found Felix's address through a classmate and stood outside his door for a long time before ringing the bell. When he opened, she didn't offer excuses, because she had promised herself she wouldn't.\n\n\"It was me. One of them, anyway. And it wasn't a joke, it was just cruelty with better lighting. I'm sorry.\"\n\nFelix looked at her for a moment. \"You're the first one who's come here,\" he said finally. He didn't say it was okay. She hadn't expected him to. But he left the door open, and after a moment, she followed him inside.",
     "imageUrl": "https://images.unsplash.com/photo-1517940322679-2b003a168fd2?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
         "q": "How many people liked Alva's repost before dinner?",
         "options": [
-          "Eleven",
-          "Four",
           "Seventeen",
-          "Twenty"
+          "Twenty",
+          "Eleven",
+          "Four"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
         "q": "What did the mentor do at the class meeting?",
         "options": [
-          "She shouted at the class",
-          "She read the messages aloud without naming anyone",
           "She showed the video on the projector",
-          "She called everyone's parents"
+          "She shouted at the class",
+          "She called everyone's parents",
+          "She read the messages aloud without naming anyone"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "Why did the messages sound different when read aloud?",
         "options": [
-          "The mentor changed the words",
           "Without emojis and context, their cruelty became obvious",
           "They were translated into another language",
-          "The students could not hear properly"
+          "The students could not hear properly",
+          "The mentor changed the words"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "inference",
         "q": "What does the open door at the end suggest?",
         "options": [
-          "Felix forgave her completely and immediately",
-          "Felix wanted her to leave",
+          "Felix was moving to another school",
           "A first step toward repairing things, though trust is not yet rebuilt",
-          "Felix was moving to another school"
+          "Felix forgave her completely and immediately",
+          "Felix wanted her to leave"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Alva write in the anonymous class exercise?",
+        "options": [
+          "A description of who had filmed the video",
+          "A request to move to another class",
+          "A defence explaining what she had not done",
+          "An apology addressed to Felix"
         ],
         "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What did Alva find hardest to accept about the seventeen likes?",
+        "options": [
+          "That Felix never answered her messages",
+          "That people she thought were kind had joined in",
+          "That the mentor read the messages aloud",
+          "That the video was deleted so quickly"
+        ],
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 243,
-      "readingTime": 2
+      "wordCount": 531,
+      "readingTime": 4
     }
   },
   {
@@ -9512,7 +9556,7 @@
     "genre": "fiction",
     "theme": "history",
     "title": "The Attic Letters",
-    "text": "The house was being sold, which meant the attic had to be emptied, which meant Noah spent his autumn break carrying boxes instead of gaming. He had complained about this loudly and at length — right up until he found the suitcase.\n\nIt was leather, cracked with age, and locked. His mother broke it open with a screwdriver. Inside lay perhaps a hundred letters, bundled with string, all addressed to his great-grandmother Ester. The earliest was dated 1943.\n\nThey were from her sister, Ruth — written from Berlin during the war. Noah's German wasn't good, but his mother's was, and she read them aloud at the kitchen table, evening after evening, while the moving boxes stood forgotten. Letters about rationing, about neighbours who disappeared, about fear that hid between ordinary sentences about the weather. The last letter was dated March 1944. After that, nothing.\n\n\"What happened to her?\" Noah asked.\n\nHis mother shook her head. \"Ester never talked about it. Ever.\"\n\nNoah, who had never voluntarily done research in his life, spent the rest of his break in digital archives. He cross-referenced names, dates, transport lists. And there, in a database of survivors, he found her: Ruth Lindqvist, arrived in Sweden 1945, died in Malmö 1989. She had survived. She had lived forty minutes away.\n\nThe sisters had never found each other again. Two women, one country, forty minutes apart. Noah looked at the last letter for a long time. Then he started searching for Ruth's grandchildren.",
+    "text": "The house was being sold, which meant the attic had to be emptied, which meant Noah spent his autumn break carrying boxes instead of gaming. He had complained about this loudly and at length — right up until he found the suitcase.\n\nIt was leather, cracked with age, and locked. His mother broke it open with a screwdriver. Inside lay perhaps a hundred letters, bundled with string, all addressed to his great-grandmother Ester. The earliest was dated 1943.\n\nThey were from her sister, Ruth — written from Berlin during the war. Noah's German wasn't good, but his mother's was, and she read them aloud at the kitchen table, evening after evening, while the moving boxes stood forgotten. Letters about rationing, about neighbours who disappeared, about fear that hid between ordinary sentences about the weather. The last letter was dated March 1944. After that, nothing.\n\n\"What happened to her?\" Noah asked.\n\nHis mother shook her head. \"Ester never talked about it. Ever.\"\n\nNoah, who had never voluntarily done research in his life, spent the rest of his break in digital archives. He cross-referenced names, dates, transport lists. And there, in a database of survivors, he found her: Ruth Lindqvist, arrived in Sweden 1945, died in Malmö 1989. She had survived. She had lived forty minutes away.\n\nThe sisters had never found each other again. Two women, one country, forty minutes apart. The search had taken eleven days and had been mostly dead ends. Noah started with the Red Cross tracing service, which returned nothing, then with digitised passenger lists, which returned four Ruth Lindqvists and no way to tell them apart. What finally worked was a Swedish parish register, scanned and searchable, in which someone had recorded a change of address in 1951.\n\nHis mother did not react the way he expected. She read the entry twice, put the laptop down, and said that Ester had lived in Lund for nineteen years. Lund and Malmö are twenty kilometres apart.\n\nThey spent an evening trying to work out how that was possible, and arrived at no single answer. Ruth had arrived in 1945 under a name spelled differently — an official at the border had written it as it sounded. Ester had married and changed hers. Neither had a telephone until the 1960s. There was no register anyone could have searched. And there was, Noah's mother said carefully, the possibility that one of them had looked and then stopped looking, because after a certain number of years without news, people build a life around the answer they have assumed.\n\nNoah found that harder to accept than the war itself. The bombing, the disappearances, the letters that stopped — those belonged to history, to a period he had read about in school. Two women living twenty kilometres apart for two decades belonged to something else entirely, something ordinary and repairable, which nobody had repaired.\n\nHe kept coming back to one detail. In her final letter, Ruth had described the weather and asked whether a parcel had arrived. Neither question was ever answered, and both had been written by someone who assumed there would be time.\n\nNoah looked at the last letter for a long time. Then he started searching for Ruth's grandchildren.",
     "imageUrl": "https://images.unsplash.com/photo-1447069387593-a5de0862481e?w=700&h=420&fit=crop",
     "questions": [
       {
@@ -9558,11 +9602,33 @@
           "He needs help moving boxes"
         ],
         "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What finally led Noah to Ruth?",
+        "options": [
+          "The Red Cross tracing service",
+          "A digitised passenger list",
+          "A scanned parish register recording a change of address",
+          "A second suitcase found in the attic"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why did Noah find the twenty kilometres harder to accept than the war?",
+        "options": [
+          "It proved the letters had been forged",
+          "It was an ordinary situation that could have been repaired",
+          "It meant Ester had lied to the family",
+          "It showed the registers were unreliable"
+        ],
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 247,
-      "readingTime": 2
+      "wordCount": 539,
+      "readingTime": 4
     }
   },
   {
@@ -9571,57 +9637,79 @@
     "genre": "non-fiction",
     "theme": "gaming",
     "title": "Esports: When Gaming Becomes a Profession",
-    "text": "Twenty years ago, telling your parents you wanted to play video games for a living would probably have earned you a worried look. Today, esports — competitive video gaming — is a global industry worth billions, with professional players, coaches, team houses, and stadium audiences.\n\nAt the highest level, esports resembles traditional sports more than most people expect. Professional players train six to ten hours a day, often in structured team practices with analysts who study opponents' strategies. Top teams employ physiotherapists, sports psychologists, and nutritionists. Reaction time, communication, and decision-making under pressure are trained as systematically as a footballer trains sprints.\n\nThe biggest tournaments fill arenas that normally host rock concerts or ice hockey finals. Millions more watch online. Sweden has a proud history here: Swedish players and teams have won world championships in several of the biggest titles, and some of the world's most famous esports events have been held in Stockholm and Jönköping.\n\nBut the profession has a dark side that is discussed more openly today. Careers are short — many professionals retire before age 25, when their reaction times begin to slow. The pressure to practise constantly can lead to burnout, sleep problems, and injuries to hands and wrists. The industry has begun responding with player unions, mandatory breaks, and better contracts, but critics argue there is far to go.\n\nFor the vast majority, gaming will remain a hobby, not a career — just as most people who play football never become professionals. But esports has changed something bigger: the idea of what can be a sport, and who can be an athlete.",
+    "text": "Twenty years ago, telling your parents you wanted to play video games for a living would probably have earned you a worried look. Today, esports — competitive video gaming — is a global industry worth billions, with professional players, coaches, team houses, and stadium audiences.\n\nAt the highest level, esports resembles traditional sports more than most people expect. Professional players train six to ten hours a day, often in structured team practices with analysts who study opponents' strategies. Top teams employ physiotherapists, sports psychologists, and nutritionists. Reaction time, communication, and decision-making under pressure are trained as systematically as a footballer trains sprints.\n\nThe biggest tournaments fill arenas that normally host rock concerts or ice hockey finals. Millions more watch online. Sweden has a proud history here: Swedish players and teams have won world championships in several of the biggest titles, and some of the world's most famous esports events have been held in Stockholm and Jönköping.\n\nBut the profession has a dark side that is discussed more openly today. Careers are short — many professionals retire before age 25, when their reaction times begin to slow. The pressure to practise constantly can lead to burnout, sleep problems, and injuries to hands and wrists. The industry has begun responding with player unions, mandatory breaks, and better contracts, but critics argue there is far to go.\n\nThe economics are less glamorous than the prize money suggests. A single tournament may advertise a pool of forty million dollars, but that is split between teams, then between players, then with the organisation that pays their salary, and only a handful of events are that size. Most professional income comes from wages and sponsorship rather than winnings, which means a player's real security depends on a contract rather than a trophy.\n\nThose contracts have been a persistent problem. Because many players sign at seventeen or eighteen, often without a lawyer or an agent, early esports history includes a long list of disputes over unpaid salaries, clauses preventing players from leaving, and shares of streaming revenue that were never defined. Several leagues now require standard contracts and minimum salaries, largely because players organised and refused to compete until they did.\n\nEducation has begun to catch up. Several Swedish upper secondary schools now offer esports programmes that combine practice with coursework, and a common misunderstanding is that these exist to produce professionals. The teachers running them usually say the opposite: almost none of their students will compete for a living, and the point is the surrounding skills — analysing your own performance, working in a team under pressure, and managing sleep, food and screen time deliberately rather than accidentally.\n\nThat last part may be the most useful thing the sport has produced. The habits that make a professional competitive are almost exactly the habits that make heavy gaming survivable for everyone else. Coaches describe teaching those habits as the least glamorous and most necessary part of the job, and the part parents ask about first.\n\nFor the vast majority, gaming will remain a hobby, not a career — just as most people who play football never become professionals. But esports has changed something bigger: the idea of what can be a sport, and who can be an athlete.",
     "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80",
     "questions": [
       {
         "type": "literal",
         "q": "How many hours a day do professional esports players train?",
         "options": [
-          "One to two hours",
-          "Three to four hours",
+          "Twelve to fifteen hours",
           "Six to ten hours",
-          "Twelve to fifteen hours"
+          "One to two hours",
+          "Three to four hours"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
         "q": "Why do many esports professionals retire before age 25?",
         "options": [
+          "They must start university",
           "They lose interest in games",
           "Their reaction times begin to slow",
-          "It is against the rules to play longer",
-          "They must start university"
+          "It is against the rules to play longer"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "Why does the text mention physiotherapists, psychologists and nutritionists?",
         "options": [
           "To show that esports teams waste money",
-          "To show how seriously esports resembles traditional professional sports",
+          "To explain why tickets are expensive",
           "To show that players are often ill",
-          "To explain why tickets are expensive"
+          "To show how seriously esports resembles traditional professional sports"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "What 'bigger change' has esports brought according to the text?",
         "options": [
-          "It has replaced traditional sports",
           "It has made all gaming a career",
           "It has changed ideas about what a sport and an athlete can be",
+          "It has replaced traditional sports",
           "It has made video games cheaper"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where does most professional esports income come from?",
+        "options": [
+          "Wages and sponsorship",
+          "Selling items inside the game",
+          "Tournament winnings",
+          "Donations from viewers"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do teachers on school esports programmes say they are not producing professionals?",
+        "options": [
+          "The programmes are too short to matter",
+          "Professional leagues never recruit from schools",
+          "The value lies in surrounding skills such as teamwork and routine",
+          "Their students are not skilled enough to compete"
         ],
         "correct": 2
       }
     ],
     "meta": {
-      "wordCount": 267,
-      "readingTime": 2
+      "wordCount": 541,
+      "readingTime": 4
     }
   },
   {
@@ -9630,7 +9718,7 @@
     "genre": "non-fiction",
     "theme": "science",
     "title": "The Ethics of Space Exploration",
-    "text": "For decades, space exploration has inspired scientists, engineers, and ordinary citizens around the world. Governments and private companies have invested billions of dollars in missions designed to study planets, search for signs of life, and develop technologies for future space travel. Supporters argue that these programs expand scientific knowledge and encourage innovation that can also benefit life on Earth.\n\nOne common argument in favor of space exploration is that many technologies originally created for space missions later became useful in everyday society. Satellite communication, weather forecasting systems, water purification methods, and medical imaging technologies have all benefited from research connected to space programs. In addition, some researchers believe studying other planets may help humanity better understand climate change and environmental challenges on Earth.\n\nHowever, critics question whether the enormous costs of space exploration are justified when millions of people still lack access to healthcare, education, and clean water. They argue that governments should focus more heavily on solving urgent social problems instead of funding expensive missions to distant planets. Some economists also warn that competition between nations and private companies could increase inequality if only wealthy groups benefit from future discoveries.\n\nEthical concerns have become even more complex with the rise of private space companies. Several corporations now plan commercial space tourism and long-term projects involving mining resources from asteroids or the Moon. Supporters claim these developments could create economic growth and reduce pressure on Earth's natural resources. Opponents, however, worry about environmental damage, lack of international regulation, and the possibility that space could become controlled by powerful corporations.\n\nAnother debate involves the possibility of human settlement on Mars. Some scientists view colonization as a way to protect humanity from global disasters, while others argue that abandoning Earth would be irresponsible. They believe resources should instead be used to improve conditions on the planet humans already inhabit.\n\nDespite disagreements, most experts agree that space exploration will continue shaping science, politics, and economics in the future. The challenge for societies will be balancing curiosity and innovation with ethical responsibility and global cooperation.",
+    "text": "For decades, space exploration has inspired scientists, engineers, and ordinary citizens around the world. Governments and private companies have invested billions of dollars in missions designed to study planets, search for signs of life, and develop technologies for future space travel. Supporters argue that these programs expand scientific knowledge and encourage innovation that can also benefit life on Earth.\n\nOne common argument in favor of space exploration is that many technologies originally created for space missions later became useful in everyday society. Satellite communication, weather forecasting systems, water purification methods, and medical imaging technologies have all benefited from research connected to space programs. In addition, some researchers believe studying other planets may help humanity better understand climate change and environmental challenges on Earth.\n\nHowever, critics question whether the enormous costs of space exploration are justified when millions of people still lack access to healthcare, education, and clean water. They argue that governments should focus more heavily on solving urgent social problems instead of funding expensive missions to distant planets. Some economists also warn that competition between nations and private companies could increase inequality if only wealthy groups benefit from future discoveries.\n\nEthical concerns have become even more complex with the rise of private space companies. Several corporations now plan commercial space tourism and long-term projects involving mining resources from asteroids or the Moon. Supporters claim these developments could create economic growth and reduce pressure on Earth's natural resources. Opponents, however, worry about environmental damage, lack of international regulation, and the possibility that space could become controlled by powerful corporations.\n\nAnother debate involves the possibility of human settlement on Mars. Some scientists view colonization as a way to protect humanity from global disasters, while others argue that abandoning Earth would be irresponsible. They believe resources should instead be used to improve conditions on the planet humans already inhabit.\n\nTwo ethical questions receive less public attention than Mars but may arrive sooner.\n\nThe first is orbital debris. There are now more than thirty thousand tracked objects larger than ten centimetres circling Earth, and many millions of smaller fragments, each travelling fast enough that a fleck of paint can crack a window. Every collision creates more debris, and researchers have warned since the 1970s of a scenario in which collisions become self-sustaining and certain orbits become unusable for generations. No country is obliged to remove what it has launched.\n\nThe second is contamination. Spacecraft sent to Mars or to the moons of Jupiter are cleaned and baked to reduce the microbes they carry, because a single surviving Earth organism could compromise the search for life there permanently. If a probe found bacteria on Mars, scientists would have to establish whether they had arrived on the probe itself. Standards for this exist, but they are voluntary, and they were written when only governments could reach other planets.\n\nBoth questions share a structure: the cost falls on everyone, while the decision belongs to whoever launches first. Neither problem has an obvious owner, and neither is easy to enforce.\n\nDespite disagreements, most experts agree that space exploration will continue shaping science, politics, and economics in the future. The challenge for societies will be balancing curiosity and innovation with ethical responsibility and global cooperation.",
     "questions": [
       {
         "type": "literal",
@@ -9700,11 +9788,8 @@
       }
     ],
     "meta": {
-      "wordCount": 341,
-      "fingerprint": "ak8-tema-001",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
-      "readingTime": 2
+      "wordCount": 537,
+      "readingTime": 4
     },
     "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
   },
@@ -9714,7 +9799,7 @@
     "genre": "non-fiction",
     "theme": "society",
     "title": "The Influence of Social Media on News",
-    "text": "Social media has transformed the way people receive and share news. In the past, newspapers, television broadcasts, and radio programs were the primary sources of information for most citizens. Today, millions of people learn about current events through social media platforms where stories can spread globally within minutes.\n\nSupporters of social media argue that these platforms have increased access to information and allowed ordinary individuals to participate more actively in public discussions. Journalists can now communicate directly with audiences, while eyewitnesses at important events can share photos and videos immediately. During natural disasters and political crises, social media has often helped people spread urgent information quickly.\n\nAt the same time, researchers and media experts have expressed concern about the spread of misinformation online. False stories can sometimes travel faster than accurate reporting because emotional or controversial content attracts attention more easily. Algorithms designed to maximize user engagement may also encourage people to interact mainly with opinions they already agree with, creating so-called 'echo chambers.'\n\nAnother challenge involves the difficulty of identifying trustworthy sources. Professional journalism usually includes fact-checking, editorial review, and ethical standards. On social media, however, anyone can publish information regardless of accuracy or expertise. As a result, users often need strong critical-thinking skills to evaluate whether information is reliable.\n\nGovernments and technology companies have attempted different strategies to address these problems. Some platforms now label misleading content or remove false information related to elections, public health, or violence. Critics, however, worry that such measures could limit freedom of speech or give private companies too much influence over public discussions.\n\nYounger generations in particular are growing up in an environment where news, entertainment, and advertising are often mixed together online. Educators therefore emphasize the importance of media literacy, teaching students how to verify sources, compare perspectives, and recognize manipulation.\n\nAlthough social media has made communication faster and more accessible, experts continue debating its long-term effects on democracy, journalism, and public trust. The future of news may depend not only on technology itself but also on how responsibly individuals, companies, and governments choose to use it.",
+    "text": "Social media has transformed the way people receive and share news. In the past, newspapers, television broadcasts, and radio programs were the primary sources of information for most citizens. Today, millions of people learn about current events through social media platforms where stories can spread globally within minutes.\n\nSupporters of social media argue that these platforms have increased access to information and allowed ordinary individuals to participate more actively in public discussions. Journalists can now communicate directly with audiences, while eyewitnesses at important events can share photos and videos immediately. During natural disasters and political crises, social media has often helped people spread urgent information quickly.\n\nAt the same time, researchers and media experts have expressed concern about the spread of misinformation online. False stories can sometimes travel faster than accurate reporting because emotional or controversial content attracts attention more easily. Algorithms designed to maximize user engagement may also encourage people to interact mainly with opinions they already agree with, creating so-called 'echo chambers.'\n\nAnother challenge involves the difficulty of identifying trustworthy sources. Professional journalism usually includes fact-checking, editorial review, and ethical standards. On social media, however, anyone can publish information regardless of accuracy or expertise. As a result, users often need strong critical-thinking skills to evaluate whether information is reliable.\n\nGovernments and technology companies have attempted different strategies to address these problems. Some platforms now label misleading content or remove false information related to elections, public health, or violence. Critics, however, worry that such measures could limit freedom of speech or give private companies too much influence over public discussions.\n\nYounger generations in particular are growing up in an environment where news, entertainment, and advertising are often mixed together online. Educators therefore emphasize the importance of media literacy, teaching students how to verify sources, compare perspectives, and recognize manipulation.\n\nUnderneath the debate about truth sits a question about money. Most platforms earn revenue from advertising, which means their income depends on how long users stay and how often they return. Ranking systems are therefore tuned for engagement, and material that provokes a strong reaction — anger especially — reliably produces more of it than material that does not. Nobody designed a system to spread outrage; the system simply learned that outrage keeps people scrolling.\n\nThe same shift has drained money from the organisations that produce original reporting. Advertising that once funded local newspapers now flows to platforms that publish no journalism of their own. In many countries the number of local titles has fallen sharply, and researchers describe the resulting gaps as news deserts, where council meetings, court cases and local elections go uncovered.\n\nThe consequence is measurable. Studies in areas that lost their local paper found lower voter turnout, fewer candidates standing for office, and higher municipal borrowing costs, on the reasoning that nobody was left to notice. A council that knows it is being watched tends to behave differently from one that does not.\n\nAlthough social media has made communication faster and more accessible, experts continue debating its long-term effects on democracy, journalism, and public trust. The future of news may depend not only on technology itself but also on how responsibly individuals, companies, and governments choose to use it.",
     "questions": [
       {
         "type": "literal",
@@ -9784,11 +9869,8 @@
       }
     ],
     "meta": {
-      "wordCount": 346,
-      "fingerprint": "ak8-tema-002",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
-      "readingTime": 2
+      "wordCount": 533,
+      "readingTime": 4
     },
     "imageUrl": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80"
   },
@@ -9798,7 +9880,7 @@
     "genre": "non-fiction",
     "theme": "environment",
     "title": "The Importance of Biodiversity",
-    "text": "Biodiversity refers to the variety of living organisms found on Earth, including plants, animals, fungi, and microorganisms. Scientists consider biodiversity essential because ecosystems depend on complex relationships between species. Healthy ecosystems provide humans with food, medicine, clean water, fertile soil, and protection from natural disasters.\n\nRainforests are often used as examples of biodiversity because they contain enormous numbers of species living together in relatively small areas. Coral reefs represent another important ecosystem, supporting marine life while protecting coastlines from storms and erosion. Researchers have discovered that many modern medicines originate from chemicals found in plants, fungi, and marine organisms.\n\nDespite its importance, biodiversity is declining rapidly in many parts of the world. Habitat destruction caused by deforestation, urban expansion, and industrial agriculture has reduced living space for countless species. Climate change has also disrupted ecosystems by altering temperatures, rainfall patterns, and ocean conditions.\n\nPollution creates additional challenges. Plastic waste harms marine animals, while chemicals from factories and farming can damage rivers, forests, and soil. Invasive species introduced by human activity sometimes spread aggressively and threaten native plants and animals.\n\nThe loss of biodiversity may create long-term consequences for humanity. Scientists warn that ecosystems with fewer species are often less stable and less capable of recovering from environmental changes. For example, if pollinating insects such as bees decline significantly, global food production could be affected.\n\nTo address these problems, governments, scientists, and environmental organizations have developed conservation programs around the world. Some projects focus on protecting endangered species, while others attempt to restore damaged ecosystems. International agreements also encourage countries to reduce pollution and preserve natural habitats.\n\nHowever, conservation efforts sometimes involve difficult political and economic decisions. Expanding protected areas may limit industrial development or agriculture in certain regions. Supporters argue that environmental protection is necessary for long-term sustainability, while critics worry about economic costs and employment.\n\nMost scientists agree that preserving biodiversity is not simply about saving rare animals or beautiful landscapes. It is also about maintaining the environmental systems that support human societies and future generations.",
+    "text": "Biodiversity refers to the variety of living organisms found on Earth, including plants, animals, fungi, and microorganisms. Scientists consider biodiversity essential because ecosystems depend on complex relationships between species. Healthy ecosystems provide humans with food, medicine, clean water, fertile soil, and protection from natural disasters.\n\nRainforests are often used as examples of biodiversity because they contain enormous numbers of species living together in relatively small areas. Coral reefs represent another important ecosystem, supporting marine life while protecting coastlines from storms and erosion. Researchers have discovered that many modern medicines originate from chemicals found in plants, fungi, and marine organisms.\n\nDespite its importance, biodiversity is declining rapidly in many parts of the world. Habitat destruction caused by deforestation, urban expansion, and industrial agriculture has reduced living space for countless species. Climate change has also disrupted ecosystems by altering temperatures, rainfall patterns, and ocean conditions.\n\nPollution creates additional challenges. Plastic waste harms marine animals, while chemicals from factories and farming can damage rivers, forests, and soil. Invasive species introduced by human activity sometimes spread aggressively and threaten native plants and animals.\n\nThe loss of biodiversity may create long-term consequences for humanity. Scientists warn that ecosystems with fewer species are often less stable and less capable of recovering from environmental changes. For example, if pollinating insects such as bees decline significantly, global food production could be affected.\n\nTo address these problems, governments, scientists, and environmental organizations have developed conservation programs around the world. Some projects focus on protecting endangered species, while others attempt to restore damaged ecosystems. International agreements also encourage countries to reduce pollution and preserve natural habitats.\n\nHowever, conservation efforts sometimes involve difficult political and economic decisions. Expanding protected areas may limit industrial development or agriculture in certain regions. Supporters argue that environmental protection is necessary for long-term sustainability, while critics worry about economic costs and employment.\n\nMuch of the loss is happening out of sight. Long-term counts in Germany recorded a decline of more than seventy per cent in flying insect biomass over twenty-seven years in protected areas — places that were supposed to be safe. Insects pollinate a large share of food crops, break down waste, and feed birds and fish, so a decline of that size propagates upwards through everything that eats.\n\nSoil is similarly overlooked. A single handful of healthy soil contains more organisms than there are people on Earth, and those organisms determine whether plants can take up nutrients at all. Intensive agriculture, compaction by heavy machinery and repeated ploughing reduce that life measurably, which is one reason some farms now leave root systems in the ground over winter.\n\nConservation also involves choices that are genuinely uncomfortable. Money spent protecting one species is money not spent on another, and organisations quietly practise a form of triage. Species that are photogenic attract funding more easily than species that are not, which is why campaigns feature tigers and pandas rather than fungi or beetles, despite the latter doing more of the ecological work. Conservationists call these the charismatic species.\n\nMost scientists agree that preserving biodiversity is not simply about saving rare animals or beautiful landscapes. It is also about maintaining the environmental systems that support human societies and future generations.",
     "questions": [
       {
         "type": "literal",
@@ -9868,11 +9950,8 @@
       }
     ],
     "meta": {
-      "wordCount": 337,
-      "fingerprint": "ak8-tema-003",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
-      "readingTime": 2
+      "wordCount": 532,
+      "readingTime": 4
     },
     "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80"
   },
@@ -9882,7 +9961,7 @@
     "genre": "non-fiction",
     "theme": "technology",
     "title": "The Development of Renewable Energy",
-    "text": "As concerns about climate change and pollution have increased, many countries have invested heavily in renewable energy sources such as solar, wind, and hydroelectric power. Unlike fossil fuels, renewable energy sources can produce electricity without releasing large amounts of greenhouse gases into the atmosphere. Supporters believe this transition is essential for reducing environmental damage and creating more sustainable economies.\n\nSolar energy has become especially important in recent decades. Improvements in technology have made solar panels more efficient and less expensive than they were in the past. In some regions, homeowners and businesses can now generate their own electricity and even sell excess energy back to the electrical grid.\n\nWind power has also expanded rapidly. Large wind farms operate both on land and offshore, where stronger winds can produce significant amounts of electricity. Countries such as Denmark and Germany have invested heavily in wind energy as part of broader environmental policies.\n\nDespite these advances, renewable energy systems still face challenges. Solar and wind power depend on weather conditions, meaning electricity production may vary throughout the day or year. Engineers therefore continue developing better battery systems capable of storing energy for periods when sunlight or wind is limited.\n\nEconomic and political factors also influence the transition toward renewable energy. Building new infrastructure requires major investments, and some industries connected to fossil fuels worry about job losses. At the same time, supporters argue that renewable energy industries can create new employment opportunities in engineering, manufacturing, and technology.\n\nAnother debate concerns the environmental impact of renewable energy itself. Producing solar panels, batteries, and wind turbines requires raw materials such as lithium and rare metals. Mining these materials can sometimes damage ecosystems and create ethical concerns regarding labor conditions.\n\nEven with these complications, many scientists believe renewable energy will play a central role in future global energy systems. International agreements and technological innovation continue encouraging countries to reduce dependence on fossil fuels and invest in cleaner alternatives.",
+    "text": "As concerns about climate change and pollution have increased, many countries have invested heavily in renewable energy sources such as solar, wind, and hydroelectric power. Unlike fossil fuels, renewable energy sources can produce electricity without releasing large amounts of greenhouse gases into the atmosphere. Supporters believe this transition is essential for reducing environmental damage and creating more sustainable economies.\n\nSolar energy has become especially important in recent decades. Improvements in technology have made solar panels more efficient and less expensive than they were in the past. In some regions, homeowners and businesses can now generate their own electricity and even sell excess energy back to the electrical grid.\n\nWind power has also expanded rapidly. Large wind farms operate both on land and offshore, where stronger winds can produce significant amounts of electricity. Countries such as Denmark and Germany have invested heavily in wind energy as part of broader environmental policies.\n\nDespite these advances, renewable energy systems still face challenges. Solar and wind power depend on weather conditions, meaning electricity production may vary throughout the day or year. Engineers therefore continue developing better battery systems capable of storing energy for periods when sunlight or wind is limited.\n\nEconomic and political factors also influence the transition toward renewable energy. Building new infrastructure requires major investments, and some industries connected to fossil fuels worry about job losses. At the same time, supporters argue that renewable energy industries can create new employment opportunities in engineering, manufacturing, and technology.\n\nAnother debate concerns the environmental impact of renewable energy itself. Producing solar panels, batteries, and wind turbines requires raw materials such as lithium and rare metals. Mining these materials can sometimes damage ecosystems and create ethical concerns regarding labor conditions.\n\nStorage is the problem that defines the transition. Electricity has to be produced at the moment it is used, and the sun and wind do not consult the schedule. Batteries can cover hours, and they have become dramatically cheaper — the cost of lithium-ion cells has fallen by roughly ninety per cent since 2010 — but covering a still, dark week in winter is a different order of problem. Pumped hydropower, which lifts water uphill when electricity is plentiful and releases it when it is not, remains the largest form of storage in the world, and requires the right mountain in the right place.\n\nGrids need rebuilding too. They were designed to move electricity from a small number of large power stations outwards. A renewable system reverses that, drawing from thousands of scattered sources including household solar panels that sometimes export power back.\n\nThere is also a materials question. Wind turbines, solar panels and batteries require copper, lithium, cobalt and rare earth elements, and mining these has environmental and human costs of its own, often in countries far from where the electricity is eventually used. Recycling rates for most of these materials remain low. The transition is therefore not only about building new things, but about deciding who bears the costs of building them.\n\nEven with these complications, many scientists believe renewable energy will play a central role in future global energy systems. International agreements and technological innovation continue encouraging countries to reduce dependence on fossil fuels and invest in cleaner alternatives.",
     "questions": [
       {
         "type": "literal",
@@ -9952,11 +10031,8 @@
       }
     ],
     "meta": {
-      "wordCount": 322,
-      "fingerprint": "ak8-tema-004",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
-      "readingTime": 2
+      "wordCount": 536,
+      "readingTime": 4
     },
     "imageUrl": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&q=80"
   },
@@ -9966,7 +10042,7 @@
     "genre": "non-fiction",
     "theme": "psychology",
     "title": "The Role of Memory in Human Identity",
-    "text": "Memory plays a central role in how humans understand themselves and the world around them. Personal memories shape individual identity by connecting people to past experiences, relationships, and emotions. Psychologists and neuroscientists have long studied how memory functions because it influences learning, decision-making, and behavior.\n\nHuman memory is not a perfect recording system. Research shows that memories can change over time and may be influenced by emotions, social pressure, or later experiences. People sometimes remember events differently from how they actually occurred. This process does not necessarily mean individuals are dishonest; instead, it reflects the brain's complex way of storing and reconstructing information.\n\nScientists often divide memory into several categories. Short-term memory allows people to hold information briefly, such as remembering a phone number for a few seconds. Long-term memory stores information over much longer periods and includes both personal experiences and learned knowledge. Procedural memory, meanwhile, helps individuals perform tasks automatically, such as riding a bicycle or playing an instrument.\n\nMemory also plays an important role in mental health. Traumatic experiences can produce powerful memories that continue affecting emotions and behavior for years. In contrast, memory loss caused by conditions such as Alzheimer's disease can dramatically alter a person's independence and sense of identity.\n\nModern technology has influenced human memory in new ways. Smartphones and digital storage systems now allow people to record photos, conversations, and information constantly. Some researchers argue that easy access to digital information may reduce the need to memorize facts. Others believe technology mainly changes how people organize and retrieve knowledge rather than weakening memory itself.\n\nPhilosophers have also debated whether memory is essential for personal identity. If a person lost all memories, would they still remain the same individual? Some thinkers argue that memory creates continuity between past and present experiences, while others believe identity depends on additional factors such as personality, relationships, and physical existence.\n\nAlthough many questions about memory remain unanswered, researchers agree that it remains one of the most important and complex aspects of human psychology.",
+    "text": "Memory plays a central role in how humans understand themselves and the world around them. Personal memories shape individual identity by connecting people to past experiences, relationships, and emotions. Psychologists and neuroscientists have long studied how memory functions because it influences learning, decision-making, and behavior.\n\nHuman memory is not a perfect recording system. Research shows that memories can change over time and may be influenced by emotions, social pressure, or later experiences. People sometimes remember events differently from how they actually occurred. This process does not necessarily mean individuals are dishonest; instead, it reflects the brain's complex way of storing and reconstructing information.\n\nScientists often divide memory into several categories. Short-term memory allows people to hold information briefly, such as remembering a phone number for a few seconds. Long-term memory stores information over much longer periods and includes both personal experiences and learned knowledge. Procedural memory, meanwhile, helps individuals perform tasks automatically, such as riding a bicycle or playing an instrument.\n\nMemory also plays an important role in mental health. Traumatic experiences can produce powerful memories that continue affecting emotions and behavior for years. In contrast, memory loss caused by conditions such as Alzheimer's disease can dramatically alter a person's independence and sense of identity.\n\nModern technology has influenced human memory in new ways. Smartphones and digital storage systems now allow people to record photos, conversations, and information constantly. Some researchers argue that easy access to digital information may reduce the need to memorize facts. Others believe technology mainly changes how people organize and retrieve knowledge rather than weakening memory itself.\n\nPhilosophers have also debated whether memory is essential for personal identity. If a person lost all memories, would they still remain the same individual? Some thinkers argue that memory creates continuity between past and present experiences, while others believe identity depends on additional factors such as personality, relationships, and physical existence.\n\nOne finding has changed how researchers think about remembering. A memory is not retrieved like a file; it is rebuilt each time, and while it is being rebuilt it is briefly unstable and open to alteration. This process, called reconsolidation, means that a memory recalled often is not necessarily more accurate. It may simply have been edited more times.\n\nThe practical consequences are largest in courtrooms. Eyewitness testimony feels authoritative, and juries treat confident witnesses as reliable, yet confidence and accuracy correlate only weakly. Of the first several hundred convictions overturned by DNA evidence in the United States, around seventy per cent involved mistaken eyewitness identification. Police procedures in many countries have since been rewritten so that officers running an identification do not know which person is the suspect.\n\nEven the memories that feel most permanent are unreliable. Researchers who asked people to write down where they were during a major news event, and then asked the same people years later, found that the accounts changed substantially — while the confidence with which they were told did not. The feeling of certainty, it turns out, is produced quite separately from the accuracy of what is being remembered.\n\nAlthough many questions about memory remain unanswered, researchers agree that it remains one of the most important and complex aspects of human psychology.",
     "questions": [
       {
         "type": "literal",
@@ -10036,11 +10112,8 @@
       }
     ],
     "meta": {
-      "wordCount": 335,
-      "fingerprint": "ak8-tema-005",
-      "generatedAt": "2026-05-21",
-      "model": "gpt-4o",
-      "readingTime": 2
+      "wordCount": 532,
+      "readingTime": 4
     },
     "imageUrl": "https://images.unsplash.com/photo-1453828423292-392a660a502f?w=700&h=420&fit=crop"
   },
@@ -10050,57 +10123,79 @@
     "genre": "non-fiction",
     "theme": "science",
     "title": "The Journey to Mars",
-    "text": "Mars has fascinated humans for centuries, but only in the last few decades have we seriously planned to send people there. The journey would take approximately seven months each way, making it the longest human spaceflight in history.\n\nAstronauts travelling to Mars would face extraordinary challenges. Exposure to cosmic radiation outside Earth's protective magnetic field could increase cancer risks significantly. The spacecraft would need sophisticated shielding, and scientists are exploring materials like polyethylene and water walls to absorb harmful particles.\n\nMicrogravity causes muscle and bone loss, so travellers would need daily exercise routines using resistance machines. Psychological challenges are equally serious. A crew of four to six people would be confined in a small space for over a year with no possibility of emergency return.\n\nCommunication with Earth would also be frustrating. Radio signals travel at the speed of light, but Mars can be up to 20 light-minutes away. A simple conversation would require waiting 40 minutes for a reply. Crews would need to be highly self-sufficient and make independent decisions.\n\nDespite these obstacles, space agencies and private companies are developing ambitious plans. NASA aims to land humans on Mars in the 2030s, while SpaceX envisions a permanent colony. If successful, it would be humanity's greatest exploration achievement.",
+    "text": "Mars has fascinated humans for centuries, but only in the last few decades have we seriously planned to send people there. The journey would take approximately seven months each way, making it the longest human spaceflight in history.\n\nAstronauts travelling to Mars would face extraordinary challenges. Exposure to cosmic radiation outside Earth's protective magnetic field could increase cancer risks significantly. The spacecraft would need sophisticated shielding, and scientists are exploring materials like polyethylene and water walls to absorb harmful particles.\n\nMicrogravity causes muscle and bone loss, so travellers would need daily exercise routines using resistance machines. Psychological challenges are equally serious. A crew of four to six people would be confined in a small space for over a year with no possibility of emergency return.\n\nCommunication with Earth would also be frustrating. Radio signals travel at the speed of light, but Mars can be up to 20 light-minutes away. A simple conversation would require waiting 40 minutes for a reply. Crews would need to be highly self-sufficient and make independent decisions.\n\nDespite these obstacles, space agencies and private companies are developing ambitious plans. The timing is dictated by orbital mechanics rather than ambition. Earth and Mars align favourably only once every twenty-six months, and a mission that misses its launch window waits more than two years for the next one. That same arithmetic governs the return: a crew arriving at Mars would have to remain there for over a year before the planets lined up again, which is why most serious plans describe a mission lasting close to three years in total rather than a visit.\n\nFuel is the reason nobody simply carries everything. Lifting the propellant needed for the journey home multiplies the mass that must be launched from Earth, and mass is the single most expensive quantity in spaceflight. Current designs therefore assume the crew will manufacture their return fuel on Mars itself, using the carbon dioxide that makes up most of the thin Martian atmosphere. NASA has already tested the principle: an instrument aboard the Perseverance rover produced small amounts of oxygen from Martian air. Scaling that from a laboratory demonstration to several tonnes of fuel is an unsolved engineering problem.\n\nLanding is harder on Mars than almost anywhere else. The atmosphere is thick enough to heat a descending spacecraft severely, but far too thin for parachutes alone to slow it sufficiently, so vehicles must combine heat shields, parachutes and rocket engines in sequence. Roughly half of all missions ever sent to the Martian surface have failed. The heaviest object successfully landed so far weighs about a tonne; a crewed vehicle would weigh many times that.\n\nThen there is the question nobody can test in advance. No human has spent three years away from Earth, and no crew has ever travelled beyond the possibility of rescue. Every previous emergency in spaceflight, including Apollo 13, was survivable partly because home lay days away rather than months. A crew halfway to Mars would have to solve any problem with whatever they had brought with them.\n\nNASA aims to land humans on Mars in the 2030s, while SpaceX envisions a permanent colony. If successful, it would be humanity's greatest exploration achievement.",
     "imageUrl": "https://images.unsplash.com/photo-1696384036025-c7d7b7f6584d?w=800&q=80",
     "questions": [
       {
         "type": "literal",
         "q": "How long would a one-way journey to Mars approximately take?",
         "options": [
+          "Two years",
           "One year",
-          "Seven months",
           "Three months",
-          "Two years"
+          "Seven months"
         ],
-        "correct": 1
+        "correct": 3
       },
       {
         "type": "literal",
         "q": "What health risk does cosmic radiation pose to astronauts?",
         "options": [
+          "Blindness",
           "Increased cancer risk",
-          "Memory loss",
           "Heart disease",
-          "Blindness"
+          "Memory loss"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inference",
         "q": "Why would crews need to be highly self-sufficient on a Mars mission?",
         "options": [
+          "Because food supplies are limited",
           "Because communication delays make Earth unable to help quickly",
           "Because the spacecraft has no computer systems",
-          "Because Mars has no gravity",
-          "Because food supplies are limited"
+          "Because Mars has no gravity"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inference",
         "q": "What does the phrase 'humanity's greatest exploration achievement' suggest?",
         "options": [
-          "That only private companies can reach Mars",
+          "That landing on Mars would surpass all previous human exploration",
           "That robots are better explorers than humans",
-          "That Mars missions have already succeeded",
-          "That landing on Mars would surpass all previous human exploration"
+          "That only private companies can reach Mars",
+          "That Mars missions have already succeeded"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How often do Earth and Mars align favourably for launch?",
+        "options": [
+          "Once every year",
+          "Every six months",
+          "Roughly every three years",
+          "Every twenty-six months"
         ],
         "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why do current designs assume the crew will make fuel on Mars?",
+        "options": [
+          "Carrying return fuel would make the launch mass far too great",
+          "International agreements forbid carrying it",
+          "Fuel degrades during the long journey",
+          "Fuel made on Mars burns more efficiently"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 208,
-      "readingTime": 1
+      "wordCount": 531,
+      "readingTime": 4
     }
   },
   {
@@ -10109,15 +10204,15 @@
     "genre": "non-fiction",
     "theme": "science",
     "title": "Life of a Star",
-    "text": "Stars are not eternal. Like living things, they are born, they mature, and they die. The life cycle of a star depends almost entirely on one factor: its mass.\n\nStars form inside vast clouds of gas and dust called nebulae. Gravity pulls this material together until the pressure at the centre becomes so intense that hydrogen atoms fuse to form helium, releasing enormous energy. This process, called nuclear fusion, makes the star shine.\n\nOur Sun is a medium-sized star and has been burning for about 4.6 billion years. It will continue for another five billion years before it exhausts its hydrogen fuel. When that happens, the Sun will expand into a red giant, swallowing Mercury and Venus and possibly Earth. Eventually, it will shed its outer layers, leaving behind a dense core called a white dwarf.\n\nMassive stars live faster and die more dramatically. They burn through their fuel in millions rather than billions of years. When they exhaust their fuel, they collapse suddenly and explode in a supernova — one of the most violent events in the universe. The explosion can briefly outshine an entire galaxy.\n\nWhat remains after a supernova depends on the star's original mass. Some become neutron stars, incredibly dense objects where a teaspoon of material would weigh a billion tonnes. The most massive stars collapse completely into black holes, where gravity is so strong that nothing — not even light — can escape.",
+    "text": "Stars are not eternal. Like living things, they are born, they mature, and they die. The life cycle of a star depends almost entirely on one factor: its mass.\n\nStars form inside vast clouds of gas and dust called nebulae. Gravity pulls this material together until the pressure at the centre becomes so intense that hydrogen atoms fuse to form helium, releasing enormous energy. This process, called nuclear fusion, makes the star shine.\n\nOur Sun is a medium-sized star and has been burning for about 4.6 billion years. It will continue for another five billion years before it exhausts its hydrogen fuel. When that happens, the Sun will expand into a red giant, swallowing Mercury and Venus and possibly Earth. Eventually, it will shed its outer layers, leaving behind a dense core called a white dwarf.\n\nMassive stars live faster and die more dramatically. They burn through their fuel in millions rather than billions of years. When they exhaust their fuel, they collapse suddenly and explode in a supernova — one of the most violent events in the universe. The explosion can briefly outshine an entire galaxy.\n\nAlmost everything we know about stars comes from analysing their light. Passing starlight through a diffraction grating spreads it into a spectrum crossed by dark lines, and each chemical element absorbs light at its own precise wavelengths. Those lines act as fingerprints. From a single spectrum, astronomers can determine what a star is made of, how hot its surface is, how fast it is rotating, and whether it is moving towards us or away.\n\nThis is how the life cycle was worked out at all, since no star can be observed from birth to death. A human lifetime is nothing beside the millions or billions of years involved. Instead, astronomers observe enormous numbers of stars at different stages simultaneously and reconstruct the sequence, in the same way a visitor to a forest can describe how a tree grows without watching one for two centuries.\n\nThe consequences reach further than astronomy. Fusion inside stars produced almost every element heavier than hydrogen and helium. Carbon, oxygen and nitrogen were forged in the cores of stars that lived and died before the Sun existed, and elements heavier than iron require the extreme conditions of a supernova or a collision between neutron stars. The calcium in bones and the iron in blood were manufactured in stellar interiors and scattered by explosions.\n\nOur own Sun will not explode. It is not massive enough. After the red giant phase it will shed its outer layers gently, producing a glowing shell of gas that astronomers confusingly call a planetary nebula, before settling into a white dwarf that will cool slowly for longer than the universe has so far existed. Nothing about that ending is dramatic, which is part of why it took astronomers so long to work it out.\n\nWhat remains after a supernova depends on the star's original mass. Some become neutron stars, incredibly dense objects where a teaspoon of material would weigh a billion tonnes. The most massive stars collapse completely into black holes, where gravity is so strong that nothing — not even light — can escape.",
     "imageUrl": "https://images.unsplash.com/photo-1462332420958-a05d1e002413?w=800&q=80",
     "questions": [
       {
         "type": "literal",
         "q": "What process makes stars shine?",
         "options": [
-          "Electrical discharge",
           "Magnetic resonance",
+          "Electrical discharge",
           "Chemical burning",
           "Nuclear fusion"
         ],
@@ -10127,39 +10222,61 @@
         "type": "literal",
         "q": "What will the Sun eventually become after it expands into a red giant?",
         "options": [
+          "A supernova",
           "A white dwarf",
-          "A black hole",
           "A neutron star",
-          "A supernova"
+          "A black hole"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "type": "inference",
         "q": "Why do massive stars have shorter lives than medium-sized stars like our Sun?",
         "options": [
           "They are farther from Earth",
-          "They burn through their fuel much more quickly",
           "They have less hydrogen to begin with",
+          "They burn through their fuel much more quickly",
           "They form in smaller nebulae"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "What does the teaspoon comparison tell us about neutron stars?",
         "options": [
-          "They are made of ordinary rock",
           "They are easy to study from Earth",
           "They contain liquid material",
-          "They are extremely dense objects"
+          "They are extremely dense objects",
+          "They are made of ordinary rock"
         ],
-        "correct": 3
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How do astronomers work out what a star is made of?",
+        "options": [
+          "By analysing the dark lines in its spectrum",
+          "By measuring its gravitational pull on planets",
+          "By tracking its path across the sky",
+          "By measuring how its brightness changes"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why must the stellar life cycle be reconstructed from many stars at once?",
+        "options": [
+          "Telescopes cannot stay pointed at one star",
+          "A single star lives far longer than any human lifetime",
+          "Stars change too quickly to be photographed",
+          "Individual stars are too faint to study properly"
+        ],
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 238,
-      "readingTime": 2
+      "wordCount": 530,
+      "readingTime": 4
     }
   },
   {
@@ -10168,19 +10285,19 @@
     "genre": "non-fiction",
     "theme": "science",
     "title": "The Mystery of Black Holes",
-    "text": "Black holes are among the most extreme objects in the universe. They form when massive stars collapse under their own gravity at the end of their lives. The result is a region where gravity is so intense that nothing — not even light — can escape once it crosses a boundary called the event horizon.\n\nDespite the name, black holes are not empty voids. They contain an enormous amount of mass compressed into an incredibly small space. At the centre lies the singularity, a point where our understanding of physics completely breaks down. Einstein's general relativity predicts its existence but cannot describe what happens there.\n\nBlack holes come in different sizes. Stellar black holes form from individual stars and may be only a few times larger than our Sun. Supermassive black holes, found at the centre of most galaxies, can contain billions of solar masses. The black hole at the heart of our galaxy, called Sagittarius A*, has a mass four million times that of our Sun.\n\nFor decades, black holes were theoretical. Then in 2019, the Event Horizon Telescope captured the first actual image of a black hole in the galaxy M87. The photograph showed a glowing ring of hot gas surrounding a dark central region.\n\nScientists study black holes by observing how they affect nearby matter and light. As gas spirals inward, it heats up and emits X-rays that telescopes can detect. Black holes are invisible, but their effects reveal them unmistakably.",
+    "text": "Black holes are among the most extreme objects in the universe. They form when massive stars collapse under their own gravity at the end of their lives. The result is a region where gravity is so intense that nothing — not even light — can escape once it crosses a boundary called the event horizon.\n\nDespite the name, black holes are not empty voids. They contain an enormous amount of mass compressed into an incredibly small space. At the centre lies the singularity, a point where our understanding of physics completely breaks down. Einstein's general relativity predicts its existence but cannot describe what happens there.\n\nBlack holes come in different sizes. Stellar black holes form from individual stars and may be only a few times larger than our Sun. Supermassive black holes, found at the centre of most galaxies, can contain billions of solar masses. The black hole at the heart of our galaxy, called Sagittarius A*, has a mass four million times that of our Sun.\n\nFor decades, black holes were theoretical. Then in 2019, the Event Horizon Telescope captured the first actual image of a black hole in the galaxy M87. The photograph showed a glowing ring of hot gas surrounding a dark central region.\n\nTime behaves strangely near a black hole, and this is not a metaphor. General relativity predicts that clocks run more slowly in stronger gravity, an effect confirmed daily by satellite navigation systems, which must correct for it to stay accurate. Close to an event horizon the effect becomes extreme. To a distant observer, an object falling in appears to slow, redden and freeze at the boundary, never quite crossing it, while from the falling object's own perspective the crossing happens immediately and unremarkably. Both descriptions are correct, which is one reason black holes are difficult to explain.\n\nStephen Hawking added a further complication in 1974. Applying quantum theory near the horizon, he calculated that black holes should not be entirely black: they ought to emit a faint radiation and, over unimaginable spans of time, evaporate completely. For a black hole of stellar mass the process would take far longer than the current age of the universe, and the radiation is far too faint to detect. It has never been observed, yet it is widely accepted, because the mathematics is difficult to escape.\n\nA newer method of detection avoids light altogether. When two black holes spiral together and merge, they shake spacetime itself, sending out gravitational waves. In 2015, the LIGO detectors in the United States registered such a signal for the first time, produced by a collision roughly 1.3 billion light years away. The instruments measured a change in length smaller than one ten-thousandth the width of a proton. Each detection lasts less than a second. Since then, hundreds of mergers have been recorded, and astronomy has effectively gained a second sense: events that emit no light at all can now be heard. The signal is usually converted into audible sound so that researchers can listen to it directly.\n\nScientists study black holes by observing how they affect nearby matter and light. As gas spirals inward, it heats up and emits X-rays that telescopes can detect. Black holes are invisible, but their effects reveal them unmistakably.",
     "imageUrl": "https://images.unsplash.com/photo-1761232007928-258c9bd98d66?w=700&h=420&fit=crop",
     "questions": [
       {
         "type": "literal",
         "q": "What is the event horizon of a black hole?",
         "options": [
-          "The centre of a black hole",
           "The boundary beyond which nothing can escape",
-          "The region where stars form",
-          "A type of radiation emitted by black holes"
+          "The centre of a black hole",
+          "A type of radiation emitted by black holes",
+          "The region where stars form"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
         "type": "literal",
@@ -10188,37 +10305,59 @@
         "options": [
           "2015",
           "2021",
-          "2019",
-          "2017"
+          "2017",
+          "2019"
         ],
-        "correct": 2
+        "correct": 3
       },
       {
         "type": "inference",
         "q": "How do scientists detect black holes if they cannot be seen directly?",
         "options": [
-          "By measuring changes in Earth's gravity",
-          "By observing their effects on nearby matter and light",
+          "By travelling close enough to photograph them",
           "By using sound waves in space",
-          "By travelling close enough to photograph them"
+          "By observing their effects on nearby matter and light",
+          "By measuring changes in Earth's gravity"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "type": "inference",
         "q": "What does 'our understanding of physics completely breaks down' at the singularity mean?",
         "options": [
-          "That time speeds up near the centre",
-          "That gravity is weaker at the singularity",
           "That current scientific laws cannot explain what occurs there",
-          "That physics equipment stops working near black holes"
+          "That physics equipment stops working near black holes",
+          "That time speeds up near the centre",
+          "That gravity is weaker at the singularity"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did the LIGO detectors register in 2015?",
+        "options": [
+          "The first photograph of a black hole",
+          "X-rays from gas falling inward",
+          "Gravitational waves from two merging black holes",
+          "Hawking radiation leaving a horizon"
         ],
         "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why has Hawking radiation never been observed?",
+        "options": [
+          "Telescopes cannot be pointed at black holes",
+          "It occurs only in supermassive black holes",
+          "Later mathematics showed it does not exist",
+          "It is far too faint and the process far too slow"
+        ],
+        "correct": 3
       }
     ],
     "meta": {
-      "wordCount": 244,
-      "readingTime": 2
+      "wordCount": 543,
+      "readingTime": 4
     }
   },
   {
@@ -10227,7 +10366,7 @@
     "genre": "non-fiction",
     "theme": "technology",
     "title": "Living on a Space Station",
-    "text": "The International Space Station (ISS) has been continuously inhabited since November 2000, making it humanity's longest-running outpost in space. Orbiting Earth at about 400 kilometres altitude, it travels at 28,000 kilometres per hour and completes 16 orbits of Earth every day.\n\nLife aboard the ISS requires adapting to microgravity, where everything floats unless secured. Astronauts sleep in small sleeping bags attached to walls. They eat specially prepared foods from sealed pouches or cans. Even drinking requires special pouches with straws — ordinary cups would spill in zero gravity.\n\nWater is precious and recycled extensively. The station's systems recover moisture from the air, including water vapour exhaled by the crew, and purify it for drinking. Urine is also recycled into drinking water through advanced filtration processes. Nothing is wasted.\n\nAstronauts must exercise for two hours every day to counteract the muscle and bone loss caused by weightlessness. Despite this, returning astronauts typically need months of rehabilitation on Earth. The longest continuous mission on the ISS lasted 355 days, leaving the astronaut noticeably weakened.\n\nThe ISS is also a laboratory. Scientists use the microgravity environment to study biology, physics, and materials science in ways impossible on Earth. Experiments have led to advances in medicine, water purification, and robotics.\n\nCurrently, NASA and its partners are planning a new lunar Gateway station as a stepping stone to Mars, building on lessons learned from over two decades aboard the ISS.",
+    "text": "The International Space Station (ISS) has been continuously inhabited since November 2000, making it humanity's longest-running outpost in space. Orbiting Earth at about 400 kilometres altitude, it travels at 28,000 kilometres per hour and completes 16 orbits of Earth every day.\n\nLife aboard the ISS requires adapting to microgravity, where everything floats unless secured. Astronauts sleep in small sleeping bags attached to walls. They eat specially prepared foods from sealed pouches or cans. Even drinking requires special pouches with straws — ordinary cups would spill in zero gravity.\n\nWater is precious and recycled extensively. The station's systems recover moisture from the air, including water vapour exhaled by the crew, and purify it for drinking. Urine is also recycled into drinking water through advanced filtration processes. Nothing is wasted.\n\nAstronauts must exercise for two hours every day to counteract the muscle and bone loss caused by weightlessness. Despite this, returning astronauts typically need months of rehabilitation on Earth. The longest continuous mission on the ISS lasted 355 days, leaving the astronaut noticeably weakened.\n\nThe ISS is also a laboratory. Scientists use the microgravity environment to study biology, physics, and materials science in ways impossible on Earth. Experiments have led to advances in medicine, water purification, and robotics.\n\nThe station was not launched; it was assembled. Between 1998 and 2011, more than forty flights carried modules, trusses and solar arrays into orbit, where astronauts joined them together during spacewalks lasting six to eight hours. The finished structure is roughly the size of a football pitch and remains the most expensive object ever built.\n\nIts most unusual feature may be political rather than technical. The ISS is operated jointly by the United States, Russia, Japan, Canada and the European Space Agency, and that cooperation has continued through periods of serious diplomatic hostility between the participating governments. American and Russian crews depend on each other's systems: for years the only route to the station was aboard a Russian Soyuz, and the Russian segment relies on power generated by American solar arrays.\n\nDaily life is stranger than photographs suggest. The station is never quiet, because fans must run constantly — without convection, warm air does not rise, and a sleeping astronaut who did not have moving air would slowly build up a bubble of exhaled carbon dioxide around their own head. Astronauts describe a persistent metallic smell after spacewalks, thought to come from atomic oxygen reacting with the suits. Sunrise happens sixteen times a day, so window blinds and a strict schedule replace daylight as the signal for sleep.\n\nThe station will not last indefinitely. Its structure is ageing, small cracks have appeared in the oldest modules, and the current plan is a controlled deorbit around 2030, guiding it into a remote stretch of the southern Pacific Ocean already used as a graveyard for spacecraft. Several private companies have proposed replacement stations, but none has yet flown, and there is a real possibility of a period with no permanently crewed laboratory in orbit for the first time since 2000.\n\nCurrently, NASA and its partners are planning a new lunar Gateway station as a stepping stone to Mars, building on lessons learned from over two decades aboard the ISS.",
     "imageUrl": "https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=800&q=80",
     "questions": [
       {
@@ -10273,11 +10412,33 @@
           "It makes experiments run faster"
         ],
         "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why must fans run constantly on the station?",
+        "options": [
+          "To keep the electronics from overheating",
+          "Because without convection, exhaled carbon dioxide would collect around a sleeping astronaut",
+          "To circulate the recycled drinking water",
+          "To mask the noise made by the solar arrays"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the text present as unusual about the ISS partnership?",
+        "options": [
+          "It involves more countries than any earlier project",
+          "It has continued despite hostility between the governments",
+          "It is funded entirely by private companies",
+          "Each country operates its module independently"
+        ],
+        "correct": 1
       }
     ],
     "meta": {
-      "wordCount": 235,
-      "readingTime": 2
+      "wordCount": 533,
+      "readingTime": 4
     }
   },
   {
@@ -10286,28 +10447,28 @@
     "genre": "non-fiction",
     "theme": "science",
     "title": "Searching for Other Worlds",
-    "text": "The discovery of planets beyond our solar system — called exoplanets — has transformed our understanding of the universe. Before 1992, we had no confirmed evidence that other stars hosted planets. Today, astronomers have catalogued over 5,500 exoplanets, with thousands more candidates awaiting confirmation.\n\nMost exoplanets are too far away to photograph directly. Instead, scientists use indirect methods. The transit method detects tiny dips in a star's brightness as a planet passes in front of it, briefly blocking some light. The radial velocity method measures small wobbles in a star caused by a planet's gravitational pull. Both techniques require incredibly precise measurements.\n\nThe Kepler Space Telescope, launched in 2009, revolutionised the field by discovering thousands of exoplanets using the transit method. Its successor, the TESS telescope, continues this work today.\n\nScientists are particularly interested in planets within the habitable zone — the range of distances from a star where liquid water could exist on a planet's surface. Water is considered essential for life as we know it. Several rocky planets in habitable zones have been identified, including some orbiting nearby stars.\n\nThe James Webb Space Telescope, launched in 2021, can analyse the atmospheres of exoplanets by studying starlight filtered through them. Scientists hope to detect gases like oxygen or methane that might indicate biological processes.\n\nWhether life exists elsewhere in the universe remains unknown. But with thousands of worlds to examine, the search has never been more promising.",
+    "text": "The discovery of planets beyond our solar system — called exoplanets — has transformed our understanding of the universe. Before 1992, we had no confirmed evidence that other stars hosted planets. Today, astronomers have catalogued over 5,500 exoplanets, with thousands more candidates awaiting confirmation.\n\nMost exoplanets are too far away to photograph directly. Instead, scientists use indirect methods. The transit method detects tiny dips in a star's brightness as a planet passes in front of it, briefly blocking some light. The radial velocity method measures small wobbles in a star caused by a planet's gravitational pull. Both techniques require incredibly precise measurements.\n\nThe Kepler Space Telescope, launched in 2009, revolutionised the field by discovering thousands of exoplanets using the transit method. Its successor, the TESS telescope, continues this work today.\n\nScientists are particularly interested in planets within the habitable zone — the range of distances from a star where liquid water could exist on a planet's surface. Water is considered essential for life as we know it. Several rocky planets in habitable zones have been identified, including some orbiting nearby stars.\n\nThe James Webb Space Telescope, launched in 2021, can analyse the atmospheres of exoplanets by studying starlight filtered through them. Scientists hope to detect gases like oxygen or methane that might indicate biological processes.\n\nThe planets found so far have been stranger than expected. Early surveys were dominated by hot Jupiters — gas giants larger than Jupiter orbiting closer to their star than Mercury does to the Sun, completing a year in a few Earth days. Nobody had predicted them, and their existence forced a rewriting of theories about how planetary systems form, since a giant planet cannot form that close to a star and must therefore have migrated inwards.\n\nThe most common type of planet in the galaxy appears to be one the solar system does not contain at all: worlds between the size of Earth and Neptune, often called super-Earths or mini-Neptunes. Whether they are rocky planets with thick atmospheres or small gas planets with deep oceans remains unresolved, and the answer matters, because they are the most abundant places available.\n\nInterpreting an atmosphere is harder than detecting one. Oxygen was long treated as a reliable signature of life, since on Earth it is produced almost entirely by photosynthesis and would otherwise disappear through chemical reactions within a few million years. Astronomers have since identified several processes that could generate oxygen without biology, such as ultraviolet light splitting water vapour on a planet losing its ocean. A single gas is therefore never enough. Researchers now look for combinations that should not coexist — oxygen alongside methane, for instance, since the two destroy each other and their simultaneous presence implies something is continuously replenishing both.\n\nEven a convincing detection would raise a further problem. The nearest confirmed exoplanet in a habitable zone lies about four light years away, which means any signal takes four years to arrive and any visit remains far beyond current propulsion. A probe launched today with existing technology would take tens of thousands of years to arrive.\n\nWhether life exists elsewhere in the universe remains unknown. But with thousands of worlds to examine, the search has never been more promising.",
     "imageUrl": "https://images.unsplash.com/photo-1701014159143-09482059f571?w=800&q=80",
     "questions": [
       {
         "type": "literal",
         "q": "What is the transit method for detecting exoplanets?",
         "options": [
-          "Measuring a star's temperature changes",
-          "Photographing planets with powerful telescopes",
+          "Measuring gravitational waves from distant systems",
           "Detecting dips in a star's brightness as a planet passes in front of it",
-          "Measuring gravitational waves from distant systems"
+          "Measuring a star's temperature changes",
+          "Photographing planets with powerful telescopes"
         ],
-        "correct": 2
+        "correct": 1
       },
       {
         "type": "literal",
         "q": "What is the habitable zone around a star?",
         "options": [
           "The range of distances where liquid water could exist on a surface",
-          "The area around a star free from radiation",
           "The region where planets are most likely to be rocky",
-          "The zone where a star's gravity is strongest"
+          "The zone where a star's gravity is strongest",
+          "The area around a star free from radiation"
         ],
         "correct": 0
       },
@@ -10315,12 +10476,12 @@
         "type": "inference",
         "q": "Why are scientists excited about detecting oxygen or methane in an exoplanet's atmosphere?",
         "options": [
-          "They could suggest the presence of biological processes",
-          "They indicate that the planet has water underground",
           "These gases make planets more visible to telescopes",
-          "They show that the planet is in the habitable zone"
+          "They indicate that the planet has water underground",
+          "They show that the planet is in the habitable zone",
+          "They could suggest the presence of biological processes"
         ],
-        "correct": 0
+        "correct": 3
       },
       {
         "type": "inference",
@@ -10332,11 +10493,33 @@
           "Advances in technology and data give scientists better chances of finding answers"
         ],
         "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What is a hot Jupiter?",
+        "options": [
+          "A star slightly smaller than the Sun",
+          "A gas giant orbiting very close to its star",
+          "A world between Earth and Neptune in size",
+          "A rocky planet with a very thick atmosphere"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why do researchers look for combinations of gases rather than one alone?",
+        "options": [
+          "A single gas can often be produced without life",
+          "Combinations are easier to see at a distance",
+          "Instruments cannot detect a single gas reliably",
+          "Single gases disappear too quickly to measure"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
-      "wordCount": 238,
-      "readingTime": 2
+      "wordCount": 536,
+      "readingTime": 4
     }
   },
   {
