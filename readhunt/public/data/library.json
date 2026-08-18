@@ -405,6 +405,87 @@
     }
   },
   {
+    "id": "ak1-ny-001",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "The Cat on the Roof",
+    "imageUrl": "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=700&h=420&fit=crop",
+    "text": "Our cat is called Sixten. Today Sixten is on the roof. He will not come down. Dad gets a ladder. Mum gets some fish. Sixten jumps down for the fish. He is not afraid at all.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is the cat called?",
+        "options": [
+          "Sixten Dad",
+          "Sten",
+          "Simon",
+          "Sixten"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Where is the cat?",
+        "options": [
+          "In a tree",
+          "On the roof",
+          "On the ladder",
+          "Under the bed"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does Dad get?",
+        "options": [
+          "Some fish",
+          "A rope",
+          "A box",
+          "A ladder"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What does Mum get?",
+        "options": [
+          "Some fish",
+          "A ladder",
+          "Milk",
+          "A blanket"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the cat come down?",
+        "options": [
+          "Dad calls him",
+          "He is cold",
+          "He wants the fish",
+          "He sees the ladder"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "How does the cat feel at the end?",
+        "options": [
+          "Scared",
+          "Calm and happy",
+          "Angry",
+          "Very sad"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 36,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak1-orig-001",
     "grade": 1,
     "genre": "fiction",
@@ -1292,6 +1373,87 @@
     ],
     "meta": {
       "wordCount": 49,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-ny-001",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "literature",
+    "title": "The Troll and the Bridge",
+    "imageUrl": "https://images.unsplash.com/photo-1476234251651-f353703a034d?w=700&h=420&fit=crop",
+    "text": "A troll lived under a bridge. He wanted money from everyone who walked over it. One day a small girl came. She had no money, but she had a warm sandwich. The troll had never been given anything before. He let her pass and asked her to come back tomorrow.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did the troll live?",
+        "options": [
+          "In the forest",
+          "On a hill",
+          "Under a bridge",
+          "In a cave"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did the troll want?",
+        "options": [
+          "A house",
+          "Money",
+          "A friend",
+          "Food"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the girl have?",
+        "options": [
+          "A warm sandwich",
+          "A bag of apples",
+          "A silver coin",
+          "A small dog"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did the troll ask her to do?",
+        "options": [
+          "Bring money next time",
+          "Come back tomorrow",
+          "Tell no one about him",
+          "Stay under the bridge"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why did the troll let the girl pass?",
+        "options": [
+          "She paid him later",
+          "He was afraid of her",
+          "Nobody had given him anything before",
+          "The bridge was broken"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What will probably happen tomorrow?",
+        "options": [
+          "The girl will bring money",
+          "The troll will move away",
+          "The bridge will fall down",
+          "The girl will visit the troll again"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 50,
       "readingTime": 1
     }
   },
@@ -2592,6 +2754,87 @@
     }
   },
   {
+    "id": "ak3-ny-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "food",
+    "title": "Grandmother's Soup",
+    "imageUrl": "https://images.unsplash.com/photo-1471193945509-9ad0617afabf?w=700&h=420&fit=crop",
+    "text": "Every Sunday Yusuf helps his grandmother make soup. She never uses a recipe. She tastes, then adds a little salt, then tastes again.\n\nYusuf wanted to write the recipe down, but his grandmother laughed. \"The soup is different every time,\" she said. \"That is why it is good.\"\n\nSo Yusuf wrote down something else instead. He wrote: taste, then think, then taste again.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When do Yusuf and his grandmother make soup?",
+        "options": [
+          "On Saturdays",
+          "Every evening",
+          "Once a month",
+          "Every Sunday"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What does his grandmother never use?",
+        "options": [
+          "Salt",
+          "A large pot",
+          "A spoon",
+          "A recipe"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What does she do before adding salt?",
+        "options": [
+          "She reads a book",
+          "She tastes the soup",
+          "She calls Yusuf",
+          "She turns off the heat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Yusuf write down in the end?",
+        "options": [
+          "Taste, then think, then taste again",
+          "His grandmother’s exact recipe",
+          "How long to cook the soup",
+          "The list of vegetables"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does his grandmother think the soup is good?",
+        "options": [
+          "It is never exactly the same",
+          "It is always very salty",
+          "It follows an old recipe",
+          "It is quick to make"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What did Yusuf learn from his grandmother?",
+        "options": [
+          "That old people cook better",
+          "That cooking means testing and deciding for yourself",
+          "That soup should be cooked slowly",
+          "That recipes are always wrong"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 63,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak3-orig-001",
     "grade": 3,
     "genre": "fiction",
@@ -3884,6 +4127,87 @@
     ],
     "meta": {
       "wordCount": 184,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak4-ny-001",
+    "grade": 4,
+    "genre": "non-fiction",
+    "theme": "nature",
+    "title": "Why Iceland Has Fire and Ice",
+    "imageUrl": "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=700&h=420&fit=crop",
+    "text": "Iceland is an island in the North Atlantic, and it is sometimes called the land of fire and ice. Both names are true at the same time.\n\nThe fire comes from below. Iceland sits on a crack in the Earth's crust, where two enormous plates are slowly moving apart. Hot rock rises into the gap, and that is why the island has more than thirty active volcano systems. In some places, water deep in the ground is heated until it bursts out of the surface as steam.\n\nThe ice sits on top. Iceland is close to the Arctic, so snow that falls high in the mountains does not always melt in summer. Over hundreds of years it presses together into glaciers. One of them, Vatnajokull, is the largest glacier in Europe.\n\nSometimes the two meet. When a volcano erupts underneath a glacier, the ice melts very quickly and huge amounts of water rush down the valleys. Icelanders even have a word for this kind of flood.\n\nPeople have learned to use the heat. Almost every home in Iceland is warmed by hot water from the ground, which is cheaper and cleaner than burning oil.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where is Iceland?",
+        "options": [
+          "Inside the Arctic Circle",
+          "In the North Atlantic",
+          "In the Pacific Ocean",
+          "South of Britain"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why does Iceland have so many volcanoes?",
+        "options": [
+          "It is very close to the Arctic",
+          "The sea around it is warm",
+          "It sits where two plates move apart",
+          "Its mountains are unusually high"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is Vatnajokull?",
+        "options": [
+          "A famous volcano",
+          "A hot spring",
+          "A town in the north",
+          "The largest glacier in Europe"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "How are Icelandic homes heated?",
+        "options": [
+          "With wood from local forests",
+          "With imported oil",
+          "With hot water from the ground",
+          "With electricity from wind turbines"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why do glaciers form in the Icelandic mountains?",
+        "options": [
+          "Snow does not always melt in summer",
+          "The sea water freezes and moves inland",
+          "Rain freezes as soon as it lands",
+          "Volcanoes push the ice upwards"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why is an eruption under a glacier dangerous?",
+        "options": [
+          "The smoke stops all air traffic",
+          "The glacier slides into the sea",
+          "The volcano becomes impossible to see",
+          "Melting ice sends floods down the valleys"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 194,
       "readingTime": 1
     }
   },
@@ -5523,6 +5847,87 @@
     }
   },
   {
+    "id": "ak5-ny-001",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "technology",
+    "title": "How a Bicycle Stays Upright",
+    "imageUrl": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&h=420&fit=crop",
+    "text": "A bicycle standing still falls over almost immediately. The same bicycle, moving forward, can be ridden with no hands at all. For a long time nobody could explain exactly why.\n\nThe oldest explanation was the spinning wheel. A rotating wheel resists being tipped over, in the same way that a spinning top stays upright. This effect is real, but it is weaker than most people think. In 2011 a group of researchers built a special bicycle with extra wheels that spun backwards, cancelling the effect completely. The bicycle still balanced.\n\nA second explanation is the shape of the front fork. On almost every bicycle, the point where the front wheel touches the ground is slightly behind the line of the steering axis. This small distance is called trail, and it makes the front wheel want to follow rather than lead, in the same way that a shopping trolley wheel swings round to point backwards. The researchers removed the trail as well. The bicycle still balanced.\n\nWhat remains is steering. When a bicycle begins to lean to the left, the front wheel turns slightly to the left on its own. The bicycle then curves to the left, and the curve pushes the frame back upright. This happens many times a second, far faster than a rider could think about it, and the rider's hands only make small corrections on top of it.\n\nSpeed matters too. Below about eight kilometres an hour the self-correction is too slow to keep up, which is why a bicycle wobbles most when it is barely moving. Riding uphill very slowly feels unstable for exactly this reason.\n\nThis is also why balance is so hard to explain to a beginner. The instruction that actually works is not \"sit still\" but \"keep going\", because a bicycle that is moving is constantly correcting itself. Learning to ride is mostly learning to trust that.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did the researchers build in 2011?",
+        "options": [
+          "A bicycle for testing brakes",
+          "A bicycle with wheels spinning backwards",
+          "A bicycle with a heavier frame",
+          "A bicycle with no front fork"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is trail?",
+        "options": [
+          "The angle of the handlebars",
+          "The speed needed to stay upright",
+          "The distance behind the steering axis where the wheel touches the ground",
+          "The path a bicycle leaves in sand"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What happens when a moving bicycle starts to lean left?",
+        "options": [
+          "The front wheel turns slightly left by itself",
+          "The back wheel slides outwards",
+          "The rider must turn right",
+          "The frame straightens without turning"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Which comparison does the text use for trail?",
+        "options": [
+          "A spinning top",
+          "A pendulum in a clock",
+          "A boat rudder",
+          "A shopping trolley wheel"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What did the 2011 experiment show?",
+        "options": [
+          "Bicycles cannot balance without a rider",
+          "Trail matters more than steering",
+          "Spinning wheels are the main reason a bicycle balances",
+          "Neither spinning wheels nor trail is necessary for balance"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say \"keep going\" is better advice than \"sit still\"?",
+        "options": [
+          "Beginners fall more often when they are nervous",
+          "Speed makes the wheels heavier",
+          "A moving bicycle corrects itself continuously",
+          "Sitting still tires the rider quickly"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 314,
+      "readingTime": 2
+    }
+  },
+  {
     "id": "ak5-orig-001",
     "grade": 5,
     "genre": "fiction",
@@ -6653,6 +7058,87 @@
     ],
     "meta": {
       "wordCount": 407,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak6-ny-001",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "art",
+    "title": "How a Film Gets Its Sound",
+    "imageUrl": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=700&h=420&fit=crop",
+    "text": "Almost nothing you hear in a film was recorded at the same time as the picture. That surprises most people, because the sound feels completely natural. It feels natural precisely because it was built afterwards, piece by piece, by people who are rarely mentioned when the film is discussed.\n\nThe dialogue usually is recorded on set, but even that is often replaced later. A microphone on a windy street picks up traffic, aeroplanes and the crew, so the actors return to a studio weeks later and speak their lines again while watching themselves on a screen. The technique is called dubbing, and a good actor can match their own mouth movements exactly.\n\nEverything else is added by a sound team. Footsteps, doors, clothes rustling, a cup put down on a table: all of these are performed in a studio by artists who watch the film and act it out with objects in their hands. The work is named after Jack Foley, an American sound engineer who developed the method in the 1920s and 1930s. A Foley artist may walk on gravel in a shallow box to make a character seem to cross a courtyard, or twist a piece of leather to make a saddle creak.\n\nSome famous sounds come from strange places. The noise of a lightsaber in Star Wars was built from an old television set humming beside a broken microphone. A punch in a fight scene is often a fist hitting a piece of raw meat, because a real punch sounds disappointingly quiet.\n\nMusic is a separate craft. A composer writes only after the film has been edited, and a single scene may be scored several times before the director is satisfied. The audience is rarely meant to notice the music either, except in the moments when it is supposed to take over completely. A theme repeated quietly in an early scene can make its return an hour later feel like something remembered rather than something heard for the first time.\n\nThen comes the mix. A sound designer decides what the audience should notice and what should sit in the background, and those decisions carry meaning. Lowering everything except a character's breathing tells us that she is frightened, without anyone saying so. Removing sound entirely, just before an explosion, makes the explosion feel larger.\n\nThis is why sound is sometimes called the half of film that nobody sees. If it is done well, the audience never thinks about it once.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why are lines often re-recorded in a studio?",
+        "options": [
+          "Studio microphones are cheaper to hire",
+          "Outdoor microphones pick up traffic and crew noise",
+          "Actors usually forget their lines on set",
+          "The director wants a different script"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who was Jack Foley?",
+        "options": [
+          "A film director from the 1950s",
+          "A composer of film music",
+          "An American sound engineer",
+          "The inventor of the microphone"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How was the lightsaber sound made?",
+        "options": [
+          "By recording an electric saw",
+          "From a jet engine slowed down",
+          "From a humming television and a broken microphone",
+          "By stretching a metal wire"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is often used for the sound of a punch?",
+        "options": [
+          "A drum hit with a stick",
+          "A fist hitting raw meat",
+          "Two books slapped together",
+          "A hand striking a leather bag"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say film sound feels natural?",
+        "options": [
+          "Modern microphones are extremely sensitive",
+          "It is recorded live in one take",
+          "Audiences are used to poor sound",
+          "It is carefully built afterwards, piece by piece"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why might a sound designer remove almost all sound before an explosion?",
+        "options": [
+          "To make the explosion feel bigger by contrast",
+          "To hide mistakes in the recording",
+          "To save space in the final file",
+          "To let the audience hear the dialogue"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 412,
       "readingTime": 3
     }
   },
@@ -8601,6 +9087,87 @@
     }
   },
   {
+    "id": "ak7-ny-001",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "health",
+    "title": "The Placebo Effect",
+    "imageUrl": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=700&h=420&fit=crop",
+    "text": "A placebo is a treatment with no active ingredient: a tablet of sugar, an injection of salt water, a machine that is switched off. In theory it should do nothing. In practice, patients who receive one often get better, and that puzzle has occupied medicine for more than seventy years.\n\nThe effect was first studied seriously during and after the Second World War, when doctors noticed that wounded soldiers sometimes reported relief from injections that contained no painkiller at all. Since then it has been measured in thousands of trials. It is strongest for symptoms that patients report themselves, such as pain, nausea, tiredness and low mood. It is weakest, or absent, for things that can be measured from the outside. A placebo can make a patient feel that they are breathing more easily; it does not open a blocked airway. It has never shrunk a tumour.\n\nThat distinction matters, because the placebo effect is frequently exaggerated. It is not the mind curing disease. What seems to happen is that expectation changes how the brain processes signals from the body. Brain scans show that when a person believes they have been given a painkiller, the brain releases its own pain-reducing chemicals. Blocking those chemicals with another drug reduces the placebo response, which is good evidence that something physical is taking place rather than simple politeness towards the researcher.\n\nExpectation can be shaped in surprising ways. Larger tablets work better than smaller ones. Two tablets work better than one. Capsules work better than tablets, injections better than capsules. A treatment described confidently by a doctor works better than the same treatment handed over without comment. None of this changes the chemistry of the substance, only the patient's belief about it.\n\nResearchers have even tested open-label placebos, where patients are told plainly that they are receiving no active drug. Some of these trials still found a benefit, which suggests the ritual of treatment matters as well as the belief.\n\nThere is a mirror image, called the nocebo effect. If a patient is told that a drug may cause headaches, more of them report headaches. In one review, patients warned about muscle pain from cholesterol tablets reported it almost as often on a placebo. Doctors are therefore caught between two duties: patients have a right to know about side effects, and telling them makes those side effects more likely.\n\nThat tension explains why the effect is difficult to use deliberately. Prescribing a sugar tablet while implying it is medicine means deceiving a patient, which most medical ethics committees will not allow. What doctors can do is take the parts of the effect that require no deception: explaining a treatment clearly, sounding confident when confidence is justified, and giving an appointment enough time that the patient feels attended to. Those things are free, and the evidence suggests they are not nothing.\n\nThis is why serious medical trials compare a new drug against a placebo rather than against nothing. If a drug improves symptoms, that is not enough; it must improve them more than a sugar tablet does. Many treatments that were once considered obviously effective failed exactly that test.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When was the placebo effect first studied seriously?",
+        "options": [
+          "After brain scanning was invented",
+          "During and after the Second World War",
+          "In the nineteenth century",
+          "In the 1980s"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "For which kind of symptom is the placebo effect strongest?",
+        "options": [
+          "Symptoms that appear suddenly",
+          "Symptoms measured by machines",
+          "Symptoms caused by infection",
+          "Symptoms patients report themselves"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What do brain scans show about people who believe they got a painkiller?",
+        "options": [
+          "Their brains become less active overall",
+          "Their brains show no measurable change",
+          "Their brains release their own pain-reducing chemicals",
+          "Their brains produce more stress hormones"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is an open-label placebo?",
+        "options": [
+          "A placebo mixed with a small dose of a real drug",
+          "A placebo given to healthy volunteers",
+          "A placebo the patient knows is a placebo",
+          "A placebo tested outside a hospital"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text mention that a placebo has never shrunk a tumour?",
+        "options": [
+          "To explain why cancer patients are excluded from studies",
+          "To show that tumours are unusually difficult to treat",
+          "To argue that placebos should not be used in trials",
+          "To show the limits of what the effect can do"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why must a new drug be compared with a placebo rather than with nothing?",
+        "options": [
+          "Because doctors cannot measure symptoms without a comparison group",
+          "Because it must improve symptoms more than belief alone does",
+          "Because placebos are cheaper to produce",
+          "Because patients prefer taking two treatments"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 525,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak7-orig-001",
     "grade": 7,
     "genre": "non-fiction",
@@ -9731,6 +10298,87 @@
     ],
     "meta": {
       "wordCount": 541,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak8-ny-001",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "culture",
+    "title": "Why We Have Seven Days in a Week",
+    "imageUrl": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=700&h=420&fit=crop",
+    "text": "Almost every unit of time we use is copied from something in nature. A day is one turn of the Earth. A year is one journey around the sun. A month is roughly the time the moon takes to complete its cycle. The week is the exception. Nothing in the sky takes seven days, and yet nearly the whole world has agreed on it.\n\nThe oldest trace leads to Mesopotamia, where astronomers watched seven moving objects in the sky: the sun, the moon, and the five planets that can be seen without a telescope. Seven was already treated as a significant number, and dividing the moon's cycle of about twenty-nine days into four parts gives periods of just over seven days each. Neither reason is exact, but together they were enough.\n\nThe Babylonians used a seven-day rhythm, and the idea spread. It appears in the Hebrew Bible, where the seventh day is set aside for rest, and it was carried across the Mediterranean by Jewish communities. The Romans used an eight-day cycle for centuries, with a market day at the end of it, but by the second century the seven-day week had become common in the empire anyway, and in the year 321 the emperor Constantine made it official.\n\nThe names still show where the idea came from. In Latin the days were named after the seven moving objects, and the pattern survives in French and Spanish: lundi and lunes come from the moon, mardi and martes from Mars. English and the Nordic languages took the same list and swapped in local gods. Tuesday is the day of Tiw, Wednesday of Woden, Thursday of Thor, Friday of Frigg. Saturday, oddly, kept the Roman planet Saturn.\n\nOther systems have existed. West African markets ran on cycles of four to eight days. The Soviet Union tried five-day and then six-day weeks in the 1930s so that factories would never stand still, and abandoned the experiment in 1940. Revolutionary France tried a ten-day week in the 1790s and gave it up after twelve years. In each case the problem was the same: a country cannot easily use one calendar while its neighbours and trading partners use another.\n\nThere are hints that the number was chosen for practical reasons as well. A cycle of seven days divides a lunar month almost evenly, and it is short enough that people can plan around it without writing anything down. Markets, courts and religious gatherings all need a repeating date, and a rhythm of a week is easy to remember.\n\nNot every language followed the planets. In Portuguese, most days are simply numbered from the Sunday: segunda-feira, terça-feira and so on. Modern Greek and Arabic do something similar. In Chinese, the days are counted as one through six after the word for week, with a separate word for Sunday. Icelandic reformed its names in the twelfth century to remove references to the old gods, so Wednesday there is midweek day and Thursday is fifth day.\n\nThat is really the answer. The week survives not because seven days suit us particularly well, but because it is shared. It is a piece of agreement that has outlived the astronomy, the empire and the religions that first carried it.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Which seven objects did Mesopotamian astronomers watch?",
+        "options": [
+          "Seven comets recorded over one century",
+          "The sun, the moon and five visible planets",
+          "Seven bright stars in one constellation",
+          "The moon in its seven phases"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What length of cycle did the Romans use for centuries?",
+        "options": [
+          "Ten days",
+          "Six days",
+          "Four days",
+          "Eight days"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What happened in the year 321?",
+        "options": [
+          "Constantine made the seven-day week official",
+          "Saturday was renamed after Saturn",
+          "The Roman market day was abolished",
+          "The Hebrew Bible was translated into Latin"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why did the Soviet Union change the length of the week?",
+        "options": [
+          "To create more religious holidays",
+          "To match the calendar used by its neighbours",
+          "To shorten the working year",
+          "So that factories would never stand still"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text call the week an exception among units of time?",
+        "options": [
+          "Nothing in nature lasts seven days",
+          "It cannot be divided evenly into a year",
+          "It is the only unit that varies between countries",
+          "It was invented more recently than the others"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "According to the text, why did the French and Soviet experiments fail?",
+        "options": [
+          "Workers refused to accept fewer rest days",
+          "A country cannot easily use a different calendar from its neighbours",
+          "The new calendars were too complicated to print",
+          "Religious leaders opposed them everywhere"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 539,
       "readingTime": 4
     }
   },
@@ -11679,6 +12327,87 @@
     }
   },
   {
+    "id": "ak9-ny-001",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "society",
+    "title": "The Bystander Effect, and What Was Wrong With It",
+    "imageUrl": "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=700&h=420&fit=crop",
+    "text": "In 1964 a woman named Kitty Genovese was murdered outside her building in New York. Two weeks later a newspaper reported that thirty-eight neighbours had watched from their windows and that not one of them had called the police. The story spread quickly, and psychologists began asking what it was about a crowd that made people do nothing.\n\nThe experiments that followed became some of the most famous in the subject. In one, students sat alone in rooms and spoke to each other through an intercom. One of the voices, which was in fact a recording, began to describe a seizure. Students who believed they were the only listener went for help almost every time. Students who believed four other people could also hear went for help far less often, and those who did took much longer.\n\nThe explanation offered was diffusion of responsibility. In a group, the duty to act is divided, and each person can assume someone else is already dealing with it. A second factor is that people watch each other for clues. If nobody else looks alarmed, the situation is read as less serious than it is, even when everybody privately feels uneasy.\n\nThe finding entered textbooks, driving lessons and safety courses, usually in the same blunt form: the more witnesses there are, the less likely you are to be helped. It sounded like a warning about modern indifference, and it was repeated for decades.\n\nThen the original story fell apart. Journalists and historians who examined the court records found that the figure of thirty-eight witnesses was wrong. Most of the neighbours heard something without seeing anything, few could tell what was happening in the dark, at least one did call the police, and a woman went out into the street and held Genovese as she died. The article that started the whole field was, in large part, inaccurate.\n\nThe experiments themselves were more solid, but they too have been reconsidered. A large review published in 2019 examined more than two hundred recordings of real conflicts caught on public cameras in three countries. Someone intervened in about nine cases out of ten. More strikingly, the chance of receiving help went up, not down, as the number of people present increased. Bigger crowds contained more people willing to step in.\n\nWhy did the original version last so long? Partly because it was useful. A single dramatic story is easier to teach than a set of qualified findings, and the number thirty-eight gave it the appearance of precision. Partly, too, because it flattered a certain view of city life. Readers in the 1960s were already worried that urban living made people cold, and the article confirmed what they suspected.\n\nThe practical advice has changed as a result. Safety courses once told people to shout at one specific person in a crowd, on the theory that a general appeal would be ignored by everyone. That instruction still works, and it costs nothing, but it is now taught alongside a different message: most people do help, and the person most likely to intervene is someone who has thought about it beforehand.\n\nThe bystander effect has not disappeared. It appears reliably in ambiguous situations, where nobody is certain that anything is wrong. But the general claim that crowds make people passive is not supported by what actually happens on the street, and the safety advice built on it has begun to change with the evidence.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did the 1964 newspaper article claim?",
+        "options": [
+          "That nobody in the building heard anything",
+          "That the neighbours were afraid of the attacker",
+          "That thirty-eight neighbours watched and none called the police",
+          "That the police arrived too late to help"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What happened in the intercom experiment?",
+        "options": [
+          "All students reacted at roughly the same speed",
+          "Students who thought they were alone went for help far more often",
+          "Students who heard four others reacted fastest",
+          "Students refused to take part once they heard the recording"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is diffusion of responsibility?",
+        "options": [
+          "The habit of avoiding strangers in public places",
+          "The delay caused by deciding whom to call first",
+          "The tendency to copy the fastest person in a group",
+          "The sense that in a group the duty to act is divided"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did the 2019 review of camera recordings find?",
+        "options": [
+          "Someone intervened in about nine cases out of ten",
+          "Results differed completely between the three countries",
+          "Intervention was rare outside city centres",
+          "Help arrived only when a crowd was small"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say the original story \"fell apart\"?",
+        "options": [
+          "Psychologists could not repeat the experiments",
+          "The newspaper later admitted it had invented the murder",
+          "The witnesses changed their statements in court",
+          "Court records showed the reported details were largely inaccurate"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What does the text conclude about the bystander effect?",
+        "options": [
+          "It has been fully replaced by the 2019 findings",
+          "It applies only to experiments involving students",
+          "It still holds when a situation is unclear, but not as a general rule",
+          "It was never observed in any real situation"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 574,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak9-orig-001",
     "grade": 9,
     "genre": "non-fiction",
@@ -13133,6 +13862,87 @@
     ],
     "meta": {
       "wordCount": 594,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak10-ny-001",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "literature",
+    "title": "What Is Lost in Translation",
+    "imageUrl": "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=700&h=420&fit=crop",
+    "text": "The Italian phrase traduttore, traditore means translator, traitor. It is a joke about translation that is itself almost impossible to translate, because the two words differ by a single letter, and no English pair does the same work. The phrase demonstrates its own point, which is presumably why it has survived for four hundred years.\n\nEvery translator faces the same basic decision, and it cannot be avoided by working harder. A text can be moved towards the reader or the reader can be moved towards the text. The first approach replaces what is unfamiliar with something the new audience already understands: a currency, a dish, a joke, a form of address. The result reads smoothly, and the reader forgets they are reading a translation. The second approach keeps the strangeness and expects the reader to travel. It is harder to read, and it preserves the sense that this book came from somewhere else.\n\nNeither choice is neutral, and the argument between them is old. In 1813 the German scholar Friedrich Schleiermacher described the two options and openly preferred the second, arguing that smoothing a foreign text into comfortable German quietly erased the culture that produced it. Two centuries later, the theorist Lawrence Venuti made a similar case about English, pointing out that translations into English are unusually invisible. Reviewers praise a novel's prose without mentioning that the prose they are praising was written by the translator.\n\nSome problems have no good answer at all. Many languages distinguish between a formal and an informal word for you, and a novel may turn on the moment two characters stop using the formal form. English lost that distinction centuries ago, and the translator must either invent an equivalent gesture or let the moment disappear. Japanese ends sentences with particles that indicate how certain the speaker is and how they relate to the listener. Wordplay is worse still: a pun that turns on the sound of two words in one language will not survive into another, and the translator must choose between explaining the joke, which kills it, and writing a different joke in the same spirit, which is a small act of authorship.\n\nPoetry concentrates all of these difficulties. Sound, rhythm, meaning and association cannot all be carried across at once, and the translator decides which to sacrifice. This is why several translations of the same poem can be equally faithful and entirely unlike one another, and why the best of them are read as literature in their own right.\n\nNames and titles carry the same problem in miniature. A Russian novel in which characters address one another by three different forms of the same name is telling the reader something about intimacy and rank at every turn, and an English translation that standardises them loses a whole layer of the book. Some translators keep all the forms and add a list at the front; others quietly reduce them and accept the loss.\n\nMoney, food and measurement raise smaller versions of the same question. Convert a nineteenth-century sum into modern currency and the reader understands instantly what it was worth, but the period disappears. Leave it, and the reader may not notice that a character has just been ruined.\n\nNone of this argues against translation. Almost everything most people have read from beyond their own language reached them this way, and a translated text is not a damaged copy of an original but a new work standing in a particular relationship to it. What the joke about traitors actually points to is not failure but authorship: the translator has made thousands of decisions, and the book you are holding is partly theirs.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What does traduttore, traditore mean?",
+        "options": [
+          "Reader, stranger",
+          "Translator, traitor",
+          "Writer, thief",
+          "Language, betrayal"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Schleiermacher argue in 1813?",
+        "options": [
+          "That smoothing a foreign text erases the culture behind it",
+          "That poetry should never be translated",
+          "That translation should be left to native speakers",
+          "That translators should be named on the cover"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What point does Venuti make about translation into English?",
+        "options": [
+          "English translations are unusually invisible",
+          "English readers prefer difficult prose",
+          "English translators are paid less than others",
+          "English has too few words for accurate translation"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Which distinction has English lost, according to the text?",
+        "options": [
+          "Between spoken and written pronouns",
+          "Between past and present tense in questions",
+          "Between formal and informal forms of you",
+          "Between singular and plural verbs"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say the Italian phrase demonstrates its own point?",
+        "options": [
+          "It contains a word that exists in no other language",
+          "Its effect depends on a similarity that cannot be reproduced",
+          "It is quoted more often than it is understood",
+          "It was written by a translator"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What is the writer’s final view of translation?",
+        "options": [
+          "Only poetry survives translation successfully",
+          "Readers should learn languages instead of reading translations",
+          "A translation is a new work, and partly the translator’s own",
+          "It is a necessary but always damaging process"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 609,
       "readingTime": 4
     }
   },
