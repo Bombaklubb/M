@@ -38,7 +38,9 @@ function EmptyStats() {
 }
 
 export default function StatsPanel({ grade, onOpenReading }: Props) {
-  const [results, setResults] = useState(() => loadResults(grade.id));
+  const [results, setResults] = useState(() =>
+    loadResults(grade.subject, grade.id)
+  );
 
   if (results.length === 0) return <EmptyStats />;
 
@@ -88,7 +90,7 @@ export default function StatsPanel({ grade, onOpenReading }: Props) {
 
   const reset = () => {
     if (window.confirm("Vill du nollställa din statistik för den här årskursen?")) {
-      clearResults(grade.id);
+      clearResults(grade.subject, grade.id);
       setResults([]);
     }
   };

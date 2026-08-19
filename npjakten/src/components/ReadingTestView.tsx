@@ -1,20 +1,27 @@
 import { useEffect, useMemo, useState } from "react";
-import type { Question, ReadingTest } from "../types";
+import type { ListeningTest, Question, ReadingTest, Subject } from "../types";
 import ExamTimer from "./ExamTimer";
 import IllustrationImg from "./IllustrationImg";
 import StrategyTips from "./StrategyTips";
 import FacitSheet from "./FacitSheet";
 import ReadAloudButton from "./ReadAloudButton";
+import ListeningPanel from "./ListeningPanel";
 import { clearTestResult, saveTestResult } from "../lib/results";
 import { safeGetJson, safeRemove, safeSet } from "../lib/storage";
 
 interface Props {
-  test: ReadingTest;
+  // Läsprov och hörförståelseprov delar all logik för svar, rättning,
+  // statistik och utskrift – bara materialet ovanför frågorna skiljer.
+  test: ReadingTest | ListeningTest;
+  subject: Subject;
   gradeId: string;
   gradeLabel: string;
   teacherMode: boolean;
   onBack: () => void;
 }
+
+const isListening = (t: ReadingTest | ListeningTest): t is ListeningTest =>
+  "script" in t;
 
 const LETTERS = ["A", "B", "C", "D"];
 
@@ -29,6 +36,7 @@ interface SavedProgress {
 
 export default function ReadingTestView({
   test,
+  subject,
   gradeId,
   gradeLabel,
   teacherMode,
@@ -135,6 +143,7 @@ export default function ReadingTestView({
     saveTestResult({
       testId: test.id,
       gradeId,
+      subject,
       when: Date.now(),
       perQuestion: test.questions.map((q) => ({
         qid: q.id,
@@ -206,7 +215,7 @@ export default function ReadingTestView({
             (mobileTab === "text" ? "bg-np text-white" : "text-stone-600")
           }
         >
-          📖 Texten
+          {isListening(test) ? "🎧 Ljudet" : "📖 Texten"}
         </button>
         <button
           onClick={() => setMobileTab("questions")}
@@ -222,7 +231,8 @@ export default function ReadingTestView({
       {/* Texthäftet */}
       <div className={"paper" + (mobileTab === "questions" ? " hidden md:block" : "")}>
         <p className="text-right text-xs italic text-stone-500">
-          Svenska och svenska som andraspråk, {gradeLabel.toLowerCase()}
+          {subject === "engelska" ? "Engelska" : "Svenska och svenska som andraspråk"},{" "}
+          {gradeLabel.toLowerCase()}
           <br />
           {test.delprov}
         </p>
@@ -230,16 +240,19 @@ export default function ReadingTestView({
         <div className="mt-6 flex items-start justify-between gap-4">
           <h1 className="font-serif text-3xl font-bold">{test.title}</h1>
           <span className="no-print mt-1 flex shrink-0 flex-col items-end gap-1">
-            <ReadAloudButton
-              chunks={[
-                test.title,
-                ...(test.ingress ? [test.ingress] : []),
-                ...test.sections.flatMap((s) => [
-                  ...(s.heading ? [s.heading] : []),
-                  ...s.paragraphs,
-                ]),
-              ]}
-            />
+            {!isListening(test) && (
+              <ReadAloudButton
+                lang={test.lang === "en" ? "en-GB" : "sv-SE"}
+                chunks={[
+                  test.title,
+                  ...(test.ingress ? [test.ingress] : []),
+                  ...test.sections.flatMap((s) => [
+                    ...(s.heading ? [s.heading] : []),
+                    ...s.paragraphs,
+                  ]),
+                ]}
+              />
+            )}
             <button
               type="button"
               onClick={() => window.print()}
@@ -262,47 +275,57 @@ export default function ReadingTestView({
           </span>
         </div>
 
-        {test.image && (
-          <IllustrationImg
-            image={test.image}
-            className="mt-5 aspect-video w-full rounded-md object-cover"
-          />
-        )}
+        {isListening(test) ? (
+          <ListeningPanel test={test} />
+        ) : (
+          <>
+            {test.image && (
+              <IllustrationImg
+                image={test.image}
+                className="mt-5 aspect-video w-full rounded-md object-cover"
+              />
+            )}
 
-        {test.ingress && (
-          <p className="mt-4 font-serif text-lg font-semibold leading-relaxed text-stone-700">
-            {test.ingress}
-          </p>
-        )}
+            {test.ingress && (
+              <p className="mt-4 font-serif text-lg font-semibold leading-relaxed text-stone-700">
+                {test.ingress}
+              </p>
+            )}
 
-        <div className="mt-4 space-y-6">
-          {test.sections.map((section, si) => (
-            <div key={si}>
-              {section.heading && (
-                <h2 className="mb-2 font-serif text-xl font-bold">{section.heading}</h2>
-              )}
-              <div className="space-y-3">
-                {section.paragraphs.map((p, pi) => (
-                  <p key={pi} className="font-serif leading-relaxed">
-                    {p}
-                  </p>
-                ))}
-              </div>
+            <div className="mt-4 space-y-6">
+              {test.sections.map((section, si) => (
+                <div key={si}>
+                  {section.heading && (
+                    <h2 className="mb-2 font-serif text-xl font-bold">
+                      {section.heading}
+                    </h2>
+                  )}
+                  <div className="space-y-3">
+                    {section.paragraphs.map((p, pi) => (
+                      <p key={pi} className="font-serif leading-relaxed">
+                        {p}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        {test.footnote && (
-          <p className="mt-6 border-t border-stone-300 pt-3 text-sm text-stone-600">
-            {test.footnote}
-          </p>
+            {test.footnote && (
+              <p className="mt-6 border-t border-stone-300 pt-3 text-sm text-stone-600">
+                {test.footnote}
+              </p>
+            )}
+          </>
         )}
 
-        <div className="mt-8 text-sm italic text-stone-500">
-          {test.byline.map((line, i) => (
-            <p key={i}>{line}</p>
-          ))}
-        </div>
+        {!isListening(test) && (
+          <div className="mt-8 text-sm italic text-stone-500">
+            {test.byline.map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Frågehäftet */}

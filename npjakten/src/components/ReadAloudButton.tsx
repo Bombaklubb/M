@@ -2,6 +2,7 @@ import { useSpeech } from "../lib/useSpeech";
 
 interface Props {
   chunks: string[];
+  lang?: string; // t.ex. "en-GB" för engelska texter (default svenska)
   // compact = liten ikonknapp, används vid enskilda uppgifter
   compact?: boolean;
   label?: string;
@@ -10,8 +11,8 @@ interface Props {
 // "Lyssna" – motsvarar uppläsningsanpassningen på de riktiga proven, där
 // framför allt frågor och instruktioner läses upp för den som behöver det.
 // Visas inte alls i webbläsare utan talsyntes.
-export default function ReadAloudButton({ chunks, compact, label }: Props) {
-  const { supported, playing, toggle } = useSpeech(chunks);
+export default function ReadAloudButton({ chunks, lang, compact, label }: Props) {
+  const { supported, playing, toggle } = useSpeech(chunks, lang);
 
   if (!supported) return null;
 

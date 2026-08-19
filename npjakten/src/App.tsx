@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
-import type { Grade } from "./types";
-import { gradeMeta, loadGrade } from "./data/grades";
+import type { Grade, Subject } from "./types";
+import { gradesFor, loadGrade, subjectMeta } from "./data/grades";
 import type { GradeId } from "./data/grades";
 import StartPage from "./components/StartPage";
+import GradeChooser from "./components/GradeChooser";
 import GradePage from "./components/GradePage";
 import ReadingTestView from "./components/ReadingTestView";
 import WritingTaskView from "./components/WritingTaskView";
@@ -12,10 +13,12 @@ import ReadingSettings from "./components/ReadingSettings";
 
 type View =
   | { name: "start" }
-  | { name: "grade"; gradeId: GradeId }
-  | { name: "reading"; gradeId: GradeId; testId: string }
-  | { name: "writing"; gradeId: GradeId; taskId: string }
-  | { name: "oral"; gradeId: GradeId; taskId: string };
+  | { name: "subject"; subject: Subject }
+  | { name: "grade"; subject: Subject; gradeId: GradeId }
+  | { name: "reading"; subject: Subject; gradeId: GradeId; testId: string }
+  | { name: "listening"; subject: Subject; gradeId: GradeId; testId: string }
+  | { name: "writing"; subject: Subject; gradeId: GradeId; taskId: string }
+  | { name: "oral"; subject: Subject; gradeId: GradeId; taskId: string };
 
 // Lärarläge aktiveras med ?larare i adressen. Då visas facit och
 // bedömningsmallar, som annars inte ska vara nåbara för eleven.
@@ -48,17 +51,19 @@ export default function App() {
     window.scrollTo(0, 0);
   }, [view]);
 
-  // Ladda aktuell årskurs vid behov (en årskurs i taget)
-  const gradeId = view.name === "start" ? null : view.gradeId;
+  // Ladda aktuellt ämne och årskurs vid behov (en i taget)
+  const subject = view.name === "start" ? null : view.subject;
+  const gradeId =
+    view.name === "start" || view.name === "subject" ? null : view.gradeId;
   useEffect(() => {
-    if (!gradeId) {
+    if (!gradeId || !subject) {
       setGrade(null);
       return;
     }
-    if (grade?.id === gradeId) return;
+    if (grade?.id === gradeId && grade.subject === subject) return;
     let cancelled = false;
     setLoading(true);
-    loadGrade(gradeId)
+    loadGrade(subject, gradeId)
       .then((g) => {
         if (!cancelled) setGrade(g);
       })
@@ -68,10 +73,10 @@ export default function App() {
     return () => {
       cancelled = true;
     };
-  }, [gradeId, grade?.id]);
+  }, [subject, gradeId, grade?.id, grade?.subject]);
 
   const backToGrade = () =>
-    gradeId ? navigate({ name: "grade", gradeId }) : navigate(START);
+    gradeId && subject ? navigate({ name: "grade", subject, gradeId }) : navigate(START);
 
   // Slår upp ett prov/en uppgift och går tillbaka till årskursvyn om id:t
   // inte finns, i stället för att krascha.
@@ -84,7 +89,8 @@ export default function App() {
     return hit;
   };
 
-  const readyGrade = grade && grade.id === gradeId ? grade : null;
+  const readyGrade =
+    grade && grade.id === gradeId && grade.subject === subject ? grade : null;
 
   return (
     <div className="min-h-screen">
@@ -104,12 +110,23 @@ export default function App() {
       <main className="px-3 py-8 sm:px-6">
         {view.name === "start" && (
           <StartPage
-            grades={gradeMeta}
-            onSelectGrade={(id) => navigate({ name: "grade", gradeId: id })}
+            subjects={subjectMeta}
+            onSelectSubject={(s) => navigate({ name: "subject", subject: s })}
           />
         )}
 
-        {view.name !== "start" && !readyGrade && (
+        {view.name === "subject" && (
+          <GradeChooser
+            subject={subjectMeta.find((s) => s.id === view.subject)!}
+            grades={gradesFor(view.subject)}
+            onBack={() => navigate(START)}
+            onSelectGrade={(id) =>
+              navigate({ name: "grade", subject: view.subject, gradeId: id })
+            }
+          />
+        )}
+
+        {view.name !== "start" && view.name !== "subject" && !readyGrade && (
           <p className="text-center text-sm text-stone-500">
             {loading ? "Laddar övningar …" : ""}
           </p>
@@ -118,28 +135,35 @@ export default function App() {
         {view.name === "grade" && readyGrade && (
           <GradePage
             grade={readyGrade}
-            onBack={() => navigate(START)}
+            onBack={() => navigate({ name: "subject", subject: readyGrade.subject })}
             onOpenReading={(testId) =>
-              navigate({ name: "reading", gradeId: readyGrade.id, testId })
+              navigate({ name: "reading", subject: readyGrade.subject, gradeId: readyGrade.id, testId })
+            }
+            onOpenListening={(testId) =>
+              navigate({ name: "listening", subject: readyGrade.subject, gradeId: readyGrade.id, testId })
             }
             onOpenWriting={(taskId) =>
-              navigate({ name: "writing", gradeId: readyGrade.id, taskId })
+              navigate({ name: "writing", subject: readyGrade.subject, gradeId: readyGrade.id, taskId })
             }
             onOpenOral={(taskId) =>
-              navigate({ name: "oral", gradeId: readyGrade.id, taskId })
+              navigate({ name: "oral", subject: readyGrade.subject, gradeId: readyGrade.id, taskId })
             }
           />
         )}
 
-        {view.name === "reading" &&
+        {(view.name === "reading" || view.name === "listening") &&
           readyGrade &&
           (() => {
-            const test = find(readyGrade.reading, view.testId);
+            const test =
+              view.name === "listening"
+                ? find(readyGrade.listening, view.testId)
+                : find(readyGrade.reading, view.testId);
             if (!test) return null;
             return (
               <ReadingTestView
                 key={view.testId}
                 test={test}
+                subject={readyGrade.subject}
                 gradeId={readyGrade.id}
                 gradeLabel={readyGrade.label}
                 teacherMode={teacherMode}
