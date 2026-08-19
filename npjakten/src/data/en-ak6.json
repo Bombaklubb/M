@@ -1,6 +1,1481 @@
 {
-  "reading": [],
-  "listening": [],
-  "writing": [],
+  "reading": [
+    {
+      "id": "en6-b1a-what-did-they-say",
+      "delprov": "Delprov B1a: reading – What Did They Say?",
+      "textType": "berättande",
+      "lang": "en",
+      "title": "What Did They Say?",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&h=506&fit=crop",
+        "alt": "Two young people talking to each other.",
+        "fallback": "/images/veta-vad-man-vill.svg"
+      },
+      "ingress": "Two people are talking to each other. Read each dialogue. How does it end? Choose the best alternative.",
+      "sections": [
+        {
+          "paragraphs": [
+            "In this part you read twelve short dialogues. Each dialogue has three lines. Your job is to choose the line that fits best as the fourth and last line.",
+            "Look at the example below.",
+            "Example:\n– I went shopping yesterday.\n– What did you buy?\n– A pair of new shoes.\n→ How much were they?",
+            "Read the whole dialogue and all four alternatives before you choose. Only one alternative is correct."
+          ]
+        }
+      ],
+      "byline": [
+        "Uppgift skriven för NP-jakten",
+        "I de nationella provens format – allt innehåll är nyskrivet."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– I've made pancakes.\n– They smell great!\n– Would you like one?",
+          "options": [
+            "I made them yesterday.",
+            "Yes, please!",
+            "The kitchen is clean.",
+            "I don't like pancakes."
+          ],
+          "correctIndex": 1,
+          "explanation": "Den tredje repliken är ett erbjudande, så det som passar är att tacka ja. Att säga att man inte tycker om pannkakor motsäger att man nyss sagt att de luktar gott."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Have you seen my keys?\n– No, where did you put them?\n– If I knew that, I wouldn't be looking.",
+          "options": [
+            "Sorry, silly question.",
+            "They are in the car.",
+            "I lost mine too yesterday.",
+            "You should buy new ones."
+          ],
+          "correctIndex": 0,
+          "explanation": "Den sista repliken är ett vänligt påpekande om att frågan var onödig. Då är det naturligt att be om ursäkt för frågan. Att svara var nycklarna är går inte, eftersom personen just sagt att hen inte vet."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Do you want to come to the cinema tonight?\n– What film is it?\n– The new one about the dragon.",
+          "options": [
+            "I've already seen it.",
+            "I don't go to school.",
+            "Dragons are birds.",
+            "It starts at six."
+          ],
+          "correctIndex": 0,
+          "explanation": "Personen som fick frågan svarar sist, och det enda alternativ som svarar på inbjudan är att man redan har sett filmen. Tiden för filmen skulle den som bjuder in ha sagt."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– You're late again.\n– I'm sorry. The bus didn't come.\n– That's the third time this week.",
+          "options": [
+            "I'll leave earlier tomorrow.",
+            "The bus is red.",
+            "I'm never late.",
+            "See you next week."
+          ],
+          "correctIndex": 0,
+          "explanation": "Efter en tillsägelse passar det att lova bättring. Att säga ”I'm never late” motsäger det som just sagts om tre gånger på en vecka."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Can I borrow your pen?\n– Sure, here you are.\n– Thanks, I'll give it back after class.",
+          "options": [
+            "No problem, keep it.",
+            "I need it now.",
+            "I don't have a pen.",
+            "Class starts at nine."
+          ],
+          "correctIndex": 0,
+          "explanation": "Pennan är redan utlånad, så svaret ska vara vänligt och avslutande. ”I need it now” och ”I don't have a pen” motsäger att personen nyss lånade ut den."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– What are you reading?\n– A book about volcanoes.\n– Is it any good?",
+          "options": [
+            "Yes, I can't put it down.",
+            "I don't read books.",
+            "It costs ten pounds.",
+            "Volcanoes are cold."
+          ],
+          "correctIndex": 0,
+          "explanation": "Frågan gäller om boken är bra. Uttrycket ”I can't put it down” betyder att boken är så spännande att man inte kan sluta läsa. Priset svarar inte på frågan."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– My computer isn't working.\n– Have you tried turning it off and on?\n– Of course I have.",
+          "options": [
+            "Then I don't know either.",
+            "Computers are expensive.",
+            "Turn it on then.",
+            "I'll buy you a new one."
+          ],
+          "correctIndex": 0,
+          "explanation": "Personen har redan provat det enda tipset, så det naturliga är att erkänna att man inte har fler idéer. Att föreslå samma sak igen vore konstigt."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– We're going camping this weekend.\n– Really? Where?\n– By the lake, if the weather is good.",
+          "options": [
+            "I hope it stays dry.",
+            "I've never seen a lake.",
+            "Camping is on Monday.",
+            "You can swim in the sea."
+          ],
+          "correctIndex": 0,
+          "explanation": "Orden ”if the weather is good” gör vädret till samtalets ämne, och då passar en förhoppning om uppehåll. Alternativet om måndag motsäger ”this weekend”."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Did you finish your homework?\n– Almost. I've got one page left.\n– You'd better hurry.",
+          "options": [
+            "I know, I'm nearly done.",
+            "I haven't started.",
+            "There's no homework.",
+            "I finished last week."
+          ],
+          "correctIndex": 0,
+          "explanation": "Eleven har redan sagt att en sida återstår, så svaret måste stämma med det. ”I haven't started” och ”There's no homework” motsäger den tidigare repliken."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– This bag is really heavy.\n– Do you want me to carry it?\n– Would you mind?",
+          "options": [
+            "Not at all.",
+            "I have my own bag.",
+            "It's made of leather.",
+            "Yes, I bought it yesterday."
+          ],
+          "correctIndex": 0,
+          "explanation": "”Would you mind?” är ett artigt sätt att tacka ja till hjälp, och det vanliga svaret är ”Not at all”, alltså ”inte alls, det gör jag gärna”."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– I'm going to the shop. Do you need anything?\n– Could you get some milk?\n– Sure. Anything else?",
+          "options": [
+            "That's all, thanks.",
+            "The shop is closed.",
+            "I don't drink milk.",
+            "How much was it?"
+          ],
+          "correctIndex": 0,
+          "explanation": "Frågan ”Anything else?” ska besvaras med om något mer behövs. Att säga att man inte dricker mjölk motsäger att man nyss bad om mjölk."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Look at those clouds.\n– Do you think it will rain?\n– It looks like it.",
+          "options": [
+            "Let's take an umbrella.",
+            "The sun is hot.",
+            "I love swimming.",
+            "It rained last year."
+          ],
+          "correctIndex": 0,
+          "explanation": "Eftersom det verkar bli regn är det logiska att föreslå ett paraply. ”The sun is hot” motsäger att himlen är full av moln."
+        }
+      ]
+    },
+    {
+      "id": "en6-b1b-farm-park",
+      "delprov": "Delprov B1b: reading – Visit Brackenhill Farm Park!",
+      "textType": "beskrivande",
+      "lang": "en",
+      "title": "Visit Brackenhill Farm Park!",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=900&h=506&fit=crop",
+        "alt": "A farm with animals in a green field.",
+        "fallback": "/images/skog.svg"
+      },
+      "ingress": "Use the information in the text when you answer the questions. Your answers must be in English.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Muddy boots, warm eggs straight from the nest and a goat that eats your shoelaces – Brackenhill Farm Park is a working farm where visitors are allowed to join in."
+          ]
+        },
+        {
+          "heading": "Where we are",
+          "paragraphs": [
+            "Brackenhill Farm Park lies in the south-west of England, about ten miles from the city of Exford. The farm has been in the Brackenhill family for more than a hundred years and still keeps sheep, cows, goats, hens and two very old donkeys."
+          ]
+        },
+        {
+          "heading": "Opening times",
+          "paragraphs": [
+            "The park is open every day from March to October. In winter we open at weekends only. Our gates open at 10 a.m. all year. We close at 5 p.m. from April to September, and at 4 p.m. in March and October.",
+            "Tickets cost £9 for adults and £6 for children under 15. Children under three come in free."
+          ]
+        },
+        {
+          "heading": "Become a Junior Farmer",
+          "paragraphs": [
+            "At the gate you can pick up a free Junior Farmer booklet. The booklet is for children between 5 and 11 years old. Complete four or more activities and you will get a badge and a certificate with your name on it.",
+            "You can choose from many activities: feed the goats, collect eggs in the hen house, plant a sunflower seed to take home, or learn to milk our wooden practice cow."
+          ]
+        },
+        {
+          "heading": "What to see and do",
+          "paragraphs": [
+            "Most of our barns have a roof, so a rainy day is never a problem. That is one reason why so many schools choose Brackenhill for their class trips – the other is that our animals are used to children and can be touched.",
+            "Along the main path you will find a farm shop with cheese and jam made here, a café with home-made cakes, and a small Tractor Museum. The museum is open every day and costs nothing to visit.",
+            "Outside the farm buildings there is a two-mile walking trail through our fields and a large wooden playground next to the car park."
+          ]
+        },
+        {
+          "heading": "Getting here",
+          "paragraphs": [
+            "The number 14 bus stops at the farm gate, but it only runs twice a day. Most families therefore come by car, and parking is free. If you cycle, you can leave your bike in the shed by the entrance."
+          ]
+        },
+        {
+          "heading": "Before you come",
+          "paragraphs": [
+            "Book your ticket online before you travel. At weekends and in the school holidays the park is often full by lunchtime, and we cannot let more visitors in.",
+            "Finally, remember that this is a real farm. Wear boots or old shoes – the fields are muddy even in summer."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten",
+        "I de nationella provens format – allt innehåll är nyskrivet."
+      ],
+      "questions": [
+        {
+          "kind": "open",
+          "id": 1,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "In what part of England can you find Brackenhill Farm Park?",
+          "guidance": "Ge 1 poäng för svar som anger sydvästra England. Stavfel och grammatiska fel som inte stör förståelsen accepteras. Godtagbart: ”In the south-west”; ”south west England”. 0 poäng: ”In Exford” (det är staden i närheten, inte landsdelen).",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "In Exford." },
+            { "points": 1, "answer": "In the south-west of England." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How often does the number 14 bus stop at the farm?",
+          "guidance": "Ge 1 poäng för svar som visar att bussen går två gånger om dagen. Godtagbart: ”Twice a day”; ”2 times every day”. 0 poäng: ”Every day” (frågan gäller hur ofta, inte vilka dagar).",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Every day." },
+            { "points": 1, "answer": "Twice a day." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How old must you be to get a Junior Farmer booklet?",
+          "guidance": "Ge 1 poäng för svar som anger åldrarna 5 till 11. Godtagbart: ”Between 5 and 11”; ”5–11 years old”. 0 poäng: ”Under 15” (det gäller barnbiljetten).",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Under 15 years old." },
+            { "points": 1, "answer": "Between 5 and 11 years old." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 4,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What time does the park close in October?",
+          "guidance": "Ge 1 poäng för ”4 p.m.” eller ”four o'clock”. 0 poäng: ”5 p.m.” (det gäller april till september).",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "At 5 p.m." },
+            { "points": 1, "answer": "At 4 p.m." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why do many schools choose Brackenhill for their class trips? (Give two reasons!)",
+          "guidance": "Ge 1 poäng per korrekt skäl, max 2: 1) de flesta ladugårdarna har tak, så regn spelar ingen roll, 2) djuren är vana vid barn och går att klappa/röra. Svaren behöver inte vara grammatiskt korrekta.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "Because it is a real farm with animals." },
+            { "points": 1, "answer": "Because most of the barns have a roof, so rain is not a problem." },
+            { "points": 2, "answer": "Because the barns have roofs, so rain is no problem, and because the animals are used to children and can be touched." }
+          ],
+          "note": "Du måste skriva två skäl för att få full poäng."
+        },
+        {
+          "kind": "open",
+          "id": 6,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How much does it cost to visit the Tractor Museum?",
+          "guidance": "Ge 1 poäng för svar som visar att museet är gratis. Godtagbart: ”Nothing”; ”It's free”; ”0 pounds”. 0 poäng: ”£9” (det är entrén till hela parken).",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "It costs £9." },
+            { "points": 1, "answer": "Nothing – it is free." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What can you buy in the farm shop? (Give two examples!)",
+          "guidance": "Ge 1 poäng per korrekt exempel, max 2: ost (cheese) och sylt (jam). Båda ska vara gjorda på gården, men det behöver eleven inte skriva.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "You can buy tickets." },
+            { "points": 1, "answer": "You can buy cheese." },
+            { "points": 2, "answer": "You can buy cheese and jam." }
+          ],
+          "note": "Du måste skriva två exempel för att få full poäng."
+        },
+        {
+          "kind": "open",
+          "id": 8,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why do most families come to the farm by car?",
+          "guidance": "Ge 1 poäng för svar som kopplar bilresan till att bussen går så sällan (bara två gånger om dagen). Godtagbart: ”Because the bus only goes twice a day”; ”the bus doesn't go often”. 0 poäng: ”Because parking is free” (det är en fördel, men inte skälet).",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Because parking is free." },
+            { "points": 1, "answer": "Because the bus only runs twice a day." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 9,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "Give two examples of activities you can do to become a Junior Farmer.",
+          "guidance": "Ge 1 poäng per korrekt aktivitet, max 2. I texten nämns: mata getterna, samla ägg i hönshuset, plantera ett solrosfrö, lära sig mjölka trakon av trä.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "You get a badge and a certificate." },
+            { "points": 1, "answer": "You can feed the goats." },
+            { "points": 2, "answer": "You can feed the goats and collect eggs in the hen house." }
+          ],
+          "note": "Du måste skriva två aktiviteter för att få full poäng."
+        },
+        {
+          "kind": "open",
+          "id": 10,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why is it important to book your ticket before you travel?",
+          "guidance": "Ge 1 poäng för svar som visar att parken ofta blir full (särskilt på helger och lov) och att fler besökare då inte släpps in. Godtagbart: ”Because the park can be full”; ”otherwise you can't get in”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Because tickets are expensive." },
+            { "points": 1, "answer": "Because the park is often full and then you cannot get in." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 11,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What two things can you do outside the farm buildings without using a car?",
+          "guidance": "Ge 1 poäng per korrekt aktivitet, max 2: gå på den två mil långa (two-mile) vandringsleden och leka på den stora träleplatsen vid parkeringen.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "You can look at the animals." },
+            { "points": 1, "answer": "You can walk on the walking trail." },
+            { "points": 2, "answer": "You can walk the two-mile trail and play in the wooden playground." }
+          ],
+          "note": "Du måste skriva två saker för att få full poäng."
+        },
+        {
+          "kind": "open",
+          "id": 12,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What clothes are you recommended to wear, and why?",
+          "guidance": "Ge 1 poäng för klädrådet (stövlar eller gamla skor) och 1 poäng för skälet (fälten är leriga, även på sommaren). Max 2 poäng.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "You should wear a coat because it is cold." },
+            { "points": 1, "answer": "You should wear boots or old shoes." },
+            { "points": 2, "answer": "You should wear boots or old shoes, because the fields are muddy even in summer." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en6-b1c-ice-cream-queen",
+      "delprov": "Delprov B1c: reading – The Ice Cream Queen",
+      "textType": "berättande",
+      "lang": "en",
+      "title": "The Ice Cream Queen",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=900&h=506&fit=crop",
+        "alt": "An ice cream cart in a sunny street.",
+        "fallback": "/images/bageriet.svg"
+      },
+      "ingress": "This is a story about a woman called Ellen Brooks. Read the text and answer the questions after each part. Remember – your answers must be in English! When you answer questions with alternatives, choose one alternative only.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Ellen Brooks was born in 1934 in a small fishing town on the east coast of Scotland. Her father was a fisherman and her mother sold vegetables at the market. Ellen was the youngest of seven children, and the family had very little money.",
+            "When Ellen was nine, her father hurt his back and could no longer go out with the boats. From that day the children had to help. Ellen's job was to stand by her mother's table at the market every Saturday morning, calling out the prices so loudly that people three streets away could hear her.",
+            "She hated the cold. She did not hate the market. What she loved was watching people stop, smile and change their minds because of something she had said."
+          ]
+        },
+        {
+          "paragraphs": [
+            "In the summer of 1952, when Ellen was eighteen, an Italian family opened a café in the town and began selling ice cream. Ellen had never tasted it before. She spent a whole week's wages on one cone, and she thought about it for years afterwards.",
+            "She wanted to sell ice cream herself, but she had no money for a shop. Instead she bought an old bicycle, took off the back wheel and asked the town's blacksmith to build a small cart in its place. It took her three months to save enough to pay him. She painted the cart yellow and wrote one word on the side: ELLEN'S.",
+            "The first summer was hard. She had no freezer, so she could only make as much ice cream as she could sell in a day, and on rainy days she sold nothing at all. Twice she thought about giving up. What stopped her was a promise she had made to her mother: she would try for three summers before she decided."
+          ]
+        },
+        {
+          "paragraphs": [
+            "By the third summer people were waiting at the harbour before she arrived. Ellen had learned something the café owners had not: she asked her customers what they wanted. When children said the cones were too big, she made a smaller one for half the price. When fishermen came off the boats at five in the morning, she started coming at five too, with coffee as well as ice cream.",
+            "In 1961 she finally opened a shop. By 1975 there were fourteen of them along the coast, and newspapers had started calling her the Ice Cream Queen. Ellen never liked the name. ‘A queen sits down,' she said in one interview. ‘I have never sat down in my life.'",
+            "Ellen sold the company in 1989. She gave most of the money to a fund that pays for young people from her town to train for a job – a plumber, a cook, a nurse, anything they choose. When she died in 2019, at the age of 85, more than four hundred people came to say goodbye. Many of them had never met her. They had simply grown up eating her ice cream, or learning a trade with her money."
+          ]
+        }
+      ],
+      "byline": [
+        "Berättelse skriven för NP-jakten",
+        "Personen och företaget är påhittade."
+      ],
+      "questions": [
+        {
+          "kind": "open",
+          "id": 1,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What was Ellen's father's job?  He was a …",
+          "guidance": "Ge 1 poäng för ”fisherman”. Godtagbart: ”a fisher”; ”he fished”. 0 poäng: ”he sold vegetables” (det var mamman).",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "He was a farmer." },
+            { "points": 1, "answer": "He was a fisherman." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "In what country was Ellen born?",
+          "guidance": "Ge 1 poäng för ”Scotland”. 0 poäng: ”England”; ”Italy”.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "In England." },
+            { "points": 1, "answer": "In Scotland." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why did the children have to start helping the family?",
+          "options": [
+            "Their mother lost her job at the market",
+            "Their father could no longer work",
+            "The family moved to a new town",
+            "Their father wanted them to earn money"
+          ],
+          "correctIndex": 1,
+          "explanation": "Texten säger att pappan skadade ryggen och inte längre kunde följa med båtarna – ”From that day the children had to help”. Det var alltså skadan, inte ett önskemål, som gjorde att barnen fick arbeta."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What did Ellen enjoy about working at the market?",
+          "options": [
+            "Standing outside in the cold",
+            "Earning her own money",
+            "Seeing people change their minds because of her",
+            "Selling vegetables to her friends"
+          ],
+          "correctIndex": 2,
+          "explanation": "Sista meningen i första delen säger det rakt ut: hon älskade att se folk stanna, le och ändra sig på grund av något hon sagt. Att hon hatade kylan sägs uttryckligen."
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How did Ellen get her first ice cream cart?",
+          "guidance": "Ge 2 poäng för svar som visar båda leden: hon köpte en gammal cykel och tog bort bakhjulet, och lät stadens smed bygga en liten kärra i stället. Ge 1 poäng för ett av leden.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "She bought a shop with her own money." },
+            { "points": 1, "answer": "She bought an old bicycle." },
+            { "points": 2, "answer": "She bought an old bicycle, took off the back wheel and asked the blacksmith to build a cart there." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why was the first summer difficult for Ellen?",
+          "options": [
+            "She had no freezer and could not sell in the rain",
+            "The blacksmith never finished her cart",
+            "The Italian café sold cheaper ice cream",
+            "She was too young to have her own business"
+          ],
+          "correctIndex": 0,
+          "explanation": "Texten nämner två svårigheter: hon hade ingen frys och kunde bara göra så mycket som hon sålde samma dag, och regniga dagar sålde hon ingenting. Kaféets priser nämns aldrig."
+        },
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What stopped Ellen from giving up?",
+          "guidance": "Ge 1 poäng för svar som nämner löftet till mamman om att försöka i tre somrar innan hon bestämde sig. Godtagbart: ”She promised her mother to try three summers”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "She got more customers." },
+            { "points": 1, "answer": "She had promised her mother to try for three summers first." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "What did Ellen do that the café owners did not?",
+          "options": [
+            "She opened her shop very early",
+            "She asked her customers what they wanted",
+            "She sold coffee as well as ice cream",
+            "She painted her cart a bright colour"
+          ],
+          "correctIndex": 1,
+          "explanation": "Texten säger uttryckligen: ”Ellen had learned something the café owners had not: she asked her customers what they wanted.” De mindre strutarna och den tidiga öppningen är följder av just det."
+        },
+        {
+          "kind": "open",
+          "id": 9,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Give two examples of changes Ellen made after listening to her customers.",
+          "guidance": "Ge 1 poäng per korrekt exempel, max 2: 1) hon gjorde en mindre strut till halva priset när barnen tyckte att strutarna var för stora, 2) hon började komma klockan fem på morgonen när fiskarna kom in, och sålde även kaffe.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "She opened fourteen shops along the coast." },
+            { "points": 1, "answer": "She made a smaller cone for half the price." },
+            { "points": 2, "answer": "She made a smaller and cheaper cone for the children, and she came at five in the morning with coffee for the fishermen." }
+          ],
+          "note": "Du måste skriva två exempel för att få full poäng."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why did Ellen dislike the name ‘the Ice Cream Queen'?",
+          "options": [
+            "She thought it sounded old-fashioned",
+            "She had never wanted to be famous",
+            "She felt a queen does nothing while she worked hard",
+            "The newspapers had spelt her name wrongly"
+          ],
+          "correctIndex": 2,
+          "explanation": "Hennes egna ord förklarar det: ”A queen sits down. I have never sat down in my life.” Hon tyckte alltså att namnet gav fel bild av hur hårt hon arbetade."
+        },
+        {
+          "kind": "open",
+          "id": 11,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What did Ellen do with most of the money when she sold the company?",
+          "guidance": "Ge 1 poäng för svar som visar att hon gav pengarna till en fond som betalar för unga från hennes stad att utbilda sig till ett yrke. Godtagbart: ”She gave it to young people so they could learn a job”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "She bought a big house." },
+            { "points": 1, "answer": "She gave it to a fund that helps young people train for a job." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why did so many people come when Ellen died, even though they had never met her?",
+          "options": [
+            "They wanted to see the famous shops",
+            "Her family had invited the whole town",
+            "She had helped them without them knowing her",
+            "They had all worked for her company"
+          ],
+          "correctIndex": 2,
+          "explanation": "Sista meningen förklarar det: de hade vuxit upp med hennes glass eller lärt sig ett yrke med hjälp av hennes pengar. Hon hade alltså påverkat deras liv utan att de träffat henne."
+        },
+        {
+          "kind": "open",
+          "id": 13,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "Why is Ellen called a person who never gave up? Give two examples from the text.",
+          "guidance": "Ge 1 poäng per korrekt exempel, max 2. Möjliga exempel: hon sparade i tre månader för att betala smeden; hon fortsatte trots att hon inte sålde något på regniga dagar; hon tänkte två gånger på att sluta men höll sitt löfte om tre somrar; hon började arbeta klockan fem på morgonen.",
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "She sold ice cream for many years and became rich." },
+            { "points": 1, "answer": "She kept going even though she sold nothing on rainy days." },
+            { "points": 2, "answer": "She saved for three months to pay the blacksmith, and she went on even though she twice thought about giving up." }
+          ],
+          "note": "Du måste skriva två exempel för att få full poäng."
+        }
+      ]
+    }
+  ],
+  "listening": [
+    {
+      "id": "en6-b2a-strange-news",
+      "delprov": "Delprov B2a: listening – Strange News",
+      "title": "Strange News",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1495020689067-958852a7765e?w=900&h=506&fit=crop",
+        "alt": "A radio microphone in a studio.",
+        "fallback": "/images/uppkopplad.svg"
+      },
+      "intro": "Du kommer att höra tolv korta nyheter. Efter varje nyhet ska du välja den rubrik som passar bäst. Läs frågorna först – du hör nyheterna i tur och ordning.",
+      "maxPlays": 2,
+      "script": [
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 1. A café in Dublin has started paying its customers to arrive by bike. Anyone who locks a bicycle outside gets fifty cents off their coffee. The owner says she got the idea after counting the cars outside her window one morning and finding that eleven of them had driven less than a kilometre."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 2. A library book borrowed in 1974 was returned to a school in Manchester last week. It came in the post with a short note: ‘Sorry. I moved house.' The librarian says the book was forty-seven years late, but nobody had to pay anything, because the school stopped charging for late books in 1998."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 3. A cat from Newcastle spent two days inside a parcel before anyone noticed. The animal had climbed into a box of jumpers that was waiting to be posted. The parcel travelled almost three hundred kilometres before it was opened. The cat was thirsty but well, and is now back home."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 4. Every Friday afternoon a bakery in Cardiff puts everything it has not sold on a table by the door with a sign saying ‘Free'. Anyone can take what they want. The baker says he used to throw away two large bags of bread every week, and that he now throws away nothing at all."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 5. A postman in a small Norwegian town has learned sign language so that he can talk to one of the people on his round. It took him eight months of evening classes. He says he only wanted to be able to say more than ‘good morning' to someone he sees five days a week."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 6. A robot vacuum cleaner left a house in Oslo through an open door and was found four hours later on the other side of the street, cleaning a neighbour's front step. The neighbour said she had thought about buying one, and now she has."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 7. A school in Bristol has moved its whole vegetable garden up onto the roof. There was no space in the playground, so the pupils carried two hundred boxes of soil up four floors. The first potatoes will be ready in September, and the school kitchen has promised to cook them."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 8. A man in Kent has cycled to work every day for forty years – about four hundred thousand kilometres in total, which is further than the distance to the moon. He retires next month. His colleagues have given him a new bicycle."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 9. Traffic stopped in a village in Wales for over an hour on Tuesday when two hundred sheep walked onto the main road. A gate had been left open during the night. Nobody was hurt, and drivers were told to turn off their engines and wait."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 10. A parrot in a flat in Lisbon called for help when its owner fell in the kitchen. The bird had learned the words from a television programme and repeated them until a neighbour knocked on the door. The owner is now well, and the parrot has been given extra fruit for a month."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 11. A swimming pool in Vienna opens for dogs on the last day of the summer season, just before the water is changed. Last year four hundred dogs came. The rule is one dog per person, and the owners are allowed to swim too – but only if their dog does."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 12. A boy walking his dog on a beach in Yorkshire found a coin that turned out to be more than a thousand years old. It is now in a museum in York, where a small sign next to it says who found it. The boy is nine and says he would rather have found a fossil."
+        }
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 1. What is it about?",
+          "options": [
+            "A café that is closing down",
+            "Cheaper coffee for cyclists",
+            "A new bicycle shop",
+            "Traffic rules in Dublin"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nyheten handlar om att kaféet ger rabatt till den som kommer med cykel. Bilarna nämns bara som bakgrund till idén."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 2. What is it about?",
+          "options": [
+            "A very late library book",
+            "A new school library",
+            "A librarian who moved house",
+            "Books that cost too much"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kärnan är boken som lämnades tillbaka 47 år för sent. Att flytten och avgifterna nämns är detaljer runt själva händelsen."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 3. What is it about?",
+          "options": [
+            "A missing jumper",
+            "A cat that travelled by post",
+            "A slow delivery company",
+            "A cat that ran away from home"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nyheten handlar om katten som råkade skickas med posten. Att paketet innehöll tröjor är bara en detalj."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 4. What is it about?",
+          "options": [
+            "A bakery that gives away bread",
+            "A bakery that has closed",
+            "Bread that made people ill",
+            "A new kind of bread"
+          ],
+          "correctIndex": 0,
+          "explanation": "Det centrala är att osålt bröd ges bort gratis i stället för att slängas. Att han förr slängde bröd förklarar varför han började."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 5. What is it about?",
+          "options": [
+            "A postman learning a new language",
+            "A new post office in Norway",
+            "Evening classes for children",
+            "A postman changing his job"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nyheten handlar om att brevbäraren lärt sig teckenspråk för en person på sin runda. Kvällskurserna är hur han gjorde det, inte vad nyheten handlar om."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 6. What is it about?",
+          "options": [
+            "A robot that escaped",
+            "A broken front door",
+            "A very dirty street",
+            "A new shop in Oslo"
+          ],
+          "correctIndex": 0,
+          "explanation": "Poängen är att robotdammsugaren tog sig ut ur huset och hittades hos grannen. Att grannen sedan köpte en egen är slutklämmen."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 7. What is it about?",
+          "options": [
+            "A playground that got bigger",
+            "A garden on a school roof",
+            "A new school kitchen",
+            "Pupils who cook their own lunch"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nyheten handlar om skolträdgården som flyttats upp på taket. Potatisen och köket är vad som händer sedan."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 8. What is it about?",
+          "options": [
+            "A man who is moving house",
+            "A very long car journey",
+            "Forty years of cycling to work",
+            "A trip to the moon"
+          ],
+          "correctIndex": 2,
+          "explanation": "Nyheten handlar om mannen som cyklat till jobbet i fyrtio år. Jämförelsen med månen visar bara hur långt det är."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 9. What is it about?",
+          "options": [
+            "Sheep stopping the traffic",
+            "A car accident in Wales",
+            "A new road through a village",
+            "A farmer selling his sheep"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kärnan är att fåren gick ut på vägen så att trafiken stannade. Den öppna grinden förklarar hur det gick till."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 10. What is it about?",
+          "options": [
+            "A parrot that got help",
+            "A parrot that flew away",
+            "A noisy neighbour",
+            "A new television programme"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nyheten handlar om papegojan som ropade på hjälp så att grannen kom. Tv-programmet förklarar var fågeln lärt sig orden."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 11. What is it about?",
+          "options": [
+            "A pool that is closing for ever",
+            "A swimming day for dogs",
+            "A dog that could not swim",
+            "New rules for swimmers"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nyheten handlar om dagen då hundar får bada i simhallen. Att bassängen ändå ska tömmas förklarar varför det går att göra."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 12. What is it about?",
+          "options": [
+            "A dog that dug up a bone",
+            "A boy who found an old coin",
+            "A new museum in York",
+            "A fossil on a beach"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nyheten handlar om pojken som hittade det tusenåriga myntet. Fossilet nämns bara som en rolig slutkommentar."
+        }
+      ]
+    },
+    {
+      "id": "en6-b2b-climbing-high",
+      "delprov": "Delprov B2b: listening – Climbing High",
+      "title": "Climbing High",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1522163182402-834f871fd851?w=900&h=506&fit=crop",
+        "alt": "A climber on a rock face.",
+        "fallback": "/images/isen.svg"
+      },
+      "intro": "Du kommer att höra Sara, som besöker en skola för att berätta om klättring. Berättelsen är indelad i delar. Läs frågorna först – dina svar ska vara på engelska. Du får skriva medan du lyssnar.",
+      "maxPlays": 2,
+      "script": [
+        {
+          "speaker": "Sara",
+          "text": "Hi everyone! My name is Sara Nkemelu and I work as a climbing instructor at an outdoor centre in Wales. Before that I was a maths teacher for six years. Today I'm going to tell you about the first time I ever climbed a real rock face – and about a few people who climb far better than I do."
+        },
+        {
+          "speaker": "Sara",
+          "text": "It happened five years ago in a valley called Llanberis, in the north of Wales. My sister had booked the trip as a present for my thirtieth birthday. I have to admit I was not very happy about it. I had never climbed anything higher than a ladder."
+        },
+        {
+          "speaker": "Sara",
+          "text": "We had two choices: a morning course or an afternoon one. The instructor told us to take the morning, because the rock is dry then. In the afternoon the sun moves round and the wind picks up, and wet rock is much harder to hold on to. So the morning it was."
+        },
+        {
+          "speaker": "Sara",
+          "text": "We were told to be at the centre at half past seven to sign in and pick up our helmets. I got there at twenty to eight. The instructor was not angry, but everyone else was already in the minibus waiting for me, and I have never been late for anything since."
+        },
+        {
+          "speaker": "Sara",
+          "text": "There was a family in front of me in the queue with two children. The younger one, who was nine, was not allowed to come. You have to be at least ten years old for the beginners' course, and no exceptions are made. She cried, and honestly, so did her father – he had booked it months earlier."
+        },
+        {
+          "speaker": "Sara",
+          "text": "The course cost forty-five pounds for adults and thirty pounds for anyone under eighteen. That included the helmet, the ropes and the instructor. You had to bring your own lunch, which I forgot."
+        },
+        {
+          "speaker": "Sara",
+          "text": "When we got out of the minibus the weather was perfect: sunny and quite warm, maybe eighteen degrees. Two hours later the clouds came in and it started to rain, which is very normal in that part of Wales."
+        },
+        {
+          "speaker": "Sara",
+          "text": "I was wearing shorts and an old pair of trainers with almost no pattern left on the bottom. What I should have brought was a jacket that keeps out rain, and proper climbing shoes with a good grip. My feet slipped three times in the first ten minutes."
+        },
+        {
+          "speaker": "Sara",
+          "text": "The instructor explained that the best months for climbing there are May and June. In July there are too many people, and from October the rock is often wet and cold. So if you ever go, go early in the summer."
+        },
+        {
+          "speaker": "Sara",
+          "text": "She also told us about the rock itself. It is called slate, and it was cut out of the mountain by workers more than a hundred years ago. That is why the walls are so straight and flat. Some of the routes still have the old workers' steps in them."
+        },
+        {
+          "speaker": "Sara",
+          "text": "The rule at the centre is that you never climb higher than five metres without a rope, and you always keep three points of contact – that means two hands and one foot, or two feet and one hand, touching the rock at all times."
+        },
+        {
+          "speaker": "Sara",
+          "text": "Halfway up the wall the boy above me dropped his water bottle. It fell past my head and hit the ground with a bang. Nobody was hurt, but after that everyone understood why helmets are not optional."
+        },
+        {
+          "speaker": "Sara",
+          "text": "Something similar happened in Norway two years ago, but with a much worse ending. Two climbers were on a wall when a large stone came loose above them. One of them was hit on the shoulder and could not use his arm. They were four hours from the nearest road."
+        },
+        {
+          "speaker": "Sara",
+          "text": "His partner had a small radio, and a helicopter came before it got dark. Both of them said afterwards that they had climbed that wall thirty times and had never once thought about what they would do if something went wrong. Now they always tell someone where they are going and when they expect to be back."
+        },
+        {
+          "speaker": "Sara",
+          "text": "I want to finish by telling you about a woman called Marta Reyes. She has climbed the highest mountain on each of the six continents that have them – she has not done Antarctica yet – and she is planning that one for next year."
+        },
+        {
+          "speaker": "Sara",
+          "text": "What I like about Marta is not the mountains. It is that she takes one young person from her old school with her on every trip, and pays for everything. Fourteen of them have gone so far. She says the mountains will still be there in a hundred years, but a fifteen-year-old only gets to be fifteen once."
+        }
+      ],
+      "questions": [
+        {
+          "kind": "open",
+          "id": 1,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What is Sara's job now?",
+          "guidance": "Ge 1 poäng för svar som visar att hon är klätterinstruktör. Godtagbart: ”climbing instructor”; ”she teaches climbing”. 0 poäng: ”maths teacher” (det var hon förut).",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "She is a maths teacher." },
+            { "points": 1, "answer": "She is a climbing instructor." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "In which country is the valley of Llanberis?",
+          "guidance": "Ge 1 poäng för ”Wales”. Godtagbart: ”in the north of Wales”. 0 poäng: ”England”; ”Norway”.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "In England." },
+            { "points": 1, "answer": "In Wales." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why did Sara go on the morning course?",
+          "options": [
+            "The morning course was cheaper",
+            "The rock is dry in the morning",
+            "She likes getting up early",
+            "The afternoon course was full"
+          ],
+          "correctIndex": 1,
+          "explanation": "Instruktören rekommenderade förmiddagen eftersom klippan är torr då – på eftermiddagen flyttar sig solen, vinden tar i och blöt klippa är mycket svårare att hålla i."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "What time should Sara have arrived at the centre?",
+          "options": [
+            "At 7.30",
+            "At 7.40",
+            "At 8.00",
+            "At 8.30"
+          ],
+          "correctIndex": 0,
+          "explanation": "De skulle vara på plats halv åtta för att skriva in sig och hämta hjälmar. Sara kom tjugo i åtta, alltså tio minuter för sent."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why couldn't the younger child go on the course?",
+          "options": [
+            "The family arrived too late",
+            "The course was fully booked",
+            "She was not old enough",
+            "She had forgotten her helmet"
+          ],
+          "correctIndex": 2,
+          "explanation": "Man måste vara minst tio år för nybörjarkursen, och flickan var nio. Texten säger att inga undantag görs."
+        },
+        {
+          "kind": "open",
+          "id": 6,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How much did the course cost?  Adults: £____   Under eighteen: £____",
+          "guidance": "Ge 1 poäng per korrekt belopp, max 2: 45 pund för vuxna och 30 pund för den som är under arton.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "It cost £18." },
+            { "points": 1, "answer": "Adults: £45." },
+            { "points": 2, "answer": "Adults: £45 and under eighteen: £30." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "What was the weather like when they arrived?",
+          "options": [
+            "Sunny and quite warm",
+            "Cloudy and cold",
+            "Rainy and windy",
+            "Foggy and grey"
+          ],
+          "correctIndex": 0,
+          "explanation": "När de klev ur minibussen var vädret perfekt: soligt och ganska varmt, omkring arton grader. Regnet kom först två timmar senare."
+        },
+        {
+          "kind": "open",
+          "id": 8,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What clothes should Sara have brought? (Write two things.)",
+          "guidance": "Ge 1 poäng per korrekt sak, max 2: en jacka som håller regnet ute (regnjacka) och riktiga klätterskor med bra grepp.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "She should have brought her lunch." },
+            { "points": 1, "answer": "A jacket that keeps out the rain." },
+            { "points": 2, "answer": "A rain jacket and proper climbing shoes with a good grip." }
+          ],
+          "note": "Du måste skriva två saker för att få full poäng."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "When is the best time to climb there?",
+          "options": [
+            "In March and April",
+            "In May and June",
+            "In July and August",
+            "In October and November"
+          ],
+          "correctIndex": 1,
+          "explanation": "Instruktören sa att maj och juni är bäst. I juli är det för mycket folk, och från oktober är klippan ofta blöt och kall."
+        },
+        {
+          "kind": "open",
+          "id": 10,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What did the instructor say about the rock? (Give two examples.)",
+          "guidance": "Ge 1 poäng per korrekt uppgift, max 2. I texten nämns: det heter skiffer (slate); det höggs ut ur berget av arbetare för mer än hundra år sedan; därför är väggarna så raka och släta; några leder har kvar arbetarnas gamla trappsteg.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "The rock was wet and cold." },
+            { "points": 1, "answer": "It is called slate." },
+            { "points": 2, "answer": "It is called slate, and it was cut out of the mountain by workers more than a hundred years ago." }
+          ],
+          "note": "Du måste skriva två saker för att få full poäng."
+        },
+        {
+          "kind": "open",
+          "id": 11,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How high are you allowed to climb without a rope?",
+          "guidance": "Ge 1 poäng för ”five metres” eller ”5 m”. 0 poäng: ”three points” (det gäller kontakten med klippan).",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "Three metres." },
+            { "points": 1, "answer": "Five metres." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 12,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What does it mean to keep ‘three points of contact'?",
+          "guidance": "Ge 1 poäng för svar som visar att tre av händerna och fötterna hela tiden ska röra klippan – två händer och en fot, eller två fötter och en hand.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "You climb three metres at a time." },
+            { "points": 1, "answer": "Two hands and one foot, or two feet and one hand, must always touch the rock." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 13,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "What happened halfway up the wall?",
+          "options": [
+            "Sara slipped and fell",
+            "A boy dropped his water bottle",
+            "The rope came loose",
+            "It started to snow"
+          ],
+          "correctIndex": 1,
+          "explanation": "Pojken ovanför Sara tappade sin vattenflaska, som föll förbi hennes huvud och slog i marken. Ingen skadades, men alla förstod varför hjälmar behövs."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 14,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What happened to the climbers in Norway?",
+          "options": [
+            "They were caught in a storm",
+            "One of them was hit by a stone",
+            "They lost their radio",
+            "They fell into the water"
+          ],
+          "correctIndex": 1,
+          "explanation": "En stor sten lossnade ovanför dem och träffade den ene på axeln, så att han inte kunde använda armen. De var fyra timmar från närmaste väg."
+        },
+        {
+          "kind": "open",
+          "id": 15,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How did the climbers in Norway get help?",
+          "guidance": "Ge 1 poäng för svar som visar att kamraten hade en liten radio och att en helikopter kom. Godtagbart: ”with a radio”; ”a helicopter came”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "They walked to the road." },
+            { "points": 1, "answer": "His partner had a radio, and a helicopter came." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 16,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What will the two climbers always do from now on? (Write two things.)",
+          "guidance": "Ge 1 poäng per korrekt sak, max 2: de berättar alltid för någon vart de ska, och när de räknar med att vara tillbaka.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "They will always bring a helmet." },
+            { "points": 1, "answer": "They tell someone where they are going." },
+            { "points": 2, "answer": "They always tell someone where they are going and when they expect to be back." }
+          ],
+          "note": "Du måste skriva två saker för att få full poäng."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 17,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "What has Marta Reyes done?",
+          "options": [
+            "She has climbed the highest mountain on six continents",
+            "She has climbed every mountain in Wales",
+            "She has been to Antarctica three times",
+            "She has started her own climbing school"
+          ],
+          "correctIndex": 0,
+          "explanation": "Hon har bestigit det högsta berget på var och en av de sex kontinenter som har berg. Antarktis återstår, och det planerar hon till nästa år."
+        },
+        {
+          "kind": "open",
+          "id": 18,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "What does Marta do for young people, and why?",
+          "guidance": "Ge 1 poäng för vad hon gör (hon tar med en ung person från sin gamla skola på varje resa och betalar allt) och 1 poäng för varför (bergen finns kvar om hundra år, men man är bara femton en gång).",
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "She climbs mountains all over the world." },
+            { "points": 1, "answer": "She takes a young person from her old school with her on every trip." },
+            { "points": 2, "answer": "She takes one young person from her old school on every trip and pays for everything, because the mountains will still be there in a hundred years but you are only fifteen once." }
+          ]
+        }
+      ]
+    }
+  ],
+  "writing": [
+    {
+      "id": "en6-c-food-and-celebrations",
+      "delprov": "Delprov C: writing – Food and Celebrations",
+      "textType": "berättelse",
+      "title": "Food and Celebrations",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&h=506&fit=crop",
+        "alt": "A table set for a meal with several dishes.",
+        "fallback": "/images/bageriet.svg"
+      },
+      "intro": [
+        "En klass i Nya Zeeland arbetar med ett skolprojekt om mat och högtider i olika länder. Nu vill de veta hur det ser ut i Sverige. Läs deras brev!",
+        "Skriv så mycket du kan – och använd engelska hela tiden."
+      ],
+      "doThis": [
+        "Hello!",
+        "Our class is making a book about food and celebrations around the world. We have already written about our own country, and now we would like to hear from you. What do people eat where you live?",
+        "Here are some things you can write about:\n• what you usually eat – on an ordinary day and on a special day\n• a celebration or holiday that you like – what happens, and what you eat\n• a dish you really like, or one you do not like at all – and why\n• food that is typical for your area or your country",
+        "Please write back soon!",
+        "Aroha, Tane, Mia and Josh"
+      ],
+      "remember": [
+        "Skriv på engelska hela tiden – även när du inte hittar rätt ord. Försök förklara med andra ord i stället.",
+        "Skriv så mycket du kan. Ju mer du skriver, desto mer kan du visa.",
+        "Svara på flera av punkterna i brevet, inte bara en.",
+        "Skriv som ett svar till klassen: börja och avsluta som man gör i ett brev.",
+        "Läs igenom din text när du är klar."
+      ],
+      "checklist": [
+        "Jag har skrivit på engelska hela tiden.",
+        "Min text är ett svar till klassen i Nya Zeeland – den har en början och ett slut.",
+        "Jag har skrivit om flera av punkterna i brevet.",
+        "Jag har berättat om både vardagsmat och mat vid en högtid.",
+        "Jag har förklarat varför jag tycker om (eller inte tycker om) något.",
+        "Jag har använt ord och uttryck som hör ihop med mat och högtider.",
+        "Jag har läst igenom min text och rättat det jag hittade."
+      ],
+      "examples": [
+        {
+          "level": "På väg",
+          "heading": "Food",
+          "paragraphs": [
+            "Hello. My name is Alex. I am 12 year.",
+            "I eat pasta and pizza. I like pizza very much. On christmas we eat much food. My favorit is potatis.",
+            "I dont like fish. Bye."
+          ],
+          "comments": [
+            "Texten svarar på några av punkterna: vardagsmat, en högtid och en maträtt som skribenten inte tycker om.",
+            "Den är dock mycket kort och utvecklas inte – läsaren får till exempel inte veta vad som händer på julen eller varför fisk inte är gott.",
+            "Ett svenskt ord (”potatis”) används i stället för det engelska. Nästa steg: försök förklara med andra engelska ord om du inte kommer på ordet.",
+            "Språket har fel som stör men inte förstör – en läsare med engelska som modersmål förstår ändå innehållet."
+          ]
+        },
+        {
+          "level": "Godtagbar nivå",
+          "heading": "Food where I live",
+          "paragraphs": [
+            "Hi Aroha, Tane, Mia and Josh!",
+            "Thank you for your letter. I live in a small town in the middle of Sweden and I will tell you about our food.",
+            "On a normal day we eat quite simple food. For breakfast I have yoghurt and a sandwich. At school we get a warm lunch every day, and it is free. Many people eat pancakes on Thursdays, together with pea soup. I don't know why, but we have always done it.",
+            "My favourite celebration is Midsummer in June. We put flowers on a big pole and dance around it, and then we eat outside. We have potatoes, herring, which is a small salty fish, and strawberries with cream. I love the strawberries but I really don't like the herring, because it smells so strong.",
+            "Write again and tell me what you eat in New Zealand!",
+            "Best wishes, Nora"
+          ],
+          "comments": [
+            "Texten är ett tydligt svar på brevet, med hälsning i början och slutet.",
+            "Flera av punkterna besvaras: vardagsmat, en högtid, en rätt hon tycker om och en hon inte tycker om.",
+            "Skribenten förklarar svåra ord för läsaren (”herring, which is a small salty fish”) i stället för att byta till svenska – det är precis vad man ska göra.",
+            "Språket flyter och är lätt att följa. Enstaka fel stör inte förståelsen."
+          ]
+        },
+        {
+          "level": "Mer utvecklad nivå",
+          "heading": "Food, and what it means here",
+          "paragraphs": [
+            "Dear Aroha, Tane, Mia and Josh,",
+            "Thank you for your letter – it was fun to read, and it made me think about food in a new way. I live outside Gothenburg, on the west coast of Sweden, and here food is very much about the seasons.",
+            "An ordinary weekday is not very exciting, to be honest. We eat a lot of pasta, chicken and vegetables, and the whole family eats at about six o'clock. At school we get a hot lunch every day, which I know is unusual in many countries. One day a week it is pancakes with pea soup, an old tradition that nobody can really explain any more.",
+            "The celebration I like best is Midsummer, at the end of June, when the sun hardly sets at all. We decorate a tall pole with leaves and flowers and dance around it, which probably looks very strange if you have never seen it. Afterwards we eat outdoors for hours: new potatoes with dill, several kinds of pickled herring, and strawberries with cream at the end.",
+            "If I have to choose one dish, it is my grandmother's cinnamon buns. It is not only the taste – it is that the whole house smells of them, and that she always makes far too many so that we can take some home. The one thing I cannot eat is lutfisk, a fish that is served at Christmas. It looks like jelly and I have tried twice, for my grandfather's sake.",
+            "What surprised me most about your letter was that you have summer at Christmas. Do you eat outside then? Please tell me more!",
+            "All the best, Ellinor"
+          ],
+          "comments": [
+            "Texten svarar på alla punkter i brevet och binder ihop dem med en egen tanke: att maten här följer årstiderna.",
+            "Innehållet är utvecklat med konkreta detaljer (”new potatoes with dill”, ”the whole house smells of them”) i stället för allmänna påståenden.",
+            "Skribenten anpassar sig till läsaren: förklarar det som kan vara okänt och avslutar med en fråga tillbaka – det gör texten till en riktig interaktion.",
+            "Språket är varierat och säkert, med både korta och längre meningar. Enstaka fel finns, men de märks knappt."
+          ]
+        }
+      ]
+    }
+  ],
   "oral": []
 }
