@@ -28,25 +28,26 @@ function splitLong(chunk: string): string[] {
   return parts.filter((s) => s.trim().length > 0);
 }
 
-export function useSpeech(chunks: string[]) {
+export function useSpeech(chunks: string[], lang = "sv-SE") {
   const supported = typeof window !== "undefined" && "speechSynthesis" in window;
   const [playing, setPlaying] = useState(false);
   const voiceRef = useRef<SpeechSynthesisVoice | null>(null);
 
-  // Röster laddas asynkront – plocka en svensk röst när listan är klar
+  // Röster laddas asynkront – plocka en röst som matchar språket när listan är klar
   useEffect(() => {
     if (!supported) return;
+    const prefix = lang.slice(0, 2).toLowerCase();
     const pickVoice = () => {
       voiceRef.current =
         window.speechSynthesis
           .getVoices()
-          .find((v) => v.lang.toLowerCase().startsWith("sv")) ?? null;
+          .find((v) => v.lang.toLowerCase().startsWith(prefix)) ?? null;
     };
     pickVoice();
     window.speechSynthesis.addEventListener("voiceschanged", pickVoice);
     return () =>
       window.speechSynthesis.removeEventListener("voiceschanged", pickVoice);
-  }, [supported]);
+  }, [supported, lang]);
 
   // Stoppa uppläsningen när eleven navigerar bort
   useEffect(() => {
@@ -81,7 +82,7 @@ export function useSpeech(chunks: string[]) {
 
     parts.forEach((part, i) => {
       const u = new SpeechSynthesisUtterance(part);
-      u.lang = "sv-SE";
+      u.lang = lang;
       if (voiceRef.current) u.voice = voiceRef.current;
       u.rate = 0.95;
       if (i === parts.length - 1) u.onend = () => setPlaying(false);

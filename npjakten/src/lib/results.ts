@@ -1,4 +1,4 @@
-import type { ReadingAspect } from "../types";
+import type { ReadingAspect, Subject } from "../types";
 import { safeGetJson, safeSet } from "./storage";
 
 // Sparade provresultat i localStorage. Endast senaste försöket per prov
@@ -18,6 +18,8 @@ export interface QuestionResult {
 export interface TestResult {
   testId: string;
   gradeId: string;
+  // Saknas fältet är posten sparad innan engelskan fanns – då är den svenska.
+  subject?: Subject;
   when: number;
   perQuestion: QuestionResult[];
 }
@@ -47,15 +49,19 @@ export function clearTestResult(gradeId: string, testId: string): void {
   safeSet(KEY, JSON.stringify(all));
 }
 
-export function loadResults(gradeId?: string): TestResult[] {
-  const all = Object.values(readAll());
-  return gradeId ? all.filter((r) => r.gradeId === gradeId) : all;
+export function loadResults(subject: Subject, gradeId?: string): TestResult[] {
+  return Object.values(readAll()).filter(
+    (r) =>
+      (r.subject ?? "svenska") === subject &&
+      (gradeId === undefined || r.gradeId === gradeId)
+  );
 }
 
-export function clearResults(gradeId: string): void {
+export function clearResults(subject: Subject, gradeId: string): void {
   const all = readAll();
   for (const id of Object.keys(all)) {
-    if (all[id]?.gradeId === gradeId) delete all[id];
+    const r = all[id];
+    if (r?.gradeId === gradeId && (r.subject ?? "svenska") === subject) delete all[id];
   }
   safeSet(KEY, JSON.stringify(all));
 }

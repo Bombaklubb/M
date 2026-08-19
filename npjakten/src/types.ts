@@ -1,12 +1,22 @@
 // Datamodell för delproven
 
+// Appen övar nationella proven i två ämnen. Svenska finns för åk 3, 6 och 9,
+// engelska för åk 6 och 9 (åk 3 har inget nationellt prov i engelska).
+export type Subject = "svenska" | "engelska";
+
 // Läsförståelseaspekt (uppgiftstyp) enligt de nationella provens bedömningsmall.
 // Visas vid rättning, precis som i lärarens bedömningsmall.
 export type ReadingAspect =
+  // svenska
   | "Hitta efterfrågad information"
   | "Dra enkla slutsatser"
   | "Sammanföra och tolka information och idéer samt reflektera"
-  | "Granska och värdera innehåll, språk och textuella drag";
+  | "Granska och värdera innehåll, språk och textuella drag"
+  // engelska (reception: läsa och lyssna)
+  | "Förstå huvudinnehåll och sammanhang"
+  | "Förstå detaljer och underförstådd betydelse"
+  | "Hitta specifik information"
+  | "Granska språk och struktur";
 
 export interface MultipleChoiceQuestion {
   kind: "multiple-choice";
@@ -85,6 +95,7 @@ export interface ReadingTest {
     | "dikt"
     | "tidningsartikel";
   title: string;
+  lang?: "sv" | "en"; // textens språk – styr uppläsningens röst (default sv)
   image?: Illustration;
   ingress?: string; // sakprosatexter inleds med en ingress
   sections: TextSection[];
@@ -150,11 +161,31 @@ export interface OralTask {
   assessmentPoints: string[]; // vad läraren lyssnar efter (självskattning)
 }
 
+// Engelska delprov B: hörförståelse. Manuset läses upp av talsyntesen och
+// visas aldrig på skärmen för eleven – bara i lärarens facitutskrift.
+export interface ListeningLine {
+  speaker?: string; // t.ex. "Anna" – visas bara i facit, läses inte upp
+  text: string;
+}
+
+export interface ListeningTest {
+  id: string;
+  delprov: string; // t.ex. "Delprov B1: listening"
+  title: string;
+  image?: Illustration;
+  intro?: string; // instruktion före uppspelningen
+  script: ListeningLine[];
+  maxPlays?: number; // hur många gånger texten hörs på riktiga provet (t.ex. 2)
+  questions: Question[];
+}
+
 export interface Grade {
   id: "ak3" | "ak6" | "ak9";
+  subject: Subject;
   label: string;
   available: boolean;
   oral?: OralTask[];
   reading: ReadingTest[];
+  listening?: ListeningTest[];
   writing: WritingTask[];
 }

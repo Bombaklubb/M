@@ -18,6 +18,7 @@ interface Props {
   grade: Grade;
   onBack: () => void;
   onOpenReading: (testId: string) => void;
+  onOpenListening: (testId: string) => void;
   onOpenWriting: (taskId: string) => void;
   onOpenOral: (taskId: string) => void;
 }
@@ -26,6 +27,7 @@ export default function GradePage({
   grade,
   onBack,
   onOpenReading,
+  onOpenListening,
   onOpenWriting,
   onOpenOral,
 }: Props) {
@@ -82,6 +84,18 @@ export default function GradePage({
 
         {tab === "delprov" && (
           <>
+        {grade.reading.length === 0 &&
+          (grade.listening?.length ?? 0) === 0 &&
+          grade.writing.length === 0 &&
+          (grade.oral?.length ?? 0) === 0 && (
+            <p className="mt-8 rounded-md border-2 border-dashed border-stone-300 p-6 text-center text-stone-600">
+              Övningar i {grade.subject === "engelska" ? "engelska" : "svenska"} för
+              den här årskursen läggs till inom kort.
+            </p>
+          )}
+
+        {grade.reading.length > 0 && (
+          <>
         <h2 className="mt-8 border-b-2 border-np pb-1 font-serif text-xl font-bold">
           Läsa – läsförståelse
         </h2>
@@ -112,6 +126,45 @@ export default function GradePage({
             </button>
           ))}
         </div>
+
+          </>
+        )}
+
+        {(grade.listening?.length ?? 0) > 0 && (
+          <>
+            <h2 className="mt-10 border-b-2 border-np pb-1 font-serif text-xl font-bold">
+              Lyssna – hörförståelse
+            </h2>
+            <div className="mt-4 grid gap-3">
+              {grade.listening!.map((test) => (
+                <button
+                  key={test.id}
+                  type="button"
+                  onClick={() => onOpenListening(test.id)}
+                  className="flex items-center gap-4 rounded-md border border-stone-300 p-3 text-left transition hover:border-np hover:bg-np-light"
+                >
+                  {test.image && (
+                    <IllustrationImg
+                      image={test.image}
+                      decorative
+                      className="hidden h-20 w-32 shrink-0 rounded object-cover sm:block"
+                    />
+                  )}
+                  <span>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">
+                      {test.delprov}
+                    </p>
+                    <p className="mt-1 font-serif text-lg font-bold">{test.title}</p>
+                    <p className="mt-1 text-sm text-stone-500">
+                      🎧 {test.questions.length} uppgifter ·{" "}
+                      {test.questions.reduce((sum, q) => sum + q.maxPoints, 0)} poäng
+                    </p>
+                  </span>
+                </button>
+              ))}
+            </div>
+          </>
+        )}
 
         {grade.writing.length > 0 && (
           <>

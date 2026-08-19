@@ -1,7 +1,7 @@
-import type { ReadingTest } from "../types";
+import type { ListeningTest, ReadingTest } from "../types";
 
 interface Props {
-  test: ReadingTest;
+  test: ReadingTest | ListeningTest;
   gradeLabel: string;
 }
 
@@ -25,6 +25,23 @@ export default function FacitSheet({ test, gradeLabel }: Props) {
         Endast för läraren. Maxpoäng:{" "}
         {test.questions.reduce((sum, q) => sum + q.maxPoints, 0)}
       </p>
+
+      {/* Hörförståelse: manuset som talsyntesen läser upp */}
+      {"script" in test && (
+        <div className="mt-5 border-2 border-stone-400 p-3">
+          <p className="text-sm font-bold uppercase tracking-wide">
+            Manus – hörförståelse
+          </p>
+          <div className="mt-2 space-y-1">
+            {test.script.map((line, i) => (
+              <p key={i} className="text-sm leading-relaxed">
+                {line.speaker && <span className="font-bold">{line.speaker}: </span>}
+                {line.text}
+              </p>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="mt-5 space-y-6">
         {test.questions.map((q) => (
