@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getChaptersForArea } from '../data/areas';
-import { pageStyle, headerStyle } from '../utils/theme';
+import { pageStyle, headerStyle, SPACE, withAlpha } from '../utils/theme';
 import { Star, ArrowLeft } from 'lucide-react';
 
 export default function ChapterMap() {
@@ -24,19 +24,19 @@ export default function ChapterMap() {
         <button
           onClick={() => setView('area-select')}
           className="w-11 h-11 rounded-xl flex items-center justify-center transition-all active:scale-95 cursor-pointer flex-shrink-0"
-          style={{ background: `${a.inkHex}10`, border: `2px solid ${a.inkHex}20` }}
+          style={{ background: withAlpha(SPACE.beamBright, 0.12), border: `2px solid ${withAlpha(SPACE.beamBright, 0.35)}` }}
           aria-label="Tillbaka till startsidan"
         >
-          <ArrowLeft size={18} style={{ color: a.inkHex }} />
+          <ArrowLeft size={18} style={{ color: SPACE.beamBright }} />
         </button>
 
         <div className="flex-1 flex items-center gap-2.5 min-w-0">
           <span className="text-2xl" aria-hidden="true">{a.emoji}</span>
           <div className="min-w-0">
-            <h1 className="font-bold text-xl leading-tight font-heading truncate" style={{ color: a.inkHex }}>
+            <h1 className="font-bold text-xl leading-tight font-heading truncate" style={{ color: a.glowHex }}>
               {a.name}
             </h1>
-            <p className="text-xs font-semibold opacity-60" style={{ color: a.inkHex }}>
+            <p className="text-xs font-semibold" style={{ color: SPACE.onDarkMuted }}>
               Välj ett kapitel
             </p>
           </div>

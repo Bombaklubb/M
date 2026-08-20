@@ -2,25 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Färgschemat är hämtat ur startsidans bakgrundsbild (rymdstationen):
+ *   #00040e  djupaste rymd        #0e375d  marinblå
+ *   #030c1c  rymdbakgrund         #2b4662  stålblå
+ *   #02162f  panelbotten          #487094  dimblå
+ *   #90b2cc  atmosfärsljus        #1b80c2  jordkantens sken
+ *   #38bdf8  stationens lampor    #f5b642  stadsljus på nattsidan
+ *
+ * Mörkt utanför, ljust inuti: sidorna är rymd, och innehållet ligger i ljusa
+ * kort som lyser mot mörkret. Långa texter blir därmed lika lättlästa som förut.
+ */
+
 @layer base {
   :root {
-    --background: 220 30% 97%;
-    --foreground: 220 40% 19%;
+    --background: 218 74% 6%;
+    --foreground: 210 60% 96%;
     --card: 0 0% 100%;
-    --card-foreground: 220 40% 19%;
+    --card-foreground: 218 60% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 19%;
-    --primary: 217 91% 60%;
+    --popover-foreground: 218 60% 12%;
+    --primary: 199 76% 44%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 220 14% 92%;
-    --secondary-foreground: 220 40% 19%;
-    --muted: 220 14% 92%;
-    --muted-foreground: 220 9% 46%;
-    --accent: 220 14% 92%;
-    --accent-foreground: 220 40% 19%;
-    --border: 220 13% 88%;
-    --input: 220 13% 88%;
-    --ring: 217 91% 60%;
+    --secondary: 213 39% 28%;
+    --secondary-foreground: 210 60% 96%;
+    --muted: 213 39% 28%;
+    --muted-foreground: 210 25% 72%;
+    --accent: 199 89% 60%;
+    --accent-foreground: 218 74% 6%;
+    --border: 213 39% 28%;
+    --input: 213 39% 28%;
+    --ring: 199 89% 60%;
     --radius: 0.75rem;
   }
 
@@ -36,92 +48,121 @@
   }
 
   body {
-    background: linear-gradient(160deg, #eef2ff 0%, #eff6ff 40%, #f1f5f9 70%, #f5f3ff 100%);
+    background: linear-gradient(170deg, #00040e 0%, #030c1c 35%, #02162f 70%, #0e375d 100%);
     background-attachment: fixed;
-    color: #1f2a44;
+    color: #e6f0fb;
     overscroll-behavior: none;
     min-height: 100vh;
   }
 }
 
 @layer components {
-  /* Claymorphism base card */
-  .clay-card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 1.5rem;
-    border: 3px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 6px 0 rgba(0,0,0,0.12), 0 12px 32px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,1);
+  /* Startsidans bakgrundsbild. WebP där det stöds, annars JPEG. */
+  .space-bg {
+    background-image: url('/rymd-bakgrund.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-
-  .clay-card-sm {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 1rem;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 0 rgba(0,0,0,0.12), 0 8px 20px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,1);
+  @supports (background-image: image-set(url('/rymd-bakgrund.webp') type('image/webp'))) {
+    .space-bg {
+      background-image: image-set(
+        url('/rymd-bakgrund.webp') type('image/webp'),
+        url('/rymd-bakgrund.jpg') type('image/jpeg')
+      );
+    }
   }
 
   /*
-   * Områdeskort, sidbakgrunder och rubrikfält får sina färger från
-   * src/utils/theme.ts, som räknar fram dem ur accentHex i areaMeta.ts.
-   * Ett nytt område kräver därför ingen ny CSS-klass här – bara en post i
-   * areaMeta.ts. Klasserna nedan sköter formen (radie, kant, skugga).
+   * Ljust innehållskort – bärare av all längre text.
+   * Textfärgen sätts explicit: body är ljus mot rymden, och utan detta ärver
+   * text inuti kortet den ljusa färgen och blir oläslig mot vitt.
    */
-  .clay-area {
+  .clay-card {
+    color: #10233a;
+    background: rgba(255, 255, 255, 0.97);
     border-radius: 1.5rem;
-    border-width: 3px;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 6px 0 rgba(0, 7, 20, 0.35), 0 12px 32px rgba(0, 7, 20, 0.45), inset 0 1px 0 rgba(255,255,255,1);
+  }
+
+  .clay-card-sm {
+    color: #10233a;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 0 rgba(0, 7, 20, 0.3), 0 8px 20px rgba(0, 7, 20, 0.35), inset 0 1px 0 rgba(255,255,255,1);
+  }
+
+  /* Mörk panel – används där kortet ligger direkt mot rymden, som på startsidan.
+     Färgerna kommer från utils/theme.ts så varje område får sin egen glöd. */
+  .space-panel {
+    border-radius: 1.5rem;
+    border-width: 2px;
     border-style: solid;
+    backdrop-filter: blur(10px);
   }
 
   /* Buttons */
   .btn-clay {
     @apply font-black rounded-2xl transition-all cursor-pointer select-none;
     @apply active:translate-y-1;
-    border: 3px solid rgba(0,0,0,0.08);
-    box-shadow: 0 4px 0 rgba(0,0,0,0.15), 0 6px 16px rgba(0,0,0,0.1);
+    border: 3px solid rgba(0, 7, 20, 0.15);
+    box-shadow: 0 4px 0 rgba(0, 7, 20, 0.35), 0 6px 16px rgba(0, 7, 20, 0.3);
   }
 
   .btn-clay:active {
-    box-shadow: 0 2px 0 rgba(0,0,0,0.15), 0 3px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 0 rgba(0, 7, 20, 0.35), 0 3px 8px rgba(0, 7, 20, 0.25);
   }
 
   .btn-primary-clay {
     @apply btn-clay text-white;
-    background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
-    border-color: #1e40af;
-    box-shadow: 0 4px 0 #1e3a8a, 0 6px 20px rgba(59,130,246,0.4);
+    background: linear-gradient(180deg, #38bdf8 0%, #1b80c2 100%);
+    border-color: #0e375d;
+    box-shadow: 0 4px 0 #062441, 0 6px 20px rgba(56, 189, 248, 0.45);
   }
 
   .btn-primary-clay:active {
-    box-shadow: 0 2px 0 #1e3a8a, 0 3px 10px rgba(59,130,246,0.3);
+    box-shadow: 0 2px 0 #062441, 0 3px 10px rgba(56, 189, 248, 0.35);
   }
 
-  .btn-orange-clay {
-    @apply btn-clay text-white;
-    background: linear-gradient(180deg, #f97316 0%, #c2560a 100%);
-    border-color: #9a3412;
-    box-shadow: 0 4px 0 #7c2d12, 0 6px 20px rgba(249,115,22,0.4);
+  .btn-gold-clay {
+    @apply btn-clay;
+    background: linear-gradient(180deg, #f5b642 0%, #d38f16 100%);
+    border-color: #7c4a03;
+    color: #2b1a02;
+    box-shadow: 0 4px 0 #5b3602, 0 6px 20px rgba(245, 182, 66, 0.4);
   }
 
-  /* Header */
+  /* Rubrikfält utan valt område */
   .header-bar {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(2, 22, 47, 0.85);
     backdrop-filter: blur(20px);
-    border-bottom: 2px solid rgba(59, 130, 246, 0.15);
-    box-shadow: 0 2px 20px rgba(59,130,246,0.08);
+    border-bottom: 2px solid rgba(56, 189, 248, 0.28);
+    box-shadow: 0 2px 24px rgba(0, 7, 20, 0.6);
   }
 
-  /* Star badge */
+  /* Vita ytor som inte är clay-kort behöver samma skydd mot ljus ärvd text. */
+  .on-light {
+    color: #10233a;
+  }
+
   .star-badge {
     @apply flex items-center gap-1 px-3 py-1.5 rounded-full font-bold text-sm;
-    background: rgba(245, 158, 11, 0.12);
-    border: 2px solid rgba(245, 158, 11, 0.40);
-    color: #b45309;
+    background: rgba(245, 182, 66, 0.16);
+    border: 2px solid rgba(245, 182, 66, 0.45);
+    color: #f5b642;
   }
 }
 
 @layer utilities {
   .text-shadow {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 0 2px 4px rgba(0, 7, 20, 0.6);
+  }
+
+  /* Skenet kring rubriker som ligger direkt mot rymden */
+  .text-glow {
+    text-shadow: 0 0 18px rgba(56, 189, 248, 0.55), 0 2px 6px rgba(0, 7, 20, 0.8);
   }
 
   .font-heading {
@@ -143,7 +184,7 @@
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: rgba(59,130,246,0.3);
+  background: rgba(56, 189, 248, 0.4);
   border-radius: 2px;
 }
 

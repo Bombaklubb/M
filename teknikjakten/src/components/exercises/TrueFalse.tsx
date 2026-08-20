@@ -48,8 +48,8 @@ export default function TrueFalse({ exercise, onAnswer }: Props) {
       </div>
 
       {revealed && exercise.explanation && (
-        <div className="p-4 rounded-2xl bg-indigo-50 border-2 border-indigo-200">
-          <p className="text-sm font-semibold text-indigo-800">💡 {exercise.explanation}</p>
+        <div className="p-4 rounded-2xl bg-sky-50 border-2 border-sky-200">
+          <p className="text-sm font-semibold text-sky-900">💡 {exercise.explanation}</p>
         </div>
       )}
     </div>

@@ -84,8 +84,8 @@ export default function MatchingPairs({ exercise, onAnswer }: Props) {
                   ${isMatched
                     ? 'bg-green-100 border-2 border-green-300 text-green-800 cursor-default'
                     : isSelected
-                    ? 'bg-indigo-100 border-2 border-indigo-400 text-indigo-900 scale-[1.02]'
-                    : 'clay-card-sm hover:border-indigo-300 cursor-pointer active:scale-95'}
+                    ? 'bg-sky-100 border-2 border-sky-400 text-sky-900 scale-[1.02]'
+                    : 'clay-card-sm hover:border-sky-300 cursor-pointer active:scale-95'}
                 `}
               >
                 {isMatched && <CheckCircle size={14} className="inline mr-1 text-green-500" />}
@@ -113,7 +113,7 @@ export default function MatchingPairs({ exercise, onAnswer }: Props) {
                     : isWrong
                     ? 'bg-red-100 border-2 border-red-400 text-red-800 animate-bounce'
                     : selectedLeft !== null
-                    ? 'clay-card-sm hover:border-purple-400 hover:bg-purple-50 cursor-pointer active:scale-95'
+                    ? 'clay-card-sm hover:border-cyan-400 hover:bg-cyan-50 cursor-pointer active:scale-95'
                     : 'clay-card-sm opacity-60 cursor-default'}
                 `}
               >
@@ -126,8 +126,8 @@ export default function MatchingPairs({ exercise, onAnswer }: Props) {
       </div>
 
       {done && exercise.explanation && (
-        <div className="mt-4 p-4 rounded-2xl bg-indigo-50 border-2 border-indigo-200">
-          <p className="text-sm font-semibold text-indigo-800">💡 {exercise.explanation}</p>
+        <div className="mt-4 p-4 rounded-2xl bg-sky-50 border-2 border-sky-200">
+          <p className="text-sm font-semibold text-sky-900">💡 {exercise.explanation}</p>
         </div>
       )}
     </div>

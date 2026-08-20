@@ -17,8 +17,8 @@ export default defineConfig({
         description: 'Öva teknik för årskurs 4–6',
         start_url: '/',
         display: 'standalone',
-        background_color: '#f4f6fb',
-        theme_color: '#1f2a44',
+        background_color: '#00040e',
+        theme_color: '#02162f',
         orientation: 'portrait',
         icons: [
           { src: '/pwa-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
@@ -27,7 +27,10 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2}'],
+        // Originalbilderna i public/ är designunderlag på ett par megabyte styck.
+        // De ska inte precachas – appen använder de optimerade varianterna.
+        globIgnores: ['**/*bakgrund.png', '**/rymd-bakgrund.jpg'],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,

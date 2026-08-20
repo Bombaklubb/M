@@ -64,8 +64,8 @@ export default function SpotTheError({ exercise, onAnswer }: Props) {
       </div>
 
       {selected !== null && exercise.explanation && (
-        <div className="mt-4 p-4 rounded-2xl bg-indigo-50 border-2 border-indigo-200">
-          <p className="text-sm font-semibold text-indigo-800">{exercise.explanation}</p>
+        <div className="mt-4 p-4 rounded-2xl bg-sky-50 border-2 border-sky-200">
+          <p className="text-sm font-semibold text-sky-900">{exercise.explanation}</p>
         </div>
       )}
     </div>

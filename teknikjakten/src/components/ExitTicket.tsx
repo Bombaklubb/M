@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { Exercise, MultipleChoiceExercise, FillInExercise } from '../types';
 import { shuffleOptions } from '../utils/shuffle';
+import { SPACE, withAlpha } from '../utils/theme';
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 import Celebration from './Celebration';
 
@@ -86,8 +87,8 @@ export default function ExitTicket() {
         <div className="space-y-2">
           {e.options.map((opt, i) => {
             const isCorrect = i === e.correctIndex;
-            let cls = 'w-full text-left p-3 rounded-xl border-2 text-sm font-semibold transition-all';
-            if (currentAnswer === 'unanswered') cls += ' border-gray-200 bg-white hover:bg-indigo-50 cursor-pointer';
+            let cls = 'w-full text-left p-3 min-h-[44px] rounded-xl border-2 text-sm font-semibold transition-all text-gray-800';
+            if (currentAnswer === 'unanswered') cls += ' border-gray-200 bg-white hover:bg-sky-50 cursor-pointer';
             else if (isCorrect) cls += ' border-green-400 bg-green-50';
             else cls += ' border-gray-200 bg-white opacity-50';
             return (
@@ -105,8 +106,8 @@ export default function ExitTicket() {
         <div className="flex gap-3">
           {(['Sant', 'Falskt'] as const).map(label => {
             const isCorrect = label === 'Sant' ? e.isTrue : !e.isTrue;
-            let cls = 'flex-1 py-4 rounded-xl border-2 font-heading font-bold text-base transition-all';
-            if (currentAnswer === 'unanswered') cls += ' border-gray-200 bg-white hover:bg-indigo-50 cursor-pointer';
+            let cls = 'flex-1 py-4 rounded-xl border-2 font-heading font-bold text-base transition-all text-gray-800';
+            if (currentAnswer === 'unanswered') cls += ' border-gray-200 bg-white hover:bg-sky-50 cursor-pointer';
             else if (isCorrect) cls += ' border-green-400 bg-green-50 text-green-700';
             else cls += ' border-gray-200 opacity-50';
             return (
@@ -128,7 +129,7 @@ export default function ExitTicket() {
       return (
         <div>
           <input
-            className="w-full px-4 py-3 rounded-xl border-2 border-indigo-200 focus:border-indigo-400 focus:outline-none text-base font-semibold"
+            className="w-full px-4 py-3 rounded-xl border-2 border-sky-200 focus:border-sky-400 focus:outline-none text-base font-semibold text-gray-800"
             placeholder="Skriv ditt svar..."
             value={inputValue}
             onChange={e => setInputValue(e.target.value)}
@@ -155,13 +156,13 @@ export default function ExitTicket() {
         <div>
           <div className="rounded-xl border-2 border-red-300 bg-red-50 p-3 mb-3">
             <p className="text-xs font-black text-red-500 mb-1">🚨 FELAKTIGT</p>
-            <p className="text-sm font-semibold italic">{e.wrongStatement}</p>
+            <p className="text-sm font-semibold italic text-gray-800">{e.wrongStatement}</p>
           </div>
           <div className="space-y-2">
             {e.options.map((opt, i) => {
               const isCorrect = i === e.correctIndex;
-              let cls = 'w-full text-left p-3 rounded-xl border-2 text-sm font-semibold transition-all';
-              if (currentAnswer === 'unanswered') cls += ' border-gray-200 bg-white hover:bg-indigo-50 cursor-pointer';
+              let cls = 'w-full text-left p-3 min-h-[44px] rounded-xl border-2 text-sm font-semibold transition-all text-gray-800';
+              if (currentAnswer === 'unanswered') cls += ' border-gray-200 bg-white hover:bg-sky-50 cursor-pointer';
               else if (isCorrect) cls += ' border-green-400 bg-green-50';
               else cls += ' border-gray-200 opacity-50';
               return <button key={i} onClick={() => currentAnswer === 'unanswered' && handleAnswer(isCorrect)} className={cls}>{opt}</button>;
@@ -182,8 +183,8 @@ export default function ExitTicket() {
         {correct === total && <Celebration />}
         <div className="max-w-sm w-full text-center">
           <div className="text-6xl mb-4">{correct === total ? '🎉' : correct >= total / 2 ? '👍' : '💪'}</div>
-          <h1 className="text-2xl font-heading font-bold text-gray-800 mb-2">Snabbkoll klar!</h1>
-          <p className="text-gray-500 font-semibold mb-6">{correct}/{total} rätt</p>
+          <h1 className="text-2xl font-heading font-bold mb-2" style={{ color: SPACE.onDark }}>Snabbkoll klar!</h1>
+          <p className="font-semibold mb-6" style={{ color: SPACE.onDarkMuted }}>{correct}/{total} rätt</p>
           <div className="flex justify-center gap-3 mb-8">
             {answers.map((a, i) => (
               a === 'correct'
@@ -209,21 +210,24 @@ export default function ExitTicket() {
       <header className="header-bar px-4 py-3 flex items-center gap-3">
         <button
           onClick={leave}
-          className="w-10 h-10 rounded-xl bg-indigo-50 border-2 border-indigo-200 flex items-center justify-center hover:bg-indigo-100 active:scale-95 transition-all cursor-pointer"
+          className="w-11 h-11 rounded-xl bg-white/10 border-2 border-white/25 flex items-center justify-center hover:bg-white/20 active:scale-95 transition-all cursor-pointer text-white"
           aria-label="Avsluta snabbkoll"
         >
           ✕
         </button>
         <div className="flex-1">
-          <p className="font-heading font-bold text-amber-600 text-base">⚡ Snabbkoll</p>
-          <p className="text-xs text-gray-400 font-semibold">{exitTicketChapter.title}</p>
+          <p className="font-heading font-bold text-base" style={{ color: SPACE.gold }}>⚡ Snabbkoll</p>
+          <p className="text-xs font-semibold" style={{ color: SPACE.onDarkMuted }}>{exitTicketChapter.title}</p>
         </div>
-        <span className="text-sm font-black text-gray-400">{currentIdx + 1}/{total}</span>
+        <span className="text-sm font-black" style={{ color: SPACE.onDarkMuted }}>{currentIdx + 1}/{total}</span>
       </header>
 
       {/* Progress */}
-      <div className="h-2 bg-gray-100">
-        <div className="h-full bg-amber-400 transition-all duration-500" style={{ width: `${(currentIdx / total) * 100}%` }} />
+      <div className="h-2" style={{ background: withAlpha(SPACE.deepest, 0.6) }}>
+        <div
+          className="h-full transition-all duration-500"
+          style={{ width: `${(currentIdx / total) * 100}%`, background: SPACE.gold, boxShadow: `0 0 12px ${withAlpha(SPACE.gold, 0.6)}` }}
+        />
       </div>
 
       <main className="flex-1 p-4 sm:p-6 max-w-2xl w-full mx-auto">
@@ -232,8 +236,8 @@ export default function ExitTicket() {
           <p className="font-heading font-bold text-gray-800 text-lg mb-5">{ex.question}</p>
           {renderExercise(ex)}
           {currentAnswer !== 'unanswered' && ex.explanation && (
-            <div className="mt-4 p-3 rounded-2xl bg-indigo-50 border-2 border-indigo-200">
-              <p className="text-sm font-semibold text-indigo-800">{ex.explanation}</p>
+            <div className="mt-4 p-3 rounded-2xl bg-sky-50 border-2 border-sky-200">
+              <p className="text-sm font-semibold text-sky-900">{ex.explanation}</p>
             </div>
           )}
         </div>

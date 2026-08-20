@@ -24,11 +24,19 @@ export interface Area {
    * valt område. scripts/check.mjs kontrollerar att siffran stämmer.
    */
   chapterCount: number;
-  /** Områdets basfärg. Kort, sidbakgrund och rubrikfält härleds ur den (utils/theme.ts). */
+  /** Områdets basfärg. Sidbakgrund, rubrikfält och panelkanter härleds ur den (utils/theme.ts). */
   accentHex: string;
-  /** Textfärg för rubriker på områdets sidor – ska vara mörk nog mot ljus bakgrund. */
+  /**
+   * Ljus neonvariant. Används för text och ikoner som ligger direkt mot den
+   * mörka rymdbakgrunden, där accentHex vore för svag.
+   */
+  glowHex: string;
+  /**
+   * Mörk variant. Används för text inuti de ljusa korten, där en ljus färg
+   * skulle bli oläslig.
+   */
   inkHex: string;
-  /** Färg för progressbarer och markerade flikar. Oftast samma som accentHex. */
+  /** Färg för progressbarer och markerade flikar. Ska fungera mot både ljust kort och mörk panel. */
   progressHex: string;
 }
 

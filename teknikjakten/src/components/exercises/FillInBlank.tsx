@@ -56,7 +56,7 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
               const isCorrectWord = isCorrectAnswer(word);
               let cls = 'px-5 py-3 rounded-2xl font-bold text-base transition-all cursor-pointer border-2 ';
               if (!revealed) {
-                cls += 'bg-white border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50 active:scale-95';
+                cls += 'bg-white text-gray-800 border-sky-200 hover:border-sky-400 hover:bg-sky-50 active:scale-95';
               } else if (isCorrectWord) {
                 cls += 'bg-green-50 border-green-400 text-green-800';
               } else if (isChosen && !isCorrectWord) {
@@ -89,7 +89,7 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
                   ? correct
                     ? 'border-green-400 bg-green-50 text-green-800'
                     : 'border-red-400 bg-red-50 text-red-800'
-                  : 'border-indigo-200 focus:border-indigo-400 bg-white'}
+                  : 'border-sky-200 focus:border-sky-400 bg-white text-gray-800'}
               `}
             />
             {!revealed && (
