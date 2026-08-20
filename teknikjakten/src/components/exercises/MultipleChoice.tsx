@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { MultipleChoiceExercise } from '../../types';
+import { shuffleOptions } from '../../utils/shuffle';
 import { CheckCircle, XCircle } from 'lucide-react';
 
 interface Props {
@@ -9,11 +10,14 @@ interface Props {
 
 export default function MultipleChoice({ exercise, onAnswer }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
+  // Alternativen blandas så att svaret inte kan gissas ur ordningen i datan.
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- avsiktligt: blandas om först när övningen byts, inte vid varje rendering
+  const { options, correctIndex } = useMemo(() => shuffleOptions(exercise.options, exercise.correctIndex), [exercise.id]);
 
   function pick(idx: number) {
     if (selected !== null) return;
     setSelected(idx);
-    setTimeout(() => onAnswer(idx === exercise.correctIndex), 1000);
+    setTimeout(() => onAnswer(idx === correctIndex), 1000);
   }
 
   return (
@@ -21,8 +25,8 @@ export default function MultipleChoice({ exercise, onAnswer }: Props) {
       <p className="text-lg sm:text-xl font-black text-gray-800 leading-snug">{exercise.question}</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
-        {exercise.options.map((opt, idx) => {
-          const isCorrect = idx === exercise.correctIndex;
+        {options.map((opt, idx) => {
+          const isCorrect = idx === correctIndex;
           const isSelected = selected === idx;
           const revealed = selected !== null;
 

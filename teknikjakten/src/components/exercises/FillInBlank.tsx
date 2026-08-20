@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { FillInExercise } from '../../types';
+import { shuffle } from '../../utils/shuffle';
 import { CheckCircle, XCircle } from 'lucide-react';
 
 interface Props {
@@ -12,6 +13,9 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
   const [textInput, setTextInput] = useState('');
 
   const useWordBank = !!(exercise.wordBank && exercise.wordBank.length > 0);
+  // Ordbanken blandas så att svaret inte kan gissas ur ordningen i datan.
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- avsiktligt: blandas om först när övningen byts, inte vid varje rendering
+  const wordBank = useMemo(() => shuffle(exercise.wordBank ?? []), [exercise.id]);
   const revealed = selected !== null;
 
   function normalize(s: string) {
@@ -47,7 +51,7 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
         <div className="mt-4">
           <p className="text-xs font-black text-gray-500 mb-3 uppercase tracking-wide">Välj rätt svar:</p>
           <div className="flex flex-wrap gap-3">
-            {exercise.wordBank!.map(word => {
+            {wordBank.map(word => {
               const isChosen = selected === word;
               const isCorrectWord = isCorrectAnswer(word);
               let cls = 'px-5 py-3 rounded-2xl font-bold text-base transition-all cursor-pointer border-2 ';

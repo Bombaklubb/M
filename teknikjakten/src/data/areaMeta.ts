@@ -21,7 +21,7 @@ export const AREAS: Area[] = [
     accentHex: '#ea580c',
     inkHex: '#431407',
     progressHex: '#ea580c',
-    chapterCount: 0,
+    chapterCount: 4,
   },
   {
     id: 'bostad',

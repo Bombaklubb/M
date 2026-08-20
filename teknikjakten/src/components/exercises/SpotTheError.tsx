@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { SpotTheErrorExercise } from '../../types';
+import { shuffleOptions } from '../../utils/shuffle';
 import { XCircle, CheckCircle } from 'lucide-react';
 
 interface Props {
@@ -9,11 +10,14 @@ interface Props {
 
 export default function SpotTheError({ exercise, onAnswer }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
+  // Alternativen blandas så att svaret inte kan gissas ur ordningen i datan.
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- avsiktligt: blandas om först när övningen byts, inte vid varje rendering
+  const { options, correctIndex } = useMemo(() => shuffleOptions(exercise.options, exercise.correctIndex), [exercise.id]);
 
   function choose(i: number) {
     if (selected !== null) return;
     setSelected(i);
-    onAnswer(i === exercise.correctIndex);
+    onAnswer(i === correctIndex);
   }
 
   return (
@@ -27,8 +31,8 @@ export default function SpotTheError({ exercise, onAnswer }: Props) {
       <p className="font-heading font-bold text-gray-800 text-lg mb-4">{exercise.question}</p>
 
       <div className="space-y-3">
-        {exercise.options.map((opt, i) => {
-          const isCorrect = i === exercise.correctIndex;
+        {options.map((opt, i) => {
+          const isCorrect = i === correctIndex;
           const isSelected = selected === i;
 
           let cls = 'clay-card-sm p-4 w-full text-left transition-all cursor-pointer';

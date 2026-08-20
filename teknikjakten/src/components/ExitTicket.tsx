@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { Exercise, MultipleChoiceExercise, FillInExercise } from '../types';
+import { shuffleOptions } from '../utils/shuffle';
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 import Celebration from './Celebration';
 
@@ -21,7 +22,18 @@ function pickThree(exercises: Exercise[]): Exercise[] {
 
 export default function ExitTicket() {
   const { exitTicketChapter, setView, selectedArea, exitTicketReturnView } = useApp();
-  const exercises = useMemo(() => exitTicketChapter ? pickThree(exitTicketChapter.exercises) : [], [exitTicketChapter]);
+  // Snabbkollen renderar alternativen med egen kod, så blandningen görs här –
+  // annars skulle svaret gå att gissa ur ordningen i datan.
+  const exercises = useMemo(() => {
+    if (!exitTicketChapter) return [];
+    return pickThree(exitTicketChapter.exercises).map(e => {
+      if (e.type === 'multiple-choice' || e.type === 'spot-the-error') {
+        const { options, correctIndex } = shuffleOptions(e.options, e.correctIndex);
+        return { ...e, options, correctIndex };
+      }
+      return e;
+    });
+  }, [exitTicketChapter]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<AnswerState[]>([]);
   const [currentAnswer, setCurrentAnswer] = useState<AnswerState>('unanswered');

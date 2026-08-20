@@ -1,5 +1,6 @@
 import { Chapter, AreaId, Area } from '../types';
 import { AREAS } from './areaMeta';
+import { GRUNDER } from './chapters/grunder';
 
 export { AREAS };
 
@@ -16,7 +17,9 @@ export { AREAS };
  * Den här filen importeras bara av vyer som laddas med React.lazy, så
  * kapiteldatan hamnar aldrig i startpaketet.
  */
-export const ALL_CHAPTERS: Chapter[] = [];
+export const ALL_CHAPTERS: Chapter[] = [
+  ...GRUNDER,
+];
 
 /** Kapitlen i ett område, i den ordning de står i boken. */
 export function getChaptersForArea(areaId: AreaId): Chapter[] {
