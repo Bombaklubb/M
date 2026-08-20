@@ -50,7 +50,7 @@ export const AREAS: Area[] = [
     glowHex: '#8ad8fc',
     inkHex: '#0b4a6e',
     progressHex: '#0ea5e9',
-    chapterCount: 0,
+    chapterCount: 9,
   },
   {
     id: 'utveckling',
