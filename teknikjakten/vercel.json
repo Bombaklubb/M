@@ -9,5 +9,5 @@
       "destination": "/"
     }
   ],
-  "ignoreCommand": "git diff --quiet origin/main $VERCEL_GIT_COMMIT_SHA -- . 2>/dev/null && exit 0 || exit 1"
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . 2>/dev/null && exit 0 || exit 1"
 }
