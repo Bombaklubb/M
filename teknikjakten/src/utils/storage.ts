@@ -129,10 +129,10 @@ export function buildAchievementStats(): AchievementStats {
   const progress = getProgress();
   const stats = getStats();
   const completed = progress.filter(p => p.completed);
-  // Områdesdelen av kapitel-id:t: ak4-material-hallfasthet -> 'material'.
-  const areaCounts: Record<AreaId, number> = {};
+  // Områdesdelen av kapitel-id:t: rorelse-enkla-maskiner -> 'rorelse'.
+  const areaCounts: Partial<Record<AreaId, number>> = {};
   completed.forEach(p => {
-    const areaId = p.chapterId.split('-')[1];
+    const areaId = p.chapterId.split('-')[0] as AreaId;
     if (areaId) areaCounts[areaId] = (areaCounts[areaId] ?? 0) + 1;
   });
   return { completedChapters: completed.length, progress, areaCounts, ...stats };

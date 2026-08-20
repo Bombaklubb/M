@@ -9,7 +9,6 @@ export type StudyTab = 'concepts' | 'key-points' | 'cause-effect' | 'word-search
 
 interface AppContextValue {
   currentView: AppView;
-  selectedGrade: number | null;
   selectedArea: Area | null;
   selectedChapter: Chapter | null;
   exitTicketChapter: Chapter | null;
@@ -17,7 +16,6 @@ interface AppContextValue {
   studyInitialTab: StudyTab;
 
   setView: (view: AppView) => void;
-  selectGrade: (grade: number) => void;
   selectArea: (area: Area) => void;
   selectChapter: (chapter: Chapter) => void;
   openChapterStudy: (chapter: Chapter, tab?: StudyTab) => void;
@@ -37,8 +35,7 @@ export function useApp(): AppContextValue {
 }
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
-  const [currentView, setCurrentView] = useState<AppView>('grade-select');
-  const [selectedGrade, setSelectedGrade] = useState<number | null>(null);
+  const [currentView, setCurrentView] = useState<AppView>('area-select');
   const [selectedArea, setSelectedArea] = useState<Area | null>(null);
   const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
   const [exitTicketChapter, setExitTicketChapter] = useState<Chapter | null>(null);
@@ -48,24 +45,18 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   function setView(view: AppView) { setCurrentView(view); }
 
-  function selectGrade(grade: number) {
-    setSelectedGrade(grade);
-    setCurrentView('area-select');
-  }
-
   function selectArea(area: Area) {
     setSelectedArea(area);
     setCurrentView('chapter-map');
   }
 
   /**
-   * Synkar årskurs och område med kapitlet som öppnas. Utan detta kan eleven hamna
-   * i ett kapitel från en annan årskurs (t.ex. via sökningen) och sedan möta en
+   * Synkar området med kapitlet som öppnas. Utan detta kan eleven hamna i ett
+   * kapitel från ett annat område (t.ex. via sökningen) och sedan möta en
    * kapitelkarta där kapitlet hen just läste inte finns.
    */
   function syncContextTo(chapter: Chapter) {
     setSelectedChapter(chapter);
-    if (chapter.grade) setSelectedGrade(Number(chapter.grade));
     const area = AREAS.find(a => a.id === chapter.areaId);
     if (area) setSelectedArea(area);
   }
@@ -126,9 +117,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <AppContext.Provider value={{
-      currentView, selectedGrade, selectedArea, selectedChapter, exitTicketChapter,
+      currentView, selectedArea, selectedChapter, exitTicketChapter,
       exitTicketReturnView, lastResult, studyInitialTab,
-      setView, selectGrade, selectArea, selectChapter, openChapterStudy, startExitTicket,
+      setView, selectArea, selectChapter, openChapterStudy, startExitTicket,
       submitChapterResult, getChapterProgressFor,
     }}>
       {children}

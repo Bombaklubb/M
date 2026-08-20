@@ -1,11 +1,16 @@
 // === OMRÅDEN ===
 /**
  * Teknik är ett enda ämne i Lgr22, så innehållet delas i stället in i områden.
- * Id:t är fritt tills områdesindelningen är bestämd – när AREAS i data/areaMeta.ts
- * fyllts i kan denna typ snävas till en union ('material' | 'system' | ...) så att
- * felstavade områdes-id fångas av typkontrollen.
+ * Områdena följer bokens sju delar.
  */
-export type AreaId = string;
+export type AreaId =
+  | 'grunder'
+  | 'bostad'
+  | 'vardag'
+  | 'utveckling'
+  | 'rorelse'
+  | 'system'
+  | 'digital';
 
 export interface Area {
   id: AreaId;
@@ -13,6 +18,12 @@ export interface Area {
   /** Kort kod som visas som vattenstämpel på områdeskortet, t.ex. 'MK'. */
   shortName: string;
   emoji: string;
+  /**
+   * Antal kapitel i området. Ligger i metadatan så att startsidan kan visa
+   * "3/8 klara" utan att ladda kapiteldatan – den hämtas först när eleven
+   * valt område. scripts/check.mjs kontrollerar att siffran stämmer.
+   */
+  chapterCount: number;
   /** Områdets basfärg. Kort, sidbakgrund och rubrikfält härleds ur den (utils/theme.ts). */
   accentHex: string;
   /** Textfärg för rubriker på områdets sidor – ska vara mörk nog mot ljus bakgrund. */
@@ -125,16 +136,16 @@ export interface ChapterSummary {
 // === KAPITEL ===
 export interface Chapter {
   /**
-   * Namnregel: `ak<årskurs>-<område>-<kapitel>`, t.ex. 'ak4-material-hallfasthet'.
-   * `grade` måste matcha siffran i id:t och `areaId` områdesdelen –
-   * scripts/check.mjs kontrollerar det.
+   * Namnregel: `<område>-<kapitel>`, t.ex. 'rorelse-enkla-maskiner'.
+   * `areaId` måste matcha områdesdelen – scripts/check.mjs kontrollerar det.
    */
   id: string;
   title: string;
   emoji: string;
   description: string;
   areaId: AreaId;
-  grade?: string;
+  /** Sidhänvisning till boken, t.ex. '80–83'. Visas inte för eleven. */
+  bookPages?: string;
   summary?: ChapterSummary;
   /** 10 övningar per kapitel. */
   exercises: Exercise[];
@@ -156,7 +167,7 @@ export interface AchievementStats {
   totalAnswered: number;
   progress: ChapterProgress[];
   /** Antal klarade kapitel per område, nyckel = areaId. */
-  areaCounts: Record<AreaId, number>;
+  areaCounts: Partial<Record<AreaId, number>>;
 }
 
 export interface Achievement {
@@ -171,7 +182,6 @@ export interface Achievement {
 
 // === APPENS VYER ===
 export type AppView =
-  | 'grade-select'
   | 'area-select'
   | 'chapter-map'
   | 'chapter-study'

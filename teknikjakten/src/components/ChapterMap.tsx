@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useApp } from '../contexts/AppContext';
-import { getChaptersForAreaAndGrade } from '../data/areas';
+import { getChaptersForArea } from '../data/areas';
 import { pageStyle, headerStyle } from '../utils/theme';
 import { Star, ArrowLeft } from 'lucide-react';
 
 export default function ChapterMap() {
-  const { selectedArea, selectedGrade, setView, openChapterStudy, selectChapter, startExitTicket, getChapterProgressFor } = useApp();
+  const { selectedArea, setView, openChapterStudy, selectChapter, startExitTicket, getChapterProgressFor } = useApp();
 
   // Navigering hör hemma i en effekt – att anropa setView under render uppdaterar
   // AppProvider mitt i barnets rendering och kan ge en renderloop.
@@ -15,8 +15,7 @@ export default function ChapterMap() {
 
   if (!selectedArea) return null;
 
-  const grade = selectedGrade ?? 4;
-  const chapters = getChaptersForAreaAndGrade(selectedArea.id, grade);
+  const chapters = getChaptersForArea(selectedArea.id);
   const a = selectedArea;
 
   return (
@@ -26,7 +25,7 @@ export default function ChapterMap() {
           onClick={() => setView('area-select')}
           className="w-11 h-11 rounded-xl flex items-center justify-center transition-all active:scale-95 cursor-pointer flex-shrink-0"
           style={{ background: `${a.inkHex}10`, border: `2px solid ${a.inkHex}20` }}
-          aria-label="Tillbaka till områdesval"
+          aria-label="Tillbaka till startsidan"
         >
           <ArrowLeft size={18} style={{ color: a.inkHex }} />
         </button>
@@ -38,7 +37,7 @@ export default function ChapterMap() {
               {a.name}
             </h1>
             <p className="text-xs font-semibold opacity-60" style={{ color: a.inkHex }}>
-              Åk {grade} · Välj ett kapitel
+              Välj ett kapitel
             </p>
           </div>
         </div>
@@ -48,7 +47,7 @@ export default function ChapterMap() {
         {chapters.length === 0 && (
           <div className="mt-8 text-center py-12 clay-card">
             <p className="text-4xl mb-3" aria-hidden="true">🚧</p>
-            <p className="font-bold text-gray-700 text-lg">Åk {grade} – {a.name}</p>
+            <p className="font-bold text-gray-700 text-lg">{a.name}</p>
             <p className="text-gray-500 text-sm mt-1">är under uppbyggnad. Kom tillbaka snart!</p>
           </div>
         )}

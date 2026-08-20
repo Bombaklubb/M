@@ -1,19 +1,23 @@
-import { useState, useMemo } from 'react';
+import { useState, Suspense, lazy } from 'react';
 import { Search } from 'lucide-react';
 import { useApp } from '../contexts/AppContext';
-import { getChaptersForAreaAndGrade, getAreasWithContent, ALL_CHAPTERS } from '../data/areas';
+import { AREAS } from '../data/areaMeta';
 import { getProgress } from '../utils/storage';
 import { cardStyle } from '../utils/theme';
 import type { Area, ChapterProgress } from '../types';
-import SearchModal from './SearchModal';
 
-function AreaCard({ area, grade, progress, onClick }: {
-  area: Area; grade: number; progress: ChapterProgress[]; onClick: () => void;
+// Sökningen läser alla kapitel, så den laddas först när eleven öppnar den –
+// annars skulle kapiteldatan följa med i startpaketet.
+const SearchModal = lazy(() => import('./SearchModal'));
+
+function AreaCard({ area, progress, onClick }: {
+  area: Area; progress: ChapterProgress[]; onClick: () => void;
 }) {
-  const chapters = getChaptersForAreaAndGrade(area.id, grade);
-  const done = chapters.filter(c => progress.some(p => p.chapterId === c.id && p.completed)).length;
-  const total = chapters.length;
-  const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+  // Klarade kapitel räknas ur id-prefixet ('rorelse-enkla-maskiner'), så kortet
+  // slipper ladda kapiteldatan bara för att visa hur långt eleven kommit.
+  const done = progress.filter(p => p.completed && p.chapterId.startsWith(`${area.id}-`)).length;
+  const total = area.chapterCount;
+  const pct = total > 0 ? Math.round((Math.min(done, total) / total) * 100) : 0;
 
   return (
     <button
@@ -21,7 +25,6 @@ function AreaCard({ area, grade, progress, onClick }: {
       className="clay-area relative overflow-hidden p-5 text-left transition-all hover:scale-[1.02] active:scale-[0.98] active:translate-y-1 cursor-pointer"
       style={cardStyle(area)}
     >
-      {/* Kortkoden som vattenstämpel */}
       <span
         className="absolute right-3 bottom-3 text-5xl font-black leading-none pointer-events-none select-none opacity-[0.08] font-heading"
         style={{ color: area.inkHex }}
@@ -34,7 +37,7 @@ function AreaCard({ area, grade, progress, onClick }: {
         <div className="flex items-start gap-3 mb-3">
           <span className="text-4xl leading-none" aria-hidden="true">{area.emoji}</span>
           <div>
-            <p className="font-bold text-xl leading-tight font-heading" style={{ color: area.inkHex }}>
+            <p className="font-bold text-xl leading-tight font-heading break-words" style={{ color: area.inkHex }}>
               {area.name}
             </p>
             <p className="text-xs font-semibold mt-0.5 opacity-60" style={{ color: area.inkHex }}>
@@ -46,9 +49,9 @@ function AreaCard({ area, grade, progress, onClick }: {
         <div>
           <div className="flex items-center justify-between mb-1.5">
             <span className="text-xs font-bold opacity-70" style={{ color: area.inkHex }}>
-              {done}/{total} klara
+              {Math.min(done, total)}/{total} klara
             </span>
-            {done === total && total > 0 && (
+            {done >= total && total > 0 && (
               <span className="text-xs font-black" style={{ color: area.progressHex }}>Klar!</span>
             )}
           </div>
@@ -65,28 +68,33 @@ function AreaCard({ area, grade, progress, onClick }: {
 }
 
 export default function AreaSelect() {
-  const { setView, selectedGrade, openChapterStudy, selectArea } = useApp();
-  const grade = selectedGrade ?? 4;
+  const { setView, selectArea, openChapterStudy } = useApp();
   const [searchOpen, setSearchOpen] = useState(false);
 
   // Läs sparad progress en gång per rendering i stället för en gång per områdeskort.
   const progress = getProgress();
-  const areas = useMemo(() => getAreasWithContent(grade), [grade]);
+  // Områden utan kapitel döljs – annars möter eleven en återvändsgränd.
+  const areas = AREAS.filter(a => a.chapterCount > 0);
 
-  function handleSearchSelect(_areaId: string, chapterId: string) {
+  async function handleSearchSelect(_areaId: string, chapterId: string) {
+    const { ALL_CHAPTERS } = await import('../data/areas');
     const chapter = ALL_CHAPTERS.find(c => c.id === chapterId);
-    // openChapterStudy synkar årskurs och område med kapitlet, så eleven inte
-    // hamnar i ett kapitel från en annan årskurs än den som är vald.
+    // openChapterStudy synkar området med kapitlet, så eleven inte hamnar i ett
+    // kapitel som inte finns på den kapitelkarta hen sedan går tillbaka till.
     if (chapter) openChapterStudy(chapter);
   }
 
   return (
     <div className="min-h-screen">
-      <SearchModal
-        isOpen={searchOpen}
-        onClose={() => setSearchOpen(false)}
-        onSelect={handleSearchSelect}
-      />
+      {searchOpen && (
+        <Suspense fallback={null}>
+          <SearchModal
+            isOpen={searchOpen}
+            onClose={() => setSearchOpen(false)}
+            onSelect={handleSearchSelect}
+          />
+        </Suspense>
+      )}
 
       <div
         className="relative w-full"
@@ -102,24 +110,18 @@ export default function AreaSelect() {
           aria-hidden="true"
         />
 
-        <header className="relative z-10 px-4 pt-6 pb-2 flex items-center">
-          <button
-            onClick={() => setView('grade-select')}
-            className="w-11 h-11 rounded-xl flex items-center justify-center transition-all active:scale-95 cursor-pointer"
-            style={{ background: 'rgba(31,42,68,0.08)', border: '2px solid rgba(31,42,68,0.15)' }}
-            aria-label="Tillbaka till årskursval"
-          >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M10 3L5 8L10 13" stroke="#1f2a44" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+        <header className="relative z-10 px-4 pt-8 pb-2 flex items-start">
+          <div className="w-11 flex-shrink-0" aria-hidden="true" />
           <div className="flex-1 text-center">
-            <h1 className="font-heading font-bold text-4xl drop-shadow-sm" style={{ color: '#1f2a44' }}>Teknikjakten</h1>
-            <p className="text-base font-semibold mt-1 text-gray-700">Åk {grade}</p>
+            <span className="text-5xl" aria-hidden="true">⚙️</span>
+            <h1 className="font-heading font-bold text-4xl drop-shadow-sm mt-2" style={{ color: '#1f2a44' }}>
+              Teknikjakten
+            </h1>
+            <p className="text-base font-semibold mt-1 text-gray-700">Teknik för åk 4–6</p>
           </div>
           <button
             onClick={() => setSearchOpen(true)}
-            className="w-11 h-11 rounded-xl flex items-center justify-center transition-all active:scale-95 cursor-pointer"
+            className="w-11 h-11 rounded-xl flex items-center justify-center transition-all active:scale-95 cursor-pointer flex-shrink-0"
             style={{ background: 'rgba(31,42,68,0.08)', border: '2px solid rgba(31,42,68,0.15)' }}
             aria-label="Sök begrepp"
           >
@@ -127,7 +129,7 @@ export default function AreaSelect() {
           </button>
         </header>
 
-        <div className="h-14 sm:h-20" />
+        <div className="h-12 sm:h-16" />
       </div>
 
       <main className="max-w-2xl mx-auto px-4 sm:px-6 pb-24 -mt-2 relative z-10">
@@ -140,7 +142,6 @@ export default function AreaSelect() {
             <AreaCard
               key={area.id}
               area={area}
-              grade={grade}
               progress={progress}
               onClick={() => selectArea(area)}
             />
@@ -150,8 +151,8 @@ export default function AreaSelect() {
         {areas.length === 0 && (
           <div className="text-center py-12 clay-card">
             <p className="text-4xl mb-3" aria-hidden="true">🚧</p>
-            <p className="font-bold text-gray-700 text-lg">Inget innehåll för Åk {grade} än</p>
-            <p className="text-gray-500 text-sm mt-1">Områdena fylls på snart. Välj en annan årskurs så länge.</p>
+            <p className="font-bold text-gray-700 text-lg">Innehållet är på väg</p>
+            <p className="text-gray-500 text-sm mt-1">Områdena öppnas så fort kapitlen är klara.</p>
           </div>
         )}
 

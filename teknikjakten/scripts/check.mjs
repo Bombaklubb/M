@@ -4,8 +4,8 @@
  *   npm run check
  *
  * Fångar sådant som typkontrollen inte ser: dubbletter av id, kapitel-id som inte
- * stämmer med grade/areaId, kapitel utan innehåll, för få ord till ordsökningen
- * och tomma rutor i matrisen årskurs × område.
+ * stämmer med areaId, kapitel utan innehåll, för få ord till ordsökningen och
+ * chapterCount i areaMeta.ts som glidit isär från verkligheten.
  *
  * Datafilerna är TypeScript, så de bundlas först med esbuild (följer med vite).
  */
@@ -62,16 +62,15 @@ try {
     }
   }
 
-  // --- id, grade och areaId måste stämma överens ---
+  // --- id och areaId måste stämma överens ---
   const areaIds = new Set(AREAS.map(a => a.id));
   for (const c of ALL_CHAPTERS) {
-    const m = /^ak(\d)-([a-z0-9]+)-(.+)$/.exec(c.id);
+    const m = /^([a-z0-9]+)-(.+)$/.exec(c.id);
     if (!m) {
-      err(`Kapitel-id följer inte mönstret ak<årskurs>-<område>-<kapitel>: ${c.id}`);
+      err(`Kapitel-id följer inte mönstret <område>-<kapitel>: ${c.id}`);
       continue;
     }
-    const [, gradeInId, areaInId] = m;
-    if (c.grade !== gradeInId) err(`${c.id}: grade är "${c.grade}" men id:t säger åk ${gradeInId}`);
+    const [, areaInId] = m;
     if (c.areaId !== areaInId) err(`${c.id}: areaId är "${c.areaId}" men id:t säger "${areaInId}"`);
     if (!areaIds.has(c.areaId)) err(`${c.id}: areaId "${c.areaId}" finns inte i AREAS (areaMeta.ts)`);
   }
@@ -103,35 +102,25 @@ try {
     }
   }
 
-  // --- "Nästa kapitel" får aldrig korsa en årskursgräns ---
-  // ChapterResult hämtar nästa kapitel ur getChaptersForAreaAndGrade(area, grade),
-  // så listan per område+årskurs måste vara homogen.
-  const byAreaGrade = new Map();
+  // --- chapterCount i areaMeta måste stämma med verkligheten ---
+  // Startsidan visar "3/8 klara" utifrån den siffran utan att ladda kapitlen,
+  // så glider den isär visar appen fel för eleven.
+  const byArea = new Map();
   for (const c of ALL_CHAPTERS) {
-    const key = `${c.areaId}|${c.grade}`;
-    if (!byAreaGrade.has(key)) byAreaGrade.set(key, []);
-    byAreaGrade.get(key).push(c);
-  }
-  for (const [key, list] of byAreaGrade) {
-    const grades = new Set(list.map(c => c.grade));
-    if (grades.size > 1) err(`Blandade årskurser i ${key}: ${[...grades].join(', ')}`);
+    if (!byArea.has(c.areaId)) byArea.set(c.areaId, []);
+    byArea.get(c.areaId).push(c);
   }
 
-  // --- Matrisen årskurs × område ---
-  const grades = [...new Set(ALL_CHAPTERS.map(c => c.grade).filter(Boolean))].sort();
-  console.log('\nMatris årskurs × område (antal kapitel):');
+  console.log('\nOmråden:');
   if (AREAS.length === 0) {
     console.log('  (inga områden definierade än – fyll i src/data/areaMeta.ts)');
   } else {
-    const header = ['Område'.padEnd(28), ...grades.map(g => `åk${g}`.padStart(5))].join('');
-    console.log('  ' + header);
     for (const a of AREAS) {
-      const row = grades.map(g => String(byAreaGrade.get(`${a.id}|${g}`)?.length ?? 0).padStart(5));
-      console.log('  ' + a.name.padEnd(28) + row.join(''));
-      for (const g of grades) {
-        if (!byAreaGrade.has(`${a.id}|${g}`)) {
-          warn(`Tom kombination: ${a.name} i åk ${g} – området döljs i den årskursen`);
-        }
+      const real = byArea.get(a.id)?.length ?? 0;
+      const flagga = real === 0 ? '  – döljs (tomt)' : '';
+      console.log(`  ${a.name.padEnd(24)} ${String(real).padStart(3)} kapitel${flagga}`);
+      if (a.chapterCount !== real) {
+        err(`${a.name}: chapterCount är ${a.chapterCount} men området har ${real} kapitel i areas.ts`);
       }
     }
   }

@@ -1,10 +1,10 @@
 import React, { Suspense, lazy } from 'react';
 import { AppProvider, useApp } from './contexts/AppContext';
-import GradeSelect from './components/GradeSelect';
+import AreaSelect from './components/AreaSelect';
 
-// Alla vyer utom startsidan laddas först när de behövs. Kapiteldata hamnar
-// därmed i ett eget paket som hämtas när eleven valt årskurs.
-const AreaSelect      = lazy(() => import('./components/AreaSelect'));
+// Alla vyer utom startsidan laddas först när de behövs. Startsidan klarar sig
+// med områdesmetadatan, så kapiteldatan hamnar i de här paketen i stället för
+// i startpaketet – den hämtas först när eleven valt ett område.
 const ChapterMap      = lazy(() => import('./components/ChapterMap'));
 const ChapterStudy    = lazy(() => import('./components/ChapterStudy'));
 const ChapterExercise = lazy(() => import('./components/ChapterExercise'));
@@ -44,7 +44,6 @@ function Loading() {
 function AppInner() {
   const { currentView } = useApp();
   switch (currentView) {
-    case 'grade-select':     return <GradeSelect />;
     case 'area-select':      return <AreaSelect />;
     case 'chapter-map':      return <ChapterMap />;
     case 'chapter-study':    return <ChapterStudy />;
@@ -52,7 +51,7 @@ function AppInner() {
     case 'chapter-result':   return <ChapterResult />;
     case 'exit-ticket':      return <ExitTicket />;
     case 'achievements':     return <Achievements />;
-    default:                 return <GradeSelect />;
+    default:                 return <AreaSelect />;
   }
 }
 

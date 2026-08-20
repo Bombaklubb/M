@@ -15,7 +15,7 @@ interface SearchResult {
   chapterId: string;
   areaId: string;
   areaEmoji: string;
-  grade?: string;
+  areaName: string;
 }
 
 export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalProps) {
@@ -62,7 +62,7 @@ export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalPr
             chapterId: chapter.id,
             areaId: area.id,
             areaEmoji: area.emoji,
-            grade: chapter.grade,
+            areaName: area.name,
           });
           if (hits.length >= 20) return hits;
         }
@@ -133,11 +133,9 @@ export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalPr
                         </p>
                         <p className="text-xs font-semibold text-gray-400 mt-1">
                           {r.chapterTitle}
-                          {r.grade && (
-                            <span className="ml-1.5 px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500">
-                              Åk {r.grade}
-                            </span>
-                          )}
+                          <span className="ml-1.5 px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500">
+                            {r.areaName}
+                          </span>
                         </p>
                       </div>
                     </div>

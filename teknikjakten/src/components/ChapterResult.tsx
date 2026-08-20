@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { useApp } from '../contexts/AppContext';
-import { getChaptersForAreaAndGrade } from '../data/areas';
+import { getChaptersForArea } from '../data/areas';
 import { pageStyle } from '../utils/theme';
 import { Star, RotateCcw, ArrowRight, Home, BookOpen, Zap } from 'lucide-react';
 import Celebration from './Celebration';
 
 export default function ChapterResult() {
-  const { lastResult, selectedChapter, selectedArea, selectedGrade, setView, selectChapter, openChapterStudy, startExitTicket } = useApp();
+  const { lastResult, selectedChapter, selectedArea, setView, selectChapter, openChapterStudy, startExitTicket } = useApp();
 
   useEffect(() => {
     if (!lastResult || !selectedChapter || !selectedArea) setView('area-select');
@@ -17,10 +17,8 @@ export default function ChapterResult() {
   const { correctAnswers, totalQuestions, score, stars, isNewBest } = lastResult;
   const wrong = totalQuestions - correctAnswers;
 
-  // Nästa kapitel måste hämtas inom SAMMA årskurs – annars föreslås ett kapitel
-  // från nästa årskurs och eleven hamnar i fel innehåll.
-  const grade = Number(selectedChapter.grade ?? selectedGrade ?? 4);
-  const chapters = getChaptersForAreaAndGrade(selectedArea.id, grade);
+  // Nästa kapitel hämtas inom samma område, i bokens ordning.
+  const chapters = getChaptersForArea(selectedArea.id);
   const currentIdx = chapters.findIndex(c => c.id === selectedChapter.id);
   const nextChapter = currentIdx >= 0 ? chapters[currentIdx + 1] : undefined;
 
