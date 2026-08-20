@@ -25,18 +25,34 @@ export default function TimelineTab({ events, progressHex }: {
 
   return (
     <div className="relative">
-      {/* Vertical line */}
-      <div className="absolute left-[22px] top-4 bottom-4 w-0.5 rounded-full" style={{ background: `${progressHex}30` }} />
+      {/* Vertical line – mitt i årtalskolumnen */}
+      <div className="absolute left-[36px] top-4 bottom-4 w-0.5 rounded-full" style={{ background: `${progressHex}30` }} />
 
       <div className="space-y-6">
         {events.map((event, i) => {
           const img = event.wikiTitle ? images[event.wikiTitle] : null;
+          // Det längsta ordet avgör textstorleken, inte hela strängen: en text med
+          // mellanslag bryts snyggt mellan orden, men ett långt ensamt ord som
+          // "Vikingatiden" måste krympa för att inte brytas mitt itu.
+          const longestWord = Math.max(...event.year.split(/\s+/).map(w => w.length));
           return (
             <div key={i} className="flex gap-4">
-              {/* Year bubble */}
-              <div className="flex-shrink-0 flex flex-col items-center" style={{ width: 44 }}>
-                <div className="w-11 h-11 rounded-full flex items-center justify-center text-white font-black text-xs z-10 shadow-md"
-                  style={{ background: progressHex, fontSize: '10px', lineHeight: 1.2, textAlign: 'center', padding: '2px' }}>
+              {/*
+                Årtalsbubbla. Texten är inte alltid ett fyrsiffrigt årtal – den kan
+                lika gärna vara "Vikingatiden" eller "Slutet av 1700-talet". Texten
+                krymper därför efter sin längd i stället för att brytas mitt i ordet.
+              */}
+              <div className="flex-shrink-0 flex flex-col items-center" style={{ width: 72 }}>
+                <div
+                  className="w-[72px] min-h-11 rounded-2xl flex items-center justify-center text-white font-black z-10 shadow-md px-1.5 py-1"
+                  style={{
+                    background: progressHex,
+                    fontSize: longestWord > 10 ? '8px' : longestWord > 7 ? '9px' : '11px',
+                    lineHeight: 1.2,
+                    textAlign: 'center',
+                    overflowWrap: 'anywhere',
+                  }}
+                >
                   {event.year}
                 </div>
               </div>

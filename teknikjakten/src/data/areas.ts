@@ -1,6 +1,7 @@
 import { Chapter, AreaId, Area } from '../types';
 import { AREAS } from './areaMeta';
 import { GRUNDER } from './chapters/grunder';
+import { BOSTAD } from './chapters/bostad';
 
 export { AREAS };
 
@@ -19,6 +20,7 @@ export { AREAS };
  */
 export const ALL_CHAPTERS: Chapter[] = [
   ...GRUNDER,
+  ...BOSTAD,
 ];
 
 /** Kapitlen i ett område, i den ordning de står i boken. */
