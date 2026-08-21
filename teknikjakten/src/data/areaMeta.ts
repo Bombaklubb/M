@@ -61,7 +61,7 @@ export const AREAS: Area[] = [
     glowHex: '#c9b6ff',
     inkHex: '#3b1d80',
     progressHex: '#8b5cf6',
-    chapterCount: 0,
+    chapterCount: 7,
   },
   {
     id: 'rorelse',
