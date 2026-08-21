@@ -8,5 +8,6 @@
       "source": "/(.*)",
       "destination": "/"
     }
-  ]
+  ],
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . 2>/dev/null && exit 0 || exit 1"
 }

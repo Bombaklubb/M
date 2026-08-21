@@ -83,7 +83,7 @@ export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalPr
       aria-label="Sök begrepp"
     >
       <div
-        className="bg-white rounded-2xl shadow-xl w-full max-w-lg overflow-hidden"
+        className="bg-white on-light rounded-2xl shadow-xl w-full max-w-lg overflow-hidden"
         onClick={e => e.stopPropagation()}
       >
         {/* Header */}

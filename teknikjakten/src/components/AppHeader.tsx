@@ -4,7 +4,7 @@ interface AppHeaderProps {
   title: string;
   subtitle?: string;
   onBack?: () => void;
-  /** Färg på rubriktext och tillbakapil. */
+  /** Färg på rubriktext och tillbakapil. Ljus, eftersom fältet ligger mot rymden. */
   inkHex?: string;
   /** Bakgrund för rubrikfältet – från utils/theme.ts när ett område är valt. */
   barStyle?: React.CSSProperties;
@@ -14,7 +14,7 @@ export default function AppHeader({
   title,
   subtitle,
   onBack,
-  inkHex = '#1f2a44',
+  inkHex = '#e6f0fb',
   barStyle,
 }: AppHeaderProps) {
   return (
@@ -25,7 +25,7 @@ export default function AppHeader({
       {onBack && (
         <button
           onClick={onBack}
-          className="w-11 h-11 rounded-xl bg-black/5 border-2 border-black/10 flex items-center justify-center hover:bg-black/10 active:scale-95 transition-all cursor-pointer flex-shrink-0"
+          className="w-11 h-11 rounded-xl bg-white/10 border-2 border-white/20 flex items-center justify-center hover:bg-white/20 active:scale-95 transition-all cursor-pointer flex-shrink-0"
           aria-label="Tillbaka"
         >
           <ArrowLeft size={20} style={{ color: inkHex }} />

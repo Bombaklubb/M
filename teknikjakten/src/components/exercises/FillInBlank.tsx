@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { FillInExercise } from '../../types';
+import { shuffle } from '../../utils/shuffle';
 import { CheckCircle, XCircle } from 'lucide-react';
 
 interface Props {
@@ -12,6 +13,9 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
   const [textInput, setTextInput] = useState('');
 
   const useWordBank = !!(exercise.wordBank && exercise.wordBank.length > 0);
+  // Ordbanken blandas så att svaret inte kan gissas ur ordningen i datan.
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- avsiktligt: blandas om först när övningen byts, inte vid varje rendering
+  const wordBank = useMemo(() => shuffle(exercise.wordBank ?? []), [exercise.id]);
   const revealed = selected !== null;
 
   function normalize(s: string) {
@@ -47,12 +51,12 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
         <div className="mt-4">
           <p className="text-xs font-black text-gray-500 mb-3 uppercase tracking-wide">Välj rätt svar:</p>
           <div className="flex flex-wrap gap-3">
-            {exercise.wordBank!.map(word => {
+            {wordBank.map(word => {
               const isChosen = selected === word;
               const isCorrectWord = isCorrectAnswer(word);
               let cls = 'px-5 py-3 rounded-2xl font-bold text-base transition-all cursor-pointer border-2 ';
               if (!revealed) {
-                cls += 'bg-white border-indigo-200 hover:border-indigo-400 hover:bg-indigo-50 active:scale-95';
+                cls += 'bg-white text-gray-800 border-sky-200 hover:border-sky-400 hover:bg-sky-50 active:scale-95';
               } else if (isCorrectWord) {
                 cls += 'bg-green-50 border-green-400 text-green-800';
               } else if (isChosen && !isCorrectWord) {
@@ -85,7 +89,7 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
                   ? correct
                     ? 'border-green-400 bg-green-50 text-green-800'
                     : 'border-red-400 bg-red-50 text-red-800'
-                  : 'border-indigo-200 focus:border-indigo-400 bg-white'}
+                  : 'border-sky-200 focus:border-sky-400 bg-white text-gray-800'}
               `}
             />
             {!revealed && (

@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo, useRef } from 'react';
 import { useApp, type StudyTab } from '../contexts/AppContext';
 import { shuffle } from '../utils/shuffle';
 import { fetchConceptImage } from '../utils/imageCache';
-import { pageStyle, headerStyle } from '../utils/theme';
+import { pageStyle, headerStyle, SPACE, withAlpha } from '../utils/theme';
 import AppHeader from './AppHeader';
 import Celebration from './Celebration';
 import WordSearch from './WordSearch';
@@ -144,14 +144,14 @@ export default function ChapterStudy() {
         title={chapter.title}
         subtitle={TAB_LABELS[activeTab]}
         onBack={() => setView('chapter-map')}
-        inkHex={a.inkHex}
+        inkHex={a.glowHex}
         barStyle={headerStyle(a)}
       />
 
       {/* Flikväxlare – eleven kan byta övningsläge utan att gå tillbaka till kartan */}
       <nav
         className="sticky top-0 z-30 overflow-x-auto border-b"
-        style={{ background: `${a.progressHex}0a`, borderColor: `${a.progressHex}25` }}
+        style={{ background: withAlpha(SPACE.panel, 0.92), borderColor: withAlpha(a.accentHex, 0.35) }}
         aria-label="Övningslägen"
       >
         <div className="flex gap-1.5 px-3 py-2 w-max">
@@ -164,8 +164,8 @@ export default function ChapterStudy() {
                 aria-current={active ? 'page' : undefined}
                 className="whitespace-nowrap min-h-[44px] px-3 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer"
                 style={active
-                  ? { background: a.progressHex, color: 'white', border: `2px solid ${a.progressHex}` }
-                  : { background: 'rgba(255,255,255,0.7)', color: a.progressHex, border: `2px solid ${a.progressHex}30` }}
+                  ? { background: a.accentHex, color: SPACE.deepest, border: `2px solid ${a.accentHex}`, boxShadow: `0 0 16px ${withAlpha(a.glowHex, 0.55)}` }
+                  : { background: withAlpha(SPACE.navy, 0.55), color: a.glowHex, border: `2px solid ${withAlpha(a.accentHex, 0.35)}` }}
               >
                 {TAB_LABELS[tab]}
               </button>
@@ -180,7 +180,7 @@ export default function ChapterStudy() {
         {(activeTab === 'concepts' || activeTab === 'key-points' || activeTab === 'cause-effect') && (
           <div
             className="clay-card-sm p-4 mb-5 flex gap-3 items-start"
-            style={{ background: `${a.progressHex}12`, borderColor: `${a.progressHex}40` }}
+            style={{ borderColor: withAlpha(a.accentHex, 0.5) }}
           >
             <span className="text-2xl flex-shrink-0" aria-hidden="true">💡</span>
             <p className="text-sm font-semibold" style={{ color: a.inkHex }}>{summary.studentConnection}</p>
@@ -191,13 +191,13 @@ export default function ChapterStudy() {
         {activeTab === 'concepts' && (
           <div>
             <div className="flex items-center justify-between mb-3">
-              <p className="text-xs font-black text-gray-500 uppercase tracking-wide">
+              <p className="text-xs font-black uppercase tracking-wide" style={{ color: SPACE.onDarkMuted }}>
                 Tryck på kortet för att se förklaringen
               </p>
               <button
                 onClick={allRevealed ? () => setRevealedConcepts(new Set()) : () => setRevealedConcepts(new Set(summary.concepts.map((_, i) => i)))}
                 className="flex items-center gap-1 text-xs font-black cursor-pointer"
-                style={{ color: a.progressHex }}
+                style={{ color: a.glowHex }}
               >
                 {allRevealed ? <EyeOff size={14} /> : <Eye size={14} />}
                 {allRevealed ? 'Dölj alla' : 'Visa alla'}
@@ -262,7 +262,7 @@ export default function ChapterStudy() {
         {/* --- ORSAK & KONSEKVENS --- */}
         {activeTab === 'cause-effect' && (
           <div className="space-y-4">
-            <p className="text-xs font-black text-gray-500 uppercase tracking-wide mb-3">
+            <p className="text-xs font-black uppercase tracking-wide mb-3" style={{ color: SPACE.onDarkMuted }}>
               Förstå sambanden – varför blev det så?
             </p>
             {summary.causeEffect.map((item, i) => (
@@ -335,11 +335,11 @@ export default function ChapterStudy() {
             ) : testQuestions.length > 0 ? (
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-black text-gray-400">Fråga {testIdx + 1} av {testQuestions.length}</span>
-                  <span className="text-xs font-black" style={{ color: a.progressHex }}>{testScore} rätt</span>
+                  <span className="text-xs font-black" style={{ color: SPACE.onDarkMuted }}>Fråga {testIdx + 1} av {testQuestions.length}</span>
+                  <span className="text-xs font-black" style={{ color: a.glowHex }}>{testScore} rätt</span>
                 </div>
-                <div className="h-1.5 rounded-full bg-gray-100 mb-5 overflow-hidden">
-                  <div className="h-full rounded-full transition-all" style={{ width: `${(testIdx / testQuestions.length) * 100}%`, background: a.progressHex }} />
+                <div className="h-1.5 rounded-full mb-5 overflow-hidden" style={{ background: withAlpha(SPACE.deepest, 0.6) }}>
+                  <div className="h-full rounded-full transition-all" style={{ width: `${(testIdx / testQuestions.length) * 100}%`, background: a.accentHex }} />
                 </div>
 
                 <div className="clay-card p-5 mb-4">
@@ -377,7 +377,7 @@ export default function ChapterStudy() {
                 </div>
               </div>
             ) : (
-              <p className="text-sm text-gray-500 text-center py-8">Inte tillräckligt med begrepp för ett test.</p>
+              <p className="text-sm text-center py-8" style={{ color: SPACE.onDarkMuted }}>Inte tillräckligt med begrepp för ett test.</p>
             )}
           </div>
         )}

@@ -8,12 +8,12 @@ Innehållet följer bokens sju delar. Boken är sammanhållen för åk 4–6 och
 inte in stoffet per årskurs, så appen har inget årskursval – eleven börjar
 direkt på områdesvalet.
 
-**Status:** appen är färdig och de sju områdena är upplagda, men kapitlen är
-inte skrivna än. Ett område utan kapitel döljs för eleven.
+**Status:** appen är färdig och de sju områdena är upplagda. Kapitlen skrivs
+område för område utifrån boken. Ett område utan kapitel döljs för eleven.
 
 | Område | id | Kapitel |
 |---|---|---|
-| Vad är teknik? | `grunder` | – |
+| Vad är teknik? | `grunder` | 4 (bokens s. 4–13) |
 | Bostadens teknik | `bostad` | – |
 | Teknik i vardagen | `vardag` | – |
 | Teknikutveckling | `utveckling` | – |
@@ -49,6 +49,12 @@ Kör alla fyra kontrollerna innan varje commit.
 `rorelse-enkla-maskiner`. `areaId` måste matcha områdesdelen – `npm run check`
 stoppar annars bygget, och samma kontroll fångar om `chapterCount` glidit isär
 från antalet kapitel.
+
+### Svarsalternativ
+
+Skriv rätt svar först i `options` och `wordBank` (`correctIndex: 0`) – det gör
+innehållet lätt att granska. Appen blandar alternativen vid visning, både i
+Öva-läget och i Snabbkollen, så eleven kan aldrig gissa svaret ur ordningen.
 
 Ett kapitel räknas som klart när det har en `summary` med alla fält plus 10
 övningar. Bygg hellre färre kompletta kapitel än många halvfärdiga: ett område

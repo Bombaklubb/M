@@ -17,8 +17,8 @@ export default defineConfig({
         description: 'Öva teknik för årskurs 4–6',
         start_url: '/',
         display: 'standalone',
-        background_color: '#f4f6fb',
-        theme_color: '#1f2a44',
+        background_color: '#00040e',
+        theme_color: '#02162f',
         orientation: 'portrait',
         icons: [
           { src: '/pwa-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
@@ -27,7 +27,23 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2}'],
+        /*
+         * JPEG-varianten är bara reserv för webbläsare utan WebP-stöd och
+         * behöver inte ligga i precachen.
+         *
+         * Råa designfiler ska inte ligga i public/ över huvud taget – de finns
+         * i teknikjakten/design/. Mönstret nedan är ändå kvar som skydd, om en
+         * stor bild skulle råka hamna i public/ igen.
+         */
+        globIgnores: ['**/*bakgrund.png', '**/rymd-bakgrund.jpg'],
+        /*
+         * Säkerhetsnät. vite-plugin-pwa avbryter hela bygget när en fil är för
+         * stor för precachen – det fällde produktionsbygget en gång. Med en
+         * höjd gräns blir en oväntat stor fil ett prestandaproblem i stället
+         * för en trasig deploy.
+         */
+        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
