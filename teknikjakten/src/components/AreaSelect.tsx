@@ -3,7 +3,7 @@ import { Search } from 'lucide-react';
 import { useApp } from '../contexts/AppContext';
 import { AREAS } from '../data/areaMeta';
 import { getProgress } from '../utils/storage';
-import { cardStyle } from '../utils/theme';
+import { cardStyle, SPACE, withAlpha } from '../utils/theme';
 import type { Area, ChapterProgress } from '../types';
 
 // Sökningen läser alla kapitel, så den laddas först när eleven öppnar den –
@@ -22,25 +22,24 @@ function AreaCard({ area, progress, onClick }: {
   return (
     <button
       onClick={onClick}
-      className="clay-area relative overflow-hidden p-5 text-left transition-all hover:scale-[1.02] active:scale-[0.98] active:translate-y-1 cursor-pointer"
+      className="space-panel relative overflow-hidden p-5 text-left transition-all hover:scale-[1.02] active:scale-[0.98] active:translate-y-1 cursor-pointer"
       style={cardStyle(area)}
     >
+      {/* Svag glöd i kortets hörn, som ljuset från en av stationens moduler */}
       <span
-        className="absolute right-3 bottom-3 text-5xl font-black leading-none pointer-events-none select-none opacity-[0.08] font-heading"
-        style={{ color: area.inkHex }}
+        className="absolute -right-6 -top-8 w-28 h-28 rounded-full pointer-events-none"
+        style={{ background: `radial-gradient(circle, ${withAlpha(area.glowHex, 0.3)} 0%, transparent 70%)` }}
         aria-hidden="true"
-      >
-        {area.shortName}
-      </span>
+      />
 
       <div className="relative z-10">
         <div className="flex items-start gap-3 mb-3">
           <span className="text-4xl leading-none" aria-hidden="true">{area.emoji}</span>
           <div>
-            <p className="font-bold text-xl leading-tight font-heading break-words" style={{ color: area.inkHex }}>
+            <p className="font-bold text-xl leading-tight font-heading break-words" style={{ color: area.glowHex }}>
               {area.name}
             </p>
-            <p className="text-xs font-semibold mt-0.5 opacity-60" style={{ color: area.inkHex }}>
+            <p className="text-xs font-semibold mt-0.5" style={{ color: SPACE.onDarkMuted }}>
               {total} {total === 1 ? 'kapitel' : 'kapitel'}
             </p>
           </div>
@@ -48,17 +47,17 @@ function AreaCard({ area, progress, onClick }: {
 
         <div>
           <div className="flex items-center justify-between mb-1.5">
-            <span className="text-xs font-bold opacity-70" style={{ color: area.inkHex }}>
+            <span className="text-xs font-bold" style={{ color: SPACE.onDarkMuted }}>
               {Math.min(done, total)}/{total} klara
             </span>
             {done >= total && total > 0 && (
-              <span className="text-xs font-black" style={{ color: area.progressHex }}>Klar!</span>
+              <span className="text-xs font-black" style={{ color: area.glowHex }}>Klar!</span>
             )}
           </div>
-          <div className="h-2.5 rounded-full overflow-hidden" style={{ background: `${area.inkHex}18` }}>
+          <div className="h-2.5 rounded-full overflow-hidden" style={{ background: withAlpha(SPACE.deepest, 0.55) }}>
             <div
               className="h-full rounded-full transition-all duration-500"
-              style={{ width: `${pct}%`, background: area.progressHex }}
+              style={{ width: `${pct}%`, background: area.accentHex, boxShadow: `0 0 12px ${withAlpha(area.glowHex, 0.7)}` }}
             />
           </div>
         </div>
@@ -96,45 +95,46 @@ export default function AreaSelect() {
         </Suspense>
       )}
 
-      <div
-        className="relative w-full"
-        style={{ background: 'linear-gradient(160deg, #dbeafe 0%, #e0e7ff 45%, #f1f5f9 100%)' }}
-      >
+      {/* Rymdstationen som bakgrund. Bilden ligger fast medan sidan skrollar,
+          med en mörkning nedtill så att korten alltid har kontrast mot den. */}
+      <div className="space-bg relative w-full">
+        {/* Mörkning uppe och nere: rubriken behöver en lugn yta att ligga mot,
+            och korten behöver kontrast där bilden tonar ut. */}
         <div
-          className="absolute inset-0 opacity-[0.35] pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage:
-              'linear-gradient(rgba(31,42,68,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(31,42,68,0.07) 1px, transparent 1px)',
-            backgroundSize: '28px 28px',
+            background: `linear-gradient(180deg, ${withAlpha(SPACE.deepest, 0.82)} 0%, ${withAlpha(SPACE.deepest, 0.45)} 22%, ${withAlpha(SPACE.deepest, 0.1)} 45%, ${withAlpha(SPACE.deep, 0.95)} 100%)`,
           }}
           aria-hidden="true"
         />
 
-        <header className="relative z-10 px-4 pt-8 pb-2 flex items-start">
+        <header className="relative z-10 px-4 pt-7 pb-2 flex items-start">
           <div className="w-11 flex-shrink-0" aria-hidden="true" />
           <div className="flex-1 text-center">
-            <span className="text-5xl" aria-hidden="true">⚙️</span>
-            <h1 className="font-heading font-bold text-4xl drop-shadow-sm mt-2" style={{ color: '#1f2a44' }}>
+            <h1 className="font-heading font-bold text-3xl sm:text-4xl text-glow" style={{ color: '#ffffff' }}>
               Teknikjakten
             </h1>
-            <p className="text-base font-semibold mt-1 text-gray-700">Teknik för åk 4–6</p>
+            <p className="text-base font-semibold mt-1 text-shadow" style={{ color: SPACE.atmosphere }}>
+              Teknik för åk 4–6
+            </p>
           </div>
           <button
             onClick={() => setSearchOpen(true)}
             className="w-11 h-11 rounded-xl flex items-center justify-center transition-all active:scale-95 cursor-pointer flex-shrink-0"
-            style={{ background: 'rgba(31,42,68,0.08)', border: '2px solid rgba(31,42,68,0.15)' }}
+            style={{ background: withAlpha(SPACE.panel, 0.7), border: `2px solid ${withAlpha(SPACE.beamBright, 0.45)}` }}
             aria-label="Sök begrepp"
           >
-            <Search size={16} color="#1f2a44" />
+            <Search size={16} color={SPACE.beamBright} />
           </button>
         </header>
 
-        <div className="h-12 sm:h-16" />
+        {/* Luft så att rymdstationen syns innan korten börjar */}
+        <div className="h-52 sm:h-72" />
       </div>
 
       <main className="max-w-2xl mx-auto px-4 sm:px-6 pb-24 -mt-2 relative z-10">
         {areas.length > 0 && (
-          <p className="text-center text-gray-500 font-semibold mb-4 text-sm">Välj ett område att öva på</p>
+          <p className="text-center font-semibold mb-4 text-sm" style={{ color: SPACE.onDarkMuted }}>Välj ett område att öva på</p>
         )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -158,7 +158,8 @@ export default function AreaSelect() {
 
         <button
           onClick={() => setView('achievements')}
-          className="mt-6 w-full clay-card-sm py-3 flex items-center justify-center gap-2 text-sm font-black text-gray-600 transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+          className="mt-6 w-full space-panel py-3 flex items-center justify-center gap-2 text-sm font-black transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+          style={{ background: withAlpha(SPACE.panel, 0.8), borderColor: withAlpha(SPACE.beamBright, 0.35), color: SPACE.atmosphere }}
         >
           🏆 Mina prestationer
         </button>

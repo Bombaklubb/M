@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { Exercise } from '../types';
-import { pageStyle, headerStyle } from '../utils/theme';
+import { pageStyle, headerStyle, SPACE, withAlpha } from '../utils/theme';
 import AppHeader from './AppHeader';
 import MultipleChoice from './exercises/MultipleChoice';
 import TrueFalse from './exercises/TrueFalse';
@@ -81,25 +81,28 @@ export default function ChapterExercise() {
         title={chapter.title}
         subtitle={`${a.emoji} ${a.name}`}
         onBack={() => setView('chapter-map')}
-        inkHex={a.inkHex}
+        inkHex={a.glowHex}
         barStyle={headerStyle(a)}
       />
 
       {/* Progressbar */}
-      <div className="h-2 bg-gray-100">
+      <div className="h-2" style={{ background: withAlpha(SPACE.deepest, 0.6) }}>
         <div
           className="h-full transition-all duration-500"
-          style={{ width: `${progressPct}%`, background: a.accentHex }}
+          style={{ width: `${progressPct}%`, background: a.accentHex, boxShadow: `0 0 12px ${withAlpha(a.glowHex, 0.7)}` }}
         />
       </div>
 
       {/* Räknare */}
-      <div className="flex items-center justify-between px-4 py-2 bg-white/80 border-b border-gray-100">
-        <span className="text-sm font-black text-gray-500">
+      <div
+        className="flex items-center justify-between px-4 py-2 border-b"
+        style={{ background: withAlpha(SPACE.panel, 0.8), borderColor: withAlpha(a.accentHex, 0.25) }}
+      >
+        <span className="text-sm font-black" style={{ color: SPACE.onDarkMuted }}>
           Fråga {currentIdx + 1} av {total}
         </span>
         <div className="flex items-center gap-3">
-          <span className="flex items-center gap-1 text-sm font-black text-green-600" aria-label={`${correct} rätt`}>
+          <span className="flex items-center gap-1 text-sm font-black text-green-400" aria-label={`${correct} rätt`}>
             <CheckCircle size={15} aria-hidden="true" /> {correct}
           </span>
           <span className="flex items-center gap-1 text-sm font-black text-red-400" aria-label={`${answers.filter(x => x === 'wrong').length} fel`}>

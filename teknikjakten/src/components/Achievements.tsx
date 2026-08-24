@@ -3,6 +3,7 @@ import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { buildAchievementStats } from '../utils/storage';
+import { SPACE } from '../utils/theme';
 
 const RARITY_LABEL: Record<string, string> = {
   common: 'Vanlig',
@@ -13,9 +14,9 @@ const RARITY_LABEL: Record<string, string> = {
 
 const RARITY_BADGE: Record<string, string> = {
   common: 'bg-gray-100 text-gray-600',
-  rare: 'bg-blue-100 text-blue-700',
-  epic: 'bg-purple-100 text-purple-700',
-  legendary: 'bg-amber-100 text-amber-700',
+  rare: 'bg-sky-100 text-sky-700',
+  epic: 'bg-violet-100 text-violet-700',
+  legendary: 'bg-amber-100 text-amber-800',
 };
 
 export default function Achievements() {
@@ -42,7 +43,7 @@ export default function Achievements() {
         {/* Stats row */}
         <div className="grid grid-cols-3 gap-3">
           <div className="clay-card-sm p-3 text-center">
-            <p className="text-2xl font-heading font-bold text-indigo-700">{stats.completedChapters}</p>
+            <p className="text-2xl font-heading font-bold text-sky-700">{stats.completedChapters}</p>
             <p className="text-xs font-black text-gray-500 mt-0.5">KAPITEL KLARA</p>
           </div>
           <div className="clay-card-sm p-3 text-center">
@@ -60,7 +61,7 @@ export default function Achievements() {
         {/* Earned */}
         {earned.length > 0 && (
           <section>
-            <h2 className="font-heading font-bold text-gray-700 mb-3 text-base">Upplåsta 🏆</h2>
+            <h2 className="font-heading font-bold mb-3 text-base" style={{ color: SPACE.onDark }}>Upplåsta 🏆</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {earned.map(a => (
                 <div key={a.id} className="clay-card p-4 flex items-center gap-4">
@@ -85,7 +86,7 @@ export default function Achievements() {
         {/* Locked */}
         {locked.length > 0 && (
           <section>
-            <h2 className="font-heading font-bold text-gray-400 mb-3 text-base">Låsta 🔒</h2>
+            <h2 className="font-heading font-bold mb-3 text-base" style={{ color: SPACE.onDarkMuted }}>Låsta 🔒</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {locked.map(a => (
                 <div key={a.id} className="clay-card p-4 flex items-center gap-4 opacity-50">

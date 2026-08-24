@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getChaptersForArea } from '../data/areas';
-import { pageStyle } from '../utils/theme';
+import { pageStyle, SPACE } from '../utils/theme';
 import { Star, RotateCcw, ArrowRight, Home, BookOpen, Zap } from 'lucide-react';
 import Celebration from './Celebration';
 
@@ -52,8 +52,8 @@ export default function ChapterResult() {
           <span className="text-xs font-black text-gray-400 mt-0.5">POÄNG</span>
         </div>
 
-        <p className="text-xl font-heading font-bold text-gray-700 text-center mb-1">{feedback}</p>
-        {isNewBest && <p className="text-sm font-black text-blue-600 mb-4">✨ Nytt rekord!</p>}
+        <p className="text-xl font-heading font-bold text-center mb-1" style={{ color: SPACE.onDark }}>{feedback}</p>
+        {isNewBest && <p className="text-sm font-black mb-4" style={{ color: SPACE.beamBright }}>✨ Nytt rekord!</p>}
 
         {/* Statistik */}
         <div className="clay-card w-full p-4 mb-6 grid grid-cols-3 gap-4 text-center mt-4">
@@ -87,7 +87,7 @@ export default function ChapterResult() {
             {selectedChapter.summary && (
               <button
                 onClick={() => openChapterStudy(selectedChapter)}
-                className="btn-clay flex-1 py-3 flex items-center justify-center gap-2 text-sm font-heading bg-blue-50 border-blue-200 text-blue-700"
+                className="btn-clay flex-1 py-3 flex items-center justify-center gap-2 text-sm font-heading bg-sky-50 border-sky-200 text-sky-700"
               >
                 <BookOpen size={16} aria-hidden="true" />
                 Plugga

@@ -56,7 +56,7 @@ export default function TimelineOrder({ exercise, onAnswer }: Props) {
                 ${event
                   ? state === 'correct' ? 'border-green-400 bg-green-50 text-green-700'
                     : state === 'wrong' ? 'border-red-400 bg-red-50 text-red-700'
-                    : 'border-indigo-300 bg-indigo-50 text-indigo-700'
+                    : 'border-sky-300 bg-sky-50 text-sky-700'
                   : 'border-gray-200 bg-gray-50 text-gray-300'}`}
             >
               {i + 1}
@@ -74,14 +74,14 @@ export default function TimelineOrder({ exercise, onAnswer }: Props) {
 
           let cls = 'clay-card-sm p-3 w-full text-left flex items-center gap-3 transition-all';
           if (!submitted) cls += ' cursor-pointer hover:scale-[1.01] active:scale-[0.99]';
-          if (isSelected && !submitted) cls += ' border-indigo-300 bg-indigo-50';
+          if (isSelected && !submitted) cls += ' border-sky-300 bg-sky-50';
           if (state === 'correct') cls += ' border-green-400 bg-green-50';
           if (state === 'wrong') cls += ' border-red-400 bg-red-50';
 
           return (
             <button key={ev.id} onClick={() => toggleEvent(ev.id)} disabled={submitted} className={cls}>
               <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-sm font-black flex-shrink-0 ${
-                isSelected ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-400'
+                isSelected ? 'bg-sky-600 text-white' : 'bg-gray-100 text-gray-400'
               }`}>
                 {isSelected ? pos + 1 : '?'}
               </span>
@@ -110,8 +110,8 @@ export default function TimelineOrder({ exercise, onAnswer }: Props) {
       )}
 
       {submitted && exercise.explanation && (
-        <div className="mt-4 p-4 rounded-2xl bg-indigo-50 border-2 border-indigo-200">
-          <p className="text-sm font-semibold text-indigo-800">{exercise.explanation}</p>
+        <div className="mt-4 p-4 rounded-2xl bg-sky-50 border-2 border-sky-200">
+          <p className="text-sm font-semibold text-sky-900">{exercise.explanation}</p>
         </div>
       )}
     </div>

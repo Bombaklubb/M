@@ -92,6 +92,24 @@ try {
     }
   }
 
+  // --- Svarsalternativ måste peka på ett giltigt index ---
+  // Alternativen blandas i appen, men correctIndex måste ändå vara giltigt.
+  for (const c of ALL_CHAPTERS) {
+    for (const ex of c.exercises ?? []) {
+      if (ex.type !== 'multiple-choice' && ex.type !== 'spot-the-error') continue;
+      if (!Array.isArray(ex.options) || ex.options.length < 2) {
+        err(`${ex.id}: behöver minst två svarsalternativ`);
+        continue;
+      }
+      if (ex.correctIndex < 0 || ex.correctIndex >= ex.options.length) {
+        err(`${ex.id}: correctIndex ${ex.correctIndex} finns inte bland ${ex.options.length} alternativ`);
+      }
+      if (new Set(ex.options).size !== ex.options.length) {
+        err(`${ex.id}: två svarsalternativ är identiska`);
+      }
+    }
+  }
+
   // --- Ordsökningen behöver minst 8 användbara ord ---
   for (const c of ALL_CHAPTERS) {
     const usable = (c.summary?.concepts ?? [])
