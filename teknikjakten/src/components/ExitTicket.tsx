@@ -143,7 +143,7 @@ export default function ExitTicket() {
             </button>
           )}
           {currentAnswer !== 'unanswered' && (
-            <p className={`mt-2 text-sm font-black ${currentAnswer === 'correct' ? 'text-green-600' : 'text-red-500'}`}>
+            <p className={`mt-2 text-sm font-black ${currentAnswer === 'correct' ? 'text-green-700' : 'text-red-600'}`}>
               {currentAnswer === 'correct' ? '✓ Rätt!' : `✗ Rätt svar: ${e.answer}`}
             </p>
           )}
@@ -155,7 +155,7 @@ export default function ExitTicket() {
       return (
         <div>
           <div className="rounded-xl border-2 border-red-300 bg-red-50 p-3 mb-3">
-            <p className="text-xs font-black text-red-500 mb-1">🚨 FELAKTIGT</p>
+            <p className="text-xs font-black text-red-700 mb-1">🚨 FELAKTIGT</p>
             <p className="text-sm font-semibold italic text-gray-800">{e.wrongStatement}</p>
           </div>
           <div className="space-y-2">
@@ -232,7 +232,7 @@ export default function ExitTicket() {
 
       <main className="flex-1 p-4 sm:p-6 max-w-2xl w-full mx-auto">
         <div className="clay-card p-5 sm:p-6 mt-2">
-          <p className="text-xs font-black text-amber-600 uppercase tracking-wide mb-3">{LABELS[currentIdx] ?? 'Fråga'}</p>
+          <p className="text-xs font-black text-amber-800 uppercase tracking-wide mb-3">{LABELS[currentIdx] ?? 'Fråga'}</p>
           <p className="font-heading font-bold text-gray-800 text-lg mb-5">{ex.question}</p>
           {renderExercise(ex)}
           {currentAnswer !== 'unanswered' && ex.explanation && (

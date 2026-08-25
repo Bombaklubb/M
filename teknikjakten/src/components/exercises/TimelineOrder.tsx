@@ -57,7 +57,7 @@ export default function TimelineOrder({ exercise, onAnswer }: Props) {
                   ? state === 'correct' ? 'border-green-400 bg-green-50 text-green-700'
                     : state === 'wrong' ? 'border-red-400 bg-red-50 text-red-700'
                     : 'border-sky-300 bg-sky-50 text-sky-700'
-                  : 'border-gray-200 bg-gray-50 text-gray-300'}`}
+                  : 'border-gray-200 bg-gray-50 text-gray-500'}`}
             >
               {i + 1}
             </div>
@@ -81,13 +81,13 @@ export default function TimelineOrder({ exercise, onAnswer }: Props) {
           return (
             <button key={ev.id} onClick={() => toggleEvent(ev.id)} disabled={submitted} className={cls}>
               <span className={`w-7 h-7 rounded-lg flex items-center justify-center text-sm font-black flex-shrink-0 ${
-                isSelected ? 'bg-sky-600 text-white' : 'bg-gray-100 text-gray-400'
+                isSelected ? 'bg-sky-600 text-white' : 'bg-gray-100 text-gray-600'
               }`}>
                 {isSelected ? pos + 1 : '?'}
               </span>
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-semibold text-gray-800">{ev.label}</p>
-                {ev.hint && <p className="text-xs text-gray-400">{ev.hint}</p>}
+                {ev.hint && <p className="text-xs text-gray-500">{ev.hint}</p>}
               </div>
               {submitted && state === 'correct' && <CheckCircle size={16} className="text-green-500 flex-shrink-0" />}
               {submitted && state === 'wrong' && <XCircle size={16} className="text-red-500 flex-shrink-0" />}

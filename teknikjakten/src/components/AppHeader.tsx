@@ -36,7 +36,7 @@ export default function AppHeader({
           {title}
         </h1>
         {subtitle && (
-          <p className="text-xs font-medium truncate opacity-60" style={{ color: inkHex }}>{subtitle}</p>
+          <p className="text-xs font-medium truncate opacity-75" style={{ color: inkHex }}>{subtitle}</p>
         )}
       </div>
     </header>

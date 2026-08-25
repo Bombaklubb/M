@@ -9,12 +9,19 @@ import { getDoneProjects, toggleProjectDone } from '../utils/storage';
 import { SPACE, withAlpha } from '../utils/theme';
 import type { AreaId, DiscussionPage, Project, PromptKind } from '../types';
 
-/** Områdets färg, med rymdblått som reserv om området inte hittas. */
+/**
+ * Områdets färger, med rymdblått som reserv om området inte hittas.
+ *
+ * `accent` hör hemma på kanter och fyllningar mot den mörka panelen, `glow` på
+ * text mot rymden och `ink` på text inuti de ljusa korten – där accentfärgen
+ * är för svag för att läsas.
+ */
 function colorsFor(areaId: AreaId) {
   const area = AREAS.find(a => a.id === areaId);
   return {
     accent: area?.accentHex ?? SPACE.beam,
     glow: area?.glowHex ?? SPACE.beamBright,
+    ink: area?.inkHex ?? SPACE.navy,
     areaName: area?.name ?? '',
   };
 }
@@ -33,7 +40,7 @@ function ProjectCard({ project, done, onToggle }: {
   onToggle: () => void;
 }) {
   const [open, setOpen] = useState(false);
-  const { accent, glow, areaName } = colorsFor(project.areaId);
+  const { accent, glow, ink, areaName } = colorsFor(project.areaId);
 
   return (
     <div
@@ -93,7 +100,7 @@ function ProjectCard({ project, done, onToggle }: {
             <ul className="mt-2 space-y-1.5">
               {project.requirements.map((r, i) => (
                 <li key={i} className="text-sm text-gray-700 leading-relaxed flex gap-2">
-                  <span aria-hidden="true" style={{ color: accent }}>•</span>
+                  <span aria-hidden="true" style={{ color: ink }}>•</span>
                   <span>{r}</span>
                 </li>
               ))}
@@ -103,7 +110,7 @@ function ProjectCard({ project, done, onToggle }: {
           {project.steps.map((step, i) => (
             <div key={i} className="clay-card-sm p-3">
               <p className="font-heading font-bold text-gray-800 text-sm mb-1">
-                <span style={{ color: accent }}>{i + 1}.</span> {step.heading}
+                <span style={{ color: ink }}>{i + 1}.</span> {step.heading}
               </p>
               <p className="text-sm text-gray-700 leading-relaxed">{step.text}</p>
             </div>
@@ -120,7 +127,7 @@ function ProjectCard({ project, done, onToggle }: {
                   <ul className="space-y-1">
                     {group.items.map((item, j) => (
                       <li key={j} className="text-sm text-gray-700 leading-relaxed flex gap-2">
-                        <span aria-hidden="true" style={{ color: accent }}>•</span>
+                        <span aria-hidden="true" style={{ color: ink }}>•</span>
                         <span>{item}</span>
                       </li>
                     ))}
@@ -147,7 +154,7 @@ function ProjectCard({ project, done, onToggle }: {
 }
 
 function DiscussionCard({ page }: { page: DiscussionPage }) {
-  const { accent, glow, areaName } = colorsFor(page.areaId);
+  const { accent, glow, ink, areaName } = colorsFor(page.areaId);
 
   return (
     <div
@@ -167,7 +174,7 @@ function DiscussionCard({ page }: { page: DiscussionPage }) {
       <div className="space-y-3">
         {page.prompts.map((prompt, i) => (
           <div key={i} className="clay-card-sm p-3">
-            <p className="font-heading font-black text-sm mb-1.5" style={{ color: accent }}>
+            <p className="font-heading font-black text-sm mb-1.5" style={{ color: ink }}>
               {PROMPT_EMOJI[prompt.kind]} {prompt.kind.toUpperCase()}
             </p>
             {prompt.intro && (
@@ -176,7 +183,7 @@ function DiscussionCard({ page }: { page: DiscussionPage }) {
             <ul className="space-y-1.5">
               {prompt.questions.map((q, j) => (
                 <li key={j} className="text-sm text-gray-800 leading-relaxed flex gap-2">
-                  <span aria-hidden="true" style={{ color: accent }}>•</span>
+                  <span aria-hidden="true" style={{ color: ink }}>•</span>
                   <span>{q}</span>
                 </li>
               ))}

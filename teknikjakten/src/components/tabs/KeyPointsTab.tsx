@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { BookOpen, Volume2, VolumeX } from 'lucide-react';
+import { textOn } from '../../utils/theme';
 
 function useSpeech() {
   const [speaking, setSpeaking] = useState(false);
@@ -42,10 +43,11 @@ function useSpeech() {
   return { speaking, activeIdx, speakList, stop };
 }
 
-export default function KeyPointsTab({ keyPoints, accentHex, progressHex, textClass }: {
+export default function KeyPointsTab({ keyPoints, accentHex, progressHex, inkHex, textClass }: {
   keyPoints: string[];
   accentHex: string;
   progressHex: string;
+  inkHex: string;
   textClass: string;
 }) {
   const { speaking, activeIdx, speakList, stop } = useSpeech();
@@ -65,9 +67,12 @@ export default function KeyPointsTab({ keyPoints, accentHex, progressHex, textCl
         <button
           onClick={handleToggle}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer"
+          // Knappen ligger på ett ljust kort, så texten tar områdets mörka
+          // variant. Mellanfärgen mot den nästan vita fyllningen nådde bara
+          // omkring 2:1.
           style={speaking
-            ? { background: `${progressHex}20`, border: `2px solid ${progressHex}50`, color: progressHex }
-            : { background: '#f3f4f6', border: '2px solid #e5e7eb', color: '#6b7280' }
+            ? { background: `${progressHex}20`, border: `2px solid ${progressHex}50`, color: inkHex }
+            : { background: '#f3f4f6', border: '2px solid #d1d5db', color: '#4b5563' }
           }
           aria-label={speaking ? 'Stoppa uppläsning' : 'Läs upp'}
         >
@@ -84,8 +89,13 @@ export default function KeyPointsTab({ keyPoints, accentHex, progressHex, textCl
           style={activeIdx === i ? { background: `${progressHex}12` } : {}}
         >
           <span
-            className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-black text-white flex-shrink-0 mt-0.5 transition-all"
-            style={{ background: activeIdx === i ? progressHex : accentHex }}
+            className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-black flex-shrink-0 mt-0.5 transition-all"
+            // Siffran läses mot områdets fyllning, som är allt från mörkblå
+            // till ljus guld – textfärgen måste följa med.
+            style={{
+              background: activeIdx === i ? progressHex : accentHex,
+              color: textOn(activeIdx === i ? progressHex : accentHex),
+            }}
           >
             {i + 1}
           </span>

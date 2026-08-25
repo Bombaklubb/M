@@ -109,11 +109,11 @@ export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalPr
         {/* Results */}
         <div className="max-h-96 overflow-y-auto">
           {query.trim() === '' ? (
-            <p className="text-sm text-gray-400 text-center py-10 font-semibold">
+            <p className="text-sm text-gray-500 text-center py-10 font-semibold">
               Sök på ett begrepp...
             </p>
           ) : results.length === 0 ? (
-            <p className="text-sm text-gray-400 text-center py-10 font-semibold">
+            <p className="text-sm text-gray-500 text-center py-10 font-semibold">
               Inga begrepp hittades.
             </p>
           ) : (
@@ -131,9 +131,9 @@ export default function SearchModal({ isOpen, onClose, onSelect }: SearchModalPr
                         <p className="text-xs text-gray-500 leading-relaxed mt-0.5 line-clamp-2">
                           {r.definition.length > 80 ? r.definition.slice(0, 80) + '…' : r.definition}
                         </p>
-                        <p className="text-xs font-semibold text-gray-400 mt-1">
+                        <p className="text-xs font-semibold text-gray-600 mt-1">
                           {r.chapterTitle}
-                          <span className="ml-1.5 px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500">
+                          <span className="ml-1.5 px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-700">
                             {r.areaName}
                           </span>
                         </p>

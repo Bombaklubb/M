@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { TimelineEvent } from '../../types';
 import { fetchWikiImage } from '../../utils/imageCache';
+import { textOn } from '../../utils/theme';
 
 export default function TimelineTab({ events, progressHex }: {
   events: TimelineEvent[];
@@ -44,9 +45,11 @@ export default function TimelineTab({ events, progressHex }: {
               */}
               <div className="flex-shrink-0 flex flex-col items-center" style={{ width: 72 }}>
                 <div
-                  className="w-[72px] min-h-11 rounded-2xl flex items-center justify-center text-white font-black z-10 shadow-md px-1.5 py-1"
+                  className="w-[72px] min-h-11 rounded-2xl flex items-center justify-center font-black z-10 shadow-md px-1.5 py-1"
                   style={{
                     background: progressHex,
+                    // Vit text försvinner mot de ljusa områdesfärgerna.
+                    color: textOn(progressHex),
                     fontSize: longestWord > 10 ? '8px' : longestWord > 7 ? '9px' : '11px',
                     lineHeight: 1.2,
                     textAlign: 'center',

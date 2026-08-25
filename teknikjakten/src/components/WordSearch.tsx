@@ -1,4 +1,5 @@
 import { useState, useRef, useMemo } from 'react';
+import { SPACE, textOn } from '../utils/theme';
 
 interface Cell { r: number; c: number; }
 interface PlacedWord { clean: string; original: string; cells: Cell[]; }
@@ -29,8 +30,11 @@ function buildGrid(rawWords: string[]): { grid: string[][]; placed: PlacedWord[]
     let ok = false;
     for (let t = 0; t < 300 && !ok; t++) {
       const dir = DIRS[Math.floor(Math.random() * DIRS.length)];
-      const maxR = SIZE - word.length * dir.dr;
-      const maxC = SIZE - word.length * dir.dc;
+      // Sista bokstaven hamnar på (word.length - 1) steg bort, och högsta
+      // giltiga index är SIZE - 1. Utan -1 här kunde startraden bli SIZE och
+      // grid[nr] blev undefined – rutnätet kraschade när ordet skulle läggas ut.
+      const maxR = SIZE - 1 - (word.length - 1) * dir.dr;
+      const maxC = SIZE - 1 - (word.length - 1) * dir.dc;
       if (maxR < 0 || maxC < 0) continue;
       const r = Math.floor(Math.random() * (maxR + 1));
       const c = Math.floor(Math.random() * (maxC + 1));
@@ -78,7 +82,15 @@ function snapLine(start: Cell, end: Cell): Cell[] {
   return cells;
 }
 
-export default function WordSearch({ words, accentColor }: { words: string[]; accentColor: string }) {
+/**
+ * `accentColor` fyller rutor och kanter, `inkColor` är områdets mörka variant
+ * och används till text – rutorna är vita, och mellanfärgen är för svag där.
+ */
+export default function WordSearch({ words, accentColor, inkColor }: {
+  words: string[];
+  accentColor: string;
+  inkColor: string;
+}) {
   const wordsKey = words.join('|');
   // eslint-disable-next-line react-hooks/exhaustive-deps -- avsiktligt: ska bara blandas om när innehållet byts, inte vid varje rendering
   const { grid, placed } = useMemo(() => buildGrid(words), [wordsKey]);
@@ -152,15 +164,18 @@ export default function WordSearch({ words, accentColor }: { words: string[]; ac
           <span
             key={w}
             className="text-xs font-black px-2.5 py-1 rounded-full border-2 transition-all"
+            // Brickorna ligger mot rymden. En genomskinlig fyllning hade blivit
+            // mörk, så ett hittat ord får i stället områdesfärgen helt fylld,
+            // med textfärg vald efter hur ljus den fyllningen är.
             style={found.includes(w) ? {
               textDecoration: 'line-through',
-              background: accentColor + '18',
-              borderColor: accentColor + '50',
-              color: accentColor,
+              background: accentColor,
+              borderColor: accentColor,
+              color: textOn(accentColor),
             } : {
               background: 'white',
               borderColor: '#e5e7eb',
-              color: '#6b7280',
+              color: '#4b5563',
             }}
           >
             {original}
@@ -175,7 +190,8 @@ export default function WordSearch({ words, accentColor }: { words: string[]; ac
         </div>
       ) : (
         <>
-          <p className="text-xs font-black text-gray-400 uppercase tracking-wide mb-2">
+          {/* Ligger direkt mot rymden, inte på ett kort – därför ljus text. */}
+          <p className="text-xs font-black uppercase tracking-wide mb-2" style={{ color: SPACE.onDarkMuted }}>
             Dra över bokstäverna för att markera ett ord
           </p>
 
@@ -208,7 +224,7 @@ export default function WordSearch({ words, accentColor }: { words: string[]; ac
 
               if (isFoundCell) {
                 bg = accentColor + '28';
-                color = accentColor;
+                color = inkColor;
                 borderColor = accentColor + '50';
               } else if (isSel) {
                 if (flash === 'wrong') { bg = '#fee2e2'; color = '#dc2626'; borderColor = '#fca5a5'; }
