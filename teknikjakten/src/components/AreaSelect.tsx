@@ -156,13 +156,23 @@ export default function AreaSelect() {
           </div>
         )}
 
-        <button
-          onClick={() => setView('achievements')}
-          className="mt-6 w-full space-panel py-3 flex items-center justify-center gap-2 text-sm font-black transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
-          style={{ background: withAlpha(SPACE.panel, 0.8), borderColor: withAlpha(SPACE.beamBright, 0.35), color: SPACE.atmosphere }}
-        >
-          🏆 Mina prestationer
-        </button>
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <button
+            onClick={() => setView('achievements')}
+            className="w-full space-panel py-3 flex items-center justify-center gap-2 text-sm font-black transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+            style={{ background: withAlpha(SPACE.panel, 0.8), borderColor: withAlpha(SPACE.beamBright, 0.35), color: SPACE.atmosphere }}
+          >
+            🏆 Mina prestationer
+          </button>
+          {/* Projekten ligger utanför områdena – de är bygguppgifter utan poäng. */}
+          <button
+            onClick={() => setView('projects')}
+            className="w-full space-panel py-3 flex items-center justify-center gap-2 text-sm font-black transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+            style={{ background: withAlpha(SPACE.panel, 0.8), borderColor: withAlpha(SPACE.gold, 0.35), color: SPACE.gold }}
+          >
+            🔧 Bygg och prova
+          </button>
+        </div>
       </main>
     </div>
   );

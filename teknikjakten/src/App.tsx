@@ -11,6 +11,7 @@ const ChapterExercise = lazy(() => import('./components/ChapterExercise'));
 const ChapterResult   = lazy(() => import('./components/ChapterResult'));
 const ExitTicket      = lazy(() => import('./components/ExitTicket'));
 const Achievements    = lazy(() => import('./components/Achievements'));
+const Projects        = lazy(() => import('./components/Projects'));
 
 class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   constructor(props: { children: React.ReactNode }) { super(props); this.state = { hasError: false }; }
@@ -51,6 +52,7 @@ function AppInner() {
     case 'chapter-result':   return <ChapterResult />;
     case 'exit-ticket':      return <ExitTicket />;
     case 'achievements':     return <Achievements />;
+    case 'projects':         return <Projects />;
     default:                 return <AreaSelect />;
   }
 }
