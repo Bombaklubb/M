@@ -3,14 +3,15 @@ import { Check, ChevronDown } from 'lucide-react';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
 import { PROJECTS } from '../data/projects';
+import { DISCUSSIONS } from '../data/discussions';
 import { AREAS } from '../data/areaMeta';
 import { getDoneProjects, toggleProjectDone } from '../utils/storage';
 import { SPACE, withAlpha } from '../utils/theme';
-import type { Project } from '../types';
+import type { AreaId, DiscussionPage, Project, PromptKind } from '../types';
 
-/** Områdets färg, med rymdblått som reserv om ett projekt saknar område. */
-function colorsFor(project: Project) {
-  const area = AREAS.find(a => a.id === project.areaId);
+/** Områdets färg, med rymdblått som reserv om området inte hittas. */
+function colorsFor(areaId: AreaId) {
+  const area = AREAS.find(a => a.id === areaId);
   return {
     accent: area?.accentHex ?? SPACE.beam,
     glow: area?.glowHex ?? SPACE.beamBright,
@@ -18,13 +19,21 @@ function colorsFor(project: Project) {
   };
 }
 
+/** Ikon per frågetyp, så eleven ser vad frågan vill att hen gör. */
+const PROMPT_EMOJI: Record<PromptKind, string> = {
+  Diskutera: '💬',
+  Fundera: '💭',
+  Undersök: '🔍',
+  Jämför: '⚖️',
+};
+
 function ProjectCard({ project, done, onToggle }: {
   project: Project;
   done: boolean;
   onToggle: () => void;
 }) {
   const [open, setOpen] = useState(false);
-  const { accent, glow, areaName } = colorsFor(project);
+  const { accent, glow, areaName } = colorsFor(project.areaId);
 
   return (
     <div
@@ -137,37 +146,120 @@ function ProjectCard({ project, done, onToggle }: {
   );
 }
 
+function DiscussionCard({ page }: { page: DiscussionPage }) {
+  const { accent, glow, areaName } = colorsFor(page.areaId);
+
+  return (
+    <div
+      className="space-panel overflow-hidden p-4"
+      style={{
+        background: `linear-gradient(150deg, ${withAlpha(SPACE.panel, 0.92)} 0%, ${withAlpha(SPACE.navy, 0.85)} 60%, ${withAlpha(accent, 0.2)} 100%)`,
+        borderColor: withAlpha(accent, 0.5),
+      }}
+    >
+      <p className="font-heading font-bold text-lg leading-tight" style={{ color: glow }}>
+        {areaName}
+      </p>
+      <p className="text-xs font-semibold mb-3" style={{ color: SPACE.onDarkMuted }}>
+        s. {page.bookPages}
+      </p>
+
+      <div className="space-y-3">
+        {page.prompts.map((prompt, i) => (
+          <div key={i} className="clay-card-sm p-3">
+            <p className="font-heading font-black text-sm mb-1.5" style={{ color: accent }}>
+              {PROMPT_EMOJI[prompt.kind]} {prompt.kind.toUpperCase()}
+            </p>
+            {prompt.intro && (
+              <p className="text-sm text-gray-700 leading-relaxed mb-2">{prompt.intro}</p>
+            )}
+            <ul className="space-y-1.5">
+              {prompt.questions.map((q, j) => (
+                <li key={j} className="text-sm text-gray-800 leading-relaxed flex gap-2">
+                  <span aria-hidden="true" style={{ color: accent }}>•</span>
+                  <span>{q}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+type Tab = 'projekt' | 'diskutera';
+
 export default function Projects() {
   const { setView } = useApp();
+  const [tab, setTab] = useState<Tab>('projekt');
   const [done, setDone] = useState<string[]>(() => getDoneProjects());
 
   function toggle(id: string) {
     setDone(toggleProjectDone(id));
   }
 
+  const tabs: { id: Tab; label: string }[] = [
+    { id: 'projekt', label: '🔧 Projekt' },
+    { id: 'diskutera', label: '💬 Diskutera & undersök' },
+  ];
+
   return (
     <div className="min-h-screen">
       <AppHeader
         title="Bygg och prova"
-        subtitle={`${done.length} av ${PROJECTS.length} gjorda`}
+        // Räknaren gäller bara projekten, så den visas bara på den fliken.
+        subtitle={tab === 'projekt' ? `${done.length} av ${PROJECTS.length} gjorda` : undefined}
         onBack={() => setView('area-select')}
       />
 
-      <main className="max-w-2xl mx-auto p-4 sm:p-6 pb-16 space-y-4 mt-2">
-        <p className="text-sm leading-relaxed" style={{ color: SPACE.onDarkMuted }}>
-          Bokens sju praktiska projekt. Här finns uppgiften, arbetsgången och materiallistan –
-          men inga poäng och inga stjärnor, för ett bygge kan appen inte rätta. Bocka av ett
-          projekt själv när du är klar med det.
-        </p>
+      <main className="max-w-2xl mx-auto p-4 sm:p-6 pb-16 mt-2">
+        <div className="flex gap-2 mb-4" role="tablist">
+          {tabs.map(t => (
+            <button
+              key={t.id}
+              onClick={() => setTab(t.id)}
+              role="tab"
+              aria-selected={tab === t.id}
+              className="flex-1 min-h-[44px] py-2 px-2 rounded-xl text-xs sm:text-sm font-black transition-all active:scale-95 cursor-pointer leading-tight"
+              style={tab === t.id
+                ? { background: withAlpha(SPACE.gold, 0.9), border: `2px solid ${SPACE.gold}`, color: SPACE.deepest }
+                : { background: withAlpha(SPACE.panel, 0.8), border: `2px solid ${withAlpha(SPACE.steel, 0.6)}`, color: SPACE.atmosphere }}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
 
-        {PROJECTS.map(project => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            done={done.includes(project.id)}
-            onToggle={() => toggle(project.id)}
-          />
-        ))}
+        {tab === 'projekt' ? (
+          <div className="space-y-4">
+            <p className="text-sm leading-relaxed" style={{ color: SPACE.onDarkMuted }}>
+              Bokens sju praktiska projekt. Här finns uppgiften, arbetsgången och materiallistan –
+              men inga poäng och inga stjärnor, för ett bygge kan appen inte rätta. Bocka av ett
+              projekt själv när du är klar med det.
+            </p>
+
+            {PROJECTS.map(project => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                done={done.includes(project.id)}
+                onToggle={() => toggle(project.id)}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="space-y-4">
+            <p className="text-sm leading-relaxed" style={{ color: SPACE.onDarkMuted }}>
+              Bokens frågor att prata om, fundera över, undersöka och jämföra. De har inget rätt
+              svar – de är till för att tänka och samtala kring, i klassen eller hemma.
+            </p>
+
+            {DISCUSSIONS.map(page => (
+              <DiscussionCard key={page.id} page={page} />
+            ))}
+          </div>
+        )}
       </main>
     </div>
   );

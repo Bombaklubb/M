@@ -187,6 +187,28 @@ export interface Project {
   tips?: string[];
 }
 
+// === DISKUTERA OCH UNDERSÖK ===
+/**
+ * Bokens samtalsfrågor. De har inget rätt svar och kan därför inte rättas –
+ * de ligger som en flik bredvid projekten, av samma skäl som projekten inte
+ * är kapitel.
+ */
+export type PromptKind = 'Diskutera' | 'Fundera' | 'Undersök' | 'Jämför';
+
+export interface DiscussionPrompt {
+  kind: PromptKind;
+  /** Inledande mening som sätter frågorna i sitt sammanhang. Saknas ofta. */
+  intro?: string;
+  questions: string[];
+}
+
+export interface DiscussionPage {
+  id: string;
+  areaId: AreaId;
+  bookPages: string;
+  prompts: DiscussionPrompt[];
+}
+
 // === PROGRESS (sparas per enhet, inga konton) ===
 export interface ChapterProgress {
   chapterId: string;
