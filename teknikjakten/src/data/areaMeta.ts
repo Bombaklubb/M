@@ -83,7 +83,7 @@ export const AREAS: Area[] = [
     glowHex: '#b3d3ee',
     inkHex: '#123a63',
     progressHex: '#3b82f6',
-    chapterCount: 0,
+    chapterCount: 9,
   },
   {
     id: 'digital',

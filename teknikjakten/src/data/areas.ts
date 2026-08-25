@@ -5,6 +5,7 @@ import { BOSTAD } from './chapters/bostad';
 import { VARDAG } from './chapters/vardag';
 import { UTVECKLING } from './chapters/utveckling';
 import { RORELSE } from './chapters/rorelse';
+import { SYSTEM } from './chapters/system';
 
 export { AREAS };
 
@@ -27,6 +28,7 @@ export const ALL_CHAPTERS: Chapter[] = [
   ...VARDAG,
   ...UTVECKLING,
   ...RORELSE,
+  ...SYSTEM,
 ];
 
 /** Kapitlen i ett område, i den ordning de står i boken. */
