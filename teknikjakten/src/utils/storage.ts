@@ -3,6 +3,7 @@ import { ChapterProgress, AchievementStats, AreaId } from '../types';
 const PROGRESS_KEY = 'tj_progress';
 const STATS_KEY = 'tj_stats';
 const VERSION_KEY = 'tj_version';
+const PROJECTS_KEY = 'tj_projects_done';
 
 /**
  * Höj detta tal vid inkompatibla ändringar i datastrukturen.
@@ -123,6 +124,28 @@ export function addStats(correct: number, total: number): StoredStats {
   const updated = { totalCorrect: s.totalCorrect + correct, totalAnswered: s.totalAnswered + total };
   try { localStorage.setItem(STATS_KEY, JSON.stringify(updated)); } catch { /* fullt/saknas */ }
   return updated;
+}
+
+/**
+ * Avbockade projekt. Detta är elevens egen markering "jag har byggt den här",
+ * inte ett resultat appen räknat fram – därför ligger den utanför progressen
+ * och påverkar varken poäng, stjärnor eller prestationer.
+ */
+export function getDoneProjects(): string[] {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(PROJECTS_KEY) || '[]');
+    return Array.isArray(parsed) ? parsed.filter((id): id is string => typeof id === 'string') : [];
+  } catch { return []; }
+}
+
+/** Bockar av eller ångrar ett projekt och returnerar den nya listan. */
+export function toggleProjectDone(projectId: string): string[] {
+  const done = getDoneProjects();
+  const next = done.includes(projectId)
+    ? done.filter(id => id !== projectId)
+    : [...done, projectId];
+  try { localStorage.setItem(PROJECTS_KEY, JSON.stringify(next)); } catch { /* fullt/saknas */ }
+  return next;
 }
 
 export function buildAchievementStats(): AchievementStats {

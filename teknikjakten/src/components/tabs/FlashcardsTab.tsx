@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { shuffle } from '../../utils/shuffle';
+import { textOn } from '../../utils/theme';
 
-export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex }: {
+export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex, glowHex }: {
   concepts: { term: string; definition: string }[];
   inkHex: string;
   progressHex: string;
   accentHex: string;
+  glowHex: string;
 }) {
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -47,7 +49,8 @@ export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex
         <button
           onClick={handleShuffle}
           className="text-xs font-black flex items-center gap-1 cursor-pointer"
-          style={{ color: progressHex }}
+          // Knapparna runt kortet ligger mot rymden, inte på kortet – ljus variant.
+          style={{ color: glowHex }}
         >
           🔀 Blanda
         </button>
@@ -72,33 +75,40 @@ export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex
           <div
             className="flashcard-face absolute inset-0 rounded-3xl flex flex-col items-center justify-center p-6 text-center"
             style={{
-              background: `linear-gradient(145deg, white, ${accentHex}10)`,
+              backgroundColor: '#ffffff',
+              backgroundImage: `linear-gradient(145deg, #ffffff, ${accentHex}22)`,
               border: `2.5px solid ${accentHex}40`,
               boxShadow: `0 6px 24px ${accentHex}22`,
             }}
           >
-            <p className="text-xs font-black uppercase tracking-widest mb-3 opacity-50" style={{ color: inkHex }}>
+            <p className="text-xs font-black uppercase tracking-widest mb-3" style={{ color: inkHex, opacity: 0.75 }}>
               Begrepp
             </p>
             <p className="font-heading font-bold text-2xl leading-snug" style={{ color: inkHex }}>
               {card.term}
             </p>
-            <p className="text-xs text-gray-400 font-semibold mt-4">Tryck för att se förklaring</p>
+            <p className="text-xs text-gray-500 font-semibold mt-4">Tryck för att se förklaring</p>
           </div>
 
-          {/* Back — definition */}
+          {/*
+            Baksida — förklaring. Basen måste vara ljus, precis som framsidan:
+            texten är mörk, och en genomskinlig yta hade släppt igenom den mörka
+            rymdbakgrunden så att mörkt hamnat på mörkt. Kanten är kraftigare än
+            framsidans, så att det ändå syns att kortet är vänt.
+          */}
           <div
             className="flashcard-face flashcard-face-back absolute inset-0 rounded-3xl flex flex-col items-center justify-center p-6 text-center"
             style={{
-              background: `linear-gradient(145deg, ${accentHex}18, ${accentHex}08)`,
-              border: `2.5px solid ${accentHex}60`,
+              backgroundColor: '#ffffff',
+              backgroundImage: `linear-gradient(145deg, #ffffff, ${accentHex}2e)`,
+              border: `2.5px solid ${accentHex}80`,
               boxShadow: `0 6px 24px ${accentHex}30`,
             }}
           >
-            <p className="text-xs font-black uppercase tracking-widest mb-3 opacity-50" style={{ color: inkHex }}>
+            <p className="text-xs font-black uppercase tracking-widest mb-3" style={{ color: inkHex, opacity: 0.75 }}>
               Förklaring
             </p>
-            <p className="text-sm font-semibold leading-relaxed text-gray-700">
+            <p className="text-sm font-semibold leading-relaxed text-gray-800">
               {card.definition}
             </p>
           </div>
@@ -111,14 +121,15 @@ export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex
           onClick={() => go(-1)}
           aria-label="Föregående kort"
           className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-bold transition-all active:scale-95 cursor-pointer"
-          style={{ background: `${progressHex}15`, border: `2px solid ${progressHex}30`, color: progressHex }}
+          style={{ background: `${progressHex}15`, border: `2px solid ${progressHex}30`, color: glowHex }}
         >
           ←
         </button>
         <button
           onClick={() => setFlipped(f => !f)}
           className="px-6 h-12 rounded-2xl flex items-center justify-center text-sm font-black transition-all active:scale-95 cursor-pointer"
-          style={{ background: progressHex, color: 'white' }}
+          // Vit text syns inte mot de ljusa områdesfärgerna.
+          style={{ background: progressHex, color: textOn(progressHex) }}
         >
           {flipped ? 'Dölj svar' : 'Visa svar'}
         </button>
@@ -126,7 +137,7 @@ export default function FlashcardsTab({ concepts, inkHex, progressHex, accentHex
           onClick={() => go(1)}
           aria-label="Nästa kort"
           className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-bold transition-all active:scale-95 cursor-pointer"
-          style={{ background: `${progressHex}15`, border: `2px solid ${progressHex}30`, color: progressHex }}
+          style={{ background: `${progressHex}15`, border: `2px solid ${progressHex}30`, color: glowHex }}
         >
           →
         </button>

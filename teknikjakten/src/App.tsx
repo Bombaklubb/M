@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { AppProvider, useApp } from './contexts/AppContext';
 import AreaSelect from './components/AreaSelect';
+import { SPACE } from './utils/theme';
 
 // Alla vyer utom startsidan laddas först när de behövs. Startsidan klarar sig
 // med områdesmetadatan, så kapiteldatan hamnar i de här paketen i stället för
@@ -11,6 +12,7 @@ const ChapterExercise = lazy(() => import('./components/ChapterExercise'));
 const ChapterResult   = lazy(() => import('./components/ChapterResult'));
 const ExitTicket      = lazy(() => import('./components/ExitTicket'));
 const Achievements    = lazy(() => import('./components/Achievements'));
+const Projects        = lazy(() => import('./components/Projects'));
 
 class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean }> {
   constructor(props: { children: React.ReactNode }) { super(props); this.state = { hasError: false }; }
@@ -21,7 +23,8 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
         <div>
           <div className="text-6xl mb-4">😵</div>
           <h1 className="text-2xl font-black mb-2 font-heading">Oj! Något gick fel</h1>
-          <p className="text-gray-500 mb-6">Tryck nedan för att rensa och ladda om.</p>
+          {/* Felskärmen ligger mot rymden – grå text försvinner där. */}
+          <p className="mb-6" style={{ color: SPACE.onDarkMuted }}>Tryck nedan för att rensa och ladda om.</p>
           <button
             className="btn-primary-clay px-8 py-3 text-lg"
             onClick={() => { localStorage.removeItem('tj_progress'); window.location.reload(); }}
@@ -36,7 +39,7 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
 function Loading() {
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <p className="text-sm font-black text-gray-400">Laddar …</p>
+      <p className="text-sm font-black" style={{ color: SPACE.onDarkMuted }}>Laddar …</p>
     </div>
   );
 }
@@ -51,6 +54,7 @@ function AppInner() {
     case 'chapter-result':   return <ChapterResult />;
     case 'exit-ticket':      return <ExitTicket />;
     case 'achievements':     return <Achievements />;
+    case 'projects':         return <Projects />;
     default:                 return <AreaSelect />;
   }
 }

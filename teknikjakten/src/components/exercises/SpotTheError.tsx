@@ -24,7 +24,7 @@ export default function SpotTheError({ exercise, onAnswer }: Props) {
     <div>
       {/* Wrong statement banner */}
       <div className="rounded-2xl border-2 border-red-300 bg-red-50 p-4 mb-5">
-        <p className="text-xs font-black text-red-500 uppercase tracking-wide mb-2">🚨 Felaktigt påstående</p>
+        <p className="text-xs font-black text-red-700 uppercase tracking-wide mb-2">🚨 Felaktigt påstående</p>
         <p className="text-base font-semibold text-gray-800 leading-relaxed italic">"{exercise.wrongStatement}"</p>
       </div>
 

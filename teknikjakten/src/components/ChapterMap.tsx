@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { getChaptersForArea } from '../data/areas';
-import { pageStyle, headerStyle, SPACE, withAlpha } from '../utils/theme';
+import { pageStyle, headerStyle, SPACE, withAlpha, textOn } from '../utils/theme';
 import { Star, ArrowLeft } from 'lucide-react';
 
 export default function ChapterMap() {
@@ -73,14 +73,16 @@ export default function ChapterMap() {
 
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-xs font-black text-gray-400">Kapitel</span>
+                      <span className="text-xs font-black text-gray-500">Kapitel</span>
                       {progress?.completed && (
                         <span className="text-xs font-black text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Klar</span>
                       )}
                       {chapter.summary && (
                         <span
                           className="text-xs font-black px-2 py-0.5 rounded-full"
-                          style={{ background: `${a.progressHex}15`, color: a.progressHex }}
+                          // inkHex, inte progressHex: taggen ligger på ett ljust
+                          // kort, och områdets mellanfärg blir för svag där.
+                          style={{ background: `${a.progressHex}20`, color: a.inkHex }}
                         >
                           Sammanfattning
                         </span>
@@ -141,7 +143,10 @@ export default function ChapterMap() {
                         key={tab}
                         onClick={() => openChapterStudy(chapter, tab)}
                         className="min-h-[44px] py-2 px-1.5 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center leading-tight break-words hyphens-auto"
-                        style={{ background: `${a.progressHex}12`, border: `2px solid ${a.progressHex}35`, color: a.progressHex }}
+                        // Flikknapparna sitter på ett ljust kort, så texten tar
+                        // områdets mörka variant. Med progressHex blev guldiga
+                        // områden nästan oläsliga mot den ljusa bottnen.
+                        style={{ background: `${a.progressHex}14`, border: `2px solid ${a.progressHex}45`, color: a.inkHex }}
                       >
                         {label}
                       </button>
@@ -150,8 +155,10 @@ export default function ChapterMap() {
                       <>
                         <button
                           onClick={() => selectChapter(chapter)}
-                          className="min-h-[44px] py-2 px-1.5 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center text-white leading-tight break-words"
-                          style={{ background: a.progressHex, border: `2px solid ${a.progressHex}` }}
+                          className="min-h-[44px] py-2 px-1.5 rounded-xl text-xs font-black transition-all active:scale-95 cursor-pointer text-center leading-tight break-words"
+                          // Textfärgen väljs efter knappens ljushet – vit text
+                          // försvinner mot de guldiga områdenas fyllning.
+                          style={{ background: a.progressHex, border: `2px solid ${a.progressHex}`, color: textOn(a.progressHex) }}
                         >
                           🎯 Öva-läge
                         </button>

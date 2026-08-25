@@ -234,13 +234,14 @@ export default function ChapterStudy() {
                       </div>
                       <span
                         className={`flex-shrink-0 mt-0.5 transition-transform ${revealed ? 'rotate-180' : ''}`}
-                        style={{ color: a.progressHex }}
+                        // Ikonen ligger på ett ljust kort – områdets mörka variant.
+                        style={{ color: a.inkHex }}
                       >
                         {revealed ? <EyeOff size={16} /> : <Eye size={16} />}
                       </span>
                     </div>
                     {!revealed && (
-                      <p className="text-xs text-gray-400 mt-1 font-semibold">Tryck för att se förklaring</p>
+                      <p className="text-xs text-gray-500 mt-1 font-semibold">Tryck för att se förklaring</p>
                     )}
                   </button>
                 );
@@ -255,6 +256,7 @@ export default function ChapterStudy() {
             keyPoints={summary.keyPoints}
             accentHex={a.accentHex}
             progressHex={a.progressHex}
+            inkHex={a.inkHex}
             textClass=""
           />
         )}
@@ -268,14 +270,14 @@ export default function ChapterStudy() {
             {summary.causeEffect.map((item, i) => (
               <div key={i} className="clay-card overflow-hidden">
                 <div className="bg-red-50 px-4 py-3">
-                  <p className="text-xs font-black text-red-500 uppercase tracking-wide mb-1">ORSAK</p>
+                  <p className="text-xs font-black text-red-700 uppercase tracking-wide mb-1">ORSAK</p>
                   <p className="text-sm font-semibold text-gray-800">{item.cause}</p>
                 </div>
                 <div className="flex items-center justify-center py-1.5 bg-gray-50">
                   <ArrowRight size={16} className="text-gray-400" aria-hidden="true" />
                 </div>
                 <div className="bg-green-50 px-4 py-3">
-                  <p className="text-xs font-black text-green-600 uppercase tracking-wide mb-1">KONSEKVENS</p>
+                  <p className="text-xs font-black text-green-700 uppercase tracking-wide mb-1">KONSEKVENS</p>
                   <p className="text-sm font-semibold text-gray-800">{item.effect}</p>
                 </div>
               </div>
@@ -285,17 +287,17 @@ export default function ChapterStudy() {
 
         {/* --- FLASHCARDS --- */}
         {activeTab === 'flashcards' && (
-          <FlashcardsTab concepts={summary.concepts} inkHex={a.inkHex} progressHex={a.progressHex} accentHex={a.accentHex} />
+          <FlashcardsTab concepts={summary.concepts} inkHex={a.inkHex} progressHex={a.progressHex} accentHex={a.accentHex} glowHex={a.glowHex} />
         )}
 
         {/* --- SANT ELLER FALSKT --- */}
         {activeTab === 'sant-falskt' && (
-          <SantFalsktTab items={summary.trueFalse ?? []} progressHex={a.progressHex} />
+          <SantFalsktTab items={summary.trueFalse ?? []} progressHex={a.progressHex} glowHex={a.glowHex} />
         )}
 
         {/* --- MATCHA BEGREPP --- */}
         {activeTab === 'matcha' && (
-          <MatchaTab concepts={summary.concepts} progressHex={a.progressHex} accentHex={a.accentHex} />
+          <MatchaTab concepts={summary.concepts} progressHex={a.progressHex} accentHex={a.accentHex} glowHex={a.glowHex} />
         )}
 
         {/* --- TIDSLINJE --- */}
@@ -308,6 +310,7 @@ export default function ChapterStudy() {
           <WordSearch
             words={summary.concepts.map(c => c.term)}
             accentColor={a.progressHex}
+            inkColor={a.inkHex}
           />
         )}
 
@@ -343,7 +346,7 @@ export default function ChapterStudy() {
                 </div>
 
                 <div className="clay-card p-5 mb-4">
-                  <p className="text-xs font-black uppercase tracking-wide mb-2 opacity-60" style={{ color: a.inkHex }}>
+                  <p className="text-xs font-black uppercase tracking-wide mb-2" style={{ color: a.inkHex, opacity: 0.85 }}>
                     {testQuestions[testIdx].label}
                   </p>
                   <p className="text-base font-semibold text-gray-800 leading-relaxed">

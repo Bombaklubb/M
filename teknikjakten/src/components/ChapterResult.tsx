@@ -49,7 +49,7 @@ export default function ChapterResult() {
         {/* Poängcirkel */}
         <div className="clay-card w-32 h-32 rounded-full flex flex-col items-center justify-center mb-4">
           <span className="text-4xl font-heading font-bold text-gray-800">{score}%</span>
-          <span className="text-xs font-black text-gray-400 mt-0.5">POÄNG</span>
+          <span className="text-xs font-black text-gray-500 mt-0.5">POÄNG</span>
         </div>
 
         <p className="text-xl font-heading font-bold text-center mb-1" style={{ color: SPACE.onDark }}>{feedback}</p>
@@ -62,7 +62,7 @@ export default function ChapterResult() {
             <p className="text-xs font-black text-gray-500 mt-0.5">RÄTT</p>
           </div>
           <div>
-            <p className="text-2xl font-heading font-bold text-red-400">{wrong}</p>
+            <p className="text-2xl font-heading font-bold text-red-600">{wrong}</p>
             <p className="text-xs font-black text-gray-500 mt-0.5">FEL</p>
           </div>
           <div>

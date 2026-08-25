@@ -39,6 +39,40 @@ export function withAlpha(hex: string, alpha: number): string {
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
+/** WCAG:s relativa luminans, 0 = svart, 1 = vitt. NaN om hex inte går att läsa. */
+function luminance(hex: string): number {
+  const h = hex.replace('#', '');
+  const full = h.length === 3 ? h.split('').map(c => c + c).join('') : h;
+  const [r, g, b] = [0, 2, 4].map(i => parseInt(full.slice(i, i + 2), 16) / 255);
+  if ([r, g, b].some(Number.isNaN)) return NaN;
+  const lin = (v: number) => (v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4));
+  return 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
+}
+
+/** WCAG-kontrast mellan två luminanser, 1:1 till 21:1. */
+function contrast(l1: number, l2: number): number {
+  return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+}
+
+/**
+ * Textfärg som syns mot en fylld yta i `hex`.
+ *
+ * Områdesfärgerna spänner från mörkt blått till ljust guld, så en fast vit
+ * text fungerar bara för hälften av dem – på guld blir den nästan osynlig.
+ * Här räknas kontrasten ut mot båda alternativen, och det som ger bäst
+ * kontrast vinner. En fast gräns för ljushet gick inte att pricka rätt: den
+ * gav vit text på de ljusa violetta och rosa områdena, som bara nådde 2,7:1.
+ *
+ * Den mörka texten är rymdens svartaste ton, inte ett mellanmörkt blått –
+ * med en ljusare ton hamnade mellanfärgerna under 4,5:1 oavsett vilket av
+ * alternativen som valdes.
+ */
+export function textOn(hex: string): string {
+  const l = luminance(hex);
+  if (Number.isNaN(l)) return '#ffffff';
+  return contrast(l, luminance(SPACE.deepest)) >= contrast(l, 1) ? SPACE.deepest : '#ffffff';
+}
+
 /**
  * Bakgrund för hela områdessidan: rymden, tonad mot områdets färg så att varje
  * område känns igen utan att texten tappar kontrast.

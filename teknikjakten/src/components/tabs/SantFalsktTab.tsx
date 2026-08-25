@@ -2,9 +2,10 @@ import { useState, useEffect, useRef } from 'react';
 import { RotateCcw } from 'lucide-react';
 import Celebration from '../Celebration';
 
-export default function SantFalsktTab({ items, progressHex }: {
+export default function SantFalsktTab({ items, progressHex, glowHex }: {
   items: { statement: string; isTrue: boolean; explanation: string }[];
   progressHex: string;
+  glowHex: string;
 }) {
   const [idx, setIdx] = useState(0);
   const [answered, setAnswered] = useState<boolean | null>(null);
@@ -55,7 +56,8 @@ export default function SantFalsktTab({ items, progressHex }: {
     <div>
       <div className="flex items-center justify-between mb-3">
         <span className="text-xs font-black text-gray-400">Påstående {idx + 1} av {total}</span>
-        <span className="text-xs font-black" style={{ color: progressHex }}>{score} rätt</span>
+        {/* Ligger mot rymden, inte på ett kort – ljus variant av områdesfärgen. */}
+        <span className="text-xs font-black" style={{ color: glowHex }}>{score} rätt</span>
       </div>
       <div className="h-1.5 rounded-full bg-gray-100 mb-5 overflow-hidden">
         <div className="h-full rounded-full transition-all" style={{ width: `${(idx / total) * 100}%`, background: progressHex }} />
@@ -68,7 +70,8 @@ export default function SantFalsktTab({ items, progressHex }: {
 
       {answered !== null && (
         <div className="rounded-xl px-4 py-3 mb-4 text-sm font-semibold leading-relaxed"
-          style={isCorrect ? { background: '#dcfce7', color: '#15803d' } : { background: '#fee2e2', color: '#dc2626' }}>
+          // Röd 600 mot den ljusröda rutan nådde bara 3,97:1 – 700 klarar kravet.
+          style={isCorrect ? { background: '#dcfce7', color: '#15803d' } : { background: '#fee2e2', color: '#b91c1c' }}>
           {isCorrect ? '✅ Rätt! ' : '❌ Fel! '}{current.explanation}
         </div>
       )}
@@ -78,7 +81,7 @@ export default function SantFalsktTab({ items, progressHex }: {
           <button onClick={() => answer(true)} className="py-4 rounded-2xl text-base font-black transition-all active:scale-95 cursor-pointer" style={{ background: '#dcfce7', border: '2px solid #86efac', color: '#15803d' }}>
             ✅ Sant
           </button>
-          <button onClick={() => answer(false)} className="py-4 rounded-2xl text-base font-black transition-all active:scale-95 cursor-pointer" style={{ background: '#fee2e2', border: '2px solid #fca5a5', color: '#dc2626' }}>
+          <button onClick={() => answer(false)} className="py-4 rounded-2xl text-base font-black transition-all active:scale-95 cursor-pointer" style={{ background: '#fee2e2', border: '2px solid #fca5a5', color: '#b91c1c' }}>
             ❌ Falskt
           </button>
         </div>

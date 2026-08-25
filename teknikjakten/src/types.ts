@@ -159,6 +159,56 @@ export interface Chapter {
   exercises: Exercise[];
 }
 
+// === PROJEKT (bokens praktiska bygguppgifter) ===
+/**
+ * Projekten rättas inte av appen – eleven bygger något i klassrummet. De ligger
+ * därför utanför områdena, utan poäng och stjärnor, och eleven bockar själv av
+ * dem. Ett projekt som vore ett vanligt kapitel skulle antingen kräva
+ * konstlade quizfrågor eller bli en återvändsgränd i en vy som lovar framsteg.
+ */
+export interface Project {
+  id: string;
+  title: string;
+  emoji: string;
+  /** Området projektet hör till i boken. Styr färgsättningen av kortet. */
+  areaId: AreaId;
+  bookPages: string;
+  /** En mening om varför uppgiften finns – bakgrunden ur boken. */
+  intro: string;
+  /** Själva uppgiften, som den står i boken. */
+  assignment: string;
+  /** Punkterna som lösningen ska uppfylla. */
+  requirements: string[];
+  /** Arbetsgången, i ordning: skiss, bygge, programmering … */
+  steps: { heading: string; text: string }[];
+  /** Materiallistan. Vissa projekt delar upp den i grupper. */
+  materials: { heading?: string; items: string[] }[];
+  /** Bokens tips och mått, det som inte är krav men hjälper eleven vidare. */
+  tips?: string[];
+}
+
+// === DISKUTERA OCH UNDERSÖK ===
+/**
+ * Bokens samtalsfrågor. De har inget rätt svar och kan därför inte rättas –
+ * de ligger som en flik bredvid projekten, av samma skäl som projekten inte
+ * är kapitel.
+ */
+export type PromptKind = 'Diskutera' | 'Fundera' | 'Undersök' | 'Jämför';
+
+export interface DiscussionPrompt {
+  kind: PromptKind;
+  /** Inledande mening som sätter frågorna i sitt sammanhang. Saknas ofta. */
+  intro?: string;
+  questions: string[];
+}
+
+export interface DiscussionPage {
+  id: string;
+  areaId: AreaId;
+  bookPages: string;
+  prompts: DiscussionPrompt[];
+}
+
 // === PROGRESS (sparas per enhet, inga konton) ===
 export interface ChapterProgress {
   chapterId: string;
@@ -196,7 +246,8 @@ export type AppView =
   | 'chapter-exercise'
   | 'chapter-result'
   | 'exit-ticket'
-  | 'achievements';
+  | 'achievements'
+  | 'projects';
 
 export interface ExerciseSessionResult {
   chapterId: string;

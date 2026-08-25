@@ -89,18 +89,25 @@ export default function Achievements() {
             <h2 className="font-heading font-bold mb-3 text-base" style={{ color: SPACE.onDarkMuted }}>Låsta 🔒</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {locked.map(a => (
-                <div key={a.id} className="clay-card p-4 flex items-center gap-4 opacity-50">
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 bg-gray-100">
+                // Dämpningen ligger på ikonen, inte på hela kortet: en sänkt
+                // opacitet på kortet gör det halvgenomskinligt mot rymden, och
+                // då blir texten nästan omöjlig att läsa. Att prestationen är
+                // låst syns ändå på den gråa ikonen och på rubriken ovanför.
+                <div key={a.id} className="clay-card p-4 flex items-center gap-4">
+                  <div
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 bg-gray-100"
+                    style={{ filter: 'grayscale(1)', opacity: 0.55 }}
+                  >
                     {a.icon}
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap mb-0.5">
-                      <span className="font-heading font-bold text-gray-600 text-sm">{a.title}</span>
+                      <span className="font-heading font-bold text-gray-700 text-sm">{a.title}</span>
                       <span className={`text-xs font-black px-1.5 py-0.5 rounded-full ${RARITY_BADGE[a.rarity]}`}>
                         {RARITY_LABEL[a.rarity]}
                       </span>
                     </div>
-                    <p className="text-xs text-gray-500">{a.description}</p>
+                    <p className="text-xs text-gray-600">{a.description}</p>
                   </div>
                 </div>
               ))}

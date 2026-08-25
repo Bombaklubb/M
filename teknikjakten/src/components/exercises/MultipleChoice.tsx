@@ -38,7 +38,7 @@ export default function MultipleChoice({ exercise, onAnswer }: Props) {
           } else if (isSelected && !isCorrect) {
             cls += 'border-2 border-red-400 bg-red-50';
           } else {
-            cls += 'opacity-60';
+            cls += 'opacity-75';
           }
 
           return (
@@ -46,7 +46,7 @@ export default function MultipleChoice({ exercise, onAnswer }: Props) {
               {revealed && isCorrect && <CheckCircle size={20} className="text-green-500 flex-shrink-0" />}
               {revealed && isSelected && !isCorrect && <XCircle size={20} className="text-red-500 flex-shrink-0" />}
               {(!revealed || (!isCorrect && !isSelected)) && (
-                <span className="w-7 h-7 rounded-lg bg-sky-100 text-sky-700 font-black text-sm flex items-center justify-center flex-shrink-0">
+                <span className="w-7 h-7 rounded-lg bg-sky-100 text-sky-950 font-black text-sm flex items-center justify-center flex-shrink-0">
                   {String.fromCharCode(65 + idx)}
                 </span>
               )}

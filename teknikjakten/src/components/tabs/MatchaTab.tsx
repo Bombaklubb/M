@@ -1,11 +1,13 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { RotateCcw } from 'lucide-react';
+import { SPACE } from '../../utils/theme';
 import { shuffle } from '../../utils/shuffle';
 
-export default function MatchaTab({ concepts, progressHex, accentHex }: {
+export default function MatchaTab({ concepts, progressHex, accentHex, glowHex }: {
   concepts: { term: string; definition: string }[];
   progressHex: string;
   accentHex: string;
+  glowHex: string;
 }) {
   const conceptsKey = concepts.map(c => c.term).join('|');
   // eslint-disable-next-line react-hooks/exhaustive-deps -- avsiktligt: ska bara blandas om när innehållet byts, inte vid varje rendering
@@ -44,7 +46,7 @@ export default function MatchaTab({ concepts, progressHex, accentHex }: {
 
   return (
     <div>
-      <p className="text-xs font-black text-gray-500 uppercase tracking-wide mb-4">
+      <p className="text-xs font-black uppercase tracking-wide mb-4" style={{ color: SPACE.atmosphere }}>
         Välj ett begrepp, välj sedan rätt förklaring
       </p>
 
@@ -67,7 +69,9 @@ export default function MatchaTab({ concepts, progressHex, accentHex }: {
               const isSelected = selectedTerm === c.term;
               const isFlashing = flash?.term === c.term;
               let style: React.CSSProperties = { background: 'white', borderColor: '#e5e7eb', color: '#374151' };
-              if (isMatched) style = { background: `${progressHex}18`, borderColor: progressHex, color: progressHex };
+              // En matchad ruta blir en genomskinlig tonad yta ovanpå den mörka
+              // bakgrunden – därför ljus text, inte områdets mellanfärg.
+              if (isMatched) style = { background: `${progressHex}18`, borderColor: progressHex, color: glowHex };
               else if (isSelected) style = { background: `${accentHex}18`, borderColor: accentHex, color: '#1f2937' };
               else if (isFlashing && flash && !flash.ok) style = { background: '#fee2e2', borderColor: '#fca5a5', color: '#dc2626' };
               return (
@@ -86,7 +90,9 @@ export default function MatchaTab({ concepts, progressHex, accentHex }: {
               const isMatched = matched.has(c.term);
               const isFlashing = flash?.def === c.definition;
               let style: React.CSSProperties = { background: 'white', borderColor: '#e5e7eb', color: '#374151' };
-              if (isMatched) style = { background: `${progressHex}18`, borderColor: progressHex, color: progressHex };
+              // En matchad ruta blir en genomskinlig tonad yta ovanpå den mörka
+              // bakgrunden – därför ljus text, inte områdets mellanfärg.
+              if (isMatched) style = { background: `${progressHex}18`, borderColor: progressHex, color: glowHex };
               else if (isFlashing && flash && !flash.ok) style = { background: '#fee2e2', borderColor: '#fca5a5', color: '#dc2626' };
               else if (selectedTerm) style = { background: '#eff6ff', borderColor: '#93c5fd', color: '#1e40af' };
               return (
