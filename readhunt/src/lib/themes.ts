@@ -36,6 +36,7 @@ const THEME_VISUALS: Record<string, ThemeVisual> = {
   society: { emoji: '🏙️', gradient: 'from-slate-400 to-slate-600', label: 'Society' },
   sport: { emoji: '🏅', gradient: 'from-blue-400 to-indigo-500', label: 'Sport' },
   sports: { emoji: '⚽', gradient: 'from-blue-400 to-indigo-500', label: 'Sports' },
+  'super mario': { emoji: '🍄', gradient: 'from-red-500 to-sky-500', label: 'Super Mario' },
   technology: { emoji: '🤖', gradient: 'from-cyan-400 to-indigo-500', label: 'Technology' },
 };
 

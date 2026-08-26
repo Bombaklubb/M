@@ -567,6 +567,87 @@
     }
   },
   {
+    "id": "ak1-mario-001",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "super mario",
+    "title": "Grandma's Old Game",
+    "imageUrl": "https://images.unsplash.com/photo-1494526585095-c41746248156?w=700&h=420&fit=crop",
+    "text": "Grandma has an old game. It is about a man in a red hat. He runs and jumps. Grandma is better at it than me. She played it when she was small.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who has an old game?",
+        "options": [
+          "Grandma",
+          "Dad",
+          "My brother",
+          "My friend"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does the man in the game wear?",
+        "options": [
+          "A blue coat",
+          "A red hat",
+          "Big boots",
+          "A green shirt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does the man do?",
+        "options": [
+          "He swims",
+          "He drives",
+          "He runs and jumps",
+          "He climbs a tree"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Who is better at the game?",
+        "options": [
+          "I am",
+          "Nobody",
+          "We are the same",
+          "Grandma is"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is Grandma so good at the game?",
+        "options": [
+          "She has played it since she was small",
+          "She reads the rules first",
+          "The game is very easy",
+          "She plays every day now"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How old is the game?",
+        "options": [
+          "It is brand new",
+          "It is many years old",
+          "It is one year old",
+          "The text does not say"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 32,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak1-ny-001",
     "grade": 1,
     "genre": "fiction",
@@ -1778,6 +1859,87 @@
     ],
     "meta": {
       "wordCount": 43,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-mario-001",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "super mario",
+    "title": "Always Luigi",
+    "imageUrl": "https://images.unsplash.com/photo-1541844053589-346841d0b34c?w=700&h=420&fit=crop",
+    "text": "My little brother always plays Luigi. I ask him why. He says Luigi jumps higher. I say that Mario is the main one. My brother says he does not want the main one. He wants the one who jumps higher. I think about that for a while.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who does the little brother always play?",
+        "options": [
+          "Luigi",
+          "Mario",
+          "Peach",
+          "Toad"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why does he choose him?",
+        "options": [
+          "He runs faster",
+          "He jumps higher",
+          "He is green",
+          "He is easier to see"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does the older child say about Mario?",
+        "options": [
+          "He is the fastest",
+          "He is the strongest",
+          "He is the main one",
+          "He is the oldest"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does the older child do at the end?",
+        "options": [
+          "Changes the game",
+          "Plays as Luigi too",
+          "Laughs at the brother",
+          "Thinks about it"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What is most important to the little brother?",
+        "options": [
+          "What the character can do",
+          "What the character looks like",
+          "Who wins the game",
+          "What his brother says"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the older child think about it?",
+        "options": [
+          "The brother forgot the rules",
+          "The brother had a fair point",
+          "The game had ended",
+          "The brother was upset"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 47,
       "readingTime": 1
     }
   },
@@ -3402,6 +3564,87 @@
     }
   },
   {
+    "id": "ak3-mario-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "super mario",
+    "title": "The Jump She Could Not Make",
+    "imageUrl": "https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=700&h=420&fit=crop",
+    "text": "There was one jump Ines could not make. She tried it forty times on Saturday and did not get across once.\n\nOn Sunday her cousin watched her play. \"You jump too early,\" he said. \"Wait until you are almost at the edge.\"\n\nIt felt completely wrong. Ines did it anyway, and she landed on the other side. Then she did it again, to be sure it was not luck.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How many times did Ines try on Saturday?",
+        "options": [
+          "Ten",
+          "Twenty",
+          "Thirty",
+          "Forty"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Who watched her play on Sunday?",
+        "options": [
+          "Her cousin",
+          "Her sister",
+          "Her friend",
+          "Her father"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did he say she was doing wrong?",
+        "options": [
+          "Running too fast",
+          "Jumping too early",
+          "Looking at the wrong place",
+          "Holding the buttons too long"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did he tell her to do?",
+        "options": [
+          "Try a different level",
+          "Take a break first",
+          "Wait until she was almost at the edge",
+          "Jump twice in a row"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why did the advice feel wrong to Ines?",
+        "options": [
+          "It was the opposite of what she had been doing",
+          "Her cousin had never played the game",
+          "She had already tried it",
+          "The level was too dark to see"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did Ines do the jump a second time?",
+        "options": [
+          "She wanted to beat her cousin",
+          "She wanted to know it was not luck",
+          "She had to collect something",
+          "She had forgotten how she did it"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 69,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak3-ny-001",
     "grade": 3,
     "genre": "fiction",
@@ -5018,6 +5261,87 @@
     ],
     "meta": {
       "wordCount": 218,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak4-mario-001",
+    "grade": 4,
+    "genre": "non-fiction",
+    "theme": "super mario",
+    "title": "The Man With No Name",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&h=420&fit=crop",
+    "text": "The most famous character in video games did not have a name when he was created.\n\nIn 1981 a young designer at Nintendo, Shigeru Miyamoto, was asked to save a failing arcade machine. He made a game about a large ape who has taken a woman to the top of a building, and a small man who has to climb up and rescue her. The game was Donkey Kong. In it, the small man was simply called Jumpman.\n\nAlmost everything about him was decided by the machine, not by an artist. The screen was tiny, so a face could not show a mouth. A moustache was drawn instead, because it made the nose visible. Hair was difficult to animate while running, so he was given a cap. Arms disappeared against the body when he moved, so he was given overalls in a different colour, which made the arms stand out.\n\nHe was not a plumber either. In Donkey Kong he is a carpenter.\n\nThe name came later, and from real life. Nintendo's American staff rented a warehouse from a landlord called Mario Segale, and someone suggested the character looked like him. The name stuck.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "In which year was Donkey Kong made?",
+        "options": [
+          "1981",
+          "1985",
+          "1990",
+          "1996"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What was the character first called?",
+        "options": [
+          "Mario",
+          "Jumpman",
+          "Luigi",
+          "Kong"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why was he given a moustache?",
+        "options": [
+          "It suited the story",
+          "The designer had one",
+          "It made the nose visible",
+          "It was easy to colour"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What was his job in the first game?",
+        "options": [
+          "A plumber",
+          "A builder",
+          "A doctor",
+          "A carpenter"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why was he given overalls in a different colour?",
+        "options": [
+          "So his arms could be seen when he moved",
+          "So he would look like a workman",
+          "Because red was hard to print",
+          "So players could tell him from the ape"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the text suggest about the character’s design?",
+        "options": [
+          "It was planned carefully in advance",
+          "Most of it came from technical limits",
+          "It copied an older cartoon",
+          "It was chosen by the players"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 194,
       "readingTime": 1
     }
   },
@@ -6653,6 +6977,87 @@
     ],
     "meta": {
       "wordCount": 317,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak5-mario-001",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "super mario",
+    "title": "Music From a Chip",
+    "imageUrl": "https://images.unsplash.com/photo-1562408590-e32931084e23?w=700&h=420&fit=crop",
+    "text": "Millions of people who have never played a Mario game can hum the theme from the first one. It was written in 1985 by Koji Kondo, and it is probably the most recognised piece of music composed for a machine.\n\nThe machine mattered. The Nintendo console of that time could not play recordings. It produced sound electronically, and it had four channels: two that could play a normal tone, one deeper tone, and one that could only make noise, used for drums. That was the entire orchestra. A composer could play at most three notes at the same time, and the fourth had to be percussion.\n\nKondo has explained that this changed how he wrote. With three voices, a melody cannot hide behind a rich accompaniment. Every note has to be doing something. He also had to consider that the music would repeat for as long as the player stayed in the level, which might be thirty seconds or twenty minutes, so it needed to be pleasant on the fiftieth hearing rather than only the first.\n\nHe wrote to the movement. Early versions of the theme did not fit, and Kondo has said he sat with the game running and adjusted the music until it matched the speed of a running character. That is why the melody feels like walking and then like hurrying, and why players often notice their thumbs falling into time with it.\n\nThe same limits shaped the sound effects. A jump and a coin had to be produced by the same chip, briefly stealing a channel from the music, which is why the melody thins for an instant every time the player jumps.\n\nThe result is short. The main tune lasts well under a minute before it begins again. It survived because it was built out of what the hardware could actually do, rather than being a piece of orchestral music squeezed into a chip.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who wrote the music, and when?",
+        "options": [
+          "Koji Kondo, in 1985",
+          "Shigeru Miyamoto, in 1981",
+          "Koji Kondo, in 1996",
+          "Takashi Tezuka, in 1990"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How many channels did the console have?",
+        "options": [
+          "Two",
+          "Three",
+          "Four",
+          "Eight"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What was the fourth channel used for?",
+        "options": [
+          "The bass line",
+          "Drums and noise",
+          "The main melody",
+          "Sound effects only"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How did Kondo make the music fit the game?",
+        "options": [
+          "He copied an existing folk tune",
+          "He asked the players to vote",
+          "He wrote it before the game was designed",
+          "He sat with the game running and adjusted it"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did the limit of three notes change how he wrote?",
+        "options": [
+          "Every note had to do real work in the melody",
+          "He could only use short pieces",
+          "The music had to be very slow",
+          "He had to avoid drums entirely"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did the music need to be pleasant on the fiftieth hearing?",
+        "options": [
+          "Players listened to it outside the game",
+          "It repeated for as long as the player stayed in the level",
+          "It was used in every later game",
+          "The console played it during loading"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 319,
       "readingTime": 2
     }
   },
@@ -8429,6 +8834,87 @@
           "Episodes use more story each week than the artist can produce",
           "Manga artists take long breaks between chapters",
           "Television companies demand longer seasons"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 405,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak6-mario-001",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "super mario",
+    "title": "The Level That Teaches You",
+    "imageUrl": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=700&h=420&fit=crop",
+    "text": "The first level of Super Mario Bros. is called World 1-1, and it is studied by game designers more than almost any other few minutes in the medium. The reason is that it teaches a player everything they need to know without a single instruction.\n\nIn 1985 there was no tutorial and usually no manual to hand, because most players met the game in an arcade or at a friend's house. Whatever the player needed to learn had to be taught by the level itself.\n\nIt begins with the character standing on the left of an empty screen. There is nothing to the left, so the only possible movement is right. That establishes the direction of the whole game in about two seconds, without words.\n\nA short walk later, a single enemy appears, moving slowly towards the player. Above it, and slightly before it, sits a block. A player who panics and jumps will hit the block, which produces a coin and a pleasant sound, teaching that jumping into things from below is rewarded. A player who does nothing is walked into by the enemy and loses a life, teaching that the enemy is dangerous. A player who jumps on the enemy destroys it. Three of the game's core rules are demonstrated in one arrangement of objects, and the player cannot avoid learning at least one of them.\n\nThe next block produces a mushroom, which slides towards the player. Many first-time players tried to avoid it, assuming it was another enemy, but the pipe placed just ahead makes avoiding it difficult. The mushroom catches them, and instead of dying they grow. The lesson is learned by accident and never forgotten.\n\nNone of this is decoration. Every gap, block and pipe in the opening thirty seconds is placed to produce a specific misunderstanding and then correct it. Miyamoto has said the team rebuilt the level many times until a person who had never held a controller could finish it.\n\nNothing later in the game reuses that opening. Once the rules are known, World 1-2 immediately breaks one of them by sending the player underground, where the rhythm and the light are different, and the player is expected to cope.\n\nThe technique now has a name, environmental teaching, and it is used across the industry. The idea behind it is simple: a rule a player discovers is remembered, and a rule a player is told is skipped.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is the first level called?",
+        "options": [
+          "World 1-1",
+          "Level One",
+          "Stage A",
+          "The Mushroom Level"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why was there no tutorial in 1985?",
+        "options": [
+          "The console had too little memory",
+          "Players usually met the game without a manual",
+          "Designers had not thought of it",
+          "Arcades did not allow instructions"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does the player learn from the empty screen at the start?",
+        "options": [
+          "That enemies come from the left",
+          "That the level is timed",
+          "That the only way to move is right",
+          "That jumping is the main action"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What happens if a player tries to avoid the mushroom?",
+        "options": [
+          "It disappears after a few seconds",
+          "It turns into an enemy",
+          "It follows them for the whole level",
+          "A pipe makes avoiding it difficult"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is the first enemy placed just before a block?",
+        "options": [
+          "Almost any reaction teaches the player a rule",
+          "It hides the coin from view",
+          "It makes the level harder to finish",
+          "It slows the player down"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea behind environmental teaching?",
+        "options": [
+          "Players prefer short levels to long ones",
+          "A rule discovered is remembered, while a rule told is skipped",
+          "Every game should begin with an easy level",
+          "Instructions work best when they are written simply"
         ],
         "correct": 1
       }
@@ -10302,6 +10788,87 @@
     }
   },
   {
+    "id": "ak7-mario-001",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "super mario",
+    "title": "The Problem With the Third Dimension",
+    "imageUrl": "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?w=700&h=420&fit=crop",
+    "text": "In 1996, Nintendo released Super Mario 64, and in doing so had to solve a problem that had nothing to do with Mario. Nobody yet knew how a person should move through a three-dimensional space on a screen.\n\nFlat games had never needed to ask. The player pressed right and the character went right, and the view was fixed because there was only one way to look. A three-dimensional world offers infinite viewpoints, and the player has hands for only some of them.\n\nThe first difficulty was the controller. Pushing a direction on a cross-shaped pad gives eight possible directions and one speed. In a real space you need any direction and any speed, because creeping along a narrow ledge and sprinting across a field are different actions. Nintendo designed a new controller with an analogue stick, which measures how far it is pushed as well as where. Almost every controller since has one, and the reason is this game.\n\nThe second difficulty was harder, and it has never been solved completely. Somebody has to decide where the camera is. If the player controls it entirely, they will spend the game fighting the view instead of playing. If the game controls it entirely, it will sooner or later point at a wall at the worst possible moment. Nintendo chose a compromise and, characteristically, explained it inside the story: the camera is held by a creature flying behind the player with a film camera, and it can be nudged but not fully commanded. Giving the camera a body did not fix the problem. It did tell the player that the view was a thing with its own position, which made it easier to understand when it behaved badly.\n\nThe third difficulty was what a level even is. In a flat game a level is a corridor with an end. Super Mario 64 replaced corridors with open areas containing several separate goals, so that a player who found one task impossible could go and do a different one. That structure is now normal in large games, and it began partly as a practical answer to the fact that players get lost in three dimensions.\n\nA fourth question sounds trivial and is not: what should the character do while the player is idle? In a flat game he simply stands. In a space the player can look around, standing still reads as the game having stopped. Mario therefore shifts his weight and looks towards the camera, and those small movements exist to reassure the player that the world is still running.\n\nTesting was the only way to find any of this. Nintendo has described watching people who had never played, and noting where they became confused rather than where they died. A player dying is usually fine; a player who does not understand why they died is not. Several of the game's decisions came from watching the second kind of failure.\n\nThe game is often described as one of the most influential ever made, which sounds like praise for its quality. It is better understood as a set of solutions. Later designers did not copy the levels. They copied the answers.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When was Super Mario 64 released?",
+        "options": [
+          "1985",
+          "1990",
+          "1996",
+          "2001"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does an analogue stick measure that a cross-shaped pad does not?",
+        "options": [
+          "How long it is held",
+          "How far it is pushed",
+          "How many fingers are used",
+          "How fast the player reacts"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How did the game explain the camera inside its story?",
+        "options": [
+          "A creature flies behind the player holding a film camera",
+          "The player is watching a recording",
+          "A map shows the view from above",
+          "The world turns instead of the camera"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How did the game change what a level is?",
+        "options": [
+          "Levels became much longer corridors",
+          "Levels were chosen at random",
+          "Levels had no ending at all",
+          "Open areas replaced corridors, with several separate goals"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is full player control of the camera a bad solution?",
+        "options": [
+          "The player would fight the view instead of playing",
+          "It would make the game run too slowly",
+          "Most controllers have too few buttons",
+          "The camera would show the level too early"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the writer say the game is best understood as a set of solutions?",
+        "options": [
+          "Its levels were copied by many later games",
+          "Later designers reused its answers rather than its content",
+          "It was built by solving puzzles",
+          "It fixed problems in the earlier flat games"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 528,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak7-mlk-001",
     "grade": 7,
     "genre": "non-fiction",
@@ -12161,6 +12728,87 @@
     ],
     "meta": {
       "wordCount": 544,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak8-mario-001",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "super mario",
+    "title": "Nintendo Before Mario",
+    "imageUrl": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=700&h=420&fit=crop",
+    "text": "Nintendo was founded in Kyoto in 1889, which makes it older than the aeroplane, the radio and the modern Olympic Games. For most of its history it had nothing to do with electronics. It made hanafuda, traditional Japanese playing cards, printed by hand on mulberry paper, and it made them for about seventy years.\n\nIn the 1960s the company tried to become something else, without much idea of what. It ran a taxi service. It sold instant rice. It operated so-called love hotels. It made a vacuum cleaner. Almost all of these failed, and by the end of the decade Nintendo was close to collapse.\n\nWhat saved it was toys, and then arcades. A maintenance engineer named Gunpei Yokoi was noticed making a mechanical extending arm to amuse himself at work, and the company put it on sale. It sold over a million. Yokoi went on to design a series of successful toys and eventually the handheld Game and Watch, and Nintendo learned a lesson it repeated for decades afterwards: use cheap, well-understood technology in a new way, rather than expensive technology in the ordinary way.\n\nThen, in 1983, the video game industry in the United States collapsed. Too many companies had released too many poor games with no quality control, retailers were left with unsellable stock, and the market shrank by more than ninety per cent in two years. American shops concluded that video games had been a fad, like hula hoops, and stopped stocking them.\n\nNintendo wanted to sell a console into that ruin. Its answer was control. It manufactured the cartridges itself, limited how many titles a publisher could release each year, and put a seal on every approved box. It also disguised the machine, selling it in America as an entertainment system with a toy robot, so that shops would not file it beside the products they had just written off.\n\nThe console needed a game that would demonstrate what it could do. That game was Super Mario Bros., released in 1985, and it eventually sold around forty million copies. It is difficult to separate the two: the console sold because of the game, and the game reached people because of the console.\n\nThe seal had a second purpose that Nintendo did not advertise. A chip inside each console checked for a matching chip inside the cartridge, so a game made without permission simply would not start. This was a technical lock, and it gave Nintendo control over an entire industry's output. Competitors and some publishers objected, courts in several countries examined the arrangement, and the practice was eventually loosened. The principle of a platform holder approving what runs on its hardware, however, did not go away, and it is the direct ancestor of how app stores work today.\n\nThe disguise mattered too. In Japan the machine was a plain red and white box called the Family Computer. In America it was renamed the Nintendo Entertainment System, given a grey case shaped like a video recorder, and sold with a plastic robot and a light gun so that it looked like a toy rather than a games console. The robot was barely used by any game. Its job was to get the box onto a shelf.\n\nThe wider point is that the most successful character in gaming came from a company that had spent ninety years failing at almost everything except playing cards.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When was Nintendo founded?",
+        "options": [
+          "1889",
+          "1920",
+          "1950",
+          "1983"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did the company make for about seventy years?",
+        "options": [
+          "Mechanical toys",
+          "Playing cards",
+          "Instant rice",
+          "Vacuum cleaners"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What was Gunpei Yokoi doing when he was noticed?",
+        "options": [
+          "Repairing an arcade machine",
+          "Designing a card game",
+          "Making a mechanical extending arm",
+          "Testing a handheld screen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "By how much did the American market shrink after 1983?",
+        "options": [
+          "About a fifth",
+          "About half",
+          "About seventy per cent",
+          "More than ninety per cent"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did Nintendo control which games could be released?",
+        "options": [
+          "Shops had stopped trusting video games after the collapse",
+          "Publishers had asked for fewer releases",
+          "Cartridges were expensive to manufacture",
+          "The console could hold only a few titles"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What lesson did Nintendo take from Yokoi’s work?",
+        "options": [
+          "Toys sell better than electronics",
+          "Cheap, familiar technology used in a new way can succeed",
+          "Engineers should be left to work alone",
+          "Products should be tested for years before release"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 567,
       "readingTime": 4
     }
   },
@@ -14433,6 +15081,87 @@
     }
   },
   {
+    "id": "ak9-mario-001",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "super mario",
+    "title": "Four Minutes and Fifty Seconds",
+    "imageUrl": "https://images.unsplash.com/photo-1518131672697-613becd4fab5?w=700&h=420&fit=crop",
+    "text": "A game designed to last several hours is now regularly completed in under five minutes. The people who do this call themselves speedrunners, and what they have built around a forty-year-old game is one of the stranger achievements in modern hobby culture.\n\nSpeedrunning began informally, as boasting between friends, and became organised once video could be shared. A run is recorded, submitted to a community site, and examined by volunteers who look for splices, altered timing and modified hardware before it is accepted. There are rules, agreed by the players rather than the publisher, defining categories: finishing the game by any means, finishing it while collecting everything, finishing it without using a particular technique. Each category has its own record and its own history.\n\nThe techniques are not what a designer intended. Runners study the code, sometimes by reading it directly, and find behaviour the developers never noticed. Walls can be passed through at particular speeds and angles. Objects can be made to load in the wrong order. In some games this allows the player to jump from the opening scene to the ending, which produces a philosophical argument the community takes seriously: if you skip the entire game, have you completed it? The usual answer is to create a separate category, so that both kinds of run can exist without one destroying the other.\n\nSuper Mario Bros. has a particular curiosity. The game does not check the clock continuously. It processes the end of a level only at fixed intervals, twenty-one frames apart, which players call frame rules. Arriving at the flagpole a fraction of a second earlier therefore saves nothing at all unless it crosses one of these boundaries. The result is that the record does not fall smoothly. It sits unchanged for years and then drops by exactly the same amount, a little over a third of a second, when someone finally gains enough time to cross a boundary. Runners can calculate in advance how much a future record must be. That is an unusual thing to know about a world record.\n\nThere is also a separate discipline for runs assembled frame by frame with software, which no human could perform. These are not compared with human records. They are treated as a demonstration of the theoretical limit, and they show how much of the remaining gap is human and how much is the machine.\n\nMarathon events turned this into something public. Runners began streaming attempts live, and charity marathons now run for a week at a time with a rotating cast of players and commentators explaining the tricks to an audience that has mostly never attempted them. These events have raised tens of millions of pounds for medical charities, which is an odd outcome for a pastime built on breaking games.\n\nThe scale of the effort is easy to underestimate. A top runner may attempt a route several thousand times, keeping only the attempts that survive the early sections, and the final recorded run is the one where a long chain of individually unremarkable pieces all happened to align.\n\nWhat holds it together is documentation. Every trick is written up, filmed and explained by the person who found it, and given away. A record that took a decade of collective work is broken by someone using knowledge that the previous holder published. It is a competition that runs almost entirely on shared research, which is not how most competitions work.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What do volunteers check before accepting a run?",
+        "options": [
+          "That the player owns the game legally",
+          "Splices, altered timing and modified hardware",
+          "That the run is faster than the record",
+          "That the player has been in the community for a year"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How do runners find techniques the developers never noticed?",
+        "options": [
+          "By asking the original designers",
+          "By testing every button combination",
+          "By studying the code, sometimes reading it directly",
+          "By comparing different console models"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How far apart are the frame rules?",
+        "options": [
+          "Twenty-one frames",
+          "Ten frames",
+          "Sixty frames",
+          "Five frames"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How are runs assembled frame by frame with software treated?",
+        "options": [
+          "They are banned from the community",
+          "They replace the human record",
+          "They are counted in a beginners’ category",
+          "They are treated as a demonstration of the theoretical limit"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the record drop by the same amount each time?",
+        "options": [
+          "A saving only counts when it crosses a frame-rule boundary",
+          "The community agreed on a fixed step",
+          "The console runs at a constant speed",
+          "Runners stop improving once a record is set"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the writer find unusual about the competition?",
+        "options": [
+          "Records are verified by the publisher",
+          "Competitors give away the research their rivals then use",
+          "The categories change every year",
+          "The best runs are performed by machines"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 574,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak9-ny-001",
     "grade": 9,
     "genre": "non-fiction",
@@ -16211,6 +16940,87 @@
     ],
     "meta": {
       "wordCount": 594,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak10-mario-001",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "super mario",
+    "title": "Why the Jump Still Feels Right",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=700&h=420&fit=crop",
+    "text": "Ask people why they like a particular game and they will describe the story, the characters or the graphics. Ask a designer and they are likely to talk about something much smaller: how it feels to press a button. The industry calls this game feel, and Mario is the standard example, because the jump was solved before almost anything else existed around it.\n\nMiyamoto has described building a version with no enemies, no scenery and no goal, simply to check whether moving a shape across a blank screen was enjoyable. If it was not, no amount of decoration would save it. That order of work, mechanics first and content afterwards, is now widely taught, and it inverts what an outsider would assume the priorities to be.\n\nWhat makes the jump work is a set of decisions that contradict physics. A real jump is determined at the moment you leave the ground. Here, the height depends on how long the button is held, so the player retains control after they are already in the air, which is impossible and feels correct. The character falls faster than he rises, which no object does, but which removes the floating sensation that makes many games feel sluggish. He can steer in mid-air. There is a brief window after walking off a ledge in which a jump still registers, so that a player who was a fraction late is not punished for something they experienced as being on time.\n\nThat last device is worth dwelling on. It is a deliberate inaccuracy designed to match the player's perception rather than the simulation, and versions of it appear throughout modern games: a shot that missed narrowly may be counted as a hit, a difficult sequence may quietly become easier after repeated failure. The player is not told. The argument for concealment is that knowing would change the behaviour being helped, and the argument against is that the player is being deceived about their own competence. Designers disagree, and mostly do it anyway.\n\nThere is a fair objection to all of this. Perhaps Mario endures because of familiarity and marketing rather than design, and adults who praise the jump are describing their childhood. Nostalgia is a powerful and unreliable critic. But there is at least one piece of evidence pointing the other way. Players born decades after 1985, with no memory of it, still find the controls immediately legible, while many contemporaries of the original are now genuinely awkward to play. Something in it survives the loss of context.\n\nThe same principle explains why so many imitations failed. Through the late 1980s dozens of games copied the look almost exactly: a small running figure, blocks to hit, enemies to land on. Most of them are unplayable now, and the reason is not the graphics. The figure accelerates wrongly, or stops dead instead of sliding, or cannot be steered once airborne, and within ten seconds the game feels hostile. The visible parts were the easy parts to copy.\n\nPrecision matters at a scale that sounds absurd. Designers discuss acceleration in units per frame and hold windows in single frames, roughly a sixtieth of a second. A player cannot consciously perceive a difference that small, but can feel the accumulated result across a hundred jumps, and will describe it in vague words like heavy or floaty without knowing what changed.\n\nThe wider lesson is not about Mario. It is that in an interactive medium the smallest unit of meaning is not the scene or the sentence but the response to an input, and that a work can be forgiven a great deal if that response is right. It can be forgiven almost nothing if it is wrong.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Miyamoto build to test the movement?",
+        "options": [
+          "A version with no enemies, scenery or goal",
+          "A paper model of the first level",
+          "A version played by children only",
+          "A slower copy of an arcade game"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What determines the height of the jump?",
+        "options": [
+          "The speed before jumping",
+          "How long the button is held",
+          "The height of the nearest platform",
+          "A fixed value set by the level"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How does the character’s falling speed compare with his rising speed?",
+        "options": [
+          "They are identical",
+          "He rises faster than he falls",
+          "He falls faster than he rises",
+          "It changes with each level"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What happens if a player jumps just after walking off a ledge?",
+        "options": [
+          "The jump is cancelled",
+          "The character falls immediately",
+          "A warning sound plays",
+          "The jump still registers"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why do designers argue about hiding these adjustments?",
+        "options": [
+          "Knowing might change the behaviour being helped, but concealment misleads the player",
+          "They are expensive to program correctly",
+          "Players have asked for them to be removed",
+          "They only work in older games"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What evidence does the writer offer against the nostalgia objection?",
+        "options": [
+          "Sales have continued to rise every year",
+          "Players with no memory of 1985 still find the controls legible",
+          "Critics from the period agreed at the time",
+          "The game has been remade many times"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 617,
       "readingTime": 4
     }
   },
