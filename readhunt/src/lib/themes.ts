@@ -23,6 +23,7 @@ const THEME_VISUALS: Record<string, ThemeVisual> = {
   'food-science': { emoji: '🍫', gradient: 'from-amber-500 to-yellow-600', label: 'Food science' },
   friendship: { emoji: '😊', gradient: 'from-orange-400 to-rose-500', label: 'Friendship' },
   gaming: { emoji: '🎮', gradient: 'from-indigo-400 to-purple-600', label: 'Gaming' },
+  'harry potter': { emoji: '🪄', gradient: 'from-purple-500 to-amber-500', label: 'Harry Potter' },
   health: { emoji: '💪', gradient: 'from-lime-400 to-emerald-500', label: 'Health' },
   history: { emoji: '🏛️', gradient: 'from-stone-400 to-amber-600', label: 'History' },
   horses: { emoji: '🐴', gradient: 'from-amber-400 to-orange-600', label: 'Horses' },

@@ -405,6 +405,87 @@
     }
   },
   {
+    "id": "ak1-hp-001",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "harry potter",
+    "title": "The First Chapter",
+    "imageUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=700&h=420&fit=crop",
+    "text": "It is Tom's birthday. He gets a big book about a boy with glasses. Tom reads one chapter. Then he reads another one. His cake is still on the table.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What day is it?",
+        "options": [
+          "Tom's birthday",
+          "A school day",
+          "Christmas Day",
+          "A Sunday"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does Tom get?",
+        "options": [
+          "A cake",
+          "A big book",
+          "A pair of glasses",
+          "A new bag"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who is the book about?",
+        "options": [
+          "A girl with a dog",
+          "A man in a hat",
+          "A boy with glasses",
+          "A family on a farm"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How many chapters does Tom read?",
+        "options": [
+          "None",
+          "Half of one",
+          "One",
+          "Two"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is the cake still on the table?",
+        "options": [
+          "Tom is too busy reading",
+          "Tom does not like cake",
+          "The cake is not ready",
+          "Tom is saving it for later"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does Tom think of the book?",
+        "options": [
+          "It is too hard",
+          "He likes it a lot",
+          "It is boring",
+          "It is too short"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 30,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak1-manga-001",
     "grade": 1,
     "genre": "fiction",
@@ -1535,6 +1616,87 @@
     ],
     "meta": {
       "wordCount": 49,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-hp-001",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "harry potter",
+    "title": "Which House?",
+    "imageUrl": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700&h=420&fit=crop",
+    "text": "Today the class does a Harry Potter quiz. It tells you which house you belong to. Sara gets Gryffindor. Her best friend gets Slytherin. They are both a little surprised. At lunch they do the quiz again and get the same answer.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What does the class do today?",
+        "options": [
+          "A Harry Potter quiz",
+          "A spelling test",
+          "A drawing task",
+          "A reading game"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does the quiz tell you?",
+        "options": [
+          "Which book to read next",
+          "Which house you belong to",
+          "How fast you read",
+          "Which character you like"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which house does Sara get?",
+        "options": [
+          "Slytherin",
+          "Hufflepuff",
+          "Gryffindor",
+          "Ravenclaw"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What do they do at lunch?",
+        "options": [
+          "They ask the teacher",
+          "They read the book",
+          "They tell the class",
+          "They do the quiz again"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why are the two friends surprised?",
+        "options": [
+          "They expected the same house",
+          "They had not read the books",
+          "The quiz was too long",
+          "Nobody else did the quiz"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do they do the quiz a second time?",
+        "options": [
+          "They forgot the first answer",
+          "They hoped for a different result",
+          "The teacher told them to",
+          "They wanted to help a friend"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 42,
       "readingTime": 1
     }
   },
@@ -3078,6 +3240,87 @@
     }
   },
   {
+    "id": "ak3-hp-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "harry potter",
+    "title": "Reading in the Dark",
+    "imageUrl": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=700&h=420&fit=crop",
+    "text": "Milo was supposed to be asleep. Instead he was under the covers with a torch and chapter nineteen.\n\nHis father opened the door. Milo went completely still.\n\n\"I can see the light,\" his father said. He waited. \"Finish the chapter. Then the torch comes with me.\"\n\nMilo finished the chapter. Then he read the next one, very quietly, because his father had not said anything about that one.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was Milo supposed to be doing?",
+        "options": [
+          "Sleeping",
+          "Doing homework",
+          "Tidying his room",
+          "Eating dinner"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Milo have under the covers?",
+        "options": [
+          "A phone",
+          "A torch and a book",
+          "A blanket and a pillow",
+          "A lamp"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did his father say he could see?",
+        "options": [
+          "The open door",
+          "The book",
+          "The light",
+          "Milo moving"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Milo do after finishing the chapter?",
+        "options": [
+          "He gave up the torch",
+          "He fell asleep",
+          "He called his father",
+          "He read the next chapter"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did Milo go completely still?",
+        "options": [
+          "He hoped his father would not notice him",
+          "He had heard a strange noise",
+          "He was falling asleep",
+          "He had dropped the torch"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the ending tell us about Milo?",
+        "options": [
+          "He was sorry about staying up",
+          "He found a way around the rule",
+          "He was afraid of his father",
+          "He did not enjoy the book"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 68,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak3-manga-001",
     "grade": 3,
     "genre": "fiction",
@@ -4613,6 +4856,87 @@
     ],
     "meta": {
       "wordCount": 184,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak4-hp-001",
+    "grade": 4,
+    "genre": "non-fiction",
+    "theme": "harry potter",
+    "title": "The Book Nobody Wanted",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&h=420&fit=crop",
+    "text": "In 1990, a young writer called Joanne Rowling was sitting on a delayed train from Manchester to London when an idea arrived: a boy who does not know he is a wizard. She had no pen with her, so she spent the journey thinking instead, and by the time the train moved again she had most of the story in her head.\n\nWriting it took seven years. She was often short of money, and she wrote in cafés in Edinburgh because they were warm and she could stay for a long time with one cup of coffee.\n\nWhen the book was finished, her agent sent it to publishers. Twelve of them said no. Some thought it was too long for children. Others simply did not think it would sell.\n\nThe thirteenth was a small London publisher called Bloomsbury. The chairman took the first chapter home and gave it to his eight-year-old daughter, Alice. She read it and immediately asked for the rest.\n\nBloomsbury said yes, paid a small advance and printed five hundred hardback copies, most of which went to libraries. The editor advised Rowling to get a job, because children's books rarely make money.\n\nThose five hundred copies are now among the most valuable modern books in the world.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did the idea come to Rowling?",
+        "options": [
+          "On a delayed train",
+          "In a library",
+          "At her school",
+          "On a bus in Edinburgh"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How many publishers said no?",
+        "options": [
+          "Three",
+          "Twelve",
+          "Twenty",
+          "Five"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who read the first chapter at home?",
+        "options": [
+          "The chairman’s wife",
+          "A famous author",
+          "The chairman’s daughter",
+          "A school teacher"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How many hardback copies were printed first?",
+        "options": [
+          "Fifty",
+          "One hundred",
+          "Five thousand",
+          "Five hundred"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did Rowling write in cafés?",
+        "options": [
+          "They were warm and she could stay a long time",
+          "She had no home of her own",
+          "Her publisher asked her to",
+          "She wanted to be seen writing"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did the editor tell her to get a job?",
+        "options": [
+          "The book still needed a lot of work",
+          "Children’s books rarely earn much money",
+          "She had signed only a short contract",
+          "Bloomsbury could not print more copies"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 210,
       "readingTime": 1
     }
   },
@@ -6167,6 +6491,87 @@
     ],
     "meta": {
       "wordCount": 304,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak5-hp-001",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "harry potter",
+    "title": "Midnight Queues",
+    "imageUrl": "https://images.unsplash.com/photo-1594122230689-45899d9e6f69?w=700&h=420&fit=crop",
+    "text": "By the fourth book, something unusual was happening in bookshops. People were queuing outside them at night.\n\nPublishers had begun releasing each new Harry Potter novel at exactly one minute past midnight, on the same date all over the English-speaking world. Shops stayed open. Staff dressed up. Children who would normally have been asleep for hours stood in lines that ran around the block, and some of them started reading on the pavement outside.\n\nThe reason for the midnight rule was practical rather than theatrical. Bookshops received the boxes days in advance, and the publisher made them sign agreements not to open them early. If one shop in one country sold a copy before the others, the ending would be online within hours, and everybody else's release would be spoiled. Some shops kept the boxes in locked rooms. A few were guarded.\n\nThe scale kept growing. The final book, published in 2007, sold more than eight million copies in the United States in its first twenty-four hours, and more than two and a half million in Britain. Those are not annual figures. They are one day.\n\nWhat made this possible was not only that the books were popular. It was that everyone had to wait the same length of time. A television series can be watched whenever you like, but a book that does not exist yet cannot be read early by anybody, so millions of readers arrived at the same page on the same weekend.\n\nSome booksellers hired extra staff for one night a year, and a few reported taking more money in those few hours than in an ordinary month.\n\nThat has become rare. Publishers have tried to repeat the midnight release many times since, with limited success, because the queue was never really about the shop. It was about being part of something at the same moment as everyone else.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "At what time were the new books released?",
+        "options": [
+          "At noon",
+          "One minute past midnight",
+          "At nine in the morning",
+          "At six in the evening"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did shops have to sign?",
+        "options": [
+          "A price agreement",
+          "A delivery receipt",
+          "An agreement not to open the boxes early",
+          "A promise to dress up"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How many copies did the final book sell in the United States in one day?",
+        "options": [
+          "More than eight million",
+          "About one million",
+          "About half a million",
+          "More than twenty million"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "When was the final book published?",
+        "options": [
+          "1997",
+          "2001",
+          "2004",
+          "2007"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did the publisher insist on a single release moment?",
+        "options": [
+          "One early sale would spoil the ending for everyone",
+          "Shops could not store the boxes for long",
+          "Night deliveries were cheaper",
+          "Readers preferred shopping at night"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the writer say later midnight releases have not worked as well?",
+        "options": [
+          "Bookshops became too small for the crowds",
+          "The queue was about shared waiting, which is hard to repeat",
+          "Publishers stopped printing enough copies",
+          "Readers now prefer to buy books online"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 313,
       "readingTime": 2
     }
   },
@@ -7868,6 +8273,87 @@
     ],
     "meta": {
       "wordCount": 407,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak6-hp-001",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "harry potter",
+    "title": "Why the Books Got Longer",
+    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=700&h=420&fit=crop",
+    "text": "The first Harry Potter book is about seventy-seven thousand words long, which is normal for a children's novel. The fifth is more than a quarter of a million. Reading the series in order means watching a book roughly triple in size, and that is unusual enough to be worth asking about.\n\nPart of the answer is the readers. The series was published over ten years, and a child who was nine when the first book appeared was nineteen when the last one did. The books grew alongside them. The early volumes are structured like school stories, with a mystery solved by the end of term. The later ones are longer, darker and more complicated, with several storylines running at once and characters who do not survive. A publisher would normally hesitate to make a children's series more difficult as it goes on. Here it matched what was happening to the audience.\n\nPart of the answer is success. A first-time author has very little power. An author whose books are selling in the millions has a great deal, and editors become more reluctant to cut. Rowling has said that the fifth book, the longest, could have been shorter, and reviewers at the time said so more bluntly. Whether the later volumes were edited as firmly as the early ones is a question that comes up often, and there is no clear answer, because a long book that sells enormously well is difficult to call a mistake.\n\nThere is a third reason, which is structural. The series was planned as seven books from early on, and plot threads introduced in the first volumes had to be resolved in the last. A story that plants many small details must eventually pay for them, and paying takes pages.\n\nPhysical books set a limit as well. A paperback much beyond eight hundred pages becomes difficult to bind, awkward to hold and expensive to post, and the later volumes were approaching that. Publishers in some countries split them in two, which readers disliked, because a book divided for practical reasons ends in the wrong place.\n\nWhatever the cause, the effect on young readers was noticeable. Teachers reported children finishing books of six or seven hundred pages who had previously refused anything over a hundred. Length, it turned out, was not the obstacle it had been assumed to be. What mattered was whether the reader wanted to know what happened next.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "About how long is the first book?",
+        "options": [
+          "Seventy-seven thousand words",
+          "A quarter of a million words",
+          "Twenty thousand words",
+          "Half a million words"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Over how many years was the series published?",
+        "options": [
+          "Three",
+          "Ten",
+          "Fifteen",
+          "Twenty"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which book is the longest?",
+        "options": [
+          "The first",
+          "The third",
+          "The fifth",
+          "The seventh"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How many books was the series planned as?",
+        "options": [
+          "Three",
+          "Five",
+          "Six",
+          "Seven"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say editors become more reluctant to cut?",
+        "options": [
+          "A hugely successful author has far more power than a new one",
+          "Longer books are cheaper to print",
+          "Editors are paid by the page",
+          "Readers complain when scenes are removed"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What did teachers learn about long books?",
+        "options": [
+          "They should be given only to older students",
+          "Length is not the obstacle if the reader wants to continue",
+          "Children read them faster than short ones",
+          "They work best when read aloud in class"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 404,
       "readingTime": 3
     }
   },
@@ -9654,6 +10140,87 @@
     }
   },
   {
+    "id": "ak7-hp-001",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "harry potter",
+    "title": "Translating Magic",
+    "imageUrl": "https://images.unsplash.com/photo-1546074177-31bfa593f731?w=700&h=420&fit=crop",
+    "text": "The Harry Potter books have been translated into more than eighty languages, and translators have described the work as among the hardest they have done. The difficulty is not the sentences. It is everything that was invented.\n\nOrdinary translation replaces a word with a word that already exists. Here there was often nothing to replace it with. Spells are built from Latin roots and are supposed to sound half familiar and half strange. Sweets, plants, newspapers and school subjects all have names that are jokes, puns or small descriptions. Every one of these forced a decision: keep the English, invent something local, or translate the meaning and lose the sound.\n\nNames caused the most argument. Many characters are named in ways that hint at what they are like, and a reader who does not speak English misses that entirely. Some translators kept the originals so that children everywhere would recognise the same names. Others rebuilt them. Swedish and French readers meet a mixture of both, and fans still discuss which approach was right.\n\nOne problem had no comfortable solution at all. In the second book, the villain's full name is rearranged, letter by letter, to form a sentence declaring who he really is. It is an anagram, and an anagram cannot survive translation. The letters simply do not fit. Translators were therefore forced to change the character's name in their own language so that the rearrangement would work. In French he became Tom Elvis Jedusor. In Swedish an extra middle name was added so the letters would produce a Latin sentence instead. Around the world, the same character has a different birth name for one reason: a puzzle in chapter seventeen.\n\nThere was also a deadline problem. Because each book was released simultaneously in English, translators could not begin until publication day, and readers in other countries then waited months. Some fans refused. Groups of teenagers translated books unofficially within days and shared them online, which was illegal and, in a few cases, led to arrests. Publishers responded by hiring larger teams and shortening the gap.\n\nCultural detail raised quieter questions. Boarding schools, house points, prefects and end-of-term feasts are ordinary furniture in British children's fiction and unfamiliar almost everywhere else. Some translators explained them in a footnote, some replaced them with a local equivalent, and the American edition changed vocabulary as well, so that jumpers became sweaters and the first book was given a different title entirely. Each of those choices trades one kind of accuracy for another: a reader who understands everything immediately has, in the process, been moved somewhere slightly less foreign than the book was. Translators are rarely thanked for either decision, and are usually blamed for both.\n\nNone of this is visible in a finished translation, which is the point. A good translator's work is invisible by design, and the reader in Stockholm or São Paulo is meant to feel they are reading the same book as everyone else, even though, in several small and permanent ways, they are not.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Into roughly how many languages has the series been translated?",
+        "options": [
+          "More than eighty",
+          "About twenty",
+          "About forty",
+          "More than two hundred"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What are the spells built from?",
+        "options": [
+          "Old English words",
+          "Latin roots",
+          "Invented sounds only",
+          "Names of real places"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What kind of puzzle appears in the second book?",
+        "options": [
+          "A riddle in verse",
+          "A hidden map",
+          "An anagram of a name",
+          "A code made of numbers"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why could translators not start work early?",
+        "options": [
+          "They had to read the previous book first",
+          "Publishers paid them only after release",
+          "The books were written in several stages",
+          "Each book was released in English on the same day everywhere"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did the anagram force a change of name?",
+        "options": [
+          "The letters of the original name do not rearrange in other languages",
+          "The original name was difficult to pronounce",
+          "Readers found the name frightening",
+          "The author asked for different names abroad"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the writer mean by saying a good translator’s work is invisible?",
+        "options": [
+          "Translators are rarely named on the cover",
+          "The reader should not notice the decisions that were made",
+          "Translations are usually shorter than the original",
+          "The changes are hidden from the publisher"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 505,
+      "readingTime": 3
+    }
+  },
+  {
     "id": "ak7-manga-001",
     "grade": 7,
     "genre": "non-fiction",
@@ -11432,6 +11999,87 @@
     ],
     "meta": {
       "wordCount": 541,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak8-hp-001",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "harry potter",
+    "title": "From Page to Screen",
+    "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=700&h=420&fit=crop",
+    "text": "Eight films were made from seven books, between 2001 and 2011. Watching them beside the novels is a useful lesson in what adaptation actually involves, because almost every change was forced by something other than taste.\n\nThe first constraint is time. A film that runs longer than about two and a half hours becomes difficult to show, since cinemas can fit fewer screenings into a day. A novel of a quarter of a million words cannot fit into that. Something like two thirds of the material has to go, and what goes is rarely the exciting part. It is the explanation: the conversation where a character works out why something happened, the background that makes a decision make sense. Readers often complain that a film feels rushed, and this is usually why. The events survive; the reasoning does not.\n\nThe second constraint is that film shows everything at once. Prose can stay inside one person's head, telling the reader what a character believes while the reader suspects otherwise. A camera cannot do that easily. Screenwriters therefore invent scenes that exist nowhere in the book, in order to make visible something the novel simply stated. Purists treat these as errors. They are usually solutions.\n\nThe third constraint is people. The main actors were children when filming began and adults when it ended, and they had to grow at roughly the same rate as the characters, which meant filming could not stop for long. One central role had to be recast when the actor died. Whole sequences were designed around what an eleven-year-old could plausibly perform.\n\nThere were also decisions that had nothing to do with storytelling. The final book was split into two films. The stated reason was that the material would not fit; the commercial reason was that two releases earn more than one. Both were true at once, which is normal in an industry where artistic and financial arguments usually point in the same direction.\n\nThere was a fourth constraint that is easy to overlook: the books were not finished. The first film was released in 2001, six years before the final novel appeared. Directors were adapting a story whose ending they did not know, and had to decide how much weight to give details that might or might not matter later. The author gave the production some private guidance for exactly this reason, telling them which apparently minor objects could not be cut, which is an unusual position for a screenwriter to work from.\n\nCasting worked in the other direction. Because the films appeared while the books were still being written, millions of readers pictured the characters as the actors, and later volumes were read with those faces already in place. Rowling has described the strange experience of writing a character she had invented while a particular actor's performance existed alongside it.\n\nThe most interesting effect was on the readers. Many children saw the films first, then read the books, and reported that the printed version contained more than they expected. Some teachers began using that gap deliberately, showing a scene and asking students to find what the film had left out. Adaptation, handled that way, stops being a betrayal of the book and becomes a way of noticing what the book was doing.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How many films were made from the seven books?",
+        "options": [
+          "Six",
+          "Seven",
+          "Eight",
+          "Ten"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Roughly how much of a long novel must be cut for a film?",
+        "options": [
+          "About a tenth",
+          "About a quarter",
+          "About half",
+          "About two thirds"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What is usually lost first when a book is cut for film?",
+        "options": [
+          "The explanations and reasoning",
+          "The main events",
+          "The dialogue",
+          "The setting"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why could filming not stop for long periods?",
+        "options": [
+          "The studio contract forbade breaks",
+          "The child actors had to grow at the same rate as the characters",
+          "Cinemas required annual releases",
+          "The books were still being written"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why do screenwriters invent scenes that are not in the book?",
+        "options": [
+          "To make visible something the novel only stated",
+          "To make the film longer",
+          "Because they have not read the novel closely",
+          "To avoid paying for the original scenes"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How did some teachers use the differences between book and film?",
+        "options": [
+          "To argue that films should be avoided in class",
+          "To ask students to find what the film left out",
+          "To let students choose one version instead of both",
+          "To show that the book was too long"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 546,
       "readingTime": 4
     }
   },
@@ -13623,6 +14271,87 @@
     }
   },
   {
+    "id": "ak9-hp-001",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "harry potter",
+    "title": "The Fans Who Would Not Wait",
+    "imageUrl": "https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?w=700&h=420&fit=crop",
+    "text": "Harry Potter arrived at the same time as the household internet, and the two shaped each other. The series was the first enormous children's phenomenon to have a gap of years between instalments and a generation of readers with message boards. What filled that gap became a model for almost every fandom since.\n\nThe waiting was the engine. Between books, readers had nothing new to read and a great deal to argue about, so they produced their own material. Fan fiction ran into millions of stories on sites built specifically to hold them. Some writers who began there now publish professionally, and several have said that an audience of strangers giving detailed feedback taught them more than any course. There were also fan-made films, illustrated encyclopaedias, and a small genre of guitar music written from the point of view of the characters.\n\nTheory was the other half. Readers compiled every detail the author had let slip and argued from it, sometimes for years. Long essays predicted the loyalties of particular characters from single sentences in earlier books. When the final volume appeared, some of these predictions turned out to be right, which had the odd effect of making the readers feel they had solved something rather than been told it.\n\nThe author encouraged this. Rowling answered questions online, confirmed and denied theories, and gave interviews that added facts not present in the novels. That raised a question the fandom argued about for years: does something count if it is not in the book? Some readers accepted every statement. Others held that the text is the text, and that an author explaining her own work afterwards is just another reader with an opinion.\n\nPublishers watched all of this closely, because it broke a rule they had believed in. Rights holders had traditionally treated fan work as theft and issued legal threats. Here, the fan activity was clearly increasing sales, and the tolerant approach that emerged became the industry norm.\n\nNot all of it was harmless. Fan communities produced their own hierarchies, and the largest sites had moderators with real power over who was read and who was ignored. Arguments about theories became personal, and some of them lasted years. A subgroup of readers treated the books as a set of facts to be catalogued rather than a story to be interpreted, which is a recognisable way of reading, and not always a generous one. There were also disputes over what belonged on public sites at all, given that many of the writers and most of the readers were children.\n\nThe commercial edge blurred too. Fan sites accepted advertising, some ran conventions with paid tickets, and a few of the largest were eventually bought by media companies. What had begun as unpaid enthusiasm turned, in places, into a small industry, and the people who had built the archives did not always benefit from the sale. Later fandoms inherited both the tools and the arguments about who owns them.\n\nThe wider effect was on how audiences behave. Before this, being a fan mostly meant consuming something and perhaps joining a club. Afterwards it meant producing: writing, drawing, recording, arguing in public and building archives that outlived the wait. Series released today are designed with that in mind, with gaps left deliberately for the audience to fill. Whether that makes for better stories is arguable. That it changed the relationship between a book and its readers is not.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did readers produce between the books?",
+        "options": [
+          "Only reviews in newspapers",
+          "Fan fiction, films, encyclopaedias and music",
+          "Official study guides",
+          "Translations into other languages"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did some fan writers say the experience taught them?",
+        "options": [
+          "How to publish a book quickly",
+          "How to write faster than the author",
+          "More than any course, through detailed feedback",
+          "How to avoid legal trouble"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How did Rowling respond to the fandom?",
+        "options": [
+          "She answered questions and added facts online",
+          "She refused all contact with readers",
+          "She asked publishers to stop the sites",
+          "She wrote official replies in later books"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How had rights holders traditionally treated fan work?",
+        "options": [
+          "They paid the writers a small fee",
+          "They published the best examples",
+          "They ignored it entirely",
+          "They treated it as theft and threatened legal action"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text call the waiting \"the engine\"?",
+        "options": [
+          "The gap between books forced readers to create their own material",
+          "Slow publishing made the books more valuable",
+          "Readers lost interest and had to be won back",
+          "The author used the time to plan the next volume"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the writer say changed about being a fan?",
+        "options": [
+          "Fans became more critical of the books they read",
+          "Being a fan came to mean producing rather than only consuming",
+          "Fans began buying more copies of each book",
+          "Clubs replaced online communities"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 574,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak9-manga-001",
     "grade": 9,
     "genre": "non-fiction",
@@ -15320,6 +16049,87 @@
     ],
     "meta": {
       "wordCount": 594,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak10-hp-001",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "harry potter",
+    "title": "Did Harry Potter Make Children Read?",
+    "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=700&h=420&fit=crop",
+    "text": "It became one of the most repeated claims in publishing: that a single series persuaded a generation of children to read. Politicians said it. Librarians said it. It appeared in newspaper articles for twenty years, usually without a source. It is worth examining, not because the answer is obviously no, but because it is a good example of how a comfortable belief survives without evidence.\n\nThe claim is plausible on its face. Sales were extraordinary, teachers observed children finishing very long books, and libraries reported queues. Something clearly happened.\n\nThe difficulty is what follows from it. The interesting question is not whether children read these books. It is whether reading them led to reading other books, which is what the claim actually asserts. That is a much harder thing to measure, and the results are mixed.\n\nSeveral national surveys of children's reading habits, conducted before and after the series, found no clear rise in overall reading for pleasure. In some countries the long decline continued unchanged. An American study using national reading test scores found no improvement that could be attributed to the books. Booksellers, meanwhile, reported a real and lasting effect on a narrower question: publishers became willing to print long, ambitious children's novels, and the market for young adult fiction expanded considerably in the following decade. The books may have changed what was available more than they changed who was reading.\n\nThere is also a selection problem. Children who read seven long novels were, by definition, already able and willing to read seven long novels. Observing that keen readers read a popular book does not show that the book created keen readers. To demonstrate that, you would need to find children who did not read before, read this, and then continued with something else. Studies attempting exactly that exist, and they are small.\n\nOther research has looked in a different direction. A set of studies published in 2015 reported that reading the series was associated with more positive attitudes towards minority groups among young readers, which the authors attributed to identifying with characters who face prejudice. The finding was widely reported. Like much of social psychology from that period, it has since been treated more cautiously, and a single set of studies is not a settled result.\n\nPart of the problem is that reading for pleasure is hard to measure at all. Surveys rely on what children say they do, and children know which answer pleases an adult. Library loans count books taken out, not books finished. Sales count purchases, many of them by parents and many of them gifts. Every available measure is a proxy for something nobody can observe directly, and proxies drift.\n\nIt also matters who was doing the claiming. Publishers had an obvious interest in the story, and so did politicians, for whom a spontaneous reading revival is a pleasant thing to mention and costs nothing. Librarians repeated it in good faith, on the basis of what they saw at their own desks, which is real evidence about one library and weak evidence about a country. None of this is dishonest. It is simply how an appealing claim gathers authority without ever being tested.\n\nWhat can be said with reasonable confidence is narrower than the headline. A large number of children read something long and enjoyed it. Publishing changed shape around that fact. Whether the national reading habits of a generation shifted is not supported by the data, and the repetition of the claim tells us more about what adults wanted to believe about children and books than about what those children actually went on to read.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did several national surveys find?",
+        "options": [
+          "No clear rise in overall reading for pleasure",
+          "A large rise in library membership",
+          "A fall in the sale of other novels",
+          "A rise only among older teenagers"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What lasting effect did booksellers report?",
+        "options": [
+          "Cheaper printing of paperbacks",
+          "Publishers became willing to print long children’s novels",
+          "Shorter waiting times between books",
+          "More translations into English"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is the selection problem described in the text?",
+        "options": [
+          "Publishers selected only the most popular titles",
+          "Surveys questioned the wrong age group",
+          "Children who read seven long novels were already keen readers",
+          "Libraries recorded only borrowed books"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did the 2015 studies report?",
+        "options": [
+          "That reading speed improved measurably",
+          "That readers preferred longer books afterwards",
+          "That test scores rose in several countries",
+          "An association with more positive attitudes towards minority groups"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the writer say the interesting question is about other books?",
+        "options": [
+          "The claim asserts that the series led children on to further reading",
+          "Other books sold better during the same period",
+          "Teachers preferred to use other novels in class",
+          "The series was too long for most classrooms"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the writer’s overall conclusion?",
+        "options": [
+          "The series clearly improved a generation’s reading habits",
+          "The claim reveals more about adults’ hopes than about the evidence",
+          "Reading research cannot measure anything useful",
+          "The books were less popular than the figures suggest"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 603,
       "readingTime": 4
     }
   },
