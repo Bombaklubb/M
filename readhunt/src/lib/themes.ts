@@ -9,6 +9,7 @@ export interface ThemeVisual {
 }
 
 const THEME_VISUALS: Record<string, ThemeVisual> = {
+  'american football': { emoji: '🏈', gradient: 'from-orange-500 to-red-600', label: 'American football' },
   animals: { emoji: '🐾', gradient: 'from-amber-400 to-orange-500', label: 'Animals' },
   art: { emoji: '🖼️', gradient: 'from-rose-400 to-fuchsia-500', label: 'Art' },
   community: { emoji: '🤝', gradient: 'from-sky-400 to-blue-500', label: 'Community' },

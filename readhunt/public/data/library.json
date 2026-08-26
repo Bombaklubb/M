@@ -972,6 +972,87 @@
     "imageUrl": "https://images.unsplash.com/photo-1591189863430-ab87e120f312?w=800&q=80"
   },
   {
+    "id": "ak1-sb-001",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "american football",
+    "title": "Super Bowl Night",
+    "imageUrl": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=700&h=420&fit=crop",
+    "text": "Tonight is the Super Bowl. Dad makes popcorn. Mum finds the big blanket. My little sister falls asleep before the game starts. I do not. I watch every minute.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What does Dad make?",
+        "options": [
+          "Popcorn",
+          "Soup",
+          "Pancakes",
+          "Tea"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does Mum find?",
+        "options": [
+          "The remote control",
+          "The big blanket",
+          "A box of crisps",
+          "Two cushions"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who falls asleep?",
+        "options": [
+          "Dad",
+          "Mum",
+          "My little sister",
+          "I do"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How much of the game does the child watch?",
+        "options": [
+          "Only the start",
+          "Half of it",
+          "None of it",
+          "Every minute"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "When does the game happen?",
+        "options": [
+          "In the evening",
+          "Early in the morning",
+          "At lunchtime",
+          "After school"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How does the child feel about the game?",
+        "options": [
+          "Bored by it",
+          "Very interested in it",
+          "Frightened of it",
+          "Sad about it"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 29,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak1-tema-001",
     "grade": 1,
     "genre": "fiction",
@@ -1942,6 +2023,87 @@
       "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1650039215510-a086786c3da5?w=700&h=420&fit=crop"
+  },
+  {
+    "id": "ak2-sb-001",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "american football",
+    "title": "The Best Part",
+    "imageUrl": "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?w=700&h=420&fit=crop",
+    "text": "Ella does not like American football. She watches the Super Bowl anyway. She waits for the adverts. Some of them are funny, and some have famous people in them. Her brother shouts at the television. Ella laughs at a talking dog selling crisps.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What does Ella wait for?",
+        "options": [
+          "The adverts",
+          "The last minute",
+          "The music",
+          "The winner"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does her brother do?",
+        "options": [
+          "He falls asleep",
+          "He shouts at the television",
+          "He leaves the room",
+          "He makes food"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is in the advert Ella laughs at?",
+        "options": [
+          "A dancing robot",
+          "A famous singer",
+          "A talking dog",
+          "A very fast car"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does the dog sell?",
+        "options": [
+          "Shoes",
+          "A car",
+          "Ice cream",
+          "Crisps"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does Ella watch the Super Bowl?",
+        "options": [
+          "She enjoys the adverts",
+          "She wants her team to win",
+          "Her brother makes her",
+          "She has nothing else to do"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How are Ella and her brother different?",
+        "options": [
+          "One is older than the other",
+          "They watch for different reasons",
+          "Only one of them is awake",
+          "They support different teams"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 43,
+      "readingTime": 1
+    }
   },
   {
     "id": "ak2-sverige-001",
@@ -3564,6 +3726,87 @@
     "imageUrl": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=80"
   },
   {
+    "id": "ak3-sb-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "american football",
+    "title": "Half Past Midnight",
+    "imageUrl": "https://images.unsplash.com/photo-1590986957265-b7c9ebe5c5f0?w=700&h=420&fit=crop",
+    "text": "The Super Bowl starts at half past midnight in Sweden. Noah asked if he could stay up.\n\n\"On a Sunday?\" his mother said. \"You have school.\"\n\nThey made a deal. Noah could watch the first half. Then he had to go to bed, and his mother would write down what happened after that.\n\nIn the morning there was a note on the table. It was three pages long.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When does the Super Bowl start in Sweden?",
+        "options": [
+          "Half past midnight",
+          "At nine in the evening",
+          "At six in the morning",
+          "At midday"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Noah ask?",
+        "options": [
+          "If he could miss school",
+          "If he could stay up",
+          "If he could watch alone",
+          "If he could invite a friend"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What was Noah allowed to watch?",
+        "options": [
+          "The last ten minutes",
+          "The whole game",
+          "The first half",
+          "Only the start"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How long was the note?",
+        "options": [
+          "One line",
+          "One page",
+          "Two pages",
+          "Three pages"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did his mother say no at first?",
+        "options": [
+          "Noah had school the next day",
+          "She wanted to watch alone",
+          "The game was not on their television",
+          "Noah had been up late already"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the long note suggest about his mother?",
+        "options": [
+          "She was angry about the late night",
+          "She got caught up in the game herself",
+          "She wanted Noah to stop watching sport",
+          "She had trouble staying awake"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 68,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak3-sport-001",
     "grade": 3,
     "genre": "fiction",
@@ -4954,6 +5197,87 @@
       "readingTime": 1
     },
     "imageUrl": "https://images.unsplash.com/photo-1552862750-746b8f6f7f25?w=800&q=80"
+  },
+  {
+    "id": "ak4-sb-001",
+    "grade": 4,
+    "genre": "non-fiction",
+    "theme": "american football",
+    "title": "What Is the Super Bowl?",
+    "imageUrl": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=700&h=420&fit=crop",
+    "text": "The Super Bowl is the final game of the American football season. Two teams reach it, one from each half of the league, and the winner is champion for that year. There is no second chance. Unlike many sports, the title is not decided over several matches but in a single afternoon.\n\nIt is always played on a Sunday in February, and the day has its own name in the United States: Super Bowl Sunday. It is not a public holiday, but a great many people behave as though it were.\n\nEach Super Bowl is numbered with Roman numerals rather than a year. The reason is practical. An American football season begins in one calendar year and finishes in the next, so a year would be confusing. Only one game has broken the rule, the fiftieth, which was written as 50 because the numeral L looked odd on its own.\n\nThe winning team receives the Vince Lombardi Trophy, a silver football on a stand, named after a famous coach.\n\nThe game itself is only part of the event. There is a concert in the middle, some of the most expensive advertising in the world, and an audience of well over a hundred million people. For many of them, the football is not the main reason to watch.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "On which day is the Super Bowl always played?",
+        "options": [
+          "Sunday",
+          "Saturday",
+          "Friday",
+          "Monday"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How are Super Bowls numbered?",
+        "options": [
+          "By the year they are played",
+          "With Roman numerals",
+          "By the name of the host city",
+          "By the number of teams"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which Super Bowl broke the numbering rule?",
+        "options": [
+          "The tenth",
+          "The twenty-fifth",
+          "The fiftieth",
+          "The first"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is the winners’ trophy called?",
+        "options": [
+          "The Champions Cup",
+          "The Golden Football",
+          "The February Shield",
+          "The Vince Lombardi Trophy"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why are Roman numerals used instead of years?",
+        "options": [
+          "A season runs across two calendar years",
+          "Roman numerals are easier to print on a trophy",
+          "The league began in ancient times",
+          "Years were already used for other competitions"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say the football is not the main reason many people watch?",
+        "options": [
+          "The rules are too difficult to follow",
+          "The concert and the adverts also draw an audience",
+          "Most viewers support neither team",
+          "The game is often decided early"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 217,
+      "readingTime": 1
+    }
   },
   {
     "id": "ak4-tema-001",
@@ -6738,6 +7062,87 @@
     "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=800&q=80"
   },
   {
+    "id": "ak5-sb-001",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "american football",
+    "title": "The Halftime Show",
+    "imageUrl": "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=700&h=420&fit=crop",
+    "text": "Halfway through the Super Bowl there is a break of about half an hour, and in that break a stage appears on the pitch, a concert takes place, and everything disappears again.\n\nFor a long time the break was filled by marching bands and university performers, and many viewers used it to leave the room. That changed in 1993, when Michael Jackson performed. The audience figures for the middle of the game were higher than for the football around it, which had never happened before, and the organisers understood at once what they had.\n\nSince then the halftime show has become one of the largest live performances in the world. The stage is built in pieces backstage and pushed out on wheels by hundreds of volunteers. Assembling it takes about seven minutes, and taking it apart takes about six, because the pitch has to be clear before the players return. Everything is rehearsed for weeks in a car park marked out to the exact size of the field.\n\nThe performers are not paid a fee. The league covers the cost of building and running the show, which is considerable, but the artist receives no wage for appearing. They accept because of who is watching: more people will see those twelve minutes than will see any concert they could otherwise play, and sales of their music usually rise sharply in the following days.\n\nSecurity is unusual too. Everyone on the field, including the volunteers pushing the stage, is checked in advance, and the whole crew is briefed on how to leave quickly if the schedule slips.\n\nThe show is also short. Twelve or thirteen minutes is not long enough for a normal concert, so performers cut their songs into fragments and join them together. Fans sometimes complain that nothing is played in full. That is the price of the audience.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Roughly how long is the halftime break?",
+        "options": [
+          "Ten minutes",
+          "Half an hour",
+          "One hour",
+          "Five minutes"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What happened in 1993?",
+        "options": [
+          "The first halftime show was held",
+          "The stage caught fire",
+          "Michael Jackson performed",
+          "The break was made longer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "About how long does it take to build the stage?",
+        "options": [
+          "Seven minutes",
+          "Twenty minutes",
+          "One hour",
+          "Two hours"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What are the performers paid?",
+        "options": [
+          "A share of the ticket sales",
+          "A fixed fee agreed in advance",
+          "The same as the players",
+          "No fee at all"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why was 1993 a turning point?",
+        "options": [
+          "More people watched the break than the game around it",
+          "It was the first show with a built stage",
+          "The performer refused payment for the first time",
+          "The break was shown in colour"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do artists agree to perform without a fee?",
+        "options": [
+          "They are contractually required to",
+          "The audience is larger than any concert could give them",
+          "They are given a share of the advertising income",
+          "The rehearsal time is paid for separately"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 309,
+      "readingTime": 2
+    }
+  },
+  {
     "id": "ak5-tema-001",
     "grade": 5,
     "genre": "fiction",
@@ -8032,6 +8437,87 @@
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1679750184902-5992e3445eed?w=700&h=420&fit=crop"
+  },
+  {
+    "id": "ak6-sb-001",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "american football",
+    "title": "The Most Expensive Thirty Seconds",
+    "imageUrl": "https://images.unsplash.com/photo-1552581234-26160f608093?w=700&h=420&fit=crop",
+    "text": "A thirty-second advertisement during the Super Bowl has cost around eight million dollars in recent years. That is for the airtime alone. Making the advertisement, hiring the actors and buying the music can cost as much again.\n\nThe price exists because the audience does. Television viewing in most countries has been breaking into smaller and smaller pieces for decades, as people watch different things at different times on different screens. The Super Bowl is one of the very few occasions when an enormous number of people in one country watch the same thing at the same moment, and know that everyone else is watching too. Advertisers are not only buying attention. They are buying the fact that the advertisement will be discussed the next morning.\n\nThat changes what the advertisements are like. In an ordinary break, an advertisement tries not to be skipped. Here, many viewers actively want to see them, and companies respond by making something closer to a short film: a joke with a twist at the end, a famous actor doing something unexpected, or a story with no product visible until the final second.\n\nThe most famous example is older than most viewers. In 1984, Apple ran an advertisement directed by Ridley Scott to launch a new computer. It showed a grey hall of silent people and a runner throwing a hammer through a screen. The computer itself was never shown. The advertisement was broadcast nationally only once, and it is still studied in advertising courses today.\n\nNot every attempt works. An advertisement that costs eight million dollars and is judged boring becomes a story about failure rather than about the product, and newspapers publish rankings of the best and worst the following day. Some companies have decided the risk is not worth it and stopped buying the slot.\n\nTiming inside the game matters as well. Slots early in the broadcast reach the largest audience but compete with the football; slots near the end reach fewer viewers but are remembered better. Buyers negotiate over this, and the difference in price between a good position and a poor one can run into millions.\n\nThere is one more effect, which is easy to miss. Because the advertisements are treated as entertainment, viewers watch them attentively rather than avoiding them, and an industry that spends most of its energy fighting to be noticed gets, for one evening, an audience that is genuinely paying attention.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Roughly what has thirty seconds of airtime cost in recent years?",
+        "options": [
+          "Around eight million dollars",
+          "Around one million dollars",
+          "Around eighty thousand dollars",
+          "Around fifty million dollars"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Who directed the 1984 Apple advertisement?",
+        "options": [
+          "Steve Jobs",
+          "Ridley Scott",
+          "Michael Jackson",
+          "Vince Lombardi"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What was shown in that advertisement?",
+        "options": [
+          "The new computer in close-up",
+          "A crowded stadium",
+          "A grey hall and a thrown hammer",
+          "A family at home"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What do newspapers publish the following day?",
+        "options": [
+          "The full cost of each slot",
+          "Interviews with the actors",
+          "The audience figures by region",
+          "Rankings of the best and worst advertisements"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is the airtime so expensive?",
+        "options": [
+          "Very few occasions still gather one huge simultaneous audience",
+          "Production costs are included in the price",
+          "The league limits the number of slots to ten",
+          "Advertisements are shown twice during the game"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do Super Bowl advertisements often hide the product until the end?",
+        "options": [
+          "Companies are not allowed to show products early",
+          "Viewers watch them as entertainment, so a story holds attention",
+          "It makes the advertisement cheaper to produce",
+          "The rules limit how long a product may appear"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 404,
+      "readingTime": 3
+    }
   },
   {
     "id": "ak6-tema-001",
@@ -10140,6 +10626,87 @@
     "imageUrl": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80"
   },
   {
+    "id": "ak7-sb-001",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "american football",
+    "title": "Four Hours for Eleven Minutes",
+    "imageUrl": "https://images.unsplash.com/photo-1544117519-31a4b719223d?w=700&h=420&fit=crop",
+    "text": "An American football game lasts sixty minutes. It is divided into four quarters of fifteen minutes each, and the clock is visible throughout. A television broadcast of the same game usually lasts more than three and a half hours. Understanding where the other two and a half hours go explains a great deal about the sport.\n\nThe first reason is that the clock does not run continuously. It stops when a pass is not caught, when a player carrying the ball steps out of bounds, when a team scores, and at various other moments. The sixty minutes of clock time are therefore spread across a far longer period of real time.\n\nThe second reason is the structure of the game itself. American football is not continuous. It proceeds in separate attempts, called plays, each of which begins with the two teams lined up facing one another and ends within a few seconds. Between the plays the teams regroup, the coaches send instructions, and the players walk back to position. A researcher for the Wall Street Journal timed a set of televised games in 2010 and found that the ball was actually in play for about eleven minutes in total.\n\nThe third reason is television. Commercial breaks are not simply fitted around the game; the game partly accommodates them. There are scheduled media timeouts at fixed points in each quarter, and a broadcast may include well over a hundred advertisements. In the Super Bowl, where the advertising is itself an attraction, this is even more pronounced.\n\nThere is a fourth reason that has grown in recent years. Officials can review decisions using video, and a review stops everything while several people examine the same few seconds from different angles. Accuracy has improved. So has the running time.\n\nThe comparison with other sports is instructive. A football match in Europe runs for two forty-five-minute halves with the clock stopping for almost nothing, and the broadcast is over in under two hours. Ice hockey stops constantly but restarts within seconds. American football is unusual in combining frequent stoppages with long ones, and the length is a consequence of the design rather than a flaw in it.\n\nSome of that design is deliberate. Because play halts after every attempt, coaches can plan each one individually, and the sport has developed an enormous tactical vocabulary that would be impossible in a continuous game. Teams carry playbooks of several hundred pages. The pauses are what make that level of preparation usable.\n\nNone of this is accidental, and it is not universally disliked. The pauses are when spectators talk about what just happened, when coaches make decisions that fans then argue about, and when a person watching at home can fetch something from the kitchen without missing anything. A sport that is almost entirely gaps has built its appeal partly on them. Whether eleven minutes of action justifies four hours of television is a question each viewer answers differently, and roughly a hundred million of them answer yes every February.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How is the sixty minutes of a game divided?",
+        "options": [
+          "Into two halves of thirty minutes",
+          "Into four quarters of fifteen minutes",
+          "Into three periods of twenty minutes",
+          "Into six parts of ten minutes"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the 2010 timing study find?",
+        "options": [
+          "The ball was in play for about eleven minutes",
+          "Broadcasts lasted exactly three hours",
+          "Half of the game was advertising",
+          "Reviews added forty minutes per game"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What are the separate attempts in the game called?",
+        "options": [
+          "Rounds",
+          "Innings",
+          "Plays",
+          "Sets"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What has recently added further time to broadcasts?",
+        "options": [
+          "Longer halftime shows",
+          "Extra quarters",
+          "More players on the field",
+          "Video review of decisions"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why do sixty minutes of clock time take far longer in real time?",
+        "options": [
+          "The clock stops frequently during the game",
+          "The clock runs more slowly than a normal clock",
+          "Each quarter is played twice",
+          "Referees add time for injuries only"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the text suggest about the pauses in the game?",
+        "options": [
+          "They are a fault the league is trying to remove",
+          "They are part of why people enjoy watching",
+          "They exist only because of television",
+          "They make the sport difficult to follow"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 503,
+      "readingTime": 3
+    }
+  },
+  {
     "id": "ak7-tema-001",
     "grade": 7,
     "genre": "fiction",
@@ -11434,6 +12001,87 @@
       "readingTime": 4
     },
     "imageUrl": "https://images.unsplash.com/photo-1453828423292-392a660a502f?w=700&h=420&fit=crop"
+  },
+  {
+    "id": "ak8-sb-001",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "american football",
+    "title": "How the Super Bowl Began",
+    "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=700&h=420&fit=crop",
+    "text": "The Super Bowl exists because two leagues could not defeat one another.\n\nFor most of the twentieth century, professional American football in the United States meant the National Football League. In 1960 a rival appeared, the American Football League, founded by businessmen who had been refused NFL teams of their own. The new league placed clubs in cities the NFL had ignored, played a faster and more open style, and, most importantly, began signing the best young players by offering more money.\n\nThis was expensive for everyone. The two leagues bid against each other for the same players, salaries rose sharply, and neither side could force the other out. By 1966 the owners had concluded that competing was costing more than cooperating, and they agreed to merge. Full integration would take until 1970, but one part of the agreement could happen immediately: at the end of each season, the champion of one league would play the champion of the other.\n\nThe first of these games was played in Los Angeles in January 1967. It was called the AFL–NFL World Championship Game, a title nobody liked, and the stadium was not full. The Green Bay Packers of the NFL beat the Kansas City Chiefs 35–10, which confirmed what NFL supporters had assumed about the newer league. The following year the Packers won again.\n\nThe name came from outside the official process. Lamar Hunt, who owned the Chiefs, had watched his children playing with a bouncing toy called a Super Ball, and used the word Super Bowl in a meeting as a temporary label. Bowl was already familiar from American college football, where the big end-of-season games are named after the bowl-shaped stadiums they were first played in. The phrase was not intended to last. It appeared in newspapers anyway, became impossible to dislodge, and was made official from the third game onwards, then applied backwards to the first two.\n\nThe merger needed permission. Combining two competing leagues into one would normally fall foul of American laws against monopoly, and the owners went to Congress for an exemption. They got it in 1966, attached to an unrelated bill, after lobbying that included a promise to place a team in New Orleans. The city was awarded a franchise shortly afterwards, and the sequence of events was noticed at the time.\n\nThe early games were not the spectacle they later became. Tickets for the first cost twelve dollars, and around a third of the seats were empty. Two separate television networks broadcast it simultaneously, each with its own commentary, because both leagues had existing contracts and neither would give way. No complete recording of that broadcast was kept, and for decades the game survived only as fragments until a copy assembled from home recordings emerged. That is hard to imagine now.\n\nWhat settled the matter was the third game itself. In January 1969, the New York Jets of the AFL beat the heavily favoured Baltimore Colts, and the assumption that the older league was simply better collapsed. From that point the merged competition made sense to everyone, and the game that had been created as part of a business settlement began turning into a national occasion.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When was the American Football League founded?",
+        "options": [
+          "1950",
+          "1960",
+          "1967",
+          "1970"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why did the owners agree to merge?",
+        "options": [
+          "A court ordered them to",
+          "Television companies demanded it",
+          "Competing for players cost more than cooperating",
+          "One league had run out of teams"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Who won the first championship game in January 1967?",
+        "options": [
+          "The Green Bay Packers",
+          "The Kansas City Chiefs",
+          "The New York Jets",
+          "The Baltimore Colts"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where did the name Super Bowl come from?",
+        "options": [
+          "A newspaper competition",
+          "The shape of the first trophy",
+          "A vote among the team owners",
+          "A toy called a Super Ball"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did the AFL succeed in signing good young players?",
+        "options": [
+          "It offered them more money than the NFL",
+          "It had better stadiums",
+          "It allowed younger players to join",
+          "It played in the largest cities"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text call the third game the one that settled the matter?",
+        "options": [
+          "It was the first to sell out the stadium",
+          "It ended the belief that the older league was simply better",
+          "It was the first to use the name Super Bowl",
+          "It completed the merger between the leagues"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 532,
+      "readingTime": 4
+    }
   },
   {
     "id": "ak8-space-001",
@@ -13542,6 +14190,87 @@
     "imageUrl": "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80"
   },
   {
+    "id": "ak9-sb-001",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "american football",
+    "title": "A Country Watching the Same Thing",
+    "imageUrl": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=700&h=420&fit=crop",
+    "text": "Roughly a hundred and twenty million people in the United States watch the Super Bowl. That is more than a third of the population, and it is far more than watch any other broadcast in the year. What makes the figure unusual is not its size but the fact that it has held steady while almost every other shared audience has disappeared.\n\nFifty years ago, mass viewing was ordinary. A country had a handful of channels, programmes were shown at a fixed hour, and a popular series could reach half the population because there was very little else to do at that time. Streaming ended that. Viewers now choose from an effectively unlimited catalogue and watch whenever they like, which means two people can both watch a great deal of television and share nothing at all. Against that background, an event that still gathers a third of a country at the same minute is close to an anomaly.\n\nThe behaviour around the game reflects this. It is commonly reported as the second-largest day for food consumption in the United States after Thanksgiving. Parties are arranged in homes rather than bars, and the guests routinely include people with no interest in the sport. Surveys have repeatedly found that a substantial minority of viewers watch mainly for the advertisements, the halftime concert, or the company. That would be a strange thing to say about a league final in most countries.\n\nBecause it is a shared stage, it attracts arguments. The pre-match national anthem has been a site of political protest and of furious reaction to that protest. Halftime performances have been debated for weeks afterwards over what was worn, sung or gestured. Campaigning organisations buy slots knowing the audience is captive, and broadcasters have refused some of those advertisements, which then becomes a news story of its own. None of this is incidental. An event that everyone watches inevitably becomes the place where a country conducts its disagreements in public.\n\nCritics point out what the attention costs. Public money is spent on stadiums, the sport carries a documented risk of long-term brain injury, and an evening of national unity does not resolve anything the following morning.\n\nThe rest of the world is a partial exception. The Super Bowl is broadcast in more than a hundred and eighty countries, but outside North America the audience is small, because the game starts in the middle of the night across Europe and because the sport itself has shallow roots. The NFL has spent years trying to change this, staging regular-season matches in London, Munich and Mexico City and building youth programmes abroad, with real but slow results.\n\nEven inside the United States, the shared audience is less uniform than the total suggests. Viewers in the two competing teams' cities watch a different event from everyone else, with far higher figures and a genuine outcome at stake. For most of the country the game is a background to a party. The single number conceals two quite different experiences, one of which is sport and one of which is closer to a festival.\n\nStill, the appeal is not really about football. It is about the increasingly rare experience of knowing that what you are watching is being watched, at that exact moment, by tens of millions of other people. Very little else in modern life offers that, which may be the most durable reason the audience has not shrunk.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Roughly how many people in the United States watch the Super Bowl?",
+        "options": [
+          "About sixty million",
+          "About a hundred and twenty million",
+          "About two hundred million",
+          "About thirty million"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which day is reported to involve more food consumption?",
+        "options": [
+          "New Year’s Eve",
+          "Independence Day",
+          "Thanksgiving",
+          "Christmas Day"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What ended the era of ordinary mass viewing?",
+        "options": [
+          "Streaming and unlimited choice",
+          "The rise of radio",
+          "Higher television prices",
+          "A fall in the population"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Which criticisms does the text mention?",
+        "options": [
+          "Ticket prices and travel costs",
+          "Falling standards of play",
+          "Too many advertisements for children",
+          "Public money for stadiums and the risk of brain injury"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text call the steady audience an anomaly?",
+        "options": [
+          "Almost every other shared audience has broken apart",
+          "The population has fallen since the 1970s",
+          "Other sports have larger finals",
+          "Television is watched less than it used to be"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the writer suggest is the main reason the audience has not shrunk?",
+        "options": [
+          "The standard of the football has improved",
+          "People value the rare experience of watching something together",
+          "Advertising has made the game unavoidable",
+          "Streaming services promote the broadcast heavily"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 572,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak9-tema-001",
     "title": "The City Without Silence",
     "text": "For most residents of Greyford, noise had become such a normal part of daily life that few people questioned it anymore. Traffic filled the streets from early morning until late at night, construction projects continued for years without interruption, and advertisements flashed constantly from giant digital screens above the shopping district. Many citizens believed modern cities were simply supposed to feel loud, crowded, and restless.\n\nSeventeen-year-old Elin never thought much about the issue either until her younger brother Noah began experiencing severe sleep problems. Doctors eventually explained that chronic exposure to noise could affect concentration, stress levels, and even physical health. Curious, Elin started researching urban sound pollution for a school project.\n\nThe more she learned, the more surprised she became. Scientific studies showed that constant noise exposure was linked to anxiety, memory difficulties, and reduced learning ability among students. In several major cities, researchers had already started redesigning public spaces to reduce harmful sound levels.\n\nElin decided to investigate Greyford more closely. Using a sound-measuring app provided by her science teacher, she recorded noise levels in different parts of the city. The results were alarming. Some intersections produced sound levels similar to industrial factories, especially during rush hour.\n\nWhen Elin shared her findings online, reactions were mixed. Some residents appreciated the information and admitted they also felt exhausted by the city environment. Others dismissed her concerns, arguing that noise was an unavoidable consequence of economic growth and urban development.\n\nDetermined to continue, Elin contacted an architect named Mateo who specialized in sustainable city planning. Mateo explained that noise pollution was often ignored because people adapted to it gradually over time. However, adaptation did not mean the effects disappeared.\n\nTogether, they organized a public exhibition showing how sound affected everyday life. Visitors entered different rooms simulating traffic noise, quiet parks, and crowded shopping areas. Many participants were shocked by how quickly loud environments increased stress and fatigue.\n\nThe exhibition also presented possible solutions. Urban planners described how trees, pedestrian zones, electric public transport, and improved building design could reduce harmful noise. Students from local schools proposed creating more quiet study spaces throughout the city.\n\nNot everyone supported the ideas. Business owners worried that reducing traffic might hurt local commerce, while some politicians argued that the city lacked money for major redesign projects.\n\nDespite the criticism, the exhibition attracted significant media attention. Within months, city officials agreed to test several smaller changes, including quieter buses, additional green spaces, and restrictions on nighttime construction.\n\nA year later, researchers measured noticeable reductions in noise levels in certain districts. Residents also reported sleeping better and spending more time outdoors.\n\nFor Elin, the project changed the way she viewed urban life. She realized that environmental problems were not always visible like polluted rivers or damaged forests. Some forms of pollution could be heard rather than seen.\n\nThe health evidence turned out to be stronger than she had assumed. The World Health Organization classifies environmental noise as the second largest environmental cause of ill health in Europe, after air pollution, and links long-term exposure to raised blood pressure and disturbed sleep. Noah's insomnia, which the family had treated as a private problem, appeared in the literature as a predictable outcome of a bedroom facing a distributor road. She found that comparison difficult to forget.\n\nMore importantly, she understood that people often accept unhealthy conditions simply because they become familiar. Changing society sometimes begins when someone questions problems others have stopped noticing.",
@@ -15160,6 +15889,87 @@
       "readingTime": 4
     },
     "imageUrl": "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=800&q=80"
+  },
+  {
+    "id": "ak10-sb-001",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "american football",
+    "title": "Who Pays for the Stadium?",
+    "imageUrl": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&h=420&fit=crop",
+    "text": "Cities compete to host the Super Bowl, and the competition is genuine. Bids are prepared for years, delegations travel, and the announcement is treated locally as a victory. The argument made in public is always economic: visitors arrive, hotels fill, restaurants and taxis take money they would not otherwise have taken, and the city appears on television around the world.\n\nSome of that is straightforwardly true. A large number of people do travel to the host city and do spend money there. The disagreement is about what the figure actually means, and it is a useful example of how a plausible number can be misleading.\n\nEconomists who study the question raise three objections. The first is substitution. Much of the money spent that weekend would have been spent in the city anyway, on other things, by residents who simply moved their spending. That is a transfer between local businesses, not new income. The second is crowding out. Ordinary visitors avoid a city during a huge event because rooms are expensive and everything is full, so some of the arriving spectators replace tourists who would have come regardless. The third is leakage. A hotel room booked at a national chain, a car hired from an international company and a meal at a franchise all send a large share of the payment out of the local economy immediately.\n\nWhen independent researchers have measured the effect afterwards rather than predicting it in advance, the results have been consistently modest. Studies of employment, tax receipts and personal income in host cities have generally found gains far below the amounts promised in the bids, and several have struggled to detect any effect at all against normal variation. The forecasts that cities publish are usually commissioned by the organisations that want the event.\n\nThe larger sum, however, is not the weekend. It is the stadium. Most American professional stadiums have been built with substantial public money, through direct grants, tax exemptions or bonds repaid over decades by taxpayers, and the totals run into hundreds of millions of dollars for a single building. Hosting a Super Bowl generally requires a modern venue, which gives a team useful leverage: a city that will not fund a new stadium can be told, without much subtlety, that the team may move to one that will.\n\nThere are counter-arguments worth taking seriously. A stadium is used for more than football, and a modern one can host concerts, conventions and other sports for decades. Some economists argue that the studies measure the wrong thing, because a city's return is reputational rather than immediate, and reputation does not appear in a quarterly tax receipt. Others point out that the same objections apply to almost any large public investment, including ones nobody disputes: a new concert hall or museum rarely pays for itself either, and is funded anyway because a city decides it wants one. The disagreement is therefore about how much a city should pay for that, not whether the value exists at all.\n\nThis is why the question of who benefits is contested rather than settled. Team owners gain an asset built partly at public expense. Construction workers and hotel staff gain real, if temporary, work. Residents gain something harder to price, a weekend when their city is the centre of attention, which many of them value even if it does not appear in the accounts. Whether that is worth what it costs is a political judgement rather than an economic one, and it is made, in most cases, by people who will not be presenting the bill for another thirty years.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is the substitution objection?",
+        "options": [
+          "Money is spent that would have been spent locally anyway",
+          "Visitors substitute cheap hotels for expensive ones",
+          "One event replaces another in the calendar",
+          "Taxes replace ticket revenue"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does crowding out refer to?",
+        "options": [
+          "Too many spectators inside the stadium",
+          "Ordinary tourists staying away during the event",
+          "Local residents leaving the city",
+          "Roads being closed for the weekend"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is leakage?",
+        "options": [
+          "Money lost through unsold tickets",
+          "Costs that appear after the event",
+          "Payments that leave the local economy immediately",
+          "Spending that is never recorded"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Who usually commissions the forecasts cities publish?",
+        "options": [
+          "Independent universities",
+          "National tax authorities",
+          "Local newspapers",
+          "The organisations that want the event"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say the stadium is the larger sum?",
+        "options": [
+          "Public money funds the building for decades, not just a weekend",
+          "Stadiums must be rebuilt after every Super Bowl",
+          "Ticket prices rise to cover construction",
+          "Cities borrow to pay the visiting teams"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the writer’s conclusion about hosting?",
+        "options": [
+          "The economic case is strong once leakage is included",
+          "The decision is political, and its costs fall on later taxpayers",
+          "Cities should refuse to bid for the event",
+          "Only team owners lose money on the arrangement"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 600,
+      "readingTime": 4
+    }
   },
   {
     "id": "ak10-tema-001",
