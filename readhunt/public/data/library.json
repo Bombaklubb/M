@@ -1,5 +1,86 @@
 [
   {
+    "id": "ak1-disney-001",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "disney",
+    "title": "Film Night",
+    "imageUrl": "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=700&h=420&fit=crop",
+    "text": "We watch a Disney film every Friday. Tonight it is my turn to choose. I pick the one with the lion. Mum says we have seen it six times. We watch it again.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When does the family watch a film?",
+        "options": [
+          "Every Friday",
+          "Every Sunday",
+          "Every morning",
+          "Once a month"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Who chooses the film tonight?",
+        "options": [
+          "Mum",
+          "The child telling the story",
+          "Dad",
+          "Nobody"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which film is chosen?",
+        "options": [
+          "The one with the ice",
+          "The one with the boat",
+          "The one with the lion",
+          "The one with the fish"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How many times have they seen it?",
+        "options": [
+          "Twice",
+          "Three times",
+          "Four times",
+          "Six times"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does Mum say how many times they have seen it?",
+        "options": [
+          "She would like a different film",
+          "She has forgotten the ending",
+          "She wants to watch it too",
+          "She is counting for fun"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How does the child feel about the film?",
+        "options": [
+          "It is too long",
+          "It is a favourite",
+          "It is a bit scary",
+          "It is boring now"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 33,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak1-film-001",
     "grade": 1,
     "genre": "fiction",
@@ -1616,6 +1697,87 @@
     ],
     "meta": {
       "wordCount": 27,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-disney-001",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "disney",
+    "title": "The Same Film Again",
+    "imageUrl": "https://images.unsplash.com/photo-1594708767771-a7502209ff51?w=700&h=420&fit=crop",
+    "text": "My little sister is four. She only wants one film. It is about a girl who can make ice. We have seen it so many times that I know every word. Yesterday I sang one of the songs at school without meaning to.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How old is the little sister?",
+        "options": [
+          "Four",
+          "Five",
+          "Six",
+          "Three"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is the film about?",
+        "options": [
+          "A boy with a boat",
+          "A girl who can make ice",
+          "A family of bears",
+          "A talking car"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How well does the older child know the film?",
+        "options": [
+          "Only the beginning",
+          "Just the songs",
+          "Every word",
+          "Almost none of it"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What happened at school yesterday?",
+        "options": [
+          "The class watched the film",
+          "The sister came to visit",
+          "A friend sang the song",
+          "The child sang a song by accident"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the older child know every word?",
+        "options": [
+          "They have watched it very many times",
+          "They read the book first",
+          "They learned it at school",
+          "Their sister taught them"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does \"without meaning to\" tell us?",
+        "options": [
+          "The child sang very quietly",
+          "The child did not plan to sing",
+          "The child forgot the words",
+          "The child sang the wrong song"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 43,
       "readingTime": 1
     }
   },
@@ -3321,6 +3483,87 @@
     }
   },
   {
+    "id": "ak3-disney-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "disney",
+    "title": "The Cardboard Candlestick",
+    "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=700&h=420&fit=crop",
+    "text": "On Friday the class could dress as a film character. Six people came as the same one.\n\nAdam came as the candlestick from Beauty and the Beast. He had made it from a cardboard tube and two paper cups.\n\nNobody else had thought of it. At the end of the day his teacher asked if she could keep it for the school library, and Adam said yes, but only until Monday.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What could the class do on Friday?",
+        "options": [
+          "Dress as a film character",
+          "Watch a film all day",
+          "Bring a favourite book",
+          "Draw a poster"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How many people came as the same character?",
+        "options": [
+          "Two",
+          "Six",
+          "Four",
+          "Ten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Adam make his costume from?",
+        "options": [
+          "Old clothes and paint",
+          "A box and some string",
+          "A cardboard tube and two paper cups",
+          "Paper and glue only"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did the teacher ask for?",
+        "options": [
+          "A photograph of the costume",
+          "Help making another one",
+          "The name of the film",
+          "To keep the costume for the library"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why was Adam’s costume unusual?",
+        "options": [
+          "Nobody else had chosen that character",
+          "It was the largest one",
+          "It took the longest to make",
+          "He wore it every day"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why did Adam say \"only until Monday\"?",
+        "options": [
+          "He needed it back for another party",
+          "He wanted to keep it himself",
+          "The library closed on Monday",
+          "His teacher had asked for a week"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 71,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak3-football-001",
     "grade": 3,
     "genre": "fiction",
@@ -5022,6 +5265,87 @@
     "imageUrl": "https://images.unsplash.com/photo-1565548058662-c345fad4aabc?w=700&h=420&fit=crop"
   },
   {
+    "id": "ak4-disney-001",
+    "grade": 4,
+    "genre": "non-fiction",
+    "theme": "disney",
+    "title": "The Rabbit He Lost",
+    "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&h=420&fit=crop",
+    "text": "Before there was a mouse, there was a rabbit.\n\nIn 1927 Walt Disney created a cartoon character called Oswald the Lucky Rabbit. Oswald was popular, and Disney travelled to New York expecting more money for the next set of films. Instead the distributor told him two things. The payment would be lower, not higher. And the distributor, not Disney, owned Oswald, along with most of the animators who drew him.\n\nDisney walked away with almost nothing. On the train home he began working on a replacement, and what he came back with was a mouse.\n\nThe mouse appeared in two silent cartoons that nobody wanted to show. Then, in 1928, Disney tried something new. Sound had just arrived in cinemas, and no cartoon had used it properly. In Steamboat Willie, every whistle, thump and squeak matches exactly what is happening on the screen. Audiences had never seen anything like it.\n\nDisney learned one lesson from Oswald and never forgot it. From then on, he owned his characters himself.\n\nOswald came back eventually. In 2006 the company bought the rights, seventy-eight years later.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was Oswald?",
+        "options": [
+          "A lucky rabbit",
+          "A talking cat",
+          "A steamboat captain",
+          "A cheerful mouse"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did the distributor tell Disney in New York?",
+        "options": [
+          "That cartoons were no longer popular",
+          "That the payment would be lower and Oswald was not his",
+          "That he needed to move to New York",
+          "That sound films were coming"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What was new about Steamboat Willie?",
+        "options": [
+          "It was in colour",
+          "It was feature length",
+          "The sound matched the pictures exactly",
+          "It was drawn by one person"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "When did the company get Oswald back?",
+        "options": [
+          "1928",
+          "1955",
+          "1971",
+          "2006"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did Disney start work on a new character on the train?",
+        "options": [
+          "He had lost the rights to the old one",
+          "The distributor had asked for a rabbit",
+          "He wanted to work in New York",
+          "His animators had suggested it"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What lesson did Disney learn from losing Oswald?",
+        "options": [
+          "Never to travel to New York again",
+          "To own his characters himself",
+          "To make silent films only",
+          "To hire fewer animators"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 182,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak4-gaming-001",
     "grade": 4,
     "genre": "fiction",
@@ -6654,6 +6978,87 @@
     "meta": {
       "wordCount": 155,
       "readingTime": 1
+    }
+  },
+  {
+    "id": "ak5-disney-001",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "disney",
+    "title": "Disney's Folly",
+    "imageUrl": "https://images.unsplash.com/photo-1500673922987-e212871fec22?w=700&h=420&fit=crop",
+    "text": "In 1934, Walt Disney told his staff he wanted to make a cartoon that lasted an hour and a half.\n\nAlmost everyone thought this was a mistake. Cartoons were short films shown before the main picture, and the industry believed that audiences would not sit through a long one. Bright colours and constant movement for eight minutes were fun. For ninety minutes, people said, they would be exhausting. The project was nicknamed Disney's Folly in Hollywood, and folly means a foolish idea.\n\nIt was also enormously expensive. Disney had estimated a quarter of a million dollars and spent about six times that. He mortgaged his house. When the money ran out he took an unfinished version to a bank and showed it to a lender, doing all the voices himself, because there was no other way to explain what he was building.\n\nThe problems were real ones. Nobody knew whether an audience could care about a drawing for that long. So the studio changed how it drew. Animators studied real people moving. The seven dwarfs were given separate personalities so that viewers could tell them apart instantly, which is why they have names like Grumpy and Sleepy. Backgrounds were painted with far more depth than a short cartoon needed.\n\nSnow White and the Seven Dwarfs opened in December 1937. The audience at the first screening applauded before it ended. It became the highest-earning film released up to that point, and the money built the studio in Burbank where Disney films are still made.\n\nThe film also changed what a cartoon could be about. Audiences reported crying at the scene where the dwarfs stand around Snow White, which nobody had expected a drawing to achieve. Critics who had gone to laugh wrote instead about feeling, and several admitted in print that they had been wrong.\n\nThe idea everyone had called foolish turned out to be the whole business.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "In which year did Disney tell his staff about the plan?",
+        "options": [
+          "1928",
+          "1934",
+          "1937",
+          "1941"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the industry believe about long cartoons?",
+        "options": [
+          "They would be too expensive to colour",
+          "They would take too long to draw",
+          "Audiences would find them exhausting",
+          "Cinemas would refuse to show them"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How much more did the film cost than Disney estimated?",
+        "options": [
+          "About six times as much",
+          "About twice as much",
+          "About ten times as much",
+          "Slightly more"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did Disney do to convince a lender?",
+        "options": [
+          "He sent a written plan",
+          "He invited the bank to the studio",
+          "He offered a share of the profits",
+          "He acted out the unfinished film himself"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why were the seven dwarfs given separate personalities?",
+        "options": [
+          "So the audience could tell them apart at once",
+          "Because seven voices were available",
+          "To make the film longer",
+          "Because the story required it"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the last sentence mean?",
+        "options": [
+          "The film was cheaper than expected",
+          "The idea everyone doubted became the company’s foundation",
+          "Disney stopped making short cartoons",
+          "Folly was the wrong word for the project"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 317,
+      "readingTime": 2
     }
   },
   {
@@ -8356,6 +8761,87 @@
       "readingTime": 2
     },
     "imageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=700&h=420&fit=crop"
+  },
+  {
+    "id": "ak6-disney-001",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "disney",
+    "title": "Making Flat Things Look Deep",
+    "imageUrl": "https://images.unsplash.com/photo-1516117172878-fd2c41f4a759?w=700&h=420&fit=crop",
+    "text": "A drawing is flat. An animated film is thousands of flat drawings shown quickly. The history of Disney animation is largely the history of hiding that fact, and each solution was a piece of machinery before it was an artistic choice.\n\nThe first problem was depth. If a camera photographs a single painted background with characters on top, moving the camera closer makes everything grow at the same rate, which real distance does not. The studio's answer, built in 1937, was the multiplane camera: a tower several metres tall holding separate panes of glass, each with part of the scene painted on it, with the camera pointing down through all of them. Moving the panes at different speeds made near things pass quickly and far things drift slowly, exactly as they do from a train window. It worked, it won an award, and it needed several operators and enormous patience for a few seconds of film.\n\nThe second problem was labour. Every drawing had to be copied by hand onto a transparent sheet in ink before it could be painted and photographed, and a feature film needs well over a hundred thousand of them. In 1961 the studio adapted a Xerox machine to transfer the animators' pencil drawings directly onto the sheets. This removed an entire department and a great deal of cost. It also changed how the films looked, because the transferred lines were scratchy and uneven rather than smooth, which is why the dogs in One Hundred and One Dalmatians appear sketched rather than outlined.\n\nThe third change was digital. From the late 1980s the studio worked with a computer company to build a system that coloured and combined drawings electronically. Animators still drew on paper. Everything after that happened on a screen, which allowed camera movements that no physical rig could perform, including a ballroom in Beauty and the Beast where the room turns around the dancers.\n\nNone of it removed the drawing. Even the digital films of the 1990s began with a person at a desk with a pencil, and the computer was used to finish and combine what a hand had already made.\n\nEach of these was introduced to save money or solve a technical problem. Each one also changed what the films could look like, which is a pattern worth noticing: in animation, the tools do not simply carry out the idea. They decide which ideas are possible.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was the multiplane camera?",
+        "options": [
+          "A tower holding separate painted panes of glass",
+          "A camera that photographed several films at once",
+          "A lens that made drawings look rounder",
+          "A machine for copying drawings"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What problem did the Xerox machine solve?",
+        "options": [
+          "Colours fading over time",
+          "The cost of copying drawings by hand in ink",
+          "Cameras being too slow",
+          "Paper running out"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How did the Xerox process change how the films looked?",
+        "options": [
+          "The colours became brighter",
+          "Backgrounds became simpler",
+          "The lines became scratchy and uneven",
+          "Characters moved more smoothly"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did the digital system allow?",
+        "options": [
+          "Drawing directly on a screen",
+          "Films to be made without animators",
+          "Longer running times",
+          "Camera movements no physical rig could perform"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does moving panes at different speeds create depth?",
+        "options": [
+          "Near things pass quickly and far things drift slowly",
+          "The glass bends the light",
+          "The camera focuses on one pane at a time",
+          "The panes are painted in different colours"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What pattern does the writer say is worth noticing?",
+        "options": [
+          "Animation gets cheaper with every decade",
+          "The tools decide which ideas are possible",
+          "Technical problems are usually solved by artists",
+          "Audiences prefer hand-drawn films"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 404,
+      "readingTime": 3
+    }
   },
   {
     "id": "ak6-fic-001",
@@ -10383,6 +10869,87 @@
     }
   },
   {
+    "id": "ak7-disney-001",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "disney",
+    "title": "The Song That Does the Work",
+    "imageUrl": "https://images.unsplash.com/photo-1700159915592-004562ddcf6f?w=700&h=420&fit=crop",
+    "text": "By the middle of the 1980s the Disney animation studio was in trouble. Its films were losing money, the staff had been moved out of the main lot into an industrial building, and the company had seriously discussed closing the department altogether. What rescued it was not a new drawing technique. It was a way of writing songs.\n\nHoward Ashman and Alan Menken came from the theatre, where a song is not an interruption but a piece of storytelling. In a well-built musical, a character sings when speaking is no longer enough, and by the end of the number something has changed. Ashman brought that rule with him, and applied it to films that had previously used songs as pleasant decoration.\n\nThe clearest example is a device the theatre calls the I Want song. Early in the story, the main character sings about what is missing from their life. This does several jobs at once. It tells the audience what the character wants, which is what a story needs in order to have a shape. It creates sympathy before any events have happened. And it sets up the ending, because the audience will measure the final scene against that early wish. The Little Mermaid, Beauty and the Beast and Aladdin all place one in roughly the same position, and so do most animated films made since.\n\nAshman also insisted that the songs carry information rather than pausing for it. A villain explains his plan while singing it. A crowd establishes an entire town's opinion of someone in ninety seconds. Removing any of these numbers would remove plot, not just music, which is the test of whether a song belongs in a story at all.\n\nThe results were immediate. The Little Mermaid in 1989 earned more than any Disney animated film before it, and the decade that followed is now called the Disney Renaissance. Ashman did not see most of it. He was ill with AIDS during the making of Beauty and the Beast, working from a hotel room near his home because he could not travel to the studio, and he died in 1991, eight months before it opened. The film carries a dedication to him at the end.\n\nA second change is easier to miss. Songs written for the theatre are written to be performed, which means the singing voice has to belong to the character rather than to a session vocalist. The studio began casting stage performers who could act while singing, and recording them before the animation was drawn, so that animators could work from a real performance rather than fitting drawings to a finished track.\n\nNot everything about the approach was admired. Critics have argued that the formula hardened into a checklist, with each film supplying an opening number, a comic sidekick, a villain's song and a reprise. When the pattern is followed without the reason behind it, the songs stop carrying story and become decoration again, which is what they were before Ashman arrived.\n\nThe influence outlasted the studio. Look at almost any animated feature from any company today and you will find, ten minutes in, a character singing about something they do not have.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What was the state of the animation studio in the mid-1980s?",
+        "options": [
+          "It was expanding quickly",
+          "Its films were losing money and closure was discussed",
+          "It had just won several awards",
+          "It had moved to a new country"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where did Ashman and Menken come from?",
+        "options": [
+          "Television advertising",
+          "Radio drama",
+          "The theatre",
+          "Documentary film"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does an I Want song establish?",
+        "options": [
+          "What the main character is missing",
+          "Where the story takes place",
+          "Who the villain will be",
+          "How the film will end"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is the test of whether a song belongs in a story?",
+        "options": [
+          "Whether audiences remember it afterwards",
+          "Whether it can be sung by one performer",
+          "Whether it fits the film’s running time",
+          "Whether removing it would remove plot"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does an early wish matter for the ending?",
+        "options": [
+          "The audience measures the final scene against it",
+          "It tells the composer which key to use",
+          "It explains where the character lives",
+          "It shortens the middle of the film"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the writer mean by saying the influence outlasted the studio?",
+        "options": [
+          "The studio closed soon afterwards",
+          "Other companies now use the same structure",
+          "The songs are still performed in theatres",
+          "The films are still being remade"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 530,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak7-fic-001",
     "grade": 7,
     "genre": "fiction",
@@ -12244,6 +12811,87 @@
       "readingTime": 3
     },
     "imageUrl": "https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=800&q=80"
+  },
+  {
+    "id": "ak8-disney-001",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "disney",
+    "title": "Building a Place That Is Not Real",
+    "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&h=420&fit=crop",
+    "text": "Disneyland opened in California in July 1955, and the opening day was a disaster. Thousands of forged tickets had been printed, so roughly twice the expected crowd arrived. A plumbers' strike meant Disney had to choose between working drinking fountains and working lavatories; he chose the lavatories, and was accused in the press of forcing visitors to buy drinks. The asphalt had been laid that morning and was soft enough in the heat that women's shoes sank into it. Staff called it Black Sunday.\n\nNone of that mattered within a month. What made the park work was a set of design ideas that are now used in shopping centres, museums and airports everywhere.\n\nThe most important is control of the view. A visitor entering the park walks under a bridge into a single street, and at the end of that street stands a castle. Everything is arranged so that the castle is visible from the entrance and pulls people forward. Disney called such a structure a weenie, borrowing a word for the sausage used to attract a dog's attention. Every section of the park has one.\n\nThe second idea is forced perspective. The buildings on the main street are not the size they appear. The ground floor is built at about nine tenths of normal scale, the first floor at about eight tenths, the second smaller again. The street therefore feels welcoming rather than imposing, and the castle behind it looks considerably taller than its actual height. The same trick is used in reverse on the way out, so that leaving feels shorter than arriving.\n\nThe third is the removal of everything that would break the illusion. Bins are placed roughly every thirty paces, a figure arrived at by watching how far people will carry rubbish before dropping it. Music changes gradually as you walk between areas so that no boundary is audible. In the Florida park, opened in 1971, corridors were built underneath so that staff dressed for one area never walk through another, and deliveries and waste move unseen.\n\nA fourth principle is that the visitor should never be able to see two worlds at once. Areas are separated by tunnels, bends, changes in planting and gradual shifts in architecture, so that the western street and the space station are never in the same view. This is why the park is not laid out as a grid. A grid would let you stand at a corner and see four themes simultaneously, and the whole effect would collapse.\n\nThe park was also built to be finished slowly. Disney is often quoted saying that Disneyland would never be complete as long as there was imagination left in the world, which sounds like a slogan and was also a business plan: an attraction replaced every few years gives a visitor who came last year a reason to come again. A film is finished when it is released. A park is deliberately never finished.\n\nThere is a criticism that follows all of this, and it is not unreasonable. A place engineered so completely leaves the visitor no decisions to make, and some writers have argued that its real subject is orderliness rather than fantasy. That is a fair objection. It is also, in a sense, a compliment: the environment is doing so much work that people notice the work itself.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why did twice the expected crowd arrive on the opening day?",
+        "options": [
+          "Thousands of tickets had been forged",
+          "The park advertised free entry",
+          "A holiday fell on the same day",
+          "The gates were left open"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is a weenie in Disney’s vocabulary?",
+        "options": [
+          "A hidden staff corridor",
+          "A structure that pulls visitors forward",
+          "A ride built for small children",
+          "A gap left between two areas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How is forced perspective achieved on the main street?",
+        "options": [
+          "The street is built on a slope",
+          "The buildings are painted to look distant",
+          "Each floor is built at a smaller scale",
+          "The castle is placed on a hill"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How was the spacing of the bins decided?",
+        "options": [
+          "By copying other American parks",
+          "By a rule about fire safety",
+          "By the width of the walkways",
+          "By watching how far people carry rubbish"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why do the corridors in the Florida park exist?",
+        "options": [
+          "So staff and deliveries never break the illusion",
+          "To shelter visitors from the heat",
+          "To move visitors between areas quickly",
+          "To store the rides overnight"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the writer call the criticism a kind of compliment?",
+        "options": [
+          "The critics had all visited the park",
+          "The design works so hard that people notice the work",
+          "The objection applies to every theme park",
+          "Orderliness was the intended subject"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 558,
+      "readingTime": 4
+    }
   },
   {
     "id": "ak8-fic-001",
@@ -14595,6 +15243,87 @@
     }
   },
   {
+    "id": "ak9-disney-001",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "disney",
+    "title": "Who Owns Mickey Mouse?",
+    "imageUrl": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=700&h=420&fit=crop",
+    "text": "On the first day of 2024, the earliest version of Mickey Mouse entered the public domain in the United States. Anyone could now copy, sell or adapt the mouse as he appears in Steamboat Willie without permission. Getting to that date took almost a century, and the argument along the way changed copyright law for everything, not only for cartoons.\n\nCopyright exists for a stated reason: to give creators a period of exclusive control so that making things is worth doing, after which the work becomes common property that anyone may build on. The second half matters as much as the first. Almost every early Disney feature was itself an adaptation of an older story that was free to use, including Snow White, Cinderella, Pinocchio and The Little Mermaid. The studio was built on the public domain.\n\nWhen Steamboat Willie was made in 1928, American copyright lasted a maximum of fifty-six years, so the film was due to become free in 1984. Before that happened, Congress extended the term. In 1998 it extended it again, by a further twenty years, and this time the debate was public. Disney had lobbied heavily, along with other large rights holders, and critics named the law the Mickey Mouse Protection Act. Supporters argued it was simply harmonisation with European rules. Both were true.\n\nA challenge reached the Supreme Court in 2003, on the argument that a term extended repeatedly is effectively unlimited, and that the constitution allows copyright only for limited times. The court disagreed, seven to two, holding that setting the length was a matter for Congress rather than the courts. One dissenting judge wrote that the law's practical effect was to make the term perpetual on the instalment plan.\n\nNo further extension came, and the term expired. But copyright is not the only protection. Trademark law, which covers names and symbols used to identify a business, has no expiry date at all, and Disney holds trademarks on Mickey. So the 1928 cartoon may be freely copied, while using the mouse in a way that suggests your product comes from Disney remains unlawful. The line between the two is genuinely unclear, and the first cases are being argued now.\n\nOther countries were not obliged to follow. Copyright terms are set nationally, and Steamboat Willie had already passed into the public domain in Canada, Japan and much of Asia years earlier, which produced the odd situation of a work being free in one country and protected in another while the internet carried it freely between them. Publishers dealing with this must check the term in every market separately.\n\nThe first uses arrived quickly. Within days of January 2024 there were horror films, video games and merchandise featuring the 1928 mouse, most of them opportunistic and some of them poor. That is a predictable consequence of a work becoming free, and it is not an argument against it. The public domain is not a quality filter. It is a permission, and the same permission that allows a cheap horror film also allowed Disney to make Cinderella.\n\nThe wider question is who a long copyright serves. A creator who has been dead for seventy years cannot be encouraged to write anything. The beneficiaries are the companies that hold the rights, and the cost falls on everyone who might have adapted the work. Whether that trade is worth making is a live political question, and it is being decided, as it was in 1998, largely by whoever is willing to pay lobbyists to attend the meetings.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What happened on the first day of 2024?",
+        "options": [
+          "Disney lost its trademarks on Mickey",
+          "The earliest Mickey Mouse entered the public domain",
+          "Congress extended copyright again",
+          "Steamboat Willie was released for the first time"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How long did American copyright last when Steamboat Willie was made?",
+        "options": [
+          "A maximum of fifty-six years",
+          "Twenty-eight years exactly",
+          "The life of the creator",
+          "Ninety-five years"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What nickname did critics give the 1998 law?",
+        "options": [
+          "The Steamboat Act",
+          "The Hollywood Act",
+          "The Mickey Mouse Protection Act",
+          "The Long Term Act"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How did the Supreme Court rule in 2003?",
+        "options": [
+          "That the extension was unconstitutional",
+          "That trademarks should expire too",
+          "That the case could not be heard",
+          "That setting the term was a matter for Congress"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the writer mention Snow White and Cinderella?",
+        "options": [
+          "To show that the studio itself was built on free older stories",
+          "To show which films earned the most money",
+          "To explain why the films were adapted",
+          "To list the studio’s best-known work"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the writer’s main concern about long copyright terms?",
+        "options": [
+          "They make films more expensive to produce",
+          "They benefit rights holders rather than creators, at everyone else’s cost",
+          "They are difficult for courts to interpret",
+          "They differ between countries"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 589,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak9-fic-001",
     "grade": 9,
     "genre": "fiction",
@@ -16535,6 +17264,87 @@
     ],
     "meta": {
       "wordCount": 591,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak10-disney-001",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "disney",
+    "title": "The Company That Bought the Stories",
+    "imageUrl": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=700&h=420&fit=crop",
+    "text": "In 2006 Disney bought Pixar for about seven billion dollars. In 2009 it bought Marvel for four billion. In 2012 it bought Lucasfilm, and with it Star Wars, for roughly the same. In 2019 it bought most of Twenty-First Century Fox for seventy-one billion. Within thirteen years a single company had acquired a very large share of the stories that the English-speaking world tells its children.\n\nThe commercial logic is not mysterious. Cinema audiences had been falling for decades, and the reliable way to persuade someone to leave the house was familiarity: a character they already knew, in a story they already had opinions about. Buying an established property is less risky than building one. By the late 2010s the great majority of the highest-earning films each year were sequels, remakes or adaptations, and Disney owned an unusual number of them.\n\nThe argument for concentration is real. Expensive films need deep pockets, and a company with a dozen income streams can absorb a failure that would destroy a smaller studio. Pixar is the strongest evidence: after the purchase, Disney installed Pixar's leadership over its own animation department and the results improved markedly. Ownership is not automatically stifling.\n\nThe argument against is about what does not get made. A studio with an enormous library has a permanent incentive to reuse it, because a known character carries an audience that an original idea has to find. Every year of remakes is a year in which the new thing was not funded. The animator Hayao Miyazaki, whose films Disney distributed for years, has been blunt that a studio which only extends what already exists eventually forgets how to begin anything.\n\nThere is also the question of who decides. A film financed by one company, distributed by that company and shown on that company's streaming service passes through fewer independent judgements than one that must persuade several separate parties. That is efficient. It also means a small number of executives shape a very large share of what is culturally available, and their commercial caution becomes everyone's cultural landscape.\n\nCompetition authorities examined these purchases and permitted them, on the reasoning that the companies did not compete directly enough to harm consumers on price. That reasoning is contested. It measures what buyers pay, not what is available to buy, and the second is arguably the more important number when the product is stories.\n\nThe streaming shift sharpened all of it. Disney launched its own service in 2019 and withdrew its films from everyone else's, and the other large studios did the same, so a library that had been licensed widely became a reason to subscribe to one company. That changed what a film is for. A cinema release must persuade a stranger to buy a ticket. A streaming release must persuade an existing subscriber not to cancel, which rewards volume and familiarity rather than the single memorable thing.\n\nThere is a counter-argument about scale that deserves stating. Animation is extraordinarily expensive, a feature takes four or five years, and the studios that made such films independently mostly no longer exist, not because they were bought but because the economics stopped working. A large parent company is, in that reading, the only remaining way to fund the form. Whether that is a description of reality or a justification produced after the fact is not easy to settle.\n\nNone of this makes the films bad. Many are excellent, and it would be dishonest to pretend that a large budget and a stable studio produce nothing worth watching. The concern is narrower and harder to see, because it concerns absence: the work that was never commissioned leaves no reviews, no box office and no evidence of any kind that it should have existed.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Which purchase was by far the largest?",
+        "options": [
+          "Pixar, at about seven billion",
+          "Marvel, at four billion",
+          "Twenty-First Century Fox, at seventy-one billion",
+          "Lucasfilm, at four billion"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why is buying an established property attractive?",
+        "options": [
+          "It is cheaper than making a new film",
+          "It is less risky than building one from nothing",
+          "It avoids paying for scripts",
+          "It shortens production time"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does the writer offer as evidence that ownership is not automatically stifling?",
+        "options": [
+          "Pixar’s leadership improved Disney animation",
+          "Marvel films earned more after the purchase",
+          "Fox continued to make its own films",
+          "Lucasfilm kept its independence"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "On what reasoning did competition authorities permit the purchases?",
+        "options": [
+          "The companies promised to fund original work",
+          "The purchases created new jobs",
+          "The library was already shared",
+          "The companies did not compete enough to harm consumers on price"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the writer say that reasoning is contested?",
+        "options": [
+          "It measures prices rather than what is available to buy",
+          "The authorities did not read the contracts",
+          "The purchases happened too quickly to assess",
+          "Consumers were not asked for their views"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why is the writer’s central concern hard to demonstrate?",
+        "options": [
+          "The films are too recent to judge",
+          "Work that was never made leaves no evidence behind",
+          "Box office figures are kept secret",
+          "Critics disagree about which films are good"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 624,
       "readingTime": 4
     }
   },

@@ -15,6 +15,7 @@ const THEME_VISUALS: Record<string, ThemeVisual> = {
   community: { emoji: '🤝', gradient: 'from-sky-400 to-blue-500', label: 'Community' },
   culture: { emoji: '🎨', gradient: 'from-fuchsia-400 to-pink-500', label: 'Culture' },
   dance: { emoji: '💃', gradient: 'from-pink-400 to-rose-500', label: 'Dance' },
+  disney: { emoji: '🏰', gradient: 'from-sky-400 to-fuchsia-500', label: 'Disney' },
   environment: { emoji: '🌿', gradient: 'from-emerald-400 to-teal-500', label: 'Environment' },
   'everyday life': { emoji: '🌟', gradient: 'from-amber-400 to-yellow-500', label: 'Everyday life' },
   family: { emoji: '👨‍👩‍👧', gradient: 'from-rose-400 to-pink-500', label: 'Family' },
