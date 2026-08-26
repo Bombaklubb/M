@@ -405,6 +405,87 @@
     }
   },
   {
+    "id": "ak1-manga-001",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "manga",
+    "title": "Hana's New Book",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=700&h=420&fit=crop",
+    "text": "Hana has a new book. It is a manga. She opens it at the wrong end. Her brother laughs. \"Manga starts at the back,\" he says. Now Hana reads it the right way.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What kind of book does Hana have?",
+        "options": [
+          "A manga",
+          "A song book",
+          "A school book",
+          "A cook book"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does Hana do first?",
+        "options": [
+          "She reads the last page",
+          "She opens the book at the wrong end",
+          "She draws in the book",
+          "She gives the book away"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who laughs?",
+        "options": [
+          "Her mum",
+          "Her friend",
+          "Her brother",
+          "Her teacher"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where does a manga start?",
+        "options": [
+          "In the middle",
+          "On the first page",
+          "At the top",
+          "At the back"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did Hana open the book the wrong way?",
+        "options": [
+          "She did not know how manga works",
+          "She could not see well",
+          "The book was upside down",
+          "Her brother told her to"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How does Hana read the book at the end?",
+        "options": [
+          "Very slowly",
+          "The right way",
+          "With her brother",
+          "Only the pictures"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 33,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak1-ny-001",
     "grade": 1,
     "genre": "fiction",
@@ -1373,6 +1454,87 @@
     ],
     "meta": {
       "wordCount": 49,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-manga-001",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "manga",
+    "title": "The Drawing Club",
+    "imageUrl": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=700&h=420&fit=crop",
+    "text": "Every Thursday, Leo goes to the drawing club. Today they are drawing manga eyes. Leo's eyes are too big. The teacher says that is fine. In manga, big eyes show what a person feels. Leo draws six more, and each one looks different.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When does Leo go to the drawing club?",
+        "options": [
+          "Every Monday",
+          "Every Thursday",
+          "Every weekend",
+          "Every morning"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What are they drawing today?",
+        "options": [
+          "Manga eyes",
+          "Manga hair",
+          "Small animals",
+          "Houses"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does the teacher say about the big eyes?",
+        "options": [
+          "They must be smaller",
+          "They are fine",
+          "They are the wrong shape",
+          "They take too long"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How many more eyes does Leo draw?",
+        "options": [
+          "Two",
+          "Four",
+          "Six",
+          "Ten"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why are eyes drawn big in manga?",
+        "options": [
+          "They are easier to draw",
+          "They fill the page",
+          "They show what a person feels",
+          "They are copied from photos"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does Leo learn in the club?",
+        "options": [
+          "That drawing clubs are hard work",
+          "That eyes must always look the same",
+          "That teachers like small drawings",
+          "That there is more than one way to draw an eye"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 43,
       "readingTime": 1
     }
   },
@@ -2754,6 +2916,87 @@
     }
   },
   {
+    "id": "ak3-manga-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "manga",
+    "title": "One Panel at a Time",
+    "imageUrl": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=700&h=420&fit=crop",
+    "text": "Amina wanted to make her own manga. She drew the first page eleven times and was never happy with it.\n\nHer father watched for a while. \"You are drawing the whole page,\" he said. \"Draw one panel.\"\n\nSo Amina drew one small box with a girl standing in a doorway. Then she drew the next one. By Sunday evening she had four pages, and none of them were perfect, but all of them were finished.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How many times did Amina draw the first page?",
+        "options": [
+          "Eleven",
+          "Four",
+          "Six",
+          "Twenty"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What did her father tell her to do?",
+        "options": [
+          "Take a break",
+          "Draw one panel",
+          "Use a bigger pen",
+          "Copy another manga"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What was in the first panel she drew?",
+        "options": [
+          "A cat on a wall",
+          "A boy on a bicycle",
+          "A girl standing in a doorway",
+          "A house in the rain"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How many pages did she have by Sunday evening?",
+        "options": [
+          "One",
+          "Two",
+          "Three",
+          "Four"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why could Amina not finish the first page?",
+        "options": [
+          "The whole page felt too big to get right",
+          "She had no paper left",
+          "Her father kept interrupting her",
+          "She did not know the story"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the story?",
+        "options": [
+          "Drawing takes many years to learn",
+          "A big job gets easier in small parts",
+          "Fathers give the best advice",
+          "Perfect work is worth waiting for"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 75,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak3-ny-001",
     "grade": 3,
     "genre": "fiction",
@@ -4127,6 +4370,87 @@
     ],
     "meta": {
       "wordCount": 184,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak4-manga-001",
+    "grade": 4,
+    "genre": "non-fiction",
+    "theme": "manga",
+    "title": "How to Read a Manga",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=700&h=420&fit=crop",
+    "text": "The first surprise for a new manga reader is the direction. Japanese is traditionally written from right to left, and manga follows the same rule. The front cover is where a European book has its back cover, and on every page you begin at the top right corner and move left. Many English editions print a warning on the last page: stop, you are reading the wrong way.\n\nThe boxes are called panels, and your eye moves from one to the next in the same right-to-left order. A wide panel that stretches across the page usually means time slowing down. A row of small narrow panels means the opposite.\n\nMost manga is printed in black and white. Colour is expensive, and artists work fast, so shading is done with screentone, a sheet of tiny printed dots that is cut to shape and stuck onto the page. Different patterns give different moods: dark dots for a storm, soft grey for a memory.\n\nSound is drawn rather than written. Japanese has a huge number of sound words, and they are lettered by hand into the picture. Some of them describe things that make no sound at all. There is a word for the silence in an empty room, and it appears on the page as if it could be heard.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "In which direction is manga read?",
+        "options": [
+          "From right to left",
+          "From left to right",
+          "From the middle outwards",
+          "From the bottom upwards"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What are the boxes on a manga page called?",
+        "options": [
+          "Frames",
+          "Panels",
+          "Blocks",
+          "Cells"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is screentone?",
+        "options": [
+          "A special ink used for covers",
+          "A machine that prints manga quickly",
+          "A sheet of printed dots used for shading",
+          "A computer program for lettering"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does a wide panel across the page usually mean?",
+        "options": [
+          "A change of character",
+          "The end of a chapter",
+          "A loud noise",
+          "Time slowing down"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why do English editions print a warning on the last page?",
+        "options": [
+          "Because readers open the book at what looks like the front",
+          "Because the story is difficult to follow",
+          "Because the pages are numbered backwards",
+          "Because the ending is often spoiled"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why is most manga printed in black and white?",
+        "options": [
+          "Readers prefer it that way",
+          "Colour is expensive and artists work fast",
+          "Screentone cannot be printed in colour",
+          "Black ink lasts longer on cheap paper"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 218,
       "readingTime": 1
     }
   },
@@ -5519,6 +5843,87 @@
     ],
     "meta": {
       "wordCount": 304,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak5-manga-001",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "manga",
+    "title": "Inside a Manga Magazine",
+    "imageUrl": "https://images.unsplash.com/photo-1573812195421-50a396d17893?w=700&h=420&fit=crop",
+    "text": "Manga does not usually appear as a book first. It appears in a magazine, and the magazine is where almost everything is decided.\n\nThe biggest of them, Weekly Shonen Jump, has been published in Japan since 1968. It is thick, printed on rough paper in several colours of ink, and it is cheap enough to buy on the way to school and throw away afterwards. Inside are around twenty different series running at the same time, each with a new chapter of about nineteen pages.\n\nReaders vote. A postcard or an online form in every issue asks which stories they liked best that week, and the results are counted carefully. A series that sits near the top of the list is safe. A series that stays near the bottom is usually cancelled, sometimes after only ten weeks, and the artist is told to finish the story as quickly as possible. Some famous manga were nearly cancelled early on and were saved by a single popular chapter.\n\nThere is not only one magazine. Others are aimed at girls, at adult men, at adult women, and at readers of a single genre such as sport or horror. The label describes the magazine rather than the reader, and plenty of people read outside it.\n\nThe stories that survive are collected. Roughly every nine chapters are gathered into a small paperback called a tankobon, printed on better paper, with a proper cover and sometimes an extra scene. This is the version that reaches libraries and other countries, and it is where the publisher actually makes its money.\n\nThe magazine itself often loses money. It is sold at a low price to reach as many readers as possible, because its real job is to find out which stories people want before the expensive books are printed. Readers who think they are simply enjoying a comic are, without noticing, doing the market research.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When was Weekly Shonen Jump first published?",
+        "options": [
+          "1988",
+          "1948",
+          "2001",
+          "1968"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "About how long is one chapter in the magazine?",
+        "options": [
+          "Forty pages",
+          "Nine pages",
+          "Nineteen pages",
+          "Sixty pages"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is a tankobon?",
+        "options": [
+          "A paperback collecting several chapters",
+          "A weekly magazine sold at stations",
+          "A prize given to the best artist",
+          "A postcard readers send to the publisher"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What happens to a series that stays at the bottom of the vote?",
+        "options": [
+          "It is printed in colour instead",
+          "It moves to another magazine",
+          "It is given a new artist",
+          "It is usually cancelled"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is the magazine sold cheaply even though it loses money?",
+        "options": [
+          "To compete with foreign comics",
+          "Because the paper it uses is almost free",
+          "To reach as many readers as possible and test the stories",
+          "Because readers would not pay more for it"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What does the text suggest about readers who vote?",
+        "options": [
+          "They are doing market research without realising it",
+          "They are paid a small amount by the publisher",
+          "They mostly vote for the oldest series",
+          "They rarely change the result"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 317,
       "readingTime": 2
     }
   },
@@ -7058,6 +7463,87 @@
     ],
     "meta": {
       "wordCount": 407,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak6-manga-001",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "manga",
+    "title": "From Manga to Anime",
+    "imageUrl": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=700&h=420&fit=crop",
+    "text": "When a manga becomes popular, a studio usually turns it into an animated series. That sounds like a simple translation from one medium to another. In practice it is one of the hardest jobs in the industry, and the reason is time.\n\nA manga artist can suggest movement with a single drawing. A blur, a few speed lines, a foot leaving the ground, and the reader's mind fills in the rest. Animation cannot do that. Every one of those moments has to exist as a real sequence of pictures, and Japanese television animation is usually drawn at around eight to twelve drawings per second. A chapter that took one artist a week can take a studio of dozens of people a month.\n\nSo studios adapt rather than copy. Some scenes are stretched, because a fight that fills four pages would be over in nine seconds on screen. Others are cut. Backgrounds that the manga only hinted at have to be designed properly, because the camera will move across them. Colour has to be invented, since the original was black and white, and the choice can change how a character is understood before they say a word.\n\nSound is the part that has no source material at all. Voice actors are cast, and in Japan they are well-known performers with their own audiences. A composer writes music that the manga could only suggest with a drawn sound word. Fans who have read a chapter dozens of times still describe hearing a character speak for the first time as strange, because the voice in their head was never quite anyone's.\n\nThere is also a scheduling problem. A weekly manga produces about one chapter every seven days, and a weekly anime episode uses roughly three chapters. The series on screen therefore catches up with the series on paper, sometimes within a year. Studios have solved this in different ways. Some invent extra episodes, called filler, which pause the main story. Others stop and wait, returning a year later with a new season. A few write their own ending, which occasionally arrives before the manga artist has decided on theirs.\n\nThe result is that two versions of the same story can differ considerably, and readers argue about which is better. The manga is usually closer to what the author intended. The anime has music, voices and motion, and it is the version that most people outside Japan meet first.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How many drawings per second does Japanese television animation usually use?",
+        "options": [
+          "About eight to twelve",
+          "About twenty-four",
+          "About thirty",
+          "About sixty"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Roughly how many manga chapters does one anime episode use?",
+        "options": [
+          "One",
+          "Three",
+          "Seven",
+          "Twelve"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is filler?",
+        "options": [
+          "Extra pages added to a manga volume",
+          "Background music written for a scene",
+          "Extra episodes that pause the main story",
+          "The colour added to a black and white drawing"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Which version does the text say is usually closer to the author’s intention?",
+        "options": [
+          "The anime",
+          "The film version",
+          "The translated edition",
+          "The manga"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why can a manga suggest movement more easily than animation can?",
+        "options": [
+          "The reader’s mind fills in what is between the drawings",
+          "Manga artists work faster than animators",
+          "Paper shows motion better than a screen",
+          "Manga uses more panels than an episode uses shots"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why might an anime catch up with the manga it is based on?",
+        "options": [
+          "Studios often skip chapters to save money",
+          "Episodes use more story each week than the artist can produce",
+          "Manga artists take long breaks between chapters",
+          "Television companies demand longer seasons"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 405,
       "readingTime": 3
     }
   },
@@ -8682,6 +9168,87 @@
     }
   },
   {
+    "id": "ak7-manga-001",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "manga",
+    "title": "The Story of Manga",
+    "imageUrl": "https://images.unsplash.com/photo-1533050487297-09b450131914?w=700&h=420&fit=crop",
+    "text": "The word manga is old. It appears on the cover of a set of sketchbooks published from 1814 by the printmaker Hokusai, the artist best known abroad for the picture of a great wave. His books were not comics. They were thousands of quick studies of people, animals, weather and objects, drawn to show students how to observe, and the word he used meant something close to sketches drawn as they come.\n\nPicture stories in Japan are older still. Painted scrolls from the twelfth century show rabbits and frogs behaving like people, arranged in a sequence the viewer unrolls from right to left. Nobody at the time would have called this a comic, but the reading direction and the sense of a story moving through pictures are already there.\n\nModern manga, however, begins after the Second World War, and largely with one man. Osamu Tezuka was a medical student who drew constantly, and in 1947 he published a long adventure story that sold hundreds of thousands of copies. He had watched American animation as a child, and he brought two ideas from it into print. The first was the camera: he drew scenes from below, from above, in close-up, moving in and out as a film does, rather than presenting every panel from the same flat distance. The second was pace. He let a single action spread across many panels, so that reading felt like watching.\n\nTezuka worked at extraordinary speed and produced around 150,000 pages in his lifetime, including Astro Boy, the story of a robot boy built by a scientist who had lost his son. He is usually called the god of manga in Japan, and he mattered less as a single artist than as a model. Others copied his method, and the industry that grew around it took its shape from him.\n\nPost-war Japan was poor, and that shaped the medium too. Paper was rationed, so books were small and printed in black ink on grey stock. Few families could buy them, so lending libraries appeared where a child could read a volume for a few coins. Cheapness became a habit that never entirely went away.\n\nNot everyone followed Tezuka. In the late 1950s a group of younger artists working in Osaka argued that his rounded characters and film-like energy suited children and nothing else. They wanted something harder, and they coined a separate word for it: gekiga, meaning dramatic pictures. Their stories were set in factories, back streets and cheap rented rooms, drawn with heavy lines and unhappy endings, and they were sold through the same lending libraries that Tezuka's readers used. The disagreement mattered, because it established early that manga was not one thing. An artist could choose an audience and a register, and the medium was wide enough to hold both.\n\nBy the 1960s manga was being written for adults as well as children, on subjects including politics, work, sport and history. That was the point at which it stopped being a kind of children's publishing and became simply a way of telling any story at all.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When were Hokusai’s sketchbooks first published?",
+        "options": [
+          "From 1714",
+          "From 1814",
+          "From 1914",
+          "From 1947"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What do the twelfth-century painted scrolls show?",
+        "options": [
+          "Battles between famous warriors",
+          "Scenes from the imperial court",
+          "Animals behaving like people",
+          "Maps of the countryside"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What had Osamu Tezuka studied?",
+        "options": [
+          "Medicine",
+          "Architecture",
+          "Printing",
+          "Law"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Roughly how many pages did Tezuka produce in his lifetime?",
+        "options": [
+          "Fifteen thousand",
+          "Fifty thousand",
+          "One hundred thousand",
+          "One hundred and fifty thousand"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say Tezuka brought \"the camera\" into print?",
+        "options": [
+          "He photographed his drawings before printing them",
+          "He drew scenes from changing angles and distances, as film does",
+          "He used film stills as models for his characters",
+          "He recorded his stories before drawing them"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text mention that paper was rationed after the war?",
+        "options": [
+          "To explain why so few manga survive today",
+          "To show that printing was controlled by the government",
+          "To explain why manga became cheap, small and printed in black",
+          "To argue that manga began as a luxury product"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 513,
+      "readingTime": 3
+    }
+  },
+  {
     "id": "ak7-mlk-001",
     "grade": 7,
     "genre": "non-fiction",
@@ -10298,6 +10865,87 @@
     ],
     "meta": {
       "wordCount": 541,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak8-manga-001",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "manga",
+    "title": "The People Behind the Panels",
+    "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=700&h=420&fit=crop",
+    "text": "A manga usually carries one name on the cover. Behind that name there is almost always a small team, and understanding how it works explains a great deal about why the industry produces what it does.\n\nThe artist, called a mangaka, draws the characters, decides how the panels are arranged and writes the dialogue. Everything else is often shared. Assistants fill in backgrounds, apply screentone, draw crowds and vehicles, and rule the borders of the panels. A busy weekly series may employ four or five of them, working in the same room, sometimes sleeping there during the last days before a deadline. Many well-known artists began as assistants to someone else, which is how the craft is passed on.\n\nThen there is the editor, whose role is larger than the word suggests in most other publishing. A manga editor is assigned to a series and often to a single artist. They discuss the plot before it is drawn, argue about which character should appear next, request changes when the reader votes fall, and pass on decisions from the magazine. Some of the most famous storylines in manga were suggested, or vetoed, by an editor whose name almost no reader knows.\n\nA typical week has a shape. It begins with a meeting, usually on the phone, in which the artist and the editor agree what the chapter will contain. The artist then draws a name, a rough version of the whole chapter in loose pencil, where the panel layout and the dialogue are decided but almost nothing is finished. The name is the part that matters, and it may be redrawn several times before the editor accepts it. Only then does the finished art begin: pencils, ink, screentone, backgrounds, lettering, each stage handed to whoever is free. The pages are collected on the last night and sent to the printer, and the following morning the meeting for the next chapter takes place.\n\nThe weekly rhythm is the hardest part. Nineteen finished pages every seven days, without a break, for years, is a schedule with no equivalent in film or in prose publishing. Artists have described weeks of three or four hours of sleep a night. Several very successful series have paused for months because the artist became ill, and a few have never resumed. In the last decade this has become a public argument in Japan rather than a private one, and some magazines have moved series to a fortnightly or monthly schedule to protect the people who draw them.\n\nMoney follows the books rather than the magazine. An artist is paid a modest page rate for each chapter, and that rate rarely covers the wages of the assistants. The real income arrives when chapters are collected into paperback volumes, and again if the series is animated or licensed abroad. This means a manga can be popular enough to fill a magazine and still leave its creator poor, which is one reason the vote-driven system feels so unforgiving from the inside.\n\nNone of this is visible on the page. The reader sees a single confident line and one name. What produced it was a room, a deadline, an argument with an editor and a great deal of unrecorded work by people the cover never mentions.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is a mangaka?",
+        "options": [
+          "An editor assigned to one magazine",
+          "The artist who draws and writes the manga",
+          "An assistant who applies screentone",
+          "A publisher of paperback volumes"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which tasks do assistants typically do?",
+        "options": [
+          "Backgrounds, screentone, crowds and panel borders",
+          "Dialogue and character design",
+          "Printing and distribution",
+          "Negotiating with the magazine"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How many finished pages does a weekly series usually require?",
+        "options": [
+          "About nine",
+          "About fourteen",
+          "About nineteen",
+          "About thirty"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "When does an artist earn most of their income?",
+        "options": [
+          "From the page rate paid for each chapter",
+          "From prizes awarded by the magazine",
+          "From reader votes each week",
+          "From collected volumes and adaptations"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say editors are more powerful than the word suggests?",
+        "options": [
+          "They shape the plot and can veto ideas before drawing begins",
+          "They own the rights to the characters",
+          "They choose which artists are allowed to publish",
+          "They write most of the dialogue themselves"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why can a popular series still leave its creator poor?",
+        "options": [
+          "Magazines take most of the paperback profits",
+          "The page rate is modest and must pay the assistants",
+          "Artists are paid only when a series ends",
+          "Readers buy the magazine instead of the books"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 544,
       "readingTime": 4
     }
   },
@@ -12327,6 +12975,87 @@
     }
   },
   {
+    "id": "ak9-manga-001",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "manga",
+    "title": "How Manga Left Japan",
+    "imageUrl": "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=700&h=420&fit=crop",
+    "text": "For most of its history, manga was made for Japanese readers and nobody else. Today it is one of Japan's largest cultural exports, sold in dozens of languages, and the route it took was not planned by anyone.\n\nThe first serious English editions appeared in the late 1980s, and they were altered heavily. Because English is read from left to right, publishers mirrored every page so that the story ran the familiar way. This solved one problem and created several others. Mirrored characters became left-handed. Writing in the background appeared backwards. Any drawing that depended on which side of the frame a character stood on now said something slightly different. Artists complained, and one of them, Akira Toriyama, is reported to have objected to the flipping of his work.\n\nThe change came in 2002, when the publisher Tokyopop began printing unflipped volumes at a lower price, marketed with the claim that this was the authentic form. The gamble was that readers would accept an unfamiliar reading direction if the alternative was waiting or paying more. They did. Within a few years right-to-left printing had become the standard, and a small note explaining it appears in the back of almost every English volume.\n\nTranslation raised harder questions. Japanese has levels of politeness with no English equivalent, and honorifics attached to names carry information about age and closeness that a translation must either keep, explain or discard. Sound words are drawn into the artwork, so replacing them means altering the picture. Food, school customs and holidays can be adapted for a foreign reader or left as they are with a note at the back, and publishers still disagree about which is better.\n\nMeanwhile readers had stopped waiting. Groups of fans began scanning Japanese volumes, translating them and posting the results online, often within a day of publication. This practice, known as scanlation, was clearly illegal, and it was also the reason many series found an audience abroad at all. Publishers spent years fighting it before concluding that the real answer was speed, and several magazines now release official English chapters on the same day as the Japanese edition.\n\nAnimation did much of the early work. A television series could be dubbed, sold cheaply to foreign broadcasters and shown to children who had never heard of manga, and by the 1990s a generation in Europe and North America had grown up on Japanese cartoons without knowing where the stories came from. When those viewers discovered that the episodes were adapted from books, a market existed before anyone had marketed anything.\n\nLibraries were an unexpected ally. Manga is cheap, borrowed constantly and read by teenagers who borrow little else, and by the 2010s many school and public libraries in Europe were building collections deliberately. Some now stock more manga than any other kind of fiction. Teachers who had once treated comics as a distraction began using them with students who found long prose difficult, which changed the medium's reputation faster than any publisher could have.\n\nThe market has followed. Manga now accounts for a large share of graphic novel sales in North America and Europe, and Japanese publishers plan for foreign readers from the beginning rather than treating them as an afterthought. A medium that was designed for cheap magazines on Japanese commuter trains ended up shaping what young people read on the other side of the world, largely because its own readers refused to wait for permission.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did early English publishers do to manga pages?",
+        "options": [
+          "They printed them in colour",
+          "They mirrored them so the story ran left to right",
+          "They removed the sound words",
+          "They reduced the number of panels"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Tokyopop do in 2002?",
+        "options": [
+          "Bought a Japanese magazine",
+          "Stopped publishing manga in English",
+          "Printed unflipped volumes at a lower price",
+          "Began translating manga by computer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is scanlation?",
+        "options": [
+          "Fans scanning, translating and posting manga online",
+          "A method of printing screentone in colour",
+          "A licence sold to foreign publishers",
+          "Software that reverses page order automatically"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How have several magazines responded to unofficial translations?",
+        "options": [
+          "By taking readers to court individually",
+          "By raising the price of foreign editions",
+          "By publishing only in Japanese",
+          "By releasing official English chapters on the same day"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did mirroring the pages cause problems beyond reading direction?",
+        "options": [
+          "It reversed handedness, background writing and the meaning of positions",
+          "It made the paper more expensive to print",
+          "It reduced the number of pages in each volume",
+          "It removed the artist’s name from the cover"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the text conclude about how manga spread abroad?",
+        "options": [
+          "Japanese publishers planned the expansion carefully from the start",
+          "It succeeded largely because readers acted before publishers did",
+          "It grew only after translation became fully accurate",
+          "Its growth depended on animation rather than on books"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 574,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak9-ny-001",
     "grade": 9,
     "genre": "non-fiction",
@@ -13858,6 +14587,87 @@
           "Mocking and ironic"
         ],
         "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 594,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak10-manga-001",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "manga",
+    "title": "Manga as a Visual Language",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=700&h=420&fit=crop",
+    "text": "It is tempting to treat comics as illustrated stories, as though the words carried the meaning and the drawings decorated it. Manga makes that position difficult to hold, because a great deal of what it communicates is carried by devices that have no verbal equivalent at all.\n\nConsider the space between panels. The American theorist Scott McCloud named it the gutter, and argued in 1993 that it is where comics actually happen. Nothing is printed there. One panel shows a raised hand, the next shows a broken cup, and the reader supplies the movement between them. McCloud called this closure, and pointed out that the reader is therefore a participant rather than an observer: the story is completed in a place the artist never drew.\n\nManga tends to leave that gap wider than Western comics traditionally did. A sequence may spend three panels on a character walking towards a door, saying nothing, and the effect is not slowness but weight. The critic and artist Yoshihiro Tatsumi described this as letting the reader breathe. Because the pages are cheap and numerous, a manga can afford silence in a way a forty-eight page European album cannot.\n\nThen there are the conventions, which function almost like grammar. A cross-shaped mark on a forehead means anger. A bubble of mucus from the nose means sleep. Lines drawn radiating outward do not describe light but attention, telling the reader where to look and how suddenly. Sweat drops indicate embarrassment rather than heat. None of these are realistic, and none of them need explaining to a reader who has encountered a few dozen volumes; they are learned exactly as vocabulary is learned, by exposure.\n\nMotion is handled the same way. Western comics often draw speed lines behind a moving object, keeping the background fixed as a camera would. Manga frequently does the opposite, blurring the entire background into streaks and leaving the moving figure sharp. This is not what a camera sees. It is closer to what the moving character experiences, and the choice quietly moves the reader from watching a scene to inhabiting it.\n\nEven the shape of the panel carries meaning. Straight borders suggest the present; wavy or broken borders often mark memory or dream. A panel that bleeds off the edge of the page, with no border at all, tends to open the moment out, removing the sense of a frame containing it.\n\nThe page itself is a unit. A manga is read in spreads of two facing pages, and the artist knows exactly which panel sits in the bottom left corner, because that is the last thing seen before the page turns. Cliffhangers are placed there deliberately, and a revelation printed at the top of the following spread arrives with a force that the same drawing would not have in the middle of a page. Serialised manga uses this constantly: nineteen pages contain roughly nine turns, and each one is a small controlled surprise. Nothing equivalent exists in prose, where a page break falls wherever the typesetting happens to put it. Artists have described planning a chapter backwards from its turns.\n\nWhat follows from all this is that reading manga is a skill, not simply a preference. A reader unfamiliar with the conventions does not merely find the pages strange; they miss information that is genuinely present on them. This is why the medium rewards the sustained attention that schools traditionally reserve for prose, and why the old argument about whether comics count as real reading has largely been abandoned by the people who study them.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What did Scott McCloud call the space between panels?",
+        "options": [
+          "The gutter",
+          "The margin",
+          "The break",
+          "The frame"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is closure, as McCloud used the term?",
+        "options": [
+          "The way a chapter ends on a cliffhanger",
+          "The reader supplying what happens between panels",
+          "The border drawn around each panel",
+          "The final page of a collected volume"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "According to the text, what do radiating lines indicate?",
+        "options": [
+          "A source of light",
+          "The passing of time",
+          "Attention and suddenness",
+          "The direction of a sound"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What often marks a memory or a dream?",
+        "options": [
+          "A panel drawn in colour",
+          "A panel with no dialogue",
+          "A panel placed at the top of the page",
+          "A panel with wavy or broken borders"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text say blurring the background rather than the figure changes the reader’s position?",
+        "options": [
+          "It shows the scene as the moving character experiences it",
+          "It makes the drawing quicker to produce",
+          "It hides mistakes in the background art",
+          "It imitates how a camera records fast movement"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the writer’s main argument?",
+        "options": [
+          "Manga is easier to read than prose once the pictures are understood",
+          "Reading manga is a learned skill, and its conventions carry real information",
+          "Western comics should adopt Japanese conventions",
+          "The meaning of a comic lies mainly in its dialogue"
+        ],
+        "correct": 1
       }
     ],
     "meta": {

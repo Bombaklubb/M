@@ -25,6 +25,7 @@ const THEME_VISUALS: Record<string, ThemeVisual> = {
   health: { emoji: '💪', gradient: 'from-lime-400 to-emerald-500', label: 'Health' },
   history: { emoji: '🏛️', gradient: 'from-stone-400 to-amber-600', label: 'History' },
   horses: { emoji: '🐴', gradient: 'from-amber-400 to-orange-600', label: 'Horses' },
+  manga: { emoji: '🗯️', gradient: 'from-rose-500 to-indigo-600', label: 'Manga' },
   literature: { emoji: '📚', gradient: 'from-indigo-400 to-violet-500', label: 'Literature' },
   music: { emoji: '🎵', gradient: 'from-violet-400 to-purple-500', label: 'Music' },
   nature: { emoji: '🏕️', gradient: 'from-green-400 to-emerald-500', label: 'Nature' },
