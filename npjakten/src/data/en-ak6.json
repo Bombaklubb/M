@@ -752,6 +752,774 @@
           "note": "Du måste skriva två exempel för att få full poäng."
         }
       ]
+    },
+    {
+      "id": "en6-b1a-say-it-back",
+      "delprov": "Delprov B1a: reading – Say It Back",
+      "textType": "berättande",
+      "lang": "en",
+      "title": "Say It Back",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&h=506&fit=crop",
+        "alt": "Two students talking in a corridor.",
+        "fallback": "/images/veta-vad-man-vill.svg"
+      },
+      "ingress": "Two people are talking to each other. Read each dialogue. How does it end? Choose the best alternative.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Here are twelve more short dialogues. Each one has three lines, and you choose the line that fits best at the end.",
+            "Think about what the speakers already know, and what would sound strange or rude. Only one alternative fits.",
+            "Read all four alternatives before you choose."
+          ]
+        }
+      ],
+      "byline": [
+        "Uppgift skriven för NP-jakten",
+        "I de nationella provens format – allt innehåll är nyskrivet."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Is this seat taken?\n– No, go ahead.\n– Thanks, the train is really full today.",
+          "options": [
+            "It always is on Fridays.",
+            "I don't like trains.",
+            "The seat is broken.",
+            "I'm getting off here."
+          ],
+          "correctIndex": 0,
+          "explanation": "Kommentaren om att tåget är fullt bjuder in till ett medhåll. Att säga att man kliver av skulle vara konstigt när man just erbjudit platsen."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Could you turn the music down a bit?\n– Sorry, is it too loud?\n– Just a little.",
+          "options": [
+            "I'll turn it off completely.",
+            "There, is that better?",
+            "I can't hear anything.",
+            "Music is good for you."
+          ],
+          "correctIndex": 1,
+          "explanation": "Personen bad bara om lite lägre volym, så att stänga av helt är en överreaktion. Det naturliga är att sänka och fråga om det räcker."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– I forgot my lunch at home.\n– Again? That's the second time this week.\n– I know, I was in a hurry.",
+          "options": [
+            "You can share mine.",
+            "Lunch is at twelve.",
+            "I never forget mine.",
+            "Go home and get it."
+          ],
+          "correctIndex": 0,
+          "explanation": "Situationen kallar på hjälp, och att dela med sig är det vänliga svaret. ”I never forget mine” svarar inte på problemet."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– How was your first day at the new school?\n– Better than I thought.\n– Did you talk to anyone?",
+          "options": [
+            "No, school starts on Monday.",
+            "Yes, a girl in my class.",
+            "I walked there.",
+            "It's a big building."
+          ],
+          "correctIndex": 1,
+          "explanation": "Frågan gäller om personen talade med någon, så svaret måste handla om en person. De andra alternativen svarar på helt andra frågor."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Do you know how to get to the library?\n– Straight ahead and then left.\n– Is it far?",
+          "options": [
+            "About five minutes.",
+            "It's a nice library.",
+            "I go there often.",
+            "Turn right instead."
+          ],
+          "correctIndex": 0,
+          "explanation": "Frågan gäller avståndet, så svaret ska handla om tid eller sträcka. Att ändra vägbeskrivningen mitt i vore ologiskt."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– I've decided to learn the guitar.\n– That's great! Have you got one?\n– Not yet, I'm saving up.",
+          "options": [
+            "You can borrow mine.",
+            "Guitars have six strings.",
+            "I stopped playing.",
+            "Where do you practise?"
+          ],
+          "correctIndex": 0,
+          "explanation": "Personen saknar en gitarr men sparar. Att erbjuda sin egen är det som direkt hjälper. De andra svaren tar inte upp problemet."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Your dog is huge!\n– He's only eight months old.\n– Really? How big will he get?",
+          "options": [
+            "He was smaller before.",
+            "About twice this size.",
+            "He's a very good dog.",
+            "I got him last year."
+          ],
+          "correctIndex": 1,
+          "explanation": "Frågan handlar om framtiden – hur stor hunden ska bli. Bara ett av alternativen svarar på det."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– I can't find my glasses anywhere.\n– Have you looked in the kitchen?\n– Twice.",
+          "options": [
+            "They're on your head.",
+            "You need new glasses.",
+            "I don't wear glasses.",
+            "The kitchen is clean."
+          ],
+          "correctIndex": 0,
+          "explanation": "Den lite skämtsamma poängen är att glasögonen suttit på huvudet hela tiden. De andra alternativen hjälper inte personen att hitta dem."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– We're moving to Spain in August.\n– Wow! Are you happy about it?\n– Yes and no.",
+          "options": [
+            "What do you mean?",
+            "Spain is in Europe.",
+            "I've been to Spain.",
+            "When did you move?"
+          ],
+          "correctIndex": 0,
+          "explanation": "Svaret ”Yes and no” är otydligt, och då är det naturligt att be personen förklara. Frågan om när de flyttade motsäger att flytten sker i augusti."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Would you like tea or coffee?\n– Tea, please.\n– Milk and sugar?",
+          "options": [
+            "Just milk, thanks.",
+            "No, I'd like coffee.",
+            "Tea is my favourite.",
+            "I'll make it myself."
+          ],
+          "correctIndex": 0,
+          "explanation": "Frågan gäller vad man vill ha i teet, så svaret ska välja mellan mjölk och socker. Att byta till kaffe motsäger att man just bad om te."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Did you see the match last night?\n– No, I fell asleep on the sofa.\n– You missed a good one.",
+          "options": [
+            "Don't tell me the score!",
+            "I never watch football.",
+            "The sofa is comfortable.",
+            "It was at eight o'clock."
+          ],
+          "correctIndex": 0,
+          "explanation": "Personen har missat matchen men kan se den senare, så det logiska är att be om att inte få veta resultatet. ”I never watch football” motsäger att hen tänkte se den."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "– Can I ask you something?\n– Of course.\n– It's a bit personal.",
+          "options": [
+            "Ask me anyway.",
+            "I don't know you.",
+            "That's a good question.",
+            "Sorry, I'm busy."
+          ],
+          "correctIndex": 0,
+          "explanation": "Personen har redan sagt ja, så det som passar är att uppmuntra frågan trots att den är personlig. ”Sorry, I'm busy” motsäger ”Of course”."
+        }
+      ]
+    },
+    {
+      "id": "en6-b1b-summer-camp",
+      "delprov": "Delprov B1b: reading – Pinewood Summer Camp",
+      "textType": "beskrivande",
+      "lang": "en",
+      "title": "Pinewood Summer Camp",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=900&h=506&fit=crop",
+        "alt": "Tents in a forest clearing.",
+        "fallback": "/images/skog.svg"
+      },
+      "ingress": "Use the information in the text when you answer the questions. Your answers must be in English.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Two weeks without a screen, a lake you can jump into before breakfast and forty new people who did not know your name on Monday. Welcome to Pinewood."
+          ]
+        },
+        {
+          "heading": "Where we are",
+          "paragraphs": [
+            "Pinewood Summer Camp lies in the forest by Lake Ammer in southern Germany, an hour and a half by train from Munich. The camp has been open every summer since 1968."
+          ]
+        },
+        {
+          "heading": "Who can come",
+          "paragraphs": [
+            "Our camps are for young people between 11 and 16. Each group has a maximum of twenty campers and four leaders, and we always keep boys and girls in separate sleeping cabins.",
+            "You do not need to speak perfect English. Our leaders come from six different countries and English is the language we all share."
+          ]
+        },
+        {
+          "heading": "When and how much",
+          "paragraphs": [
+            "There are three camps every summer: one in late June, one in July and one in the first two weeks of August. Each camp lasts fourteen days.",
+            "The price is 690 euros. This covers your bed, all meals, all activities and the train ticket from Munich. It does not cover your travel to Munich, which you arrange yourself."
+          ]
+        },
+        {
+          "heading": "A normal day",
+          "paragraphs": [
+            "We wake up at seven and swim in the lake before breakfast – this is not compulsory, but almost everybody does it after the first few days. Mornings are for activities you choose yourself: canoeing, climbing, photography, cooking or football.",
+            "Afternoons are quieter. Many campers read, play cards or sleep. At eight in the evening we meet at the fire, and every camper has to tell a story once during the two weeks. Some people dread it. Nobody has ever regretted it."
+          ]
+        },
+        {
+          "heading": "Rules",
+          "paragraphs": [
+            "Phones are collected on the first evening and given back on the last day. We know this sounds hard, and we know from twenty years of doing it that after three days nobody asks for them.",
+            "The lake may only be used when a leader is on the beach. This is the one rule we never bend, and campers who break it are sent home."
+          ]
+        },
+        {
+          "heading": "Getting here",
+          "paragraphs": [
+            "A camp bus meets every train at Ammersee station between two and six o'clock on the first day. If your train arrives later, write to us in advance and we will pick you up by car.",
+            "Bring a sleeping bag, a raincoat and shoes you do not mind ruining. Everything else you need is here."
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten",
+        "Lägret är påhittat."
+      ],
+      "questions": [
+        {
+          "kind": "open",
+          "id": 1,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "In which country is Pinewood Summer Camp?",
+          "guidance": "Ge 1 poäng för ”Germany”. Godtagbart: ”in southern Germany”. 0 poäng: ”Munich” (det är staden man reser från).",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "In Munich." },
+            { "points": 1, "answer": "In Germany." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How old must you be to come to the camp?",
+          "guidance": "Ge 1 poäng för åldrarna 11 till 16. Godtagbart: ”between 11 and 16”; ”11–16”. 0 poäng: ”twenty” (det är antalet deltagare i gruppen).",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "You must be twenty." },
+            { "points": 1, "answer": "Between 11 and 16 years old." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How long does each camp last?",
+          "guidance": "Ge 1 poäng för fjorton dagar eller två veckor. 0 poäng: ”three camps” (det är antalet läger per sommar).",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "Three weeks." },
+            { "points": 1, "answer": "Fourteen days." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 4,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What is included in the price of 690 euros? (Give two examples!)",
+          "guidance": "Ge 1 poäng per korrekt exempel, max 2. I texten nämns: sängplats/boende, all mat, alla aktiviteter och tågbiljetten från München.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "The travel to Munich." },
+            { "points": 1, "answer": "All the meals." },
+            { "points": 2, "answer": "All the meals and all the activities." }
+          ],
+          "note": "Du måste skriva två exempel för att få full poäng."
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What do the campers do before breakfast?",
+          "guidance": "Ge 1 poäng för svar som visar att de badar/simmar i sjön. Godtagbart: ”They swim in the lake”.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "They tell stories by the fire." },
+            { "points": 1, "answer": "They swim in the lake." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 6,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why do you not need to speak perfect English at the camp?",
+          "guidance": "Ge 1 poäng för svar som visar att ledarna kommer från olika länder och att engelska är det språk alla delar. Godtagbart: ”because English is the language everybody shares”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Because everybody speaks German." },
+            { "points": 1, "answer": "Because the leaders come from different countries and English is the language they all share." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What happens to the campers' phones?",
+          "guidance": "Ge 1 poäng för svar som visar att telefonerna samlas in första kvällen och lämnas tillbaka sista dagen.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "They can use them in the evening." },
+            { "points": 1, "answer": "They are collected on the first evening and given back on the last day." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 8,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What does the text say happens after three days without phones?",
+          "guidance": "Ge 1 poäng för svar som visar att ingen längre frågar efter dem. Godtagbart: ”nobody asks for them any more”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "The campers go home." },
+            { "points": 1, "answer": "Nobody asks for their phone any more." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 9,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "Which rule is never bent, and what happens if you break it?",
+          "guidance": "Ge 1 poäng för regeln (man får bara bada när en ledare är på stranden) och 1 poäng för följden (man skickas hem). Max 2 poäng.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "You are not allowed to use your phone." },
+            { "points": 1, "answer": "You may only swim when a leader is on the beach." },
+            { "points": 2, "answer": "You may only use the lake when a leader is on the beach, and campers who break the rule are sent home." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 10,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "Give two examples of activities you can choose in the mornings.",
+          "guidance": "Ge 1 poäng per korrekt aktivitet, max 2. I texten nämns: kanotpaddling, klättring, fotografering, matlagning och fotboll.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "You can sleep and play cards." },
+            { "points": 1, "answer": "You can go canoeing." },
+            { "points": 2, "answer": "You can go canoeing and climbing." }
+          ],
+          "note": "Du måste skriva två aktiviteter för att få full poäng."
+        },
+        {
+          "kind": "open",
+          "id": 11,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What must every camper do once during the two weeks?",
+          "guidance": "Ge 1 poäng för svar som visar att alla måste berätta en historia vid brasan. Godtagbart: ”tell a story at the fire”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Cook a meal for the group." },
+            { "points": 1, "answer": "Tell a story at the evening fire." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 12,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What should you do if your train arrives after six o'clock?",
+          "guidance": "Ge 1 poäng för svar som visar att man ska skriva/höra av sig i förväg, så hämtas man med bil. Godtagbart: ”write to them before”; ”tell them in advance”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Take the camp bus." },
+            { "points": 1, "answer": "Write to the camp in advance, and they will pick you up by car." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en6-b1c-sound-collector",
+      "delprov": "Delprov B1c: reading – The Sound Collector",
+      "textType": "berättande",
+      "lang": "en",
+      "title": "The Sound Collector",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=900&h=506&fit=crop",
+        "alt": "A microphone recording outdoors in nature.",
+        "fallback": "/images/tornseglaren.svg"
+      },
+      "ingress": "This is a story about a woman called Ines Halvorsen. Read the text and answer the questions after each part. Remember – your answers must be in English! When you answer questions with alternatives, choose one alternative only.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Ines Halvorsen was born in 1972 in Tromsø, a town in the far north of Norway where the sun does not rise at all for two months every winter. Her mother was a nurse and her father repaired radios in a small shop under their flat.",
+            "As a child Ines spent hours in that shop. She was not interested in the radios themselves. She was interested in the moment when her father finally got one working and a voice came out of it – a voice from Moscow, or London, or a fishing boat somewhere out at sea.",
+            "When she was eleven her father gave her a broken tape recorder and told her she could keep it if she could mend it. It took her a month. The first thing she recorded was the sound of the rain on the shop window."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Ines studied to become a sound engineer and got a job at a radio station in Oslo. For nine years she recorded interviews, concerts and adverts. She was good at it, and she was bored.",
+            "The change came in 2004, on a holiday in her old home town. She walked down to the harbour where the fishing boats had always been and found it almost empty. The boats were gone, and so were the sounds she remembered: the engines, the shouting, the ice being poured into the boxes.",
+            "She realised that nobody had ever recorded any of it. Photographs of the harbour existed in every museum in the north. Not one second of sound did.",
+            "That autumn she left her job. Her colleagues thought she was making a mistake, and for the first two years she earned almost nothing."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Since then Ines has recorded more than four thousand sounds in eleven countries. She records places that are changing or disappearing: a glacier melting, the last working paper mill in a valley, a school in a village where only nine children are left.",
+            "Her rule is that she never adds anything afterwards and never removes a sound she does not like. ‘If a car goes past while I am recording a bird, the car stays,' she says. ‘That is what the place sounds like. I am not making music.'",
+            "The recordings are free for anyone to listen to on a website she pays for herself. Schools use them, film-makers use them, and once a man in Canada wrote to say he had found a recording of a street in the town where he grew up, and had played it to his mother, who was ninety-one and had not been back for seventy years.",
+            "Ines keeps that letter on the wall above her desk. When people ask her why she does this work, she does not answer. She points at the wall."
+          ]
+        }
+      ],
+      "byline": [
+        "Berättelse skriven för NP-jakten",
+        "Personen är påhittad."
+      ],
+      "questions": [
+        {
+          "kind": "open",
+          "id": 1,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What was Ines's father's job?  He repaired …",
+          "guidance": "Ge 1 poäng för ”radios”. Godtagbart: ”he repaired radios in a shop”. 0 poäng: ”he was a nurse” (det var mamman).",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "He was a nurse." },
+            { "points": 1, "answer": "He repaired radios." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "In which country was Ines born?",
+          "guidance": "Ge 1 poäng för ”Norway”. Godtagbart: ”in the north of Norway”. 0 poäng: ”Tromsø” om landet inte framgår? Nej – Tromsø godtas inte som land, men ”Norway” krävs.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "In Sweden." },
+            { "points": 1, "answer": "In Norway." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What interested Ines in her father's shop?",
+          "options": [
+            "Learning how to repair radios",
+            "The moment a voice came out of a radio",
+            "Meeting the customers who came in",
+            "Listening to music from London"
+          ],
+          "correctIndex": 1,
+          "explanation": "Texten säger uttryckligen att hon inte var intresserad av radioapparaterna i sig, utan av ögonblicket när en röst hördes ur dem – från Moskva, London eller en fiskebåt."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "How did Ines get her first tape recorder?",
+          "options": [
+            "She bought it with her own money",
+            "She found it in the harbour",
+            "Her father gave it to her to mend",
+            "It was a present from her mother"
+          ],
+          "correctIndex": 2,
+          "explanation": "Pappan gav henne en trasig bandspelare och sa att hon fick behålla den om hon kunde laga den. Det tog henne en månad."
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why did Ines leave her job at the radio station?",
+          "guidance": "Ge 1 poäng för svar som visar att hon var uttråkad och/eller ville spela in ljud som höll på att försvinna. Godtagbart: ”she was bored”; ”she wanted to record sounds before they disappeared”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "She moved to another city." },
+            { "points": 1, "answer": "She was bored, and she wanted to record sounds that were disappearing." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What did Ines discover at the harbour in 2004?",
+          "options": [
+            "The boats and their sounds were gone",
+            "A museum had opened there",
+            "Her old school had closed down",
+            "The fishermen did not remember her"
+          ],
+          "correctIndex": 0,
+          "explanation": "Hamnen var nästan tom: båtarna var borta och med dem ljuden hon mindes – motorerna, ropen, isen som hälldes i lådorna."
+        },
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What did every museum in the north have, and what did none of them have?",
+          "guidance": "Ge 1 poäng för vardera: alla museer hade fotografier av hamnen, men inte en sekund av ljud. Max 2 poäng.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "They had old fishing boats." },
+            { "points": 1, "answer": "They all had photographs of the harbour." },
+            { "points": 2, "answer": "They all had photographs of the harbour, but not one second of sound." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "What happened during Ines's first two years as a sound collector?",
+          "options": [
+            "She travelled to eleven countries",
+            "She earned almost no money",
+            "Her old colleagues joined her",
+            "She won a prize for her work"
+          ],
+          "correctIndex": 1,
+          "explanation": "Texten säger att kollegerna trodde att hon gjorde ett misstag och att hon under de första två åren tjänade nästan ingenting. De elva länderna kom senare."
+        },
+        {
+          "kind": "open",
+          "id": 9,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "Give two examples of places Ines records.",
+          "guidance": "Ge 1 poäng per korrekt exempel, max 2. I texten nämns: en glaciär som smälter, den sista fungerande pappersbruket i en dal, en skola i en by med bara nio barn kvar.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "She records birds and cars." },
+            { "points": 1, "answer": "She records a glacier melting." },
+            { "points": 2, "answer": "She records a melting glacier and the last working paper mill in a valley." }
+          ],
+          "note": "Du måste skriva två exempel för att få full poäng."
+        },
+        {
+          "kind": "open",
+          "id": 10,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What is Ines's rule when she records?",
+          "guidance": "Ge 1 poäng för vardera ledet: hon lägger aldrig till något efteråt, och hon tar aldrig bort ett ljud hon inte tycker om. Max 2 poäng.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "She records only in the morning." },
+            { "points": 1, "answer": "She never adds anything afterwards." },
+            { "points": 2, "answer": "She never adds anything afterwards, and she never removes a sound she does not like." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What does Ines mean when she says ‘I am not making music'?",
+          "options": [
+            "She cannot play an instrument",
+            "She wants the recording to be exactly like the real place",
+            "She thinks music is less important than sound",
+            "She only records places without people"
+          ],
+          "correctIndex": 1,
+          "explanation": "Exemplet med bilen som kör förbi förklarar det: bilen får vara kvar, eftersom det är så platsen låter. Hon vill återge verkligheten, inte skapa något vackert."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "How can people listen to Ines's recordings?",
+          "options": [
+            "They pay a small fee each time",
+            "They must ask a school for permission",
+            "Free on a website she pays for herself",
+            "Only in museums in northern Norway"
+          ],
+          "correctIndex": 2,
+          "explanation": "Inspelningarna är gratis för vem som helst att lyssna på, på en webbplats som hon själv betalar för."
+        },
+        {
+          "kind": "open",
+          "id": 13,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why did the man in Canada write to Ines?",
+          "guidance": "Ge 1 poäng för att han hittat en inspelning från gatan där han växte upp, och 1 poäng för att han spelat upp den för sin mamma, som var 91 och inte varit tillbaka på sjuttio år.",
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "He wanted to record sounds himself." },
+            { "points": 1, "answer": "He had found a recording of the street where he grew up." },
+            { "points": 2, "answer": "He had found a recording of his childhood street and played it to his mother, who was ninety-one and had not been back for seventy years." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 14,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "Why does Ines point at the wall instead of answering the question?",
+          "guidance": "Ge 2 poäng för svar som visar att brevet från mannen i Kanada är hennes svar: det visar vad arbetet betyder för andra människor, bättre än ord kan göra. Ge 1 poäng för svar som bara säger att brevet hänger där.",
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "Because she does not like to talk to people." },
+            { "points": 1, "answer": "Because the letter from Canada is on the wall." },
+            { "points": 2, "answer": "Because the letter shows what her work means to other people, and that says more than she could explain in words." }
+          ]
+        }
+      ]
     }
   ],
   "listening": [
@@ -1381,6 +2149,637 @@
           ]
         }
       ]
+    },
+    {
+      "id": "en6-b2a-short-news",
+      "delprov": "Delprov B2a: listening – Short News",
+      "title": "Short News",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=900&h=506&fit=crop",
+        "alt": "Headphones on a desk in a radio studio.",
+        "fallback": "/images/lyssna.svg"
+      },
+      "intro": "Du kommer att höra tolv korta nyheter. Efter varje nyhet väljer du den rubrik som passar bäst. Läs frågorna först – nyheterna kommer i tur och ordning.",
+      "maxPlays": 2,
+      "script": [
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 1. A hotel in Finland has started renting out rooms with no lights at all. Guests pay to sleep in complete darkness, and the hotel says people sleep on average two hours longer than at home. The first month was fully booked before it even opened."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 2. A bus driver in Portugal has driven the same route for thirty-one years and knows the names of more than six hundred passengers. When he retires in May, the town is closing the main street for an afternoon so that people can come and say goodbye."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 3. Scientists in New Zealand have taught sheep to recognise faces on a screen. The animals learned to pick out their keeper from four photographs, and got food when they were right. The scientists say sheep are much cleverer than most people think."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 4. A ten-year-old in Iceland wrote to her town council asking for a bench at the bus stop where she waits for her grandmother. The council said no, so she counted everyone who waited there for two weeks and sent them the numbers. The bench arrives next month."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 5. A restaurant in Seoul has a table where you can only sit if you come alone. It has one chair, a lamp and a small shelf for a book. The owner says he built it after a customer told him she had not eaten in a restaurant for six years because she felt uncomfortable alone."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 6. A town in Ireland has replaced the grass around its school with wild flowers. There are now nineteen kinds of bee in an area where there used to be four. The children counted them all themselves, twice, to be sure."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 7. An airport in Japan has a room where you can practise saying goodbye. It is quiet, it has two chairs, and nobody is allowed to hurry you. The idea came from a member of staff who watched families say goodbye standing up in the middle of a crowd."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 8. A man in Wales has spent eleven years building a bridge across a stream on a public footpath, using only stones he found in the water. He never asked anyone for permission. The council has now measured it, declared it safe, and put up a sign with his name on it."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 9. A bookshop in Buenos Aires lets customers pay with a book instead of money, as long as they write inside the front cover why they are giving it away. The shelves of these books are now the most popular in the shop."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 10. A choir in Denmark sings outside the windows of a hospital every Sunday morning. They started with four people during a winter when visitors were not allowed inside. Now there are seventy of them, and they still sing outside, even though visitors are allowed again."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 11. A woman in Canada has been leaving a bowl of water outside her front door every summer for twenty years. This year a neighbour asked why. She said her own dog died in 2004, and she has never stopped filling it. Six houses on the street now do the same."
+        },
+        {
+          "speaker": "Newsreader",
+          "text": "News item number 12. A train company in Switzerland has begun printing the name of the person who cleaned each carriage on a small card by the door. Complaints about dirty trains have fallen by half, and eleven cleaners have received letters from passengers thanking them."
+        }
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 1. What is it about?",
+          "options": [
+            "A hotel without windows",
+            "Rooms with no light",
+            "A hotel that has closed",
+            "People who cannot sleep"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nyheten handlar om rummen som är helt mörka. Att gästerna sover längre är följden, inte vad nyheten handlar om."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 2. What is it about?",
+          "options": [
+            "A bus driver saying goodbye",
+            "A new bus route",
+            "A street that is closing for ever",
+            "A driver who lost his job"
+          ],
+          "correctIndex": 0,
+          "explanation": "Kärnan är chauffören som går i pension och avskedet staden ordnar. Gatan stängs bara en eftermiddag, inte för alltid."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 3. What is it about?",
+          "options": [
+            "Sheep that can recognise faces",
+            "New food for farm animals",
+            "A photograph competition",
+            "Sheep escaping from a farm"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nyheten handlar om att fåren lärt sig känna igen ansikten. Maten var belöningen i försöket, inte nyheten."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 4. What is it about?",
+          "options": [
+            "A girl who missed her bus",
+            "A new bus stop in Iceland",
+            "A girl who changed the council's mind",
+            "A grandmother moving house"
+          ],
+          "correctIndex": 2,
+          "explanation": "Poängen är att flickan fick rådet att ändra sig genom att räkna hur många som väntade. Bänken är resultatet."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 5. What is it about?",
+          "options": [
+            "A table for one person",
+            "A restaurant that is always full",
+            "A new library café",
+            "A customer who complained"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nyheten handlar om bordet som bara är till för den som kommer ensam. Kundens berättelse förklarar varför bordet byggdes."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 6. What is it about?",
+          "options": [
+            "A school that is moving",
+            "More bees in a town",
+            "Children who are afraid of bees",
+            "A new sports field"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kärnan är att antalet bisorter ökat sedan gräset byttes mot vilda blommor. Att barnen räknade dem är hur man vet det."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 7. What is it about?",
+          "options": [
+            "A quiet room for goodbyes",
+            "A new airport in Japan",
+            "Flights that are delayed",
+            "A room for lost luggage"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nyheten handlar om rummet där man i lugn och ro kan ta farväl. Personalens iakttagelse förklarar varifrån idén kom."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 8. What is it about?",
+          "options": [
+            "A man who built a bridge",
+            "A stream that flooded a path",
+            "A council that removed a bridge",
+            "A new road in Wales"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nyheten handlar om bron mannen byggde själv under elva år. Att kommunen godkände den är slutet på historien."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 9. What is it about?",
+          "options": [
+            "A bookshop that is closing",
+            "Paying with a book",
+            "Books that cost too much",
+            "A writing competition"
+          ],
+          "correctIndex": 1,
+          "explanation": "Poängen är att man kan betala med en bok i stället för pengar. Att hyllorna blivit populära visar hur det gått."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 10. What is it about?",
+          "options": [
+            "A choir singing outside a hospital",
+            "A hospital that is too small",
+            "A concert that was cancelled",
+            "New rules for hospital visitors"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nyheten handlar om kören som sjunger utanför sjukhusfönstren. Att de fortsätter trots att besök är tillåtna igen är poängen."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 11. What is it about?",
+          "options": [
+            "A dog that ran away",
+            "A bowl of water for animals",
+            "A neighbour who moved in",
+            "Water shortages in summer"
+          ],
+          "correctIndex": 1,
+          "explanation": "Nyheten handlar om vattenskålen som kvinnan ställt ut i tjugo år, och om att grannarna nu gör likadant."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "News item 12. What is it about?",
+          "options": [
+            "Cleaners' names on the trains",
+            "Trains that are always late",
+            "A company hiring more staff",
+            "Passengers who complain a lot"
+          ],
+          "correctIndex": 0,
+          "explanation": "Nyheten handlar om att städarnas namn sätts upp i vagnarna. Färre klagomål och tackbreven är följderna."
+        }
+      ]
+    },
+    {
+      "id": "en6-b2b-desert-nights",
+      "delprov": "Delprov B2b: listening – Desert Nights",
+      "title": "Desert Nights",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&h=506&fit=crop",
+        "alt": "Sand dunes in the desert at sunset.",
+        "fallback": "/images/utredande.svg"
+      },
+      "intro": "Du kommer att höra Amina, som besöker en skola för att berätta om sitt arbete i öknen. Berättelsen är indelad i delar. Läs frågorna först – dina svar ska vara på engelska. Du får skriva medan du lyssnar.",
+      "maxPlays": 2,
+      "script": [
+        {
+          "speaker": "Amina",
+          "text": "Hello! My name is Amina Haddad and I work as a desert guide in southern Morocco. Before this I was a hairdresser in Marseille, in France, for eleven years. Today I'm going to tell you about my job, and about the strangest night I have ever spent in the desert."
+        },
+        {
+          "speaker": "Amina",
+          "text": "I take small groups out into the Sahara, usually for two or three days, with camels carrying the food and the tents. We start from a town called Merzouga, which is about ten hours by bus from Marrakesh."
+        },
+        {
+          "speaker": "Amina",
+          "text": "We always leave in the late afternoon, never in the middle of the day. The reason is simple: between eleven and four the sand is so hot that the camels will not walk on it, and neither will you. We walk for three hours and set up camp at sunset."
+        },
+        {
+          "speaker": "Amina",
+          "text": "Groups have to be at the meeting point at four o'clock. I once had a family who arrived at half past four, and we had to wait, which meant we put up the tents in the dark. Since then I tell everybody the time is half past three, and it works perfectly."
+        },
+        {
+          "speaker": "Amina",
+          "text": "Last spring a man wanted to bring his six-year-old daughter. I had to say no. Children under eight cannot come on the two-night trip, because it gets down to four degrees at night and there is no way back before morning. He was disappointed, but he came back in October with her on a day trip instead."
+        },
+        {
+          "speaker": "Amina",
+          "text": "A two-day trip costs sixty euros for adults and forty euros for children. That includes the camel, all your food and a place in a tent. What it does not include is a sleeping bag – you can rent one from us for five euros, and most people do."
+        },
+        {
+          "speaker": "Amina",
+          "text": "People always ask about the heat, but the thing that surprises them is the cold. In January the temperature can fall below zero at night. Even in summer you will want a jacket after midnight."
+        },
+        {
+          "speaker": "Amina",
+          "text": "The clothes people bring are usually wrong. You need long sleeves and long trousers, even when it is hot – they protect you from the sun far better than shorts. And you need a scarf for your head and face, which we can lend you if you don't have one."
+        },
+        {
+          "speaker": "Amina",
+          "text": "The best months are October, November, March and April. July and August are too hot for anyone to enjoy, and in December and January the nights are hard for people who are not used to the cold."
+        },
+        {
+          "speaker": "Amina",
+          "text": "The sand dunes near Merzouga are about a hundred and fifty metres high – higher than most buildings you have ever seen – and they move. A dune can travel several metres in a year, which is why the road out of town has to be cleared with a machine every spring."
+        },
+        {
+          "speaker": "Amina",
+          "text": "My most important rule is that nobody walks away from the camp alone at night, not even a few steps. In the dark every dune looks the same, and people have become lost forty metres from their own tent. If you need to go somewhere, you wake me up. I don't mind."
+        },
+        {
+          "speaker": "Amina",
+          "text": "So, the strangest night. Two years ago we were camped in a valley between two big dunes when it began to rain. It rains there perhaps twice a year. Within twenty minutes there was water running past the tents, and we had to move everything up the side of the dune at one in the morning."
+        },
+        {
+          "speaker": "Amina",
+          "text": "Nobody was hurt and nothing was lost, but I learned something that night: never camp at the bottom of a valley, however comfortable it looks. Now I always sleep higher up, even when the wind is worse there."
+        },
+        {
+          "speaker": "Amina",
+          "text": "Something much more serious happened in Algeria a few years ago. Four tourists went out without a guide and their car broke down. They had told nobody where they were going, and it took two days before anyone realised they were missing."
+        },
+        {
+          "speaker": "Amina",
+          "text": "They survived, but only because one of them had left a note on the table at the hotel saying which direction they planned to drive. That piece of paper was the only reason the search started in the right place."
+        },
+        {
+          "speaker": "Amina",
+          "text": "Finally I want to tell you about a woman called Fatima Bouzid, who has crossed the Sahara on foot three times. She is sixty-eight years old."
+        },
+        {
+          "speaker": "Amina",
+          "text": "What I admire is not the walking. It is that after every crossing she goes back to the villages she passed through and pays for the wells to be repaired. She says the desert has never given her anything for free, so she does not take anything from it for free either."
+        }
+      ],
+      "questions": [
+        {
+          "kind": "open",
+          "id": 1,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What is Amina's job now?",
+          "guidance": "Ge 1 poäng för svar som visar att hon är ökenguide. Godtagbart: ”desert guide”; ”she guides people in the desert”. 0 poäng: ”hairdresser” (det var hon förut).",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "She is a hairdresser." },
+            { "points": 1, "answer": "She is a desert guide." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "In which country does Amina work?",
+          "guidance": "Ge 1 poäng för ”Morocco”. Godtagbart: ”in southern Morocco”. 0 poäng: ”France”; ”Algeria”.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "In France." },
+            { "points": 1, "answer": "In Morocco." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why do the groups leave in the late afternoon?",
+          "options": [
+            "The camels rest in the morning",
+            "The sand is too hot in the middle of the day",
+            "The buses arrive at that time",
+            "It is easier to put up tents in the dark"
+          ],
+          "correctIndex": 1,
+          "explanation": "Mellan elva och fyra är sanden så het att varken kamelerna eller människorna vill gå på den. Därför startar de sent på eftermiddagen."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What time does Amina now tell people to arrive?",
+          "options": [
+            "At half past three",
+            "At four o'clock",
+            "At half past four",
+            "At sunset"
+          ],
+          "correctIndex": 0,
+          "explanation": "Egentligen ska grupperna vara på plats klockan fyra, men efter familjen som kom en halvtimme sent säger hon halv fyra – och det fungerar perfekt."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "Why couldn't the six-year-old girl come on the trip?",
+          "options": [
+            "Her father had not booked in time",
+            "She was not old enough",
+            "There were no tents left",
+            "She was afraid of camels"
+          ],
+          "correctIndex": 1,
+          "explanation": "Barn under åtta år får inte följa med på tvånattersturen, eftersom det blir fyra grader på natten och man inte kan ta sig tillbaka före morgonen."
+        },
+        {
+          "kind": "open",
+          "id": 6,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How much does a two-day trip cost?  Adults: €____   Children: €____",
+          "guidance": "Ge 1 poäng per korrekt belopp, max 2: 60 euro för vuxna och 40 euro för barn.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "It costs €5." },
+            { "points": 1, "answer": "Adults: €60." },
+            { "points": 2, "answer": "Adults: €60 and children: €40." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What is not included in the price, and what can you do about it?",
+          "guidance": "Ge 1 poäng för att sovsäck inte ingår och 1 poäng för att man kan hyra en för fem euro.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "The food is not included." },
+            { "points": 1, "answer": "A sleeping bag is not included." },
+            { "points": 2, "answer": "A sleeping bag is not included, but you can rent one for five euros." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What surprises visitors most about the desert?",
+          "options": [
+            "How hot the sand is",
+            "How cold it gets",
+            "How much it rains",
+            "How high the dunes are"
+          ],
+          "correctIndex": 1,
+          "explanation": "Alla frågar om värmen, men det som överraskar dem är kylan – i januari kan det bli under noll på natten, och även på sommaren vill man ha jacka efter midnatt."
+        },
+        {
+          "kind": "open",
+          "id": 9,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What clothes do you need, and why? (Write two things.)",
+          "guidance": "Ge 1 poäng per korrekt sak, max 2: långärmat och långbyxor (de skyddar mot solen bättre än shorts) samt en sjal till huvud och ansikte.",
+          "lines": 3,
+          "scoreExamples": [
+            { "points": 0, "answer": "You need shorts because it is hot." },
+            { "points": 1, "answer": "Long sleeves and long trousers." },
+            { "points": 2, "answer": "Long sleeves and long trousers, because they protect you from the sun better than shorts, and a scarf for your head and face." }
+          ],
+          "note": "Du måste skriva två saker för att få full poäng."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "Which months are the best for a desert trip?",
+          "options": [
+            "July and August",
+            "December and January",
+            "October, November, March and April",
+            "All months are the same"
+          ],
+          "correctIndex": 2,
+          "explanation": "Amina säger att oktober, november, mars och april är bäst. Juli och augusti är för heta, och december och januari har nätter som är hårda för ovana."
+        },
+        {
+          "kind": "open",
+          "id": 11,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How high are the sand dunes near Merzouga?",
+          "guidance": "Ge 1 poäng för ungefär 150 meter. Godtagbart: ”about 150 metres”; ”150 m high”.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "About 40 metres." },
+            { "points": 1, "answer": "About 150 metres." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 12,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why does the road out of Merzouga have to be cleared every spring?",
+          "guidance": "Ge 1 poäng för svar som visar att sanddynerna rör sig – en dyn kan flytta sig flera meter på ett år.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "Because it rains in the spring." },
+            { "points": 1, "answer": "Because the dunes move several metres a year and cover the road." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 13,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What is Amina's most important rule at night?",
+          "guidance": "Ge 1 poäng för svar som visar att ingen får gå ensam från lägret på natten. Godtagbart: ”you must not walk away alone”; ”wake her up instead”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "You must go to bed early." },
+            { "points": 1, "answer": "Nobody walks away from the camp alone at night – you wake her up instead." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 14,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why is that rule so important?",
+          "options": [
+            "Wild animals come close to the camp",
+            "Every dune looks the same in the dark",
+            "The tents are difficult to find in the wind",
+            "It is too cold to stand still"
+          ],
+          "correctIndex": 1,
+          "explanation": "I mörkret ser varje dyn likadan ut, och folk har gått vilse fyrtio meter från sitt eget tält."
+        },
+        {
+          "kind": "open",
+          "id": 15,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "What happened on the strangest night, and what did Amina learn from it?",
+          "guidance": "Ge 1 poäng för händelsen (det började regna, vatten rann förbi tälten och de fick flytta allt upp på dynsidan mitt i natten) och 1 poäng för lärdomen (aldrig slå läger längst ner i en dalgång, hur bekvämt det än ser ut).",
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "It rained in the desert." },
+            { "points": 1, "answer": "It started to rain and water ran past the tents, so they had to move everything at one in the morning." },
+            { "points": 2, "answer": "It rained and water ran past the tents, so they moved the camp up the dune at one in the morning. Amina learned never to camp at the bottom of a valley, however comfortable it looks." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 16,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What went wrong for the four tourists in Algeria?",
+          "options": [
+            "They ran out of water",
+            "Their car broke down and nobody knew where they were",
+            "They walked away from their camp at night",
+            "They were caught in heavy rain"
+          ],
+          "correctIndex": 1,
+          "explanation": "Bilen gick sönder och de hade inte berättat för någon vart de skulle, så det tog två dagar innan någon förstod att de saknades."
+        },
+        {
+          "kind": "open",
+          "id": 17,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What was the only reason the search started in the right place?",
+          "guidance": "Ge 1 poäng för svar som visar att en av dem lämnat en lapp på hotellet med vilken riktning de tänkte köra.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "They had a radio with them." },
+            { "points": 1, "answer": "One of them had left a note at the hotel saying which direction they would drive." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 18,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "What does Fatima Bouzid do after each crossing, and why?",
+          "guidance": "Ge 1 poäng för vad hon gör (hon återvänder till byarna hon passerat och betalar för att brunnarna ska lagas) och 1 poäng för varför (öknen har aldrig gett henne något gratis, så hon tar inte heller något från den gratis).",
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "She has crossed the Sahara three times on foot." },
+            { "points": 1, "answer": "She goes back to the villages and pays for the wells to be repaired." },
+            { "points": 2, "answer": "She returns to the villages she walked through and pays for their wells to be repaired, because the desert has never given her anything for free and she does not want to take anything from it for free either." }
+          ]
+        }
+      ]
     }
   ],
   "writing": [
@@ -1472,6 +2871,101 @@
             "Innehållet är utvecklat med konkreta detaljer (”new potatoes with dill”, ”the whole house smells of them”) i stället för allmänna påståenden.",
             "Skribenten anpassar sig till läsaren: förklarar det som kan vara okänt och avslutar med en fråga tillbaka – det gör texten till en riktig interaktion.",
             "Språket är varierat och säkert, med både korta och längre meningar. Enstaka fel finns, men de märks knappt."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en6-c-where-i-live",
+      "delprov": "Delprov C: writing – Where I Live",
+      "textType": "beskrivande",
+      "title": "Where I Live",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=900&h=506&fit=crop",
+        "alt": "A small town seen from above.",
+        "fallback": "/images/skolstart.svg"
+      },
+      "intro": [
+        "En klass i Kanada gör en bok om platser där unga bor runt om i världen. Nu vill de veta hur det ser ut där du bor. Läs deras brev!",
+        "Skriv så mycket du kan – och använd engelska hela tiden."
+      ],
+      "doThis": [
+        "Hi there!",
+        "Our class is making a book called ‘Where We Live'. We have written about our own town, and now we want pages from other countries too. We are curious about the small things, not just the famous ones.",
+        "Here are some things you could write about:\n• where you live – a town, a city or the countryside – and what it looks like\n• what young people do there, and where they meet\n• something you like about living there, and something you would change\n• the best time of year where you live, and why",
+        "We hope to hear from you soon!",
+        "Noor, Liam, Chloe and Deshawn"
+      ],
+      "remember": [
+        "Skriv på engelska hela tiden. Kommer du inte på ett ord – förklara med andra ord i stället.",
+        "Skriv så mycket du kan. Ju mer du skriver, desto mer kan du visa.",
+        "Svara på flera av punkterna i brevet, inte bara en.",
+        "Skriv som ett svar till klassen: börja och avsluta som man gör i ett brev.",
+        "Läs igenom din text när du är klar."
+      ],
+      "checklist": [
+        "Jag har skrivit på engelska hela tiden.",
+        "Min text är ett svar till klassen i Kanada – den har en början och ett slut.",
+        "Jag har skrivit om flera av punkterna i brevet.",
+        "Jag har beskrivit platsen så att någon som aldrig varit där kan se den framför sig.",
+        "Jag har skrivit både något jag gillar och något jag skulle vilja ändra.",
+        "Jag har förklarat varför jag tycker som jag gör.",
+        "Jag har läst igenom min text och rättat det jag hittade."
+      ],
+      "examples": [
+        {
+          "level": "På väg",
+          "heading": "My town",
+          "paragraphs": [
+            "Hello. I live in a small town. It is called Vara.",
+            "Here is a shop and a school. In the summer it is nice. We play football on the sportplan.",
+            "I want a bigger shop. Bye."
+          ],
+          "comments": [
+            "Texten tar upp några av punkterna: var skribenten bor, vad man gör och något hen vill ändra.",
+            "Den är dock mycket kort, och läsaren får ingen bild av platsen. Vad ser man? Hur många bor där?",
+            "Ett svenskt ord (”sportplan”) används i stället för ett engelskt. Nästa steg: förklara med andra engelska ord, till exempel ”the football field”.",
+            "Språket har fel som stör men inte förstör – innehållet går att förstå."
+          ]
+        },
+        {
+          "level": "Godtagbar nivå",
+          "heading": "Where I live",
+          "paragraphs": [
+            "Hi Noor, Liam, Chloe and Deshawn!",
+            "Thanks for your letter. I live in a town called Alvesta in the south of Sweden. About eight thousand people live here, so it is not big. There is a lot of forest around us, and a lake where people swim in July.",
+            "Young people usually meet at the shopping centre or at the sports hall. On Friday evenings there is a youth club where you can play games and buy cheap food. In winter it gets dark at three o'clock, so most things happen indoors.",
+            "What I like best is that everything is close. I can walk to school in ten minutes and my friends live on the same street. What I would change is the buses. They stop at six in the evening, so if you want to do something in the bigger city you always have to ask someone's parents.",
+            "The best time of year is May, when everything turns green very quickly and it is light until late.",
+            "Write back and tell me about your town!",
+            "From Elias"
+          ],
+          "comments": [
+            "Texten är ett tydligt svar på brevet, med hälsning i början och slutet.",
+            "Alla fyra punkterna besvaras, och skribenten ger konkreta detaljer: åtta tusen invånare, ungdomsgården på fredagar, bussarna som slutar gå klockan sex.",
+            "Åsikterna motiveras – varför närheten är bra och varför bussarna är ett problem.",
+            "Språket flyter och är lätt att följa. Enstaka fel stör inte förståelsen."
+          ]
+        },
+        {
+          "level": "Mer utvecklad nivå",
+          "heading": "A town you have never heard of",
+          "paragraphs": [
+            "Dear Noor, Liam, Chloe and Deshawn,",
+            "You said you were curious about the small things, so I will start with one: the sound of my town at seven in the morning is a train. I live in Alvesta, in southern Sweden, and the railway is the reason the town exists at all. Two lines cross here, and a hundred and fifty years ago somebody decided that where they crossed, there should be a town.",
+            "About eight thousand people live here now. From above it must look like a handful of houses dropped in the middle of a forest, because that is more or less what it is. There is a lake twenty minutes away on foot, and in July it is full of children who have been waiting all year for the water to get warm enough.",
+            "Young people mostly meet in three places: outside the shop, at the sports hall, and at the youth club on Friday evenings. It is not exciting, but everybody knows everybody, which is both the best and the worst thing about living here.",
+            "That is really my answer to your third question. I like that I can walk to my friends' houses in five minutes and that nobody's parents worry when we are out. What I would change is that the buses stop running at six. If you are fifteen and you want to see a film in Växjö, you either ask an adult or you stay at home. It makes the town feel smaller than it is.",
+            "My favourite time is the two weeks in May when the birches get their leaves. It happens almost overnight, and after a long grey winter it feels like somebody has turned the colour back on.",
+            "Now tell me about your town – is it true that it snows more in Canada than here? I would like to see that.",
+            "All the best, Maja"
+          ],
+          "comments": [
+            "Texten svarar på alla punkter och binder ihop dem till en helhet, med en egen idé: att staden finns på grund av järnvägen.",
+            "Innehållet är utvecklat med konkreta, personliga detaljer (”the sound of my town at seven in the morning is a train”) i stället för allmänna påståenden.",
+            "Skribenten resonerar och nyanserar: att alla känner alla är både det bästa och det sämsta – det visar förmåga att se två sidor.",
+            "Texten är anpassad till läsaren: den knyter an till deras egen formulering om ”the small things” och avslutar med en fråga tillbaka.",
+            "Språket är varierat och säkert, med både korta och längre meningar."
           ]
         }
       ]
