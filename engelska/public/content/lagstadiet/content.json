@@ -5386,6 +5386,313 @@
       ]
     },
     {
+      "id": "lag-g15-regelbundna-verb",
+      "title": "Regelbundna verb (-ed)",
+      "description": "Verb som får -ed i dåtid.",
+      "icon": "🔁",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "Regelbundna verb får -ed när du berättar om något som redan hänt: play → played.",
+        "Slutar verbet på -e? Lägg bara till -d: like → liked, close → closed.",
+        "I dag: I play. I går: I played.",
+        "Nästan alla engelska verb är regelbundna – det är den vanligaste regeln!"
+      ],
+      "exercises": [
+        {
+          "id": "lag-g15-1",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'play'?",
+          "options": [
+            "plaied",
+            "played",
+            "playd",
+            "plays"
+          ],
+          "correctIndex": 1,
+          "explanation": "Regelbundna verb får -ed: play → played.",
+          "hint": "Lägg till -ed."
+        },
+        {
+          "id": "lag-g15-2",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'walk'?",
+          "options": [
+            "walkd",
+            "walked",
+            "walket",
+            "walks"
+          ],
+          "correctIndex": 1,
+          "explanation": "walk → walked. Bara att lägga till -ed."
+        },
+        {
+          "id": "lag-g15-3",
+          "type": "fill-in-blank",
+          "sentence": "Yesterday I ___ (jump) very high.",
+          "answer": "jumped",
+          "explanation": "jump → jumped. Regelbundet verb med -ed.",
+          "hint": "Lägg till -ed på jump."
+        },
+        {
+          "id": "lag-g15-4",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'like'?",
+          "options": [
+            "likeed",
+            "liked",
+            "likd",
+            "likes"
+          ],
+          "correctIndex": 1,
+          "explanation": "Verbet slutar på -e, så vi lägger bara till -d: like → liked."
+        },
+        {
+          "id": "lag-g15-5",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (help) mum in the kitchen.",
+          "answer": "helped",
+          "explanation": "help → helped."
+        },
+        {
+          "id": "lag-g15-6",
+          "type": "multiple-choice",
+          "question": "Vilket av verben är regelbundet (får -ed)?",
+          "options": [
+            "go",
+            "eat",
+            "look",
+            "see"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Look' får -ed: looked. De andra är oregelbundna: went, ate, saw."
+        },
+        {
+          "id": "lag-g15-7",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (want) an ice cream.",
+          "answer": "wanted",
+          "explanation": "want → wanted."
+        },
+        {
+          "id": "lag-g15-8",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'open'?",
+          "options": [
+            "opend",
+            "opened",
+            "openned",
+            "opens"
+          ],
+          "correctIndex": 1,
+          "explanation": "open → opened. Inga dubbla bokstäver här."
+        },
+        {
+          "id": "lag-g15-9",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: 'Jag lekte i parken igår.'",
+          "words": [
+            "I",
+            "played",
+            "in",
+            "the",
+            "park",
+            "yesterday",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "I played in the park yesterday. – play → played."
+        },
+        {
+          "id": "lag-g15-10",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (talk) on the phone.",
+          "answer": "talked",
+          "explanation": "talk → talked."
+        },
+        {
+          "id": "lag-g15-11",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'close'?",
+          "options": [
+            "closeed",
+            "closed",
+            "closd",
+            "closes"
+          ],
+          "correctIndex": 1,
+          "explanation": "Slutar på -e → lägg till -d: close → closed."
+        },
+        {
+          "id": "lag-g15-12",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (call) his best friend.",
+          "answer": "called",
+          "explanation": "call → called."
+        }
+      ]
+    },
+    {
+      "id": "lag-g16-oregelbundna-verb",
+      "title": "Oregelbundna verb",
+      "description": "Verb som ändrar sig på egna sätt.",
+      "icon": "🌀",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "Oregelbundna verb får INTE -ed. De ändrar sig på egna sätt: go → went.",
+        "Dessa måste man lära sig utantill – öva lite varje dag!",
+        "De allra vanligaste: go → went, eat → ate, see → saw, have → had, come → came.",
+        "Be-verbet: am/is → was, are → were."
+      ],
+      "exercises": [
+        {
+          "id": "lag-g16-1",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'go'?",
+          "options": [
+            "goed",
+            "went",
+            "gone",
+            "goes"
+          ],
+          "correctIndex": 1,
+          "explanation": "'Go' är oregelbundet: go → went.",
+          "hint": "Det blir inte 'goed'."
+        },
+        {
+          "id": "lag-g16-2",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'eat'?",
+          "options": [
+            "eated",
+            "ate",
+            "eaten",
+            "eats"
+          ],
+          "correctIndex": 1,
+          "explanation": "eat → ate. 'Eaten' används efter have: I have eaten."
+        },
+        {
+          "id": "lag-g16-3",
+          "type": "fill-in-blank",
+          "sentence": "Yesterday I ___ (see) a big bird.",
+          "answer": "saw",
+          "explanation": "see → saw."
+        },
+        {
+          "id": "lag-g16-4",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'have'?",
+          "options": [
+            "haved",
+            "had",
+            "has",
+            "having"
+          ],
+          "correctIndex": 1,
+          "explanation": "have → had."
+        },
+        {
+          "id": "lag-g16-5",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (come) to my party.",
+          "answer": "came",
+          "explanation": "come → came."
+        },
+        {
+          "id": "lag-g16-6",
+          "type": "multiple-choice",
+          "question": "Vilket av verben är oregelbundet?",
+          "options": [
+            "play",
+            "walk",
+            "run",
+            "look"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Run' blir 'ran' i dåtid. De andra får -ed."
+        },
+        {
+          "id": "lag-g16-7",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (run) very fast.",
+          "answer": "ran",
+          "explanation": "run → ran."
+        },
+        {
+          "id": "lag-g16-8",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'give'?",
+          "options": [
+            "gived",
+            "gave",
+            "given",
+            "gives"
+          ],
+          "correctIndex": 1,
+          "explanation": "give → gave."
+        },
+        {
+          "id": "lag-g16-9",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: 'Jag åt ett äpple igår.'",
+          "words": [
+            "I",
+            "ate",
+            "an",
+            "apple",
+            "yesterday",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "explanation": "I ate an apple yesterday. – eat → ate."
+        },
+        {
+          "id": "lag-g16-10",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (take) my pen.",
+          "answer": "took",
+          "explanation": "take → took."
+        },
+        {
+          "id": "lag-g16-11",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'am' och 'is'?",
+          "options": [
+            "ised",
+            "was",
+            "were",
+            "be"
+          ],
+          "correctIndex": 1,
+          "explanation": "I am → I was. She is → she was. (are → were)"
+        },
+        {
+          "id": "lag-g16-12",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (make) a big cake.",
+          "answer": "made",
+          "explanation": "make → made."
+        }
+      ]
+    },
+    {
       "id": "lag-sluttest",
       "title": "Sluttest 1 – Grammatik",
       "description": "Testa din grammatik! 23 blandade frågor.",

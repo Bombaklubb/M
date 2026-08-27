@@ -4069,6 +4069,308 @@
       ]
     },
     {
+      "id": "gym-g11-regelbundna-verb",
+      "title": "Regelbundna verb – akademisk nivå",
+      "description": "Dubblering, brittisk/amerikansk stavning och -t-former.",
+      "icon": "🔁",
+      "pointsRequired": 0,
+      "bonusPoints": 35,
+      "helpText": [
+        "Dubblering styrs av betoningen: ocCUR → occurred, perMIT → permitted, men BENefit → benefited.",
+        "Brittisk engelska föredrar -ise/-isation: analyse → analysed, organise → organised. Amerikansk: analyze, organize.",
+        "Vissa verb har både -ed och -t: learn → learned/learnt, spell → spelled/spelt, dream → dreamed/dreamt. -t är vanligare i brittisk engelska.",
+        "I akademisk text är regelbundna verb i preteritum vanliga: the study examined, the data indicated, the results suggested."
+      ],
+      "exercises": [
+        {
+          "id": "gym-g11-1",
+          "type": "multiple-choice",
+          "question": "Vilken är den brittiska dåtidsformen av 'learn'?",
+          "options": [
+            "learnd",
+            "learnt",
+            "lernt",
+            "learnted"
+          ],
+          "correctIndex": 1,
+          "explanation": "Brittisk engelska använder ofta 'learnt'; 'learned' är också korrekt och vanligare i amerikansk engelska."
+        },
+        {
+          "id": "gym-g11-2",
+          "type": "fill-in-blank",
+          "sentence": "The results ___ (indicate) a clear downward trend.",
+          "answer": "indicated",
+          "explanation": "indicate → indicated."
+        },
+        {
+          "id": "gym-g11-3",
+          "type": "multiple-choice",
+          "question": "I vilket verb dubbleras INTE slutkonsonanten i dåtid?",
+          "options": [
+            "prefer",
+            "admit",
+            "visit",
+            "occur"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Visit' har betoning på första stavelsen (VIsit) → visited, utan dubblering."
+        },
+        {
+          "id": "gym-g11-4",
+          "type": "fill-in-blank",
+          "sentence": "The paper ___ (analyse) three separate data sets.",
+          "answer": "analysed",
+          "explanation": "Brittisk stavning: analyse → analysed. Amerikansk: analyzed.",
+          "alternativeAnswers": [
+            "analyzed"
+          ]
+        },
+        {
+          "id": "gym-g11-5",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'permit'?",
+          "options": [
+            "permited",
+            "permitted",
+            "permitt",
+            "permits"
+          ],
+          "correctIndex": 1,
+          "explanation": "perMIT har betoning sist → dubbla t:et."
+        },
+        {
+          "id": "gym-g11-6",
+          "type": "fill-in-blank",
+          "sentence": "The theory ___ (challenge) long-held assumptions.",
+          "answer": "challenged",
+          "explanation": "challenge → challenged."
+        },
+        {
+          "id": "gym-g11-7",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: 'Forskarna publicerade sina resultat.'",
+          "words": [
+            "The",
+            "researchers",
+            "published",
+            "their",
+            "findings",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "explanation": "The researchers published their findings. – publish → published."
+        },
+        {
+          "id": "gym-g11-8",
+          "type": "multiple-choice",
+          "question": "Vilken är den brittiska stavningen?",
+          "options": [
+            "organized",
+            "organised",
+            "organizd",
+            "organis"
+          ],
+          "correctIndex": 1,
+          "explanation": "Brittisk engelska föredrar -ise: organised. Amerikansk: organized."
+        },
+        {
+          "id": "gym-g11-9",
+          "type": "fill-in-blank",
+          "sentence": "The evidence ___ (suggest) an entirely different conclusion.",
+          "answer": "suggested",
+          "explanation": "suggest → suggested."
+        },
+        {
+          "id": "gym-g11-10",
+          "type": "multiple-choice",
+          "question": "Vilken är den brittiska dåtidsformen av 'spell'?",
+          "options": [
+            "speld",
+            "spelt",
+            "spellt",
+            "spelted"
+          ],
+          "correctIndex": 1,
+          "explanation": "Brittisk engelska: spelt. Amerikansk: spelled. Båda är korrekta."
+        },
+        {
+          "id": "gym-g11-11",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (acknowledge) the limitations of the study.",
+          "answer": "acknowledged",
+          "explanation": "acknowledge → acknowledged."
+        },
+        {
+          "id": "gym-g11-12",
+          "type": "fill-in-blank",
+          "sentence": "The new policy ___ (require) substantial changes.",
+          "answer": "required",
+          "explanation": "require → required."
+        }
+      ]
+    },
+    {
+      "id": "gym-g12-oregelbundna-verb",
+      "title": "Oregelbundna verb – avancerat",
+      "description": "Ovanliga former och klassiska fällor.",
+      "icon": "🌀",
+      "pointsRequired": 0,
+      "bonusPoints": 35,
+      "helpText": [
+        "På avancerad nivå möter du ovanligare oregelbundna verb: strive → strove → striven, forsake → forsook → forsaken.",
+        "Sammansatta verb böjs som grundverbet: undergo → underwent → undergone, withdraw → withdrew → withdrawn, overtake → overtook → overtaken.",
+        "Klassiska fällor: rise (stiga, utan objekt) → rose → risen, men raise (höja något) → raised → raised.",
+        "Likaså lie (ligga) → lay → lain mot lay (lägga) → laid → laid.",
+        "Vissa verb ändrar sig aldrig: set, put, cut, cost, hit, spread, shut."
+      ],
+      "exercises": [
+        {
+          "id": "gym-g12-1",
+          "type": "multiple-choice",
+          "question": "Vad är perfektformen av 'strive'?",
+          "options": [
+            "strove",
+            "striven",
+            "strived",
+            "striving"
+          ],
+          "correctIndex": 1,
+          "explanation": "strive → strove → striven. (Formen 'strived' förekommer men räknas som mindre formell.)"
+        },
+        {
+          "id": "gym-g12-2",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'seek'?",
+          "options": [
+            "seeked",
+            "sought",
+            "saught",
+            "seeks"
+          ],
+          "correctIndex": 1,
+          "explanation": "seek → sought → sought (A-B-B)."
+        },
+        {
+          "id": "gym-g12-3",
+          "type": "fill-in-blank",
+          "sentence": "He has ___ (undergo) major surgery.",
+          "answer": "undergone",
+          "explanation": "undergo böjs som go: undergo → underwent → undergone."
+        },
+        {
+          "id": "gym-g12-4",
+          "type": "multiple-choice",
+          "question": "Vilken form är korrekt: 'Prices have ___ sharply.'",
+          "options": [
+            "rised",
+            "risen",
+            "raised",
+            "rose"
+          ],
+          "correctIndex": 1,
+          "explanation": "rise → rose → risen. 'Raised' kräver ett objekt: they raised prices."
+        },
+        {
+          "id": "gym-g12-5",
+          "type": "fill-in-blank",
+          "sentence": "The committee has ___ (withdraw) its support.",
+          "answer": "withdrawn",
+          "explanation": "withdraw → withdrew → withdrawn."
+        },
+        {
+          "id": "gym-g12-6",
+          "type": "multiple-choice",
+          "question": "Vad är perfektformen av 'bear' (att bära/uthärda)?",
+          "options": [
+            "bore",
+            "borne",
+            "beared",
+            "bearing"
+          ],
+          "correctIndex": 1,
+          "explanation": "bear → bore → borne. (Formen 'born' används om att födas.)"
+        },
+        {
+          "id": "gym-g12-7",
+          "type": "fill-in-blank",
+          "sentence": "The tradition has ___ (arise) from ancient customs.",
+          "answer": "arisen",
+          "explanation": "arise → arose → arisen."
+        },
+        {
+          "id": "gym-g12-8",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: 'Domstolen har upphävt beslutet.'",
+          "words": [
+            "The",
+            "court",
+            "has",
+            "overturned",
+            "the",
+            "ruling",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "explanation": "The court has overturned the ruling. – overturn är regelbundet, men 'overtake' böjs oregelbundet."
+        },
+        {
+          "id": "gym-g12-9",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'forbid'?",
+          "options": [
+            "forbided",
+            "forbade",
+            "forbidden",
+            "forbids"
+          ],
+          "correctIndex": 1,
+          "explanation": "forbid → forbade → forbidden."
+        },
+        {
+          "id": "gym-g12-10",
+          "type": "fill-in-blank",
+          "sentence": "They have ___ (mistake) me for my brother.",
+          "answer": "mistaken",
+          "explanation": "mistake → mistook → mistaken."
+        },
+        {
+          "id": "gym-g12-11",
+          "type": "multiple-choice",
+          "question": "Vilket verb har samma form i alla tre formerna?",
+          "options": [
+            "set",
+            "sit",
+            "seat",
+            "settle"
+          ],
+          "correctIndex": 0,
+          "explanation": "set → set → set. 'Sit' böjs sit → sat → sat."
+        },
+        {
+          "id": "gym-g12-12",
+          "type": "fill-in-blank",
+          "sentence": "The news has ___ (spread) across the country.",
+          "answer": "spread",
+          "explanation": "spread → spread → spread – oförändrat i alla former."
+        }
+      ]
+    },
+    {
       "id": "gym-sluttest",
       "title": "Sluttest 1 – Grammatik",
       "description": "Testa din avancerade grammatik! 23 blandade frågor.",

@@ -5724,6 +5724,350 @@
       ]
     },
     {
+      "id": "mel-g12-regelbundna-verb",
+      "title": "Regelbundna verb – stavningsregler",
+      "description": "När blir det -ed, -d eller -ied?",
+      "icon": "🔁",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "Grundregel: lägg till -ed. walk → walked.",
+        "Slutar på -e: lägg bara till -d. like → liked, hope → hoped.",
+        "Konsonant + y: byt y mot -ied. study → studied, cry → cried. (Men vokal + y: play → played)",
+        "Kort vokal + en konsonant: dubbla konsonanten. stop → stopped, plan → planned."
+      ],
+      "exercises": [
+        {
+          "id": "mel-g12-1",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'study'?",
+          "options": [
+            "studyed",
+            "studied",
+            "studyd",
+            "studies"
+          ],
+          "correctIndex": 1,
+          "explanation": "Konsonant + y → byt till -ied: study → studied."
+        },
+        {
+          "id": "mel-g12-2",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'stop'?",
+          "options": [
+            "stoped",
+            "stopped",
+            "stopt",
+            "stops"
+          ],
+          "correctIndex": 1,
+          "explanation": "Kort vokal + en konsonant → dubbla konsonanten: stop → stopped."
+        },
+        {
+          "id": "mel-g12-3",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (carry) the heavy box.",
+          "answer": "carried",
+          "explanation": "carry → carried (konsonant + y)."
+        },
+        {
+          "id": "mel-g12-4",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'plan'?",
+          "options": [
+            "planed",
+            "planned",
+            "plant",
+            "plans"
+          ],
+          "correctIndex": 1,
+          "explanation": "plan → planned. Dubbla n:et."
+        },
+        {
+          "id": "mel-g12-5",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (arrive) very late.",
+          "answer": "arrived",
+          "explanation": "Slutar på -e → arrive → arrived."
+        },
+        {
+          "id": "mel-g12-6",
+          "type": "multiple-choice",
+          "question": "Varför blir 'cry' till 'cried'?",
+          "options": [
+            "Man lägger bara till -ed",
+            "Konsonant + y byts mot -ied",
+            "Konsonanten dubblas",
+            "Ingen ändring görs"
+          ],
+          "correctIndex": 1,
+          "explanation": "Före -y står ett r (konsonant), därför cry → cried."
+        },
+        {
+          "id": "mel-g12-7",
+          "type": "fill-in-blank",
+          "sentence": "He ___ (try) to help us.",
+          "answer": "tried",
+          "explanation": "try → tried."
+        },
+        {
+          "id": "mel-g12-8",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'play'?",
+          "options": [
+            "plaied",
+            "played",
+            "playd",
+            "plaid"
+          ],
+          "correctIndex": 1,
+          "explanation": "Före -y står ett a (vokal) – då gäller vanliga regeln: play → played."
+        },
+        {
+          "id": "mel-g12-9",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: 'Vi städade rummet igår.'",
+          "words": [
+            "We",
+            "cleaned",
+            "the",
+            "room",
+            "yesterday",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "explanation": "We cleaned the room yesterday. – clean → cleaned."
+        },
+        {
+          "id": "mel-g12-10",
+          "type": "fill-in-blank",
+          "sentence": "The film ___ (start) at seven o'clock.",
+          "answer": "started",
+          "explanation": "start → started."
+        },
+        {
+          "id": "mel-g12-11",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'hope'?",
+          "options": [
+            "hopeed",
+            "hoped",
+            "hopped",
+            "hopes"
+          ],
+          "correctIndex": 1,
+          "explanation": "hope → hoped. Obs: 'hopped' kommer från 'hop' (hoppa på ett ben)."
+        },
+        {
+          "id": "mel-g12-12",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (watch) a good film.",
+          "answer": "watched",
+          "explanation": "watch → watched."
+        },
+        {
+          "id": "mel-g12-13",
+          "type": "multiple-choice",
+          "question": "Vilken form är rätt: 'She ___ her homework.'",
+          "options": [
+            "finishd",
+            "finished",
+            "finisht",
+            "finishied"
+          ],
+          "correctIndex": 1,
+          "explanation": "finish → finished."
+        },
+        {
+          "id": "mel-g12-14",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (travel) to Spain last summer.",
+          "answer": "travelled",
+          "explanation": "Brittisk engelska dubblar l:et: travel → travelled. (Amerikansk: traveled)",
+          "alternativeAnswers": [
+            "traveled"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mel-g13-oregelbundna-verb",
+      "title": "Oregelbundna verb – tre former",
+      "description": "Grundform, dåtid och perfektform.",
+      "icon": "🌀",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "Oregelbundna verb har TRE former: grundform → dåtid → perfektform.",
+        "go → went → gone. see → saw → seen. eat → ate → eaten.",
+        "Dåtid används ensam: I went to school.",
+        "Perfektformen används efter have/has: I have gone to school.",
+        "Skriv gärna en egen lista och öva några verb i taget."
+      ],
+      "exercises": [
+        {
+          "id": "mel-g13-1",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'write'?",
+          "options": [
+            "writed",
+            "wrote",
+            "written",
+            "writes"
+          ],
+          "correctIndex": 1,
+          "explanation": "write → wrote → written. Dåtiden är 'wrote'."
+        },
+        {
+          "id": "mel-g13-2",
+          "type": "multiple-choice",
+          "question": "Vad är perfektformen (tredje formen) av 'go'?",
+          "options": [
+            "went",
+            "gone",
+            "goed",
+            "going"
+          ],
+          "correctIndex": 1,
+          "explanation": "go → went → gone. Perfektformen används efter have: I have gone."
+        },
+        {
+          "id": "mel-g13-3",
+          "type": "fill-in-blank",
+          "sentence": "I have ___ (see) that film twice.",
+          "answer": "seen",
+          "explanation": "see → saw → seen. Efter 'have' används perfektformen."
+        },
+        {
+          "id": "mel-g13-4",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'drink'?",
+          "options": [
+            "drinked",
+            "drank",
+            "drunk",
+            "drinks"
+          ],
+          "correctIndex": 1,
+          "explanation": "drink → drank → drunk."
+        },
+        {
+          "id": "mel-g13-5",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (bring) her dog to school.",
+          "answer": "brought",
+          "explanation": "bring → brought."
+        },
+        {
+          "id": "mel-g13-6",
+          "type": "multiple-choice",
+          "question": "Vad är perfektformen av 'eat'?",
+          "options": [
+            "ate",
+            "eaten",
+            "eated",
+            "eating"
+          ],
+          "correctIndex": 1,
+          "explanation": "eat → ate → eaten. I have eaten."
+        },
+        {
+          "id": "mel-g13-7",
+          "type": "fill-in-blank",
+          "sentence": "They have ___ (take) the bus home.",
+          "answer": "taken",
+          "explanation": "take → took → taken."
+        },
+        {
+          "id": "mel-g13-8",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'buy'?",
+          "options": [
+            "buyed",
+            "bought",
+            "boughted",
+            "buys"
+          ],
+          "correctIndex": 1,
+          "explanation": "buy → bought → bought."
+        },
+        {
+          "id": "mel-g13-9",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: 'Han skrev ett brev.'",
+          "words": [
+            "He",
+            "wrote",
+            "a",
+            "letter",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "He wrote a letter. – write → wrote."
+        },
+        {
+          "id": "mel-g13-10",
+          "type": "fill-in-blank",
+          "sentence": "We ___ (find) the key under the mat.",
+          "answer": "found",
+          "explanation": "find → found."
+        },
+        {
+          "id": "mel-g13-11",
+          "type": "multiple-choice",
+          "question": "Vad är perfektformen av 'write'?",
+          "options": [
+            "wrote",
+            "written",
+            "writed",
+            "writing"
+          ],
+          "correctIndex": 1,
+          "explanation": "write → wrote → written. I have written a letter."
+        },
+        {
+          "id": "mel-g13-12",
+          "type": "fill-in-blank",
+          "sentence": "I have ___ (be) here before.",
+          "answer": "been",
+          "explanation": "be → was/were → been."
+        },
+        {
+          "id": "mel-g13-13",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'teach'?",
+          "options": [
+            "teached",
+            "taught",
+            "teacht",
+            "teaches"
+          ],
+          "correctIndex": 1,
+          "explanation": "teach → taught → taught."
+        },
+        {
+          "id": "mel-g13-14",
+          "type": "fill-in-blank",
+          "sentence": "She has ___ (do) her homework.",
+          "answer": "done",
+          "explanation": "do → did → done."
+        }
+      ]
+    },
+    {
       "id": "mel-sluttest",
       "title": "Sluttest 1 – Grammatik",
       "description": "Testa din grammatik! 23 blandade frågor.",
