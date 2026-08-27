@@ -1520,6 +1520,913 @@
           ]
         }
       ]
+    },
+    {
+      "id": "en6-b1a-people-talking",
+      "delprov": "Delprov B1a: reading – People Talking",
+      "textType": "berättande",
+      "lang": "en",
+      "title": "People Talking",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&h=506&fit=crop",
+        "alt": "Young people talking together outdoors.",
+        "fallback": "/images/veta-vad-man-vill.svg"
+      },
+      "ingress": "In each of the following dialogues one word is missing. You must decide what the missing word is. Remember: only ONE word per gap.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Read each short dialogue and write the word that is missing.",
+            "Example:\n“How many languages do you ______?”\n“Three. English, Spanish and Italian.”\n→ speak",
+            "Only one word fits in each gap. Think about what the other person says – the answer is often hidden there."
+          ]
+        }
+      ],
+      "byline": [
+        "Uppgift skriven för NP-jakten",
+        "I de nationella provens format – allt innehåll är nyskrivet."
+      ],
+      "questions": [
+        {
+          "kind": "open",
+          "id": 1,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“When did you get that dog?”\n“Two months ______. On my birthday.”",
+          "guidance": "Ge 1 poäng för ”ago”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "ago" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“Are you hungry?”\n“Yes, I didn't have ______ this morning. I overslept.”",
+          "guidance": "Ge 1 poäng för ”breakfast”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "breakfast" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 3,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“Dad, I need some ______ with my maths.”\n“Of course. I'll be there in a minute.”",
+          "guidance": "Ge 1 poäng för ”help”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "help" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 4,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“What are you doing on Sunday?”\n“We're going ______ visit my grandmother.”",
+          "guidance": "Ge 1 poäng för ”to”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "to" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“Excuse me, is there a bank near ______?”\n“Yes, just around the corner.”",
+          "guidance": "Ge 1 poäng för ”here”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "here" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 6,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“Why are you wearing two jumpers?”\n“Because it's so ______ in this room.”",
+          "guidance": "Ge 1 poäng för ”cold”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "cold" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 7,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“How ______ does the film start?”\n“At half past seven.”",
+          "guidance": "Ge 1 poäng för ”soon”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "soon" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 8,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“I've never been to London.”\n“______ have I. Let's go together one day!”",
+          "guidance": "Ge 1 poäng för ”Neither”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "Neither" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 9,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“Can you pass me the salt, ______?”\n“Here you are.”",
+          "guidance": "Ge 1 poäng för ”please”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "please" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 10,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“Did you enjoy the concert?”\n“Yes, it was the ______ one I've ever been to.”",
+          "guidance": "Ge 1 poäng för ”best”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "best" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 11,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“Where's your brother?”\n“He's ______ his room, doing his homework.”",
+          "guidance": "Ge 1 poäng för ”in”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "in" }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 12,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Granska språk och struktur",
+          "prompt": "“I'm sorry I'm late.”\n“Don't ______ about it. We haven't started yet.”",
+          "guidance": "Ge 1 poäng för ”worry”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "—" },
+            { "points": 1, "answer": "worry" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en6-b1b-word-by-word",
+      "delprov": "Delprov B1b: reading – Word by Word",
+      "textType": "beskrivande",
+      "lang": "en",
+      "title": "Word by Word",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&h=506&fit=crop",
+        "alt": "An open dictionary on a desk.",
+        "fallback": "/images/lar-ut.svg"
+      },
+      "ingress": "Which word is missing? Read each explanation and choose the word that fits.",
+      "sections": [
+        {
+          "paragraphs": [
+            "In this part you read short explanations of words. In each explanation the word itself has been replaced by −X−.",
+            "Example:\n−X− is the meal you eat in the morning.\n→ breakfast",
+            "Choose the alternative that fits the whole explanation, not only part of it."
+          ]
+        }
+      ],
+      "byline": [
+        "Uppgift skriven för NP-jakten",
+        "I de nationella provens format – allt innehåll är nyskrivet."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "A −X− is a person who takes care of your teeth.",
+          "options": [
+            "dentist",
+            "doctor",
+            "nurse",
+            "chemist"
+          ],
+          "correctIndex": 0,
+          "explanation": "En dentist är tandläkare. En doctor och en nurse tar hand om kroppen i allmänhet, och en chemist arbetar på apotek."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "When you speak −X−, people can hardly hear you.",
+          "options": [
+            "loudly",
+            "quietly",
+            "clearly",
+            "quickly"
+          ],
+          "correctIndex": 1,
+          "explanation": "”Quietly” betyder tyst eller lågmält, så då hörs man knappt. ”Loudly” är motsatsen, och ”quickly” handlar om fart, inte volym."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "−X− is the frozen water that falls from the sky in winter.",
+          "options": [
+            "rain",
+            "fog",
+            "snow",
+            "ice"
+          ],
+          "correctIndex": 2,
+          "explanation": "Snö faller från himlen. Is (ice) bildas på marken eller på vatten, och dimma (fog) faller inte."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "If people are −X−, they are not afraid of dangerous things.",
+          "options": [
+            "brave",
+            "famous",
+            "careful",
+            "lucky"
+          ],
+          "correctIndex": 0,
+          "explanation": "”Brave” betyder modig. ”Careful” är närmast motsatsen i sammanhanget, och ”famous” och ”lucky” handlar om annat."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "A −X− is a small animal with long ears that likes carrots.",
+          "options": [
+            "mouse",
+            "rabbit",
+            "squirrel",
+            "hedgehog"
+          ],
+          "correctIndex": 1,
+          "explanation": "En rabbit (kanin) har långa öron och äter gärna morötter. En squirrel har yvig svans och en hedgehog har taggar."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "To cook something in an oven is to −X− it.",
+          "options": [
+            "boil",
+            "fry",
+            "bake",
+            "freeze"
+          ],
+          "correctIndex": 2,
+          "explanation": "”Bake” är att grädda eller baka i ugn. ”Boil” är att koka i vatten och ”fry” att steka i panna."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "You use a −X− to find out what time it is.",
+          "options": [
+            "ruler",
+            "clock",
+            "compass",
+            "calendar"
+          ],
+          "correctIndex": 1,
+          "explanation": "En clock visar tiden. En compass visar väderstreck och en calendar vilken dag det är."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "A person who is −X− has lived for many years.",
+          "options": [
+            "young",
+            "tall",
+            "old",
+            "tired"
+          ],
+          "correctIndex": 2,
+          "explanation": "”Old” betyder gammal, alltså att man levt länge. ”Tired” handlar om trötthet just nu, inte om ålder."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "−X− is the money you pay to travel on a bus or a train.",
+          "options": [
+            "fare",
+            "bill",
+            "prize",
+            "gift"
+          ],
+          "correctIndex": 0,
+          "explanation": "En fare är biljettpriset för en resa. En bill är en nota, ett prize ett pris man vinner och ett gift en present."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "If a room is −X−, there is nothing and nobody in it.",
+          "options": [
+            "empty",
+            "crowded",
+            "narrow",
+            "dark"
+          ],
+          "correctIndex": 0,
+          "explanation": "”Empty” betyder tom. ”Crowded” betyder motsatsen – fullt med folk – och ”dark” handlar om ljuset."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 11,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "A −X− is the person who leads a school.",
+          "options": [
+            "teacher",
+            "cleaner",
+            "headteacher",
+            "student"
+          ],
+          "correctIndex": 2,
+          "explanation": "En headteacher är rektor och leder skolan. En teacher undervisar men leder inte hela skolan."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 12,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "When something happens −X−, it happens without any warning.",
+          "options": [
+            "slowly",
+            "suddenly",
+            "usually",
+            "carefully"
+          ],
+          "correctIndex": 1,
+          "explanation": "”Suddenly” betyder plötsligt, alltså utan förvarning. ”Usually” betyder tvärtom att något brukar hända."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 13,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "A −X− is a long seat where several people can sit, often in a park.",
+          "options": [
+            "chair",
+            "bench",
+            "shelf",
+            "stool"
+          ],
+          "correctIndex": 1,
+          "explanation": "En bench är en bänk där flera får plats. En chair och en stool är till för en person."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 14,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "If you −X− something, you say you are not happy with it.",
+          "options": [
+            "complain about",
+            "laugh at",
+            "look for",
+            "pay for"
+          ],
+          "correctIndex": 0,
+          "explanation": "Att ”complain about” något är att klaga på det. ”Look for” betyder leta efter och ”pay for” betala för."
+        }
+      ]
+    },
+    {
+      "id": "en6-b1c-sleep-better",
+      "delprov": "Delprov B1c: reading – Sleep Better",
+      "textType": "instruerande",
+      "lang": "en",
+      "title": "Sleep Better",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=900&h=506&fit=crop",
+        "alt": "A bedroom with morning light.",
+        "fallback": "/images/lyssna.svg"
+      },
+      "ingress": "In this text from a school magazine you get some good advice about sleep. Some words are missing. Choose the best word for each gap.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Read the text below. Where you see a number in brackets, a word is missing. In the questions you will find four alternatives for each gap – choose the best one.",
+            "Example: I love to __X__ swimming in my free time.  →  go"
+          ]
+        },
+        {
+          "heading": "Sleep Better – by Maya and Idris, class 6B",
+          "paragraphs": [
+            "Maya and Idris want to become doctors one day, and they often write for the school magazine. This time they have written about sleep. In their article they __(1)__ us how to get a better night's rest.",
+            "“We think sleep is a great __(2)__ of getting more energy. Sleep helps your body grow, it helps your brain remember what you learned at school, and it is friendly __(3)__ your body in every way. But how __(4)__ hours do we actually need? Most people our age need between nine and eleven.",
+            "Here is our best advice. First, stop looking at screens about an hour __(5)__ bedtime. The light from a phone tells your brain that it is still daytime. If that is difficult, __(6)__ your phone in another room.",
+            "Second, go to bed at the __(7)__ time every day, even at weekends. It sounds boring, we know, but after two weeks you will __(8)__ notice that you are doing it.",
+            "Third, __(9)__ a warm shower in the evening. When you come out, your body cools down, and that helps you fall asleep faster.",
+            "None of this is complicated, __(10)__ it does take a few weeks before it feels normal. Try one thing at a time, and give yourself a month.”"
+          ]
+        }
+      ],
+      "byline": [
+        "Text skriven för NP-jakten",
+        "Skolan och skribenterna är påhittade."
+      ],
+      "questions": [
+        {
+          "kind": "multiple-choice",
+          "id": 1,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "Gap (1) – which word fits best?",
+          "options": [
+            "give",
+            "tell",
+            "want",
+            "like"
+          ],
+          "correctIndex": 1,
+          "explanation": "”They tell us how to sleep better” – tell används när man berättar något för någon. ”Give” kräver ett objekt som ”advice”, och ”want” och ”like” passar inte i sammanhanget."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 2,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "Gap (2) – which word fits best?",
+          "options": [
+            "thing",
+            "time",
+            "way",
+            "test"
+          ],
+          "correctIndex": 2,
+          "explanation": "”A great way of getting more energy” – way betyder sätt eller metod. ”Time” och ”thing” ger inte samma innebörd i uttrycket ”a way of doing something”."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "Gap (3) – which word fits best?",
+          "options": [
+            "to",
+            "with",
+            "from",
+            "because"
+          ],
+          "correctIndex": 0,
+          "explanation": "”It is friendly to your body” – prepositionen efter friendly är to. Jämför ”be kind to someone”."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 4,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "Gap (4) – which word fits best?",
+          "options": [
+            "much",
+            "many",
+            "lot",
+            "few"
+          ],
+          "correctIndex": 1,
+          "explanation": "”How many hours” – hours är räknebart, och då används many, inte much."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 5,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "Gap (5) – which word fits best?",
+          "options": [
+            "before",
+            "after",
+            "while",
+            "during"
+          ],
+          "correctIndex": 0,
+          "explanation": "Skärmljuset stör sömnen om man tittar på det strax innan man ska sova, alltså before bedtime."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "Gap (6) – which word fits best?",
+          "options": [
+            "turn",
+            "take",
+            "get",
+            "put"
+          ],
+          "correctIndex": 3,
+          "explanation": "”Put your phone in another room” – put används när man placerar något någonstans. ”Take” skulle betyda att man bär bort den utan att ange vart."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "Gap (7) – which word fits best?",
+          "options": [
+            "same",
+            "similar",
+            "equal",
+            "alike"
+          ],
+          "correctIndex": 0,
+          "explanation": "”At the same time every day” är ett fast uttryck för att göra något regelbundet vid samma klockslag."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 8,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "Gap (8) – which word fits best?",
+          "options": [
+            "hard",
+            "hardly",
+            "harder",
+            "hardest"
+          ],
+          "correctIndex": 1,
+          "explanation": "”You will hardly notice it” betyder att man knappt märker det. ”Hard” skulle betyda ”hårt” och ändrar betydelsen helt."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 9,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "Gap (9) – which word fits best?",
+          "options": [
+            "make",
+            "do",
+            "have",
+            "take"
+          ],
+          "correctIndex": 3,
+          "explanation": "”Take a warm shower” – med shower används verbet take (eller have i brittisk engelska). ”Make a shower” går inte."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "aspect": "Granska språk och struktur",
+          "prompt": "Gap (10) – which word fits best?",
+          "options": [
+            "so",
+            "but",
+            "or",
+            "if"
+          ],
+          "correctIndex": 1,
+          "explanation": "Meningen ställer två saker mot varandra: rådet är enkelt, men det tar tid att vänja sig. Då behövs but."
+        }
+      ]
+    },
+    {
+      "id": "en6-b1d-last-bus",
+      "delprov": "Delprov B1d: reading – The Last Bus",
+      "textType": "berättande",
+      "lang": "en",
+      "title": "The Last Bus",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=900&h=506&fit=crop",
+        "alt": "A bus stop in the evening.",
+        "fallback": "/images/uppkopplad.svg"
+      },
+      "ingress": "You're going to read a story about a girl, Nadia, and what happened to her one evening. Answer the questions after each part of the story. Your answers must be in English. When answering questions with alternatives – choose ONE alternative only.",
+      "sections": [
+        {
+          "paragraphs": [
+            "It was a warm evening in early September. Nadia had been at a football match in Kirkby with her cousin, and it had been the best game she had seen all year. Her team had won 3–2 with a goal in the last minute, and she had shouted so much that her throat hurt.",
+            "Her cousin lived in Kirkby. Nadia did not. She lived in Ashwell, twenty kilometres away, and the last bus home left at half past nine.",
+            "At twenty-five past nine she was standing at the bus stop outside the stadium with four thousand other people trying to get home. At twenty to ten she was still standing there, and the bus had gone."
+          ]
+        },
+        {
+          "paragraphs": [
+            "Nadia's first thought was to phone her mother. Then she remembered that her mother was working a night shift at the hospital and would not be able to come.",
+            "Her second thought was her phone itself, which showed four per cent battery and then, very quietly, switched itself off.",
+            "She stood still for a moment. Around her the crowd was thinning out. She counted what she had: eleven pounds, a half-eaten sandwich, and a jacket she was glad she had brought.",
+            "Then she started to walk – not towards Ashwell, which would have taken four hours, but back into the town centre, where she knew there was a café that stayed open late."
+          ]
+        },
+        {
+          "paragraphs": [
+            "The woman behind the counter listened to the whole story without interrupting once. Then she asked Nadia if she knew her mother's number by heart. Nadia did not. She knew her own address, her cousin's street, and, for some reason, the number of her old primary school.",
+            "‘Right,' said the woman. ‘Do you know your cousin's address?'",
+            "Twenty minutes later Nadia was in a taxi that the café owner had paid for, going back to a house she had left three hours earlier. Her cousin's family had not gone to bed. They had been trying to call her since ten o'clock.",
+            "The next morning her mother came to collect her. She was not angry. On the way home she told Nadia two things: that she had done exactly the right thing by going somewhere with people and light in it, and that she was going to learn three phone numbers by heart before the week was over.",
+            "Nadia still knows them. She is twenty-four now, and she has never once needed them. She says that is not the point."
+          ]
+        }
+      ],
+      "byline": [
+        "Berättelse skriven för NP-jakten",
+        "Personerna är påhittade."
+      ],
+      "questions": [
+        {
+          "kind": "open",
+          "id": 1,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "Where had Nadia been that evening?",
+          "guidance": "Ge 1 poäng för svar som visar att hon varit på en fotbollsmatch (i Kirkby). Godtagbart: ”at a football match”.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "At her cousin's house." },
+            { "points": 1, "answer": "At a football match in Kirkby." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 2,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How did the match end?",
+          "guidance": "Ge 1 poäng för svar som visar att hennes lag vann med 3–2, med mål i sista minuten. Det räcker att resultatet eller segern framgår.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "Her team lost." },
+            { "points": 1, "answer": "Her team won 3–2 with a goal in the last minute." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 3,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "Why couldn't Nadia phone her mother?",
+          "options": [
+            "Her mother was asleep",
+            "Her mother was working at the hospital",
+            "She did not want to worry her",
+            "Her mother lived in another town"
+          ],
+          "correctIndex": 1,
+          "explanation": "Mamman arbetade nattpass på sjukhuset och kunde därför inte komma. Att telefonen sedan dog är ett separat problem."
+        },
+        {
+          "kind": "open",
+          "id": 4,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What happened to her phone?",
+          "guidance": "Ge 1 poäng för svar som visar att batteriet tog slut och att telefonen stängde av sig. Godtagbart: ”it died”; ”the battery ran out”.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "She lost it at the stadium." },
+            { "points": 1, "answer": "The battery ran out and it switched itself off." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 5,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "What did Nadia have with her? (Give two things.)",
+          "guidance": "Ge 1 poäng per korrekt sak, max 2. I texten nämns: elva pund, en halvätn smörgås och en jacka.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "She had her phone and a ticket." },
+            { "points": 1, "answer": "She had eleven pounds." },
+            { "points": 2, "answer": "She had eleven pounds and a half-eaten sandwich." }
+          ],
+          "note": "Du måste skriva två saker för att få full poäng."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 6,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "Why did Nadia walk into the town centre instead of towards Ashwell?",
+          "options": [
+            "The road to Ashwell was closed",
+            "Walking home would have taken four hours",
+            "She wanted to find her cousin",
+            "She had left her jacket in the café"
+          ],
+          "correctIndex": 1,
+          "explanation": "Texten säger uttryckligen att det skulle ha tagit fyra timmar att gå till Ashwell. I stället gick hon mot centrum, där hon visste att ett kafé hade öppet sent."
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 7,
+          "maxPoints": 1,
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "How did the woman in the café react to Nadia's story?",
+          "options": [
+            "She listened without interrupting",
+            "She told Nadia to call the police",
+            "She was annoyed because it was late",
+            "She said she could not help"
+          ],
+          "correctIndex": 0,
+          "explanation": "Texten säger att kvinnan lyssnade på hela historien utan att avbryta en enda gång, och sedan började ställa praktiska frågor."
+        },
+        {
+          "kind": "open",
+          "id": 8,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "Which phone number did Nadia know by heart?",
+          "guidance": "Ge 1 poäng för svar som visar att det var hennes gamla lågstadieskolas nummer. Godtagbart: ”her old primary school”.",
+          "lines": 1,
+          "scoreExamples": [
+            { "points": 0, "answer": "Her mother's number." },
+            { "points": 1, "answer": "The number of her old primary school." }
+          ]
+        },
+        {
+          "kind": "open",
+          "id": 9,
+          "maxPoints": 1,
+          "pointSteps": [
+            0,
+            1
+          ],
+          "aspect": "Hitta specifik information",
+          "prompt": "How did Nadia get back to her cousin's house?",
+          "guidance": "Ge 1 poäng för svar som visar att hon åkte taxi och att kaféägaren betalade. Godtagbart: ”by taxi”; ”the café owner paid for a taxi”.",
+          "lines": 2,
+          "scoreExamples": [
+            { "points": 0, "answer": "She walked back." },
+            { "points": 1, "answer": "By taxi, which the café owner paid for." }
+          ]
+        },
+        {
+          "kind": "multiple-choice",
+          "id": 10,
+          "maxPoints": 1,
+          "aspect": "Hitta specifik information",
+          "prompt": "What had her cousin's family been doing since ten o'clock?",
+          "options": [
+            "Sleeping",
+            "Driving around the town",
+            "Trying to call her",
+            "Waiting at the bus stop"
+          ],
+          "correctIndex": 2,
+          "explanation": "Familjen hade inte gått och lagt sig – de hade försökt ringa henne sedan klockan tio, utan att veta att telefonen var död."
+        },
+        {
+          "kind": "open",
+          "id": 11,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå detaljer och underförstådd betydelse",
+          "prompt": "What two things did Nadia's mother tell her on the way home?",
+          "guidance": "Ge 1 poäng per led, max 2: 1) att hon gjort precis rätt som gick till ett ställe med människor och ljus, 2) att hon skulle lära sig tre telefonnummer utantill före veckans slut.",
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "That she was angry with her." },
+            { "points": 1, "answer": "That she had done the right thing by going somewhere with people and light." },
+            { "points": 2, "answer": "That she had done exactly the right thing by going somewhere with people and light in it, and that she had to learn three phone numbers by heart that week." }
+          ],
+          "note": "Du måste skriva båda sakerna för att få full poäng."
+        },
+        {
+          "kind": "open",
+          "id": 12,
+          "maxPoints": 2,
+          "pointSteps": [
+            0,
+            1,
+            2
+          ],
+          "aspect": "Förstå huvudinnehåll och sammanhang",
+          "prompt": "At the end Nadia says that never needing the numbers ‘is not the point'. What does she mean?",
+          "guidance": "Ge 2 poäng för svar som visar att nyttan inte ligger i att använda numren, utan i tryggheten att kunna dem om något händer – man lär sig dem just för att man inte vet när man behöver dem. Ge 1 poäng för svar som är på rätt spår men outvecklat.",
+          "lines": 4,
+          "scoreExamples": [
+            { "points": 0, "answer": "She means that she has forgotten the numbers." },
+            { "points": 1, "answer": "She means it does not matter that she has not used them." },
+            { "points": 2, "answer": "She means that the numbers are not there to be used every day, but so that she is safe if something ever happens. Knowing them is what matters, not needing them." }
+          ]
+        }
+      ]
     }
   ],
   "listening": [
@@ -2966,6 +3873,99 @@
             "Skribenten resonerar och nyanserar: att alla känner alla är både det bästa och det sämsta – det visar förmåga att se två sidor.",
             "Texten är anpassad till läsaren: den knyter an till deras egen formulering om ”the small things” och avslutar med en fråga tillbaka.",
             "Språket är varierat och säkert, med både korta och längre meningar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en6-c-the-first-time",
+      "delprov": "Delprov C: writing – The First Time",
+      "textType": "berättelse",
+      "title": "The First Time",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=900&h=506&fit=crop",
+        "alt": "A school newspaper team working together.",
+        "fallback": "/images/lar-ut.svg"
+      },
+      "intro": [
+        "Rosehill Middle School ger ut en nättidning. Nästa nummer ska handla om ett särskilt ämne – The First Time. Eleverna i redaktionen vill att du skriver en text om en gång då du gjorde något för allra första gången.",
+        "Skriv så mycket du kan – och använd engelska hela tiden."
+      ],
+      "doThis": [
+        "Start with a short presentation of yourself.",
+        "There is a first time for everything. What is something you remember doing for the very first time? It does not have to be big – a first day, a first try, a first time alone.",
+        "Then choose ONE first time that you will never forget, and write about it:\n– When did it happen?\n– Where were you, and who was with you?\n– What happened?\n– How did you feel before, and how did you feel afterwards?\n– Would you do it again?",
+        "Write as much as you can! Use English all the time!"
+      ],
+      "remember": [
+        "Skriv på engelska hela tiden. Fastnar du på ett ord – förklara med andra ord i stället.",
+        "Börja med en kort presentation av dig själv, som uppgiften ber om.",
+        "Välj en enda händelse och berätta den ordentligt, hellre än att nämna många snabbt.",
+        "Berätta både vad som hände och hur det kändes – känslorna är det tidningen är ute efter.",
+        "Läs igenom din text när du är klar."
+      ],
+      "checklist": [
+        "Jag har skrivit på engelska hela tiden.",
+        "Jag har börjat med en kort presentation av mig själv.",
+        "Jag har valt en enda händelse och berättat om den.",
+        "Jag har svarat på frågorna: när, var, vem, vad som hände.",
+        "Jag har skrivit hur det kändes både före och efteråt.",
+        "Min text har en början, en mitt och ett slut.",
+        "Jag har läst igenom min text och rättat det jag hittade."
+      ],
+      "examples": [
+        {
+          "level": "På väg",
+          "heading": "My first time",
+          "paragraphs": [
+            "Hi. My name is Sam and I am 12. I live in Sweden.",
+            "My first time was when I ride a horse. It was scary. The horse was big and brown. I was happy after.",
+            "I want do it again."
+          ],
+          "comments": [
+            "Texten följer uppgiften: en presentation och en händelse, och skribenten skriver både att det var läskigt och att det kändes bra efteråt.",
+            "Den är dock mycket kort. Läsaren får inte veta när det hände, var det var eller vem som var med – frågor som uppgiften ber om.",
+            "Verbformerna växlar (”when I ride” i stället för ”rode”). Felen stör men förstör inte förståelsen.",
+            "Nästa steg: ta en av meningarna och utveckla den med tre meningar till. Vad hände först? Vad sa någon?"
+          ]
+        },
+        {
+          "level": "Godtagbar nivå",
+          "heading": "The first time I cooked dinner",
+          "paragraphs": [
+            "Hello! My name is Amina and I am twelve years old. I live in a small town in Sweden with my mum, my little brother and a very old cat.",
+            "There are many things I remember doing for the first time, like riding a bike or sleeping at a friend's house. But the one I think about most is the first time I cooked dinner alone.",
+            "It happened last autumn, on a Tuesday. My mum was working late and my brother was hungry, so I decided to make pasta with tomato sauce. Before I started I was quite nervous, because I had never used the cooker without an adult in the room.",
+            "Everything went well until I put too much salt in the water. The pasta tasted terrible. My brother ate it anyway and said it was good, which was not true, but it was kind.",
+            "Afterwards I felt proud. It was not a good dinner, but I made it myself. Now I cook once a week, and I always taste the water first. I would definitely do it again.",
+            "Amina"
+          ],
+          "comments": [
+            "Texten följer uppgiftens tre delar: presentation, en allmän tanke om första gånger och sedan en utvald händelse.",
+            "Alla stödfrågor besvaras – när, var, vem, vad som hände och hur det kändes före och efter.",
+            "Det finns konkreta detaljer (för mycket salt, brorsan som åt ändå) som gör berättelsen levande i stället för allmän.",
+            "Språket flyter och är lätt att följa. Enstaka fel stör inte förståelsen."
+          ]
+        },
+        {
+          "level": "Mer utvecklad nivå",
+          "heading": "Twelve metres",
+          "paragraphs": [
+            "My name is Oskar, I am thirteen, and until last summer I was afraid of heights. I want to tell you about the day that stopped being true.",
+            "We were at a lake outside my grandmother's village, the kind of place where nothing has changed since my mother was a child. There is a wooden tower by the water with three levels: three metres, six metres and twelve. Everybody in my family has jumped from the top. Everybody except me.",
+            "I had climbed to the twelve-metre level twice before, on two different summers, and both times I climbed back down. My cousins never said anything about it, which was somehow worse than if they had laughed.",
+            "That afternoon in July I went up again. I remember exactly how the wood felt, warm and rough under my feet, and how small the people below looked. My heart was beating so hard that I could hear it. I stood there for what my cousin later said was four minutes, but which felt like an hour.",
+            "What made me jump in the end was not courage. It was the thought of climbing down a third time and remembering it for the rest of the summer. So I stepped off the edge before I could think any more about it.",
+            "The fall lasted less than a second. Hitting the water hurt more than I expected, and I came up laughing in a way that surprised me. My grandmother, who is seventy-nine, shouted from the beach that it was about time.",
+            "I have jumped many times since then, and it is never as frightening as the first. But I am glad the first one was hard. If it had been easy, I would not still be telling you about it.",
+            "Oskar"
+          ],
+          "comments": [
+            "Texten gör allt uppgiften ber om, men binder ihop det till en riktig berättelse med en tydlig vändpunkt.",
+            "Känslorna visas i stället för att bara nämnas: hjärtat som bultar, träet som känns varmt och strävt, de fyra minuterna som kändes som en timme.",
+            "Skribenten reflekterar över sig själv – att det inte var mod utan tanken på att klättra ner igen som fick honom att hoppa. Det är en insikt, inte bara en händelse.",
+            "Avslutningen knyter ihop texten med en egen tanke om varför just den första gången betyder något.",
+            "Språket är varierat och säkert, med både korta och längre meningar. Enstaka fel märks knappt."
           ]
         }
       ]
