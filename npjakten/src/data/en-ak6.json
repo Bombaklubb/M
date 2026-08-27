@@ -3971,5 +3971,90 @@
       ]
     }
   ],
-  "oral": []
+  "oral": [
+    {
+      "id": "en6-a-a-day-in-my-life",
+      "delprov": "Delprov A: speaking – A Day in My Life",
+      "kind": "samtal",
+      "title": "A Day in My Life",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900&h=506&fit=crop",
+        "alt": "Two pupils talking to each other.",
+        "fallback": "/images/veta-vad-man-vill.svg"
+      },
+      "intro": [
+        "På det muntliga delprovet sitter du och en klasskamrat tillsammans och samtalar på engelska medan läraren lyssnar. Ni ska berätta, beskriva och ställa frågor till varandra.",
+        "Ni bedöms inte på om ni har rätt eller fel, utan på hur ni får samtalet att fungera: hur mycket ni kan berätta, hur ni förklarar när ord saknas och hur ni lyssnar på varandra.",
+        "Allt sägs på engelska. Fastnar du – förklara med andra ord i stället för att byta till svenska."
+      ],
+      "steps": [
+        "Warm-up. Ask each other about: your name and age, who you live with, the school you go to, and what you do after school.",
+        "Part One. Tell your friend about an ordinary school day. What do you do in the morning, during the school day and in the evening? Explain what you like about your day, and what you would change.",
+        "Part Two. Take turns to pick a card. Read it out and say which one you like best – and explain why.",
+        "Then ask your friend: “What about you?” and “What don't you like? Why?”",
+        "Finally, talk about what grown-ups (parents or grandparents) would choose, and whether that is different from you."
+      ],
+      "cards": [
+        "What do you like best?\n• Maths\n• English\n• Art\nExplain why!",
+        "What do you like best?\n• Walking to school\n• Cycling\n• Taking the bus\nExplain why!",
+        "What do you like best?\n• Cooking\n• Baking\n• Washing up\nExplain why!",
+        "What do you like best?\n• Early mornings\n• Long afternoons\n• Late evenings\nExplain why!",
+        "What do you like best?\n• Big cities\n• Small towns\n• The countryside\nExplain why!",
+        "What do you like best?\n• Dogs\n• Cats\n• Birds\nExplain why!",
+        "What do you like best?\n• Presents you choose yourself\n• Surprises\n• Homemade presents\nExplain why!",
+        "What do you like best?\n• Doing homework straight away\n• Doing it later\n• Doing it with a friend\nExplain why!"
+      ],
+      "assessmentPoints": [
+        "Vi talade engelska hela tiden, även när det var svårt.",
+        "Jag förklarade med andra ord när jag inte kom på rätt ord – i stället för att byta till svenska.",
+        "Jag utvecklade mina svar i stället för att bara svara ja eller nej.",
+        "Jag förklarade varför jag tycker som jag gör, med exempel.",
+        "Jag ställde frågor till min kompis och lyssnade på svaren.",
+        "Vi turades om, så att vi båda fick ungefär lika mycket taltid.",
+        "Jag bad om hjälp på engelska när jag inte förstod (”Sorry, what do you mean?”)."
+      ]
+    },
+    {
+      "id": "en6-a-people-and-places",
+      "delprov": "Delprov A: speaking – People and Places",
+      "kind": "samtal",
+      "title": "People and Places",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&h=506&fit=crop",
+        "alt": "Two young people in conversation outdoors.",
+        "fallback": "/images/skolstart.svg"
+      },
+      "intro": [
+        "Det här är ett andra muntligt delprov i samma format. Ni sitter två och två och samtalar på engelska medan läraren lyssnar.",
+        "Tänk på att utveckla dina svar. Ett svar som ”I like it” räcker inte – säg varför, och ge ett exempel.",
+        "Ställ frågor tillbaka till din kompis. Ett bra samtal är inte två föredrag efter varandra."
+      ],
+      "steps": [
+        "Warm-up. Ask each other about: your name and age, your family, and any languages you speak or are learning.",
+        "Part One. Tell your friend about a place you like to go to – it can be a room, a shop, somewhere outdoors or somewhere far away. Explain why you like it, what you do there, and who you usually go with.",
+        "Part Two. Take turns to pick a card. Say which one you would choose, and explain why.",
+        "Ask your friend: “Which would you choose?” and “Is there one you would never choose? Why not?”",
+        "End by agreeing on one thing you both like, and one thing you disagree about."
+      ],
+      "cards": [
+        "Which would you choose?\n• A day at the beach\n• A day in the forest\n• A day in a big city\nExplain why!",
+        "Which would you choose?\n• Being with one friend\n• Being in a small group\n• Being in a big group\nExplain why!",
+        "Which would you choose?\n• A long summer holiday\n• Several short holidays\n• A week off every month\nExplain why!",
+        "Which would you choose?\n• Living near the sea\n• Living near mountains\n• Living near a big park\nExplain why!",
+        "Which would you choose?\n• Travelling by train\n• Travelling by plane\n• Travelling by car\nExplain why!",
+        "Which would you choose?\n• Learning to play an instrument\n• Learning a new language\n• Learning to cook\nExplain why!",
+        "Which would you choose?\n• A pet you look after yourself\n• A pet the whole family shares\n• No pet at all\nExplain why!",
+        "Which would you choose?\n• Reading about a place\n• Seeing photos of it\n• Going there yourself\nExplain why!"
+      ],
+      "assessmentPoints": [
+        "Vi talade engelska hela tiden, även när det var svårt.",
+        "Jag förklarade med andra ord när jag inte kom på rätt ord – i stället för att byta till svenska.",
+        "Jag utvecklade mina svar i stället för att bara svara ja eller nej.",
+        "Jag förklarade varför jag tycker som jag gör, med exempel.",
+        "Jag ställde frågor till min kompis och lyssnade på svaren.",
+        "Vi turades om, så att vi båda fick ungefär lika mycket taltid.",
+        "Jag bad om hjälp på engelska när jag inte förstod (”Sorry, what do you mean?”)."
+      ]
+    }
+  ]
 }
