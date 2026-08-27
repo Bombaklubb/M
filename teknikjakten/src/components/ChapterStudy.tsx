@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useApp, type StudyTab } from '../contexts/AppContext';
 import { shuffle } from '../utils/shuffle';
 import { fetchConceptImage } from '../utils/imageCache';
@@ -12,6 +12,7 @@ import MatchaTab from './tabs/MatchaTab';
 import TimelineTab from './tabs/TimelineTab';
 import KeyPointsTab from './tabs/KeyPointsTab';
 import FlashcardsTab from './tabs/FlashcardsTab';
+import NextQuestionButton from './NextQuestionButton';
 
 const TAB_LABELS: Record<StudyTab, string> = {
   'flashcards':  '🃏 Flashcards',
@@ -39,9 +40,6 @@ export default function ChapterStudy() {
   const [testAnswered, setTestAnswered] = useState<number | null>(null);
   const [testScore, setTestScore] = useState(0);
   const [testDone, setTestDone] = useState(false);
-  const testTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => () => { if (testTimer.current) clearTimeout(testTimer.current); }, []);
 
   const chapterId = selectedChapter?.id ?? '';
   // Memoiseras så att effekter och useMemo nedan får en stabil referens.
@@ -102,16 +100,16 @@ export default function ChapterStudy() {
     const idx = testQuestions[testIdx]?.options.indexOf(option) ?? -1;
     setTestAnswered(idx);
     if (option === testQuestions[testIdx]?.correct) setTestScore(n => n + 1);
-    if (testTimer.current) clearTimeout(testTimer.current);
-    testTimer.current = setTimeout(() => {
-      testTimer.current = null;
-      if (testIdx + 1 >= testQuestions.length) setTestDone(true);
-      else { setTestIdx(i => i + 1); setTestAnswered(null); }
-    }, 900);
+  }
+
+  /** Eleven trycker sig vidare först när hen har sett facit. */
+  function nextTestQuestion() {
+    if (testAnswered === null) return;
+    if (testIdx + 1 >= testQuestions.length) setTestDone(true);
+    else { setTestIdx(i => i + 1); setTestAnswered(null); }
   }
 
   function resetTest() {
-    if (testTimer.current) { clearTimeout(testTimer.current); testTimer.current = null; }
     setTestIdx(0); setTestAnswered(null); setTestScore(0); setTestDone(false);
   }
 
@@ -378,6 +376,13 @@ export default function ChapterStudy() {
                     );
                   })}
                 </div>
+
+                {testAnswered !== null && (
+                  <NextQuestionButton
+                    onClick={nextTestQuestion}
+                    isLast={testIdx + 1 >= testQuestions.length}
+                  />
+                )}
               </div>
             ) : (
               <p className="text-sm text-center py-8" style={{ color: SPACE.onDarkMuted }}>Inte tillräckligt med begrepp för ett test.</p>

@@ -13,7 +13,8 @@ export default function TrueFalse({ exercise, onAnswer }: Props) {
   function pick(val: boolean) {
     if (selected !== null) return;
     setSelected(val);
-    setTimeout(() => onAnswer(val === exercise.isTrue), 900);
+    // Rapportera direkt. Att gå vidare är elevens beslut, inte en timer.
+    onAnswer(val === exercise.isTrue);
   }
 
   const revealed = selected !== null;
@@ -25,7 +26,7 @@ export default function TrueFalse({ exercise, onAnswer }: Props) {
     const isChosen = selected === val;
     if (isCorrectAnswer) return base + 'border-2 border-green-400 bg-green-50';
     if (isChosen && !isCorrectAnswer) return base + 'border-2 border-red-400 bg-red-50';
-    return base + 'opacity-50 clay-card-sm';
+    return base + 'opacity-75 clay-card-sm';
   }
 
   return (

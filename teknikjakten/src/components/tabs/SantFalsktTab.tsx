@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { RotateCcw } from 'lucide-react';
 import Celebration from '../Celebration';
+import NextQuestionButton from '../NextQuestionButton';
 
 export default function SantFalsktTab({ items, progressHex, glowHex }: {
   items: { statement: string; isTrue: boolean; explanation: string }[];
@@ -11,9 +12,6 @@ export default function SantFalsktTab({ items, progressHex, glowHex }: {
   const [answered, setAnswered] = useState<boolean | null>(null);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
 
   if (items.length === 0) return <p className="text-sm text-gray-500 text-center py-8">Inga sant/falskt-påståenden finns för det här kapitlet.</p>;
 
@@ -24,16 +22,16 @@ export default function SantFalsktTab({ items, progressHex, glowHex }: {
     if (answered !== null) return;
     setAnswered(choice);
     if (choice === current.isTrue) setScore(s => s + 1);
-    if (timer.current) clearTimeout(timer.current);
-    timer.current = setTimeout(() => {
-      timer.current = null;
-      if (idx + 1 >= total) { setDone(true); }
-      else { setIdx(i => i + 1); setAnswered(null); }
-    }, 1100);
+  }
+
+  /** Eleven trycker sig vidare först när hen har läst klart förklaringen. */
+  function goNext() {
+    if (answered === null) return;
+    if (idx + 1 >= total) { setDone(true); }
+    else { setIdx(i => i + 1); setAnswered(null); }
   }
 
   function reset() {
-    if (timer.current) { clearTimeout(timer.current); timer.current = null; }
     setIdx(0); setAnswered(null); setScore(0); setDone(false);
   }
 
@@ -74,6 +72,10 @@ export default function SantFalsktTab({ items, progressHex, glowHex }: {
           style={isCorrect ? { background: '#dcfce7', color: '#15803d' } : { background: '#fee2e2', color: '#b91c1c' }}>
           {isCorrect ? '✅ Rätt! ' : '❌ Fel! '}{current.explanation}
         </div>
+      )}
+
+      {answered !== null && (
+        <NextQuestionButton onClick={goNext} isLast={idx + 1 >= total} />
       )}
 
       {answered === null && (

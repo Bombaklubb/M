@@ -17,7 +17,8 @@ export default function MultipleChoice({ exercise, onAnswer }: Props) {
   function pick(idx: number) {
     if (selected !== null) return;
     setSelected(idx);
-    setTimeout(() => onAnswer(idx === correctIndex), 1000);
+    // Rapportera direkt. Att gå vidare är elevens beslut, inte en timer.
+    onAnswer(idx === correctIndex);
   }
 
   return (

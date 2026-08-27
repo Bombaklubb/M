@@ -58,8 +58,8 @@ export default function MatchingPairs({ exercise, onAnswer }: Props) {
 
     if (newMatched.filter(m => m.correct).length === exercise.pairs.length) {
       setDone(true);
-      const allCorrect = mistakesRef.current === 0;
-      later(() => onAnswer(allCorrect), 600);
+      // Rapportera direkt. Att gå vidare är elevens beslut, inte en timer.
+      onAnswer(mistakesRef.current === 0);
     }
   }
 

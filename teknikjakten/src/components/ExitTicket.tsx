@@ -1,10 +1,11 @@
-import { useState, useMemo, useEffect, useRef } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { Exercise, MultipleChoiceExercise, FillInExercise } from '../types';
 import { shuffleOptions } from '../utils/shuffle';
 import { SPACE, withAlpha } from '../utils/theme';
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 import Celebration from './Celebration';
+import NextQuestionButton from './NextQuestionButton';
 
 type AnswerState = 'unanswered' | 'correct' | 'wrong';
 
@@ -40,13 +41,10 @@ export default function ExitTicket() {
   const [currentAnswer, setCurrentAnswer] = useState<AnswerState>('unanswered');
   const [inputValue, setInputValue] = useState('');
   const [done, setDone] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (!exitTicketChapter || !selectedArea) setView('area-select');
   }, [exitTicketChapter, selectedArea, setView]);
-
-  useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
 
   if (!exitTicketChapter || !selectedArea) return null;
 
@@ -66,19 +64,19 @@ export default function ExitTicket() {
     if (currentAnswer !== 'unanswered') return;
     const state: AnswerState = isCorrect ? 'correct' : 'wrong';
     setCurrentAnswer(state);
-    timerRef.current = setTimeout(() => {
-      timerRef.current = null;
-      const newAnswers = [...answers, state];
-      if (currentIdx + 1 >= total) {
-        setAnswers(newAnswers);
-        setDone(true);
-      } else {
-        setAnswers(newAnswers);
-        setCurrentIdx(currentIdx + 1);
-        setCurrentAnswer('unanswered');
-        setInputValue('');
-      }
-    }, 1200);
+    setAnswers(prev => [...prev, state]);
+  }
+
+  /** Eleven trycker sig vidare först när hen har läst klart facit. */
+  function goNext() {
+    if (currentAnswer === 'unanswered') return;
+    if (currentIdx + 1 >= total) {
+      setDone(true);
+    } else {
+      setCurrentIdx(currentIdx + 1);
+      setCurrentAnswer('unanswered');
+      setInputValue('');
+    }
   }
 
   function renderExercise(e: Exercise) {
@@ -90,7 +88,9 @@ export default function ExitTicket() {
             let cls = 'w-full text-left p-3 min-h-[44px] rounded-xl border-2 text-sm font-semibold transition-all text-gray-800';
             if (currentAnswer === 'unanswered') cls += ' border-gray-200 bg-white hover:bg-sky-50 cursor-pointer';
             else if (isCorrect) cls += ' border-green-400 bg-green-50';
-            else cls += ' border-gray-200 bg-white opacity-50';
+            // Facit ligger kvar tills eleven trycker vidare, så de bortvalda
+            // alternativen får inte dimmas under läsbar kontrast.
+            else cls += ' border-gray-200 bg-white opacity-75';
             return (
               <button key={i} onClick={() => currentAnswer === 'unanswered' && handleAnswer(i === e.correctIndex)} className={cls}>
                 {opt}
@@ -109,7 +109,7 @@ export default function ExitTicket() {
             let cls = 'flex-1 py-4 rounded-xl border-2 font-heading font-bold text-base transition-all text-gray-800';
             if (currentAnswer === 'unanswered') cls += ' border-gray-200 bg-white hover:bg-sky-50 cursor-pointer';
             else if (isCorrect) cls += ' border-green-400 bg-green-50 text-green-700';
-            else cls += ' border-gray-200 opacity-50';
+            else cls += ' border-gray-200 opacity-75';
             return (
               <button key={label} onClick={() => currentAnswer === 'unanswered' && handleAnswer(isCorrect)} className={cls}>
                 {label === 'Sant' ? '✓ Sant' : '✗ Falskt'}
@@ -164,7 +164,7 @@ export default function ExitTicket() {
               let cls = 'w-full text-left p-3 min-h-[44px] rounded-xl border-2 text-sm font-semibold transition-all text-gray-800';
               if (currentAnswer === 'unanswered') cls += ' border-gray-200 bg-white hover:bg-sky-50 cursor-pointer';
               else if (isCorrect) cls += ' border-green-400 bg-green-50';
-              else cls += ' border-gray-200 opacity-50';
+              else cls += ' border-gray-200 opacity-75';
               return <button key={i} onClick={() => currentAnswer === 'unanswered' && handleAnswer(isCorrect)} className={cls}>{opt}</button>;
             })}
           </div>
@@ -239,6 +239,9 @@ export default function ExitTicket() {
             <div className="mt-4 p-3 rounded-2xl bg-sky-50 border-2 border-sky-200">
               <p className="text-sm font-semibold text-sky-900">{ex.explanation}</p>
             </div>
+          )}
+          {currentAnswer !== 'unanswered' && (
+            <NextQuestionButton onClick={goNext} isLast={currentIdx + 1 >= total} />
           )}
         </div>
       </main>

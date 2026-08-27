@@ -30,7 +30,8 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
   function pickWord(word: string) {
     if (revealed) return;
     setSelected(word);
-    setTimeout(() => onAnswer(isCorrectAnswer(word)), 1000);
+    // Rapportera direkt. Att gå vidare är elevens beslut, inte en timer.
+    onAnswer(isCorrectAnswer(word));
   }
 
   function submitText(e: React.FormEvent) {
@@ -38,7 +39,7 @@ export default function FillInBlank({ exercise, onAnswer }: Props) {
     if (revealed || !textInput.trim()) return;
     const val = textInput.trim();
     setSelected(val);
-    setTimeout(() => onAnswer(isCorrectAnswer(val)), 800);
+    onAnswer(isCorrectAnswer(val));
   }
 
   const correct = revealed && isCorrectAnswer(selected!);

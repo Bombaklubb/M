@@ -43,7 +43,7 @@ export default function SpotTheError({ exercise, onAnswer }: Props) {
           } else if (isSelected) {
             cls += ' border-red-400 bg-red-50';
           } else {
-            cls += ' opacity-50';
+            cls += ' opacity-75';
           }
 
           return (

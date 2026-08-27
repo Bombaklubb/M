@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { Exercise } from '../types';
 import { pageStyle, headerStyle, SPACE, withAlpha } from '../utils/theme';
 import AppHeader from './AppHeader';
+import NextQuestionButton from './NextQuestionButton';
 import MultipleChoice from './exercises/MultipleChoice';
 import TrueFalse from './exercises/TrueFalse';
 import FillInBlank from './exercises/FillInBlank';
@@ -17,9 +18,9 @@ export default function ChapterExercise() {
   const { selectedChapter, selectedArea, setView, submitChapterResult } = useApp();
 
   const [currentIdx, setCurrentIdx] = useState(0);
+  // Ett svar per besvarad fråga. Att listan är längre än currentIdx betyder att
+  // den aktuella frågan redan är besvarad och att facit visas.
   const [answers, setAnswers] = useState<AnswerState[]>([]);
-  const [, setCurrentAnswer] = useState<AnswerState>('unanswered');
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const exercises = selectedChapter?.exercises ?? [];
 
@@ -28,10 +29,6 @@ export default function ChapterExercise() {
     else if (exercises.length === 0) setView('chapter-map');
   }, [selectedChapter, selectedArea, exercises.length, setView]);
 
-  // Avbryt en pågående "gå vidare"-timer om eleven lämnar vyn, annars kan den
-  // spara resultat och navigera efter att eleven redan tryckt tillbaka.
-  useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
-
   if (!selectedChapter || !selectedArea || exercises.length === 0) return null;
 
   const chapter = selectedChapter;
@@ -39,29 +36,24 @@ export default function ChapterExercise() {
   const exercise = exercises[currentIdx];
   const total = exercises.length;
   const correct = answers.filter(x => x === 'correct').length;
+  const answered = answers.length > currentIdx;
   const progressPct = Math.round((currentIdx / total) * 100);
 
   if (!exercise) return null;
 
   function handleAnswer(isCorrect: boolean) {
-    if (timerRef.current) clearTimeout(timerRef.current);
-    const state: AnswerState = isCorrect ? 'correct' : 'wrong';
-    setCurrentAnswer(state);
-    timerRef.current = setTimeout(() => {
-      timerRef.current = null;
-      const newAnswers = [...answers, state];
-      if (currentIdx + 1 >= total) {
-        submitChapterResult(
-          chapter.id,
-          newAnswers.filter(x => x === 'correct').length,
-          total,
-        );
-      } else {
-        setAnswers(newAnswers);
-        setCurrentIdx(currentIdx + 1);
-        setCurrentAnswer('unanswered');
-      }
-    }, 1200);
+    if (answered) return;
+    setAnswers(prev => [...prev, isCorrect ? 'correct' : 'wrong']);
+  }
+
+  /** Eleven trycker sig vidare först när hen har läst klart facit. */
+  function goNext() {
+    if (!answered) return;
+    if (currentIdx + 1 >= total) {
+      submitChapterResult(chapter.id, answers.filter(x => x === 'correct').length, total);
+    } else {
+      setCurrentIdx(currentIdx + 1);
+    }
   }
 
   function renderExercise(ex: Exercise) {
@@ -115,6 +107,9 @@ export default function ChapterExercise() {
       <main className="flex-1 p-4 sm:p-6 max-w-2xl w-full mx-auto">
         <div className="clay-card p-5 sm:p-6 mt-2 animate-fade-in" key={exercise.id}>
           {renderExercise(exercise)}
+          {answered && (
+            <NextQuestionButton onClick={goNext} isLast={currentIdx + 1 >= total} />
+          )}
         </div>
       </main>
     </div>
