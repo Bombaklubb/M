@@ -5262,6 +5262,352 @@
       ]
     },
     {
+      "id": "hog-g20-regelbundna-verb",
+      "title": "Regelbundna verb – avancerat",
+      "description": "Stavningsregler, dubblering och uttal av -ed.",
+      "icon": "🔁",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "Dubblera slutkonsonanten när ordet slutar på kort vokal + konsonant OCH betoningen ligger på sista stavelsen: adMIT → admitted, preFER → preferred.",
+        "Ingen dubblering om betoningen ligger tidigare: VIsit → visited, Open → opened.",
+        "Konsonant + y → -ied: apply → applied. Vokal + y → bara -ed: enjoy → enjoyed.",
+        "-ed uttalas på tre sätt: /ɪd/ efter t/d (wanted), /t/ efter tonlösa ljud (watched), /d/ efter tonande (played).",
+        "Brittisk engelska dubblar -l: travelled, cancelled. Amerikansk: traveled, canceled."
+      ],
+      "exercises": [
+        {
+          "id": "hog-g20-1",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'admit'?",
+          "options": [
+            "admited",
+            "admitted",
+            "admitt",
+            "admits"
+          ],
+          "correctIndex": 1,
+          "explanation": "Betoningen ligger på sista stavelsen (adMIT) → dubbla t:et."
+        },
+        {
+          "id": "hog-g20-2",
+          "type": "multiple-choice",
+          "question": "Varför blir 'prefer' till 'preferred'?",
+          "options": [
+            "Betoningen ligger på sista stavelsen",
+            "Det slutar på -y",
+            "Det slutar på -e",
+            "Det är ett oregelbundet verb"
+          ],
+          "correctIndex": 0,
+          "explanation": "preFER har betoning sist → dubblera r:et. Jämför VIsit → visited."
+        },
+        {
+          "id": "hog-g20-3",
+          "type": "fill-in-blank",
+          "sentence": "The team ___ (compete) in the finals last year.",
+          "answer": "competed",
+          "explanation": "Slutar på -e → compete → competed."
+        },
+        {
+          "id": "hog-g20-4",
+          "type": "multiple-choice",
+          "question": "I vilket ord uttalas -ed som ett eget stavelseljud /ɪd/?",
+          "options": [
+            "walked",
+            "played",
+            "wanted",
+            "closed"
+          ],
+          "correctIndex": 2,
+          "explanation": "Efter t eller d blir -ed en egen stavelse: wan-ted."
+        },
+        {
+          "id": "hog-g20-5",
+          "type": "fill-in-blank",
+          "sentence": "The accident ___ (occur) late at night.",
+          "answer": "occurred",
+          "explanation": "ocCUR har betoning sist → occurred."
+        },
+        {
+          "id": "hog-g20-6",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'enjoy'?",
+          "options": [
+            "enjoied",
+            "enjoyed",
+            "enjoyd",
+            "enjoys"
+          ],
+          "correctIndex": 1,
+          "explanation": "Före -y står ett o (vokal) → bara -ed: enjoyed."
+        },
+        {
+          "id": "hog-g20-7",
+          "type": "fill-in-blank",
+          "sentence": "They ___ (apply) for the job in March.",
+          "answer": "applied",
+          "explanation": "Konsonant + y → applied."
+        },
+        {
+          "id": "hog-g20-8",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: 'Vi diskuterade problemet i går.'",
+          "words": [
+            "We",
+            "discussed",
+            "the",
+            "problem",
+            "yesterday",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "explanation": "We discussed the problem yesterday. – discuss → discussed."
+        },
+        {
+          "id": "hog-g20-9",
+          "type": "multiple-choice",
+          "question": "Vilken form är FELSTAVAD?",
+          "options": [
+            "stopped",
+            "planned",
+            "openned",
+            "admitted"
+          ],
+          "correctIndex": 2,
+          "explanation": "'Open' har betoning på första stavelsen → opened, utan dubbelt n."
+        },
+        {
+          "id": "hog-g20-10",
+          "type": "fill-in-blank",
+          "sentence": "She ___ (prefer) tea to coffee.",
+          "answer": "preferred",
+          "explanation": "prefer → preferred."
+        },
+        {
+          "id": "hog-g20-11",
+          "type": "multiple-choice",
+          "question": "Vilken är den brittiska stavningen av 'travel' i dåtid?",
+          "options": [
+            "traveled",
+            "travelled",
+            "travelt",
+            "travells"
+          ],
+          "correctIndex": 1,
+          "explanation": "Brittisk engelska dubblar l:et. Amerikansk engelska skriver 'traveled'."
+        },
+        {
+          "id": "hog-g20-12",
+          "type": "fill-in-blank",
+          "sentence": "The company ___ (develop) a new app.",
+          "answer": "developed",
+          "explanation": "deVELop har betoning i mitten → developed, utan dubblering."
+        },
+        {
+          "id": "hog-g20-13",
+          "type": "multiple-choice",
+          "question": "I vilket ord uttalas -ed som /t/?",
+          "options": [
+            "played",
+            "called",
+            "watched",
+            "opened"
+          ],
+          "correctIndex": 2,
+          "explanation": "Efter tonlösa ljud som /tʃ/ uttalas -ed som /t/: watcht."
+        },
+        {
+          "id": "hog-g20-14",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (realise) my mistake too late.",
+          "answer": "realised",
+          "explanation": "realise → realised (brittisk stavning). Amerikansk: realized.",
+          "alternativeAnswers": [
+            "realized"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hog-g21-oregelbundna-verb",
+      "title": "Oregelbundna verb – mönster",
+      "description": "A-B-B, A-B-C och verb som inte ändrar sig.",
+      "icon": "🌀",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "Oregelbundna verb följer mönster som gör dem lättare att lära sig.",
+        "A-B-B (dåtid = perfektform): buy → bought → bought, teach → taught → taught.",
+        "A-B-C (alla tre olika): go → went → gone, write → wrote → written, speak → spoke → spoken.",
+        "A-A-A (ingen ändring alls): cut → cut → cut, put → put → put, let → let → let.",
+        "A-B-A (grundform = perfektform): come → came → come, run → ran → run.",
+        "Vanlig fälla: lie (ligga) → lay → lain, men lay (lägga) → laid → laid."
+      ],
+      "exercises": [
+        {
+          "id": "hog-g21-1",
+          "type": "multiple-choice",
+          "question": "Vad är perfektformen av 'speak'?",
+          "options": [
+            "spoke",
+            "spoken",
+            "speaked",
+            "speaking"
+          ],
+          "correctIndex": 1,
+          "explanation": "speak → spoke → spoken (A-B-C)."
+        },
+        {
+          "id": "hog-g21-2",
+          "type": "multiple-choice",
+          "question": "Vilket verb har samma form i alla tre formerna?",
+          "options": [
+            "go",
+            "cut",
+            "write",
+            "drink"
+          ],
+          "correctIndex": 1,
+          "explanation": "cut → cut → cut (A-A-A). Även put, let och shut fungerar så."
+        },
+        {
+          "id": "hog-g21-3",
+          "type": "fill-in-blank",
+          "sentence": "He has ___ (break) the window.",
+          "answer": "broken",
+          "explanation": "break → broke → broken."
+        },
+        {
+          "id": "hog-g21-4",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'lie' (att ligga)?",
+          "options": [
+            "lied",
+            "lay",
+            "laid",
+            "lain"
+          ],
+          "correctIndex": 1,
+          "explanation": "lie (ligga) → lay → lain. 'Lied' betyder ljög, och 'laid' kommer från lay (lägga)."
+        },
+        {
+          "id": "hog-g21-5",
+          "type": "fill-in-blank",
+          "sentence": "They have ___ (choose) a new leader.",
+          "answer": "chosen",
+          "explanation": "choose → chose → chosen."
+        },
+        {
+          "id": "hog-g21-6",
+          "type": "multiple-choice",
+          "question": "Vilket mönster följer 'buy → bought → bought'?",
+          "options": [
+            "A-B-B",
+            "A-B-C",
+            "A-A-A",
+            "A-B-A"
+          ],
+          "correctIndex": 0,
+          "explanation": "Dåtid och perfektform är lika → A-B-B."
+        },
+        {
+          "id": "hog-g21-7",
+          "type": "fill-in-blank",
+          "sentence": "The sun has ___ (rise) above the hills.",
+          "answer": "risen",
+          "explanation": "rise → rose → risen."
+        },
+        {
+          "id": "hog-g21-8",
+          "type": "multiple-choice",
+          "question": "Vad är perfektformen av 'fly'?",
+          "options": [
+            "flew",
+            "flown",
+            "flied",
+            "flying"
+          ],
+          "correctIndex": 1,
+          "explanation": "fly → flew → flown."
+        },
+        {
+          "id": "hog-g21-9",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: 'Hon har redan gått.'",
+          "words": [
+            "She",
+            "has",
+            "already",
+            "gone",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "explanation": "She has already gone. – go → went → gone."
+        },
+        {
+          "id": "hog-g21-10",
+          "type": "fill-in-blank",
+          "sentence": "I ___ (forget) my keys at home.",
+          "answer": "forgot",
+          "explanation": "forget → forgot → forgotten."
+        },
+        {
+          "id": "hog-g21-11",
+          "type": "multiple-choice",
+          "question": "Vad är perfektformen av 'come'?",
+          "options": [
+            "came",
+            "come",
+            "comed",
+            "coming"
+          ],
+          "correctIndex": 1,
+          "explanation": "come → came → come (A-B-A). Grundform och perfektform är lika."
+        },
+        {
+          "id": "hog-g21-12",
+          "type": "fill-in-blank",
+          "sentence": "The bell has ___ (ring) three times.",
+          "answer": "rung",
+          "explanation": "ring → rang → rung."
+        },
+        {
+          "id": "hog-g21-13",
+          "type": "multiple-choice",
+          "question": "Vad är dåtid av 'lay' (att lägga något)?",
+          "options": [
+            "lay",
+            "laid",
+            "lain",
+            "lied"
+          ],
+          "correctIndex": 1,
+          "explanation": "lay (lägga) → laid → laid. Jämför lie (ligga) → lay → lain."
+        },
+        {
+          "id": "hog-g21-14",
+          "type": "fill-in-blank",
+          "sentence": "We have ___ (drive) all night.",
+          "answer": "driven",
+          "explanation": "drive → drove → driven."
+        }
+      ]
+    },
+    {
       "id": "hog-sluttest",
       "title": "Sluttest 1 – Grammatik",
       "description": "Testa din grammatik! 23 blandade frågor.",
