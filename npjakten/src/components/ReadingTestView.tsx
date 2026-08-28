@@ -23,7 +23,9 @@ interface Props {
 const isListening = (t: ReadingTest | ListeningTest): t is ListeningTest =>
   "script" in t;
 
-const LETTERS = ["A", "B", "C", "D"];
+// Upp till åtta alternativ – åk 9 har matchningsuppgifter (A–F) och
+// ordbanksuppgifter med fler val än de vanliga fyra.
+const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 // Pågående svar sparas i webbläsaren så att inget försvinner vid omladdning
 interface SavedProgress {
