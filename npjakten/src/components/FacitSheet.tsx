@@ -5,7 +5,9 @@ interface Props {
   gradeLabel: string;
 }
 
-const LETTERS = ["A", "B", "C", "D"];
+// Upp till åtta alternativ – åk 9 har matchningsuppgifter (A–F) och
+// ordbanksuppgifter med fler val än de vanliga fyra.
+const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 // Utskriftsvänligt facit i bedömningsmallens stil. Renderas bara i
 // facit-utskriftsläget och är dold på skärmen.

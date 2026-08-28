@@ -52,7 +52,7 @@ export interface ScoreExample {
 export interface OpenQuestion {
   kind: "open";
   id: number;
-  maxPoints: 1 | 2 | 4 | 6;
+  maxPoints: 1 | 2 | 3 | 4 | 6;
   prompt: string;
   note?: string; // t.ex. "Du måste skriva två exempel för att få poäng."
   guidance: string; // bedömningsanvisning som visas vid självrättning
