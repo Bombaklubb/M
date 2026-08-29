@@ -567,6 +567,87 @@
     }
   },
   {
+    "id": "ak1-kamp-001",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "martial arts",
+    "title": "My First Lesson",
+    "imageUrl": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=700&h=420&fit=crop",
+    "text": "Today is my first judo lesson. We do not fight. We learn to fall. I fall on my back ten times. It does not hurt. The mat is very soft.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What lesson is it?",
+        "options": [
+          "The first judo lesson",
+          "A swimming lesson",
+          "A dance lesson",
+          "The last lesson"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What do they learn today?",
+        "options": [
+          "How to fight",
+          "How to fall",
+          "How to run",
+          "How to jump"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How many times does the child fall?",
+        "options": [
+          "Two",
+          "Five",
+          "Ten",
+          "Twenty"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is the mat like?",
+        "options": [
+          "Cold",
+          "Hard",
+          "Wet",
+          "Very soft"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does falling not hurt?",
+        "options": [
+          "The mat is soft",
+          "The child is strong",
+          "They fall very slowly",
+          "Nobody pushes them"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do they learn falling first?",
+        "options": [
+          "It is the easiest thing to do",
+          "It keeps you safe later",
+          "It is a game",
+          "The teacher is not ready"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 30,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak1-manga-001",
     "grade": 1,
     "genre": "fiction",
@@ -1940,6 +2021,87 @@
     ],
     "meta": {
       "wordCount": 42,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak2-kamp-001",
+    "grade": 2,
+    "genre": "fiction",
+    "theme": "martial arts",
+    "title": "A New Belt",
+    "imageUrl": "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=700&h=420&fit=crop",
+    "text": "Nour has trained karate for one year. Today she gets a yellow belt. Her teacher ties it for her the first time. Nour wants to wear it home on the bus. Her mother says that is fine. Nobody on the bus notices, but Nour does.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How long has Nour trained?",
+        "options": [
+          "One month",
+          "One year",
+          "Two years",
+          "One week"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What colour is her new belt?",
+        "options": [
+          "Yellow",
+          "Green",
+          "Black",
+          "Blue"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Who ties the belt the first time?",
+        "options": [
+          "Her mother",
+          "A friend",
+          "Her teacher",
+          "Nour herself"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where does Nour wear the belt?",
+        "options": [
+          "Only in the hall",
+          "To school",
+          "At home",
+          "On the bus"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does Nour want to wear the belt home?",
+        "options": [
+          "She is proud of it",
+          "It is cold outside",
+          "She has nowhere to put it",
+          "Her mother asked her to"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the last sentence mean?",
+        "options": [
+          "Nour wishes people had looked",
+          "The belt matters to Nour even if nobody sees it",
+          "The bus was empty",
+          "Nour tells people about the belt"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 45,
       "readingTime": 1
     }
   },
@@ -3726,6 +3888,87 @@
     }
   },
   {
+    "id": "ak3-kamp-001",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "martial arts",
+    "title": "After the Match",
+    "imageUrl": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=700&h=420&fit=crop",
+    "text": "Elias lost his first competition in eleven seconds. He sat down behind the mats and did not want to talk to anyone.\n\nHis coach sat down too, but she did not say anything for a while.\n\n\"Do you know what she did?\" the coach finally asked.\n\nElias thought about it. \"She moved before I did.\"\n\n\"Good,\" said the coach. \"Most people who lose cannot tell me that. Now we know what to practise.\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How long did the match last?",
+        "options": [
+          "Eleven seconds",
+          "One minute",
+          "Half an hour",
+          "Eleven minutes"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where did Elias sit down?",
+        "options": [
+          "On the bench",
+          "Behind the mats",
+          "Outside the hall",
+          "Next to his coach’s bag"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the coach do first?",
+        "options": [
+          "She explained the mistake",
+          "She called his parents",
+          "She sat down and said nothing",
+          "She showed him a new throw"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Elias notice about his opponent?",
+        "options": [
+          "She was much taller",
+          "She had trained longer",
+          "She was very calm",
+          "She moved before he did"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did the coach say \"Good\"?",
+        "options": [
+          "Elias had understood what happened",
+          "Elias had almost won",
+          "Elias had stopped crying",
+          "Elias had followed her advice"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the coach think losing is for?",
+        "options": [
+          "Choosing an easier sport",
+          "Finding out what to work on",
+          "Proving who is strongest",
+          "Deciding who competes next"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 73,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak3-manga-001",
     "grade": 3,
     "genre": "fiction",
@@ -5504,6 +5747,87 @@
     ],
     "meta": {
       "wordCount": 210,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak4-kamp-001",
+    "grade": 4,
+    "genre": "non-fiction",
+    "theme": "martial arts",
+    "title": "Why Judo Teaches Falling First",
+    "imageUrl": "https://images.unsplash.com/photo-1533228876829-65c94e7b5025?w=700&h=420&fit=crop",
+    "text": "In most sports the first lesson teaches you how to succeed. In judo, the first lesson teaches you how to be thrown.\n\nThe skill is called ukemi, which means receiving. A beginner spends weeks learning to slap the mat with an open hand as they land, to keep the chin tucked so the head never touches the ground, and to spread the force of a fall across the back and arm instead of the elbow or the spine.\n\nThere is a practical reason for this order. Judo is built on throwing, and a training partner who cannot land safely cannot be thrown. Teaching falling first therefore does not delay the real training. It makes the real training possible.\n\nThe man who designed judo, Jigoro Kano, was thinking about this in the 1880s. He took the older fighting techniques of Japan and removed the ones that could not be practised at full effort without injury. What was left could be done properly, against a resisting partner, several times a week for years. That is why judo spread while many older systems did not.\n\nInstructors also point out that this is the one skill students use outside the hall. Very few people are thrown by an opponent in ordinary life. Almost everybody, sooner or later, falls on ice.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What does ukemi mean?",
+        "options": [
+          "Receiving",
+          "Throwing",
+          "Standing",
+          "Turning"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What should a beginner do with the chin when landing?",
+        "options": [
+          "Lift it up",
+          "Tuck it in",
+          "Turn it sideways",
+          "Rest it on the arm"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who designed judo?",
+        "options": [
+          "Anton Geesink",
+          "Gichin Funakoshi",
+          "Jigoro Kano",
+          "Mestre Bimba"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did he remove from the older techniques?",
+        "options": [
+          "Everything done on the ground",
+          "The parts that took longest to learn",
+          "The moves that came from other countries",
+          "Those that could not be practised safely at full effort"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does teaching falling first not delay the training?",
+        "options": [
+          "A partner who cannot land safely cannot be thrown",
+          "Falling is quicker to learn than throwing",
+          "Beginners are not allowed to compete",
+          "The mats are only free at the start"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the text mention ice at the end?",
+        "options": [
+          "Judo is often practised outdoors in winter",
+          "Falling safely is useful in everyday life",
+          "Ice is harder than a judo mat",
+          "Beginners often train in cold halls"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 216,
       "readingTime": 1
     }
   },
@@ -7301,6 +7625,87 @@
     ],
     "meta": {
       "wordCount": 313,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak5-kamp-001",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "martial arts",
+    "title": "The Empty Hand",
+    "imageUrl": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=700&h=420&fit=crop",
+    "text": "Karate did not begin in Japan. It began on Okinawa, a chain of small islands in the East China Sea, which was an independent kingdom for four hundred years before Japan annexed it in 1879.\n\nOkinawa sat on a trading route. Ships passed between China, Japan and south-east Asia, and Chinese fighting methods arrived with them and mixed with what the islanders already practised. What developed was local, quiet and largely undocumented, taught by one teacher to a handful of students rather than written down.\n\nThere is a popular story that karate grew because weapons were banned on the island and ordinary people had to defend themselves with their hands. Historians treat this carefully. Weapons restrictions did exist, but they applied mainly to the nobility, and the people who practised these methods were often officials and guards rather than farmers. The romantic version is tidier than the evidence.\n\nThe name changed in the twentieth century, and the change tells you something. The word had been written with characters meaning Chinese hand. In the 1930s, as karate was introduced to mainland Japan, the first character was replaced by another one pronounced the same way but meaning empty. Karate became the empty hand. It sounded more Japanese at a time when that mattered politically, and it also gave the art a philosophical reading: fighting with nothing in your hands.\n\nKarate also changed on the way. On Okinawa it had been taught individually and centred on solo forms called kata. In Japan it was reorganised for large classes, with students lined up in rows performing the same movement on command, and a competitive sparring format was added that had not existed before.\n\nThe man who carried it to the mainland, Gichin Funakoshi, gave a demonstration in Tokyo in 1922 and stayed. Within twenty years karate was being taught in Japanese universities, and from there it travelled to the rest of the world.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did karate begin?",
+        "options": [
+          "On Okinawa",
+          "In Tokyo",
+          "In southern China",
+          "In Korea"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "When did Japan annex Okinawa?",
+        "options": [
+          "1622",
+          "1879",
+          "1922",
+          "1945"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did the name mean before it was changed?",
+        "options": [
+          "Open hand",
+          "Island hand",
+          "Chinese hand",
+          "Strong hand"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Funakoshi do in 1922?",
+        "options": [
+          "Opened the first school on Okinawa",
+          "Wrote the first book on karate",
+          "Changed the written characters",
+          "Gave a demonstration in Tokyo"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why do historians treat the weapons-ban story carefully?",
+        "options": [
+          "The people who practised were often officials, not farmers",
+          "No weapons ban was ever recorded",
+          "The story was invented in the 1930s",
+          "Okinawa had no weapons to ban"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why was the name changed in the 1930s?",
+        "options": [
+          "The old characters were difficult to write",
+          "It sounded more Japanese at a politically sensitive time",
+          "Students had asked for a shorter word",
+          "The old name belonged to another art"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 319,
       "readingTime": 2
     }
   },
@@ -9245,6 +9650,87 @@
     ],
     "meta": {
       "wordCount": 404,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak6-kamp-001",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "martial arts",
+    "title": "What a Black Belt Actually Means",
+    "imageUrl": "https://images.unsplash.com/photo-1541580696095-f37f93131a92?w=700&h=420&fit=crop",
+    "text": "Outside the training hall, a black belt means mastery. Inside one, it means something considerably more modest, and the gap between the two is worth understanding.\n\nThe system is younger than most people assume. Coloured belts did not exist in Japanese martial arts before the 1880s. Jigoro Kano introduced a simple division in judo, white for beginners and black for those who had reached the first formal grade, and the idea spread from there. The range of colours familiar today came later still, largely from Europe in the 1930s, where an instructor found that adult beginners gave up if the first visible progress was years away. More colours meant more milestones.\n\nThe Japanese word for the first black-belt grade is shodan. It does not mean master. It is usually translated as first step, and the grade below it is a series of levels counted downwards, so that a student is working towards zero rather than away from it. The intended meaning is that the coloured belts are preparation, and that real study begins when they end. Many instructors say that a new black belt is roughly where a serious beginner should be.\n\nGrading standards also vary enormously, and there is no international authority. Judo and taekwondo have organised federations with defined requirements. Elsewhere, anyone may open a school, invent a syllabus and award any rank they like, including to themselves. There are documented cases of children being graded to black belt after two years of weekly lessons, and schools where a grading fee is charged for every step. Practitioners have a blunt name for this kind of business.\n\nThe useful test is not the colour. It is what the school actually does: whether students practise against partners who genuinely resist, whether the instructor can be questioned, and whether anyone ever fails a grading. A hall where nobody has ever failed is not grading, it is selling.\n\nThere is a further complication, which is that grades measure different things in different arts. In judo a dan grade is earned largely through competition results, so it reports something checkable. In arts without competition it reports an instructor's opinion. Two black belts can therefore mean almost nothing in common.\n\nNone of this makes belts worthless. A clear ladder keeps beginners going through the stage where nothing feels like progress, which is exactly what it was invented for. It simply means the belt describes a relationship with one school, and not much else.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Which two belt colours did Kano use first?",
+        "options": [
+          "White and black",
+          "White and brown",
+          "Yellow and black",
+          "Blue and white"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where did the wider range of colours largely come from?",
+        "options": [
+          "Japan in the 1880s",
+          "Europe in the 1930s",
+          "America after the war",
+          "Okinawa in the 1920s"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How is the word shodan usually translated?",
+        "options": [
+          "Full master",
+          "Senior student",
+          "First step",
+          "Black rank"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does the writer suggest is a warning sign in a school?",
+        "options": [
+          "Gradings held only once a year",
+          "Students of very different ages",
+          "A syllabus written by the instructor",
+          "Nobody ever failing a grading"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why were more belt colours introduced?",
+        "options": [
+          "Adult beginners gave up without visible progress",
+          "Competitions needed more categories",
+          "Schools wanted to charge more fees",
+          "Instructors could not remember the ranks"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the writer conclude about belts?",
+        "options": [
+          "They should be replaced by written tests",
+          "They describe a relationship with one school and little more",
+          "They are meaningless outside Japan",
+          "They matter more than the training itself"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 409,
       "readingTime": 3
     }
   },
@@ -11274,6 +11760,87 @@
     }
   },
   {
+    "id": "ak7-kamp-001",
+    "grade": 7,
+    "genre": "non-fiction",
+    "theme": "martial arts",
+    "title": "The Fight That Had to Look Like a Dance",
+    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&h=420&fit=crop",
+    "text": "Capoeira is played, not fought. Two people move inside a circle of singing and clapping, turning upside down, sweeping their legs past each other and rarely making contact. To a spectator it looks like acrobatics set to music. That appearance is not decoration. It is the reason the art survived.\n\nCapoeira developed in Brazil among enslaved Africans, who had been transported there in enormous numbers over three centuries. Slavery in Brazil lasted longer than anywhere else in the Americas and was not abolished until 1888. Practising anything resembling combat training was dangerous for an enslaved person, and the accepted account is that capoeira was disguised as a dance so that it could be practised in the open. Historians disagree about how deliberate the disguise was and how much came from African circle dances that already existed, but the outcome is not disputed: what emerged was a fighting method built entirely around movement, deception and rhythm.\n\nAbolition did not end the problem. Capoeira was associated with gangs in the port cities, and in 1890, two years after slavery ended, the new republic made it a criminal offence. Being caught practising could mean imprisonment or deportation. It continued anyway, in yards and back streets, taught quietly.\n\nThe change came in the 1930s. A teacher known as Mestre Bimba argued that capoeira should be treated as a legitimate physical discipline, organised his teaching into a formal method, and eventually demonstrated it in front of the president. The ban was lifted, and the first licensed school opened in Salvador in 1932. A second tradition, led by Mestre Pastinha, insisted on preserving the older, lower, more deceptive style rather than modernising it, and both branches still exist.\n\nAlmost everything in capoeira points back to the conditions that produced it. Players stay in constant motion because a still target is an easy one. Kicks come from unexpected angles, often upside down. The circle, called the roda, is formed by the other players and the musicians, which means the boundary of the game is made of people rather than lines. The instrument that leads it, a single-string bow called the berimbau, sets the speed, and a change in its rhythm changes what the two players in the middle are permitted to do.\n\nThe songs are not background. They are a running commentary, sung by the leader and answered by the circle, and they carry the history of the art in a form that could be passed on by people who had not been taught to read. A few are old enough that the words refer to events under slavery.\n\nThere is a debate about what capoeira should be now. Turning it into a scored competitive sport would make it easier to teach and easier to fund, and some organisations have pushed in that direction. Others argue that a game without a winner is the whole point, and that awarding points selects for whatever scores rather than for the deception the art was built on.\n\nToday capoeira is taught in dozens of countries and is recognised by UNESCO as cultural heritage. It is also, still, the only major martial art that requires you to sing.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When was slavery abolished in Brazil?",
+        "options": [
+          "1822",
+          "1888",
+          "1890",
+          "1932"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What happened to capoeira in 1890?",
+        "options": [
+          "It became a school subject",
+          "It was recognised as a sport",
+          "It was made a criminal offence",
+          "It was taken to Portugal"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What did Mestre Bimba do?",
+        "options": [
+          "Organised his teaching and got the ban lifted",
+          "Wrote the first history of capoeira",
+          "Invented the berimbau",
+          "Founded the first school in Rio"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is the roda?",
+        "options": [
+          "A style of kick",
+          "The name of the song",
+          "A grade in capoeira",
+          "The circle formed by players and musicians"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did the appearance of a dance matter?",
+        "options": [
+          "It allowed combat training to be practised openly",
+          "It attracted paying audiences",
+          "It made the movements easier to learn",
+          "It kept the players from being injured"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do players stay in constant motion?",
+        "options": [
+          "The music never stops",
+          "A still target is an easy one",
+          "It is a rule of the roda",
+          "It keeps the circle wide enough"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 527,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak7-manga-001",
     "grade": 7,
     "genre": "non-fiction",
@@ -13295,6 +13862,87 @@
     ],
     "meta": {
       "wordCount": 546,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak8-kamp-001",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "martial arts",
+    "title": "The Night the Styles Met",
+    "imageUrl": "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=700&h=420&fit=crop",
+    "text": "For most of the twentieth century, an argument ran through martial arts that could not be settled. Practitioners of each style believed theirs was the most effective, and there was no way to find out, because each competed only against itself. A boxing match tests boxers. A karate tournament tests karate. Nobody had built a test that crossed the boundaries.\n\nIn November 1993 a competition in Denver did exactly that. It invited a boxer, a wrestler, a kickboxer, a sumo wrestler, a karate practitioner and others into one tournament with almost no rules, explicitly to answer the question. The event was promoted as a spectacle, and the reasoning behind it was partly commercial. It nevertheless produced information.\n\nThe result surprised almost everyone. The winner was Royce Gracie, a slight Brazilian who weighed considerably less than most of his opponents and practised a grappling system his family had developed from judo. He did not strike. He closed the distance, took his opponents to the ground and applied holds that forced them to submit. He won the tournament, and won two of the next three.\n\nWhat this demonstrated was narrower than the promoters claimed, and more useful. It did not prove that one art was best. It proved that most fighters had no answer to a situation their training never covered. Strikers had rarely practised on the ground. Grapplers had rarely dealt with punches. Each style had a gap, and an opponent who lived in that gap was almost unbeatable.\n\nThe response transformed the field within a decade. Fighters stopped identifying with a single style and began training several: striking, wrestling and submissions together. The pure stylist disappeared from serious competition entirely. Traditional schools also had to answer an awkward question about which of their techniques had ever been tested against a resisting opponent, and some of them changed their teaching considerably as a result.\n\nThe sport that grew out of it needed rules to survive, and got them. Weight classes, rounds, medical checks, gloves and a list of prohibited actions were introduced, largely under political pressure, and mixed martial arts became a regulated professional sport rather than a curiosity.\n\nSome of the early results were less informative than they looked. The tournament was organised by people connected to Gracie's family, the rules suited a grappler, and several opponents were not the best representatives of their disciplines. That does not overturn the finding, because the same pattern held up over the following years against far better opposition, but the first event was a demonstration as much as an experiment.\n\nWhat made the change stick was that it could be repeated. Anyone could test the claim in a gym on a Tuesday evening, and thousands did. A striker who had never been taken to the ground found out within one session what the argument had been about, and a grappler discovered the same in reverse. Ideas that survive that kind of ordinary, unglamorous checking are the ones that last.\n\nThere is a reasonable criticism that all of this measures only one narrow thing: performance by trained young athletes inside a ring with a referee. Many people train for fitness, discipline or enjoyment, and for them the question of what wins a cage fight is irrelevant. That is fair. But the schools that had claimed effectiveness as their main selling point could no longer avoid being asked for evidence, and that was overdue.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When and where was the competition held?",
+        "options": [
+          "1988 in Los Angeles",
+          "November 1993 in Denver",
+          "1990 in Tokyo",
+          "2000 in Las Vegas"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who won the tournament?",
+        "options": [
+          "A heavyweight boxer",
+          "A sumo wrestler",
+          "Royce Gracie",
+          "A karate practitioner"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How did the winner defeat his opponents?",
+        "options": [
+          "By taking them to the ground and forcing submissions",
+          "By outlasting them over several rounds",
+          "By striking from a distance",
+          "By using superior weight"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What was introduced to make the sport survive?",
+        "options": [
+          "A single unified style",
+          "Longer tournaments",
+          "Public voting on results",
+          "Weight classes, rounds, medical checks and prohibited actions"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What did the early results actually demonstrate?",
+        "options": [
+          "Most fighters had no answer to situations their training never covered",
+          "Grappling is superior to striking in all cases",
+          "Weight matters less than technique",
+          "Rules make fighting less effective"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the writer call the criticism fair?",
+        "options": [
+          "The early events were not properly recorded",
+          "Many people train for reasons unrelated to winning a fight",
+          "The competitors were not representative of their styles",
+          "The rules changed too often to compare results"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 569,
       "readingTime": 4
     }
   },
@@ -15729,6 +16377,87 @@
     }
   },
   {
+    "id": "ak9-kamp-001",
+    "grade": 9,
+    "genre": "non-fiction",
+    "theme": "martial arts",
+    "title": "The Problem With Gloves",
+    "imageUrl": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=700&h=420&fit=crop",
+    "text": "Boxing gloves look like safety equipment, and in one sense they are. They are also one of the clearest examples in sport of a protective measure that may have made the underlying danger worse.\n\nBare-knuckle boxing was the older form, and it was brutal, but it had a built-in limit. The human hand is a delicate structure of small bones, and striking a skull with it repeatedly breaks the hand long before it destroys the head. Bare-knuckle fighters therefore aimed at the body a great deal, avoided the hardest parts of the skull, and threw fewer full-power punches to the head than a modern boxer does in a single round.\n\nGloves were introduced under the Queensberry rules in the 1860s, partly to make the sport respectable enough to be legal. The padding protects the hand rather more than it protects the opponent's brain. What it changes is not the force delivered but the number of times a fighter is willing to deliver it, and the head became a target that could be struck repeatedly for twelve rounds.\n\nThe consequence took decades to recognise. In 1928 an American doctor, Harrison Martland, described a condition he found in boxers, with slurred speech, tremor and memory loss, appearing years after retirement. It was known colloquially as being punch-drunk. For most of the twentieth century it was treated as an occupational hazard of one unusual profession.\n\nModern research has widened the picture considerably. The condition, now called chronic traumatic encephalopathy, has been found in the brains of athletes from several contact sports, and the current understanding is that the main risk is not the dramatic knockout but the accumulation of many smaller impacts that cause no immediate symptoms at all. That reframes the problem. A rule that prevents concussions does not necessarily prevent the damage, because the damage may come from the hits nobody counts.\n\nDifferent sports have responded differently, and comparing them is instructive. Amateur boxing has shortened bouts and stopped contests earlier. Some federations removed headguards, on evidence that they increase head size and encourage more contact rather than less. Judo, wrestling and Brazilian jiu-jitsu involve very few deliberate blows to the head and show correspondingly low rates. Taekwondo scores kicks to the head, but with light contact and electronic sensors rather than knockouts. The variation shows that the risk sits in specific rules rather than in martial arts as a category.\n\nMeasurement has improved, and it has complicated things. Instrumented mouthguards can now record the acceleration of every impact a player takes during a season, and the totals are far higher than anyone estimated from watching. In several sports the largest share of head contact turns out to occur in ordinary practice rather than in matches, simply because there is much more practice than there is competition.\n\nThe legal consequences have followed the evidence. Former professional players in American football, rugby and boxing have brought claims against their governing bodies, arguing that the risk was known and not disclosed, and some have been settled for very large sums. Insurance costs for contact sports have risen sharply. Whatever the medical argument concludes, the financial one is already pushing in a single direction, and rule changes that federations resisted for years are now arriving quickly.\n\nWhat follows is uncomfortable for anyone who values these sports. The safest change would be to reduce repeated head contact in training, which is where most of it happens and which attracts no spectators and no rules at all.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What limited bare-knuckle fighters?",
+        "options": [
+          "The hand breaks before the skull does",
+          "Rules forbade punches to the head",
+          "Bouts were much shorter",
+          "Fighters wore body padding"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Why were gloves introduced in the 1860s?",
+        "options": [
+          "To increase the force of punches",
+          "Partly to make the sport respectable enough to be legal",
+          "Because fighters demanded them",
+          "To shorten contests"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Harrison Martland describe in 1928?",
+        "options": [
+          "A new scoring system",
+          "The first use of headguards",
+          "A condition in boxers with tremor and memory loss",
+          "The effect of weight classes on injury"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does current research suggest is the main risk?",
+        "options": [
+          "A single severe knockout",
+          "Injuries to the hands and wrists",
+          "Fighting without medical checks",
+          "The accumulation of many smaller impacts"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why did some federations remove headguards?",
+        "options": [
+          "Evidence suggested they encourage more head contact, not less",
+          "They were too expensive to supply",
+          "Fighters found them uncomfortable",
+          "They hid the fighters’ faces from judges"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does the writer call the safest change uncomfortable?",
+        "options": [
+          "It would require banning several sports",
+          "It targets training, which has no spectators and no rules",
+          "It would make contests much shorter",
+          "It contradicts the medical evidence"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 581,
+      "readingTime": 4
+    }
+  },
+  {
     "id": "ak9-manga-001",
     "grade": 9,
     "genre": "non-fiction",
@@ -17669,6 +18398,87 @@
     ],
     "meta": {
       "wordCount": 603,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak10-kamp-001",
+    "grade": 10,
+    "genre": "non-fiction",
+    "theme": "martial arts",
+    "title": "How Do You Know It Works?",
+    "imageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=700&h=420&fit=crop",
+    "text": "Martial arts present an unusual epistemological problem. The claim being made is that a set of movements will work under conditions that almost nobody involved will ever encounter, and that cannot be tested directly without doing the thing everyone is trying to avoid. Practitioners have therefore had to invent ways of finding out, and the history of how well they have done is a case study in how any field checks itself.\n\nThe weakest form of evidence is lineage. A technique is presented as correct because it was taught by someone who was taught by someone, back to a founder whose skill is not in question. This is an argument from authority, and it has the specific weakness that it cannot detect gradual drift. If each generation transmits with small errors, and nobody is testing the output, a system can be perfectly transmitted and completely wrong.\n\nThe second form is demonstration. An instructor shows a technique on a student, and it works. The difficulty is that the student knows what is coming, has agreed to receive it, and has usually been trained in what the correct reaction looks like. Demonstrations are indispensable for teaching and worthless as evidence, because the compliance that makes them clear is exactly what removes the test. The extreme version is a small industry of instructors who can knock people down without touching them, in front of their own students, and who lose immediately whenever a stranger volunteers.\n\nThe third is competition, and it is the strongest thing available. A resisting opponent trying to do the opposite of what you want is a genuine test, and disciplines that compete regularly have visibly improved over decades in a way that non-competing ones have not. But it tests only what the rules permit, and every rule set is a distortion. Techniques forbidden in competition are neglected regardless of whether they work, and techniques that score well are over-developed regardless of whether they matter elsewhere.\n\nNone of the three is sufficient, which is why the practical answer has been to combine them and to insist on one habit above all: training against people who are genuinely trying to stop you, as often as is safe. The term used is aliveness. It is not a technique or a style but a property of the practice, and it is the closest thing the field has to a control condition.\n\nA fourth check deserves a mention, because it is newer and it is imperfect in an interesting way. Video changed the field. A technique that fails can now be watched failing, repeatedly, by anyone, and instructors who could once control what their students saw no longer can. Claims that survived for decades inside a single hall collapsed within a week of being posted. But the same medium rewards whatever is dramatic, and a clip proves only that something worked once, against that person, on that day. Video removed a great deal of nonsense and installed a new kind in its place.\n\nThere is a wider lesson here that has nothing to do with fighting. Any discipline whose claims cannot be checked easily will accumulate confident nonsense, and it will do so in direct proportion to how respected its teachers are and how rarely they are contradicted. Medicine has the same problem and answered it with trials. Martial arts answered it, eventually, by getting on the mat with someone who did not want to lose. The specific solution differs. The requirement does not: a claim you cannot fail is not a claim about the world.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is the weakest form of evidence described?",
+        "options": [
+          "Lineage",
+          "Demonstration",
+          "Competition",
+          "Aliveness"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What specific weakness does that form have?",
+        "options": [
+          "It relies on written records",
+          "It cannot detect gradual drift",
+          "It works only for older systems",
+          "It requires a living founder"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Why does the writer call demonstrations worthless as evidence?",
+        "options": [
+          "They are usually filmed badly",
+          "They are performed too quickly to follow",
+          "The compliance that makes them clear removes the test",
+          "They involve techniques banned in competition"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is the term for training against people genuinely trying to stop you?",
+        "options": [
+          "Lineage",
+          "Bunkai",
+          "Randori",
+          "Aliveness"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is competition described as strong but still limited?",
+        "options": [
+          "It tests only what its rules permit",
+          "It is available only to professionals",
+          "It rewards size over technique",
+          "It cannot be repeated reliably"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the wider lesson the writer draws?",
+        "options": [
+          "Respected teachers are usually wrong",
+          "A claim that cannot fail is not a claim about the world",
+          "Every discipline should adopt competition",
+          "Tradition should be abandoned in favour of evidence"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 592,
       "readingTime": 4
     }
   },
