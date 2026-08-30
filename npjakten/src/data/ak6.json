@@ -989,7 +989,7 @@
             "För att rören ska se finare och jämnare ut.",
             "För att vassa kanter kan skada insekternas vingar.",
             "För att rören ska få plats bredvid varandra i lådan.",
-            "För att lådan inte ska repas."
+            "För att lådans insida inte ska repas av rören."
           ],
           "correctIndex": 1,
           "aspect": "Hitta efterfrågad information",
@@ -1019,10 +1019,10 @@
           "maxPoints": 1,
           "prompt": "I avsnittet ”Gör så här” står verben i uppmanande form: såga, slipa, fyll, häng. Varför skriver man så i en instruerande text?",
           "options": [
-            "För att texten ska låta sträng och allvarlig.",
+            "För att texten ska låta sträng och riktigt allvarlig.",
             "För att texten talar direkt till läsaren om vad hen ska göra.",
-            "För att texten ska bli kortare.",
-            "För att visa att det är bråttom."
+            "För att texten ska bli så kort som det bara går.",
+            "För att visa att arbetet måste göras i en stor hast."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
@@ -1048,9 +1048,9 @@
           "prompt": "Hur kan man se att ett bi har flyttat in i hotellet, enligt texten?",
           "options": [
             "Ett rör har blivit igenmurat med lera.",
-            "Det surrar högt om nätterna.",
-            "Kottarna har trillat ur lådan.",
-            "Hotellet har blivit tyngre."
+            "Det surrar högt om lådan på nätterna.",
+            "Kottarna har trillat ut ur lådan.",
+            "Hotellet har blivit mycket tyngre."
           ],
           "correctIndex": 0,
           "aspect": "Hitta efterfrågad information",
@@ -1106,10 +1106,10 @@
           "maxPoints": 1,
           "prompt": "Hur känner man enklast igen en tornseglare, enligt texten?",
           "options": [
-            "På den röda fläcken på bröstet.",
+            "På den lysande röda fläcken på bröstet.",
             "På siluetten med långa vingar böjda som en pilbåge.",
-            "På den långa stjärten.",
-            "På att den ofta sitter på marken."
+            "På den ovanligt långa och breda stjärten.",
+            "På att den ofta sitter och vilar på marken."
           ],
           "correctIndex": 1,
           "aspect": "Hitta efterfrågad information",
@@ -1164,10 +1164,10 @@
           "maxPoints": 1,
           "prompt": "Varför heter fågeln tornseglare?",
           "options": [
-            "Den seglar över havet som ett skepp.",
+            "Den seglar fram över havet nästan som ett litet skepp.",
             "Den häckar i håligheter högt upp, till exempel i gamla torn.",
-            "Den upptäcktes första gången i ett kyrktorn.",
-            "Den flyger högre än alla andra fåglar."
+            "Den upptäcktes allra första gången uppe i ett kyrktorn.",
+            "Den flyger högre upp i luften än alla andra fåglar."
           ],
           "correctIndex": 1,
           "aspect": "Hitta efterfrågad information",
@@ -1193,14 +1193,14 @@
           "maxPoints": 1,
           "prompt": "Texten kallar tornseglaren för ”en svart pil mot sommarhimlen”. Varför använder författaren den bilden?",
           "options": [
-            "För att tornseglaren är farlig.",
+            "För att visa att tornseglaren är en farlig jägare i luften.",
             "För att beskriva fågelns snabba, spetsiga form på ett målande sätt.",
-            "För att fågelns stjärt är spetsig som en pilspets.",
-            "För att fågeln bara flyger rakt fram."
+            "För att fågelns stjärt är lika spetsig som en riktig pilspets.",
+            "För att fågeln alltid flyger rakt fram utan att svänga."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
-          "explanation": "Bilden ”en svart pil” är ett målande sätt att beskriva hur snabb och spetsig fågeln ser ut mot himlen. Det stämmer att texten även liknar vingarna vid en spänd pilbåge, men frågan gäller varför just pil-bilden används i inledningen."
+          "explanation": "Bilden ”en svart pil” är ett målande sätt att beskriva hur snabb och spetsig fågeln ser ut mot himlen. Stjärten är enligt texten kort och kluven, inte spetsig som en pilspets, och det står ingenstans att fågeln är farlig."
         },
         {
           "kind": "multiple-choice",
@@ -1208,10 +1208,10 @@
           "maxPoints": 1,
           "prompt": "Vad är textens underrubriker till för?",
           "options": [
-            "De gör texten roligare att läsa.",
+            "De finns med bara för att göra texten roligare att läsa.",
             "De visar vad varje del av texten handlar om och gör det lätt att hitta.",
-            "De sammanfattar hela texten.",
-            "De ställer frågor som läsaren ska besvara."
+            "De sammanfattar hela textens innehåll i några korta meningar.",
+            "De ställer frågor som läsaren själv ska svara på efteråt."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
