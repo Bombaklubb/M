@@ -1,14 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
-import type { WritingTask } from "../types";
+import type { Subject, WritingTask } from "../types";
 import ExamTimer from "./ExamTimer";
 import IllustrationImg from "./IllustrationImg";
 import { safeGet, safeSet } from "../lib/storage";
 import StrategyTips from "./StrategyTips";
 import ReadAloudButton from "./ReadAloudButton";
 import WritingFacitSheet from "./WritingFacitSheet";
+import FacitGate from "./FacitGate";
 
 interface Props {
   task: WritingTask;
+  subject: Subject;
   gradeLabel: string;
   teacherMode: boolean;
   onBack: () => void;
@@ -16,6 +18,7 @@ interface Props {
 
 export default function WritingTaskView({
   task,
+  subject,
   gradeLabel,
   teacherMode,
   onBack,
@@ -136,7 +139,8 @@ export default function WritingTaskView({
       {/* Uppgiftshäftet */}
       <div className="paper">
         <p className="text-right text-xs italic text-stone-500">
-          Svenska och svenska som andraspråk, {gradeLabel.toLowerCase()}
+          {subject === "engelska" ? "Engelska" : "Svenska och svenska som andraspråk"},{" "}
+          {gradeLabel.toLowerCase()}
           <br />
           {task.delprov}
         </p>
@@ -156,16 +160,6 @@ export default function WritingTaskView({
             >
               🖨 Skriv ut
             </button>
-            {teacherMode && (
-              <button
-                type="button"
-                onClick={() => setFacitMode(true)}
-                title="Skriv ut bedömningsstöd (för läraren)"
-                className="text-xs font-medium text-stone-500 transition hover:text-np hover:underline"
-              >
-                Skriv ut bedömningsstöd
-              </button>
-            )}
           </span>
         </div>
 
@@ -499,8 +493,22 @@ export default function WritingTaskView({
           </div>
         </div>
       )}
-      {/* Lärarens bedömningsstöd – syns bara vid den utskriften */}
-      {facitMode && <WritingFacitSheet task={task} gradeLabel={gradeLabel} />}
+      {/* Facit bakom lösenord */}
+      <FacitGate
+        alwaysUnlocked={teacherMode}
+        label="Bedömningsstöd"
+        printLabel="🖨 Skriv ut bedömningsstödet"
+        onPrint={() => setFacitMode(true)}
+      >
+        {() => (
+          <WritingFacitSheet
+            task={task}
+            gradeLabel={gradeLabel}
+            subject={subject}
+            onScreen
+          />
+        )}
+      </FacitGate>
     </div>
   );
 }

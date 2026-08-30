@@ -1,21 +1,27 @@
-import type { WritingTask } from "../types";
+import type { Subject, WritingTask } from "../types";
 
 interface Props {
   task: WritingTask;
   gradeLabel: string;
+  // true = visa på skärmen också (annars bara vid utskrift)
+  onScreen?: boolean;
+  subject?: Subject;
 }
 
 // Utskrivbart bedömningsstöd för skrivuppgifter: kraven som matris och de
 // kommenterade elevexemplen. Renderas bara i lärarens utskriftsläge.
-export default function WritingFacitSheet({ task, gradeLabel }: Props) {
+export default function WritingFacitSheet({ task, gradeLabel, onScreen, subject }: Props) {
   const groups = task.checklistGroups ?? [
     { level: "Krav på texten", items: task.checklist ?? [] },
   ];
 
   return (
-    <div className="paper facit-sheet hidden print:block">
+    <div className={
+        "paper facit-sheet print:block" + (onScreen ? "" : " hidden")
+      }>
       <p className="text-right text-xs italic text-stone-500">
-        Svenska och svenska som andraspråk, {gradeLabel.toLowerCase()}
+        {subject === "engelska" ? "Engelska" : "Svenska och svenska som andraspråk"},{" "}
+        {gradeLabel.toLowerCase()}
         <br />
         {task.delprov} – bedömningsstöd
       </p>
