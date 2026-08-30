@@ -739,10 +739,10 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "Why did Priya write eleven different letters instead of the same letter eleven times?",
           "options": [
-            "She wanted to practise her English",
+            "She wanted to practise writing English before an exam",
             "Her teacher had said identical letters count as one",
-            "She did not know the councillors' names",
-            "Mrs Adeyemi had asked her to"
+            "She did not know the names of the eleven councillors",
+            "Mrs Adeyemi had told her to write to everyone"
           ],
           "correctIndex": 1,
           "explanation": "Texten säger att hennes engelsklärare en gång sagt att elva identiska brev är värda ett enda brev. Hon skrev därför elva olika."
@@ -936,10 +936,10 @@
           "aspect": "Hitta specifik information",
           "prompt": "Why does the Regal still exist today, according to the text?",
           "options": [
-            "The town council pays for it",
-            "A supermarket chain sponsors it",
+            "The town council pays the costs of running it",
+            "A supermarket chain in the town sponsors the building",
             "Eight hundred people pay a small sum every month",
-            "It was rebuilt after the fire in 2011"
+            "The man from Leeds rebuilt it after the fire in 2011"
           ],
           "correctIndex": 2,
           "explanation": "Texten säger att biografen överlevt främst tack vare att åttahundra personer i en stad med niotusen invånare betalar fyra pund i månaden för att hålla den vid liv."
@@ -1413,9 +1413,9 @@
           "prompt": "What does Tessa say made the biggest difference?",
           "options": [
             "They stopped copying the radio they grew up with",
-            "They moved into a proper studio",
-            "They started taking twenty new people a year",
-            "They were given money by the school"
+            "They moved into a proper studio in the town centre",
+            "They began playing the music their parents had loved",
+            "They were given money by the school to buy equipment"
           ],
           "correctIndex": 0,
           "explanation": "På frågan vad som förändrades svarar hon att de slutade försöka låta som den radio de vuxit upp med – och att allt blev bättre när de gjorde det."
@@ -1533,13 +1533,13 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "What does Tessa find hardest about running the station?",
           "options": [
-            "Finding enough money",
-            "Choosing who gets a place",
+            "Finding enough new volunteers every September",
+            "Choosing which twenty people get a place each year",
             "Staying quiet when she thinks someone is wrong",
-            "Working in the evenings"
+            "Working in the evenings and at weekends all year"
           ],
           "correctIndex": 2,
-          "explanation": "Hon avfärdar pengar som ”boring” och säger att det ärliga svaret är att släppa taget: när någon gör något hon tror inte fungerar måste hon tiga – och de lär sig mer av det än av att hon får rätt högt."
+          "explanation": "Hon nämner pengar men avfärdar det direkt som ”boring”, och säger att det ärliga svaret är att släppa taget: när någon är på väg att göra något hon tror inte fungerar måste hon tiga – och de lär sig mer av det än av att hon får rätt högt."
         },
         {
           "kind": "open",
