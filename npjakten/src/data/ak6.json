@@ -65,14 +65,14 @@
           "maxPoints": 1,
           "prompt": "I början av texten tänker Melker att bageriet är ”ett hus som har gett upp”. Vad vill författaren gestalta med de orden?",
           "options": [
-            "Att huset snart ska rivas.",
+            "Att huset ska rivas nästa vecka.",
             "Att huset är slitet och övergivet.",
-            "Att huset är till salu.",
-            "Att huset är byggt av sten."
+            "Att huset nyligen har målats om.",
+            "Att huset är nybyggt och modernt."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
-          "explanation": "Uttrycket ”ett hus som har gett upp” är ett bildligt sätt att säga att huset är slitet och övergivet – fönstren är förbommade och färgen släpper i stora sjok. Det står ingenstans att huset ska rivas eller är till salu; det är Melkers känsla för förfallet som författaren vill gestalta."
+          "explanation": "Uttrycket ”ett hus som har gett upp” är ett bildligt sätt att säga att huset är slitet och övergivet – fönstren är förbommade och färgen släpper i stora sjok. Det står ingenstans att huset ska rivas, är nymålat eller nybyggt; det är Melkers känsla för förfallet som författaren vill gestalta."
         },
         {
           "kind": "multiple-choice",
@@ -152,10 +152,10 @@
           "maxPoints": 1,
           "prompt": "Vad är Margits inställning till att den nya familjen ska tända ugnen?",
           "options": [
-            "Hon är säker på att det kommer att gå bra för dem.",
+            "Hon är helt säker på att familjen kommer att lyckas med bageriet.",
             "Hon är tveksam, eftersom många har misslyckats sedan Signes tid.",
-            "Hon blir arg, eftersom ugnen tillhör Signe.",
-            "Hon är ointresserad och vill bara sälja sina varor."
+            "Hon blir arg och säger åt dem att låta ugnen vara i fred.",
+            "Hon är ointresserad och vill bara sälja sina varor i kiosken."
           ],
           "correctIndex": 1,
           "aspect": "Dra enkla slutsatser",
@@ -270,10 +270,10 @@
           "maxPoints": 1,
           "prompt": "I texten jämförs priset på ett par glasögon med priset på en mjölkko. Vad visar artikelförfattaren med hjälp av den jämförelsen?",
           "options": [
-            "Att bönder hade större behov av glasögon än andra.",
+            "Att bönder på 1400-talet hade större behov av glasögon än andra.",
             "Att glasögon var så dyra att vanliga familjer inte hade råd med dem.",
-            "Att kor var ovanligt billiga på 1400-talet.",
-            "Att glasögonmästarna ofta fick betalt i djur."
+            "Att priset på mjölkkor sjönk kraftigt under hela 1400-talet.",
+            "Att glasögonmästarna oftast fick betalt med djur i stället för pengar."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
@@ -339,10 +339,10 @@
           "maxPoints": 1,
           "prompt": "På vilket sätt skilde sig de tidiga glasögonen från dagens glasögon?",
           "options": [
-            "De hade bara en lins i stället för två.",
-            "De var gjorda av bergkristall i stället för glas.",
+            "De hade bara en enda lins i stället för två slipade linser.",
+            "De var gjorda av bergkristall och inte av slipat glas.",
             "De saknade skalmar och fick klämmas fast eller hållas i ett skaft.",
-            "De kunde bara användas av munkar i kloster."
+            "De fick bara användas av munkar som satt i kloster och läste."
           ],
           "correctIndex": 2,
           "aspect": "Hitta efterfrågad information",
@@ -483,10 +483,10 @@
           "maxPoints": 1,
           "prompt": "Författaren skriver att knaket ”rullade fram under isen som åska under vattnet”. Vad gestaltar hon då?",
           "options": [
-            "Att det började åska och regna.",
-            "Att ljudet var svagt och knappt hördes.",
+            "Att ett åskväder drog in över sjön just då.",
+            "Att ljudet var så svagt att Sigge knappt hörde det.",
             "Att ljudet var djupt, kraftigt och skrämmande.",
-            "Att isen redan hade brustit."
+            "Att isen redan hade brustit under Liv."
           ],
           "correctIndex": 2,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
@@ -511,10 +511,10 @@
           "maxPoints": 1,
           "prompt": "Varför ska man lägga sig ner och sprida ut armarna om isen håller på att brista?",
           "options": [
-            "För att kunna simma snabbare.",
+            "För att lättare kunna simma i det kalla vattnet.",
             "För att tyngden ska fördelas på en större yta.",
-            "För att synas bättre.",
-            "För att hålla sig varm."
+            "För att man ska synas bättre från stranden.",
+            "För att kroppen ska hålla sig varm längre."
           ],
           "correctIndex": 1,
           "aspect": "Hitta efterfrågad information",
@@ -526,10 +526,10 @@
           "maxPoints": 1,
           "prompt": "När Liv säger ”Sigge, isen rör sig” står det att rösten ”inte alls var den vanliga”. Vad betyder det?",
           "options": [
-            "Liv var hes och förkyld.",
+            "Liv hade blivit hes av att ropa och skratta.",
             "Liv var rädd, till skillnad från tidigare.",
-            "Liv låtsades vara rädd för att skoja.",
-            "Liv var arg på Sigge."
+            "Liv låtsades vara rädd för att skoja med Sigge.",
+            "Liv var arg på Sigge för att han tjatade."
           ],
           "correctIndex": 1,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
@@ -554,10 +554,10 @@
           "maxPoints": 1,
           "prompt": "Varför skrattade Liv och Sigge ett skratt som ”lät nästan som gråt”?",
           "options": [
-            "De tyckte att allt var jätteroligt.",
+            "De tyckte att hela händelsen hade varit jätterolig.",
             "De var lättade men fortfarande skakade efter det som hänt.",
-            "De frös så att de huttrade.",
-            "De var arga på varandra."
+            "De frös så mycket att skrattet lät alldeles darrigt.",
+            "De var arga på varandra efter det som hade hänt."
           ],
           "correctIndex": 1,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
@@ -646,14 +646,14 @@
           "maxPoints": 1,
           "prompt": "Vad är klorofyllets viktigaste uppgift, enligt texten?",
           "options": [
-            "Att göra bladen gröna.",
+            "Att transportera vatten från rötterna upp till bladen.",
             "Att fånga in solljus så att trädet kan tillverka sin mat.",
-            "Att skydda bladet mot kyla.",
-            "Att samla snö på vintern."
+            "Att skydda bladet mot kylan när hösten kommer.",
+            "Att göra bladet starkt nog att bära tung snö."
           ],
           "correctIndex": 1,
           "aspect": "Hitta efterfrågad information",
-          "explanation": "Texten säger att klorofyllet gör bladen gröna, men att det ”har också ett mycket viktigare jobb: det fångar in solljus”. Att bladen blir gröna stämmer alltså, men det är inte den viktigaste uppgiften enligt texten."
+          "explanation": "Texten säger att klorofyllet gör bladen gröna, men att det ”har också ett mycket viktigare jobb: det fångar in solljus”. Med hjälp av ljuset tillverkar trädet sitt eget socker, alltså sin mat. Klorofyllet transporterar inget vatten och skyddar inte mot kyla eller snö."
         },
         {
           "kind": "open",
@@ -688,10 +688,10 @@
           "maxPoints": 1,
           "prompt": "Varför syns de gula färgerna först på hösten?",
           "options": [
-            "Trädet tillverkar dem på hösten.",
+            "Trädet tillverkar de gula färgerna när hösten kommer.",
             "De har funnits hela tiden men varit dolda bakom det gröna.",
-            "De kommer från solljuset.",
-            "De bildas när det blir kallt."
+            "De kommer från solljuset som bladen fångat in.",
+            "De bildas först när nätterna blir riktigt kalla."
           ],
           "correctIndex": 1,
           "aspect": "Dra enkla slutsatser",
@@ -732,10 +732,10 @@
           "maxPoints": 1,
           "prompt": "Varför kan barrträd behålla sina barr hela vintern?",
           "options": [
-            "De växer på varmare platser.",
+            "De växer på platser där vintern är mycket mildare.",
             "Barren är som hoprullade, vaxade löv som tål kylan.",
-            "De har inget klorofyll.",
-            "De fäller barren på sommaren i stället."
+            "De innehåller inget klorofyll som kan brytas ner.",
+            "De fäller i stället alla sina barr under sommaren."
           ],
           "correctIndex": 1,
           "aspect": "Hitta efterfrågad information",
@@ -747,10 +747,10 @@
           "maxPoints": 1,
           "prompt": "Läs stycket som börjar med ”För att förstå höstens färger”. Det är textens första stycke efter ingressen. Vilket alternativ stämmer in på stycket?",
           "options": [
-            "Det sammanfattar hela textens innehåll.",
+            "Det sammanfattar hela textens innehåll i korta drag.",
             "Det ger en bakgrund som behövs för att förstå resten av texten.",
-            "Det beskriver hur barrträd klarar vintern.",
-            "Det förklarar varför löven blir röda."
+            "Det beskriver hur barrträden klarar sig genom vintern.",
+            "Det förklarar varför en del löv blir röda på hösten."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
@@ -824,7 +824,7 @@
           "options": [
             "För att visa att forskare också är trötta på morgonen.",
             "För att ge stöd åt argumentet och göra det mer trovärdigt.",
-            "För att forskarna har bestämt skolans tider.",
+            "För att det är forskarna som bestämmer skolans tider.",
             "För att göra texten längre."
           ],
           "correctIndex": 1,

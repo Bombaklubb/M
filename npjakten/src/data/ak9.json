@@ -246,10 +246,10 @@
           "maxPoints": 2,
           "prompt": "Lovisa Ekenstam är positiv till att e-sport räknas som idrott. Vilket av följande påståenden stämmer överens med hennes motivering? Kryssa för rätt alternativ.",
           "options": [
-            "E-sporten har större publik än de flesta idrotter.",
-            "Proffslagen har redan obligatorisk fysträning.",
+            "E-sporten har redan större publik än de flesta andra idrotter.",
+            "Proffslagen har redan infört obligatorisk fysträning för spelarna.",
             "Vi räknar redan precisionssporter som schack och skytte som idrott.",
-            "Andra länder har redan jämställt e-sportare med idrottare."
+            "Andra länder har redan jämställt e-sportare med vanliga idrottare."
           ],
           "correctIndex": 2,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
@@ -278,10 +278,10 @@
           "maxPoints": 2,
           "prompt": "Läs textens sista stycke. Vilken funktion har jämförelsen med kvinnor som inte fick springa maraton? Kryssa för rätt alternativ.",
           "options": [
-            "Den visar att maraton länge var en sport bara för män.",
+            "Den visar att gränserna för vem som får tävla aldrig har flyttats.",
             "Den antyder att synen på vad som är sport har ändrats förr och kan ändras igen.",
-            "Den bevisar att e-sport kommer att bli en olympisk gren.",
-            "Den förklarar varför publiken är viktigare än forskarna."
+            "Den bevisar att e-sport med säkerhet kommer att bli en olympisk gren.",
+            "Den förklarar varför forskarnas åsikter väger tyngre än publikens."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
@@ -349,9 +349,9 @@
           "prompt": "Vilket påstående stämmer bäst överens med hur berättarens syn på sin bror förändras under texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Berättaren går från att avgudahylla Jocke till att se honom som en vanlig, sårbar människa.",
-            "Berättaren går från att hata Jocke till att avguda honom.",
-            "Berättaren tycker hela tiden lika mycket om Jocke.",
-            "Berättaren slutar bry sig om Jocke helt och hållet."
+            "Berättaren går från att hata sin storebror till att avguda honom som en förebild.",
+            "Berättaren känner hela tiden precis lika mycket beundran för Jocke som i början.",
+            "Berättaren slutar bry sig om Jocke helt och hållet efter att Sandra flyttat."
           ],
           "correctIndex": 0,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
@@ -381,9 +381,9 @@
           "prompt": "Berättaren skriver om Jocke: ”Han var en människa, lika rädd och vilsen som jag, bara lite längre och med moppe.” Vilken effekt får den avslutande detaljen ”och med moppe”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Den drar ner den stora insikten till något vardagligt och lite lustigt.",
-            "Den visar att Jocke är rikare än berättaren.",
-            "Den förklarar varför Sandra lämnade Jocke.",
-            "Den betyder att berättaren vill ha en egen moppe."
+            "Den visar att Jocke är mycket rikare än berättaren och kan köpa vad han vill.",
+            "Den förklarar varför Sandra valde att lämna Jocke i slutet av sommaren.",
+            "Den betyder att berättaren mest av allt önskar sig en egen moppe."
           ],
           "correctIndex": 0,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
@@ -516,9 +516,9 @@
           "prompt": "Vad visade Tove Lindqvists forskning om hjärnan? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Att hjärnan gör i stort sett samma arbete vare sig man hör eller ser orden.",
-            "Att man minns mer av en bok om man lyssnar på den.",
-            "Att det går snabbare att lyssna än att läsa.",
-            "Att lyssnande passar bäst för den som har dyslexi."
+            "Att man minns betydligt mer av en bok om man lyssnar på den än läser.",
+            "Att det går betydligt snabbare att lyssna på en bok än att läsa den.",
+            "Att lyssnandet passar bäst för den som har svårt att avkoda bokstäver."
           ],
           "correctIndex": 0,
           "aspect": "Hitta efterfrågad information",
@@ -530,10 +530,10 @@
           "maxPoints": 2,
           "prompt": "Tove Lindqvist är positiv till ljudböcker. Vilket av följande påståenden stämmer överens med hennes motivering? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Ljudböcker säljer mer än tryckta böcker.",
+            "Ljudböcker säljer i dag betydligt mer än vad tryckta böcker gör.",
             "Människan har lyssnat på berättelser långt innan skriften fanns.",
-            "Unga föredrar att lyssna i stället för att läsa.",
-            "Det är svårare att förstå en bok man lyssnar på."
+            "Unga föredrar numera att lyssna på böcker i stället för att läsa dem.",
+            "Det är svårare att förstå en bok som man lyssnar på än en tryckt bok."
           ],
           "correctIndex": 1,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
@@ -562,10 +562,10 @@
           "maxPoints": 2,
           "prompt": "I textens sista del nämns att man förr varnade för att romaner och serietidningar skulle skada ungdomen. Vilken funktion har det exemplet i texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Det bevisar att ljudböcker är bättre än tryckta böcker.",
+            "Det bevisar att ljudboken är ett bättre sätt att läsa än den tryckta boken.",
             "Det visar att man genom historien ofta oroat sig i onödan för nya sätt att läsa.",
-            "Det förklarar hur romanen uppfanns på 1700-talet.",
-            "Det visar att serietidningar var farliga för barn."
+            "Det förklarar hur romanen uppstod och blev populär i Europa på 1700-talet.",
+            "Det visar att serietidningar verkligen var skadliga för ungdomars tänkande."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
@@ -655,10 +655,10 @@
           "maxPoints": 2,
           "prompt": "Vad menas i texten med att omställningen ger ett ”mini-jetlag”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Att människor reser mer under sommartid.",
+            "Att människor reser betydligt mer under den ljusa delen av året.",
             "Att kroppens inre dygnsrytm hamnar i otakt med klockan under några dagar.",
-            "Att flygtrafiken påverkas av tidsomställningen.",
-            "Att man blir pigg av att vinna en timmes sömn."
+            "Att långa flygresor blir mer påfrestande under sommarhalvåret.",
+            "Att man blir ovanligt pigg av att vinna en extra timmes sömn på hösten."
           ],
           "correctIndex": 1,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
@@ -690,9 +690,9 @@
           "prompt": "Varför förespråkar sömnforskarna permanent vintertid? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Morgonljuset är viktigast för att ställa kroppens inre klocka.",
-            "Vintertid ger ljusare kvällar på sommaren.",
-            "Vintertid sparar mer energi än sommartid.",
-            "De flesta länder i Europa har redan vintertid."
+            "Vintertid ger ljusare och längre kvällar under sommarhalvåret.",
+            "Vintertid sparar betydligt mer energi än vad sommartid gör.",
+            "De flesta länder i Europa har redan valt att införa permanent vintertid."
           ],
           "correctIndex": 0,
           "aspect": "Hitta efterfrågad information",
@@ -704,10 +704,10 @@
           "maxPoints": 2,
           "prompt": "Texten är en utredande text. Vilket av följande är typiskt utredande i textens avslutning? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Den uppmanar läsaren att skriva på en namninsamling.",
-            "Den berättar en personlig anekdot om tidsomställningen.",
+            "Den uppmanar läsaren att skriva på en namninsamling mot tidsomställningen.",
+            "Den berättar en personlig anekdot om skribentens egen sömn efter omställningen.",
             "Den väger samman perspektiven och drar en slutsats som bygger på det som redogjorts.",
-            "Den avslutas med en överraskande vändning."
+            "Den avslutas med en överraskande vändning som ändrar textens hela budskap."
           ],
           "correctIndex": 2,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
