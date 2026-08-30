@@ -80,12 +80,12 @@
           "prompt": "– You're late again.\n– I'm sorry. The bus didn't come.\n– That's the third time this week.",
           "options": [
             "I'll leave earlier tomorrow.",
-            "The bus is red.",
-            "I'm never late.",
-            "See you next week."
+            "The bus is red and very old.",
+            "I'm never late for school.",
+            "See you again next week then."
           ],
           "correctIndex": 0,
-          "explanation": "Efter en tillsägelse passar det att lova bättring. Att säga ”I'm never late” motsäger det som just sagts om tre gånger på en vecka."
+          "explanation": "Efter en tillsägelse passar det att lova bättring. Att säga ”I'm never late for school” motsäger det som just sagts om tre gånger på en vecka."
         },
         {
           "kind": "multiple-choice",
@@ -200,12 +200,12 @@
           "prompt": "– Look at those clouds.\n– Do you think it will rain?\n– It looks like it.",
           "options": [
             "Let's take an umbrella.",
-            "The sun is hot.",
-            "I love swimming.",
-            "It rained last year."
+            "The sun is hot today.",
+            "I love swimming in the sea.",
+            "It rained a lot last year."
           ],
           "correctIndex": 0,
-          "explanation": "Eftersom det verkar bli regn är det logiska att föreslå ett paraply. ”The sun is hot” motsäger att himlen är full av moln."
+          "explanation": "Eftersom det verkar bli regn är det logiska att föreslå ett paraply. ”The sun is hot today” motsäger att himlen är full av moln."
         }
       ]
     },
@@ -689,10 +689,10 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What did Ellen enjoy about working at the market?",
           "options": [
-            "Standing outside in the cold",
-            "Earning her own money",
+            "Standing outside in the cold every Saturday",
+            "Calling out the prices more quietly than others",
             "Seeing people change their minds because of her",
-            "Selling vegetables to her friends"
+            "Getting Saturday mornings off from her job"
           ],
           "correctIndex": 2,
           "explanation": "Sista meningen i första delen säger det rakt ut: hon älskade att se folk stanna, le och ändra sig på grund av något hon sagt. Att hon hatade kylan sägs uttryckligen."
@@ -814,10 +814,10 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "Why did Ellen dislike the name ‘the Ice Cream Queen'?",
           "options": [
-            "She thought it sounded old-fashioned",
-            "She had never wanted to be famous",
+            "She thought the name sounded much too old-fashioned",
+            "She had wanted the shops to be named after her town",
             "She felt a queen does nothing while she worked hard",
-            "The newspapers had spelt her name wrongly"
+            "The newspapers had spelt her name wrongly in 1975"
           ],
           "correctIndex": 2,
           "explanation": "Hennes egna ord förklarar det: ”A queen sits down. I have never sat down in my life.” Hon tyckte alltså att namnet gav fel bild av hur hårt hon arbetade."
@@ -1722,10 +1722,10 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What does Ines mean when she says ‘I am not making music'?",
           "options": [
-            "She cannot play an instrument",
+            "She never learned to play a musical instrument",
             "She wants the recording to be exactly like the real place",
-            "She thinks music is less important than sound",
-            "She only records places without people"
+            "She thinks music matters less than everyday sound",
+            "She only records in places where there are no people"
           ],
           "correctIndex": 1,
           "explanation": "Exemplet med bilen som kör förbi förklarar det: bilen får vara kvar, eftersom det är så platsen låter. Hon vill återge verkligheten, inte skapa något vackert."
@@ -2629,10 +2629,10 @@
           "aspect": "Hitta specifik information",
           "prompt": "Why couldn't Nadia's mother come and fetch her?",
           "options": [
-            "She was asleep",
+            "She was already asleep at home in Ashwell",
             "She was working a night shift at the hospital",
-            "She did not have a car",
-            "She lived in another town"
+            "Her car had broken down that same evening",
+            "She was visiting friends in another town"
           ],
           "correctIndex": 1,
           "explanation": "Mamman arbetade nattpass på sjukhuset och kunde därför inte lämna jobbet och hämta Nadia."
@@ -2956,9 +2956,9 @@
           "prompt": "News item 4. What is it about?",
           "options": [
             "A bakery that gives away bread",
-            "A bakery that has closed",
-            "Bread that made people ill",
-            "A new kind of bread"
+            "A bakery that has closed down",
+            "Bread that made customers ill",
+            "A new kind of bread in shops"
           ],
           "correctIndex": 0,
           "explanation": "Det centrala är att osålt bröd ges bort gratis i stället för att slängas. Att han förr slängde bröd förklarar varför han började."
@@ -3015,10 +3015,10 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 8. What is it about?",
           "options": [
-            "A man who is moving house",
-            "A very long car journey",
+            "A man who is moving house again",
+            "A very long car journey abroad",
             "Forty years of cycling to work",
-            "A trip to the moon"
+            "A bicycle shop opening in Kent"
           ],
           "correctIndex": 2,
           "explanation": "Nyheten handlar om mannen som cyklat till jobbet i fyrtio år. Jämförelsen med månen visar bara hur långt det är."
@@ -3290,9 +3290,9 @@
           "prompt": "What was the weather like when they arrived?",
           "options": [
             "Sunny and quite warm",
-            "Cloudy and cold",
-            "Rainy and windy",
-            "Foggy and grey"
+            "Cloudy and rather cold",
+            "Wet and very windy",
+            "Foggy, grey and damp"
           ],
           "correctIndex": 0,
           "explanation": "När de klev ur minibussen var vädret perfekt: soligt och ganska varmt, omkring arton grader. Regnet kom först två timmar senare."
@@ -3423,10 +3423,10 @@
           "aspect": "Hitta specifik information",
           "prompt": "What happened halfway up the wall?",
           "options": [
-            "Sara slipped and fell",
+            "The instructor called them back down",
             "A boy dropped his water bottle",
-            "The rope came loose",
-            "It started to snow"
+            "The rope came loose from the wall",
+            "It started to snow quite heavily"
           ],
           "correctIndex": 1,
           "explanation": "Pojken ovanför Sara tappade sin vattenflaska, som föll förbi hennes huvud och slog i marken. Ingen skadades, men alla förstod varför hjälmar behövs."
@@ -3506,9 +3506,9 @@
           "prompt": "What has Marta Reyes done?",
           "options": [
             "She has climbed the highest mountain on six continents",
-            "She has climbed every mountain in Wales",
-            "She has been to Antarctica three times",
-            "She has started her own climbing school"
+            "She has climbed every high mountain in Wales",
+            "She has been to Antarctica three times already",
+            "She has started her own climbing school in Norway"
           ],
           "correctIndex": 0,
           "explanation": "Hon har bestigit det högsta berget på var och en av de sex kontinenter som har berg. Antarktis återstår, och det planerar hon till nästa år."
@@ -3657,10 +3657,10 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 4. What is it about?",
           "options": [
-            "A girl who missed her bus",
-            "A new bus stop in Iceland",
+            "A girl who missed her bus to school",
+            "A new bus route starting in Iceland",
             "A girl who changed the council's mind",
-            "A grandmother moving house"
+            "A grandmother moving to a new town"
           ],
           "correctIndex": 2,
           "explanation": "Poängen är att flickan fick rådet att ändra sig genom att räkna hur många som väntade. Bänken är resultatet."
@@ -3922,9 +3922,9 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "Why do the groups leave in the late afternoon?",
           "options": [
-            "The camels rest in the morning",
+            "The camels only walk in the early morning",
             "The sand is too hot in the middle of the day",
-            "The buses arrive at that time",
+            "The wind is far too strong before then",
             "It is easier to put up tents in the dark"
           ],
           "correctIndex": 1,
@@ -3940,7 +3940,7 @@
             "At half past three",
             "At four o'clock",
             "At half past four",
-            "At sunset"
+            "At five in the evening"
           ],
           "correctIndex": 0,
           "explanation": "Egentligen ska grupperna vara på plats klockan fyra, men efter familjen som kom en halvtimme sent säger hon halv fyra – och det fungerar perfekt."
@@ -4067,10 +4067,10 @@
           "aspect": "Hitta specifik information",
           "prompt": "Which months are the best for a desert trip?",
           "options": [
-            "July and August",
-            "December and January",
+            "July, August and September",
+            "December, January and February",
             "October, November, March and April",
-            "All months are the same"
+            "May, June and the summer months"
           ],
           "correctIndex": 2,
           "explanation": "Amina säger att oktober, november, mars och april är bäst. Juli och augusti är för heta, och december och januari har nätter som är hårda för ovana."
@@ -4194,10 +4194,10 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What went wrong for the four tourists in Algeria?",
           "options": [
-            "They ran out of water",
+            "They ran out of water and food after one day",
             "Their car broke down and nobody knew where they were",
-            "They walked away from their camp at night",
-            "They were caught in heavy rain"
+            "They walked away from their camp in the night",
+            "They were caught in heavy rain in a valley"
           ],
           "correctIndex": 1,
           "explanation": "Bilen gick sönder och de hade inte berättat för någon vart de skulle, så det tog två dagar innan någon förstod att de saknades."
