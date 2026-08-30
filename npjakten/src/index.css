@@ -53,6 +53,15 @@ body {
     display: none !important;
   }
 
+  /* Facit får ALDRIG följa med i en vanlig elevutskrift, inte ens när läraren
+     har låst upp det på skärmen. Det skrivs bara ut via "Skriv ut facit". */
+  .facit-sheet {
+    display: none !important;
+  }
+  .print-facit .facit-sheet {
+    display: block !important;
+  }
+
   /* Samtalskort-utskrift: skriv bara ut kort-arket, och håll ihop varje
      kort så att det inte klipps av en sidbrytning. */
   .print-cards .paper:not(.cards-sheet) {

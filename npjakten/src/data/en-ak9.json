@@ -16,7 +16,7 @@
         {
           "heading": "A · Hollow Lane Animal Shelter",
           "paragraphs": [
-            "We look after around ninety cats and dogs at any one time, and we could not do it without volunteers. Most people start in the laundry and the food store – unglamorous, but it is where the work actually is. After three months you may apply to work directly with the animals.",
+            "We look after around ninety cats and dogs at any one time, and we could not do it without volunteers. Everyone starts in the laundry and the food store – unglamorous, but it is where the work actually is. After three months there you may apply to work directly with the animals.",
             "Minimum age 16. Two four-hour shifts a month. No experience needed, but you must be able to commit for at least six months. Training takes place on the last Saturday of every month; you cannot start without it."
           ]
         },
@@ -24,14 +24,14 @@
           "heading": "B · The Ravensbridge Story Archive",
           "paragraphs": [
             "We record older residents talking about their lives and keep the recordings for the city library. Volunteers do the interviews, and we teach you how: how to ask a question and then say nothing, which is the hardest part.",
-            "Age 15 and over. You choose your own hours, but each interview takes about two hours plus travel. Ideal if you like listening more than talking. Some of our volunteers have been doing this for eleven years."
+            "Age 15 and over. You choose your own hours, but each interview takes about two hours plus travel. Ideal if you like listening more than talking, and we ask you to stay with us for at least ten interviews. Some of our volunteers have been doing this for eleven years."
           ]
         },
         {
           "heading": "C · Fieldgate Community Garden",
           "paragraphs": [
             "Two acres behind the station, growing vegetables for anyone who needs them. Saturday mornings, March to October, whatever the weather. Boots and gloves provided; bring your own water.",
-            "All ages welcome, but under-16s must come with an adult. Just turn up – there is no form to fill in and nobody will ask you to sign anything. We start at nine and there is soup at twelve."
+            "All ages welcome, but under-16s must come with an adult. Just turn up – there is no form to fill in and nobody will ask you to sign anything. We start at nine and there is soup at twelve. Come once or come every Saturday – there is no minimum period."
           ]
         },
         {
@@ -74,8 +74,14 @@
           "guidance": "Ge 1 poäng för Fieldgate Community Garden (eller ”the community garden”). Texten säger: ”there is no form to fill in”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "At the animal shelter." },
-            { "points": 1, "answer": "At Fieldgate Community Garden." }
+            {
+              "points": 0,
+              "answer": "At the animal shelter."
+            },
+            {
+              "points": 1,
+              "answer": "At Fieldgate Community Garden."
+            }
           ]
         },
         {
@@ -91,8 +97,14 @@
           "guidance": "Ge 1 poäng för The Ravensbridge Story Archive. Texten säger att inspelningarna sparas åt stadsbiblioteket.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "Bridgehouse Museum." },
-            { "points": 1, "answer": "The Ravensbridge Story Archive." }
+            {
+              "points": 0,
+              "answer": "Bridgehouse Museum."
+            },
+            {
+              "points": 1,
+              "answer": "The Ravensbridge Story Archive."
+            }
           ]
         },
         {
@@ -105,11 +117,17 @@
           ],
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "For one of the places there is no information about how long you must commit. Which one is that?",
-          "guidance": "Ge 1 poäng för The Sunday Kitchen. Alla övriga anger antingen en period (sex månader, ett år, en termin) eller är öppna utan krav på anmälan; Sunday Kitchen säger inget om åtagandets längd.",
+          "guidance": "Ge 1 poäng för The Sunday Kitchen. Alla andra anger hur länge man förväntas hålla på (sex månader, tio intervjuer, inget minimum, ett år, en termin) – Sunday Kitchen säger ingenting alls om det.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Radio Ravensbridge." },
-            { "points": 1, "answer": "The Sunday Kitchen." }
+            {
+              "points": 0,
+              "answer": "Radio Ravensbridge."
+            },
+            {
+              "points": 1,
+              "answer": "The Sunday Kitchen."
+            }
           ]
         },
         {
@@ -126,9 +144,18 @@
           "guidance": "Ge 1 poäng per led, max 2: 1) gå utbildningen som hålls sista lördagen varje månad (utan den får man inte börja alls), 2) arbeta i tvätten och matförrådet i tre månader innan man får ansöka om att arbeta med djuren.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "You have to be sixteen years old." },
-            { "points": 1, "answer": "You have to do the training on the last Saturday of the month." },
-            { "points": 2, "answer": "You have to do the training first, and then work in the laundry and food store for three months before you can apply to work with the animals." }
+            {
+              "points": 0,
+              "answer": "You have to be sixteen years old."
+            },
+            {
+              "points": 1,
+              "answer": "You have to do the training on the last Saturday of the month."
+            },
+            {
+              "points": 2,
+              "answer": "You have to do the training first, and then work in the laundry and food store for three months before you can apply to work with the animals."
+            }
           ],
           "note": "Du måste skriva båda sakerna för att få full poäng."
         },
@@ -146,9 +173,18 @@
           "guidance": "Ge 1 poäng per led, max 2: bär kläder du inte har något emot att förstöra, och sätt upp håret.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "You should wear boots and gloves." },
-            { "points": 1, "answer": "Wear clothes you do not mind ruining." },
-            { "points": 2, "answer": "Wear clothes you do not mind ruining, and tie your hair back." }
+            {
+              "points": 0,
+              "answer": "You should wear boots and gloves."
+            },
+            {
+              "points": 1,
+              "answer": "Wear clothes you do not mind ruining."
+            },
+            {
+              "points": 2,
+              "answer": "Wear clothes you do not mind ruining, and tie your hair back."
+            }
           ]
         },
         {
@@ -164,8 +200,14 @@
           "guidance": "Ge 1 poäng för svar som visar att det svåraste är att ställa en fråga och sedan vara tyst. Godtagbart: ”to say nothing after a question”; ”being quiet”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Finding older people to interview." },
-            { "points": 1, "answer": "Asking a question and then saying nothing." }
+            {
+              "points": 0,
+              "answer": "Finding older people to interview."
+            },
+            {
+              "points": 1,
+              "answer": "Asking a question and then saying nothing."
+            }
           ]
         },
         {
@@ -181,8 +223,14 @@
           "guidance": "Ge 1 poäng för tolv (12). 0 poäng: ”fourteen” (det är åldersgränsen).",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "Fourteen." },
-            { "points": 1, "answer": "Twelve." }
+            {
+              "points": 0,
+              "answer": "Fourteen."
+            },
+            {
+              "points": 1,
+              "answer": "Twelve."
+            }
           ]
         },
         {
@@ -198,8 +246,14 @@
           "guidance": "Ge 1 poäng för svar som visar att visningarna sker på eftermiddagar på vardagar, så man måste vara ledig efter skolan.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Because the training is in August." },
-            { "points": 1, "answer": "Because the tours are on weekday afternoons, so you must be free after school." }
+            {
+              "points": 0,
+              "answer": "Because the training is in August."
+            },
+            {
+              "points": 1,
+              "answer": "Because the tours are on weekday afternoons, so you must be free after school."
+            }
           ]
         },
         {
@@ -241,7 +295,7 @@
           "id": 11,
           "maxPoints": 1,
           "aspect": "Förstå huvudinnehåll och sammanhang",
-          "prompt": "Which text (A–F) says that volunteers eventually create the content themselves?",
+          "prompt": "Which text (A–F) says that volunteers are given a script at first but later write their own?",
           "options": [
             "Text A",
             "Text B",
@@ -572,7 +626,7 @@
             "What they did next was not clever, and it worked. On the third Saturday in October they showed a film in the Regal without permission — an old projector borrowed from the school, a sheet from Priya's house, and a print of a comedy that Mrs Adeyemi's nephew had somewhere in a garage.",
             "They told nobody except by word of mouth. Two hundred and six people came. The oldest was ninety-one and had been to the Regal on its opening night in 1937; the youngest was four and slept through most of it.",
             "The projector broke twice. Both times somebody in the audience shouted a joke into the dark, and both times the whole room laughed, and Priya understood something that she has never been able to explain properly since: that the film had almost nothing to do with it.",
-            "A photographer from the county newspaper had come because he lived three streets away and was curious. The picture he took — four hundred people in a building that was supposed to be finished — was on the front page on the Monday."
+            "A photographer from the county newspaper had come because he lived three streets away and was curious. The picture he took — two hundred people in a building that was supposed to be finished — was on the front page on the Monday."
           ]
         },
         {
@@ -580,7 +634,7 @@
             "The council met on the fourth of November as planned. The supermarket offer was withdrawn a week before the meeting; the chain's regional manager said, in a statement that has been quoted in Bellmoor ever since, that they had reconsidered the location.",
             "The man from Leeds turned out to want to run it as a cinema, which nobody had thought to ask him. He reopened the Regal in April 1999 with two hundred and eighty seats instead of four hundred and twelve, because the back rows had rotted through.",
             "Priya is forty-three now. She does not live in Bellmoor and has not for twenty years. The Regal is still open; it survived a fire in 2011 and a bad decade after that, largely because eight hundred people in a town of nine thousand pay four pounds a month to keep it alive.",
-            "She was asked, at the sixtieth-anniversary evening, what she had learned at sixteen. She said she had learned that the building was never the point either, and that it had taken her until roughly the age of thirty to work out what she had meant by that."
+            "She was asked, at the evening marking twenty-five years since the reopening, what she had learned at sixteen. She said she had learned that the building was never the point either, and that it had taken her until roughly the age of thirty to work out what she had meant by that."
           ]
         }
       ],
@@ -602,8 +656,14 @@
           "guidance": "Ge 1 poäng för elva månader. Godtagbart: ”eleven months”; ”11 months”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "Eleven years." },
-            { "points": 1, "answer": "Eleven months." }
+            {
+              "points": 0,
+              "answer": "Eleven years."
+            },
+            {
+              "points": 1,
+              "answer": "Eleven months."
+            }
           ]
         },
         {
@@ -619,8 +679,14 @@
           "guidance": "Ge 1 poäng för svar som visar att hon tryckte upp bakdörren (projektionisternas dörr), vars lås var trasigt.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "She had a key to the front door." },
-            { "points": 1, "answer": "She pushed open the back door, because the lock was broken." }
+            {
+              "points": 0,
+              "answer": "She had a key to the front door."
+            },
+            {
+              "points": 1,
+              "answer": "She pushed open the back door, because the lock was broken."
+            }
           ]
         },
         {
@@ -652,9 +718,18 @@
           "guidance": "Ge 1 poäng per led, max 2: en snabbköpskedja som ville riva byggnaden, och en man från Leeds som inte hade sagt vad han ville använda den till.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "Two people wanted to buy it." },
-            { "points": 1, "answer": "A supermarket chain that wanted to knock it down." },
-            { "points": 2, "answer": "A supermarket chain that wanted to demolish it, and a man from Leeds who had not said what he wanted it for." }
+            {
+              "points": 0,
+              "answer": "Two people wanted to buy it."
+            },
+            {
+              "points": 1,
+              "answer": "A supermarket chain that wanted to knock it down."
+            },
+            {
+              "points": 2,
+              "answer": "A supermarket chain that wanted to demolish it, and a man from Leeds who had not said what he wanted it for."
+            }
           ]
         },
         {
@@ -687,10 +762,22 @@
           "guidance": "Ge 1 poäng per led, max 3: 1) att hon höll med Priya, 2) att hon skulle rösta emot snabbköpet, 3) en fråga om vad Priya tänkte göra mer, eftersom en röst av elva inte skulle räcka.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "That she agreed with Priya." },
-            { "points": 1, "answer": "That she agreed with Priya and would vote against the supermarket." },
-            { "points": 2, "answer": "That she agreed, that she would vote against the supermarket, and that one vote was not enough." },
-            { "points": 3, "answer": "That she agreed with Priya, that she would vote against the supermarket, and that one vote out of eleven would not be enough – so what else did Priya plan to do?" }
+            {
+              "points": 0,
+              "answer": "That she agreed with Priya."
+            },
+            {
+              "points": 1,
+              "answer": "That she agreed with Priya and would vote against the supermarket."
+            },
+            {
+              "points": 2,
+              "answer": "That she agreed, that she would vote against the supermarket, and that one vote was not enough."
+            },
+            {
+              "points": 3,
+              "answer": "That she agreed with Priya, that she would vote against the supermarket, and that one vote out of eleven would not be enough – so what else did Priya plan to do?"
+            }
           ],
           "note": "Du måste skriva alla tre för att få full poäng."
         },
@@ -723,9 +810,18 @@
           "guidance": "Ge 1 poäng per korrekt detalj, max 2. I texten: en gammal projektor lånad från skolan, ett lakan hemifrån Priya, en filmkopia från Mrs Adeyemis brorson, och de spred budskapet enbart muntligt.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "They asked the council for permission." },
-            { "points": 1, "answer": "They borrowed an old projector from the school." },
-            { "points": 2, "answer": "They borrowed a projector from the school and used a sheet from Priya's house as a screen." }
+            {
+              "points": 0,
+              "answer": "They asked the council for permission."
+            },
+            {
+              "points": 1,
+              "answer": "They borrowed an old projector from the school."
+            },
+            {
+              "points": 2,
+              "answer": "They borrowed a projector from the school and used a sheet from Priya's house as a screen."
+            }
           ],
           "note": "Du måste skriva två saker för att få full poäng."
         },
@@ -743,9 +839,18 @@
           "guidance": "Ge 1 poäng per led, max 2: den äldsta var 91 och hade varit på Regal invigningskvällen 1937; den yngsta var fyra och sov genom det mesta.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "There were 206 people there." },
-            { "points": 1, "answer": "The oldest was ninety-one." },
-            { "points": 2, "answer": "The oldest was ninety-one and had been there on the opening night in 1937, and the youngest was four and slept through most of the film." }
+            {
+              "points": 0,
+              "answer": "There were 206 people there."
+            },
+            {
+              "points": 1,
+              "answer": "The oldest was ninety-one."
+            },
+            {
+              "points": 2,
+              "answer": "The oldest was ninety-one and had been there on the opening night in 1937, and the youngest was four and slept through most of the film."
+            }
           ]
         },
         {
@@ -776,8 +881,14 @@
           "guidance": "Ge 1 poäng för svar som visar att han bodde tre gator bort och var nyfiken – han var alltså inte utskickad av tidningen.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "The council had invited him." },
-            { "points": 1, "answer": "He lived three streets away and was curious." }
+            {
+              "points": 0,
+              "answer": "The council had invited him."
+            },
+            {
+              "points": 1,
+              "answer": "He lived three streets away and was curious."
+            }
           ]
         },
         {
@@ -808,8 +919,14 @@
           "guidance": "Ge 1 poäng för svar som visar att ingen hade tänkt på att fråga honom vad han ville använda byggnaden till – det visade sig att han ville driva den som biograf.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Nobody had met him." },
-            { "points": 1, "answer": "Nobody had thought to ask him what he wanted the building for." }
+            {
+              "points": 0,
+              "answer": "Nobody had met him."
+            },
+            {
+              "points": 1,
+              "answer": "Nobody had thought to ask him what he wanted the building for."
+            }
           ]
         },
         {
@@ -842,10 +959,22 @@
           "guidance": "Ge upp till 3 poäng. 1 p: eleven förstår att byggnaden inte var det viktigaste. 2 p: eleven kopplar till att filmen inte heller var poängen (därför ”either”). 3 p: eleven drar slutsatsen att det som betydde något var människorna och gemenskapen – att staden gjorde något tillsammans – och att både filmen och huset bara var anledningar att samlas.",
           "lines": 5,
           "scoreExamples": [
-            { "points": 0, "answer": "She means that she does not care about the cinema any more." },
-            { "points": 1, "answer": "She means that the building itself was not the most important thing." },
-            { "points": 2, "answer": "Earlier she said the film had almost nothing to do with it, and now she says the same about the building – ”either” links the two." },
-            { "points": 3, "answer": "She means that neither the film nor the building was what really mattered. Both were only reasons for the town to be in the same room together, and it was the people and what they did as a community that counted. The word ”either” ties her new insight back to what she understood the night the projector broke." }
+            {
+              "points": 0,
+              "answer": "She means that she does not care about the cinema any more."
+            },
+            {
+              "points": 1,
+              "answer": "She means that the building itself was not the most important thing."
+            },
+            {
+              "points": 2,
+              "answer": "Earlier she said the film had almost nothing to do with it, and now she says the same about the building – ”either” links the two."
+            },
+            {
+              "points": 3,
+              "answer": "She means that neither the film nor the building was what really mattered. Both were only reasons for the town to be in the same room together, and it was the people and what they did as a community that counted. The word ”either” ties her new insight back to what she understood the night the projector broke."
+            }
           ]
         }
       ]
@@ -1112,7 +1241,7 @@
       "script": [
         {
           "speaker": "Presenter",
-          "text": "Welcome back. With me in the studio is Tessa Iyer, who runs Northgate Youth Radio – a station made entirely by people under twenty-one. Tessa, thanks for coming in."
+          "text": "Welcome back. With me in the studio is Tessa Iyer, who runs Northgate Youth Radio – a station where everything you hear is made by people under twenty-one. Tessa, thanks for coming in."
         },
         {
           "speaker": "Tessa",
@@ -1124,7 +1253,7 @@
         },
         {
           "speaker": "Tessa",
-          "text": "I was a maths teacher, believe it or not, at a school about two miles from where the studio is now. I did that for six years and I was reasonably good at it, but I kept noticing the same thing: the students who had the most to say were often the ones who said the least in class."
+          "text": "I was a librarian, believe it or not, at a school about two miles from where the studio is now. I did that for six years and I was reasonably good at it, but I kept noticing the same thing: the students who had the most to say were often the ones who said the least in class."
         },
         {
           "speaker": "Presenter",
@@ -1202,11 +1331,17 @@
           ],
           "aspect": "Hitta specifik information",
           "prompt": "What was Tessa's job before she started the station?",
-          "guidance": "Ge 1 poäng för att hon var mattelärare. Godtagbart: ”a maths teacher”; ”she taught maths”.",
+          "guidance": "Ge 1 poäng för att hon var bibliotekarie. Godtagbart: ”a librarian”; ”she worked in a school library”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "She worked in national radio." },
-            { "points": 1, "answer": "She was a maths teacher." }
+            {
+              "points": 0,
+              "answer": "She was a radio presenter."
+            },
+            {
+              "points": 1,
+              "answer": "She was a librarian."
+            }
           ]
         },
         {
@@ -1222,8 +1357,14 @@
           "guidance": "Ge 1 poäng för svar som visar att de elever som hade mest att säga ofta var de som sa minst i klassrummet.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "That they were not interested in maths." },
-            { "points": 1, "answer": "That the students with the most to say often said the least in class." }
+            {
+              "points": 0,
+              "answer": "That they were not interested in maths."
+            },
+            {
+              "points": 1,
+              "answer": "That the students with the most to say often said the least in class."
+            }
           ]
         },
         {
@@ -1254,8 +1395,14 @@
           "guidance": "Ge 1 poäng för elva. Godtagbart: ”eleven people”; ”11”. 0 poäng: ”nineteen thousand” (det är i dag).",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "Nineteen thousand." },
-            { "points": 1, "answer": "Eleven." }
+            {
+              "points": 0,
+              "answer": "Nineteen thousand."
+            },
+            {
+              "points": 1,
+              "answer": "Eleven."
+            }
           ]
         },
         {
@@ -1287,9 +1434,18 @@
           "guidance": "Ge 1 poäng per led, max 2: den som är mellan fjorton och tjugoett år, och som bor i grevskapet (the county).",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Anyone who wants to." },
-            { "points": 1, "answer": "Anyone between fourteen and twenty-one." },
-            { "points": 2, "answer": "Anyone between fourteen and twenty-one who lives in the county." }
+            {
+              "points": 0,
+              "answer": "Anyone who wants to."
+            },
+            {
+              "points": 1,
+              "answer": "Anyone between fourteen and twenty-one."
+            },
+            {
+              "points": 2,
+              "answer": "Anyone between fourteen and twenty-one who lives in the county."
+            }
           ]
         },
         {
@@ -1307,10 +1463,22 @@
           "guidance": "Ge 1 poäng per led, max 3: 1) att dyka upp/passa tider (ett halvfärdigt program är sämre än inget), 2) att kunna ta kritik (allt granskas av gruppen på måndagar), 3) att vara genuint nyfiken på människor som inte är som en själv.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "You need experience and a good radio voice." },
-            { "points": 1, "answer": "You need to turn up." },
-            { "points": 2, "answer": "You need to turn up and to be able to take criticism." },
-            { "points": 3, "answer": "You need to turn up, to be able to take criticism from the group, and to be genuinely curious about people who are not like you." }
+            {
+              "points": 0,
+              "answer": "You need experience and a good radio voice."
+            },
+            {
+              "points": 1,
+              "answer": "You need to turn up."
+            },
+            {
+              "points": 2,
+              "answer": "You need to turn up and to be able to take criticism."
+            },
+            {
+              "points": 3,
+              "answer": "You need to turn up, to be able to take criticism from the group, and to be genuinely curious about people who are not like you."
+            }
           ],
           "note": "Du måste skriva alla tre för att få full poäng."
         },
@@ -1343,9 +1511,18 @@
           "guidance": "Ge 1 poäng per korrekt exempel, max 2. I intervjun nämns: en dokumentär om en flickas farfar som kom hit 1969; ett telefonväktarprogram om skolstress; en komediserie om en påhittad simhall.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "They make programmes about music." },
-            { "points": 1, "answer": "A documentary about a girl's grandfather." },
-            { "points": 2, "answer": "A documentary about a girl's grandfather arriving in 1969, and a phone-in programme about school stress." }
+            {
+              "points": 0,
+              "answer": "They make programmes about music."
+            },
+            {
+              "points": 1,
+              "answer": "A documentary about a girl's grandfather."
+            },
+            {
+              "points": 2,
+              "answer": "A documentary about a girl's grandfather arriving in 1969, and a phone-in programme about school stress."
+            }
           ],
           "note": "Du måste skriva två för att få full poäng."
         },
@@ -1378,9 +1555,18 @@
           "guidance": "Ge 1 poäng per led, max 2: hon ledde ett direktsänt tvåtimmarsprogram helt själv när den inbokade personen blev sjuk, och hon var femton år – trots att hon knappt hade talat de första sex veckorna.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "She started working in national radio." },
-            { "points": 1, "answer": "She presented a live two-hour programme on her own." },
-            { "points": 2, "answer": "She presented a live two-hour programme alone at fifteen, when the scheduled presenter was ill, even though she had barely spoken during her first six weeks." }
+            {
+              "points": 0,
+              "answer": "She started working in national radio."
+            },
+            {
+              "points": 1,
+              "answer": "She presented a live two-hour programme on her own."
+            },
+            {
+              "points": 2,
+              "answer": "She presented a live two-hour programme alone at fifteen, when the scheduled presenter was ill, even though she had barely spoken during her first six weeks."
+            }
           ]
         },
         {
@@ -1398,10 +1584,22 @@
           "guidance": "Ge upp till 3 poäng. 1 p: eleven förstår att radion inte är målet i sig. 2 p: eleven kopplar till exemplet med Ruth eller till hennes iakttagelse om eleverna som teg. 3 p: eleven formulerar att syftet är vad det gör med de unga – att de växer, tar plats och hittar sin röst – och att programmen bara är medlet.",
           "lines": 5,
           "scoreExamples": [
-            { "points": 0, "answer": "She means that she is going to stop working with radio." },
-            { "points": 1, "answer": "She means that the radio programmes are not the most important thing." },
-            { "points": 2, "answer": "She means the point is what happens to the young people, like Ruth, who went from barely speaking to presenting two hours alone." },
-            { "points": 3, "answer": "She means that the station exists for what it does to the people in it, not for the programmes. It goes back to what she noticed as a teacher – that those with most to say often said least – and Ruth is the proof: the radio is only the means by which someone finds their voice." }
+            {
+              "points": 0,
+              "answer": "She means that she is going to stop working with radio."
+            },
+            {
+              "points": 1,
+              "answer": "She means that the radio programmes are not the most important thing."
+            },
+            {
+              "points": 2,
+              "answer": "She means the point is what happens to the young people, like Ruth, who went from barely speaking to presenting two hours alone."
+            },
+            {
+              "points": 3,
+              "answer": "She means that the station exists for what it does to the people in it, not for the programmes. It goes back to what she noticed as a teacher – that those with most to say often said least – and Ruth is the proof: the radio is only the means by which someone finds their voice."
+            }
           ]
         }
       ]
