@@ -825,7 +825,7 @@
             "För att visa att forskare också är trötta på morgonen.",
             "För att ge stöd åt argumentet och göra det mer trovärdigt.",
             "För att det är forskarna som bestämmer skolans tider.",
-            "För att göra texten längre."
+            "För att göra insändaren längre och mer innehållsrik."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
@@ -837,10 +837,10 @@
           "maxPoints": 1,
           "prompt": "Vilket motargument tar skribenten upp i texten?",
           "options": [
-            "Att elever inte vill gå upp tidigare.",
-            "Att lärarna tycker om att börja tidigt.",
+            "Att eleverna ändå inte skulle vilja gå och lägga sig tidigare.",
+            "Att lärarna trivs med att börja tidigt och vill behålla dagens tider.",
             "Att skoldagen skulle sluta senare och krocka med träningar och arbetstider.",
-            "Att forskningen om sömn är osäker."
+            "Att forskningen om barns sömn är osäker och inte går att lita på."
           ],
           "correctIndex": 2,
           "aspect": "Hitta efterfrågad information",
@@ -865,10 +865,10 @@
           "maxPoints": 1,
           "prompt": "Insändaren avslutas med en uppmaning. Vad uppmanas läsaren (rektorerna) att göra?",
           "options": [
-            "Att köpa nya väckarklockor till eleverna.",
+            "Att köpa nya och högre väckarklockor till alla elever.",
             "Att testa senare skolstart under en termin och mäta resultatet.",
-            "Att korta ner sommarlovet.",
-            "Att servera frukost i skolan."
+            "Att korta ner sommarlovet med några veckor varje år.",
+            "Att servera frukost i skolan varje morgon klockan åtta."
           ],
           "correctIndex": 1,
           "aspect": "Hitta efterfrågad information",
@@ -880,9 +880,9 @@
           "maxPoints": 1,
           "prompt": "Vad är textens viktigaste syfte?",
           "options": [
-            "Att berätta en rolig historia om en morgon.",
-            "Att förklara hur sömn fungerar.",
-            "Att beskriva hur en skoldag ser ut.",
+            "Att berätta en rolig historia om en morgon i skolan.",
+            "Att förklara hur sömnen fungerar hos barn och vuxna.",
+            "Att beskriva hur en vanlig skoldag i årskurs 6 ser ut.",
             "Att övertyga läsaren om att skolan borde börja senare."
           ],
           "correctIndex": 3,
@@ -957,14 +957,14 @@
           "maxPoints": 1,
           "prompt": "Var ska hotellet hängas upp?",
           "options": [
-            "På en skuggig plats nära marken.",
-            "Inomhus i ett fönster.",
+            "På en skuggig plats alldeles nära marken.",
+            "Inomhus i ett fönster som vetter mot söder.",
             "På en solig plats som är skyddad från regn.",
-            "Högt uppe i ett träd."
+            "Högst upp i ett träd med många grenar."
           ],
           "correctIndex": 2,
           "aspect": "Hitta efterfrågad information",
-          "explanation": "Steg 5 säger: ”Häng upp hotellet på en solig plats som är skyddad från regn, gärna mot söder och minst en meter över marken.” Det ska alltså varken vara skuggigt, inomhus eller nödvändigtvis högt uppe i ett träd."
+          "explanation": "Steg 5 säger: ”Häng upp hotellet på en solig plats som är skyddad från regn, gärna mot söder och minst en meter över marken.” Det ska alltså varken vara skuggigt, inomhus eller högst upp i ett träd."
         },
         {
           "kind": "open",
@@ -986,9 +986,9 @@
           "maxPoints": 1,
           "prompt": "Varför ska man slipa rörens kanter med sandpapper?",
           "options": [
-            "För att rören ska se finare ut.",
+            "För att rören ska se finare och jämnare ut.",
             "För att vassa kanter kan skada insekternas vingar.",
-            "För att rören ska få plats i lådan.",
+            "För att rören ska få plats bredvid varandra i lådan.",
             "För att lådan inte ska repas."
           ],
           "correctIndex": 1,

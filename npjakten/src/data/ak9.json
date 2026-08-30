@@ -749,10 +749,10 @@
           "maxPoints": 2,
           "prompt": "Varför har frågan ”Vad vill du bli?” blivit svårare för skribenten just nu? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Skribenten har slutat drömma om framtiden.",
+            "Skribenten har slutat drömma om framtiden och orkar inte tänka på den.",
             "Gymnasievalet närmar sig och svaret förväntas vara på allvar.",
-            "Studievägledaren kräver ett skriftligt svar.",
-            "Skribentens föräldrar tjatar om läkaryrket."
+            "Studievägledaren kräver ett skriftligt svar före gymnasievalet.",
+            "Skribentens föräldrar tjatar om att hen borde bli läkare som kusinen."
           ],
           "correctIndex": 1,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
@@ -800,10 +800,10 @@
           "maxPoints": 2,
           "prompt": "Vad menar skribenten med invändningen att frågan ”är fel ställd”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Frågan borde ställas av studievägledaren, inte av släktingar.",
+            "Frågan borde ställas av en studievägledare och inte av släktingar vid middagsbordet.",
             "Frågan antar att man blir ett enda yrke för alltid, fast framtidens yrken inte ens går att förutse.",
-            "Frågan är för svår för barn under tio år.",
-            "Frågan borde handla om betyg i stället för yrken."
+            "Frågan är alldeles för svår att svara på för barn som ännu inte fyllt tio år.",
+            "Frågan borde handla om vilka betyg man behöver i stället för om yrken och drömmar."
           ],
           "correctIndex": 1,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
@@ -833,9 +833,9 @@
           "prompt": "Vilket påstående beskriver bäst hur texten avslutas? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Skribenten landar i ett eget förhållningssätt men håller frågan delvis öppen.",
-            "Skribenten bestämmer sig till slut för att bli läkare.",
-            "Skribenten kommer fram till att frågan inte går att fundera på.",
-            "Skribenten uppmanar läsaren att välja gymnasium tidigt."
+            "Skribenten bestämmer sig till slut för att satsa på läkaryrket som kusinen.",
+            "Skribenten kommer fram till att frågan är omöjlig att fundera vidare på.",
+            "Skribenten uppmanar läsaren att bestämma sig för sitt gymnasieval så tidigt som möjligt."
           ],
           "correctIndex": 0,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
@@ -847,10 +847,10 @@
           "maxPoints": 2,
           "prompt": "Vilket av följande drag i texten är typiskt för en resonerande text? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Numrerade steg som läsaren ska följa i ordning.",
-            "En tydlig tes som drivs igenom hela texten med argument.",
+            "Numrerade steg i en bestämd ordning som läsaren förväntas följa punkt för punkt.",
+            "En enda tydlig tes som drivs igenom hela texten med argument som ska övertyga läsaren.",
             "Tankar som prövas mot varandra med uttryck som ”å ena sidan”, ”men å andra sidan” och ”samtidigt”.",
-            "Saklig fakta utan personliga exempel."
+            "Enbart saklig fakta och statistik, helt utan personliga exempel eller egna tankar."
           ],
           "correctIndex": 2,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
@@ -920,10 +920,10 @@
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
           "prompt": "Vad syftar isen som ”bryter upp” troligen på i dikten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Att vintern är farlig att vistas ute i.",
+            "Att det är farligt att ge sig ut på isen så här års.",
             "Att något i jagets liv håller på att förändras och släppa.",
-            "Att jaget fryser och vill skynda hem.",
-            "Att våren gör vädret varmare."
+            "Att jaget fryser i marskvällen och vill skynda sig hem igen.",
+            "Att jaget minns en vinter då isen brast under hans fötter."
           ],
           "correctIndex": 1,
           "explanation": "Isen bryter upp i mars, samtidigt som jaget står i ett vägskäl mellan hemmet bakom och ”andra sidan” framför sig – uppbrottet i naturen speglar alltså uppbrottet i livet. Att våren gör det varmare är förstås bokstavligt sant, men frågan gäller vad bilden står för, och dikten kopplar isen till det som släpper i jagets tillvaro."
