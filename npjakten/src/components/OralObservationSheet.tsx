@@ -1,17 +1,23 @@
-import type { OralTask } from "../types";
+import type { OralTask, Subject } from "../types";
 
 interface Props {
   task: OralTask;
   gradeLabel: string;
+  // true = visa på skärmen också (annars bara vid utskrift)
+  onScreen?: boolean;
+  subject?: Subject;
 }
 
 // Utskrivbart observationsschema för de muntliga delarna: bedömningspunkterna
 // som rader och plats för fyra elever i gruppen. Endast lärarens utskrift.
-export default function OralObservationSheet({ task, gradeLabel }: Props) {
+export default function OralObservationSheet({ task, gradeLabel, onScreen, subject }: Props) {
   return (
-    <div className="paper facit-sheet hidden print:block">
+    <div className={
+        "paper facit-sheet print:block" + (onScreen ? "" : " hidden")
+      }>
       <p className="text-right text-xs italic text-stone-500">
-        Svenska och svenska som andraspråk, {gradeLabel.toLowerCase()}
+        {subject === "engelska" ? "Engelska" : "Svenska och svenska som andraspråk"},{" "}
+        {gradeLabel.toLowerCase()}
         <br />
         {task.delprov} – observationsschema
       </p>

@@ -34,12 +34,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– I've made pancakes.\n– They smell great!\n– Would you like one?",
           "options": [
-            "I made them yesterday.",
             "Yes, please!",
+            "I made them yesterday.",
             "The kitchen is clean.",
             "I don't like pancakes."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Den tredje repliken är ett erbjudande, så det som passar är att tacka ja. Att säga att man inte tycker om pannkakor motsäger att man nyss sagt att de luktar gott."
         },
         {
@@ -49,12 +49,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Have you seen my keys?\n– No, where did you put them?\n– If I knew that, I wouldn't be looking.",
           "options": [
-            "Sorry, silly question.",
             "They are in the car.",
             "I lost mine too yesterday.",
-            "You should buy new ones."
+            "You should buy new ones.",
+            "Sorry, silly question."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Den sista repliken är ett vänligt påpekande om att frågan var onödig. Då är det naturligt att be om ursäkt för frågan. Att svara var nycklarna är går inte, eftersom personen just sagt att hen inte vet."
         },
         {
@@ -80,12 +80,12 @@
           "prompt": "– You're late again.\n– I'm sorry. The bus didn't come.\n– That's the third time this week.",
           "options": [
             "I'll leave earlier tomorrow.",
-            "The bus is red.",
-            "I'm never late.",
-            "See you next week."
+            "The bus is red and very old.",
+            "I'm never late for school.",
+            "See you again next week then."
           ],
           "correctIndex": 0,
-          "explanation": "Efter en tillsägelse passar det att lova bättring. Att säga ”I'm never late” motsäger det som just sagts om tre gånger på en vecka."
+          "explanation": "Efter en tillsägelse passar det att lova bättring. Att säga ”I'm never late for school” motsäger det som just sagts om tre gånger på en vecka."
         },
         {
           "kind": "multiple-choice",
@@ -109,12 +109,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– What are you reading?\n– A book about volcanoes.\n– Is it any good?",
           "options": [
-            "Yes, I can't put it down.",
             "I don't read books.",
             "It costs ten pounds.",
-            "Volcanoes are cold."
+            "Volcanoes are cold.",
+            "Yes, I can't put it down."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Frågan gäller om boken är bra. Uttrycket ”I can't put it down” betyder att boken är så spännande att man inte kan sluta läsa. Priset svarar inte på frågan."
         },
         {
@@ -139,12 +139,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– We're going camping this weekend.\n– Really? Where?\n– By the lake, if the weather is good.",
           "options": [
-            "I hope it stays dry.",
             "I've never seen a lake.",
             "Camping is on Monday.",
-            "You can swim in the sea."
+            "You can swim in the sea.",
+            "I hope it stays dry."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Orden ”if the weather is good” gör vädret till samtalets ämne, och då passar en förhoppning om uppehåll. Alternativet om måndag motsäger ”this weekend”."
         },
         {
@@ -154,12 +154,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Did you finish your homework?\n– Almost. I've got one page left.\n– You'd better hurry.",
           "options": [
-            "I know, I'm nearly done.",
             "I haven't started.",
             "There's no homework.",
-            "I finished last week."
+            "I finished last week.",
+            "I know, I'm nearly done."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Eleven har redan sagt att en sida återstår, så svaret måste stämma med det. ”I haven't started” och ”There's no homework” motsäger den tidigare repliken."
         },
         {
@@ -184,12 +184,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– I'm going to the shop. Do you need anything?\n– Could you get some milk?\n– Sure. Anything else?",
           "options": [
-            "That's all, thanks.",
             "The shop is closed.",
             "I don't drink milk.",
+            "That's all, thanks.",
             "How much was it?"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Frågan ”Anything else?” ska besvaras med om något mer behövs. Att säga att man inte dricker mjölk motsäger att man nyss bad om mjölk."
         },
         {
@@ -199,13 +199,13 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Look at those clouds.\n– Do you think it will rain?\n– It looks like it.",
           "options": [
+            "The sun is hot today.",
             "Let's take an umbrella.",
-            "The sun is hot.",
-            "I love swimming.",
-            "It rained last year."
+            "I love swimming in the sea.",
+            "It rained a lot last year."
           ],
-          "correctIndex": 0,
-          "explanation": "Eftersom det verkar bli regn är det logiska att föreslå ett paraply. ”The sun is hot” motsäger att himlen är full av moln."
+          "correctIndex": 1,
+          "explanation": "Eftersom det verkar bli regn är det logiska att föreslå ett paraply. ”The sun is hot today” motsäger att himlen är full av moln."
         }
       ]
     },
@@ -287,8 +287,14 @@
           "guidance": "Ge 1 poäng för svar som anger sydvästra England. Stavfel och grammatiska fel som inte stör förståelsen accepteras. Godtagbart: ”In the south-west”; ”south west England”. 0 poäng: ”In Exford” (det är staden i närheten, inte landsdelen).",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "In Exford." },
-            { "points": 1, "answer": "In the south-west of England." }
+            {
+              "points": 0,
+              "answer": "In Exford."
+            },
+            {
+              "points": 1,
+              "answer": "In the south-west of England."
+            }
           ]
         },
         {
@@ -304,8 +310,14 @@
           "guidance": "Ge 1 poäng för svar som visar att bussen går två gånger om dagen. Godtagbart: ”Twice a day”; ”2 times every day”. 0 poäng: ”Every day” (frågan gäller hur ofta, inte vilka dagar).",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Every day." },
-            { "points": 1, "answer": "Twice a day." }
+            {
+              "points": 0,
+              "answer": "Every day."
+            },
+            {
+              "points": 1,
+              "answer": "Twice a day."
+            }
           ]
         },
         {
@@ -321,8 +333,14 @@
           "guidance": "Ge 1 poäng för svar som anger åldrarna 5 till 11. Godtagbart: ”Between 5 and 11”; ”5–11 years old”. 0 poäng: ”Under 15” (det gäller barnbiljetten).",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Under 15 years old." },
-            { "points": 1, "answer": "Between 5 and 11 years old." }
+            {
+              "points": 0,
+              "answer": "Under 15 years old."
+            },
+            {
+              "points": 1,
+              "answer": "Between 5 and 11 years old."
+            }
           ]
         },
         {
@@ -338,8 +356,14 @@
           "guidance": "Ge 1 poäng för ”4 p.m.” eller ”four o'clock”. 0 poäng: ”5 p.m.” (det gäller april till september).",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "At 5 p.m." },
-            { "points": 1, "answer": "At 4 p.m." }
+            {
+              "points": 0,
+              "answer": "At 5 p.m."
+            },
+            {
+              "points": 1,
+              "answer": "At 4 p.m."
+            }
           ]
         },
         {
@@ -356,9 +380,18 @@
           "guidance": "Ge 1 poäng per korrekt skäl, max 2: 1) de flesta ladugårdarna har tak, så regn spelar ingen roll, 2) djuren är vana vid barn och går att klappa/röra. Svaren behöver inte vara grammatiskt korrekta.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "Because it is a real farm with animals." },
-            { "points": 1, "answer": "Because most of the barns have a roof, so rain is not a problem." },
-            { "points": 2, "answer": "Because the barns have roofs, so rain is no problem, and because the animals are used to children and can be touched." }
+            {
+              "points": 0,
+              "answer": "Because it is a real farm with animals."
+            },
+            {
+              "points": 1,
+              "answer": "Because most of the barns have a roof, so rain is not a problem."
+            },
+            {
+              "points": 2,
+              "answer": "Because the barns have roofs, so rain is no problem, and because the animals are used to children and can be touched."
+            }
           ],
           "note": "Du måste skriva två skäl för att få full poäng."
         },
@@ -375,8 +408,14 @@
           "guidance": "Ge 1 poäng för svar som visar att museet är gratis. Godtagbart: ”Nothing”; ”It's free”; ”0 pounds”. 0 poäng: ”£9” (det är entrén till hela parken).",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "It costs £9." },
-            { "points": 1, "answer": "Nothing – it is free." }
+            {
+              "points": 0,
+              "answer": "It costs £9."
+            },
+            {
+              "points": 1,
+              "answer": "Nothing – it is free."
+            }
           ]
         },
         {
@@ -393,9 +432,18 @@
           "guidance": "Ge 1 poäng per korrekt exempel, max 2: ost (cheese) och sylt (jam). Båda ska vara gjorda på gården, men det behöver eleven inte skriva.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "You can buy tickets." },
-            { "points": 1, "answer": "You can buy cheese." },
-            { "points": 2, "answer": "You can buy cheese and jam." }
+            {
+              "points": 0,
+              "answer": "You can buy tickets."
+            },
+            {
+              "points": 1,
+              "answer": "You can buy cheese."
+            },
+            {
+              "points": 2,
+              "answer": "You can buy cheese and jam."
+            }
           ],
           "note": "Du måste skriva två exempel för att få full poäng."
         },
@@ -412,8 +460,14 @@
           "guidance": "Ge 1 poäng för svar som kopplar bilresan till att bussen går så sällan (bara två gånger om dagen). Godtagbart: ”Because the bus only goes twice a day”; ”the bus doesn't go often”. 0 poäng: ”Because parking is free” (det är en fördel, men inte skälet).",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Because parking is free." },
-            { "points": 1, "answer": "Because the bus only runs twice a day." }
+            {
+              "points": 0,
+              "answer": "Because parking is free."
+            },
+            {
+              "points": 1,
+              "answer": "Because the bus only runs twice a day."
+            }
           ]
         },
         {
@@ -430,9 +484,18 @@
           "guidance": "Ge 1 poäng per korrekt aktivitet, max 2. I texten nämns: mata getterna, samla ägg i hönshuset, plantera ett solrosfrö, lära sig mjölka trakon av trä.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "You get a badge and a certificate." },
-            { "points": 1, "answer": "You can feed the goats." },
-            { "points": 2, "answer": "You can feed the goats and collect eggs in the hen house." }
+            {
+              "points": 0,
+              "answer": "You get a badge and a certificate."
+            },
+            {
+              "points": 1,
+              "answer": "You can feed the goats."
+            },
+            {
+              "points": 2,
+              "answer": "You can feed the goats and collect eggs in the hen house."
+            }
           ],
           "note": "Du måste skriva två aktiviteter för att få full poäng."
         },
@@ -449,8 +512,14 @@
           "guidance": "Ge 1 poäng för svar som visar att parken ofta blir full (särskilt på helger och lov) och att fler besökare då inte släpps in. Godtagbart: ”Because the park can be full”; ”otherwise you can't get in”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Because tickets are expensive." },
-            { "points": 1, "answer": "Because the park is often full and then you cannot get in." }
+            {
+              "points": 0,
+              "answer": "Because tickets are expensive."
+            },
+            {
+              "points": 1,
+              "answer": "Because the park is often full and then you cannot get in."
+            }
           ]
         },
         {
@@ -463,13 +532,22 @@
             2
           ],
           "aspect": "Hitta specifik information",
-          "prompt": "What two things can you do outside the farm buildings without using a car?",
-          "guidance": "Ge 1 poäng per korrekt aktivitet, max 2: gå på den två mil långa (two-mile) vandringsleden och leka på den stora träleplatsen vid parkeringen.",
+          "prompt": "What two things can you do outside the farm buildings?",
+          "guidance": "Ge 1 poäng per korrekt aktivitet, max 2: gå den två engelska mil långa (two-mile) vandringsleden och leka på den stora trälekplatsen vid parkeringen.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "You can look at the animals." },
-            { "points": 1, "answer": "You can walk on the walking trail." },
-            { "points": 2, "answer": "You can walk the two-mile trail and play in the wooden playground." }
+            {
+              "points": 0,
+              "answer": "You can look at the animals."
+            },
+            {
+              "points": 1,
+              "answer": "You can walk on the walking trail."
+            },
+            {
+              "points": 2,
+              "answer": "You can walk the two-mile trail and play in the wooden playground."
+            }
           ],
           "note": "Du måste skriva två saker för att få full poäng."
         },
@@ -487,9 +565,18 @@
           "guidance": "Ge 1 poäng för klädrådet (stövlar eller gamla skor) och 1 poäng för skälet (fälten är leriga, även på sommaren). Max 2 poäng.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "You should wear a coat because it is cold." },
-            { "points": 1, "answer": "You should wear boots or old shoes." },
-            { "points": 2, "answer": "You should wear boots or old shoes, because the fields are muddy even in summer." }
+            {
+              "points": 0,
+              "answer": "You should wear a coat because it is cold."
+            },
+            {
+              "points": 1,
+              "answer": "You should wear boots or old shoes."
+            },
+            {
+              "points": 2,
+              "answer": "You should wear boots or old shoes, because the fields are muddy even in summer."
+            }
           ]
         }
       ]
@@ -547,8 +634,14 @@
           "guidance": "Ge 1 poäng för ”fisherman”. Godtagbart: ”a fisher”; ”he fished”. 0 poäng: ”he sold vegetables” (det var mamman).",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "He was a farmer." },
-            { "points": 1, "answer": "He was a fisherman." }
+            {
+              "points": 0,
+              "answer": "He was a farmer."
+            },
+            {
+              "points": 1,
+              "answer": "He was a fisherman."
+            }
           ]
         },
         {
@@ -564,8 +657,14 @@
           "guidance": "Ge 1 poäng för ”Scotland”. 0 poäng: ”England”; ”Italy”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "In England." },
-            { "points": 1, "answer": "In Scotland." }
+            {
+              "points": 0,
+              "answer": "In England."
+            },
+            {
+              "points": 1,
+              "answer": "In Scotland."
+            }
           ]
         },
         {
@@ -576,11 +675,11 @@
           "prompt": "Why did the children have to start helping the family?",
           "options": [
             "Their mother lost her job at the market",
-            "Their father could no longer work",
             "The family moved to a new town",
+            "Their father could no longer work",
             "Their father wanted them to earn money"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Texten säger att pappan skadade ryggen och inte längre kunde följa med båtarna – ”From that day the children had to help”. Det var alltså skadan, inte ett önskemål, som gjorde att barnen fick arbeta."
         },
         {
@@ -590,12 +689,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What did Ellen enjoy about working at the market?",
           "options": [
-            "Standing outside in the cold",
-            "Earning her own money",
             "Seeing people change their minds because of her",
-            "Selling vegetables to her friends"
+            "Standing outside in the cold every Saturday",
+            "Calling out the prices more quietly than others",
+            "Getting Saturday mornings off from her job"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "Sista meningen i första delen säger det rakt ut: hon älskade att se folk stanna, le och ändra sig på grund av något hon sagt. Att hon hatade kylan sägs uttryckligen."
         },
         {
@@ -612,9 +711,18 @@
           "guidance": "Ge 2 poäng för svar som visar båda leden: hon köpte en gammal cykel och tog bort bakhjulet, och lät stadens smed bygga en liten kärra i stället. Ge 1 poäng för ett av leden.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "She bought a shop with her own money." },
-            { "points": 1, "answer": "She bought an old bicycle." },
-            { "points": 2, "answer": "She bought an old bicycle, took off the back wheel and asked the blacksmith to build a cart there." }
+            {
+              "points": 0,
+              "answer": "She bought a shop with her own money."
+            },
+            {
+              "points": 1,
+              "answer": "She bought an old bicycle."
+            },
+            {
+              "points": 2,
+              "answer": "She bought an old bicycle, took off the back wheel and asked the blacksmith to build a cart there."
+            }
           ]
         },
         {
@@ -624,12 +732,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "Why was the first summer difficult for Ellen?",
           "options": [
-            "She had no freezer and could not sell in the rain",
             "The blacksmith never finished her cart",
             "The Italian café sold cheaper ice cream",
-            "She was too young to have her own business"
+            "She was too young to have her own business",
+            "She had no freezer and could not sell in the rain"
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Texten nämner två svårigheter: hon hade ingen frys och kunde bara göra så mycket som hon sålde samma dag, och regniga dagar sålde hon ingenting. Kaféets priser nämns aldrig."
         },
         {
@@ -645,8 +753,14 @@
           "guidance": "Ge 1 poäng för svar som nämner löftet till mamman om att försöka i tre somrar innan hon bestämde sig. Godtagbart: ”She promised her mother to try three summers”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "She got more customers." },
-            { "points": 1, "answer": "She had promised her mother to try for three summers first." }
+            {
+              "points": 0,
+              "answer": "She got more customers."
+            },
+            {
+              "points": 1,
+              "answer": "She had promised her mother to try for three summers first."
+            }
           ]
         },
         {
@@ -657,11 +771,11 @@
           "prompt": "What did Ellen do that the café owners did not?",
           "options": [
             "She opened her shop very early",
-            "She asked her customers what they wanted",
             "She sold coffee as well as ice cream",
+            "She asked her customers what they wanted",
             "She painted her cart a bright colour"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Texten säger uttryckligen: ”Ellen had learned something the café owners had not: she asked her customers what they wanted.” De mindre strutarna och den tidiga öppningen är följder av just det."
         },
         {
@@ -678,9 +792,18 @@
           "guidance": "Ge 1 poäng per korrekt exempel, max 2: 1) hon gjorde en mindre strut till halva priset när barnen tyckte att strutarna var för stora, 2) hon började komma klockan fem på morgonen när fiskarna kom in, och sålde även kaffe.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "She opened fourteen shops along the coast." },
-            { "points": 1, "answer": "She made a smaller cone for half the price." },
-            { "points": 2, "answer": "She made a smaller and cheaper cone for the children, and she came at five in the morning with coffee for the fishermen." }
+            {
+              "points": 0,
+              "answer": "She opened fourteen shops along the coast."
+            },
+            {
+              "points": 1,
+              "answer": "She made a smaller cone for half the price."
+            },
+            {
+              "points": 2,
+              "answer": "She made a smaller and cheaper cone for the children, and she came at five in the morning with coffee for the fishermen."
+            }
           ],
           "note": "Du måste skriva två exempel för att få full poäng."
         },
@@ -691,12 +814,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "Why did Ellen dislike the name ‘the Ice Cream Queen'?",
           "options": [
-            "She thought it sounded old-fashioned",
-            "She had never wanted to be famous",
-            "She felt a queen does nothing while she worked hard",
-            "The newspapers had spelt her name wrongly"
+            "She thought the name sounded much too old-fashioned",
+            "She had wanted the shops to be named after her town",
+            "The newspapers had spelt her name wrongly in 1975",
+            "She felt a queen does nothing while she worked hard"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "Hennes egna ord förklarar det: ”A queen sits down. I have never sat down in my life.” Hon tyckte alltså att namnet gav fel bild av hur hårt hon arbetade."
         },
         {
@@ -712,8 +835,14 @@
           "guidance": "Ge 1 poäng för svar som visar att hon gav pengarna till en fond som betalar för unga från hennes stad att utbilda sig till ett yrke. Godtagbart: ”She gave it to young people so they could learn a job”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "She bought a big house." },
-            { "points": 1, "answer": "She gave it to a fund that helps young people train for a job." }
+            {
+              "points": 0,
+              "answer": "She bought a big house."
+            },
+            {
+              "points": 1,
+              "answer": "She gave it to a fund that helps young people train for a job."
+            }
           ]
         },
         {
@@ -723,12 +852,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "Why did so many people come when Ellen died, even though they had never met her?",
           "options": [
+            "She had helped them without them knowing her",
             "They wanted to see the famous shops",
             "Her family had invited the whole town",
-            "She had helped them without them knowing her",
             "They had all worked for her company"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "Sista meningen förklarar det: de hade vuxit upp med hennes glass eller lärt sig ett yrke med hjälp av hennes pengar. Hon hade alltså påverkat deras liv utan att de träffat henne."
         },
         {
@@ -745,9 +874,18 @@
           "guidance": "Ge 1 poäng per korrekt exempel, max 2. Möjliga exempel: hon sparade i tre månader för att betala smeden; hon fortsatte trots att hon inte sålde något på regniga dagar; hon tänkte två gånger på att sluta men höll sitt löfte om tre somrar; hon började arbeta klockan fem på morgonen.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "She sold ice cream for many years and became rich." },
-            { "points": 1, "answer": "She kept going even though she sold nothing on rainy days." },
-            { "points": 2, "answer": "She saved for three months to pay the blacksmith, and she went on even though she twice thought about giving up." }
+            {
+              "points": 0,
+              "answer": "She sold ice cream for many years and became rich."
+            },
+            {
+              "points": 1,
+              "answer": "She kept going even though she sold nothing on rainy days."
+            },
+            {
+              "points": 2,
+              "answer": "She saved for three months to pay the blacksmith, and she went on even though she twice thought about giving up."
+            }
           ],
           "note": "Du måste skriva två exempel för att få full poäng."
         }
@@ -786,12 +924,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Is this seat taken?\n– No, go ahead.\n– Thanks, the train is really full today.",
           "options": [
-            "It always is on Fridays.",
             "I don't like trains.",
+            "It always is on Fridays.",
             "The seat is broken.",
             "I'm getting off here."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Kommentaren om att tåget är fullt bjuder in till ett medhåll. Att säga att man kliver av skulle vara konstigt när man just erbjudit platsen."
         },
         {
@@ -802,11 +940,11 @@
           "prompt": "– Could you turn the music down a bit?\n– Sorry, is it too loud?\n– Just a little.",
           "options": [
             "I'll turn it off completely.",
-            "There, is that better?",
             "I can't hear anything.",
+            "There, is that better?",
             "Music is good for you."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Personen bad bara om lite lägre volym, så att stänga av helt är en överreaktion. Det naturliga är att sänka och fråga om det räcker."
         },
         {
@@ -816,12 +954,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– I forgot my lunch at home.\n– Again? That's the second time this week.\n– I know, I was in a hurry.",
           "options": [
-            "You can share mine.",
             "Lunch is at twelve.",
             "I never forget mine.",
+            "You can share mine.",
             "Go home and get it."
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Situationen kallar på hjälp, och att dela med sig är det vänliga svaret. ”I never forget mine” svarar inte på problemet."
         },
         {
@@ -846,12 +984,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Do you know how to get to the library?\n– Straight ahead and then left.\n– Is it far?",
           "options": [
-            "About five minutes.",
             "It's a nice library.",
             "I go there often.",
-            "Turn right instead."
+            "Turn right instead.",
+            "About five minutes."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Frågan gäller avståndet, så svaret ska handla om tid eller sträcka. Att ändra vägbeskrivningen mitt i vore ologiskt."
         },
         {
@@ -877,11 +1015,11 @@
           "prompt": "– Your dog is huge!\n– He's only eight months old.\n– Really? How big will he get?",
           "options": [
             "He was smaller before.",
-            "About twice this size.",
             "He's a very good dog.",
-            "I got him last year."
+            "I got him last year.",
+            "About twice this size."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Frågan handlar om framtiden – hur stor hunden ska bli. Bara ett av alternativen svarar på det."
         },
         {
@@ -891,12 +1029,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– I can't find my glasses anywhere.\n– Have you looked in the kitchen?\n– Twice.",
           "options": [
-            "They're on your head.",
             "You need new glasses.",
             "I don't wear glasses.",
-            "The kitchen is clean."
+            "The kitchen is clean.",
+            "They're on your head."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Den lite skämtsamma poängen är att glasögonen suttit på huvudet hela tiden. De andra alternativen hjälper inte personen att hitta dem."
         },
         {
@@ -906,12 +1044,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– We're moving to Spain in August.\n– Wow! Are you happy about it?\n– Yes and no.",
           "options": [
-            "What do you mean?",
             "Spain is in Europe.",
+            "What do you mean?",
             "I've been to Spain.",
             "When did you move?"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Svaret ”Yes and no” är otydligt, och då är det naturligt att be personen förklara. Frågan om när de flyttade motsäger att flytten sker i augusti."
         },
         {
@@ -921,12 +1059,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Would you like tea or coffee?\n– Tea, please.\n– Milk and sugar?",
           "options": [
-            "Just milk, thanks.",
             "No, I'd like coffee.",
             "Tea is my favourite.",
+            "Just milk, thanks.",
             "I'll make it myself."
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Frågan gäller vad man vill ha i teet, så svaret ska välja mellan mjölk och socker. Att byta till kaffe motsäger att man just bad om te."
         },
         {
@@ -936,12 +1074,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Did you see the match last night?\n– No, I fell asleep on the sofa.\n– You missed a good one.",
           "options": [
-            "Don't tell me the score!",
             "I never watch football.",
             "The sofa is comfortable.",
-            "It was at eight o'clock."
+            "It was at eight o'clock.",
+            "Don't tell me the score!"
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Personen har missat matchen men kan se den senare, så det logiska är att be om att inte få veta resultatet. ”I never watch football” motsäger att hen tänkte se den."
         },
         {
@@ -951,12 +1089,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Can I ask you something?\n– Of course.\n– It's a bit personal.",
           "options": [
-            "Ask me anyway.",
             "I don't know you.",
+            "Ask me anyway.",
             "That's a good question.",
             "Sorry, I'm busy."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Personen har redan sagt ja, så det som passar är att uppmuntra frågan trots att den är personlig. ”Sorry, I'm busy” motsäger ”Of course”."
         }
       ]
@@ -1039,8 +1177,14 @@
           "guidance": "Ge 1 poäng för ”Germany”. Godtagbart: ”in southern Germany”. 0 poäng: ”Munich” (det är staden man reser från).",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "In Munich." },
-            { "points": 1, "answer": "In Germany." }
+            {
+              "points": 0,
+              "answer": "In Munich."
+            },
+            {
+              "points": 1,
+              "answer": "In Germany."
+            }
           ]
         },
         {
@@ -1056,8 +1200,14 @@
           "guidance": "Ge 1 poäng för åldrarna 11 till 16. Godtagbart: ”between 11 and 16”; ”11–16”. 0 poäng: ”twenty” (det är antalet deltagare i gruppen).",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "You must be twenty." },
-            { "points": 1, "answer": "Between 11 and 16 years old." }
+            {
+              "points": 0,
+              "answer": "You must be twenty."
+            },
+            {
+              "points": 1,
+              "answer": "Between 11 and 16 years old."
+            }
           ]
         },
         {
@@ -1073,8 +1223,14 @@
           "guidance": "Ge 1 poäng för fjorton dagar eller två veckor. 0 poäng: ”three camps” (det är antalet läger per sommar).",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "Three weeks." },
-            { "points": 1, "answer": "Fourteen days." }
+            {
+              "points": 0,
+              "answer": "Three weeks."
+            },
+            {
+              "points": 1,
+              "answer": "Fourteen days."
+            }
           ]
         },
         {
@@ -1091,9 +1247,18 @@
           "guidance": "Ge 1 poäng per korrekt exempel, max 2. I texten nämns: sängplats/boende, all mat, alla aktiviteter och tågbiljetten från München.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "The travel to Munich." },
-            { "points": 1, "answer": "All the meals." },
-            { "points": 2, "answer": "All the meals and all the activities." }
+            {
+              "points": 0,
+              "answer": "The travel to Munich."
+            },
+            {
+              "points": 1,
+              "answer": "All the meals."
+            },
+            {
+              "points": 2,
+              "answer": "All the meals and all the activities."
+            }
           ],
           "note": "Du måste skriva två exempel för att få full poäng."
         },
@@ -1110,8 +1275,14 @@
           "guidance": "Ge 1 poäng för svar som visar att de badar/simmar i sjön. Godtagbart: ”They swim in the lake”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "They tell stories by the fire." },
-            { "points": 1, "answer": "They swim in the lake." }
+            {
+              "points": 0,
+              "answer": "They tell stories by the fire."
+            },
+            {
+              "points": 1,
+              "answer": "They swim in the lake."
+            }
           ]
         },
         {
@@ -1127,8 +1298,14 @@
           "guidance": "Ge 1 poäng för svar som visar att ledarna kommer från olika länder och att engelska är det språk alla delar. Godtagbart: ”because English is the language everybody shares”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Because everybody speaks German." },
-            { "points": 1, "answer": "Because the leaders come from different countries and English is the language they all share." }
+            {
+              "points": 0,
+              "answer": "Because everybody speaks German."
+            },
+            {
+              "points": 1,
+              "answer": "Because the leaders come from different countries and English is the language they all share."
+            }
           ]
         },
         {
@@ -1144,8 +1321,14 @@
           "guidance": "Ge 1 poäng för svar som visar att telefonerna samlas in första kvällen och lämnas tillbaka sista dagen.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "They can use them in the evening." },
-            { "points": 1, "answer": "They are collected on the first evening and given back on the last day." }
+            {
+              "points": 0,
+              "answer": "They can use them in the evening."
+            },
+            {
+              "points": 1,
+              "answer": "They are collected on the first evening and given back on the last day."
+            }
           ]
         },
         {
@@ -1161,8 +1344,14 @@
           "guidance": "Ge 1 poäng för svar som visar att ingen längre frågar efter dem. Godtagbart: ”nobody asks for them any more”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "The campers go home." },
-            { "points": 1, "answer": "Nobody asks for their phone any more." }
+            {
+              "points": 0,
+              "answer": "The campers go home."
+            },
+            {
+              "points": 1,
+              "answer": "Nobody asks for their phone any more."
+            }
           ]
         },
         {
@@ -1179,9 +1368,18 @@
           "guidance": "Ge 1 poäng för regeln (man får bara bada när en ledare är på stranden) och 1 poäng för följden (man skickas hem). Max 2 poäng.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "You are not allowed to use your phone." },
-            { "points": 1, "answer": "You may only swim when a leader is on the beach." },
-            { "points": 2, "answer": "You may only use the lake when a leader is on the beach, and campers who break the rule are sent home." }
+            {
+              "points": 0,
+              "answer": "You are not allowed to use your phone."
+            },
+            {
+              "points": 1,
+              "answer": "You may only swim when a leader is on the beach."
+            },
+            {
+              "points": 2,
+              "answer": "You may only use the lake when a leader is on the beach, and campers who break the rule are sent home."
+            }
           ]
         },
         {
@@ -1198,9 +1396,18 @@
           "guidance": "Ge 1 poäng per korrekt aktivitet, max 2. I texten nämns: kanotpaddling, klättring, fotografering, matlagning och fotboll.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "You can sleep and play cards." },
-            { "points": 1, "answer": "You can go canoeing." },
-            { "points": 2, "answer": "You can go canoeing and climbing." }
+            {
+              "points": 0,
+              "answer": "You can sleep and play cards."
+            },
+            {
+              "points": 1,
+              "answer": "You can go canoeing."
+            },
+            {
+              "points": 2,
+              "answer": "You can go canoeing and climbing."
+            }
           ],
           "note": "Du måste skriva två aktiviteter för att få full poäng."
         },
@@ -1217,8 +1424,14 @@
           "guidance": "Ge 1 poäng för svar som visar att alla måste berätta en historia vid brasan. Godtagbart: ”tell a story at the fire”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Cook a meal for the group." },
-            { "points": 1, "answer": "Tell a story at the evening fire." }
+            {
+              "points": 0,
+              "answer": "Cook a meal for the group."
+            },
+            {
+              "points": 1,
+              "answer": "Tell a story at the evening fire."
+            }
           ]
         },
         {
@@ -1234,8 +1447,14 @@
           "guidance": "Ge 1 poäng för svar som visar att man ska skriva/höra av sig i förväg, så hämtas man med bil. Godtagbart: ”write to them before”; ”tell them in advance”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Take the camp bus." },
-            { "points": 1, "answer": "Write to the camp in advance, and they will pick you up by car." }
+            {
+              "points": 0,
+              "answer": "Take the camp bus."
+            },
+            {
+              "points": 1,
+              "answer": "Write to the camp in advance, and they will pick you up by car."
+            }
           ]
         }
       ]
@@ -1295,8 +1514,14 @@
           "guidance": "Ge 1 poäng för ”radios”. Godtagbart: ”he repaired radios in a shop”. 0 poäng: ”he was a nurse” (det var mamman).",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "He was a nurse." },
-            { "points": 1, "answer": "He repaired radios." }
+            {
+              "points": 0,
+              "answer": "He was a nurse."
+            },
+            {
+              "points": 1,
+              "answer": "He repaired radios."
+            }
           ]
         },
         {
@@ -1309,11 +1534,17 @@
           ],
           "aspect": "Hitta specifik information",
           "prompt": "In which country was Ines born?",
-          "guidance": "Ge 1 poäng för ”Norway”. Godtagbart: ”in the north of Norway”. 0 poäng: ”Tromsø” om landet inte framgår? Nej – Tromsø godtas inte som land, men ”Norway” krävs.",
+          "guidance": "Ge 1 poäng för ”Norway”. Godtagbart: ”in the north of Norway”. 0 poäng för enbart ”Tromsø”, eftersom frågan gäller landet.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "In Sweden." },
-            { "points": 1, "answer": "In Norway." }
+            {
+              "points": 0,
+              "answer": "In Sweden."
+            },
+            {
+              "points": 1,
+              "answer": "In Norway."
+            }
           ]
         },
         {
@@ -1324,11 +1555,11 @@
           "prompt": "What interested Ines in her father's shop?",
           "options": [
             "Learning how to repair radios",
-            "The moment a voice came out of a radio",
             "Meeting the customers who came in",
-            "Listening to music from London"
+            "Listening to music from London",
+            "The moment a voice came out of a radio"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Texten säger uttryckligen att hon inte var intresserad av radioapparaterna i sig, utan av ögonblicket när en röst hördes ur dem – från Moskva, London eller en fiskebåt."
         },
         {
@@ -1339,11 +1570,11 @@
           "prompt": "How did Ines get her first tape recorder?",
           "options": [
             "She bought it with her own money",
-            "She found it in the harbour",
             "Her father gave it to her to mend",
+            "She found it in the harbour",
             "It was a present from her mother"
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "explanation": "Pappan gav henne en trasig bandspelare och sa att hon fick behålla den om hon kunde laga den. Det tog henne en månad."
         },
         {
@@ -1359,8 +1590,14 @@
           "guidance": "Ge 1 poäng för svar som visar att hon var uttråkad och/eller ville spela in ljud som höll på att försvinna. Godtagbart: ”she was bored”; ”she wanted to record sounds before they disappeared”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "She moved to another city." },
-            { "points": 1, "answer": "She was bored, and she wanted to record sounds that were disappearing." }
+            {
+              "points": 0,
+              "answer": "She moved to another city."
+            },
+            {
+              "points": 1,
+              "answer": "She was bored, and she wanted to record sounds that were disappearing."
+            }
           ]
         },
         {
@@ -1370,12 +1607,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What did Ines discover at the harbour in 2004?",
           "options": [
-            "The boats and their sounds were gone",
             "A museum had opened there",
             "Her old school had closed down",
+            "The boats and their sounds were gone",
             "The fishermen did not remember her"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Hamnen var nästan tom: båtarna var borta och med dem ljuden hon mindes – motorerna, ropen, isen som hälldes i lådorna."
         },
         {
@@ -1392,9 +1629,18 @@
           "guidance": "Ge 1 poäng för vardera: alla museer hade fotografier av hamnen, men inte en sekund av ljud. Max 2 poäng.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "They had old fishing boats." },
-            { "points": 1, "answer": "They all had photographs of the harbour." },
-            { "points": 2, "answer": "They all had photographs of the harbour, but not one second of sound." }
+            {
+              "points": 0,
+              "answer": "They had old fishing boats."
+            },
+            {
+              "points": 1,
+              "answer": "They all had photographs of the harbour."
+            },
+            {
+              "points": 2,
+              "answer": "They all had photographs of the harbour, but not one second of sound."
+            }
           ]
         },
         {
@@ -1404,12 +1650,12 @@
           "aspect": "Hitta specifik information",
           "prompt": "What happened during Ines's first two years as a sound collector?",
           "options": [
-            "She travelled to eleven countries",
             "She earned almost no money",
+            "She travelled to eleven countries",
             "Her old colleagues joined her",
             "She won a prize for her work"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Texten säger att kollegerna trodde att hon gjorde ett misstag och att hon under de första två åren tjänade nästan ingenting. De elva länderna kom senare."
         },
         {
@@ -1426,9 +1672,18 @@
           "guidance": "Ge 1 poäng per korrekt exempel, max 2. I texten nämns: en glaciär som smälter, den sista fungerande pappersbruket i en dal, en skola i en by med bara nio barn kvar.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "She records birds and cars." },
-            { "points": 1, "answer": "She records a glacier melting." },
-            { "points": 2, "answer": "She records a melting glacier and the last working paper mill in a valley." }
+            {
+              "points": 0,
+              "answer": "She records birds and cars."
+            },
+            {
+              "points": 1,
+              "answer": "She records a glacier melting."
+            },
+            {
+              "points": 2,
+              "answer": "She records a melting glacier and the last working paper mill in a valley."
+            }
           ],
           "note": "Du måste skriva två exempel för att få full poäng."
         },
@@ -1446,9 +1701,18 @@
           "guidance": "Ge 1 poäng för vardera ledet: hon lägger aldrig till något efteråt, och hon tar aldrig bort ett ljud hon inte tycker om. Max 2 poäng.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "She records only in the morning." },
-            { "points": 1, "answer": "She never adds anything afterwards." },
-            { "points": 2, "answer": "She never adds anything afterwards, and she never removes a sound she does not like." }
+            {
+              "points": 0,
+              "answer": "She records only in the morning."
+            },
+            {
+              "points": 1,
+              "answer": "She never adds anything afterwards."
+            },
+            {
+              "points": 2,
+              "answer": "She never adds anything afterwards, and she never removes a sound she does not like."
+            }
           ]
         },
         {
@@ -1458,10 +1722,10 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What does Ines mean when she says ‘I am not making music'?",
           "options": [
-            "She cannot play an instrument",
+            "She never learned to play a musical instrument",
             "She wants the recording to be exactly like the real place",
-            "She thinks music is less important than sound",
-            "She only records places without people"
+            "She thinks music matters less than everyday sound",
+            "She only records in places where there are no people"
           ],
           "correctIndex": 1,
           "explanation": "Exemplet med bilen som kör förbi förklarar det: bilen får vara kvar, eftersom det är så platsen låter. Hon vill återge verkligheten, inte skapa något vackert."
@@ -1475,10 +1739,10 @@
           "options": [
             "They pay a small fee each time",
             "They must ask a school for permission",
-            "Free on a website she pays for herself",
-            "Only in museums in northern Norway"
+            "Only in museums in northern Norway",
+            "Free on a website she pays for herself"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "Inspelningarna är gratis för vem som helst att lyssna på, på en webbplats som hon själv betalar för."
         },
         {
@@ -1495,9 +1759,18 @@
           "guidance": "Ge 1 poäng för att han hittat en inspelning från gatan där han växte upp, och 1 poäng för att han spelat upp den för sin mamma, som var 91 och inte varit tillbaka på sjuttio år.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "He wanted to record sounds himself." },
-            { "points": 1, "answer": "He had found a recording of the street where he grew up." },
-            { "points": 2, "answer": "He had found a recording of his childhood street and played it to his mother, who was ninety-one and had not been back for seventy years." }
+            {
+              "points": 0,
+              "answer": "He wanted to record sounds himself."
+            },
+            {
+              "points": 1,
+              "answer": "He had found a recording of the street where he grew up."
+            },
+            {
+              "points": 2,
+              "answer": "He had found a recording of his childhood street and played it to his mother, who was ninety-one and had not been back for seventy years."
+            }
           ]
         },
         {
@@ -1514,9 +1787,18 @@
           "guidance": "Ge 2 poäng för svar som visar att brevet från mannen i Kanada är hennes svar: det visar vad arbetet betyder för andra människor, bättre än ord kan göra. Ge 1 poäng för svar som bara säger att brevet hänger där.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "Because she does not like to talk to people." },
-            { "points": 1, "answer": "Because the letter from Canada is on the wall." },
-            { "points": 2, "answer": "Because the letter shows what her work means to other people, and that says more than she could explain in words." }
+            {
+              "points": 0,
+              "answer": "Because she does not like to talk to people."
+            },
+            {
+              "points": 1,
+              "answer": "Because the letter from Canada is on the wall."
+            },
+            {
+              "points": 2,
+              "answer": "Because the letter shows what her work means to other people, and that says more than she could explain in words."
+            }
           ]
         }
       ]
@@ -1560,8 +1842,14 @@
           "guidance": "Ge 1 poäng för ”ago”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "ago" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "ago"
+            }
           ]
         },
         {
@@ -1574,11 +1862,17 @@
           ],
           "aspect": "Granska språk och struktur",
           "prompt": "“Are you hungry?”\n“Yes, I didn't have ______ this morning. I overslept.”",
-          "guidance": "Ge 1 poäng för ”breakfast”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "guidance": "Ge 1 poäng för ”breakfast”. Även ”time” och ”anything” ger full poäng, eftersom de passar både grammatiskt och innehållsligt. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "breakfast" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "breakfast"
+            }
           ]
         },
         {
@@ -1594,8 +1888,14 @@
           "guidance": "Ge 1 poäng för ”help”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "help" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "help"
+            }
           ]
         },
         {
@@ -1611,8 +1911,14 @@
           "guidance": "Ge 1 poäng för ”to”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "to" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "to"
+            }
           ]
         },
         {
@@ -1628,8 +1934,14 @@
           "guidance": "Ge 1 poäng för ”here”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "here" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "here"
+            }
           ]
         },
         {
@@ -1642,11 +1954,17 @@
           ],
           "aspect": "Granska språk och struktur",
           "prompt": "“Why are you wearing two jumpers?”\n“Because it's so ______ in this room.”",
-          "guidance": "Ge 1 poäng för ”cold”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "guidance": "Ge 1 poäng för ”cold”. Även ”chilly” och ”freezing” ger full poäng. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "cold" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "cold"
+            }
           ]
         },
         {
@@ -1658,12 +1976,18 @@
             1
           ],
           "aspect": "Granska språk och struktur",
-          "prompt": "“How ______ does the film start?”\n“At half past seven.”",
-          "guidance": "Ge 1 poäng för ”soon”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "prompt": "“______ time does the film start?”\n“At half past seven.”",
+          "guidance": "Ge 1 poäng för ”What”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "soon" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "What"
+            }
           ]
         },
         {
@@ -1676,11 +2000,17 @@
           ],
           "aspect": "Granska språk och struktur",
           "prompt": "“I've never been to London.”\n“______ have I. Let's go together one day!”",
-          "guidance": "Ge 1 poäng för ”Neither”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
+          "guidance": "Ge 1 poäng för ”Neither”. Även ”Nor” ger full poäng. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "Neither" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "Neither"
+            }
           ]
         },
         {
@@ -1696,8 +2026,14 @@
           "guidance": "Ge 1 poäng för ”please”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "please" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "please"
+            }
           ]
         },
         {
@@ -1713,8 +2049,14 @@
           "guidance": "Ge 1 poäng för ”best”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "best" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "best"
+            }
           ]
         },
         {
@@ -1730,8 +2072,14 @@
           "guidance": "Ge 1 poäng för ”in”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "in" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "in"
+            }
           ]
         },
         {
@@ -1747,8 +2095,14 @@
           "guidance": "Ge 1 poäng för ”worry”. Stavfel som inte gör ordet obegripligt accepteras. Endast ett ord ska skrivas.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "—" },
-            { "points": 1, "answer": "worry" }
+            {
+              "points": 0,
+              "answer": "—"
+            },
+            {
+              "points": 1,
+              "answer": "worry"
+            }
           ]
         }
       ]
@@ -1802,11 +2156,11 @@
           "prompt": "When you speak −X−, people can hardly hear you.",
           "options": [
             "loudly",
-            "quietly",
             "clearly",
-            "quickly"
+            "quickly",
+            "quietly"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "”Quietly” betyder tyst eller lågmält, så då hörs man knappt. ”Loudly” är motsatsen, och ”quickly” handlar om fart, inte volym."
         },
         {
@@ -1818,10 +2172,10 @@
           "options": [
             "rain",
             "fog",
-            "snow",
-            "ice"
+            "ice",
+            "snow"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "Snö faller från himlen. Is (ice) bildas på marken eller på vatten, och dimma (fog) faller inte."
         },
         {
@@ -1831,12 +2185,12 @@
           "aspect": "Granska språk och struktur",
           "prompt": "If people are −X−, they are not afraid of dangerous things.",
           "options": [
-            "brave",
             "famous",
             "careful",
+            "brave",
             "lucky"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "”Brave” betyder modig. ”Careful” är närmast motsatsen i sammanhanget, och ”famous” och ”lucky” handlar om annat."
         },
         {
@@ -1847,11 +2201,11 @@
           "prompt": "A −X− is a small animal with long ears that likes carrots.",
           "options": [
             "mouse",
-            "rabbit",
             "squirrel",
+            "rabbit",
             "hedgehog"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "En rabbit (kanin) har långa öron och äter gärna morötter. En squirrel har yvig svans och en hedgehog har taggar."
         },
         {
@@ -1861,12 +2215,12 @@
           "aspect": "Granska språk och struktur",
           "prompt": "To cook something in an oven is to −X− it.",
           "options": [
+            "bake",
             "boil",
             "fry",
-            "bake",
             "freeze"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "”Bake” är att grädda eller baka i ugn. ”Boil” är att koka i vatten och ”fry” att steka i panna."
         },
         {
@@ -1877,11 +2231,11 @@
           "prompt": "You use a −X− to find out what time it is.",
           "options": [
             "ruler",
-            "clock",
             "compass",
+            "clock",
             "calendar"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "En clock visar tiden. En compass visar väderstreck och en calendar vilken dag det är."
         },
         {
@@ -1893,10 +2247,10 @@
           "options": [
             "young",
             "tall",
-            "old",
-            "tired"
+            "tired",
+            "old"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "”Old” betyder gammal, alltså att man levt länge. ”Tired” handlar om trötthet just nu, inte om ålder."
         },
         {
@@ -1921,12 +2275,12 @@
           "aspect": "Granska språk och struktur",
           "prompt": "If a room is −X−, there is nothing and nobody in it.",
           "options": [
-            "empty",
             "crowded",
             "narrow",
+            "empty",
             "dark"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "”Empty” betyder tom. ”Crowded” betyder motsatsen – fullt med folk – och ”dark” handlar om ljuset."
         },
         {
@@ -1936,12 +2290,12 @@
           "aspect": "Granska språk och struktur",
           "prompt": "A −X− is the person who leads a school.",
           "options": [
+            "headteacher",
             "teacher",
             "cleaner",
-            "headteacher",
             "student"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "En headteacher är rektor och leder skolan. En teacher undervisar men leder inte hela skolan."
         },
         {
@@ -1967,11 +2321,11 @@
           "prompt": "A −X− is a long seat where several people can sit, often in a park.",
           "options": [
             "chair",
-            "bench",
             "shelf",
+            "bench",
             "stool"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "En bench är en bänk där flera får plats. En chair och en stool är till för en person."
         },
         {
@@ -2014,7 +2368,7 @@
           "heading": "Sleep Better – by Maya and Idris, class 6B",
           "paragraphs": [
             "Maya and Idris want to become doctors one day, and they often write for the school magazine. This time they have written about sleep. In their article they __(1)__ us how to get a better night's rest.",
-            "“We think sleep is a great __(2)__ of getting more energy. Sleep helps your body grow, it helps your brain remember what you learned at school, and it is friendly __(3)__ your body in every way. But how __(4)__ hours do we actually need? Most people our age need between nine and eleven.",
+            "“We think sleep is a great __(2)__ of getting more energy. Sleep helps your body grow, it helps your brain remember what you learned at school, and it is kind __(3)__ your body in every way. But how __(4)__ hours do we actually need? Most people our age need between nine and eleven.",
             "Here is our best advice. First, stop looking at screens about an hour __(5)__ bedtime. The light from a phone tells your brain that it is still daytime. If that is difficult, __(6)__ your phone in another room.",
             "Second, go to bed at the __(7)__ time every day, even at weekends. It sounds boring, we know, but after two weeks you will __(8)__ notice that you are doing it.",
             "Third, __(9)__ a warm shower in the evening. When you come out, your body cools down, and that helps you fall asleep faster.",
@@ -2034,12 +2388,12 @@
           "aspect": "Granska språk och struktur",
           "prompt": "Gap (1) – which word fits best?",
           "options": [
-            "give",
             "tell",
+            "give",
             "want",
             "like"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "”They tell us how to sleep better” – tell används när man berättar något för någon. ”Give” kräver ett objekt som ”advice”, och ”want” och ”like” passar inte i sammanhanget."
         },
         {
@@ -2070,7 +2424,7 @@
             "because"
           ],
           "correctIndex": 0,
-          "explanation": "”It is friendly to your body” – prepositionen efter friendly är to. Jämför ”be kind to someone”."
+          "explanation": "”It is kind to your body” – prepositionen efter kind är to. Jämför ”be kind to someone”."
         },
         {
           "kind": "multiple-choice",
@@ -2111,10 +2465,10 @@
           "options": [
             "turn",
             "take",
-            "get",
-            "put"
+            "put",
+            "get"
           ],
-          "correctIndex": 3,
+          "correctIndex": 2,
           "explanation": "”Put your phone in another room” – put används när man placerar något någonstans. ”Take” skulle betyda att man bär bort den utan att ange vart."
         },
         {
@@ -2156,11 +2510,11 @@
           "options": [
             "make",
             "do",
-            "have",
-            "take"
+            "take",
+            "put"
           ],
-          "correctIndex": 3,
-          "explanation": "”Take a warm shower” – med shower används verbet take (eller have i brittisk engelska). ”Make a shower” går inte."
+          "correctIndex": 2,
+          "explanation": "”Take a warm shower” – med shower används verbet take. ”Make a shower”, ”do a shower” och ”put a shower” går inte."
         },
         {
           "kind": "multiple-choice",
@@ -2235,8 +2589,14 @@
           "guidance": "Ge 1 poäng för svar som visar att hon varit på en fotbollsmatch (i Kirkby). Godtagbart: ”at a football match”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "At her cousin's house." },
-            { "points": 1, "answer": "At a football match in Kirkby." }
+            {
+              "points": 0,
+              "answer": "At her cousin's house."
+            },
+            {
+              "points": 1,
+              "answer": "At a football match in Kirkby."
+            }
           ]
         },
         {
@@ -2252,8 +2612,14 @@
           "guidance": "Ge 1 poäng för svar som visar att hennes lag vann med 3–2, med mål i sista minuten. Det räcker att resultatet eller segern framgår.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "Her team lost." },
-            { "points": 1, "answer": "Her team won 3–2 with a goal in the last minute." }
+            {
+              "points": 0,
+              "answer": "Her team lost."
+            },
+            {
+              "points": 1,
+              "answer": "Her team won 3–2 with a goal in the last minute."
+            }
           ]
         },
         {
@@ -2261,15 +2627,15 @@
           "id": 3,
           "maxPoints": 1,
           "aspect": "Hitta specifik information",
-          "prompt": "Why couldn't Nadia phone her mother?",
+          "prompt": "Why couldn't Nadia's mother come and fetch her?",
           "options": [
-            "Her mother was asleep",
-            "Her mother was working at the hospital",
-            "She did not want to worry her",
-            "Her mother lived in another town"
+            "She was working a night shift at the hospital",
+            "She was already asleep at home in Ashwell",
+            "Her car had broken down that same evening",
+            "She was visiting friends in another town"
           ],
-          "correctIndex": 1,
-          "explanation": "Mamman arbetade nattpass på sjukhuset och kunde därför inte komma. Att telefonen sedan dog är ett separat problem."
+          "correctIndex": 0,
+          "explanation": "Mamman arbetade nattpass på sjukhuset och kunde därför inte lämna jobbet och hämta Nadia."
         },
         {
           "kind": "open",
@@ -2284,8 +2650,14 @@
           "guidance": "Ge 1 poäng för svar som visar att batteriet tog slut och att telefonen stängde av sig. Godtagbart: ”it died”; ”the battery ran out”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "She lost it at the stadium." },
-            { "points": 1, "answer": "The battery ran out and it switched itself off." }
+            {
+              "points": 0,
+              "answer": "She lost it at the stadium."
+            },
+            {
+              "points": 1,
+              "answer": "The battery ran out and it switched itself off."
+            }
           ]
         },
         {
@@ -2299,12 +2671,21 @@
           ],
           "aspect": "Hitta specifik information",
           "prompt": "What did Nadia have with her? (Give two things.)",
-          "guidance": "Ge 1 poäng per korrekt sak, max 2. I texten nämns: elva pund, en halvätn smörgås och en jacka.",
+          "guidance": "Ge 1 poäng per korrekt sak, max 2. I texten nämns: elva pund, en halväten smörgås och en jacka.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "She had her phone and a ticket." },
-            { "points": 1, "answer": "She had eleven pounds." },
-            { "points": 2, "answer": "She had eleven pounds and a half-eaten sandwich." }
+            {
+              "points": 0,
+              "answer": "She had her phone and a ticket."
+            },
+            {
+              "points": 1,
+              "answer": "She had eleven pounds."
+            },
+            {
+              "points": 2,
+              "answer": "She had eleven pounds and a half-eaten sandwich."
+            }
           ],
           "note": "Du måste skriva två saker för att få full poäng."
         },
@@ -2351,8 +2732,14 @@
           "guidance": "Ge 1 poäng för svar som visar att det var hennes gamla lågstadieskolas nummer. Godtagbart: ”her old primary school”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "Her mother's number." },
-            { "points": 1, "answer": "The number of her old primary school." }
+            {
+              "points": 0,
+              "answer": "Her mother's number."
+            },
+            {
+              "points": 1,
+              "answer": "The number of her old primary school."
+            }
           ]
         },
         {
@@ -2368,8 +2755,14 @@
           "guidance": "Ge 1 poäng för svar som visar att hon åkte taxi och att kaféägaren betalade. Godtagbart: ”by taxi”; ”the café owner paid for a taxi”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "She walked back." },
-            { "points": 1, "answer": "By taxi, which the café owner paid for." }
+            {
+              "points": 0,
+              "answer": "She walked back."
+            },
+            {
+              "points": 1,
+              "answer": "By taxi, which the café owner paid for."
+            }
           ]
         },
         {
@@ -2401,9 +2794,18 @@
           "guidance": "Ge 1 poäng per led, max 2: 1) att hon gjort precis rätt som gick till ett ställe med människor och ljus, 2) att hon skulle lära sig tre telefonnummer utantill före veckans slut.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "That she was angry with her." },
-            { "points": 1, "answer": "That she had done the right thing by going somewhere with people and light." },
-            { "points": 2, "answer": "That she had done exactly the right thing by going somewhere with people and light in it, and that she had to learn three phone numbers by heart that week." }
+            {
+              "points": 0,
+              "answer": "That she was angry with her."
+            },
+            {
+              "points": 1,
+              "answer": "That she had done the right thing by going somewhere with people and light."
+            },
+            {
+              "points": 2,
+              "answer": "That she had done exactly the right thing by going somewhere with people and light in it, and that she had to learn three phone numbers by heart that week."
+            }
           ],
           "note": "Du måste skriva båda sakerna för att få full poäng."
         },
@@ -2421,9 +2823,18 @@
           "guidance": "Ge 2 poäng för svar som visar att nyttan inte ligger i att använda numren, utan i tryggheten att kunna dem om något händer – man lär sig dem just för att man inte vet när man behöver dem. Ge 1 poäng för svar som är på rätt spår men outvecklat.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "She means that she has forgotten the numbers." },
-            { "points": 1, "answer": "She means it does not matter that she has not used them." },
-            { "points": 2, "answer": "She means that the numbers are not there to be used every day, but so that she is safe if something ever happens. Knowing them is what matters, not needing them." }
+            {
+              "points": 0,
+              "answer": "She means that she has forgotten the numbers."
+            },
+            {
+              "points": 1,
+              "answer": "She means it does not matter that she has not used them."
+            },
+            {
+              "points": 2,
+              "answer": "She means that the numbers are not there to be used every day, but so that she is safe if something ever happens. Knowing them is what matters, not needing them."
+            }
           ]
         }
       ]
@@ -2448,7 +2859,7 @@
         },
         {
           "speaker": "Newsreader",
-          "text": "News item number 2. A library book borrowed in 1974 was returned to a school in Manchester last week. It came in the post with a short note: ‘Sorry. I moved house.' The librarian says the book was forty-seven years late, but nobody had to pay anything, because the school stopped charging for late books in 1998."
+          "text": "News item number 2. A library book borrowed in 1974 was returned to a school in Manchester last week. It came in the post with a short note: ‘Sorry. I moved house.' The librarian says the book was fifty years late, but nobody had to pay anything, because the school stopped charging for late books in 1998."
         },
         {
           "speaker": "Newsreader",
@@ -2500,11 +2911,11 @@
           "prompt": "News item 1. What is it about?",
           "options": [
             "A café that is closing down",
-            "Cheaper coffee for cyclists",
             "A new bicycle shop",
+            "Cheaper coffee for cyclists",
             "Traffic rules in Dublin"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Nyheten handlar om att kaféet ger rabatt till den som kommer med cykel. Bilarna nämns bara som bakgrund till idén."
         },
         {
@@ -2530,11 +2941,11 @@
           "prompt": "News item 3. What is it about?",
           "options": [
             "A missing jumper",
-            "A cat that travelled by post",
             "A slow delivery company",
-            "A cat that ran away from home"
+            "A cat that ran away from home",
+            "A cat that travelled by post"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Nyheten handlar om katten som råkade skickas med posten. Att paketet innehöll tröjor är bara en detalj."
         },
         {
@@ -2544,12 +2955,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 4. What is it about?",
           "options": [
+            "A bakery that has closed down",
+            "Bread that made customers ill",
             "A bakery that gives away bread",
-            "A bakery that has closed",
-            "Bread that made people ill",
-            "A new kind of bread"
+            "A new kind of bread in shops"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Det centrala är att osålt bröd ges bort gratis i stället för att slängas. Att han förr slängde bröd förklarar varför han började."
         },
         {
@@ -2559,12 +2970,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 5. What is it about?",
           "options": [
-            "A postman learning a new language",
             "A new post office in Norway",
+            "A postman learning a new language",
             "Evening classes for children",
             "A postman changing his job"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om att brevbäraren lärt sig teckenspråk för en person på sin runda. Kvällskurserna är hur han gjorde det, inte vad nyheten handlar om."
         },
         {
@@ -2574,12 +2985,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 6. What is it about?",
           "options": [
-            "A robot that escaped",
             "A broken front door",
             "A very dirty street",
-            "A new shop in Oslo"
+            "A new shop in Oslo",
+            "A robot that escaped"
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Poängen är att robotdammsugaren tog sig ut ur huset och hittades hos grannen. Att grannen sedan köpte en egen är slutklämmen."
         },
         {
@@ -2590,11 +3001,11 @@
           "prompt": "News item 7. What is it about?",
           "options": [
             "A playground that got bigger",
-            "A garden on a school roof",
             "A new school kitchen",
+            "A garden on a school roof",
             "Pupils who cook their own lunch"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Nyheten handlar om skolträdgården som flyttats upp på taket. Potatisen och köket är vad som händer sedan."
         },
         {
@@ -2604,10 +3015,10 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 8. What is it about?",
           "options": [
-            "A man who is moving house",
-            "A very long car journey",
+            "A man who is moving house again",
+            "A very long car journey abroad",
             "Forty years of cycling to work",
-            "A trip to the moon"
+            "A bicycle shop opening in Kent"
           ],
           "correctIndex": 2,
           "explanation": "Nyheten handlar om mannen som cyklat till jobbet i fyrtio år. Jämförelsen med månen visar bara hur långt det är."
@@ -2619,12 +3030,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 9. What is it about?",
           "options": [
-            "Sheep stopping the traffic",
             "A car accident in Wales",
             "A new road through a village",
+            "Sheep stopping the traffic",
             "A farmer selling his sheep"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Kärnan är att fåren gick ut på vägen så att trafiken stannade. Den öppna grinden förklarar hur det gick till."
         },
         {
@@ -2634,12 +3045,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 10. What is it about?",
           "options": [
-            "A parrot that got help",
             "A parrot that flew away",
+            "A parrot that got help",
             "A noisy neighbour",
             "A new television programme"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om papegojan som ropade på hjälp så att grannen kom. Tv-programmet förklarar var fågeln lärt sig orden."
         },
         {
@@ -2696,7 +3107,7 @@
         },
         {
           "speaker": "Sara",
-          "text": "We had two choices: a morning course or an afternoon one. The instructor told us to take the morning, because the rock is dry then. In the afternoon the sun moves round and the wind picks up, and wet rock is much harder to hold on to. So the morning it was."
+          "text": "We had two choices: a morning course or an afternoon one. The instructor told us to take the morning, because the rock is dry then. In the afternoon the wall falls into shadow and the wind picks up, so the rock stays cold and damp – and damp rock is much harder to hold on to. So the morning it was."
         },
         {
           "speaker": "Sara",
@@ -2716,7 +3127,7 @@
         },
         {
           "speaker": "Sara",
-          "text": "I was wearing shorts and an old pair of trainers with almost no pattern left on the bottom. What I should have brought was a jacket that keeps out rain, and proper climbing shoes with a good grip. My feet slipped three times in the first ten minutes."
+          "text": "I was wearing shorts and an old pair of trainers with almost no pattern left on the soles. What I should have brought was a jacket that keeps out rain, and proper climbing shoes with a good grip. My feet slipped three times in the first ten minutes."
         },
         {
           "speaker": "Sara",
@@ -2744,7 +3155,7 @@
         },
         {
           "speaker": "Sara",
-          "text": "I want to finish by telling you about a woman called Marta Reyes. She has climbed the highest mountain on each of the six continents that have them – she has not done Antarctica yet – and she is planning that one for next year."
+          "text": "I want to finish by telling you about a woman called Marta Reyes. She has climbed the highest mountain on six of the seven continents – she has not done Antarctica yet – and she is planning that one for next year."
         },
         {
           "speaker": "Sara",
@@ -2765,8 +3176,14 @@
           "guidance": "Ge 1 poäng för svar som visar att hon är klätterinstruktör. Godtagbart: ”climbing instructor”; ”she teaches climbing”. 0 poäng: ”maths teacher” (det var hon förut).",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "She is a maths teacher." },
-            { "points": 1, "answer": "She is a climbing instructor." }
+            {
+              "points": 0,
+              "answer": "She is a maths teacher."
+            },
+            {
+              "points": 1,
+              "answer": "She is a climbing instructor."
+            }
           ]
         },
         {
@@ -2782,8 +3199,14 @@
           "guidance": "Ge 1 poäng för ”Wales”. Godtagbart: ”in the north of Wales”. 0 poäng: ”England”; ”Norway”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "In England." },
-            { "points": 1, "answer": "In Wales." }
+            {
+              "points": 0,
+              "answer": "In England."
+            },
+            {
+              "points": 1,
+              "answer": "In Wales."
+            }
           ]
         },
         {
@@ -2794,11 +3217,11 @@
           "prompt": "Why did Sara go on the morning course?",
           "options": [
             "The morning course was cheaper",
-            "The rock is dry in the morning",
             "She likes getting up early",
-            "The afternoon course was full"
+            "The afternoon course was full",
+            "The rock is dry in the morning"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Instruktören rekommenderade förmiddagen eftersom klippan är torr då – på eftermiddagen flyttar sig solen, vinden tar i och blöt klippa är mycket svårare att hålla i."
         },
         {
@@ -2825,10 +3248,10 @@
           "options": [
             "The family arrived too late",
             "The course was fully booked",
-            "She was not old enough",
-            "She had forgotten her helmet"
+            "She had forgotten her helmet",
+            "She was not old enough"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "Man måste vara minst tio år för nybörjarkursen, och flickan var nio. Texten säger att inga undantag görs."
         },
         {
@@ -2845,9 +3268,18 @@
           "guidance": "Ge 1 poäng per korrekt belopp, max 2: 45 pund för vuxna och 30 pund för den som är under arton.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "It cost £18." },
-            { "points": 1, "answer": "Adults: £45." },
-            { "points": 2, "answer": "Adults: £45 and under eighteen: £30." }
+            {
+              "points": 0,
+              "answer": "It cost £18."
+            },
+            {
+              "points": 1,
+              "answer": "Adults: £45."
+            },
+            {
+              "points": 2,
+              "answer": "Adults: £45 and under eighteen: £30."
+            }
           ]
         },
         {
@@ -2858,9 +3290,9 @@
           "prompt": "What was the weather like when they arrived?",
           "options": [
             "Sunny and quite warm",
-            "Cloudy and cold",
-            "Rainy and windy",
-            "Foggy and grey"
+            "Cloudy and rather cold",
+            "Wet and very windy",
+            "Foggy, grey and damp"
           ],
           "correctIndex": 0,
           "explanation": "När de klev ur minibussen var vädret perfekt: soligt och ganska varmt, omkring arton grader. Regnet kom först två timmar senare."
@@ -2879,9 +3311,18 @@
           "guidance": "Ge 1 poäng per korrekt sak, max 2: en jacka som håller regnet ute (regnjacka) och riktiga klätterskor med bra grepp.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "She should have brought her lunch." },
-            { "points": 1, "answer": "A jacket that keeps out the rain." },
-            { "points": 2, "answer": "A rain jacket and proper climbing shoes with a good grip." }
+            {
+              "points": 0,
+              "answer": "She should have brought her lunch."
+            },
+            {
+              "points": 1,
+              "answer": "A jacket that keeps out the rain."
+            },
+            {
+              "points": 2,
+              "answer": "A rain jacket and proper climbing shoes with a good grip."
+            }
           ],
           "note": "Du måste skriva två saker för att få full poäng."
         },
@@ -2893,11 +3334,11 @@
           "prompt": "When is the best time to climb there?",
           "options": [
             "In March and April",
-            "In May and June",
             "In July and August",
-            "In October and November"
+            "In October and November",
+            "In May and June"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Instruktören sa att maj och juni är bäst. I juli är det för mycket folk, och från oktober är klippan ofta blöt och kall."
         },
         {
@@ -2914,9 +3355,18 @@
           "guidance": "Ge 1 poäng per korrekt uppgift, max 2. I texten nämns: det heter skiffer (slate); det höggs ut ur berget av arbetare för mer än hundra år sedan; därför är väggarna så raka och släta; några leder har kvar arbetarnas gamla trappsteg.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "The rock was wet and cold." },
-            { "points": 1, "answer": "It is called slate." },
-            { "points": 2, "answer": "It is called slate, and it was cut out of the mountain by workers more than a hundred years ago." }
+            {
+              "points": 0,
+              "answer": "The rock was wet and cold."
+            },
+            {
+              "points": 1,
+              "answer": "It is called slate."
+            },
+            {
+              "points": 2,
+              "answer": "It is called slate, and it was cut out of the mountain by workers more than a hundred years ago."
+            }
           ],
           "note": "Du måste skriva två saker för att få full poäng."
         },
@@ -2933,8 +3383,14 @@
           "guidance": "Ge 1 poäng för ”five metres” eller ”5 m”. 0 poäng: ”three points” (det gäller kontakten med klippan).",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "Three metres." },
-            { "points": 1, "answer": "Five metres." }
+            {
+              "points": 0,
+              "answer": "Three metres."
+            },
+            {
+              "points": 1,
+              "answer": "Five metres."
+            }
           ]
         },
         {
@@ -2950,8 +3406,14 @@
           "guidance": "Ge 1 poäng för svar som visar att tre av händerna och fötterna hela tiden ska röra klippan – två händer och en fot, eller två fötter och en hand.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "You climb three metres at a time." },
-            { "points": 1, "answer": "Two hands and one foot, or two feet and one hand, must always touch the rock." }
+            {
+              "points": 0,
+              "answer": "You climb three metres at a time."
+            },
+            {
+              "points": 1,
+              "answer": "Two hands and one foot, or two feet and one hand, must always touch the rock."
+            }
           ]
         },
         {
@@ -2961,10 +3423,10 @@
           "aspect": "Hitta specifik information",
           "prompt": "What happened halfway up the wall?",
           "options": [
-            "Sara slipped and fell",
+            "The instructor called them back down",
             "A boy dropped his water bottle",
-            "The rope came loose",
-            "It started to snow"
+            "The rope came loose from the wall",
+            "It started to snow quite heavily"
           ],
           "correctIndex": 1,
           "explanation": "Pojken ovanför Sara tappade sin vattenflaska, som föll förbi hennes huvud och slog i marken. Ingen skadades, men alla förstod varför hjälmar behövs."
@@ -2976,12 +3438,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What happened to the climbers in Norway?",
           "options": [
-            "They were caught in a storm",
             "One of them was hit by a stone",
+            "They were caught in a storm",
             "They lost their radio",
             "They fell into the water"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "En stor sten lossnade ovanför dem och träffade den ene på axeln, så att han inte kunde använda armen. De var fyra timmar från närmaste väg."
         },
         {
@@ -2997,8 +3459,14 @@
           "guidance": "Ge 1 poäng för svar som visar att kamraten hade en liten radio och att en helikopter kom. Godtagbart: ”with a radio”; ”a helicopter came”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "They walked to the road." },
-            { "points": 1, "answer": "His partner had a radio, and a helicopter came." }
+            {
+              "points": 0,
+              "answer": "They walked to the road."
+            },
+            {
+              "points": 1,
+              "answer": "His partner had a radio, and a helicopter came."
+            }
           ]
         },
         {
@@ -3015,9 +3483,18 @@
           "guidance": "Ge 1 poäng per korrekt sak, max 2: de berättar alltid för någon vart de ska, och när de räknar med att vara tillbaka.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "They will always bring a helmet." },
-            { "points": 1, "answer": "They tell someone where they are going." },
-            { "points": 2, "answer": "They always tell someone where they are going and when they expect to be back." }
+            {
+              "points": 0,
+              "answer": "They will always bring a helmet."
+            },
+            {
+              "points": 1,
+              "answer": "They tell someone where they are going."
+            },
+            {
+              "points": 2,
+              "answer": "They always tell someone where they are going and when they expect to be back."
+            }
           ],
           "note": "Du måste skriva två saker för att få full poäng."
         },
@@ -3028,12 +3505,12 @@
           "aspect": "Hitta specifik information",
           "prompt": "What has Marta Reyes done?",
           "options": [
+            "She has climbed every high mountain in Wales",
             "She has climbed the highest mountain on six continents",
-            "She has climbed every mountain in Wales",
-            "She has been to Antarctica three times",
-            "She has started her own climbing school"
+            "She has been to Antarctica three times already",
+            "She has started her own climbing school in Norway"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Hon har bestigit det högsta berget på var och en av de sex kontinenter som har berg. Antarktis återstår, och det planerar hon till nästa år."
         },
         {
@@ -3050,9 +3527,18 @@
           "guidance": "Ge 1 poäng för vad hon gör (hon tar med en ung person från sin gamla skola på varje resa och betalar allt) och 1 poäng för varför (bergen finns kvar om hundra år, men man är bara femton en gång).",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "She climbs mountains all over the world." },
-            { "points": 1, "answer": "She takes a young person from her old school with her on every trip." },
-            { "points": 2, "answer": "She takes one young person from her old school on every trip and pays for everything, because the mountains will still be there in a hundred years but you are only fifteen once." }
+            {
+              "points": 0,
+              "answer": "She climbs mountains all over the world."
+            },
+            {
+              "points": 1,
+              "answer": "She takes a young person from her old school with her on every trip."
+            },
+            {
+              "points": 2,
+              "answer": "She takes one young person from her old school on every trip and pays for everything, because the mountains will still be there in a hundred years but you are only fifteen once."
+            }
           ]
         }
       ]
@@ -3141,12 +3627,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 2. What is it about?",
           "options": [
-            "A bus driver saying goodbye",
             "A new bus route",
             "A street that is closing for ever",
+            "A bus driver saying goodbye",
             "A driver who lost his job"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Kärnan är chauffören som går i pension och avskedet staden ordnar. Gatan stängs bara en eftermiddag, inte för alltid."
         },
         {
@@ -3156,12 +3642,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 3. What is it about?",
           "options": [
-            "Sheep that can recognise faces",
             "New food for farm animals",
+            "Sheep that can recognise faces",
             "A photograph competition",
             "Sheep escaping from a farm"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om att fåren lärt sig känna igen ansikten. Maten var belöningen i försöket, inte nyheten."
         },
         {
@@ -3171,12 +3657,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 4. What is it about?",
           "options": [
-            "A girl who missed her bus",
-            "A new bus stop in Iceland",
+            "A girl who missed her bus to school",
             "A girl who changed the council's mind",
-            "A grandmother moving house"
+            "A new bus route starting in Iceland",
+            "A grandmother moving to a new town"
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "explanation": "Poängen är att flickan fick rådet att ändra sig genom att räkna hur många som väntade. Bänken är resultatet."
         },
         {
@@ -3186,12 +3672,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 5. What is it about?",
           "options": [
-            "A table for one person",
             "A restaurant that is always full",
             "A new library café",
+            "A table for one person",
             "A customer who complained"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Nyheten handlar om bordet som bara är till för den som kommer ensam. Kundens berättelse förklarar varför bordet byggdes."
         },
         {
@@ -3216,12 +3702,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 7. What is it about?",
           "options": [
-            "A quiet room for goodbyes",
             "A new airport in Japan",
+            "A quiet room for goodbyes",
             "Flights that are delayed",
             "A room for lost luggage"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om rummet där man i lugn och ro kan ta farväl. Personalens iakttagelse förklarar varifrån idén kom."
         },
         {
@@ -3231,12 +3717,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 8. What is it about?",
           "options": [
-            "A man who built a bridge",
             "A stream that flooded a path",
+            "A man who built a bridge",
             "A council that removed a bridge",
             "A new road in Wales"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om bron mannen byggde själv under elva år. Att kommunen godkände den är slutet på historien."
         },
         {
@@ -3247,11 +3733,11 @@
           "prompt": "News item 9. What is it about?",
           "options": [
             "A bookshop that is closing",
-            "Paying with a book",
             "Books that cost too much",
-            "A writing competition"
+            "A writing competition",
+            "Paying with a book"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Poängen är att man kan betala med en bok i stället för pengar. Att hyllorna blivit populära visar hur det gått."
         },
         {
@@ -3261,12 +3747,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 10. What is it about?",
           "options": [
-            "A choir singing outside a hospital",
             "A hospital that is too small",
+            "A choir singing outside a hospital",
             "A concert that was cancelled",
             "New rules for hospital visitors"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om kören som sjunger utanför sjukhusfönstren. Att de fortsätter trots att besök är tillåtna igen är poängen."
         },
         {
@@ -3276,12 +3762,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 11. What is it about?",
           "options": [
-            "A dog that ran away",
             "A bowl of water for animals",
+            "A dog that ran away",
             "A neighbour who moved in",
             "Water shortages in summer"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Nyheten handlar om vattenskålen som kvinnan ställt ut i tjugo år, och om att grannarna nu gör likadant."
         },
         {
@@ -3291,12 +3777,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 12. What is it about?",
           "options": [
-            "Cleaners' names on the trains",
             "Trains that are always late",
             "A company hiring more staff",
+            "Cleaners' names on the trains",
             "Passengers who complain a lot"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Nyheten handlar om att städarnas namn sätts upp i vagnarna. Färre klagomål och tackbreven är följderna."
         }
       ]
@@ -3396,8 +3882,14 @@
           "guidance": "Ge 1 poäng för svar som visar att hon är ökenguide. Godtagbart: ”desert guide”; ”she guides people in the desert”. 0 poäng: ”hairdresser” (det var hon förut).",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "She is a hairdresser." },
-            { "points": 1, "answer": "She is a desert guide." }
+            {
+              "points": 0,
+              "answer": "She is a hairdresser."
+            },
+            {
+              "points": 1,
+              "answer": "She is a desert guide."
+            }
           ]
         },
         {
@@ -3413,8 +3905,14 @@
           "guidance": "Ge 1 poäng för ”Morocco”. Godtagbart: ”in southern Morocco”. 0 poäng: ”France”; ”Algeria”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "In France." },
-            { "points": 1, "answer": "In Morocco." }
+            {
+              "points": 0,
+              "answer": "In France."
+            },
+            {
+              "points": 1,
+              "answer": "In Morocco."
+            }
           ]
         },
         {
@@ -3424,9 +3922,9 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "Why do the groups leave in the late afternoon?",
           "options": [
-            "The camels rest in the morning",
+            "The camels only walk in the early morning",
             "The sand is too hot in the middle of the day",
-            "The buses arrive at that time",
+            "The wind is far too strong before then",
             "It is easier to put up tents in the dark"
           ],
           "correctIndex": 1,
@@ -3442,7 +3940,7 @@
             "At half past three",
             "At four o'clock",
             "At half past four",
-            "At sunset"
+            "At five in the evening"
           ],
           "correctIndex": 0,
           "explanation": "Egentligen ska grupperna vara på plats klockan fyra, men efter familjen som kom en halvtimme sent säger hon halv fyra – och det fungerar perfekt."
@@ -3476,9 +3974,18 @@
           "guidance": "Ge 1 poäng per korrekt belopp, max 2: 60 euro för vuxna och 40 euro för barn.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "It costs €5." },
-            { "points": 1, "answer": "Adults: €60." },
-            { "points": 2, "answer": "Adults: €60 and children: €40." }
+            {
+              "points": 0,
+              "answer": "It costs €5."
+            },
+            {
+              "points": 1,
+              "answer": "Adults: €60."
+            },
+            {
+              "points": 2,
+              "answer": "Adults: €60 and children: €40."
+            }
           ]
         },
         {
@@ -3495,9 +4002,18 @@
           "guidance": "Ge 1 poäng för att sovsäck inte ingår och 1 poäng för att man kan hyra en för fem euro.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "The food is not included." },
-            { "points": 1, "answer": "A sleeping bag is not included." },
-            { "points": 2, "answer": "A sleeping bag is not included, but you can rent one for five euros." }
+            {
+              "points": 0,
+              "answer": "The food is not included."
+            },
+            {
+              "points": 1,
+              "answer": "A sleeping bag is not included."
+            },
+            {
+              "points": 2,
+              "answer": "A sleeping bag is not included, but you can rent one for five euros."
+            }
           ]
         },
         {
@@ -3507,12 +4023,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What surprises visitors most about the desert?",
           "options": [
-            "How hot the sand is",
             "How cold it gets",
+            "How hot the sand is",
             "How much it rains",
             "How high the dunes are"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Alla frågar om värmen, men det som överraskar dem är kylan – i januari kan det bli under noll på natten, och även på sommaren vill man ha jacka efter midnatt."
         },
         {
@@ -3529,9 +4045,18 @@
           "guidance": "Ge 1 poäng per korrekt sak, max 2: långärmat och långbyxor (de skyddar mot solen bättre än shorts) samt en sjal till huvud och ansikte.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "You need shorts because it is hot." },
-            { "points": 1, "answer": "Long sleeves and long trousers." },
-            { "points": 2, "answer": "Long sleeves and long trousers, because they protect you from the sun better than shorts, and a scarf for your head and face." }
+            {
+              "points": 0,
+              "answer": "You need shorts because it is hot."
+            },
+            {
+              "points": 1,
+              "answer": "Long sleeves and long trousers."
+            },
+            {
+              "points": 2,
+              "answer": "Long sleeves and long trousers, because they protect you from the sun better than shorts, and a scarf for your head and face."
+            }
           ],
           "note": "Du måste skriva två saker för att få full poäng."
         },
@@ -3542,12 +4067,12 @@
           "aspect": "Hitta specifik information",
           "prompt": "Which months are the best for a desert trip?",
           "options": [
-            "July and August",
-            "December and January",
             "October, November, March and April",
-            "All months are the same"
+            "July, August and September",
+            "December, January and February",
+            "May, June and the summer months"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "Amina säger att oktober, november, mars och april är bäst. Juli och augusti är för heta, och december och januari har nätter som är hårda för ovana."
         },
         {
@@ -3563,8 +4088,14 @@
           "guidance": "Ge 1 poäng för ungefär 150 meter. Godtagbart: ”about 150 metres”; ”150 m high”.",
           "lines": 1,
           "scoreExamples": [
-            { "points": 0, "answer": "About 40 metres." },
-            { "points": 1, "answer": "About 150 metres." }
+            {
+              "points": 0,
+              "answer": "About 40 metres."
+            },
+            {
+              "points": 1,
+              "answer": "About 150 metres."
+            }
           ]
         },
         {
@@ -3580,8 +4111,14 @@
           "guidance": "Ge 1 poäng för svar som visar att sanddynerna rör sig – en dyn kan flytta sig flera meter på ett år.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "Because it rains in the spring." },
-            { "points": 1, "answer": "Because the dunes move several metres a year and cover the road." }
+            {
+              "points": 0,
+              "answer": "Because it rains in the spring."
+            },
+            {
+              "points": 1,
+              "answer": "Because the dunes move several metres a year and cover the road."
+            }
           ]
         },
         {
@@ -3597,8 +4134,14 @@
           "guidance": "Ge 1 poäng för svar som visar att ingen får gå ensam från lägret på natten. Godtagbart: ”you must not walk away alone”; ”wake her up instead”.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "You must go to bed early." },
-            { "points": 1, "answer": "Nobody walks away from the camp alone at night – you wake her up instead." }
+            {
+              "points": 0,
+              "answer": "You must go to bed early."
+            },
+            {
+              "points": 1,
+              "answer": "Nobody walks away from the camp alone at night – you wake her up instead."
+            }
           ]
         },
         {
@@ -3609,11 +4152,11 @@
           "prompt": "Why is that rule so important?",
           "options": [
             "Wild animals come close to the camp",
-            "Every dune looks the same in the dark",
             "The tents are difficult to find in the wind",
-            "It is too cold to stand still"
+            "It is too cold to stand still",
+            "Every dune looks the same in the dark"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "I mörkret ser varje dyn likadan ut, och folk har gått vilse fyrtio meter från sitt eget tält."
         },
         {
@@ -3630,9 +4173,18 @@
           "guidance": "Ge 1 poäng för händelsen (det började regna, vatten rann förbi tälten och de fick flytta allt upp på dynsidan mitt i natten) och 1 poäng för lärdomen (aldrig slå läger längst ner i en dalgång, hur bekvämt det än ser ut).",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "It rained in the desert." },
-            { "points": 1, "answer": "It started to rain and water ran past the tents, so they had to move everything at one in the morning." },
-            { "points": 2, "answer": "It rained and water ran past the tents, so they moved the camp up the dune at one in the morning. Amina learned never to camp at the bottom of a valley, however comfortable it looks." }
+            {
+              "points": 0,
+              "answer": "It rained in the desert."
+            },
+            {
+              "points": 1,
+              "answer": "It started to rain and water ran past the tents, so they had to move everything at one in the morning."
+            },
+            {
+              "points": 2,
+              "answer": "It rained and water ran past the tents, so they moved the camp up the dune at one in the morning. Amina learned never to camp at the bottom of a valley, however comfortable it looks."
+            }
           ]
         },
         {
@@ -3642,12 +4194,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What went wrong for the four tourists in Algeria?",
           "options": [
-            "They ran out of water",
-            "Their car broke down and nobody knew where they were",
-            "They walked away from their camp at night",
-            "They were caught in heavy rain"
+            "They ran out of water and food after one day",
+            "They walked away from their camp in the night",
+            "They were caught in heavy rain in a valley",
+            "Their car broke down and nobody knew where they were"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Bilen gick sönder och de hade inte berättat för någon vart de skulle, så det tog två dagar innan någon förstod att de saknades."
         },
         {
@@ -3663,8 +4215,14 @@
           "guidance": "Ge 1 poäng för svar som visar att en av dem lämnat en lapp på hotellet med vilken riktning de tänkte köra.",
           "lines": 2,
           "scoreExamples": [
-            { "points": 0, "answer": "They had a radio with them." },
-            { "points": 1, "answer": "One of them had left a note at the hotel saying which direction they would drive." }
+            {
+              "points": 0,
+              "answer": "They had a radio with them."
+            },
+            {
+              "points": 1,
+              "answer": "One of them had left a note at the hotel saying which direction they would drive."
+            }
           ]
         },
         {
@@ -3681,9 +4239,18 @@
           "guidance": "Ge 1 poäng för vad hon gör (hon återvänder till byarna hon passerat och betalar för att brunnarna ska lagas) och 1 poäng för varför (öknen har aldrig gett henne något gratis, så hon tar inte heller något från den gratis).",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "She has crossed the Sahara three times on foot." },
-            { "points": 1, "answer": "She goes back to the villages and pays for the wells to be repaired." },
-            { "points": 2, "answer": "She returns to the villages she walked through and pays for their wells to be repaired, because the desert has never given her anything for free and she does not want to take anything from it for free either." }
+            {
+              "points": 0,
+              "answer": "She has crossed the Sahara three times on foot."
+            },
+            {
+              "points": 1,
+              "answer": "She goes back to the villages and pays for the wells to be repaired."
+            },
+            {
+              "points": 2,
+              "answer": "She returns to the villages she walked through and pays for their wells to be repaired, because the desert has never given her anything for free and she does not want to take anything from it for free either."
+            }
           ]
         }
       ]

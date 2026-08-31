@@ -181,6 +181,7 @@ export default function App() {
               <WritingTaskView
                 key={view.taskId}
                 task={task}
+                subject={readyGrade.subject}
                 gradeLabel={readyGrade.label}
                 teacherMode={teacherMode}
                 onBack={backToGrade}
@@ -199,6 +200,7 @@ export default function App() {
               <Viewer
                 key={view.taskId}
                 task={task}
+                subject={readyGrade.subject}
                 gradeLabel={readyGrade.label}
                 teacherMode={teacherMode}
                 onBack={backToGrade}

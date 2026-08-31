@@ -4,6 +4,7 @@ import ExamTimer from "./ExamTimer";
 import IllustrationImg from "./IllustrationImg";
 import StrategyTips from "./StrategyTips";
 import FacitSheet from "./FacitSheet";
+import FacitGate from "./FacitGate";
 import ReadAloudButton from "./ReadAloudButton";
 import ListeningPanel from "./ListeningPanel";
 import { clearTestResult, saveTestResult } from "../lib/results";
@@ -263,17 +264,6 @@ export default function ReadingTestView({
             >
               🖨 Skriv ut
             </button>
-            {/* Facit är lärarmaterial och visas bara i lärarläge (?larare) */}
-            {teacherMode && (
-              <button
-                type="button"
-                onClick={() => setFacitMode(true)}
-                title="Skriv ut facit och bedömningsmall (för läraren)"
-                className="text-xs font-medium text-stone-500 transition hover:text-np hover:underline"
-              >
-                Skriv ut facit
-              </button>
-            )}
           </span>
         </div>
 
@@ -446,8 +436,12 @@ export default function ReadingTestView({
         )}
       </div>
 
-      {/* Facit/bedömningsmall – syns bara vid facit-utskrift */}
-      {facitMode && <FacitSheet test={test} gradeLabel={gradeLabel} />}
+      {/* Facit bakom lösenord – innehållet finns inte i sidan förrän det låsts upp */}
+      <FacitGate alwaysUnlocked={teacherMode} onPrint={() => setFacitMode(true)}>
+        {() => (
+          <FacitSheet test={test} gradeLabel={gradeLabel} subject={subject} onScreen />
+        )}
+      </FacitGate>
     </div>
   );
 }

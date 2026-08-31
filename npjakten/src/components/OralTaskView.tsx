@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import type { OralTask } from "../types";
+import type { OralTask, Subject } from "../types";
 import IllustrationImg from "./IllustrationImg";
 import StrategyTips from "./StrategyTips";
 import ReadAloudButton from "./ReadAloudButton";
 import OralObservationSheet from "./OralObservationSheet";
+import FacitGate from "./FacitGate";
 
 interface Props {
   task: OralTask;
+  subject: Subject;
   gradeLabel: string;
   teacherMode: boolean;
   onBack: () => void;
@@ -16,6 +18,7 @@ interface Props {
 // självskattning – själva samtalet sker i klassrummet.
 export default function OralTaskView({
   task,
+  subject,
   gradeLabel,
   teacherMode,
   onBack,
@@ -73,7 +76,8 @@ export default function OralTaskView({
 
       <div className="paper">
         <p className="text-right text-xs italic text-stone-500">
-          Svenska och svenska som andraspråk, {gradeLabel.toLowerCase()}
+          {subject === "engelska" ? "Engelska" : "Svenska och svenska som andraspråk"},{" "}
+          {gradeLabel.toLowerCase()}
           <br />
           {task.delprov}
         </p>
@@ -101,16 +105,6 @@ export default function OralTaskView({
             >
               Skriv ut samtalskorten
             </button>
-            {teacherMode && (
-              <button
-                type="button"
-                onClick={() => setObsMode(true)}
-                title="Skriv ut observationsschema (för läraren)"
-                className="text-xs font-medium text-stone-500 transition hover:text-np hover:underline"
-              >
-                Skriv ut observationsschema
-              </button>
-            )}
           </span>
         </div>
 
@@ -203,8 +197,22 @@ export default function OralTaskView({
           </p>
         )}
       </div>
-      {/* Lärarens observationsschema – syns bara vid den utskriften */}
-      {obsMode && <OralObservationSheet task={task} gradeLabel={gradeLabel} />}
+      {/* Facit bakom lösenord */}
+      <FacitGate
+        alwaysUnlocked={teacherMode}
+        label="Observationsschema"
+        printLabel="🖨 Skriv ut observationsschemat"
+        onPrint={() => setObsMode(true)}
+      >
+        {() => (
+          <OralObservationSheet
+            task={task}
+            gradeLabel={gradeLabel}
+            subject={subject}
+            onScreen
+          />
+        )}
+      </FacitGate>
     </div>
   );
 }

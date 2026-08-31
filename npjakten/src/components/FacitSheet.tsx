@@ -1,8 +1,11 @@
-import type { ListeningTest, ReadingTest } from "../types";
+import type { ListeningTest, ReadingTest, Subject } from "../types";
 
 interface Props {
   test: ReadingTest | ListeningTest;
   gradeLabel: string;
+  // true = visa på skärmen också (annars bara vid utskrift)
+  onScreen?: boolean;
+  subject?: Subject;
 }
 
 // Upp till åtta alternativ – åk 9 har matchningsuppgifter (A–F) och
@@ -11,11 +14,14 @@ const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
 // Utskriftsvänligt facit i bedömningsmallens stil. Renderas bara i
 // facit-utskriftsläget och är dold på skärmen.
-export default function FacitSheet({ test, gradeLabel }: Props) {
+export default function FacitSheet({ test, gradeLabel, onScreen, subject }: Props) {
   return (
-    <div className="paper facit-sheet hidden print:block">
+    <div className={
+        "paper facit-sheet print:block" + (onScreen ? "" : " hidden")
+      }>
       <p className="text-right text-xs italic text-stone-500">
-        Svenska och svenska som andraspråk, {gradeLabel.toLowerCase()}
+        {subject === "engelska" ? "Engelska" : "Svenska och svenska som andraspråk"},{" "}
+        {gradeLabel.toLowerCase()}
         <br />
         {test.delprov} – facit och bedömningsmall
       </p>

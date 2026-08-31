@@ -68,12 +68,12 @@
           "category": "L",
           "prompt": "Varför behöver Sara hjälp med Ludde?",
           "options": [
-            "Hon ska resa bort över helgen.",
             "Hon är sjuk och ligger i sängen.",
+            "Hon ska resa bort över helgen.",
             "Hon har ont i benet och kan inte gå.",
             "Hon ska börja ett nytt jobb."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Sara säger själv: ”Jag ska resa bort över helgen.” Därför behöver hon någon som passar Ludde."
         },
         {
@@ -83,10 +83,10 @@
           "category": "TI",
           "prompt": "Varför får Otto ingen egen hund?",
           "options": [
-            "Mamma tycker inte om hundar.",
-            "Det finns inte plats i huset.",
+            "Mamma tycker inte alls om hundar och katter.",
+            "Det finns inte plats för en hund i huset.",
             "Mamma tycker att en hund är ett stort ansvar.",
-            "Otto är allergisk mot hundar."
+            "Otto är allergisk och kan inte ha en hund."
           ],
           "correctIndex": 2,
           "explanation": "Mamma svarar ”Inte än” och säger att en hund är ett stort ansvar. Det står alltså inte att hon ogillar hundar."
@@ -99,11 +99,11 @@
           "prompt": "Vad får Ludde syn på i parken?",
           "options": [
             "En annan hund.",
-            "En katt.",
             "En fågel.",
+            "En katt.",
             "En glasstrut."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "I texten står det att Ludde fick syn på en katt och sprang efter den. Glasstruten nosade han bara på innan."
         },
         {
@@ -158,10 +158,10 @@
           "category": "TI",
           "prompt": "Otto ”pustade ut” när han satt fast kopplet. Vad betyder det?",
           "options": [
-            "Han blev andfådd.",
+            "Han blev andfådd av allt.",
             "Han blev lättad och lugn.",
             "Han blev arg på Ludde.",
-            "Han började frysa."
+            "Han började frysa mycket."
           ],
           "correctIndex": 1,
           "explanation": "Att pusta ut betyder att man slappnar av när något jobbigt är över. Otto hade fått tillbaka Ludde och kände sig lugn."
@@ -174,11 +174,11 @@
           "prompt": "Varför får Ludde två godisar fast han bara skulle få en?",
           "options": [
             "Ludde har varit duktig på promenaden.",
-            "Otto är glad att Ludde kom tillbaka.",
             "Sara har sagt att Ludde ska ha två.",
-            "Otto vill bli av med godiset."
+            "Otto vill bli av med godiset.",
+            "Otto är glad att Ludde kom tillbaka."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Otto var så glad och lättad att Ludde kom tillbaka att han gav en godis extra. Det står inget om att Sara bestämt två."
         },
         {
@@ -188,12 +188,12 @@
           "category": "L",
           "prompt": "Vad säger Sara när hon kommer hem?",
           "options": [
+            "Att Ludde har blivit smutsig i parken.",
+            "Att Otto snart ska få en egen hund av henne.",
             "Att Otto får gärna passa Ludde fler gånger.",
-            "Att Ludde har blivit smutsig.",
-            "Att Otto ska få en egen hund.",
-            "Att resan var jobbig."
+            "Att resan hennes var lång och jobbig."
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Sara säger: ”Du får gärna passa Ludde fler gånger.” Hon tycker att Otto har skött det bra."
         },
         {
@@ -203,10 +203,10 @@
           "category": "TI",
           "prompt": "Varför ler Otto i slutet av texten?",
           "options": [
-            "Ludde ger honom en puss.",
-            "Mamma berättar en rolig historia.",
+            "Ludde ger honom en puss på kinden.",
+            "Mamma berättar en rolig historia om Sara.",
             "Han tror att han snart kan få en egen hund.",
-            "Han ska få godis av Sara."
+            "Han ska få godis av Sara på måndag."
           ],
           "correctIndex": 2,
           "explanation": "Mamma säger ”Vi får se till sommaren”, och för Otto låter det nästan som ett ja. Därför ler han."
@@ -219,11 +219,11 @@
           "prompt": "Vad visar texten om Otto?",
           "options": [
             "Att han är rädd för hundar.",
-            "Att han kan ta ansvar.",
             "Att han tycker om katter.",
-            "Att han ofta tappar bort saker."
+            "Att han ofta tappar bort saker.",
+            "Att han kan ta ansvar."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Otto tog hand om Ludde alldeles själv, även när det blev svårt. Det visar att han kan ta ansvar."
         },
         {
@@ -304,10 +304,10 @@
           "options": [
             "Ungefär tio.",
             "Ungefär hundra.",
-            "Flera tusen.",
-            "Fler än en miljon."
+            "Fler än en miljon.",
+            "Flera tusen."
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "I stycket om taggarna står det: ”Igelkottens rygg är täckt av flera tusen taggar.” Det är många fler än hundra, men inte så många som en miljon."
         },
         {
@@ -317,12 +317,12 @@
           "category": "TI",
           "prompt": "Varför är taggarna bra för igelkotten?",
           "options": [
+            "De skyddar igelkotten mot fiender.",
             "De håller igelkotten varm på vintern.",
             "De hjälper igelkotten att hitta mat.",
-            "De skyddar igelkotten mot fiender.",
             "De gör så att igelkotten kan klättra."
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "Texten säger att taggarna är igelkottens bästa skydd mot fiender. De används alltså inte för att hitta mat."
         },
         {
@@ -332,12 +332,12 @@
           "category": "L",
           "prompt": "När är igelkotten vaken?",
           "options": [
-            "På natten.",
             "På dagen.",
             "På morgonen.",
-            "Hela dygnet."
+            "Hela dygnet.",
+            "På natten."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "På dagen sover igelkotten, och när det blir mörkt vaknar den. Därför är den vaken på natten."
         },
         {
@@ -347,12 +347,12 @@
           "category": "TI",
           "prompt": "Vad betyder ordet nattaktiv?",
           "options": [
-            "Att vara rädd för mörkret.",
             "Att vara vaken på natten.",
+            "Att vara rädd för mörkret.",
             "Att sova hela natten.",
             "Att jaga andra djur."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "I texten står det: djur som är vakna på natten kallas nattaktiva. Det handlar alltså inte om att vara rädd för mörkret."
         },
         {
@@ -362,10 +362,10 @@
           "category": "L",
           "prompt": "Vad äter igelkotten?",
           "options": [
-            "Frukt, bär och nötter.",
+            "Frukt, bär och söta nötter.",
             "Insekter, sniglar och maskar.",
-            "Gräs och löv.",
-            "Fisk och musslor."
+            "Gräs, gröna löv och blommor.",
+            "Fisk, musslor och små räkor."
           ],
           "correctIndex": 1,
           "explanation": "Texten räknar upp att igelkotten äter insekter, sniglar och maskar."
@@ -379,10 +379,10 @@
           "options": [
             "Den ska orka springa fort i snön.",
             "Den ska se större ut för sina fiender.",
-            "Den ska klara sig utan mat hela vintern.",
-            "Den ska hålla taggarna varma."
+            "Den ska hålla taggarna varma.",
+            "Den ska klara sig utan mat hela vintern."
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "På vintern finns nästan ingen mat, och då sover igelkotten. Därför måste den äta upp sig i förväg så att den klarar sig."
         },
         {
@@ -392,12 +392,12 @@
           "category": "TI",
           "prompt": "Varför sover igelkotten hela vintern?",
           "options": [
-            "Det finns nästan ingen mat på vintern.",
             "Den fryser om tassarna i snön.",
             "Den tycker inte om att vara ute när det är mörkt.",
+            "Det finns nästan ingen mat på vintern.",
             "Den är trött efter sommaren."
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Texten förklarar att det nästan inte finns några insekter, sniglar eller maskar på vintern. Därför sover igelkotten i stället."
         },
         {
@@ -408,11 +408,11 @@
           "prompt": "Var sover igelkotten på vintern?",
           "options": [
             "I en håla under vattnet.",
-            "I en hög med löv.",
             "Uppe i ett träd.",
+            "I en hög med löv.",
             "I en fågelholk."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Igelkotten kryper in i en hög med löv på hösten och vaknar inte förrän på våren."
         },
         {
@@ -422,12 +422,12 @@
           "category": "L",
           "prompt": "Hur är igelkotten när den vaknar på våren?",
           "options": [
-            "Den är rund och tjock.",
             "Den är mager och hungrig.",
+            "Den är rund och tjock.",
             "Den är blöt och kall.",
             "Den är pigg och mätt."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "I texten står det att igelkotten har blivit mager och genast måste börja leta mat igen. Rund och tjock är den innan vintern."
         },
         {
@@ -438,11 +438,11 @@
           "prompt": "Varför ska man låta en hög med löv ligga kvar i trädgården?",
           "options": [
             "Löven blir fin jord till blommorna.",
-            "Igelkotten kan sova i lövhögen.",
             "Det är jobbigt att kratta löv.",
-            "Fåglarna bygger bon av löven."
+            "Fåglarna bygger bon av löven.",
+            "Igelkotten kan sova i lövhögen."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Texten tipsar om att låta en hög med löv ligga kvar, för då kan en igelkott sova där."
         },
         {
@@ -452,12 +452,12 @@
           "category": "L",
           "prompt": "Varför ska man inte ge igelkotten mjölk?",
           "options": [
-            "Igelkotten tycker inte om mjölk.",
             "Igelkotten får ont i magen av mjölk.",
+            "Igelkotten tycker inte om mjölk.",
             "Mjölken lockar till sig katter.",
             "Mjölken gör taggarna mjuka."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Texten säger tydligt att igelkotten får ont i magen av mjölk. Vatten är bäst för en törstig igelkott."
         },
         {
@@ -467,12 +467,12 @@
           "category": "TI",
           "prompt": "Vad vill författaren med det sista stycket i texten?",
           "options": [
+            "Visa hur man kan hjälpa igelkotten.",
             "Berätta var igelkotten bor.",
             "Förklara varför igelkotten har taggar.",
-            "Visa hur man kan hjälpa igelkotten.",
             "Beskriva hur igelkotten ser ut."
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "Sista stycket ger tips: låt lövhögen ligga, ställ ut vatten och ge inte mjölk. Det handlar alltså om hur man kan hjälpa igelkotten."
         }
       ],
@@ -539,12 +539,12 @@
           "category": "L",
           "prompt": "Vad ville Vera göra hela sommaren?",
           "options": [
-            "Sova i tält på gården en hel natt.",
             "Lära sig cykla utan stödhjul.",
-            "Få en egen igelkott.",
-            "Sova inne hos Milo."
+            "Sova i tält på gården en hel natt.",
+            "Få en egen igelkott som husdjur.",
+            "Sova inne hos storebror Milo."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Redan i början står det att Vera ville sova i tält på gården, alldeles själv, en hel natt."
         },
         {
@@ -554,10 +554,10 @@
           "category": "L",
           "prompt": "Vad tog Vera med sig ut i tältet?",
           "options": [
-            "En bok och en lampa.",
+            "En bok, en kaka och en tandborste.",
             "Sin kudde, sin ficklampa och sin nalle.",
             "Sin sovsäck och sin mobiltelefon.",
-            "Sin storebror Milo."
+            "Sin cykelhjälm och sin storebror Milo."
           ],
           "correctIndex": 1,
           "explanation": "I texten står det rakt ut vad Vera tog med sig: ”sin kudde, sin ficklampa och sin nallebjörn”. Någon sovsäck eller mobil nämns aldrig."
@@ -570,11 +570,11 @@
           "prompt": "Varför sa Vera att hon inte var rädd för någonting?",
           "options": [
             "Hon hade sovit i tält många gånger förut.",
-            "Hon visste att det fanns en igelkott på gården.",
             "Hon ville visa Milo att hon vågade.",
+            "Hon visste att det fanns en igelkott på gården.",
             "Hon var aldrig rädd för mörkret."
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "explanation": "Milo sa att hon skulle bli rädd i mörkret, och Vera ville visa att hon vågade. I slutet förstår vi att hon ändå var lite rädd."
         },
         {
@@ -584,12 +584,12 @@
           "category": "L",
           "prompt": "Vilket ljud hörde Vera från buskarna?",
           "options": [
+            "Ett prassel.",
             "Ett pip.",
             "Ett brak.",
-            "Ett prassel.",
             "Ett tjut."
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "I texten står det ”Prassel, prassel” om ljudet från buskarna bakom tältet."
         },
         {
@@ -599,12 +599,12 @@
           "category": "TI",
           "prompt": "I texten står det att ”Veras hjärta slog hårt”. Vad betyder det?",
           "options": [
-            "Vera var rädd.",
             "Vera hade sprungit.",
+            "Vera var rädd.",
             "Vera var arg.",
             "Vera frös."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "När hjärtat slår hårt är man ofta rädd. Vera kröp ihop under filten och kramade nallen så hårt hon kunde."
         },
         {
@@ -614,12 +614,12 @@
           "category": "TI",
           "prompt": "Varför sprang Vera inte in till Milo, fast hon ville?",
           "options": [
-            "Dörren till huset var låst.",
-            "Hon ville inte att Milo skulle få rätt.",
+            "Dörren till huset var låst för natten.",
             "Hon hittade inte vägen i mörkret.",
-            "Milo hade redan somnat."
+            "Hon ville inte att Milo skulle få rätt.",
+            "Milo hade redan somnat i sin säng."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Vera tänkte att Milo skulle säga ”vad var det jag sa” hela morgonen. Hon ville inte att han skulle få rätt."
         },
         {
@@ -631,10 +631,10 @@
           "options": [
             "En katt.",
             "En fågel.",
-            "En igelkott.",
-            "Milo."
+            "Milo.",
+            "En igelkott."
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "När Vera lyste ut i mörkret satt en liten igelkott och nosade på ett äpple. Det var den som hade prasslat."
         },
         {
@@ -644,12 +644,12 @@
           "category": "TI",
           "prompt": "Varför började Vera skratta?",
           "options": [
-            "Igelkotten var jätterolig.",
+            "Milo kom ut och berättade ett skämt.",
+            "Milo tittade ut genom fönstret och vinkade.",
             "Hon hade varit rädd för något helt ofarligt.",
-            "Milo tittade ut genom fönstret.",
-            "Äpplet smakade gott."
+            "Äpplet hon åt smakade väldigt gott."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Vera skrattade när hon förstod att hon varit rädd för en liten igelkott som åt äpplen. Det var alltså inget farligt."
         },
         {
@@ -659,12 +659,12 @@
           "category": "L",
           "prompt": "Vad gjorde igelkotten när ljuset träffade den?",
           "options": [
-            "Den sprang sin väg.",
             "Den rullade ihop sig till en boll.",
-            "Den åt upp äpplet.",
-            "Den fräste."
+            "Den blundade och lade sig att sova.",
+            "Den åt genast upp hela äpplet.",
+            "Den fräste och visade sina taggar."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "I texten står det att igelkotten rullade ihop sig till en liten boll när ljuset träffade den."
         },
         {
@@ -675,11 +675,11 @@
           "prompt": "Hur kändes mörkret för Vera efter att hon sett igelkotten?",
           "options": [
             "Ännu läskigare än förut.",
-            "Inte längre så farligt.",
             "Precis lika läskigt som förut.",
-            "Kallt och blött."
+            "Kallt och blött.",
+            "Inte längre så farligt."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Texten säger att mörkret inte längre kändes så farligt. Vera hade ju sett vad ljudet kom från."
         },
         {
@@ -689,12 +689,12 @@
           "category": "TI",
           "prompt": "Vad menas med sista meningen: ”Och den här gången var det nästan sant”?",
           "options": [
-            "Vera ljög för Milo om natten.",
+            "Vera ljög för Milo om hela natten i tältet.",
+            "Vera var aldrig rädd för någonting alls.",
             "Vera hade faktiskt varit lite rädd, men vågat ändå.",
-            "Vera var aldrig rädd för någonting.",
-            "Vera tänkte sova ute igen nästa natt."
+            "Vera tänkte sova ute i tältet igen nästa natt."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Vera säger att hon inte är rädd för någonting. Ordet ”nästan” visar att hon faktiskt var lite rädd, men vågade ändå."
         },
         {
@@ -704,10 +704,10 @@
           "category": "TI",
           "prompt": "Vad visar berättelsen om Vera?",
           "options": [
-            "Att hon är rädd för djur.",
+            "Att hon är rädd för alla sorters djur.",
             "Att hon kan vara modig fast hon är rädd.",
             "Att hon inte tycker om sin storebror.",
-            "Att hon aldrig blir trött."
+            "Att hon aldrig blir trött på kvällen."
           ],
           "correctIndex": 1,
           "explanation": "Vera var rädd i mörkret, men vågade titta ut och sova kvar hela natten. Det är att vara modig."
@@ -790,12 +790,12 @@
           "category": "L",
           "prompt": "Var bor många myror?",
           "options": [
-            "I en myrstack.",
             "Under en sten.",
             "I ett träd.",
-            "I ett bo av gräs."
+            "I ett bo av gräs.",
+            "I en myrstack."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "I texten står det att många myror bor i en myrstack, som ser ut som en hög med barr och pinnar."
         },
         {
@@ -821,11 +821,11 @@
           "prompt": "Varför kommer det hela tiden nya myror i stacken?",
           "options": [
             "För att andra myror flyttar in.",
-            "För att drottningen lägger ägg.",
             "För att myrorna lever länge.",
-            "För att myrorna hittar mat."
+            "För att myrorna hittar mat.",
+            "För att drottningen lägger ägg."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Drottningen lägger ägg hela tiden, och därför kommer det nya myror i stacken."
         },
         {
@@ -836,11 +836,11 @@
           "prompt": "Hur hittar myrorna fram till mat som en annan myra har hittat?",
           "options": [
             "De ropar till varandra.",
-            "De följer ett luktspår.",
             "De ser maten på långt håll.",
+            "De följer ett luktspår.",
             "De gräver en gång dit."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "En myra som hittat mat lämnar ett luktspår, och de andra myrorna följer spåret. Myror kan inte prata med varandra som vi gör."
         },
         {
@@ -850,13 +850,13 @@
           "category": "TI",
           "prompt": "Varför lämnar en myra ett luktspår när den hittat mat?",
           "options": [
-            "För att hitta hem själv.",
-            "För att skrämma bort fiender.",
+            "För att drottningen ska komma ut och äta.",
+            "För att skrämma bort fiender från stacken.",
             "För att de andra myrorna ska hitta maten.",
-            "För att märka ut sin egen mat."
+            "För att märka ut sin egen mat åt sig."
           ],
           "correctIndex": 2,
-          "explanation": "Texten säger att de andra myrorna kan följa spåret till maten. Spåret går visserligen hem till stacken, men det är gjort för kompisarnas skull."
+          "explanation": "Texten säger att en myra som hittat mat lämnar ett luktspår hela vägen hem. Då kan de andra myrorna följa spåret till maten."
         },
         {
           "kind": "multiple-choice",
@@ -865,12 +865,12 @@
           "category": "L",
           "prompt": "Hur stark är en myra för sin storlek?",
           "options": [
-            "Ungefär lika stark som en mygga.",
-            "Svagare än de flesta djur.",
-            "Väldigt stark – den kan bära mer än den själv väger.",
-            "Precis lika stark som en människa."
+            "Ungefär lika stark som en liten mygga i luften.",
+            "Svagare än de flesta andra djur som finns i skogen.",
+            "Precis lika stark som en vuxen och stor människa.",
+            "Väldigt stark – den kan bära mer än den själv väger."
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "I texten står det att en myra kan bära saker som väger mycket mer än den själv."
         },
         {
@@ -880,12 +880,12 @@
           "category": "TI",
           "prompt": "Varför står det i texten att du skulle kunna lyfta en bil?",
           "options": [
-            "För att visa hur tunga bilar är.",
             "För att förklara hur stark en myra är jämfört med sin storlek.",
-            "För att myror ibland bär bilar.",
-            "För att människor är starkare än myror."
+            "För att visa hur mycket en riktig bil väger när den står still.",
+            "För att myror ibland bär riktiga bilar när de letar efter mat.",
+            "För att människor är mycket starkare än små myror i skogen."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Bilen är ett exempel som hjälper oss förstå hur otroligt stark en myra är jämfört med sin lilla storlek. Myror bär förstås inte riktiga bilar."
         },
         {
@@ -895,12 +895,12 @@
           "category": "L",
           "prompt": "Vad tycker myror om att äta?",
           "options": [
-            "Bara blad.",
+            "Bara gröna blad från träden i skogen.",
+            "Bara barr och pinnar från stacken.",
             "Sådant som är sött, och små insekter.",
-            "Bara barr och pinnar.",
-            "Frön och nötter."
+            "Frön, nötter och lite torrt gräs."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Texten säger att myror tycker om sådant som är sött, men att de också äter små insekter."
         },
         {
@@ -910,12 +910,12 @@
           "category": "L",
           "prompt": "Vad händer med jorden när myrorna gräver sina gångar?",
           "options": [
-            "Den blir hård.",
-            "Den luckras upp så att växterna trivs.",
-            "Den torkar ut.",
-            "Den blir full av sten."
+            "Den blir hård som en sten i marken.",
+            "Den torkar ut och blir till fint damm.",
+            "Den blir full av barr och pinnar.",
+            "Den luckras upp så att växterna trivs."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "När myrorna gräver sina gångar luckras jorden upp, så att växterna trivs bättre."
         },
         {
@@ -925,12 +925,12 @@
           "category": "TI",
           "prompt": "Varför är myror nyttiga i naturen?",
           "options": [
-            "De luckrar jorden och städar bort döda insekter.",
-            "De är mat åt alla andra djur.",
-            "De bygger bon åt fåglar.",
-            "De skrämmer bort farliga djur."
+            "De är mat åt alla andra djur som finns i skogen.",
+            "De bygger bon åt fåglar och andra små djur.",
+            "De skrämmer bort farliga djur från hela skogen.",
+            "De luckrar jorden och städar bort döda insekter."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Sista stycket säger att myrorna luckrar jorden och städar skogen genom att äta upp döda insekter."
         },
         {
@@ -940,12 +940,12 @@
           "category": "TI",
           "prompt": "Vad menas med att myrorna är ”ett stort och flitigt lag”?",
           "options": [
-            "Att de spelar fotboll.",
             "Att de är många som arbetar tillsammans.",
-            "Att de är stora djur.",
-            "Att de tävlar mot varandra."
+            "Att de spelar fotboll i stora lag.",
+            "Att de är stora och tunga djur.",
+            "Att de tävlar mot varandra om maten."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Ett lag är många som arbetar tillsammans, och flitig betyder att man jobbar mycket. Myrorna hjälps åt i stacken."
         },
         {
@@ -955,12 +955,12 @@
           "category": "TI",
           "prompt": "Vad handlar texten mest om?",
           "options": [
-            "Hur farliga myror är.",
-            "Hur myror lever och varför de är nyttiga.",
+            "Hur farliga myror är för människor.",
             "Hur man blir av med myror hemma.",
-            "Var i världen det finns flest myror."
+            "Var i världen det finns flest myror.",
+            "Hur myror lever och varför de är nyttiga."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Texten berättar var myror bor, hur de arbetar och varför de är viktiga i naturen."
         }
       ],
@@ -1023,9 +1023,9 @@
           "prompt": "Var hittar Noor fågelungen?",
           "options": [
             "I gräset under björken.",
-            "I ett bo i häcken.",
-            "På skolgården.",
-            "På staketet."
+            "I ett bo uppe i häcken.",
+            "På skolgården vid trädet.",
+            "På staketet vid rabatten."
           ],
           "correctIndex": 0,
           "explanation": "I texten står det att Noor fick syn på fågelungen i gräset under den stora björken."
@@ -1052,12 +1052,12 @@
           "category": "TI",
           "prompt": "Varför säger Ali nej till att ta hem fågelungen?",
           "options": [
-            "Han tycker inte om fåglar.",
             "Han vet att föräldrarna brukar vara i närheten.",
+            "Han tycker inte om fåglar och vill gå hem.",
             "Mamma har sagt att de inte får ha husdjur.",
-            "Fågelungen ser farlig ut."
+            "Fågelungen ser farlig ut och kan bitas."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Ali kom ihåg från skolan att fågelföräldrarna brukar vara i närheten och inte vågar komma fram om man står för nära."
         },
         {
@@ -1067,12 +1067,12 @@
           "category": "TI",
           "prompt": "Varför ställer sig barnen bakom häcken?",
           "options": [
-            "För att gömma sig för katten.",
-            "För att de ska gå hem.",
-            "För att kunna se ungen utan att skrämma fåglarna.",
-            "För att vänta på fröken."
+            "För att gömma sig för grannens katt Misse.",
+            "För att de skulle vila innan de gick hem.",
+            "För att vänta på fröken som skulle komma.",
+            "För att kunna se ungen utan att skrämma fåglarna."
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "Texten säger att de därifrån kunde se ungen utan att skrämma någon. Katten kom fram först senare."
         },
         {
@@ -1082,10 +1082,10 @@
           "category": "L",
           "prompt": "Vem smyger fram ur rabatten?",
           "options": [
-            "En hund.",
+            "En stor brun hund.",
             "Grannens katt Misse.",
-            "En annan fågel.",
-            "Noor."
+            "En annan liten fågel.",
+            "Noors storebror Ali."
           ],
           "correctIndex": 1,
           "explanation": "Det prasslade i rabatten, och fram smög grannens katt Misse."
@@ -1097,12 +1097,12 @@
           "category": "TI",
           "prompt": "Varför ropar Ali ”Schas!” och klappar i händerna?",
           "options": [
-            "Han vill skrämma bort katten så att den inte tar fågelungen.",
-            "Han vill att Noor ska skynda sig.",
-            "Han är glad att se Misse.",
-            "Han vill att fågelungen ska flyga."
+            "Han vill att Noor ska skynda sig hem till huset genast.",
+            "Han är glad att se Misse och vill klappa katten lite.",
+            "Han vill att fågelungen ska flyga upp i den stora björken.",
+            "Han vill skrämma bort katten så att den inte tar fågelungen."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Katten kröp närmare fågelungen, och Ali ville skrämma bort den. Misse hoppade högt och försvann över staketet."
         },
         {
@@ -1113,11 +1113,11 @@
           "prompt": "Vad gör fågelmamman när hon kommer?",
           "options": [
             "Hon jagar bort barnen.",
-            "Hon flyger upp i trädet.",
             "Hon matar ungen.",
+            "Hon flyger upp i trädet.",
             "Hon bygger ett nytt bo."
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "explanation": "I texten står det att fågeln satte sig bredvid ungen och matade den."
         },
         {
@@ -1128,9 +1128,9 @@
           "prompt": "I texten står det att ”Noor höll andan”. Vad betyder det?",
           "options": [
             "Hon var spänd och ville inte störa.",
-            "Hon kunde inte andas.",
-            "Hon skulle dyka.",
-            "Hon var arg på Ali."
+            "Hon kunde inte andas alls längre.",
+            "Hon skulle dyka ner i vattnet.",
+            "Hon var arg på sin bror Ali."
           ],
           "correctIndex": 0,
           "explanation": "Att hålla andan betyder att man är spänd och alldeles tyst. Noor ville inte störa fåglarna."
@@ -1143,11 +1143,11 @@
           "prompt": "Vad är det för sorts fågel?",
           "options": [
             "En talgoxe.",
-            "En gråsparv.",
             "En skata.",
-            "En mås."
+            "En mås.",
+            "En gråsparv."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Ali säger i texten: ”Det är en gråsparv.”"
         },
         {
@@ -1159,10 +1159,10 @@
           "options": [
             "Kvar i gräset.",
             "Hemma hos Misse.",
-            "Borta utan ett spår.",
-            "Högt uppe på en gren."
+            "Högt uppe på en gren.",
+            "Borta utan ett spår."
           ],
-          "correctIndex": 3,
+          "correctIndex": 2,
           "explanation": "Nästa dag var gräset tomt, och högt uppe på en gren satt fågelungen och kvittrade."
         },
         {
@@ -1172,12 +1172,12 @@
           "category": "TI",
           "prompt": "Hur känner sig Noor i slutet av texten?",
           "options": [
-            "Glad och lättad.",
             "Orolig och ledsen.",
+            "Glad och lättad.",
             "Arg på katten.",
             "Trött och hungrig."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Först blev Noor orolig, men sedan såg hon att ungen kunde flyga och vinkade till fåglarna hela vägen. Då känner man sig glad och lättad."
         },
         {
@@ -1187,12 +1187,12 @@
           "category": "TI",
           "prompt": "Vad kan man lära sig av texten?",
           "options": [
-            "Att fågelungar behöver tas in i värmen.",
-            "Att man ska låta fågelungar vara – föräldrarna tar hand om dem.",
-            "Att katter inte tycker om fåglar.",
-            "Att gråsparvar inte kan flyga."
+            "Att fågelungar alltid behöver tas in i värmen hemma hos oss.",
+            "Att man måste mata fågelungar som sitter ensamma i gräset.",
+            "Att gråsparvar inte kan flyga och alltid bor på marken.",
+            "Att man ska låta fågelungar vara – föräldrarna tar hand om dem."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Ali visste att man inte ska röra fågelungar, för föräldrarna är i närheten. I slutet klarar sig ungen precis som han sa."
         },
         {
@@ -1270,12 +1270,12 @@
           "category": "L",
           "prompt": "Vad kallas de första tänderna man får?",
           "options": [
-            "Mjölktänder.",
             "Vuxentänder.",
+            "Mjölktänder.",
             "Visdomständer.",
             "Småtänder."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Texten börjar med att de första tänderna kallas mjölktänder."
         },
         {
@@ -1285,12 +1285,12 @@
           "category": "L",
           "prompt": "Hur många mjölktänder har man?",
           "options": [
-            "Tio.",
             "Tjugo.",
+            "Tio.",
             "Trettio.",
             "Trettiotvå."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "I texten står det att mjölktänderna är tjugo stycken. Det är en vuxen som har 28 till 32 tänder."
         },
         {
@@ -1330,12 +1330,12 @@
           "category": "TI",
           "prompt": "Varför behöver tändernas yta vara så hård?",
           "options": [
-            "För att tänderna ska se vita ut.",
             "För att tänderna ska tugga mat varje dag i många år.",
-            "För att bakterierna inte ska få plats.",
-            "För att tandläkaren ska kunna laga dem."
+            "För att tänderna ska se vita och fina ut.",
+            "För att bakterierna inte ska få plats i munnen.",
+            "För att tandläkaren ska kunna laga hål i dem."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Texten förklarar att emaljen behöver vara hård för att tänderna ska tugga mat varje dag i många år."
         },
         {
@@ -1345,12 +1345,12 @@
           "category": "L",
           "prompt": "Vad gör bakterierna när du äter sött?",
           "options": [
-            "De somnar.",
+            "De somnar och vaknar först på kvällen.",
+            "De flyttar till en annan tand i munnen.",
             "De bildar en syra som fräter på emaljen.",
-            "De flyttar till en annan tand.",
-            "De gör emaljen starkare."
+            "De gör emaljen starkare och hårdare."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "När du äter sött äter bakterierna också, och då bildar de en syra som fräter på emaljen."
         },
         {
@@ -1390,12 +1390,12 @@
           "category": "L",
           "prompt": "Vad hjälper fluor till med, förutom att göra emaljen starkare? Kryssa för rätt alternativ.",
           "options": [
-            "Att göra tandkrämen söt.",
-            "Att få mjölktänderna att lossna.",
             "Att laga små skador innan de blir hål.",
-            "Att göra tänderna vitare."
+            "Att göra tandkrämen söt och god.",
+            "Att få mjölktänderna att lossna.",
+            "Att göra tänderna vitare och blankare."
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "Texten säger att fluor ”gör emaljen starkare och hjälper till att laga små skador innan de blir hål”. Det är alltså två saker fluor gör, och frågan gäller den andra."
         },
         {
@@ -1405,12 +1405,12 @@
           "category": "TI",
           "prompt": "Vad menas med ordet karies?",
           "options": [
-            "En sorts tandkräm.",
             "Hål i tänderna.",
+            "En sorts tandkräm.",
             "En tandläkare.",
             "En mjölktand."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Texten förklarar att hål i tänderna också kallas karies."
         },
         {
@@ -1420,12 +1420,12 @@
           "category": "TI",
           "prompt": "Varför är det bra att gå till tandläkaren fast man inte har ont?",
           "options": [
-            "Tandläkaren kan se sådant man inte ser själv.",
-            "Man får alltid en present.",
-            "Tänderna blir hårdare av besöket.",
-            "Man slipper borsta tänderna sedan."
+            "Man får alltid en present av tandläkaren.",
+            "Tänderna blir hårdare av själva besöket.",
+            "Man slipper borsta tänderna sedan i en vecka.",
+            "Tandläkaren kan se sådant man inte ser själv."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Tandläkaren ser sådant du inte kan se själv, och ju tidigare ett hål upptäcks desto lättare är det att laga."
         },
         {
@@ -1435,12 +1435,12 @@
           "category": "TI",
           "prompt": "Vad handlar texten mest om?",
           "options": [
-            "Hur tandläkare arbetar.",
-            "Varför godis är farligt.",
+            "Hur tandläkare arbetar under en vanlig dag.",
             "Hur tänderna fungerar och hur man tar hand om dem.",
-            "Skillnaden mellan barn och vuxna."
+            "Varför godis är farligt för hela kroppen.",
+            "Skillnaden mellan barn och vuxna i Sverige."
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "explanation": "Texten handlar om mjölktänder, emalj, bakterier, borstning och tandläkaren – alltså hur tänderna fungerar och hur man tar hand om dem."
         }
       ]
