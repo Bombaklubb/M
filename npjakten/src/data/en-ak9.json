@@ -696,12 +696,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What is the difference between what Priya's father and mother said?",
           "options": [
-            "Her father blamed the town, her mother blamed what was shown there",
             "Her father wanted it reopened, her mother did not",
+            "Her father blamed the town, her mother blamed what was shown there",
             "Her father had been there more often than her mother",
             "Her father thought it would reopen, her mother did not"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Pappan sa att stan slutat gå dit, punkt slut. Mamman sa att stan slutat gå dit därför att det inte fanns något värt att se – alltså läggs skulden på utbudet, inte på publiken. Berättaren markerar själv att det är ”a different thing entirely”."
         },
         {
@@ -740,11 +740,11 @@
           "prompt": "Why did Priya write eleven different letters instead of the same letter eleven times?",
           "options": [
             "She wanted to practise writing English before an exam",
-            "Her teacher had said identical letters count as one",
             "She did not know the names of the eleven councillors",
+            "Her teacher had said identical letters count as one",
             "Mrs Adeyemi had told her to write to everyone"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Texten säger att hennes engelsklärare en gång sagt att elva identiska brev är värda ett enda brev. Hon skrev därför elva olika."
         },
         {
@@ -788,12 +788,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "How did Priya react to Mrs Adeyemi's question?",
           "options": [
-            "She was pleased that someone had replied",
             "She was annoyed because the question was fair",
+            "She was pleased that someone had replied",
             "She was disappointed that only one had answered",
             "She decided to write to the council again"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Texten säger att hon blev ”extremely annoyed to discover that this was a fair question” – irritationen kom just av att frågan var berättigad och att hon inte hade något svar."
         },
         {
@@ -860,12 +860,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "What did Priya understand when the projector broke?",
           "options": [
-            "That the equipment was too old to use",
             "That the audience mattered more than the film",
+            "That the equipment was too old to use",
             "That they should have asked for permission",
             "That the evening had been a mistake"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Båda gångerna projektorn gick sönder ropade någon ett skämt i mörkret och hela salen skrattade. Det var då hon förstod att ”the film had almost nothing to do with it” – det var människorna i rummet som var poängen."
         },
         {
@@ -899,11 +899,11 @@
           "prompt": "What happened to the supermarket's offer?",
           "options": [
             "The council voted against it",
-            "It was withdrawn before the meeting",
             "It was replaced by a higher offer",
+            "It was withdrawn before the meeting",
             "The chain asked for more time"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Erbjudandet drogs tillbaka en vecka före mötet, och regionchefen sa att de ”reconsidered the location”. Rådet hann alltså aldrig rösta om det."
         },
         {
@@ -938,10 +938,10 @@
           "options": [
             "The town council pays the costs of running it",
             "A supermarket chain in the town sponsors the building",
-            "Eight hundred people pay a small sum every month",
-            "The man from Leeds rebuilt it after the fire in 2011"
+            "The man from Leeds rebuilt it after the fire in 2011",
+            "Eight hundred people pay a small sum every month"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "Texten säger att biografen överlevt främst tack vare att åttahundra personer i en stad med niotusen invånare betalar fyra pund i månaden för att hålla den vid liv."
         },
         {
@@ -1375,11 +1375,11 @@
           "prompt": "How did the station begin?",
           "options": [
             "With money from the county council",
-            "With equipment the school was throwing out",
             "With a grant from a national radio station",
+            "With equipment the school was throwing out",
             "With a course Tessa took in 2017"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Skolan skulle slänga gammal inspelningsutrustning, och Tessa frågade om hon fick behålla den. Fyra personer började sedan göra ett halvtimmesprogram i ett tomt klassrum."
         },
         {
@@ -1412,12 +1412,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What does Tessa say made the biggest difference?",
           "options": [
-            "They stopped copying the radio they grew up with",
             "They moved into a proper studio in the town centre",
             "They began playing the music their parents had loved",
+            "They stopped copying the radio they grew up with",
             "They were given money by the school to buy equipment"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "På frågan vad som förändrades svarar hon att de slutade försöka låta som den radio de vuxit upp med – och att allt blev bättre när de gjorde det."
         },
         {
@@ -1490,11 +1490,11 @@
           "prompt": "What does Tessa say you do NOT need?",
           "options": [
             "An interest in other people",
-            "A so-called radio voice",
             "The ability to take criticism",
+            "A so-called radio voice",
             "To live in the county"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Hon säger uttryckligen att man inte behöver det folk tänker på som en radioröst – de har medvetet gått bort från det. De övriga tre är sådant man just behöver."
         },
         {

@@ -34,12 +34,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– I've made pancakes.\n– They smell great!\n– Would you like one?",
           "options": [
-            "I made them yesterday.",
             "Yes, please!",
+            "I made them yesterday.",
             "The kitchen is clean.",
             "I don't like pancakes."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Den tredje repliken är ett erbjudande, så det som passar är att tacka ja. Att säga att man inte tycker om pannkakor motsäger att man nyss sagt att de luktar gott."
         },
         {
@@ -49,12 +49,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Have you seen my keys?\n– No, where did you put them?\n– If I knew that, I wouldn't be looking.",
           "options": [
-            "Sorry, silly question.",
             "They are in the car.",
             "I lost mine too yesterday.",
-            "You should buy new ones."
+            "You should buy new ones.",
+            "Sorry, silly question."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Den sista repliken är ett vänligt påpekande om att frågan var onödig. Då är det naturligt att be om ursäkt för frågan. Att svara var nycklarna är går inte, eftersom personen just sagt att hen inte vet."
         },
         {
@@ -109,12 +109,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– What are you reading?\n– A book about volcanoes.\n– Is it any good?",
           "options": [
-            "Yes, I can't put it down.",
             "I don't read books.",
             "It costs ten pounds.",
-            "Volcanoes are cold."
+            "Volcanoes are cold.",
+            "Yes, I can't put it down."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Frågan gäller om boken är bra. Uttrycket ”I can't put it down” betyder att boken är så spännande att man inte kan sluta läsa. Priset svarar inte på frågan."
         },
         {
@@ -139,12 +139,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– We're going camping this weekend.\n– Really? Where?\n– By the lake, if the weather is good.",
           "options": [
-            "I hope it stays dry.",
             "I've never seen a lake.",
             "Camping is on Monday.",
-            "You can swim in the sea."
+            "You can swim in the sea.",
+            "I hope it stays dry."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Orden ”if the weather is good” gör vädret till samtalets ämne, och då passar en förhoppning om uppehåll. Alternativet om måndag motsäger ”this weekend”."
         },
         {
@@ -154,12 +154,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Did you finish your homework?\n– Almost. I've got one page left.\n– You'd better hurry.",
           "options": [
-            "I know, I'm nearly done.",
             "I haven't started.",
             "There's no homework.",
-            "I finished last week."
+            "I finished last week.",
+            "I know, I'm nearly done."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Eleven har redan sagt att en sida återstår, så svaret måste stämma med det. ”I haven't started” och ”There's no homework” motsäger den tidigare repliken."
         },
         {
@@ -184,12 +184,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– I'm going to the shop. Do you need anything?\n– Could you get some milk?\n– Sure. Anything else?",
           "options": [
-            "That's all, thanks.",
             "The shop is closed.",
             "I don't drink milk.",
+            "That's all, thanks.",
             "How much was it?"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Frågan ”Anything else?” ska besvaras med om något mer behövs. Att säga att man inte dricker mjölk motsäger att man nyss bad om mjölk."
         },
         {
@@ -199,12 +199,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Look at those clouds.\n– Do you think it will rain?\n– It looks like it.",
           "options": [
-            "Let's take an umbrella.",
             "The sun is hot today.",
+            "Let's take an umbrella.",
             "I love swimming in the sea.",
             "It rained a lot last year."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Eftersom det verkar bli regn är det logiska att föreslå ett paraply. ”The sun is hot today” motsäger att himlen är full av moln."
         }
       ]
@@ -675,11 +675,11 @@
           "prompt": "Why did the children have to start helping the family?",
           "options": [
             "Their mother lost her job at the market",
-            "Their father could no longer work",
             "The family moved to a new town",
+            "Their father could no longer work",
             "Their father wanted them to earn money"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Texten säger att pappan skadade ryggen och inte längre kunde följa med båtarna – ”From that day the children had to help”. Det var alltså skadan, inte ett önskemål, som gjorde att barnen fick arbeta."
         },
         {
@@ -689,12 +689,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What did Ellen enjoy about working at the market?",
           "options": [
+            "Seeing people change their minds because of her",
             "Standing outside in the cold every Saturday",
             "Calling out the prices more quietly than others",
-            "Seeing people change their minds because of her",
             "Getting Saturday mornings off from her job"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "Sista meningen i första delen säger det rakt ut: hon älskade att se folk stanna, le och ändra sig på grund av något hon sagt. Att hon hatade kylan sägs uttryckligen."
         },
         {
@@ -732,12 +732,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "Why was the first summer difficult for Ellen?",
           "options": [
-            "She had no freezer and could not sell in the rain",
             "The blacksmith never finished her cart",
             "The Italian café sold cheaper ice cream",
-            "She was too young to have her own business"
+            "She was too young to have her own business",
+            "She had no freezer and could not sell in the rain"
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Texten nämner två svårigheter: hon hade ingen frys och kunde bara göra så mycket som hon sålde samma dag, och regniga dagar sålde hon ingenting. Kaféets priser nämns aldrig."
         },
         {
@@ -771,11 +771,11 @@
           "prompt": "What did Ellen do that the café owners did not?",
           "options": [
             "She opened her shop very early",
-            "She asked her customers what they wanted",
             "She sold coffee as well as ice cream",
+            "She asked her customers what they wanted",
             "She painted her cart a bright colour"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Texten säger uttryckligen: ”Ellen had learned something the café owners had not: she asked her customers what they wanted.” De mindre strutarna och den tidiga öppningen är följder av just det."
         },
         {
@@ -816,10 +816,10 @@
           "options": [
             "She thought the name sounded much too old-fashioned",
             "She had wanted the shops to be named after her town",
-            "She felt a queen does nothing while she worked hard",
-            "The newspapers had spelt her name wrongly in 1975"
+            "The newspapers had spelt her name wrongly in 1975",
+            "She felt a queen does nothing while she worked hard"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "Hennes egna ord förklarar det: ”A queen sits down. I have never sat down in my life.” Hon tyckte alltså att namnet gav fel bild av hur hårt hon arbetade."
         },
         {
@@ -852,12 +852,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "Why did so many people come when Ellen died, even though they had never met her?",
           "options": [
+            "She had helped them without them knowing her",
             "They wanted to see the famous shops",
             "Her family had invited the whole town",
-            "She had helped them without them knowing her",
             "They had all worked for her company"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "Sista meningen förklarar det: de hade vuxit upp med hennes glass eller lärt sig ett yrke med hjälp av hennes pengar. Hon hade alltså påverkat deras liv utan att de träffat henne."
         },
         {
@@ -924,12 +924,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Is this seat taken?\n– No, go ahead.\n– Thanks, the train is really full today.",
           "options": [
-            "It always is on Fridays.",
             "I don't like trains.",
+            "It always is on Fridays.",
             "The seat is broken.",
             "I'm getting off here."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Kommentaren om att tåget är fullt bjuder in till ett medhåll. Att säga att man kliver av skulle vara konstigt när man just erbjudit platsen."
         },
         {
@@ -940,11 +940,11 @@
           "prompt": "– Could you turn the music down a bit?\n– Sorry, is it too loud?\n– Just a little.",
           "options": [
             "I'll turn it off completely.",
-            "There, is that better?",
             "I can't hear anything.",
+            "There, is that better?",
             "Music is good for you."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Personen bad bara om lite lägre volym, så att stänga av helt är en överreaktion. Det naturliga är att sänka och fråga om det räcker."
         },
         {
@@ -954,12 +954,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– I forgot my lunch at home.\n– Again? That's the second time this week.\n– I know, I was in a hurry.",
           "options": [
-            "You can share mine.",
             "Lunch is at twelve.",
             "I never forget mine.",
+            "You can share mine.",
             "Go home and get it."
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Situationen kallar på hjälp, och att dela med sig är det vänliga svaret. ”I never forget mine” svarar inte på problemet."
         },
         {
@@ -984,12 +984,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Do you know how to get to the library?\n– Straight ahead and then left.\n– Is it far?",
           "options": [
-            "About five minutes.",
             "It's a nice library.",
             "I go there often.",
-            "Turn right instead."
+            "Turn right instead.",
+            "About five minutes."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Frågan gäller avståndet, så svaret ska handla om tid eller sträcka. Att ändra vägbeskrivningen mitt i vore ologiskt."
         },
         {
@@ -1015,11 +1015,11 @@
           "prompt": "– Your dog is huge!\n– He's only eight months old.\n– Really? How big will he get?",
           "options": [
             "He was smaller before.",
-            "About twice this size.",
             "He's a very good dog.",
-            "I got him last year."
+            "I got him last year.",
+            "About twice this size."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Frågan handlar om framtiden – hur stor hunden ska bli. Bara ett av alternativen svarar på det."
         },
         {
@@ -1029,12 +1029,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– I can't find my glasses anywhere.\n– Have you looked in the kitchen?\n– Twice.",
           "options": [
-            "They're on your head.",
             "You need new glasses.",
             "I don't wear glasses.",
-            "The kitchen is clean."
+            "The kitchen is clean.",
+            "They're on your head."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Den lite skämtsamma poängen är att glasögonen suttit på huvudet hela tiden. De andra alternativen hjälper inte personen att hitta dem."
         },
         {
@@ -1044,12 +1044,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– We're moving to Spain in August.\n– Wow! Are you happy about it?\n– Yes and no.",
           "options": [
-            "What do you mean?",
             "Spain is in Europe.",
+            "What do you mean?",
             "I've been to Spain.",
             "When did you move?"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Svaret ”Yes and no” är otydligt, och då är det naturligt att be personen förklara. Frågan om när de flyttade motsäger att flytten sker i augusti."
         },
         {
@@ -1059,12 +1059,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Would you like tea or coffee?\n– Tea, please.\n– Milk and sugar?",
           "options": [
-            "Just milk, thanks.",
             "No, I'd like coffee.",
             "Tea is my favourite.",
+            "Just milk, thanks.",
             "I'll make it myself."
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Frågan gäller vad man vill ha i teet, så svaret ska välja mellan mjölk och socker. Att byta till kaffe motsäger att man just bad om te."
         },
         {
@@ -1074,12 +1074,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Did you see the match last night?\n– No, I fell asleep on the sofa.\n– You missed a good one.",
           "options": [
-            "Don't tell me the score!",
             "I never watch football.",
             "The sofa is comfortable.",
-            "It was at eight o'clock."
+            "It was at eight o'clock.",
+            "Don't tell me the score!"
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Personen har missat matchen men kan se den senare, så det logiska är att be om att inte få veta resultatet. ”I never watch football” motsäger att hen tänkte se den."
         },
         {
@@ -1089,12 +1089,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "– Can I ask you something?\n– Of course.\n– It's a bit personal.",
           "options": [
-            "Ask me anyway.",
             "I don't know you.",
+            "Ask me anyway.",
             "That's a good question.",
             "Sorry, I'm busy."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Personen har redan sagt ja, så det som passar är att uppmuntra frågan trots att den är personlig. ”Sorry, I'm busy” motsäger ”Of course”."
         }
       ]
@@ -1555,11 +1555,11 @@
           "prompt": "What interested Ines in her father's shop?",
           "options": [
             "Learning how to repair radios",
-            "The moment a voice came out of a radio",
             "Meeting the customers who came in",
-            "Listening to music from London"
+            "Listening to music from London",
+            "The moment a voice came out of a radio"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Texten säger uttryckligen att hon inte var intresserad av radioapparaterna i sig, utan av ögonblicket när en röst hördes ur dem – från Moskva, London eller en fiskebåt."
         },
         {
@@ -1570,11 +1570,11 @@
           "prompt": "How did Ines get her first tape recorder?",
           "options": [
             "She bought it with her own money",
-            "She found it in the harbour",
             "Her father gave it to her to mend",
+            "She found it in the harbour",
             "It was a present from her mother"
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "explanation": "Pappan gav henne en trasig bandspelare och sa att hon fick behålla den om hon kunde laga den. Det tog henne en månad."
         },
         {
@@ -1607,12 +1607,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What did Ines discover at the harbour in 2004?",
           "options": [
-            "The boats and their sounds were gone",
             "A museum had opened there",
             "Her old school had closed down",
+            "The boats and their sounds were gone",
             "The fishermen did not remember her"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Hamnen var nästan tom: båtarna var borta och med dem ljuden hon mindes – motorerna, ropen, isen som hälldes i lådorna."
         },
         {
@@ -1650,12 +1650,12 @@
           "aspect": "Hitta specifik information",
           "prompt": "What happened during Ines's first two years as a sound collector?",
           "options": [
-            "She travelled to eleven countries",
             "She earned almost no money",
+            "She travelled to eleven countries",
             "Her old colleagues joined her",
             "She won a prize for her work"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Texten säger att kollegerna trodde att hon gjorde ett misstag och att hon under de första två åren tjänade nästan ingenting. De elva länderna kom senare."
         },
         {
@@ -1739,10 +1739,10 @@
           "options": [
             "They pay a small fee each time",
             "They must ask a school for permission",
-            "Free on a website she pays for herself",
-            "Only in museums in northern Norway"
+            "Only in museums in northern Norway",
+            "Free on a website she pays for herself"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "Inspelningarna är gratis för vem som helst att lyssna på, på en webbplats som hon själv betalar för."
         },
         {
@@ -2156,11 +2156,11 @@
           "prompt": "When you speak −X−, people can hardly hear you.",
           "options": [
             "loudly",
-            "quietly",
             "clearly",
-            "quickly"
+            "quickly",
+            "quietly"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "”Quietly” betyder tyst eller lågmält, så då hörs man knappt. ”Loudly” är motsatsen, och ”quickly” handlar om fart, inte volym."
         },
         {
@@ -2172,10 +2172,10 @@
           "options": [
             "rain",
             "fog",
-            "snow",
-            "ice"
+            "ice",
+            "snow"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "Snö faller från himlen. Is (ice) bildas på marken eller på vatten, och dimma (fog) faller inte."
         },
         {
@@ -2185,12 +2185,12 @@
           "aspect": "Granska språk och struktur",
           "prompt": "If people are −X−, they are not afraid of dangerous things.",
           "options": [
-            "brave",
             "famous",
             "careful",
+            "brave",
             "lucky"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "”Brave” betyder modig. ”Careful” är närmast motsatsen i sammanhanget, och ”famous” och ”lucky” handlar om annat."
         },
         {
@@ -2201,11 +2201,11 @@
           "prompt": "A −X− is a small animal with long ears that likes carrots.",
           "options": [
             "mouse",
-            "rabbit",
             "squirrel",
+            "rabbit",
             "hedgehog"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "En rabbit (kanin) har långa öron och äter gärna morötter. En squirrel har yvig svans och en hedgehog har taggar."
         },
         {
@@ -2215,12 +2215,12 @@
           "aspect": "Granska språk och struktur",
           "prompt": "To cook something in an oven is to −X− it.",
           "options": [
+            "bake",
             "boil",
             "fry",
-            "bake",
             "freeze"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "”Bake” är att grädda eller baka i ugn. ”Boil” är att koka i vatten och ”fry” att steka i panna."
         },
         {
@@ -2231,11 +2231,11 @@
           "prompt": "You use a −X− to find out what time it is.",
           "options": [
             "ruler",
-            "clock",
             "compass",
+            "clock",
             "calendar"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "En clock visar tiden. En compass visar väderstreck och en calendar vilken dag det är."
         },
         {
@@ -2247,10 +2247,10 @@
           "options": [
             "young",
             "tall",
-            "old",
-            "tired"
+            "tired",
+            "old"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "”Old” betyder gammal, alltså att man levt länge. ”Tired” handlar om trötthet just nu, inte om ålder."
         },
         {
@@ -2275,12 +2275,12 @@
           "aspect": "Granska språk och struktur",
           "prompt": "If a room is −X−, there is nothing and nobody in it.",
           "options": [
-            "empty",
             "crowded",
             "narrow",
+            "empty",
             "dark"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "”Empty” betyder tom. ”Crowded” betyder motsatsen – fullt med folk – och ”dark” handlar om ljuset."
         },
         {
@@ -2290,12 +2290,12 @@
           "aspect": "Granska språk och struktur",
           "prompt": "A −X− is the person who leads a school.",
           "options": [
+            "headteacher",
             "teacher",
             "cleaner",
-            "headteacher",
             "student"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "En headteacher är rektor och leder skolan. En teacher undervisar men leder inte hela skolan."
         },
         {
@@ -2321,11 +2321,11 @@
           "prompt": "A −X− is a long seat where several people can sit, often in a park.",
           "options": [
             "chair",
-            "bench",
             "shelf",
+            "bench",
             "stool"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "En bench är en bänk där flera får plats. En chair och en stool är till för en person."
         },
         {
@@ -2388,12 +2388,12 @@
           "aspect": "Granska språk och struktur",
           "prompt": "Gap (1) – which word fits best?",
           "options": [
-            "give",
             "tell",
+            "give",
             "want",
             "like"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "”They tell us how to sleep better” – tell används när man berättar något för någon. ”Give” kräver ett objekt som ”advice”, och ”want” och ”like” passar inte i sammanhanget."
         },
         {
@@ -2465,10 +2465,10 @@
           "options": [
             "turn",
             "take",
-            "get",
-            "put"
+            "put",
+            "get"
           ],
-          "correctIndex": 3,
+          "correctIndex": 2,
           "explanation": "”Put your phone in another room” – put används när man placerar något någonstans. ”Take” skulle betyda att man bär bort den utan att ange vart."
         },
         {
@@ -2510,10 +2510,10 @@
           "options": [
             "make",
             "do",
-            "put",
-            "take"
+            "take",
+            "put"
           ],
-          "correctIndex": 3,
+          "correctIndex": 2,
           "explanation": "”Take a warm shower” – med shower används verbet take. ”Make a shower”, ”do a shower” och ”put a shower” går inte."
         },
         {
@@ -2629,12 +2629,12 @@
           "aspect": "Hitta specifik information",
           "prompt": "Why couldn't Nadia's mother come and fetch her?",
           "options": [
-            "She was already asleep at home in Ashwell",
             "She was working a night shift at the hospital",
+            "She was already asleep at home in Ashwell",
             "Her car had broken down that same evening",
             "She was visiting friends in another town"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Mamman arbetade nattpass på sjukhuset och kunde därför inte lämna jobbet och hämta Nadia."
         },
         {
@@ -2911,11 +2911,11 @@
           "prompt": "News item 1. What is it about?",
           "options": [
             "A café that is closing down",
-            "Cheaper coffee for cyclists",
             "A new bicycle shop",
+            "Cheaper coffee for cyclists",
             "Traffic rules in Dublin"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Nyheten handlar om att kaféet ger rabatt till den som kommer med cykel. Bilarna nämns bara som bakgrund till idén."
         },
         {
@@ -2941,11 +2941,11 @@
           "prompt": "News item 3. What is it about?",
           "options": [
             "A missing jumper",
-            "A cat that travelled by post",
             "A slow delivery company",
-            "A cat that ran away from home"
+            "A cat that ran away from home",
+            "A cat that travelled by post"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Nyheten handlar om katten som råkade skickas med posten. Att paketet innehöll tröjor är bara en detalj."
         },
         {
@@ -2955,12 +2955,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 4. What is it about?",
           "options": [
-            "A bakery that gives away bread",
             "A bakery that has closed down",
             "Bread that made customers ill",
+            "A bakery that gives away bread",
             "A new kind of bread in shops"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Det centrala är att osålt bröd ges bort gratis i stället för att slängas. Att han förr slängde bröd förklarar varför han började."
         },
         {
@@ -2970,12 +2970,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 5. What is it about?",
           "options": [
-            "A postman learning a new language",
             "A new post office in Norway",
+            "A postman learning a new language",
             "Evening classes for children",
             "A postman changing his job"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om att brevbäraren lärt sig teckenspråk för en person på sin runda. Kvällskurserna är hur han gjorde det, inte vad nyheten handlar om."
         },
         {
@@ -2985,12 +2985,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 6. What is it about?",
           "options": [
-            "A robot that escaped",
             "A broken front door",
             "A very dirty street",
-            "A new shop in Oslo"
+            "A new shop in Oslo",
+            "A robot that escaped"
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "explanation": "Poängen är att robotdammsugaren tog sig ut ur huset och hittades hos grannen. Att grannen sedan köpte en egen är slutklämmen."
         },
         {
@@ -3001,11 +3001,11 @@
           "prompt": "News item 7. What is it about?",
           "options": [
             "A playground that got bigger",
-            "A garden on a school roof",
             "A new school kitchen",
+            "A garden on a school roof",
             "Pupils who cook their own lunch"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Nyheten handlar om skolträdgården som flyttats upp på taket. Potatisen och köket är vad som händer sedan."
         },
         {
@@ -3030,12 +3030,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 9. What is it about?",
           "options": [
-            "Sheep stopping the traffic",
             "A car accident in Wales",
             "A new road through a village",
+            "Sheep stopping the traffic",
             "A farmer selling his sheep"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Kärnan är att fåren gick ut på vägen så att trafiken stannade. Den öppna grinden förklarar hur det gick till."
         },
         {
@@ -3045,12 +3045,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 10. What is it about?",
           "options": [
-            "A parrot that got help",
             "A parrot that flew away",
+            "A parrot that got help",
             "A noisy neighbour",
             "A new television programme"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om papegojan som ropade på hjälp så att grannen kom. Tv-programmet förklarar var fågeln lärt sig orden."
         },
         {
@@ -3217,11 +3217,11 @@
           "prompt": "Why did Sara go on the morning course?",
           "options": [
             "The morning course was cheaper",
-            "The rock is dry in the morning",
             "She likes getting up early",
-            "The afternoon course was full"
+            "The afternoon course was full",
+            "The rock is dry in the morning"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Instruktören rekommenderade förmiddagen eftersom klippan är torr då – på eftermiddagen flyttar sig solen, vinden tar i och blöt klippa är mycket svårare att hålla i."
         },
         {
@@ -3248,10 +3248,10 @@
           "options": [
             "The family arrived too late",
             "The course was fully booked",
-            "She was not old enough",
-            "She had forgotten her helmet"
+            "She had forgotten her helmet",
+            "She was not old enough"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "explanation": "Man måste vara minst tio år för nybörjarkursen, och flickan var nio. Texten säger att inga undantag görs."
         },
         {
@@ -3334,11 +3334,11 @@
           "prompt": "When is the best time to climb there?",
           "options": [
             "In March and April",
-            "In May and June",
             "In July and August",
-            "In October and November"
+            "In October and November",
+            "In May and June"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Instruktören sa att maj och juni är bäst. I juli är det för mycket folk, och från oktober är klippan ofta blöt och kall."
         },
         {
@@ -3438,12 +3438,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What happened to the climbers in Norway?",
           "options": [
-            "They were caught in a storm",
             "One of them was hit by a stone",
+            "They were caught in a storm",
             "They lost their radio",
             "They fell into the water"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "En stor sten lossnade ovanför dem och träffade den ene på axeln, så att han inte kunde använda armen. De var fyra timmar från närmaste väg."
         },
         {
@@ -3505,12 +3505,12 @@
           "aspect": "Hitta specifik information",
           "prompt": "What has Marta Reyes done?",
           "options": [
-            "She has climbed the highest mountain on six continents",
             "She has climbed every high mountain in Wales",
+            "She has climbed the highest mountain on six continents",
             "She has been to Antarctica three times already",
             "She has started her own climbing school in Norway"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Hon har bestigit det högsta berget på var och en av de sex kontinenter som har berg. Antarktis återstår, och det planerar hon till nästa år."
         },
         {
@@ -3627,12 +3627,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 2. What is it about?",
           "options": [
-            "A bus driver saying goodbye",
             "A new bus route",
             "A street that is closing for ever",
+            "A bus driver saying goodbye",
             "A driver who lost his job"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Kärnan är chauffören som går i pension och avskedet staden ordnar. Gatan stängs bara en eftermiddag, inte för alltid."
         },
         {
@@ -3642,12 +3642,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 3. What is it about?",
           "options": [
-            "Sheep that can recognise faces",
             "New food for farm animals",
+            "Sheep that can recognise faces",
             "A photograph competition",
             "Sheep escaping from a farm"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om att fåren lärt sig känna igen ansikten. Maten var belöningen i försöket, inte nyheten."
         },
         {
@@ -3658,11 +3658,11 @@
           "prompt": "News item 4. What is it about?",
           "options": [
             "A girl who missed her bus to school",
-            "A new bus route starting in Iceland",
             "A girl who changed the council's mind",
+            "A new bus route starting in Iceland",
             "A grandmother moving to a new town"
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "explanation": "Poängen är att flickan fick rådet att ändra sig genom att räkna hur många som väntade. Bänken är resultatet."
         },
         {
@@ -3672,12 +3672,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 5. What is it about?",
           "options": [
-            "A table for one person",
             "A restaurant that is always full",
             "A new library café",
+            "A table for one person",
             "A customer who complained"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Nyheten handlar om bordet som bara är till för den som kommer ensam. Kundens berättelse förklarar varför bordet byggdes."
         },
         {
@@ -3702,12 +3702,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 7. What is it about?",
           "options": [
-            "A quiet room for goodbyes",
             "A new airport in Japan",
+            "A quiet room for goodbyes",
             "Flights that are delayed",
             "A room for lost luggage"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om rummet där man i lugn och ro kan ta farväl. Personalens iakttagelse förklarar varifrån idén kom."
         },
         {
@@ -3717,12 +3717,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 8. What is it about?",
           "options": [
-            "A man who built a bridge",
             "A stream that flooded a path",
+            "A man who built a bridge",
             "A council that removed a bridge",
             "A new road in Wales"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om bron mannen byggde själv under elva år. Att kommunen godkände den är slutet på historien."
         },
         {
@@ -3733,11 +3733,11 @@
           "prompt": "News item 9. What is it about?",
           "options": [
             "A bookshop that is closing",
-            "Paying with a book",
             "Books that cost too much",
-            "A writing competition"
+            "A writing competition",
+            "Paying with a book"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Poängen är att man kan betala med en bok i stället för pengar. Att hyllorna blivit populära visar hur det gått."
         },
         {
@@ -3747,12 +3747,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 10. What is it about?",
           "options": [
-            "A choir singing outside a hospital",
             "A hospital that is too small",
+            "A choir singing outside a hospital",
             "A concert that was cancelled",
             "New rules for hospital visitors"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Nyheten handlar om kören som sjunger utanför sjukhusfönstren. Att de fortsätter trots att besök är tillåtna igen är poängen."
         },
         {
@@ -3762,12 +3762,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 11. What is it about?",
           "options": [
-            "A dog that ran away",
             "A bowl of water for animals",
+            "A dog that ran away",
             "A neighbour who moved in",
             "Water shortages in summer"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Nyheten handlar om vattenskålen som kvinnan ställt ut i tjugo år, och om att grannarna nu gör likadant."
         },
         {
@@ -3777,12 +3777,12 @@
           "aspect": "Förstå huvudinnehåll och sammanhang",
           "prompt": "News item 12. What is it about?",
           "options": [
-            "Cleaners' names on the trains",
             "Trains that are always late",
             "A company hiring more staff",
+            "Cleaners' names on the trains",
             "Passengers who complain a lot"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Nyheten handlar om att städarnas namn sätts upp i vagnarna. Färre klagomål och tackbreven är följderna."
         }
       ]
@@ -4023,12 +4023,12 @@
           "aspect": "Förstå detaljer och underförstådd betydelse",
           "prompt": "What surprises visitors most about the desert?",
           "options": [
-            "How hot the sand is",
             "How cold it gets",
+            "How hot the sand is",
             "How much it rains",
             "How high the dunes are"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Alla frågar om värmen, men det som överraskar dem är kylan – i januari kan det bli under noll på natten, och även på sommaren vill man ha jacka efter midnatt."
         },
         {
@@ -4067,12 +4067,12 @@
           "aspect": "Hitta specifik information",
           "prompt": "Which months are the best for a desert trip?",
           "options": [
+            "October, November, March and April",
             "July, August and September",
             "December, January and February",
-            "October, November, March and April",
             "May, June and the summer months"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "explanation": "Amina säger att oktober, november, mars och april är bäst. Juli och augusti är för heta, och december och januari har nätter som är hårda för ovana."
         },
         {
@@ -4152,11 +4152,11 @@
           "prompt": "Why is that rule so important?",
           "options": [
             "Wild animals come close to the camp",
-            "Every dune looks the same in the dark",
             "The tents are difficult to find in the wind",
-            "It is too cold to stand still"
+            "It is too cold to stand still",
+            "Every dune looks the same in the dark"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "I mörkret ser varje dyn likadan ut, och folk har gått vilse fyrtio meter från sitt eget tält."
         },
         {
@@ -4195,11 +4195,11 @@
           "prompt": "What went wrong for the four tourists in Algeria?",
           "options": [
             "They ran out of water and food after one day",
-            "Their car broke down and nobody knew where they were",
             "They walked away from their camp in the night",
-            "They were caught in heavy rain in a valley"
+            "They were caught in heavy rain in a valley",
+            "Their car broke down and nobody knew where they were"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Bilen gick sönder och de hade inte berättat för någon vart de skulle, så det tog två dagar innan någon förstod att de saknades."
         },
         {

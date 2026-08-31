@@ -64,11 +64,11 @@
           "prompt": "Vilket påstående stämmer bäst överens med berättarens drivkraft att börja i schackklubben? Kryssa för rätt alternativ.",
           "options": [
             "Berättaren vill lära sig spela schack ordentligt.",
-            "Berättaren vill för en gångs skull besegra Albin.",
             "Berättaren vill få nya vänner på biblioteket.",
-            "Berättaren vill vinna kanelbullar på konditoriet."
+            "Berättaren vill vinna kanelbullar på konditoriet.",
+            "Berättaren vill för en gångs skull besegra Albin."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
           "explanation": "Redan i första meningen slår berättaren fast sitt syfte: ”bestämde jag mig för att förgöra min kusin Albin ... över ett schackbräde, med vittnen”. Att lära sig schacket är bara medlet – berättaren kan från början bara namnet på springaren. Kanelbullarna kommer först senare, genom vadslagningen, och är alltså inte drivkraften."
         },
@@ -84,8 +84,14 @@
           "guidance": "Ge 2 poäng om svaret visar att förloraren av ett schackparti skulle bjuda vinnaren på kanelbulle på konditoriet. Det måste framgå att det handlar om schackpartierna. Exempel på godtagbart svar: ”Den som förlorade partiet fick bjuda på kanelbulle.” Ge 0 poäng för svar som bara nämner bullarna utan koppling till partierna.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "De åt kanelbullar på Brödernas konditori. Bullarna var stora och glänste av pärlsocker." },
-            { "points": 2, "answer": "De slog vad om att den som förlorade schackpartiet skulle bjuda den andra på kanelbulle på konditoriet. Den som blev matt fick alltså betala bullen." }
+            {
+              "points": 0,
+              "answer": "De åt kanelbullar på Brödernas konditori. Bullarna var stora och glänste av pärlsocker."
+            },
+            {
+              "points": 2,
+              "answer": "De slog vad om att den som förlorade schackpartiet skulle bjuda den andra på kanelbulle på konditoriet. Den som blev matt fick alltså betala bullen."
+            }
           ],
           "aspect": "Hitta efterfrågad information"
         },
@@ -102,9 +108,18 @@
           "guidance": "Ge 4 poäng om svaret citerar både en mening som visar att Albin är en dålig förlorare och en som visar att han är en bra förlorare. Ge 2 poäng för enbart den ena. Mindre avskriftsfel accepteras. Dålig förlorare, t.ex.: ”Sedan vände han sig mot fönstret och sa att det var för varmt i lokalen för att kunna tänka ...” / ”– Du hade bara tur, sa Albin.” Bra förlorare, t.ex.: ”– Snyggt spelat, sa han och sträckte fram handen.” / ”Han bjöd på tre kanelbullar och åt ingen själv ...”",
           "lines": 6,
           "scoreExamples": [
-            { "points": 0, "answer": "Albin var en dålig förlorare i början men sedan blev han snällare. Han gillade inte att förlora." },
-            { "points": 2, "answer": "Dålig förlorare: ”– Du hade bara tur, sa Albin.” Det visar att han inte ville erkänna att berättaren var bättre." },
-            { "points": 4, "answer": "Dålig förlorare: ”Sedan vände han sig mot fönstret och sa att det var för varmt i lokalen för att kunna tänka.” Här skyller han ifrån sig i stället för att erkänna förlusten. Bra förlorare: ”– Snyggt spelat, sa han och sträckte fram handen.” Där tar han förlusten med stil och ger berättaren beröm." }
+            {
+              "points": 0,
+              "answer": "Albin var en dålig förlorare i början men sedan blev han snällare. Han gillade inte att förlora."
+            },
+            {
+              "points": 2,
+              "answer": "Dålig förlorare: ”– Du hade bara tur, sa Albin.” Det visar att han inte ville erkänna att berättaren var bättre."
+            },
+            {
+              "points": 4,
+              "answer": "Dålig förlorare: ”Sedan vände han sig mot fönstret och sa att det var för varmt i lokalen för att kunna tänka.” Här skyller han ifrån sig i stället för att erkänna förlusten. Bra förlorare: ”– Snyggt spelat, sa han och sträckte fram handen.” Där tar han förlusten med stil och ger berättaren beröm."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -114,12 +129,12 @@
           "maxPoints": 2,
           "prompt": "Vilket berättarperspektiv är det i texten? Kryssa för rätt alternativ.",
           "options": [
-            "förstapersonsperspektiv",
             "tredjepersonsperspektiv",
             "allvetande berättare",
-            "en blandning av olika perspektiv"
+            "en blandning av olika perspektiv",
+            "förstapersonsperspektiv"
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
           "explanation": "Berättaren berättar om sina egna tankar och känslor med ordet ”jag” (”Jag drömde om att en enda gång få se det slockna”), vilket är kännetecknet för förstapersonsperspektiv. Vi får aldrig veta vad Albin tänker inuti, bara vad berättaren ser och tolkar – därför är det ingen allvetande berättare."
         },
@@ -135,8 +150,14 @@
           "guidance": "Ge 2 poäng om svaret innehåller både upptäckten och hur den används: Albin spelar ett berömt parti ur boken utantill (han spelar inte själv), och berättaren bryter mönstret med ett oväntat/eget drag (kantbonden) så att Albin tvingas tänka själv – och då gör han misstag. Ge 0 poäng om bara den ena delen framgår.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "Berättaren märker att Albin spelar väldigt snabbt och bra i början av partiet, och att han brukar vinna." },
-            { "points": 2, "answer": "Berättaren upptäcker att Albin inte spelar själv utan har lärt sig ett berömt parti ur boken ”Hundra odödliga partier” utantill. Då gör berättaren ett konstigt eget drag med kantbonden som inte finns i boken, så att Albin måste börja tänka själv – och då gör han fel och förlorar." }
+            {
+              "points": 0,
+              "answer": "Berättaren märker att Albin spelar väldigt snabbt och bra i början av partiet, och att han brukar vinna."
+            },
+            {
+              "points": 2,
+              "answer": "Berättaren upptäcker att Albin inte spelar själv utan har lärt sig ett berömt parti ur boken ”Hundra odödliga partier” utantill. Då gör berättaren ett konstigt eget drag med kantbonden som inte finns i boken, så att Albin måste börja tänka själv – och då gör han fel och förlorar."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -146,12 +167,12 @@
           "maxPoints": 2,
           "prompt": "I slutet av texten har boken ”Hundra odödliga partier” flyttats högst upp i hyllan. Vad kan det tolkas som att Albin vill visa? Kryssa för rätt alternativ.",
           "options": [
+            "Att han har förstått att man måste spela sitt eget spel.",
             "Att boken är för värdefull för att lånas ut.",
             "Att han tänker träna ännu hårdare till nästa år.",
-            "Att han har förstått att man måste spela sitt eget spel.",
             "Att han vill glömma förlusten så fort som möjligt."
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "aspect": "Dra enkla slutsatser",
           "explanation": "Albin har själv ställt undan boken han spelade efter utantill. Att lägga bort facit är hans sätt att visa att han förstått Ruths råd: man måste spela sitt eget spel. Att han skulle vilja glömma förlusten motsägs av att han räcker fram handen, säger ”snyggt spelat” och bjuder på bullarna."
         }
@@ -220,8 +241,14 @@
           "guidance": "Ge 2 poäng om det framgår av svaret att e-sport betyder tävlande i datorspel. Exempel: ”Att man tävlar i datorspel.” Ge 0 poäng för svar som bara beskriver datorspelande i allmänhet, utan tävlingsmomentet, t.ex. ”att spela datorspel”.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "E-sport är när man sitter och spelar datorspel framför en skärm." },
-            { "points": 2, "answer": "E-sport betyder att man tävlar i datorspel. Proffsen spelar mot varandra i turneringar inför stor publik." }
+            {
+              "points": 0,
+              "answer": "E-sport är när man sitter och spelar datorspel framför en skärm."
+            },
+            {
+              "points": 2,
+              "answer": "E-sport betyder att man tävlar i datorspel. Proffsen spelar mot varandra i turneringar inför stor publik."
+            }
           ],
           "aspect": "Hitta efterfrågad information"
         },
@@ -231,12 +258,12 @@
           "maxPoints": 2,
           "prompt": "Vad visade Lovisa Ekenstams undersökning av elitspelare? Kryssa för rätt alternativ.",
           "options": [
-            "Att spelarnas kroppar arbetar hårt under en match.",
             "Att spelarna rör sig lika mycket som rallyförare.",
+            "Att spelarnas kroppar arbetar hårt under en match.",
             "Att spelarna har bättre syn än elitskyttar.",
             "Att spelarna blir trötta av för lite sömn."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "aspect": "Hitta efterfrågad information",
           "explanation": "Ekenstams resultat sammanfattas i hennes egna ord: ”Kroppen arbetar för fullt, även om det inte syns från läktaren.” Jämförelsen med rallyföraren gäller pulsnivån, inte hur mycket spelarna rör sig, och skytten nämns för musarmens finmotorik – inte för synen."
         },
@@ -267,8 +294,14 @@
           "guidance": "Ge 2 poäng om svaret visar att idrottens uppgift enligt Hederström är att få kroppar i rörelse, och att e-sport i stället innebär stillasittande – idrottsstämpeln skulle skicka fel signal till unga. Ge 0 poäng för svar som bara anger att han ”inte gillar datorspel” eller liknande.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "Han tycker inte att datorspel är en riktig sport och gillar inte att folk spelar så mycket." },
-            { "points": 2, "answer": "Hederström menar att idrottens uppgift, särskilt för barn och unga, är att få kroppar i rörelse. E-sport utförs sittande i en stol, och om man kallar det idrott skickar man fel signal till alla unga som spelar utan fysträning. Han är orolig för stillasittandet." }
+            {
+              "points": 0,
+              "answer": "Han tycker inte att datorspel är en riktig sport och gillar inte att folk spelar så mycket."
+            },
+            {
+              "points": 2,
+              "answer": "Hederström menar att idrottens uppgift, särskilt för barn och unga, är att få kroppar i rörelse. E-sport utförs sittande i en stol, och om man kallar det idrott skickar man fel signal till alla unga som spelar utan fysträning. Han är orolig för stillasittandet."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -278,12 +311,12 @@
           "maxPoints": 2,
           "prompt": "Läs textens sista stycke. Vilken funktion har jämförelsen med kvinnor som inte fick springa maraton? Kryssa för rätt alternativ.",
           "options": [
-            "Den visar att gränserna för vem som får tävla aldrig har flyttats.",
             "Den antyder att synen på vad som är sport har ändrats förr och kan ändras igen.",
+            "Den visar att gränserna för vem som får tävla aldrig har flyttats.",
             "Den bevisar att e-sport med säkerhet kommer att bli en olympisk gren i framtiden.",
             "Den förklarar varför forskarnas åsikter väger tyngre än publikens."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
           "explanation": "Jämförelsen påminner om att gränsen för vad som räknas som sport har flyttats förr: en gång fick kvinnor inte springa maraton, i dag höjer unga på ögonbrynen åt det. Poängen är alltså att synen kan ändras igen – jämförelsen bevisar ingenting om OS, utan öppnar för möjligheten."
         }
@@ -348,12 +381,12 @@
           "maxPoints": 2,
           "prompt": "Vilket påstående stämmer bäst överens med hur berättarens syn på sin bror förändras under texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Berättaren går från att avgudahylla Jocke till att se honom som en vanlig, sårbar människa.",
             "Berättaren går från att hata sin storebror till att avguda honom som sin allra största förebild.",
+            "Berättaren går från att avgudahylla Jocke till att se honom som en vanlig, sårbar människa.",
             "Berättaren känner hela tiden precis lika mycket beundran för Jocke som i början.",
             "Berättaren slutar bry sig om Jocke helt och hållet efter att Sandra flyttat."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
           "explanation": "I början är Jocke ”det coolaste som existerade” och berättaren en ”satellit” kring en planet. I slutet formuleras förändringen rakt ut: ”Jocke inte var en planet. Han var en människa, lika rädd och vilsen som jag.” Att berättaren skulle sluta bry sig stämmer inte – han går ju med Jocke till bron just när det är som tyngst."
         },
@@ -369,8 +402,14 @@
           "guidance": "Ge 2 poäng om svaret visar att berättaren (lillebrodern) hela tiden följer efter och kretsar kring Jocke, som är medelpunkten, medan Jocke knappt märker honom – precis som en satellit kretsar kring en planet. Ge 0 poäng för svar som bara återger orden utan att förklara innebörden.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "Han menar att han är en satellit och att Jocke är en planet i rymden." },
-            { "points": 2, "answer": "Han menar att han som lillebror hela tiden följer efter Jocke och snurrar runt honom, precis som en satellit kretsar kring en planet. Jocke är medelpunkten som knappt märker att lillebrodern finns." }
+            {
+              "points": 0,
+              "answer": "Han menar att han är en satellit och att Jocke är en planet i rymden."
+            },
+            {
+              "points": 2,
+              "answer": "Han menar att han som lillebror hela tiden följer efter Jocke och snurrar runt honom, precis som en satellit kretsar kring en planet. Jocke är medelpunkten som knappt märker att lillebrodern finns."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -380,12 +419,12 @@
           "maxPoints": 2,
           "prompt": "Berättaren skriver om Jocke: ”Han var en människa, lika rädd och vilsen som jag, bara lite längre och med moppe.” Vilken effekt får den avslutande detaljen ”och med moppe”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Den drar ner den stora insikten till något vardagligt och lite lustigt.",
             "Den visar att Jocke är mycket rikare än berättaren och kan köpa vad han vill.",
             "Den förklarar varför Sandra valde att lämna Jocke i slutet av sommaren.",
-            "Den betyder att berättaren mest av allt önskar sig en egen moppe."
+            "Den betyder att berättaren mest av allt önskar sig en egen moppe.",
+            "Den drar ner den stora insikten till något vardagligt och lite lustigt."
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
           "explanation": "Meningen bygger upp en allvarlig insikt – att storebrodern också är rädd och vilsen – och avslutar med en vardaglig detalj. Kontrasten gör tonen både varm och lite komisk, och håller texten fri från patos."
         },
@@ -402,9 +441,18 @@
           "guidance": "Ge 4 poäng om svaret citerar både en mening som visar att Jocke är en dålig storebror och en som visar att han är en bra storebror. Ge 2 poäng för enbart den ena. Mindre avskriftsfel accepteras. Dålig storebror, t.ex.: ”Gå och lek med dina egna kompisar.” / ”Du kan inte hänga med i dag, sa han ...”. Bra storebror, t.ex.: ”Han lärde mig att lägga om kedjan på moppen, att vissla genom tänderna ...” / att han följer med till bron och visslar tillbaka i slutet.",
           "lines": 6,
           "scoreExamples": [
-            { "points": 0, "answer": "Jocke är ibland taskig mot lillebrorsan men ibland snäll. Det beror på hur han känner sig." },
-            { "points": 2, "answer": "Dålig storebror: ”Gå och lek med dina egna kompisar.” Han stöter bort lillebrodern för att vara med Sandra." },
-            { "points": 4, "answer": "Dålig storebror: ”– Du kan inte hänga med i dag, sa han en morgon utan att titta upp från spegeln.” Här gör han sig av med lillebrodern för Sandras skull. Bra storebror: ”Han lärde mig att lägga om kedjan på moppen, att vissla genom tänderna.” Där tar han hand om lillebrodern och lär honom saker." }
+            {
+              "points": 0,
+              "answer": "Jocke är ibland taskig mot lillebrorsan men ibland snäll. Det beror på hur han känner sig."
+            },
+            {
+              "points": 2,
+              "answer": "Dålig storebror: ”Gå och lek med dina egna kompisar.” Han stöter bort lillebrodern för att vara med Sandra."
+            },
+            {
+              "points": 4,
+              "answer": "Dålig storebror: ”– Du kan inte hänga med i dag, sa han en morgon utan att titta upp från spegeln.” Här gör han sig av med lillebrodern för Sandras skull. Bra storebror: ”Han lärde mig att lägga om kedjan på moppen, att vissla genom tänderna.” Där tar han hand om lillebrodern och lär honom saker."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -420,8 +468,14 @@
           "guidance": "Ge 2 poäng om svaret visar att berättaren känner medlidande/omtanke/empati i stället för skadeglädje, och att det visar att han bryr sig om sin bror trots ilskan – han är en omtänksam person / hans kärlek till brodern är starkare än hämndlusten. Ge 0 poäng om bara den ena delen (känslan eller tolkningen) framgår.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "Han känner något annat och blir ledsen, fast han egentligen borde ha varit glad." },
-            { "points": 2, "answer": "I stället för att vara skadeglad känner berättaren medlidande och omtanke, det gör ont i bröstet av att se Jocke ledsen. Det visar att han bryr sig om sin bror trots all ilska – kärleken till Jocke är starkare än hämndlusten." }
+            {
+              "points": 0,
+              "answer": "Han känner något annat och blir ledsen, fast han egentligen borde ha varit glad."
+            },
+            {
+              "points": 2,
+              "answer": "I stället för att vara skadeglad känner berättaren medlidande och omtanke, det gör ont i bröstet av att se Jocke ledsen. Det visar att han bryr sig om sin bror trots all ilska – kärleken till Jocke är starkare än hämndlusten."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -432,11 +486,11 @@
           "prompt": "I slutet står det att de ”inte behövde” prata om det som hänt, för ”vi hade ju vårt språk”. Vad menas med det? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "De har lovat varandra att aldrig prata om det som hände.",
-            "De förstår varandra utan ord, genom sin nära relation.",
             "De vill inte prata med varandra längre.",
-            "De pratar bara genom att vissla."
+            "De pratar bara genom att vissla.",
+            "De förstår varandra utan ord, genom sin nära relation."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "aspect": "Dra enkla slutsatser",
           "explanation": "Det ”språk” som menas är blickarna och nickarna som beskrivs tidigare i texten – de förstår varandra utan att säga något, tack vare hur nära de står varandra. Något löfte om att aldrig prata om saken nämns aldrig i texten."
         }
@@ -504,8 +558,14 @@
           "guidance": "Ge 2 poäng om svaret visar att ljudboken har gått från att vara ovanlig/en nischprodukt (t.ex. för bilresor) till att bli ett av de vanligaste sätten att ta del av böcker – försäljningen har ökat kraftigt och för många unga är det självklart att lyssna på böcker. Ge 0 poäng för svar som bara upprepar att många lyssnar, utan att visa förändringen över tid.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "Det betyder att jättemånga människor lyssnar på ljudböcker i dag, till exempel på bussen." },
-            { "points": 2, "answer": "Det betyder att ljudboken har gått från att vara något ovanligt, mest för bilresor, till att bli ett av de vanligaste sätten att ta del av böcker. Försäljningen har ökat kraftigt och för många unga är det numera självklart att lyssna i stället för att läsa." }
+            {
+              "points": 0,
+              "answer": "Det betyder att jättemånga människor lyssnar på ljudböcker i dag, till exempel på bussen."
+            },
+            {
+              "points": 2,
+              "answer": "Det betyder att ljudboken har gått från att vara något ovanligt, mest för bilresor, till att bli ett av de vanligaste sätten att ta del av böcker. Försäljningen har ökat kraftigt och för många unga är det numera självklart att lyssna i stället för att läsa."
+            }
           ],
           "aspect": "Hitta efterfrågad information"
         },
@@ -515,12 +575,12 @@
           "maxPoints": 2,
           "prompt": "Vad visade Tove Lindqvists forskning om hjärnan? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Att hjärnan gör i stort sett samma arbete vare sig man hör eller ser orden.",
             "Att man minns betydligt mer av en bok om man lyssnar på den än läser.",
+            "Att hjärnan gör i stort sett samma arbete vare sig man hör eller ser orden.",
             "Att det går betydligt snabbare att lyssna på en bok än att läsa den.",
             "Att lyssnandet passar allra bäst för den som har svårt att avkoda bokstäver."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "aspect": "Hitta efterfrågad information",
           "explanation": "Lindqvist sammanfattar själv sitt resultat: ”När du har förstått orden, oavsett om du sett eller hört dem, gör hjärnan i stort sett samma arbete.” Att dyslexi nämns är ett tillägg om vem ljudboken hjälper – inte vad hjärnforskningen visade – och något om minne eller tempo säger hon aldrig."
         },
@@ -531,11 +591,11 @@
           "prompt": "Tove Lindqvist är positiv till ljudböcker. Vilket av följande påståenden stämmer överens med hennes motivering? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Ljudböcker säljer i dag betydligt mer än vad tryckta böcker gör.",
-            "Människan har lyssnat på berättelser långt innan skriften fanns.",
             "Unga föredrar numera att lyssna på böcker i stället för att läsa dem.",
-            "Det är svårare att förstå en bok som man lyssnar på än en tryckt bok."
+            "Det är svårare att förstå en bok som man lyssnar på än en tryckt bok.",
+            "Människan har lyssnat på berättelser långt innan skriften fanns."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
           "explanation": "Lindqvist stödjer sig på ett historiskt argument: ”människan har lyssnat på berättelser i tiotusentals år, långt innan skriften ens fanns”, och att läsa med ögonen är därför den nya uppfinningen. Att unga föredrar att lyssna och att försäljningen ökat står i textens inledning, men används inte av henne som motivering."
         },
@@ -551,8 +611,14 @@
           "guidance": "Ge 2 poäng om svaret visar att Boström menar att man vid lyssnande inte lika lätt kan stanna upp, gå tillbaka och kämpa med svåra meningar (det mödosamma som tränar ordförråd och tålamod), och/eller att lyssnandet ofta sker samtidigt med annat så att uppmärksamheten glider och man minns mindre. Ge 0 poäng för svar som bara säger att han ”inte gillar ljudböcker”.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "Han tycker inte att ljudböcker är lika bra som vanliga böcker och vill att folk ska läsa i stället." },
-            { "points": 2, "answer": "Boström menar att man när man lyssnar inte lika lätt kan stanna upp, gå tillbaka och kämpa med en svår mening, och just det mödosamma tränar ordförråd och tålamod. Dessutom lyssnar man ofta samtidigt som man gör annat, så uppmärksamheten glider och man minns mindre av boken." }
+            {
+              "points": 0,
+              "answer": "Han tycker inte att ljudböcker är lika bra som vanliga böcker och vill att folk ska läsa i stället."
+            },
+            {
+              "points": 2,
+              "answer": "Boström menar att man när man lyssnar inte lika lätt kan stanna upp, gå tillbaka och kämpa med en svår mening, och just det mödosamma tränar ordförråd och tålamod. Dessutom lyssnar man ofta samtidigt som man gör annat, så uppmärksamheten glider och man minns mindre av boken."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -563,11 +629,11 @@
           "prompt": "I textens sista del nämns att man förr varnade för att romaner och serietidningar skulle skada ungdomen. Vilken funktion har det exemplet i texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Det bevisar att ljudboken är ett bättre sätt att läsa än den tryckta boken.",
-            "Det visar att man genom historien ofta oroat sig i onödan för nya sätt att läsa.",
             "Det förklarar hur romanen uppstod och blev populär i Europa på 1700-talet.",
+            "Det visar att man genom historien ofta oroat sig i onödan för nya sätt att läsa.",
             "Det visar att serietidningar verkligen var skadliga för ungdomars sätt att tänka."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
           "explanation": "Exemplet visar ett mönster: varje gång ett nytt sätt att läsa dykt upp har någon varnat för det, ”ändå lärde sig generation efter generation att läsa”. Det fungerar som en tröst till den oroliga, inte som ett bevis för att ljudboken skulle vara bättre än den tryckta boken."
         }
@@ -623,12 +689,12 @@
           "maxPoints": 2,
           "prompt": "Varför infördes tidsomställningen i Sverige, enligt texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "För att skolbarn skulle slippa gå till skolan i mörker.",
             "För att ljusare kvällar skulle spara energi.",
+            "För att skolbarn skulle slippa gå till skolan i mörker.",
             "För att Sverige skulle ha samma tid som resten av Europa.",
             "För att sömnforskare rekommenderade det."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "aspect": "Hitta efterfrågad information",
           "explanation": "Texten anger motivet direkt: omställningen infördes 1980 ”med motiveringen att ljusare kvällar skulle spara energi”, eftersom vakna människor i dagsljus behöver mindre belysning. Sömnforskarna kommer in först senare i texten, och då som motståndare till omställningen."
         },
@@ -644,8 +710,14 @@
           "guidance": "Ge 2 poäng om svaret visar att energibesparingen blivit liten/nästan obefintlig eftersom belysningen i dag står för en mycket mindre del av elförbrukningen än förr (uppvärmning, datorer och industri drar mer). Ge 0 poäng för svar som bara konstaterar att skälet försvagats utan förklaring.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "Skälet har försvagats för att tidsomställningen är gammal och infördes redan 1980. Numera tycker många att den är onödig." },
-            { "points": 2, "answer": "Tidsomställningen infördes för att spara energi, eftersom ljusare kvällar skulle göra att folk behövde mindre belysning. Men i dag står uppvärmning, datorer och industri för en mycket större del av elförbrukningen än glödlamporna gör. Därför blir energibesparingen liten, nästan obefintlig, och det ursprungliga skälet håller inte längre." }
+            {
+              "points": 0,
+              "answer": "Skälet har försvagats för att tidsomställningen är gammal och infördes redan 1980. Numera tycker många att den är onödig."
+            },
+            {
+              "points": 2,
+              "answer": "Tidsomställningen infördes för att spara energi, eftersom ljusare kvällar skulle göra att folk behövde mindre belysning. Men i dag står uppvärmning, datorer och industri för en mycket större del av elförbrukningen än glödlamporna gör. Därför blir energibesparingen liten, nästan obefintlig, och det ursprungliga skälet håller inte längre."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -655,12 +727,12 @@
           "maxPoints": 2,
           "prompt": "Vad menas i texten med att omställningen ger ett ”mini-jetlag”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Att människor reser betydligt mer under den ljusa delen av året.",
             "Att kroppens inre dygnsrytm hamnar i otakt med klockan under några dagar.",
+            "Att människor reser betydligt mer under den ljusa delen av året.",
             "Att långa flygresor blir mer påfrestande under sommarhalvåret.",
             "Att man blir ovanligt pigg av att vinna en extra timmes sömn på hösten."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
           "explanation": "Mini-jetlag beskrivs som att ”människans inre dygnsrytm styrs av ljuset, och när klockan plötsligt flyttas en timme hamnar kroppen i otakt” i flera dagar. Ordet handlar alltså om kroppens klocka, inte om flygresor – jetlag används här bara som en jämförelse."
         },
@@ -677,9 +749,18 @@
           "guidance": "Ge 2 poäng per korrekt beskrivet pris, max 4 poäng. Sommartid: mörka vintermorgnar – solen går upp först vid tiotiden i Stockholm och skolbarn i norr får gå till skolan i mörker. Vintertid: sommarkvällarna slutar (blir mörka) en timme tidigare.",
           "lines": 5,
           "scoreExamples": [
-            { "points": 0, "answer": "Båda alternativen är dåliga på olika sätt. Det blir antingen för mörkt eller för ljust, och man vet inte vilket man ska välja." },
-            { "points": 2, "answer": "Priset med permanent sommartid är att vintermorgnarna blir väldigt mörka. I Stockholm skulle solen gå upp först vid tiotiden, och skolbarn i norra Sverige skulle få gå hela skolvägen i mörker." },
-            { "points": 4, "answer": "Permanent sommartid har priset att vintermorgnarna blir mörka: solen i Stockholm skulle gå upp först vid tiotiden, och skolbarn i norr skulle göra hela skolvägen i mörker. Permanent vintertid har i stället priset att sommarkvällarna slutar en timme tidigare, alltså att det blir mörkt tidigare på kvällen på sommaren. Man vinner ljus i ena änden men förlorar det i den andra." }
+            {
+              "points": 0,
+              "answer": "Båda alternativen är dåliga på olika sätt. Det blir antingen för mörkt eller för ljust, och man vet inte vilket man ska välja."
+            },
+            {
+              "points": 2,
+              "answer": "Priset med permanent sommartid är att vintermorgnarna blir väldigt mörka. I Stockholm skulle solen gå upp först vid tiotiden, och skolbarn i norra Sverige skulle få gå hela skolvägen i mörker."
+            },
+            {
+              "points": 4,
+              "answer": "Permanent sommartid har priset att vintermorgnarna blir mörka: solen i Stockholm skulle gå upp först vid tiotiden, och skolbarn i norr skulle göra hela skolvägen i mörker. Permanent vintertid har i stället priset att sommarkvällarna slutar en timme tidigare, alltså att det blir mörkt tidigare på kvällen på sommaren. Man vinner ljus i ena änden men förlorar det i den andra."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -770,8 +851,14 @@
           "guidance": "Ge 2 poäng om svaret visar att kusinen vet vad hon vill (har ett tydligt mål/en karta), vilket gör att hon kan plugga målmedvetet, slippa tveka och välja bort det som leder fel. Ge 0 poäng för svar som bara anger att kusinen ska bli läkare.",
           "lines": 3,
           "scoreExamples": [
-            { "points": 0, "answer": "Skribenten avundas att kusinen ska bli läkare. Hon har vetat det sedan hon var åtta år." },
-            { "points": 2, "answer": "Skribenten avundas att kusinen vet precis vad hon vill, hon har ett tydligt mål som en karta att gå efter. Därför kan hon plugga målmedvetet, vet vilka betyg som krävs och slipper tveka, medan skribenten själv känner sig som om hen irrar omkring med ögonbindel." }
+            {
+              "points": 0,
+              "answer": "Skribenten avundas att kusinen ska bli läkare. Hon har vetat det sedan hon var åtta år."
+            },
+            {
+              "points": 2,
+              "answer": "Skribenten avundas att kusinen vet precis vad hon vill, hon har ett tydligt mål som en karta att gå efter. Därför kan hon plugga målmedvetet, vet vilka betyg som krävs och slipper tveka, medan skribenten själv känner sig som om hen irrar omkring med ögonbindel."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -788,9 +875,18 @@
           "guidance": "Ge 2 poäng per korrekt koppling, max 4 poäng. Godtagbart: Kusinen – exempel på fördelen med att ha ett tydligt mål/veta vad man vill. Mamman – exempel på att omvägar kan göra en bättre/att man kan byta bana och tjäna på det. Mostern – exempel på att det är vanligt att byta bana (raka vägen är undantag). Farfar – exempel på att yrket inte alltid är ett aktivt val (”det blev så”).",
           "lines": 6,
           "scoreExamples": [
-            { "points": 0, "answer": "Skribenten skriver om sin kusin, mamma, moster och farfar. De har alla olika jobb och visar hur olika livet kan bli." },
-            { "points": 2, "answer": "Kusinen är ett exempel på fördelen med att veta vad man vill, hon har velat bli läkare sedan hon var åtta och pluggar målmedvetet. Mamman är ett exempel på att omvägar kan löna sig: hon var först frisör och blev sedan undersköterska, och säger att omvägen gjorde henne bättre på båda jobben." },
-            { "points": 4, "answer": "Mamman är ett exempel på att man kan byta bana och ändå tjäna på det. Hon utbildade sig till frisör men sadlade om till undersköterska vid trettiofem, och säger att omvägen gjorde henne bättre på båda jobben. Det stöder tanken att den raka vägen inte är nödvändig. Farfar är ett exempel på att yrket inte alltid är ett aktivt val. Han jobbade på samma fabrik i fyrtio år men säger inte att han valde yrket – han säger att ”det blev så”. Det stöder tanken att den raka, planerade vägen kanske är mer undantag än regel." }
+            {
+              "points": 0,
+              "answer": "Skribenten skriver om sin kusin, mamma, moster och farfar. De har alla olika jobb och visar hur olika livet kan bli."
+            },
+            {
+              "points": 2,
+              "answer": "Kusinen är ett exempel på fördelen med att veta vad man vill, hon har velat bli läkare sedan hon var åtta och pluggar målmedvetet. Mamman är ett exempel på att omvägar kan löna sig: hon var först frisör och blev sedan undersköterska, och säger att omvägen gjorde henne bättre på båda jobben."
+            },
+            {
+              "points": 4,
+              "answer": "Mamman är ett exempel på att man kan byta bana och ändå tjäna på det. Hon utbildade sig till frisör men sadlade om till undersköterska vid trettiofem, och säger att omvägen gjorde henne bättre på båda jobben. Det stöder tanken att den raka vägen inte är nödvändig. Farfar är ett exempel på att yrket inte alltid är ett aktivt val. Han jobbade på samma fabrik i fyrtio år men säger inte att han valde yrket – han säger att ”det blev så”. Det stöder tanken att den raka, planerade vägen kanske är mer undantag än regel."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -821,8 +917,14 @@
           "guidance": "Ge 2 poäng om svaret visar att kartan står för att veta sitt exakta mål/hela vägen (som kusinen), medan kompassen står för att veta sin riktning – vad man tycker om, är bra på och inte står ut med – utan att veta målet. Man kan alltså orientera sig framåt även utan färdigt mål. Ge 0 poäng för svar som bara upprepar orden utan förklaring.",
           "lines": 4,
           "scoreExamples": [
-            { "points": 0, "answer": "Skribenten menar att det inte är en karta utan en kompass. En karta och en kompass är ju olika saker man använder för att hitta." },
-            { "points": 2, "answer": "Kartan står för att veta sitt exakta mål och hela vägen dit, som kusinen som vet att hon ska bli läkare. Kompassen står för att veta sin riktning utan att veta målet, alltså att veta vad man tycker är roligt, vad man är bra på och vad man inte står ut med. Skribenten menar att man kan röra sig framåt och välja även om man inte har ett färdigt mål, så länge man har en riktning." }
+            {
+              "points": 0,
+              "answer": "Skribenten menar att det inte är en karta utan en kompass. En karta och en kompass är ju olika saker man använder för att hitta."
+            },
+            {
+              "points": 2,
+              "answer": "Kartan står för att veta sitt exakta mål och hela vägen dit, som kusinen som vet att hon ska bli läkare. Kompassen står för att veta sin riktning utan att veta målet, alltså att veta vad man tycker är roligt, vad man är bra på och vad man inte står ut med. Skribenten menar att man kan röra sig framåt och välja även om man inte har ett färdigt mål, så länge man har en riktning."
+            }
           ],
           "aspect": "Sammanföra och tolka information och idéer samt reflektera"
         },
@@ -832,12 +934,12 @@
           "maxPoints": 2,
           "prompt": "Vilket påstående beskriver bäst hur texten avslutas? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Skribenten landar i ett eget förhållningssätt men håller frågan delvis öppen.",
             "Skribenten bestämmer sig till slut för att satsa på läkaryrket som kusinen.",
+            "Skribenten landar i ett eget förhållningssätt men håller frågan delvis öppen.",
             "Skribenten kommer fram till att frågan är omöjlig att fundera vidare på.",
             "Skribenten uppmanar läsaren att bestämma sig för sitt gymnasieval så tidigt som möjligt."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
           "explanation": "I sista stycket landar skribenten i något eget – ”man måste inte veta vad man vill bli, men man bör veta vad man vill ta reda på härnäst” – men lämnar samtidigt fortsättningen öppen med orden ”Resten får visa sig”. Skribenten säger alltså inte att frågan är omöjlig att fundera på; tvärtom är hela texten en sådan fundering."
         },
@@ -848,11 +950,11 @@
           "prompt": "Vilket av följande drag i texten är typiskt för en resonerande text? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Numrerade steg i en bestämd ordning som läsaren förväntas följa punkt för punkt.",
-            "En enda tydlig tes som drivs igenom hela texten med argument som ska övertyga läsaren.",
             "Tankar som prövas mot varandra med uttryck som ”å ena sidan”, ”men å andra sidan” och ”samtidigt”.",
+            "En enda tydlig tes som drivs igenom hela texten med argument som ska övertyga läsaren.",
             "Enbart saklig fakta och statistik, helt utan personliga exempel eller egna tankar."
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
           "explanation": "Det typiska för en resonerande text är att tankar prövas mot varandra, och texten är uppbyggd just så: ”Å ena sidan förstår jag poängen med att ha ett mål”, ”Men å andra sidan”, ”Samtidigt vill jag inte göra det för enkelt för mig”. En text som driver en enda tes rakt igenom är i stället argumenterande, och personliga exempel som mamman och farfar hör tvärtom hemma här."
         }
@@ -921,11 +1023,11 @@
           "prompt": "Vad syftar isen som ”bryter upp” troligen på i dikten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Att det är farligt att ge sig ut på isen så här års.",
-            "Att något i jagets liv håller på att förändras och släppa.",
             "Att jaget fryser i marskvällen och vill skynda sig hem igen.",
-            "Att jaget minns en vinter då isen brast under fötterna."
+            "Att jaget minns en vinter då isen brast under fötterna.",
+            "Att något i jagets liv håller på att förändras och släppa."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Isen bryter upp i mars, samtidigt som jaget står i ett vägskäl mellan hemmet bakom och ”andra sidan” framför sig – uppbrottet i naturen speglar alltså uppbrottet i livet. Frågan gäller vad bilden står för, och dikten kopplar isen till det som släpper i jagets tillvaro – något minne av att ha gått genom isen finns inte i dikten, och jaget skyndar inte hem utan tar steget framåt."
         },
         {
@@ -943,9 +1045,18 @@
           "note": "Du måste skriva två saker för att få full poäng.",
           "guidance": "Ge 1 poäng per korrekt sak, max 2 poäng: 1) köksfönstren hemma som lyser, 2) en röst/någon som ropar jagets namn. Exempel på godtagbart svar: ”De lysande köksfönstren hemma och en röst som ropar hans namn.”",
           "scoreExamples": [
-            { "points": 0, "answer": "Bakom jaget finns en bro och is som bryter upp." },
-            { "points": 1, "answer": "Bakom jaget lyser köksfönstren hemma." },
-            { "points": 2, "answer": "Bakom jaget finns de lysande köksfönstren hemma och en röst som ropar hans namn en sista gång." }
+            {
+              "points": 0,
+              "answer": "Bakom jaget finns en bro och is som bryter upp."
+            },
+            {
+              "points": 1,
+              "answer": "Bakom jaget lyser köksfönstren hemma."
+            },
+            {
+              "points": 2,
+              "answer": "Bakom jaget finns de lysande köksfönstren hemma och en röst som ropar hans namn en sista gång."
+            }
           ]
         },
         {
@@ -961,8 +1072,14 @@
           "prompt": "Dikten är uppbyggd kring orden ”Bakom mig” (andra strofen) och ”Framför mig” (tredje strofen). Vad ställs mot varandra i de två stroferna, och vad säger den uppbyggnaden om jagets situation?",
           "guidance": "Ge 2 poäng om svaret visar vad som ställs mot varandra: bakom jaget finns hemmet och tryggheten (köksfönstren som lyser, rösten som ropar namnet, vanten), framför ligger det okända och otydliga (dis, ingen gata, inget hus, en stig som tappar bort sig). Det räcker att kontrasten framgår med stöd i dikten. Ge 0 poäng för svar som bara återberättar vad som står i stroferna.",
           "scoreExamples": [
-            { "points": 0, "answer": "I andra strofen står det om hemmet och i tredje strofen om andra sidan av bron." },
-            { "points": 2, "answer": "Stroferna ställer det trygga mot det okända. Bakom jaget lyser köksfönstren och en röst ropar hans namn, medan allt framför ligger ”i dis”: ingen gata, inget hus, bara ”en stig som tappar bort sig”." }
+            {
+              "points": 0,
+              "answer": "I andra strofen står det om hemmet och i tredje strofen om andra sidan av bron."
+            },
+            {
+              "points": 2,
+              "answer": "Stroferna ställer det trygga mot det okända. Bakom jaget lyser köksfönstren och en röst ropar hans namn, medan allt framför ligger ”i dis”: ingen gata, inget hus, bara ”en stig som tappar bort sig”."
+            }
           ]
         },
         {
@@ -972,12 +1089,12 @@
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
           "prompt": "Dikten är skriven på fri vers. Vilket språkligt drag är mest framträdande? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Liknelser och bildspråk.",
             "Fackord och statistik.",
             "Repliker och dialog.",
+            "Liknelser och bildspråk.",
             "Instruktioner i punktform."
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "explanation": "Dikten arbetar genomgående med bilder och liknelser: ljudet av isen är ”som av papper / som någon långsamt river sönder”, och rösten är ”varm som en vante jag snart har växt ur”. Något fackspråk, någon dialog eller några instruktioner finns inte i dikten."
         },
         {
@@ -993,8 +1110,14 @@
           "prompt": "Läs sista strofen: ”Bakom ryggen lossnar vintern / och far med strömmen mot havet, / och jag låter den fara.” Vad uttrycker raderna om jagets känsla inför förändringen?",
           "guidance": "Ge 2 poäng om svaret visar att jaget accepterar eller släpper det gamla och möter förändringen med lugn eller mod (”låter den fara” = väljer att inte hålla fast). Ge 0 poäng för svar som bara återberättar att isen flyter bort utan tolkning.",
           "scoreExamples": [
-            { "points": 0, "answer": "Isen och vintern flyter bort mot havet." },
-            { "points": 2, "answer": "Raderna visar att jaget har bestämt sig för att släppa taget om det som varit. Jaget möter förändringen med lugn och håller inte fast vid det gamla, utan ”låter den fara”." }
+            {
+              "points": 0,
+              "answer": "Isen och vintern flyter bort mot havet."
+            },
+            {
+              "points": 2,
+              "answer": "Raderna visar att jaget har bestämt sig för att släppa taget om det som varit. Jaget möter förändringen med lugn och håller inte fast vid det gamla, utan ”låter den fara”."
+            }
           ]
         },
         {
@@ -1005,11 +1128,11 @@
           "prompt": "Vilken rad antyder tydligast att jaget är på väg att lämna barndomen bakom sig? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "”Jag står på bron en kväll i mars.”",
-            "”varm som en vante jag snart har växt ur.”",
             "”Framför mig ligger andra sidan i dis.”",
-            "”Så tar jag steget. Bron bär.”"
+            "”Så tar jag steget. Bron bär.”",
+            "”varm som en vante jag snart har växt ur.”"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "explanation": "Vanten är ett plagg man växer ur som barn, och raden ”varm som en vante jag snart har växt ur” säger att tryggheten hemma fortfarande är varm men snart för liten. Raden om bron och steget handlar om själva uppbrottet, medan disen framför handlar om framtiden – men det är vanten som pekar tydligast på barndomen."
         },
         {
@@ -1026,9 +1149,18 @@
           "prompt": "Dikten handlar om en förändring i livet. Beskriv hur dikten gestaltar denna förändring genom sitt bildspråk. Ge minst två bilder ur dikten och förklara kort vad var och en uttrycker.",
           "guidance": "Ge 4 poäng om svaret förklarar hur förändringen gestaltas och ger minst två bilder med förklaring. Ge 2 poäng för en bild med förklaring. Ge 0 poäng om ingen bild förklaras. Exempel på bilder: isen som bryter upp (tiden går/något släpper), köksfönstren och rösten (barndomens trygghet), vanten man växt ur (att man blivit för stor för barndomen), andra sidan i dis (den okända framtiden), ”bron bär” (mod/tillit), vintern som far mot havet (att släppa det gamla).",
           "scoreExamples": [
-            { "points": 0, "answer": "Dikten handlar om en person som går över en bro på våren och allt förändras." },
-            { "points": 2, "answer": "Isen som ”bryter upp” visar att något i jagets liv håller på att släppa och att tiden går." },
-            { "points": 4, "answer": "Förändringen syns i bildspråket. Isen som ”bryter upp, flak för flak” visar att något släpper och att tiden går. ”En vante jag snart har växt ur” står för barndomen som jaget blivit för stor för, och ”andra sidan i dis” för framtiden som ännu är oklar." }
+            {
+              "points": 0,
+              "answer": "Dikten handlar om en person som går över en bro på våren och allt förändras."
+            },
+            {
+              "points": 2,
+              "answer": "Isen som ”bryter upp” visar att något i jagets liv håller på att släppa och att tiden går."
+            },
+            {
+              "points": 4,
+              "answer": "Förändringen syns i bildspråket. Isen som ”bryter upp, flak för flak” visar att något släpper och att tiden går. ”En vante jag snart har växt ur” står för barndomen som jaget blivit för stor för, och ”andra sidan i dis” för framtiden som ännu är oklar."
+            }
           ]
         }
       ]
@@ -1112,9 +1244,18 @@
           "prompt": "Hur kom det sig att Noa började intressera sig för just cyklar? Förklara med stöd i texten.",
           "guidance": "Ge 2 poäng om svaret visar bakgrunden: Noa fick en begagnad cykel av en granne när hon var åtta år, och den betydde mycket för henne / gav henne en känsla av frihet; senare började hon meka. Ge 1 poäng för en delvis förklaring (t.ex. bara att hon fick en cykel). Ge 0 poäng för svar utan koppling till texten, t.ex. ”hon gillar cyklar”.",
           "scoreExamples": [
-            { "points": 0, "answer": "Hon tycker om cyklar och är bra på att laga dem." },
-            { "points": 1, "answer": "Hon fick en cykel när hon var liten." },
-            { "points": 2, "answer": "När Noa var åtta fick hon en begagnad cykel av en granne, och den betydde jättemycket – hon kände sig fri. Senare började hon meka och förstod att hon var bra på det." }
+            {
+              "points": 0,
+              "answer": "Hon tycker om cyklar och är bra på att laga dem."
+            },
+            {
+              "points": 1,
+              "answer": "Hon fick en cykel när hon var liten."
+            },
+            {
+              "points": 2,
+              "answer": "När Noa var åtta fick hon en begagnad cykel av en granne, och den betydde jättemycket – hon kände sig fri. Senare började hon meka och förstod att hon var bra på det."
+            }
           ]
         },
         {
@@ -1146,9 +1287,18 @@
           "prompt": "Vad mer än själva lagandet verkar vara viktigt för Noa? Använd två olika exempel ur texten i ditt svar.",
           "guidance": "Ge 4 poäng om svaret tar upp två olika drivkrafter med stöd i texten: 1) miljön / att inget ska slängas i onödan (”varje cykel som rullar igen är en mindre som måste tillverkas ny”), 2) att hjälpa andra / glädjen i att ge (cyklarna ges till dem som behöver men inte har råd; ”det bästa är att se någon trampa iväg”). Ge 2 poäng för en av dem. Ge 0 poäng för svar som bara upprepar att hon lagar cyklar.",
           "scoreExamples": [
-            { "points": 0, "answer": "Hon tycker om att laga cyklar och är bra på det." },
-            { "points": 2, "answer": "Hon bryr sig om miljön, för hon säger att varje cykel som rullar igen är en mindre som måste tillverkas ny." },
-            { "points": 4, "answer": "Två saker är viktiga för henne. Dels miljön – ”varje cykel som rullar igen är en mindre som måste tillverkas ny”. Dels att hjälpa andra: hon ger cyklarna till dem som behöver men inte har råd, och tycker att det bästa är att se någon trampa iväg på en cykel hon har fixat." }
+            {
+              "points": 0,
+              "answer": "Hon tycker om att laga cyklar och är bra på det."
+            },
+            {
+              "points": 2,
+              "answer": "Hon bryr sig om miljön, för hon säger att varje cykel som rullar igen är en mindre som måste tillverkas ny."
+            },
+            {
+              "points": 4,
+              "answer": "Två saker är viktiga för henne. Dels miljön – ”varje cykel som rullar igen är en mindre som måste tillverkas ny”. Dels att hjälpa andra: hon ger cyklarna till dem som behöver men inte har råd, och tycker att det bästa är att se någon trampa iväg på en cykel hon har fixat."
+            }
           ]
         },
         {
@@ -1159,11 +1309,11 @@
           "prompt": "Vilket påstående om Noa stämmer bäst med texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Hon lagar cyklar framför allt för att kunna tjäna pengar på dem.",
-            "Hon vill att fler ungdomar ska kunna laga cyklar tillsammans med henne.",
             "Hon tycker att riktigt gamla och rostiga cyklar hellre borde slängas.",
+            "Hon vill att fler ungdomar ska kunna laga cyklar tillsammans med henne.",
             "Hon lagar bara cyklar åt sina egna kompisar och sin närmaste familj."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Noa berättar om sin dröm: ”att få låna en lokal av kommunen och lära andra ungdomar att laga”, och hon säger ”Tänk om vi vore tio stycken i stället för en.” Att hon skulle göra det för pengar motsägs av att hon skänker bort cyklarna gratis, och hon ger dem till nyinflyttade och yngre barn i området – inte bara till kompisar."
         },
         {
@@ -1179,8 +1329,14 @@
           "prompt": "Artikeln inleds med en kort, fetstilt ingress. Vilken funktion har ingressen i en tidningsartikel?",
           "guidance": "Ge 2 poäng om svaret förklarar ingressens funktion: den sammanfattar kort det viktigaste i artikeln och/eller väcker läsarens intresse så att man vill läsa vidare. Ge 0 poäng för svar som bara beskriver utseendet (”den är fet och står först”) utan funktion.",
           "scoreExamples": [
-            { "points": 0, "answer": "Den står först och är skriven med fet stil." },
-            { "points": 2, "answer": "Ingressen sammanfattar kort det viktigaste i artikeln och väcker läsarens intresse, så att man snabbt förstår vad texten handlar om och vill läsa vidare." }
+            {
+              "points": 0,
+              "answer": "Den står först och är skriven med fet stil."
+            },
+            {
+              "points": 2,
+              "answer": "Ingressen sammanfattar kort det viktigaste i artikeln och väcker läsarens intresse, så att man snabbt förstår vad texten handlar om och vill läsa vidare."
+            }
           ]
         },
         {
@@ -1213,10 +1369,22 @@
           "prompt": "Beskriv hur skribenten bygger upp porträttet av Noa. Ge minst tre kännetecken för ett reportage som finns i artikeln (till exempel ingress, intervjucitat, faktaruta, miljöbeskrivning eller underrubriker) och förklara kort vad varje sak tillför texten.",
           "guidance": "Ge 6 poäng om svaret pekar ut minst tre kännetecken för ett reportage och förklarar vad de tillför. Ge 4 poäng för två, 2 poäng för ett. Ge 0 poäng om inget kännetecken pekas ut/förklaras. Exempel: ingress (sammanfattar och lockar), miljöbeskrivning (”det luktar olja och gummi …” sätter scenen), intervjucitat (Noas och andras röster gör texten levande och trovärdig), faktaruta (ger snabb fakta om personen), underrubriker (delar upp texten).",
           "scoreExamples": [
-            { "points": 0, "answer": "Det är ett reportage om en tjej som lagar cyklar." },
-            { "points": 2, "answer": "Texten har intervjucitat, till exempel när Noa säger ”Hör du? Det skrapar lite.” Citaten gör att man hör hennes egen röst." },
-            { "points": 4, "answer": "Texten har intervjucitat, som när Noa säger ”Hör du? Det skrapar lite.”, vilket gör henne levande. Den har också en miljöbeskrivning – ”Det luktar olja och gummi i garaget” – som sätter scenen för läsaren." },
-            { "points": 6, "answer": "Skribenten bygger upp porträttet på flera sätt. Ingressen sammanfattar det viktigaste och lockar läsaren. Miljöbeskrivningen ”Det luktar olja och gummi i garaget” sätter scenen så att man ser verkstaden framför sig. Intervjucitaten, både från Noa och från Adin och mamman, gör texten levande och trovärdig genom att vi hör flera röster. Dessutom ger faktarutan ”NOA LINDE” snabb fakta om vem hon är. Tillsammans gör allt detta att läsaren får en tydlig bild av Noa." }
+            {
+              "points": 0,
+              "answer": "Det är ett reportage om en tjej som lagar cyklar."
+            },
+            {
+              "points": 2,
+              "answer": "Texten har intervjucitat, till exempel när Noa säger ”Hör du? Det skrapar lite.” Citaten gör att man hör hennes egen röst."
+            },
+            {
+              "points": 4,
+              "answer": "Texten har intervjucitat, som när Noa säger ”Hör du? Det skrapar lite.”, vilket gör henne levande. Den har också en miljöbeskrivning – ”Det luktar olja och gummi i garaget” – som sätter scenen för läsaren."
+            },
+            {
+              "points": 6,
+              "answer": "Skribenten bygger upp porträttet på flera sätt. Ingressen sammanfattar det viktigaste och lockar läsaren. Miljöbeskrivningen ”Det luktar olja och gummi i garaget” sätter scenen så att man ser verkstaden framför sig. Intervjucitaten, både från Noa och från Adin och mamman, gör texten levande och trovärdig genom att vi hör flera röster. Dessutom ger faktarutan ”NOA LINDE” snabb fakta om vem hon är. Tillsammans gör allt detta att läsaren får en tydlig bild av Noa."
+            }
           ]
         }
       ]
@@ -1283,12 +1451,12 @@
           "aspect": "Hitta efterfrågad information",
           "prompt": "Vilken åsikt driver skribenten i texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Att AI bör förbjudas i skolan tills forskningen har hunnit ikapp.",
             "Att skolan ska lära eleverna använda AI i stället för att förbjuda det.",
+            "Att AI bör förbjudas i skolan tills forskningen har hunnit ikapp.",
             "Att elever ska få använda AI fritt på alla prov, helt utan regler.",
             "Att lärarna själva borde använda AI för att rätta elevernas prov."
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "explanation": "Skribenten skriver rakt ut: ”I stället för att förbjuda de här verktygen borde skolan lära oss att använda dem – på riktigt, med krav och med kritik.” Texten kräver alltså regler och kritiskt tänkande, inte frihet utan gränser."
         },
         {
@@ -1306,9 +1474,18 @@
           "prompt": "Skribenten ger flera argument för sin åsikt. Skriv två av argumenten.",
           "guidance": "Ge 1 poäng per korrekt argument, max 2 poäng. Argument i texten: 1) förbud fungerar inte – verktygen finns i varje telefon och eleverna slutar bara berätta hur de arbetar, 2) rättvisa – den som saknar hjälp hemma drabbas hårdast av ett förbud, 3) arbetslivet – eleverna ska ut i ett arbetsliv där verktygen är vardag och måste kunna granska svaren. Ge 0 poäng för svar som bara upprepar åsikten utan argument.",
           "scoreExamples": [
-            { "points": 0, "answer": "Han tycker att skolan ska sluta förbjuda AI och lära ut det i stället." },
-            { "points": 1, "answer": "Han skriver att ett förbud inte fungerar, eftersom verktygen finns i alla elevers telefoner ändå." },
-            { "points": 2, "answer": "Ett argument är att förbud inte fungerar – verktygen finns i varje ficka, och eleverna slutar bara berätta hur de arbetar. Ett annat är att ett förbud är orättvist, eftersom det drabbar hårdast dem som inte har någon som kan förklara hemma." }
+            {
+              "points": 0,
+              "answer": "Han tycker att skolan ska sluta förbjuda AI och lära ut det i stället."
+            },
+            {
+              "points": 1,
+              "answer": "Han skriver att ett förbud inte fungerar, eftersom verktygen finns i alla elevers telefoner ändå."
+            },
+            {
+              "points": 2,
+              "answer": "Ett argument är att förbud inte fungerar – verktygen finns i varje ficka, och eleverna slutar bara berätta hur de arbetar. Ett annat är att ett förbud är orättvist, eftersom det drabbar hårdast dem som inte har någon som kan förklara hemma."
+            }
           ]
         },
         {
@@ -1319,11 +1496,11 @@
           "prompt": "Hur bemöter skribenten invändningen att eleverna kommer att fuska? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Genom att helt förneka att det över huvud taget förekommer något fusk med AI i skolan.",
-            "Genom att hävda att fusk är ett betydligt mindre allvarligt problem i dag än förr.",
             "Genom att medge att det sker, men peka på att fusk funnits långt före AI och att uppgifterna behöver ändras.",
+            "Genom att hävda att fusk är ett betydligt mindre allvarligt problem i dag än förr.",
             "Genom att föreslå hårdare straff och tydligare konsekvenser för de elever som fuskar."
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "explanation": "Skribenten börjar med att ge invändningen delvis rätt – ”Ja, en del kommer att göra det” – och vänder den sedan: fusk har alltid förekommit, och att en uppgift kan lösas på tio sekunder ”säger något om uppgiften”. Att erkänna motståndarens poäng och ändå driva sin tes är ett vanligt argumenterande grepp."
         },
         {
@@ -1340,9 +1517,18 @@
           "prompt": "Skribenten jämför AI med miniräknaren. Förklara vad jämförelsen ska övertyga läsaren om, och varför den är effektiv i texten.",
           "guidance": "Ge 4 poäng om svaret både förklarar VAD jämförelsen ska visa (att oron för ny teknik har funnits förr, att den visade sig obefogad, och att lösningen då blev nya prov i stället för förbud – alltså bör man göra likadant nu) OCH varför den är effektiv (den bygger på något läsaren redan accepterar, gör tesen svårare att avfärda och flyttar frågan från om till hur). Ge 2 poäng för ett av leden. Ge 0 poäng för svar som bara återberättar att miniräknaren nämns.",
           "scoreExamples": [
-            { "points": 0, "answer": "Han skriver att när miniräknaren kom var många oroliga för att ingen skulle lära sig räkna." },
-            { "points": 2, "answer": "Jämförelsen ska visa att man varit orolig för ny teknik förut, och att lösningen då blev nya sorters prov i stället för förbud. Alltså borde skolan göra likadant med AI." },
-            { "points": 4, "answer": "Jämförelsen ska övertyga läsaren om att dagens oro inte är ny: när miniräknaren kom trodde man också att ingen skulle lära sig räkna, men lösningen blev prov med och utan räknare – inte förbud. Den är effektiv eftersom nästan alla i dag håller med om att miniräknaren var ofarlig. Skribenten utgår alltså från något läsaren redan accepterar och gör det svårt att avfärda tesen, samtidigt som frågan flyttas från om tekniken ska användas till hur." }
+            {
+              "points": 0,
+              "answer": "Han skriver att när miniräknaren kom var många oroliga för att ingen skulle lära sig räkna."
+            },
+            {
+              "points": 2,
+              "answer": "Jämförelsen ska visa att man varit orolig för ny teknik förut, och att lösningen då blev nya sorters prov i stället för förbud. Alltså borde skolan göra likadant med AI."
+            },
+            {
+              "points": 4,
+              "answer": "Jämförelsen ska övertyga läsaren om att dagens oro inte är ny: när miniräknaren kom trodde man också att ingen skulle lära sig räkna, men lösningen blev prov med och utan räknare – inte förbud. Den är effektiv eftersom nästan alla i dag håller med om att miniräknaren var ofarlig. Skribenten utgår alltså från något läsaren redan accepterar och gör det svårt att avfärda tesen, samtidigt som frågan flyttas från om tekniken ska användas till hur."
+            }
           ]
         },
         {
@@ -1352,12 +1538,12 @@
           "aspect": "Dra enkla slutsatser",
           "prompt": "Vad menar skribenten med meningen ”Om en uppgift kan lösas på tio sekunder av ett program, då säger det något om uppgiften.”? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Att uppgiften är för lätt och behöver göras om.",
             "Att programmet är opålitligt och räknar för snabbt.",
+            "Att uppgiften är för lätt och behöver göras om.",
             "Att eleverna borde få mer tid på sig.",
             "Att läraren har rättat uppgiften för slarvigt."
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "explanation": "Meningen flyttar skulden från eleven till uppgiften: om ett program klarar den på tio sekunder prövar den inte särskilt mycket, och då är det uppgiften som behöver ändras. Skribenten säger inget om att programmet skulle vara opålitligt just här – den poängen kommer först senare i texten."
         },
         {
@@ -1368,11 +1554,11 @@
           "prompt": "Vilket drag i textens avslutning är typiskt för en argumenterande text? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "En sammanfattning av alla fakta som nämnts.",
-            "En direkt uppmaning riktad till en utpekad mottagare.",
             "En personlig minnesbild från skribentens barndom.",
+            "En direkt uppmaning riktad till en utpekad mottagare.",
             "En fråga som lämnas obesvarad åt läsaren."
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "explanation": "Texten slutar med ett tydligt tilltal: ”Skolledningar: skriv era riktlinjer tillsammans med oss elever …”. Att avsluta med en uppmaning till den som kan bestämma är ett klassiskt drag i argumenterande texter. Någon obesvarad fråga lämnas inte – skribenten svarar själv: ”Fråga i stället hur.”"
         },
         {
@@ -1388,8 +1574,14 @@
           "prompt": "Vem vänder sig texten framför allt till, och hur märks det i språket? Ge exempel ur texten.",
           "guidance": "Ge 2 poäng om svaret både anger mottagaren (skolan, skolledningar, vuxna som bestämmer i skolan) och ger språkligt stöd: det direkta tilltalet ”Skolledningar:” och ”Ni har mer att vinna på det än ni tror”, samt att skribenten talar om sig själv och andra elever som ”vi” och ”oss”. Ge 0 poäng om bara mottagaren anges utan exempel, eller om exempel ges utan att mottagaren framgår.",
           "scoreExamples": [
-            { "points": 0, "answer": "Texten vänder sig till alla som är intresserade av skolan och AI." },
-            { "points": 2, "answer": "Texten vänder sig framför allt till skolledningar och vuxna som bestämmer i skolan. Det märks i slutet, där skribenten tilltalar dem direkt: ”Skolledningar: skriv era riktlinjer tillsammans med oss elever i stället för om oss. Ni har mer att vinna på det än ni tror.” Skribenten skriver också ”vi” och ”oss” om eleverna, vilket visar att hon eller han talar som elev till de vuxna." }
+            {
+              "points": 0,
+              "answer": "Texten vänder sig till alla som är intresserade av skolan och AI."
+            },
+            {
+              "points": 2,
+              "answer": "Texten vänder sig framför allt till skolledningar och vuxna som bestämmer i skolan. Det märks i slutet, där skribenten tilltalar dem direkt: ”Skolledningar: skriv era riktlinjer tillsammans med oss elever i stället för om oss. Ni har mer att vinna på det än ni tror.” Skribenten skriver också ”vi” och ”oss” om eleverna, vilket visar att hon eller han talar som elev till de vuxna."
+            }
           ]
         }
       ]
