@@ -247,7 +247,7 @@
           "prompt": "Lovisa Ekenstam är positiv till att e-sport räknas som idrott. Vilket av följande påståenden stämmer överens med hennes motivering? Kryssa för rätt alternativ.",
           "options": [
             "E-sporten har redan större publik än de flesta andra idrotter.",
-            "Proffslagen har redan infört obligatorisk fysträning för spelarna.",
+            "Proffslagen har redan infört obligatorisk fysträning för alla sina spelare.",
             "Vi räknar redan precisionssporter som schack och skytte som idrott.",
             "Andra länder har redan jämställt e-sportare med vanliga idrottare."
           ],
@@ -280,7 +280,7 @@
           "options": [
             "Den visar att gränserna för vem som får tävla aldrig har flyttats.",
             "Den antyder att synen på vad som är sport har ändrats förr och kan ändras igen.",
-            "Den bevisar att e-sport med säkerhet kommer att bli en olympisk gren.",
+            "Den bevisar att e-sport med säkerhet kommer att bli en olympisk gren i framtiden.",
             "Den förklarar varför forskarnas åsikter väger tyngre än publikens."
           ],
           "correctIndex": 1,
@@ -349,7 +349,7 @@
           "prompt": "Vilket påstående stämmer bäst överens med hur berättarens syn på sin bror förändras under texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
             "Berättaren går från att avgudahylla Jocke till att se honom som en vanlig, sårbar människa.",
-            "Berättaren går från att hata sin storebror till att avguda honom som en förebild.",
+            "Berättaren går från att hata sin storebror till att avguda honom som sin allra största förebild.",
             "Berättaren känner hela tiden precis lika mycket beundran för Jocke som i början.",
             "Berättaren slutar bry sig om Jocke helt och hållet efter att Sandra flyttat."
           ],
@@ -518,7 +518,7 @@
             "Att hjärnan gör i stort sett samma arbete vare sig man hör eller ser orden.",
             "Att man minns betydligt mer av en bok om man lyssnar på den än läser.",
             "Att det går betydligt snabbare att lyssna på en bok än att läsa den.",
-            "Att lyssnandet passar bäst för den som har svårt att avkoda bokstäver."
+            "Att lyssnandet passar allra bäst för den som har svårt att avkoda bokstäver."
           ],
           "correctIndex": 0,
           "aspect": "Hitta efterfrågad information",
@@ -565,7 +565,7 @@
             "Det bevisar att ljudboken är ett bättre sätt att läsa än den tryckta boken.",
             "Det visar att man genom historien ofta oroat sig i onödan för nya sätt att läsa.",
             "Det förklarar hur romanen uppstod och blev populär i Europa på 1700-talet.",
-            "Det visar att serietidningar verkligen var skadliga för ungdomars tänkande."
+            "Det visar att serietidningar verkligen var skadliga för ungdomars sätt att tänka."
           ],
           "correctIndex": 1,
           "aspect": "Granska och värdera innehåll, språk och textuella drag",
@@ -923,10 +923,10 @@
             "Att det är farligt att ge sig ut på isen så här års.",
             "Att något i jagets liv håller på att förändras och släppa.",
             "Att jaget fryser i marskvällen och vill skynda sig hem igen.",
-            "Att jaget minns en vinter då isen brast under hans fötter."
+            "Att jaget minns en vinter då isen brast under fötterna."
           ],
           "correctIndex": 1,
-          "explanation": "Isen bryter upp i mars, samtidigt som jaget står i ett vägskäl mellan hemmet bakom och ”andra sidan” framför sig – uppbrottet i naturen speglar alltså uppbrottet i livet. Att våren gör det varmare är förstås bokstavligt sant, men frågan gäller vad bilden står för, och dikten kopplar isen till det som släpper i jagets tillvaro."
+          "explanation": "Isen bryter upp i mars, samtidigt som jaget står i ett vägskäl mellan hemmet bakom och ”andra sidan” framför sig – uppbrottet i naturen speglar alltså uppbrottet i livet. Frågan gäller vad bilden står för, och dikten kopplar isen till det som släpper i jagets tillvaro – något minne av att ha gått genom isen finns inte i dikten, och jaget skyndar inte hem utan tar steget framåt."
         },
         {
           "kind": "open",
@@ -1158,10 +1158,10 @@
           "aspect": "Dra enkla slutsatser",
           "prompt": "Vilket påstående om Noa stämmer bäst med texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Hon lagar cyklar mest för att tjäna pengar.",
+            "Hon lagar cyklar framför allt för att kunna tjäna pengar på dem.",
             "Hon vill att fler ungdomar ska kunna laga cyklar tillsammans med henne.",
-            "Hon tycker att gamla cyklar borde slängas.",
-            "Hon lagar bara cyklar åt sina egna kompisar."
+            "Hon tycker att riktigt gamla och rostiga cyklar hellre borde slängas.",
+            "Hon lagar bara cyklar åt sina egna kompisar och sin närmaste familj."
           ],
           "correctIndex": 1,
           "explanation": "Noa berättar om sin dröm: ”att få låna en lokal av kommunen och lära andra ungdomar att laga”, och hon säger ”Tänk om vi vore tio stycken i stället för en.” Att hon skulle göra det för pengar motsägs av att hon skänker bort cyklarna gratis, och hon ger dem till nyinflyttade och yngre barn i området – inte bara till kompisar."
@@ -1283,10 +1283,10 @@
           "aspect": "Hitta efterfrågad information",
           "prompt": "Vilken åsikt driver skribenten i texten? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Att AI bör förbjudas i skolan tills forskningen är klar.",
+            "Att AI bör förbjudas i skolan tills forskningen har hunnit ikapp.",
             "Att skolan ska lära eleverna använda AI i stället för att förbjuda det.",
-            "Att elever ska få använda AI på prov utan några regler.",
-            "Att lärare borde använda AI för att rätta prov."
+            "Att elever ska få använda AI fritt på alla prov, helt utan regler.",
+            "Att lärarna själva borde använda AI för att rätta elevernas prov."
           ],
           "correctIndex": 1,
           "explanation": "Skribenten skriver rakt ut: ”I stället för att förbjuda de här verktygen borde skolan lära oss att använda dem – på riktigt, med krav och med kritik.” Texten kräver alltså regler och kritiskt tänkande, inte frihet utan gränser."
@@ -1318,10 +1318,10 @@
           "aspect": "Sammanföra och tolka information och idéer samt reflektera",
           "prompt": "Hur bemöter skribenten invändningen att eleverna kommer att fuska? Kryssa för rätt alternativ. Fler kryss än ett gör svaret ogiltigt.",
           "options": [
-            "Genom att förneka att det förekommer fusk.",
-            "Genom att hävda att fusk är mindre allvarligt i dag.",
+            "Genom att helt förneka att det över huvud taget förekommer något fusk med AI i skolan.",
+            "Genom att hävda att fusk är ett betydligt mindre allvarligt problem i dag än förr.",
             "Genom att medge att det sker, men peka på att fusk funnits långt före AI och att uppgifterna behöver ändras.",
-            "Genom att föreslå hårdare straff för den som fuskar."
+            "Genom att föreslå hårdare straff och tydligare konsekvenser för de elever som fuskar."
           ],
           "correctIndex": 2,
           "explanation": "Skribenten börjar med att ge invändningen delvis rätt – ”Ja, en del kommer att göra det” – och vänder den sedan: fusk har alltid förekommit, och att en uppgift kan lösas på tio sekunder ”säger något om uppgiften”. Att erkänna motståndarens poäng och ändå driva sin tes är ett vanligt argumenterande grepp."
