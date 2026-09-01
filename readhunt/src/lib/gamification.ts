@@ -1,6 +1,7 @@
 import type { ChestType, Chest, MysteryBoxReward, GamificationData } from '../types';
 import { SHOP_AVATARS, SHOP_FRAMES, type Rarity } from '../data/shop';
 import { loadShop, grantItem } from '../utils/shopStorage';
+import { loadUser } from '../services/userService';
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -187,7 +188,6 @@ function makeChest(type: ChestType): Chest {
 }
 
 export function chestsEarnedFromPoints(
-  prevPoints: number,
   newPoints: number,
   alreadyRewarded: number[],
   currentChests: Chest[] = []
@@ -203,11 +203,7 @@ export function chestsEarnedFromPoints(
   }
 
   for (const m of POINT_CHEST_MILESTONES) {
-    if (
-      prevPoints < m.points &&
-      newPoints >= m.points &&
-      !alreadyRewarded.includes(m.points)
-    ) {
+    if (newPoints >= m.points && !alreadyRewarded.includes(m.points)) {
       // Kolla om max antal för denna typ är nådd
       const currentCount = chestCounts[m.type] + earned.filter(e => e.chest.type === m.type).length;
       if (currentCount < MAX_CHESTS_PER_TYPE) {
@@ -219,7 +215,6 @@ export function chestsEarnedFromPoints(
 }
 
 export function chestsEarnedFromTexts(
-  prevCount: number,
   newCount: number,
   alreadyRewarded: number[],
   currentChests: Chest[] = []
@@ -235,11 +230,7 @@ export function chestsEarnedFromTexts(
   }
 
   for (const m of TEXT_CHEST_MILESTONES) {
-    if (
-      prevCount < m.texts &&
-      newCount >= m.texts &&
-      !alreadyRewarded.includes(m.texts)
-    ) {
+    if (newCount >= m.texts && !alreadyRewarded.includes(m.texts)) {
       // Kolla om max antal för denna typ är nådd
       const currentCount = chestCounts[m.type] + earned.filter(e => e.chest.type === m.type).length;
       if (currentCount < MAX_CHESTS_PER_TYPE) {
@@ -466,18 +457,39 @@ export function getBadge(id: string) {
 
 // ─── Storage functions ────────────────────────────────────────────────────────
 
-const GAMIFICATION_KEY = 'lasjakten_gamification';
+// Kistor lagrades tidigare under en enda global nyckel, vilket gjorde att alla
+// elever som delade en enhet också delade kistor – och därmed kunde öppna
+// varandras och få poängen. Lagringen är nu namngiven per elev.
+const LEGACY_KEY = 'lasjakten_gamification';
+
+function gamificationKey(): string {
+  const name = loadUser()?.name?.trim().toLowerCase();
+  return name ? `readhunt_gamification_${encodeURIComponent(name)}` : LEGACY_KEY;
+}
 
 export function loadGamification(): GamificationData {
   try {
-    const raw = localStorage.getItem(GAMIFICATION_KEY);
-    if (!raw) return defaultGamificationData();
-    return JSON.parse(raw) as GamificationData;
-  } catch {
-    return defaultGamificationData();
-  }
+    const key = gamificationKey();
+    const raw = localStorage.getItem(key);
+    if (raw) return JSON.parse(raw) as GamificationData;
+
+    // Engångsmigrering: den gamla globala datan tillhör den elev som är
+    // inloggad när uppdateringen rullas ut. Nyckeln tas bort direkt efteråt så
+    // att ingen annan elev ärver samma kistor.
+    if (key !== LEGACY_KEY) {
+      const legacy = localStorage.getItem(LEGACY_KEY);
+      if (legacy) {
+        localStorage.setItem(key, legacy);
+        localStorage.removeItem(LEGACY_KEY);
+        return JSON.parse(legacy) as GamificationData;
+      }
+    }
+  } catch { /* ignore */ }
+  return defaultGamificationData();
 }
 
 export function saveGamification(data: GamificationData): void {
-  localStorage.setItem(GAMIFICATION_KEY, JSON.stringify(data));
+  try {
+    localStorage.setItem(gamificationKey(), JSON.stringify(data));
+  } catch { /* ignore */ }
 }

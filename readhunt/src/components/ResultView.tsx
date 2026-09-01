@@ -14,6 +14,10 @@ interface ResultViewProps {
   pointsEarned: number;
   newBadges: Badge[];
   multiplier?: 2 | 3 | null;
+  /** Texten var redan avklarad – reducerad poäng */
+  isRepeat?: boolean;
+  /** Extrapoäng från mystery box */
+  bonusPoints?: number;
   onRestart: () => void;
   onNextText: () => void;
   onNextTextLower: () => void;
@@ -57,6 +61,8 @@ export const ResultView: React.FC<ResultViewProps> = ({
   pointsEarned,
   newBadges,
   multiplier,
+  isRepeat,
+  bonusPoints,
   onRestart: _onRestart,
   onNextText,
   onNextTextLower,
@@ -248,6 +254,16 @@ export const ResultView: React.FC<ResultViewProps> = ({
                   <span className="text-base font-bold bg-gradient-to-r from-amber-600 to-yellow-600 dark:from-amber-400 dark:to-yellow-400 bg-clip-text text-transparent">
                     +{pointsEarned} pts
                   </span>
+                  {bonusPoints ? (
+                    <span className="block text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+                      🎁 +{bonusPoints} bonus
+                    </span>
+                  ) : null}
+                  {isRepeat ? (
+                    <span className="block text-[11px] font-medium text-slate-500 dark:text-slate-400">
+                      Already read — reduced points
+                    </span>
+                  ) : null}
                 </motion.div>
               </div>
 

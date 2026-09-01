@@ -17,7 +17,15 @@ export interface ShopData {
   equippedTheme: string | null;
 }
 
-const KEY = 'readhunt_shop';
+// Plånboken lagrades tidigare globalt, så elever som delade enhet delade även
+// "spent" och sina köp: en elev kunde ärva en annans skuld och därmed få noll
+// i saldo. Lagringen är nu namngiven per elev.
+const LEGACY_KEY = 'readhunt_shop';
+
+function shopKey(): string {
+  const name = loadUser()?.name?.trim().toLowerCase();
+  return name ? `readhunt_shop_${encodeURIComponent(name)}` : LEGACY_KEY;
+}
 
 export function defaultShop(): ShopData {
   return {
@@ -34,16 +42,28 @@ export function defaultShop(): ShopData {
 
 export function loadShop(): ShopData {
   try {
-    const raw = localStorage.getItem(KEY);
-    if (!raw) return defaultShop();
-    return { ...defaultShop(), ...(JSON.parse(raw) as Partial<ShopData>) };
-  } catch {
-    return defaultShop();
-  }
+    const key = shopKey();
+    const raw = localStorage.getItem(key);
+    if (raw) return { ...defaultShop(), ...(JSON.parse(raw) as Partial<ShopData>) };
+
+    // Engångsmigrering: den gamla globala plånboken tillhör den elev som är
+    // inloggad vid uppdateringen. Nyckeln tas bort så att ingen annan ärver den.
+    if (key !== LEGACY_KEY) {
+      const legacy = localStorage.getItem(LEGACY_KEY);
+      if (legacy) {
+        localStorage.setItem(key, legacy);
+        localStorage.removeItem(LEGACY_KEY);
+        return { ...defaultShop(), ...(JSON.parse(legacy) as Partial<ShopData>) };
+      }
+    }
+  } catch { /* ignore */ }
+  return defaultShop();
 }
 
 export function saveShop(data: ShopData): void {
-  localStorage.setItem(KEY, JSON.stringify(data));
+  try {
+    localStorage.setItem(shopKey(), JSON.stringify(data));
+  } catch { /* ignore */ }
 }
 
 /** Spenderbart saldo = livstidspoäng − redan spenderat. */

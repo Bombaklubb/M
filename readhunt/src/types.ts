@@ -114,6 +114,8 @@ export interface CompletedText {
   theme?: string;
   questionResults?: QuestionResult[];
   readingTimeSeconds?: number;
+  /** true om texten redan var avklarad – då ges reducerad poäng */
+  isRepeat?: boolean;
 }
 
 // Available avatars

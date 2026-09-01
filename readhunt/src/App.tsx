@@ -21,6 +21,7 @@ import {
   getLastCompletedText,
   updateAvatar,
   saveUser,
+  countUniqueTexts,
 } from './services/userService';
 import {
   trackPageView,
@@ -47,6 +48,8 @@ function App() {
     pointsEarned: number;
     newBadges: Badge[];
     multiplier?: 2 | 3 | null;
+    isRepeat?: boolean;
+    bonusPoints?: number;
   } | null>(null);
   const [loading, setLoading] = useState(true);
   const [showProfile, setShowProfile] = useState(false);
@@ -128,12 +131,32 @@ function App() {
     setAppState(AppState.LOGIN);
   };
 
+  // Dela ut de kistor som elevens nuvarande poäng/textantal berättigar till.
+  // Körs både efter en avklarad text och efter att en kista gett poäng – annars
+  // kunde kistpoäng passera en milstolpe utan att den någonsin delades ut.
+  const syncChestMilestones = (points: number, uniqueTexts: number): Chest[] => {
+    const gam = loadGamification();
+    const pointChests = chestsEarnedFromPoints(points, gam.pointsMilestonesRewarded, gam.chests);
+    const textChests = chestsEarnedFromTexts(uniqueTexts, gam.textMilestonesRewarded, gam.chests);
+    const newChests = [...pointChests, ...textChests].map((c) => c.chest);
+
+    saveGamification({
+      ...gam,
+      chests: [...gam.chests, ...newChests],
+      textsCompleted: uniqueTexts,
+      pointsMilestonesRewarded: [...gam.pointsMilestonesRewarded, ...pointChests.map((c) => c.milestone)],
+      textMilestonesRewarded: [...gam.textMilestonesRewarded, ...textChests.map((c) => c.milestone)],
+    });
+    return newChests;
+  };
+
   // Handle points update from chests
   const handleChestPointsUpdate = (points: number) => {
     if (!user) return;
     const updatedUser = { ...user, totalPoints: user.totalPoints + points };
     saveUser(updatedUser);
     setUser(updatedUser);
+    syncChestMilestones(updatedUser.totalPoints, countUniqueTexts(updatedUser));
   };
 
   // Get number of unopened chests
@@ -186,7 +209,16 @@ function App() {
       ? Math.round((Date.now() - quizStartTime.current) / 1000)
       : undefined;
 
-    // Registrera resultatet
+    // Mystery box rullas före resultatet sparas, så att eventuella bonuspoäng
+    // bokförs på samma resultat. Tidigare delades poäng- och märkesvinsterna
+    // aldrig ut alls – bara kistvinsten hanterades.
+    const gam = loadGamification();
+    const mysteryReward = rollMysteryBox(gam.gamificationBadges, gam.chests);
+    const bonusPoints =
+      mysteryReward?.type === 'points' ? mysteryReward.points ?? 0 : 0;
+
+    // Multiplikatorn (x2/x3) rullas här men appliceras inuti recordResult, före
+    // sparande, så att totalPoints och den sparade historiken stämmer överens.
     const result = recordResult(
       user,
       currentText.id,
@@ -197,42 +229,21 @@ function App() {
       currentText.genre,
       currentText.theme,
       questionResults,
-      readingTimeSeconds
+      readingTimeSeconds,
+      rollPointMultiplier(),
+      bonusPoints
     );
-    let { updatedUser, pointsEarned } = result;
-    const { newBadges } = result;
+    const { updatedUser, pointsEarned, newBadges, multiplier, isRepeat } = result;
 
-    // Slumpad poängmultiplikator (x2/x3) – ren tur, gäller textens poäng
-    let multiplier: 2 | 3 | null = null;
-    if (pointsEarned > 0) {
-      multiplier = rollPointMultiplier();
-      if (multiplier) {
-        const bonus = pointsEarned * (multiplier - 1);
-        updatedUser = { ...updatedUser, totalPoints: updatedUser.totalPoints + bonus };
-        saveUser(updatedUser);
-        pointsEarned += bonus;
+    const extraChests: Chest[] = [];
+    let mysteryBadges = gam.gamificationBadges;
+
+    if (mysteryReward?.type === 'badge' && mysteryReward.badgeId) {
+      if (!mysteryBadges.includes(mysteryReward.badgeId)) {
+        mysteryBadges = [...mysteryBadges, mysteryReward.badgeId];
       }
-    }
-
-    // Check for chest milestones
-    const gam = loadGamification();
-    const prevPoints = user.totalPoints;
-    const newPoints = updatedUser.totalPoints;
-    const prevTexts = user.completedTexts.length;
-    const newTexts = updatedUser.completedTexts.length;
-
-    const pointChests = chestsEarnedFromPoints(prevPoints, newPoints, gam.pointsMilestonesRewarded, gam.chests);
-    const textChests = chestsEarnedFromTexts(prevTexts, newTexts, gam.textMilestonesRewarded, gam.chests);
-    const mysteryReward = rollMysteryBox(gam.gamificationBadges, gam.chests);
-
-    const newChests: Chest[] = [
-      ...pointChests.map(c => c.chest),
-      ...textChests.map(c => c.chest),
-    ];
-
-    // Add mystery box chest if applicable
-    if (mysteryReward && mysteryReward.type === 'chest' && mysteryReward.chestType) {
-      newChests.push({
+    } else if (mysteryReward?.type === 'chest' && mysteryReward.chestType) {
+      extraChests.push({
         id: `mystery_${Date.now()}`,
         type: mysteryReward.chestType,
         earnedAt: new Date().toISOString(),
@@ -240,24 +251,25 @@ function App() {
       });
     }
 
-    // Update gamification data
-    const updatedGam = {
-      ...gam,
-      chests: [...gam.chests, ...newChests],
-      textsCompleted: newTexts,
-      pointsMilestonesRewarded: [
-        ...gam.pointsMilestonesRewarded,
-        ...pointChests.map(c => c.milestone),
-      ],
-      textMilestonesRewarded: [
-        ...gam.textMilestonesRewarded,
-        ...textChests.map(c => c.milestone),
-      ],
-    };
-    saveGamification(updatedGam);
+    if (extraChests.length > 0 || mysteryBadges !== gam.gamificationBadges) {
+      saveGamification({
+        ...gam,
+        chests: [...gam.chests, ...extraChests],
+        gamificationBadges: mysteryBadges,
+      });
+    }
+
+    // Kistmilstolpar räknas på unika texter, så omläsningar inte kan låsa upp dem
+    syncChestMilestones(updatedUser.totalPoints, countUniqueTexts(updatedUser));
 
     setUser(updatedUser);
-    setLastResult({ pointsEarned, newBadges, multiplier });
+    setLastResult({
+      pointsEarned,
+      newBadges,
+      multiplier,
+      isRepeat,
+      bonusPoints: bonusPoints || undefined,
+    });
     setAppState(AppState.RESULT);
     window.scrollTo(0, 0);
   };
@@ -488,6 +500,8 @@ function App() {
             pointsEarned={lastResult.pointsEarned}
             newBadges={lastResult.newBadges}
             multiplier={lastResult.multiplier}
+            isRepeat={lastResult.isRepeat}
+            bonusPoints={lastResult.bonusPoints}
             onRestart={handleRestart}
             onNextText={handleNextText}
             onNextTextLower={handleNextTextLower}

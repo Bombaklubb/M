@@ -78,12 +78,40 @@ export function logoutUser(): void {
   localStorage.removeItem(STORAGE_KEY);
 }
 
-export function calculatePoints(score: number, totalQuestions: number, grade: number): number {
+/**
+ * Andel av grundpoängen som en omläsning ger. En text får full poäng en gång.
+ * Att läsa om den är fortfarande tillåtet och nyttigt, men ska inte gå att
+ * använda för att samla poäng i det oändliga.
+ */
+export const REPEAT_POINT_FACTOR = 0.25;
+
+/**
+ * Poäng för en avklarad text.
+ *
+ * Nivåbonusen är proportionell mot årskursen eftersom texterna växer kraftigt
+ * med nivån (åk 1 ≈ 30 ord, åk 10 ≈ 600). Utan den skillnaden lönar det sig
+ * att läsa långt under sin nivå.
+ *
+ * Vid omläsning utgår ingen perfekt-bonus och resten skalas med
+ * REPEAT_POINT_FACTOR.
+ */
+export function calculatePoints(
+  score: number,
+  totalQuestions: number,
+  grade: number,
+  isRepeat: boolean = false
+): number {
   const percentage = score / totalQuestions;
   const basePoints = Math.round(percentage * 100);
-  const gradeBonus = Math.floor(grade * 5 * percentage);
-  const perfectBonus = percentage === 1 ? 50 : 0;
+  const gradeBonus = Math.floor(grade * 12 * percentage);
+  if (isRepeat) return Math.round((basePoints + gradeBonus) * REPEAT_POINT_FACTOR);
+  const perfectBonus = percentage === 1 ? 25 + grade * 3 : 0;
   return basePoints + gradeBonus + perfectBonus;
+}
+
+/** Antal unika texter eleven klarat (omläsningar räknas en gång). */
+export function countUniqueTexts(user: User): number {
+  return new Set(user.completedTexts.map(t => t.textId)).size;
 }
 
 export function checkForNewBadges(user: User): Badge[] {
@@ -95,7 +123,11 @@ export function checkForNewBadges(user: User): Badge[] {
     if (!hasBadge(type)) newBadges.push({ ...BADGE_DEFINITIONS[type], earnedAt: now });
   };
 
-  const totalTexts = user.completedTexts.length;
+  // Antalsmärken räknar unika texter – omläsningar ska inte kunna låsa upp dem
+  const firstReads = user.completedTexts.filter(
+    (t, i) => user.completedTexts.findIndex(o => o.textId === t.textId) === i
+  );
+  const totalTexts = firstReads.length;
 
   if (totalTexts >= 1) addBadge(BadgeType.FIRST_TEXT);
   if (totalTexts >= 5) addBadge(BadgeType.FIVE_TEXTS);
@@ -132,8 +164,8 @@ export function checkForNewBadges(user: User): Badge[] {
   if (readingStreak >= 7) addBadge(BadgeType.STREAK_7);
   if (readingStreak >= 14) addBadge(BadgeType.STREAK_14);
 
-  const storyCount = user.completedTexts.filter(t => t.genre === 'fiction').length;
-  const factCount = user.completedTexts.filter(t => t.genre === 'non-fiction').length;
+  const storyCount = firstReads.filter(t => t.genre === 'fiction').length;
+  const factCount = firstReads.filter(t => t.genre === 'non-fiction').length;
   if (storyCount >= 10) addBadge(BadgeType.STORY_LOVER);
   if (factCount >= 10) addBadge(BadgeType.FACT_LOVER);
 
@@ -171,10 +203,10 @@ export function checkForNewBadges(user: User): Badge[] {
   );
   if (hasGenreMix) addBadge(BadgeType.GENRE_MIX);
 
-  const totalPerfect = user.completedTexts.filter(t => t.score === t.totalQuestions).length;
+  const totalPerfect = firstReads.filter(t => t.score === t.totalQuestions).length;
   if (totalPerfect >= 5) addBadge(BadgeType.PERFECT_FIVE_TOTAL);
 
-  const advancedCount = user.completedTexts.filter(t => t.grade >= 9).length;
+  const advancedCount = firstReads.filter(t => t.grade >= 9).length;
   if (advancedCount >= 10) addBadge(BadgeType.ADVANCED_EXPERT);
 
   const hasMorning = user.completedTexts.some(t => new Date(t.completedAt).getHours() < 9);
@@ -196,24 +228,38 @@ export function recordResult(
   genre?: string,
   theme?: string,
   questionResults?: QuestionResult[],
-  readingTimeSeconds?: number
-): { updatedUser: User; pointsEarned: number; newBadges: Badge[] } {
+  readingTimeSeconds?: number,
+  multiplierRoll?: 2 | 3 | null,
+  bonusPoints: number = 0
+): { updatedUser: User; pointsEarned: number; newBadges: Badge[]; multiplier: 2 | 3 | null; isRepeat: boolean } {
   if (genre && theme) recordDailyStats(genre, theme, grade);
 
-  const pointsEarned = calculatePoints(score, totalQuestions, grade);
+  // Full poäng ges bara första gången en text klaras av
+  const isRepeat = user.completedTexts.some(t => t.textId === textId);
+
+  const basePoints = calculatePoints(score, totalQuestions, grade, isRepeat);
+  // Multiplikatorn appliceras här, före sparande, så att totalPoints och
+  // summan av completedTexts[].pointsEarned alltid stämmer överens.
+  const multiplier = basePoints > 0 ? (multiplierRoll ?? null) : null;
+  // Mystery box-bonusen läggs på efter multiplikatorn och bokförs på samma
+  // resultat, så att totalPoints alltid är summan av completedTexts.
+  const pointsEarned = (multiplier ? basePoints * multiplier : basePoints) + bonusPoints;
   const isPerfect = score === totalQuestions;
 
   const completedText: CompletedText = {
     textId, grade, title, score, totalQuestions, pointsEarned,
     completedAt: new Date().toISOString(),
-    genre, theme, questionResults, readingTimeSeconds,
+    genre, theme, questionResults, readingTimeSeconds, isRepeat,
   };
 
   const updatedUser: User = {
     ...user,
     totalPoints: user.totalPoints + pointsEarned,
     completedTexts: [...user.completedTexts, completedText],
-    perfectScoreStreak: isPerfect ? user.perfectScoreStreak + 1 : 0,
+    // En omläsning varken bygger eller bryter svitet – man kan redan facit
+    perfectScoreStreak: isRepeat
+      ? user.perfectScoreStreak
+      : isPerfect ? user.perfectScoreStreak + 1 : 0,
     gradesCompleted: user.gradesCompleted.includes(grade)
       ? user.gradesCompleted
       : [...user.gradesCompleted, grade].sort((a, b) => a - b),
@@ -224,7 +270,7 @@ export function recordResult(
   updatedUser.badges = [...updatedUser.badges, ...newBadges];
   saveUser(updatedUser);
 
-  return { updatedUser, pointsEarned, newBadges };
+  return { updatedUser, pointsEarned, newBadges, multiplier, isRepeat };
 }
 
 export function getCompletedTextIds(user: User): string[] {
