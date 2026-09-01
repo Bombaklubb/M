@@ -237,6 +237,9 @@ export function saveModuleProgress(
 // Avtagande utdelning per spel och dag så att det inte går att "farma":
 // runda 1–3 = 100 %, runda 4–5 = 50 %, därefter 20 %.
 
+/** Högsta antal poäng en enskild spelomgång kan ge, före dagens avtrappning. */
+export const MAX_POINTS_PER_GAME_ROUND = 150;
+
 interface GamePlayData { date: string; counts: Record<string, number>; }
 
 function gamePlayKey(name: string) {
@@ -264,7 +267,11 @@ export function addGamePoints(
 
   const plays = data.counts[gameId] ?? 0;
   const multiplier = plays < 3 ? 1 : plays < 5 ? 0.5 : 0.2;
-  let awarded = Math.round(Math.max(0, rawPoints) * multiplier);
+  // Tak per omgång. Ett spel ska aldrig kunna ge mer än en ordentlig
+  // övningsmodul (~150–200 p). Utan taket kunde Tidsattack ge tiotusentals
+  // poäng på en minut, eftersom spelets streak-bonus växer med streaken.
+  const capped = Math.min(Math.max(0, rawPoints), MAX_POINTS_PER_GAME_ROUND);
+  let awarded = Math.round(capped * multiplier);
 
   data.counts[gameId] = plays + 1;
   localStorage.setItem(key, JSON.stringify(data));

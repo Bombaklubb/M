@@ -99,7 +99,10 @@ function TidsattackGame({ stageId, stageName, student }: {
       const ns = streak + 1;
       setStreak(ns);
       setBestStreak(b => Math.max(b, ns));
-      setScore(s => s + 10 + Math.floor(ns / 3) * 10);
+      // 5 p per rätt + streak-bonus som toppar vid +10 p. Tidigare växte
+      // bonusen obegränsat (10 + streak/3 × 10), vilket gav tiotusentals
+      // poäng på en minut vid lång streak.
+      setScore(s => s + 3 + Math.min(Math.floor(ns / 5), 2) * 2);
       setCorrect(c => c + 1);
     } else {
       setStreak(0);
