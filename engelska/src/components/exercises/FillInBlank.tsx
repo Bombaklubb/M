@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import type { FillInBlankExercise } from "@/lib/types";
 import { getPositiveFeedback } from "@/lib/feedback";
+import { answerVariants } from "@/lib/answerVariants";
 
 interface Props {
   exercise: FillInBlankExercise;
@@ -33,12 +34,33 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
       .trim();
   }
 
+  /**
+   * Elever skriver ofta med ord som redan står i meningen, t.ex. "we are" i
+   * "We ___ good friends." eller "a rabbit" i "En ___ hoppar...". Det är inget
+   * kunskapsfel – ta bort omgivande ord och pröva svaret igen.
+   */
+  function stripSurroundingWords(given: string): string {
+    const before = normalizeAnswer(parts[0] ?? "").split(/\s+/).filter(Boolean);
+    const after = normalizeAnswer(parts[1] ?? "").split(/\s+/).filter(Boolean);
+    const filler = new Set([...before, ...after, "a", "an", "the"]);
+    let words = given.split(/\s+/).filter(Boolean);
+    while (words.length > 1 && filler.has(words[0])) words = words.slice(1);
+    while (words.length > 1 && filler.has(words[words.length - 1])) words = words.slice(0, -1);
+    return words.join(" ");
+  }
+
   function handleSubmit() {
     if (state !== "idle" || !input.trim()) return;
     const given = normalizeAnswer(input);
     const expected = normalizeAnswer(exercise.answer);
     const alternatives = (exercise.alternativeAnswers ?? []).map(normalizeAnswer);
-    const correct = given === expected || alternatives.includes(given);
+    // Godkänn även likvärdiga former (bunny/rabbit, color/colour, are not/aren't)
+    const godtagbara = new Set([
+      ...answerVariants(expected),
+      ...alternatives.flatMap(answerVariants),
+    ]);
+    const accepts = (v: string) => godtagbara.has(v);
+    const correct = accepts(given) || accepts(stripSurroundingWords(given));
     if (correct) setFeedbackMsg(getPositiveFeedback());
     setState(correct ? "correct" : "wrong");
   }
@@ -69,8 +91,10 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
           }`}
         >
           {state !== "idle" ? (
-            <span className="font-bold">
-              {state === "correct" ? input : exercise.answer}
+            // Vid fel visas elevens EGET svar (överstruket). Tidigare visades
+            // facit här, vilket fick det att se ut som att rätt svar gav fel.
+            <span className={`font-bold ${state === "wrong" ? "line-through decoration-2 opacity-80" : ""}`}>
+              {input}
             </span>
           ) : (
             <span className="text-gray-400 text-sm italic">svar</span>
