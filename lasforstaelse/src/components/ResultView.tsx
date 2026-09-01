@@ -13,6 +13,8 @@ interface ResultViewProps {
   pointsEarned: number;
   newBadges: Badge[];
   mysteryReward?: string | null;
+  /** Sant om eleven har gjort just den här texten förut. */
+  arOmlasning?: boolean;
   onRestart: () => void;
   onNextText: () => void;
   onNextTextLower: () => void;
@@ -60,6 +62,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   pointsEarned,
   newBadges,
   mysteryReward,
+  arOmlasning,
   onRestart: _onRestart,
   onNextText,
   onNextTextLower,
@@ -227,6 +230,14 @@ export const ResultView: React.FC<ResultViewProps> = ({
                     +{pointsEarned} poäng
                   </span>
                 </div>
+                {/* Utan den här raden ser den lägre siffran ut som ett fel i
+                    appen. Eleven ska förstå varför, och att omläsningen ändå
+                    räknas. */}
+                {arOmlasning && (
+                  <div className="text-sm text-slate-500 dark:text-slate-400 mt-2 relative z-10">
+                    Du har läst den här texten förut, så den ger en fjärdedel av poängen.
+                  </div>
+                )}
               </motion.div>
 
               {/* Mystery box-belöning */}

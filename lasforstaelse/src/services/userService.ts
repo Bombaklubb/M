@@ -157,23 +157,60 @@ export function logoutUser(): void {
 }
 
 /**
- * Beräkna poäng för ett resultat
+ * Full pott för en text på en viss nivå.
+ *
+ * Tidigare gav alla nivåer nästan lika mycket: 150 poäng plus fem per nivå,
+ * alltså 155 på nivå 1 och 200 på nivå 10. Texterna är samtidigt 50 respektive
+ * 607 ord långa. Räknat per läst ord betalade nivå 1 tio gånger bättre än
+ * nivå 10, och den som ville samla poäng snabbt gjorde bäst i att sitta med
+ * texter långt under sin egen nivå. Det är raka motsatsen till vad appen
+ * finns till för.
+ *
+ * Potten stiger nu från 80 till 260. Skillnaden är inte proportionell mot
+ * textlängden – då hade nivå 1 gett omkring 50 poäng och yngre elever samlat
+ * poäng betydligt långsammare än i dag. Den är stor nog att göra det
+ * meningslöst att gå ner i nivå för poängens skull.
+ */
+function fullPott(grade: number): number {
+  const niva = Math.min(Math.max(grade, 1), 10);
+  return 80 + (niva - 1) * 20;
+}
+
+/**
+ * Beräkna poäng för ett resultat.
+ *
+ * Sjuttio procent av potten följer andelen rätt svar, trettio procent delas
+ * ut som bonus vid alla rätt. Fördelningen är densamma som förut i grova drag,
+ * så en elev känner igen sig: full pott kräver felfritt, och den som har
+ * ett fel får runt sextio procent.
  */
 export function calculatePoints(
   score: number,
   totalQuestions: number,
   grade: number
 ): number {
-  const percentage = score / totalQuestions;
-  const basePoints = Math.round(percentage * 100);
+  const andel = score / totalQuestions;
+  const pott = fullPott(grade);
 
-  // Bonus för högre årskurser
-  const gradeBonus = Math.floor(grade * 5 * percentage);
+  const grundpoang = Math.round(andel * pott * 0.7);
+  const felfriBonus = andel === 1 ? Math.round(pott * 0.3) : 0;
 
-  // Extra bonus för alla rätt
-  const perfectBonus = percentage === 1 ? 50 : 0;
+  return grundpoang + felfriBonus;
+}
 
-  return basePoints + gradeBonus + perfectBonus;
+/**
+ * Hur stor andel av poängen en omläsning ger.
+ *
+ * Att läsa om en text är bra träning och ska inte straffas, men det får inte
+ * löna sig bättre än att läsa något nytt. Eleven kan ju svaren, så en omläsning
+ * ger nästan alltid alla rätt. Utan den här spärren gav en omläsning full pott,
+ * vilket gjorde upprepning till det snabbaste sättet att samla poäng.
+ */
+export const OMLASNING_ANDEL = 0.25;
+
+/** Antal olika texter eleven har läst, alltså utan omläsningar. */
+export function getUniqueCompletedCount(user: User): number {
+  return new Set(user.completedTexts.map(t => t.textId)).size;
 }
 
 /**
@@ -190,7 +227,10 @@ export function checkForNewBadges(user: User): Badge[] {
     }
   };
 
-  const totalTexts = user.completedTexts.length;
+  // Märkena räknar hur många OLIKA texter eleven har läst. Med
+  // completedTexts.length gick "Läst 100 texter" att få genom att göra om
+  // samma text hundra gånger, vilket gör märket meningslöst som mått.
+  const totalTexts = getUniqueCompletedCount(user);
 
   // Antal texter-badges
   if (totalTexts >= 1) addBadge(BadgeType.FIRST_TEXT);
@@ -343,12 +383,18 @@ export function recordResult(
   theme?: string,
   questionResults?: QuestionResult[],
   readingTimeSeconds?: number
-): { updatedUser: User; pointsEarned: number; newBadges: Badge[] } {
+): { updatedUser: User; pointsEarned: number; newBadges: Badge[]; arOmlasning: boolean } {
   // Spara daglig statistik
   if (genre && theme) {
     recordDailyStats(genre, theme, grade);
   }
-  const pointsEarned = calculatePoints(score, totalQuestions, grade);
+
+  // Har eleven gjort just den här texten förut ger den bara en del av potten.
+  // Appen serverar själv om gamla texter när alla på nivån är lästa, så det här
+  // är inget kryphål eleven behöver leta upp – det inträffar av sig självt.
+  const arOmlasning = user.completedTexts.some(t => t.textId === textId);
+  const full = calculatePoints(score, totalQuestions, grade);
+  const pointsEarned = arOmlasning ? Math.round(full * OMLASNING_ANDEL) : full;
   const isPerfect = score === totalQuestions;
 
   const completedText: CompletedText = {
@@ -384,7 +430,7 @@ export function recordResult(
   // Spara
   saveUser(updatedUser);
 
-  return { updatedUser, pointsEarned, newBadges };
+  return { updatedUser, pointsEarned, newBadges, arOmlasning };
 }
 
 /**

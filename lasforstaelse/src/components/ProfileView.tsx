@@ -3,6 +3,7 @@ import { User, BADGE_DEFINITIONS, BadgeType, QuestionType } from '../types';
 import { AvatarPicker } from './AvatarPicker';
 import FramedAvatar from './FramedAvatar';
 import { getEquippedFrame, getEquippedEffect } from '../utils/shopStorage';
+import { getUniqueCompletedCount } from '../services/userService';
 
 interface ProfileViewProps {
   user: User;
@@ -25,6 +26,8 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
   const earnedBadgeTypes = user.badges.map((b) => b.type);
 
   // Beräkna statistik
+  const antalTexter = getUniqueCompletedCount(user);
+
   const stats = useMemo(() => {
     const texts = user.completedTexts;
     const totalCorrect = texts.reduce((sum, t) => sum + t.score, 0);
@@ -141,7 +144,10 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
           </div>
           <div className="bg-indigo-50 dark:bg-indigo-900/30 border-2 border-indigo-200 dark:border-indigo-700 rounded-xl p-4 text-center">
             <span className="text-3xl">📖</span>
-            <div className="text-2xl font-bold text-indigo-700 dark:text-indigo-300">{user.completedTexts.length}</div>
+            {/* Unika texter, samma mått som märkena använder. Räknades båda
+                med antal avslutade quiz kunde profilen visa fler texter än det
+                märke eleven väntade på. */}
+            <div className="text-2xl font-bold text-indigo-700 dark:text-indigo-300">{antalTexter}</div>
             <div className="text-sm text-indigo-600 dark:text-indigo-400">Texter</div>
           </div>
           <div className="bg-purple-50 dark:bg-purple-900/30 border-2 border-purple-200 dark:border-purple-700 rounded-xl p-4 text-center">
