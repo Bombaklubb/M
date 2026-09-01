@@ -12,6 +12,7 @@ import { WORD_PAIRS, shuffle, makeOptions } from "@/lib/gameVocab";
 
 const MAX_LIVES = 3;
 const TOTAL_COINS = 10;
+const WIN_BONUS = 50;   // extra poäng när alla mynt samlats
 
 interface Question { sv: string; en: string; options: string[] }
 type Phase = "intro" | "playing" | "victory" | "defeat";
@@ -89,10 +90,14 @@ function SamlaMyntGame({ stageId, stageName, student }: {
       setRunnerAnim("run");
       const ns = streak + 1;
       setStreak(ns);
-      setScore(s => s + 10 + Math.floor(ns / 3) * 10);
+      // 5 p per rätt + streak-bonus som toppar vid +10 p. Tidigare växte
+      // bonusen obegränsat (10 + streak/3 × 10), vilket gav tiotusentals
+      // poäng på en minut vid lång streak.
+      setScore(s => s + 3 + Math.min(Math.floor(ns / 5), 2) * 2);
       const newCoins = coins + 1;
       setCoins(newCoins);
       if (newCoins >= TOTAL_COINS) {
+        setScore(s => s + WIN_BONUS);   // bonus för att samla alla mynt
         setTimeout(() => setPhase("victory"), 700);
         return;
       }

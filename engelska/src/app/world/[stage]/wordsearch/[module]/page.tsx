@@ -63,7 +63,8 @@ export default function WordSearchModulePage({ params }: Props) {
       // Turbonus: sällsynt slumpbonus (×2/×3) på det som tjänades in nu
       const luck = rollLuckyBonus(student.name, adjustedPts);
       setModalLucky(luck);
-      const totalWithLuck = adjustedPts + (luck?.extra ?? 0);
+      // Turbonus får aldrig lyfta ett omgjort försök över förstaförsökets värde.
+      const totalWithLuck = Math.min(adjustedPts + (luck?.extra ?? 0), rawPts);
       setModalPoints(adjustedPts);
       setAttemptNum(priorAttempts + 1);
 

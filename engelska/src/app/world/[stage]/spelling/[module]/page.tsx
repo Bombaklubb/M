@@ -105,7 +105,11 @@ export default function SpellingModulePage({ params }: Props) {
         // Turbonus: sällsynt slumpbonus (×2/×3) på det som tjänades in nu
         const luck = rollLuckyBonus(student.name, adjustedTotal);
         setModalLucky(luck);
-        const totalWithLuck = adjustedTotal + (luck?.extra ?? 0);
+        // Turbonus får lyfta en rabatterad omgång, men aldrig över vad ett
+        // förstaförsök hade gett – annars kan en repetition ge mer poäng
+        // än originalet.
+        const fullValue = pts + (passed ? mod!.bonusPoints : 0);
+        const totalWithLuck = Math.min(adjustedTotal + (luck?.extra ?? 0), fullValue);
         setModalPoints(adjustedBase);
         setModalBonus(adjustedBonus);
         setAttemptNum(priorAttempts + 1);
