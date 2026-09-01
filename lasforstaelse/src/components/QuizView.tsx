@@ -1,5 +1,5 @@
 // Lasjakten - Quiz komponent
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryText, UserAnswers } from '../types';
 import { Button } from './ui/button';
@@ -104,7 +104,14 @@ export const QuizView: React.FC<QuizViewProps> = ({
     }
   };
 
+  // Ett dubbelklick på "Rätta svaren" hann tidigare skicka in resultatet två
+  // gånger innan vyn hann bytas ut, och då räknades poängen dubbelt. Refen
+  // sätts synkront och överlever den extra renderingen.
+  const inskickat = useRef(false);
+
   const handleSubmit = () => {
+    if (inskickat.current) return;
+    inskickat.current = true;
     onComplete(answers);
   };
 

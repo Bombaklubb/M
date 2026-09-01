@@ -20,6 +20,7 @@ import {
   getCompletedTextIds,
   getRecentCompletedTexts,
   getLastCompletedText,
+  getUniqueCompletedCount,
   updateAvatar,
   saveUser,
 } from './services/userService';
@@ -50,6 +51,7 @@ function App() {
     pointsEarned: number;
     newBadges: Badge[];
     mysteryReward?: string | null;
+    arOmlasning: boolean;
   } | null>(null);
   const [loading, setLoading] = useState(true);
   const [showProfile, setShowProfile] = useState(false);
@@ -224,7 +226,7 @@ function App() {
       : undefined;
 
     // Registrera resultatet
-    const { updatedUser, pointsEarned, newBadges } = recordResult(
+    const { updatedUser, pointsEarned, newBadges, arOmlasning } = recordResult(
       user,
       currentText.id,
       currentText.title,
@@ -240,8 +242,12 @@ function App() {
     // Check for chest milestones
     const gam = loadGamification();
     const prevPoints = user.totalPoints;
-    const prevTexts = user.completedTexts.length;
-    const newTexts = updatedUser.completedTexts.length;
+    // Kistmilstolparna räknar hur många OLIKA texter eleven har läst. Tidigare
+    // användes längden på completedTexts, som innehåller en post per avslutat
+    // quiz och alltså växer även vid omläsning. Samma text om och om igen drog
+    // då in kistor på 1, 5, 10, 20 texter och så vidare.
+    const prevTexts = getUniqueCompletedCount(user);
+    const newTexts = getUniqueCompletedCount(updatedUser);
 
     // Mystery box rullas före milstolpe-kollen så att ev. bonuspoäng
     // räknas med och inte kan hoppa över en poängmilstolpe.
@@ -296,7 +302,7 @@ function App() {
     saveGamification(updatedGam);
 
     setUser(finalUser);
-    setLastResult({ pointsEarned, newBadges, mysteryReward: mysteryReward?.description ?? null });
+    setLastResult({ pointsEarned, newBadges, mysteryReward: mysteryReward?.description ?? null, arOmlasning });
     setAppState(AppState.RESULT);
     window.scrollTo(0, 0);
   };
@@ -569,6 +575,7 @@ function App() {
             pointsEarned={lastResult.pointsEarned}
             newBadges={lastResult.newBadges}
             mysteryReward={lastResult.mysteryReward}
+            arOmlasning={lastResult.arOmlasning}
             onRestart={handleRestart}
             onNextText={handleNextText}
             onNextTextLower={handleNextTextLower}
