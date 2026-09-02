@@ -49,6 +49,7 @@ export interface BuildSentenceExercise {
   instruction: string;
   words: string[];       // words in scrambled order
   correctOrder: number[]; // indices into words[] forming correct sentence
+  alternativeOrders?: number[][]; // andra korrekta ordföljder (t.ex. tidsadverbial först)
   hint?: string;
   explanation?: string;
 }

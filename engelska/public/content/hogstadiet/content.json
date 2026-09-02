@@ -775,7 +775,17 @@
             4,
             5
           ],
-          "explanation": "They have already eaten dinner. – 'already' signals present perfect."
+          "explanation": "They have already eaten dinner. – 'already' signals present perfect.",
+          "alternativeOrders": [
+            [
+              0,
+              1,
+              3,
+              4,
+              2,
+              5
+            ]
+          ]
         },
         {
           "id": "hog-g1-8",
@@ -5369,7 +5379,17 @@
             4,
             5
           ],
-          "explanation": "We discussed the problem yesterday. – discuss → discussed."
+          "explanation": "We discussed the problem yesterday. – discuss → discussed.",
+          "alternativeOrders": [
+            [
+              4,
+              0,
+              1,
+              2,
+              3,
+              5
+            ]
+          ]
         },
         {
           "id": "hog-g20-9",
@@ -5556,7 +5576,16 @@
             3,
             4
           ],
-          "explanation": "She has already gone. – go → went → gone."
+          "explanation": "She has already gone. – go → went → gone.",
+          "alternativeOrders": [
+            [
+              0,
+              1,
+              3,
+              2,
+              4
+            ]
+          ]
         },
         {
           "id": "hog-g21-10",

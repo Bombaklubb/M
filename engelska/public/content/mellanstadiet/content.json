@@ -753,7 +753,17 @@
             4,
             5
           ],
-          "explanation": "'She plays the guitar every evening.' – 'plays' med he/she/it i present simple."
+          "explanation": "'She plays the guitar every evening.' – 'plays' med he/she/it i present simple.",
+          "alternativeOrders": [
+            [
+              4,
+              5,
+              0,
+              1,
+              2,
+              3
+            ]
+          ]
         },
         {
           "id": "mel-bs-e4",
@@ -777,7 +787,18 @@
             5,
             6
           ],
-          "explanation": "'We are going to London this summer.' – 'be going to' för framtidsplaner."
+          "explanation": "'We are going to London this summer.' – 'be going to' för framtidsplaner.",
+          "alternativeOrders": [
+            [
+              5,
+              6,
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
         },
         {
           "id": "mel-bs-e5",
@@ -821,7 +842,16 @@
             3,
             4
           ],
-          "explanation": "'He has already eaten breakfast.' – Present perfect: has + eaten (particip av eat)."
+          "explanation": "'He has already eaten breakfast.' – Present perfect: has + eaten (particip av eat).",
+          "alternativeOrders": [
+            [
+              0,
+              1,
+              3,
+              4,
+              2
+            ]
+          ]
         },
         {
           "id": "mel-bs-e7",
@@ -843,7 +873,17 @@
             4,
             5
           ],
-          "explanation": "'Were you at home last night?' – 'Were' används med you/we/they i past tense."
+          "explanation": "'Were you at home last night?' – 'Were' används med you/we/they i past tense.",
+          "alternativeOrders": [
+            [
+              4,
+              5,
+              0,
+              1,
+              2,
+              3
+            ]
+          ]
         },
         {
           "id": "mel-bs-e8",
@@ -2191,7 +2231,16 @@
             3,
             4
           ],
-          "explanation": "Tom played chess yesterday. – regular verb play → played."
+          "explanation": "Tom played chess yesterday. – regular verb play → played.",
+          "alternativeOrders": [
+            [
+              3,
+              0,
+              1,
+              2,
+              4
+            ]
+          ]
         },
         {
           "id": "mel-g2-8",
@@ -2281,7 +2330,18 @@
             5,
             6
           ],
-          "explanation": "She didn't sleep well last night. – negative past simple."
+          "explanation": "She didn't sleep well last night. – negative past simple.",
+          "alternativeOrders": [
+            [
+              4,
+              5,
+              0,
+              1,
+              2,
+              3,
+              6
+            ]
+          ]
         },
         {
           "id": "mel-g2-15",
@@ -2713,7 +2773,18 @@
             5,
             6
           ],
-          "explanation": "We always visit grandma on Sundays. – 'on' + day."
+          "explanation": "We always visit grandma on Sundays. – 'on' + day.",
+          "alternativeOrders": [
+            [
+              4,
+              5,
+              0,
+              1,
+              2,
+              3,
+              6
+            ]
+          ]
         },
         {
           "id": "mel-g4-15",
@@ -5843,7 +5914,17 @@
             4,
             5
           ],
-          "explanation": "We cleaned the room yesterday. – clean → cleaned."
+          "explanation": "We cleaned the room yesterday. – clean → cleaned.",
+          "alternativeOrders": [
+            [
+              4,
+              0,
+              1,
+              2,
+              3,
+              5
+            ]
+          ]
         },
         {
           "id": "mel-g12-10",
@@ -6605,7 +6686,16 @@
             3,
             4
           ],
-          "explanation": "'He plays football every Saturday.' – 'plays' för he/she/it i present simple."
+          "explanation": "'He plays football every Saturday.' – 'plays' för he/she/it i present simple.",
+          "alternativeOrders": [
+            [
+              3,
+              4,
+              0,
+              1,
+              2
+            ]
+          ]
         }
       ]
     }

@@ -44,9 +44,14 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
 
   function checkAnswer() {
     if (placed.length !== exercise.words.length) return;
-    const correct =
-      placed.length === exercise.correctOrder.length &&
-      placed.every((wordIdx, pos) => wordIdx === exercise.correctOrder[pos]);
+    // Godkänn facit-ordningen OCH alla alternativa ordföljder som är korrekt
+    // engelska (t.ex. "Yesterday I played..." vs "I played... yesterday").
+    const orders = [exercise.correctOrder, ...(exercise.alternativeOrders ?? [])];
+    const correct = orders.some(
+      (order) =>
+        placed.length === order.length &&
+        placed.every((wordIdx, pos) => wordIdx === order[pos])
+    );
     if (correct) setFeedbackMsg(getPositiveFeedback());
     setState(correct ? "correct" : "wrong");
   }
