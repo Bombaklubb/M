@@ -94,7 +94,7 @@ export default function WordSearchModulePage({ params }: Props) {
       <div className={`${stage.bgClass} text-white`}>
         <div className="max-w-4xl mx-auto px-4 py-6">
           <Link
-            href={`/world/${stageId}`}
+            href={`/world/${stageId}?tab=wordsearch`}
             className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1"
           >
             ← {stage.name}

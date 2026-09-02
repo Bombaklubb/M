@@ -133,7 +133,7 @@ function TidsattackGame({ stageId, stageName, student }: {
           <button onClick={startGame} className="w-full py-4 bg-gradient-to-r from-cyan-500 to-indigo-500 text-white font-black text-lg rounded-2xl hover:opacity-90 transition active:scale-95 cursor-pointer">
             Starta!
           </button>
-          <Link href={`/world/${stageId}`} className="mt-4 block text-indigo-300 text-sm hover:text-white transition">← Tillbaka</Link>
+          <Link href={`/world/${stageId}?tab=spel`} className="mt-4 block text-indigo-300 text-sm hover:text-white transition">← Tillbaka</Link>
         </div>
       </div>
     </div>
@@ -172,7 +172,7 @@ function TidsattackGame({ stageId, stageName, student }: {
           </div>
           <div className="flex gap-3">
             <button onClick={startGame} className="flex-1 py-3 bg-gradient-to-r from-cyan-500 to-indigo-500 text-white font-bold rounded-xl hover:opacity-90 transition active:scale-95 cursor-pointer">Spela igen</button>
-            <Link href={`/world/${stageId}`} className="flex-1 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition text-center">Tillbaka</Link>
+            <Link href={`/world/${stageId}?tab=spel`} className="flex-1 py-3 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition text-center">Tillbaka</Link>
           </div>
         </div>
       </div>

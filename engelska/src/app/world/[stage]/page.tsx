@@ -44,6 +44,12 @@ export default function WorldPage({ params }: Props) {
   const [activeTab, setActiveTab] = useState<Tab>("grammar");
 
   useEffect(() => {
+    // Spelen och kapitelsidorna länkar tillbaka med ?tab=... så eleven landar
+    // på fliken den kom ifrån i stället för alltid på Grammatik.
+    const VALID: Tab[] = ["grammar", "spelling", "wordsearch", "regler", "spel", "forsokaigen"];
+    const wanted = new URLSearchParams(window.location.search).get("tab") as Tab | null;
+    if (wanted && VALID.includes(wanted)) setActiveTab(wanted);
+
     const s = loadStudent();
     setStudent(s);
     fetch(`/content/${stageId}/content.json`)
@@ -188,10 +194,12 @@ export default function WorldPage({ params }: Props) {
       <main className="max-w-5xl mx-auto px-4 py-8">
         {/* Tabs */}
         <div className="overflow-x-auto pb-1 mb-6">
-          <div className="flex gap-1 bg-gray-100 dark:bg-gray-800 p-1 rounded-2xl w-max min-w-full">
+          <div role="tablist" aria-label="Innehåll" className="flex gap-1 bg-gray-100 dark:bg-gray-800 p-1 rounded-2xl w-max min-w-full">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
+                role="tab"
+                aria-selected={activeTab === tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`relative flex items-center gap-1.5 px-4 py-3.5 rounded-xl font-semibold text-xs sm:text-sm whitespace-nowrap transition-all duration-200 cursor-pointer ${
                   activeTab === tab.id

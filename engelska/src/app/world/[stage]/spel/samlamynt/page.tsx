@@ -152,7 +152,7 @@ function SamlaMyntGame({ stageId, stageName, student }: {
           >
             Starta!
           </button>
-          <Link href={`/world/${stageId}`} className="mt-4 block text-gray-400 hover:text-gray-600 text-sm transition">← Tillbaka</Link>
+          <Link href={`/world/${stageId}?tab=spel`} className="mt-4 block text-gray-400 hover:text-gray-600 text-sm transition">← Tillbaka</Link>
         </div>
       </div>
     </div>
@@ -195,7 +195,7 @@ function SamlaMyntGame({ stageId, stageName, student }: {
             <button onClick={startGame} className="w-full py-3 bg-green-500 hover:bg-green-400 text-white font-black rounded-2xl transition active:scale-95 cursor-pointer" style={{ boxShadow: "0 4px 0 0 #16a34a" }}>
               Spela igen
             </button>
-            <Link href={`/world/${stageId}`} className="text-gray-400 hover:text-gray-600 text-sm transition">← Tillbaka till Spel</Link>
+            <Link href={`/world/${stageId}?tab=spel`} className="text-gray-400 hover:text-gray-600 text-sm transition">← Tillbaka till Spel</Link>
           </div>
         </div>
       </div>
@@ -225,7 +225,7 @@ function SamlaMyntGame({ stageId, stageName, student }: {
             <button onClick={startGame} className="w-full py-3 bg-green-500 hover:bg-green-400 text-white font-black rounded-2xl transition active:scale-95 cursor-pointer" style={{ boxShadow: "0 4px 0 0 #16a34a" }}>
               Försök igen
             </button>
-            <Link href={`/world/${stageId}`} className="text-gray-400 hover:text-gray-600 text-sm transition">← Tillbaka till Spel</Link>
+            <Link href={`/world/${stageId}?tab=spel`} className="text-gray-400 hover:text-gray-600 text-sm transition">← Tillbaka till Spel</Link>
           </div>
         </div>
       </div>
