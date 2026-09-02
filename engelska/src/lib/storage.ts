@@ -497,17 +497,47 @@ function posKey(stageId: string, moduleId: string) {
   return `engelskajakten_pos_${stageId}_${moduleId}`;
 }
 
-export function saveExercisePosition(stageId: string, moduleId: string, index: number): void {
-  if (typeof window === "undefined") return;
-  localStorage.setItem(posKey(stageId, moduleId), String(index));
+/** Var eleven var i kapitlet, och vilka svar som redan är avklarade. */
+export interface ExercisePosition {
+  index: number;
+  results: boolean[];
 }
 
-export function loadExercisePosition(stageId: string, moduleId: string): number | null {
+/**
+ * Sparar både positionen och svaren så här långt. Tidigare sparades bara
+ * positionen, vilket gjorde att en elev som lämnade kapitlet och kom tillbaka
+ * blev av med alla rätt den redan hade – slutpoängen räknades bara på frågorna
+ * efter återkomsten, och kapitlet kunde underkännas trots att allt var rätt.
+ */
+export function saveExercisePosition(
+  stageId: string,
+  moduleId: string,
+  index: number,
+  results: boolean[] = []
+): void {
+  if (typeof window === "undefined") return;
+  localStorage.setItem(posKey(stageId, moduleId), JSON.stringify({ index, results }));
+}
+
+export function loadExercisePosition(stageId: string, moduleId: string): ExercisePosition | null {
   if (typeof window === "undefined") return null;
   const val = localStorage.getItem(posKey(stageId, moduleId));
   if (val === null) return null;
-  const n = parseInt(val, 10);
-  return isNaN(n) ? null : n;
+  try {
+    const parsed: unknown = JSON.parse(val);
+    // Äldre versioner sparade bara ett tal – de ska fortsätta fungera.
+    if (typeof parsed === "number") {
+      return Number.isFinite(parsed) ? { index: parsed, results: [] } : null;
+    }
+    if (parsed && typeof parsed === "object" && typeof (parsed as ExercisePosition).index === "number") {
+      const p = parsed as ExercisePosition;
+      return { index: p.index, results: Array.isArray(p.results) ? p.results : [] };
+    }
+    return null;
+  } catch {
+    const n = parseInt(val, 10);
+    return isNaN(n) ? null : { index: n, results: [] };
+  }
 }
 
 export function clearExercisePosition(stageId: string, moduleId: string): void {

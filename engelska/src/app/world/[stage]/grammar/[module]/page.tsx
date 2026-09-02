@@ -68,9 +68,11 @@ export default function GrammarModulePage({ params }: Props) {
         const found = data.grammar.find((m) => m.id === moduleId);
         if (found) {
           setMod(found);
-          const savedPos = loadExercisePosition(stageId, moduleId);
-          if (savedPos !== null && savedPos > 0) {
-            setCurrentIndex(savedPos);
+          const saved = loadExercisePosition(stageId, moduleId);
+          if (saved !== null && saved.index > 0 && saved.index < found.exercises.length) {
+            setCurrentIndex(saved.index);
+            // Återställ svaren så att slutpoängen räknas på hela kapitlet.
+            setResults(saved.results.slice(0, saved.index));
             setPhase("exercises");
           }
         }
@@ -219,7 +221,8 @@ export default function GrammarModulePage({ params }: Props) {
       setShowResult(true);
     } else {
       setCurrentIndex((i) => i + 1);
-      saveExercisePosition(stageId, moduleId, currentIndex + 1);
+      // Spara svaren också, annars tappar eleven sina rätt vid ett avbrott.
+      saveExercisePosition(stageId, moduleId, currentIndex + 1, newResults);
     }
   }
 
