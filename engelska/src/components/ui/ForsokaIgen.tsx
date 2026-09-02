@@ -19,7 +19,7 @@ import type {
   BuildSentenceExercise,
   ReadingQuestion as RQ,
 } from "@/lib/types";
-import { loadStudent, saveStudent } from "@/lib/storage";
+import { addRepairPoints } from "@/lib/storage";
 
 type Phase = "list" | "repair";
 
@@ -65,10 +65,9 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
       clearError(student.name, stageId, currentEntry.id);
       // 5–15 p. Måste vara lägre än de 15 p ett direkt rätt svar ger i en vanlig
       // övning – annars lönar det sig att svara fel med flit och rätta efteråt.
-      const pts = Math.floor(Math.random() * 11) + 5;
-      const fresh = loadStudent();
-      if (fresh) { fresh.totalPoints += pts; saveStudent(fresh); }
-      setEarnedPoints(pts);
+      // Utdelningen ryms dessutom inom en daglig budget (se addRepairPoints),
+      // så loopen "svara fel → lämna kapitlet → rätta" inte kan farmas.
+      setEarnedPoints(addRepairPoints(Math.floor(Math.random() * 11) + 5));
     } else {
       recordError(
         student.name,
@@ -268,8 +267,17 @@ export default function ForsokaIgen({ student, stageId, stage }: Props) {
                   : "text-red-700 dark:text-red-300"
               }`}
             >
-              {correct ? `${feedbackMsgRef.current} +${earnedPoints} poäng! ✅` : "Inte riktigt..."}
+              {correct
+                ? earnedPoints > 0
+                  ? `${feedbackMsgRef.current} +${earnedPoints} poäng! ✅`
+                  : `${feedbackMsgRef.current} ✅`
+                : "Inte riktigt..."}
             </p>
+            {correct && earnedPoints === 0 && (
+              <p className="text-green-700 dark:text-green-400 text-sm mt-1">
+                Dagens poäng för Försök igen är slut, men misstaget är borta från listan.
+              </p>
+            )}
             {!correct && (
               <p className="text-red-600 dark:text-red-400 text-sm mt-1">
                 Rätt svar: <b>{currentEntry.correctAnswer}</b>

@@ -431,6 +431,66 @@ export function claimDailyBonus(): number {
   }
 }
 
+// ─── Försök igen – daglig poängbudget ─────────────────────────────────────────
+// Att rätta ett tidigare fel ger 5–15 p. Utan tak går det att farma poäng:
+// svara fel med flit på första frågan i ett kapitel, lämna kapitlet (poäng
+// delas bara ut vid målgång, så det kostar ingenting) och rätta felet direkt
+// under Försök igen. Loopen tar ~15 sekunder och gav tidigare obegränsat med
+// poäng. Budgeten räcker till en rejäl repetitionsrunda (~20 rättade fel) men
+// stänger farmningen.
+
+/** Högsta antal poäng Försök igen kan ge under ett dygn. */
+export const MAX_REPAIR_POINTS_PER_DAY = 200;
+
+interface RepairBudget { date: string; used: number; }
+
+function repairKey(name: string) {
+  return `engelskajakten_repair_${name.toLowerCase().trim()}`;
+}
+
+function readRepairBudget(name: string): RepairBudget {
+  const today = todayStr();
+  try {
+    const raw = localStorage.getItem(repairKey(name));
+    const data: RepairBudget = raw ? JSON.parse(raw) : { date: today, used: 0 };
+    return data.date === today ? data : { date: today, used: 0 };
+  } catch {
+    return { date: today, used: 0 };
+  }
+}
+
+/** Hur många poäng Försök igen kan ge resten av dagen. */
+export function repairPointsLeftToday(studentName: string): number {
+  if (typeof window === "undefined") return 0;
+  return Math.max(0, MAX_REPAIR_POINTS_PER_DAY - readRepairBudget(studentName).used);
+}
+
+/**
+ * Delar ut poäng för ett rättat fel, begränsat av dagens budget.
+ * Returnerar antalet poäng som faktiskt delades ut (0 när budgeten är slut).
+ */
+export function addRepairPoints(rawPoints: number): number {
+  if (typeof window === "undefined") return 0;
+  const student = loadStudent();
+  if (!student) return 0;
+  const budget = readRepairBudget(student.name);
+  const left = Math.max(0, MAX_REPAIR_POINTS_PER_DAY - budget.used);
+  const awarded = Math.min(Math.max(0, Math.round(rawPoints)), left);
+  try {
+    localStorage.setItem(
+      repairKey(student.name),
+      JSON.stringify({ date: budget.date, used: budget.used + awarded })
+    );
+  } catch {
+    /* full lagring – poängen delas ändå ut nedan */
+  }
+  if (awarded > 0) {
+    student.totalPoints += awarded;
+    saveStudent(student);
+  }
+  return awarded;
+}
+
 // ─── Exercise position (resume where you left off) ────────────────────────────
 
 function posKey(stageId: string, moduleId: string) {
