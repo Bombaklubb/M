@@ -44,14 +44,17 @@ export default function BuildSentence({ exercise, onAnswer, isLast }: Props) {
 
   function checkAnswer() {
     if (placed.length !== exercise.words.length) return;
-    // Godkänn facit-ordningen OCH alla alternativa ordföljder som är korrekt
-    // engelska (t.ex. "Yesterday I played..." vs "I played... yesterday").
+    // Jämför på ORDEN, inte på index. Meningar med upprepade ord ("If you miss
+    // the bus, you will be late.") har flera index-följder som ger exakt samma
+    // mening – eleven ska inte få fel för att den råkade klicka på den andra
+    // av två likadana ordbrickor.
+    //
+    // Godkänn dessutom alla alternativa ordföljder som är korrekt engelska
+    // (t.ex. "Yesterday I played..." vs "I played... yesterday").
+    const asText = (order: number[]) => order.map((i) => exercise.words[i]).join(" ");
+    const given = asText(placed);
     const orders = [exercise.correctOrder, ...(exercise.alternativeOrders ?? [])];
-    const correct = orders.some(
-      (order) =>
-        placed.length === order.length &&
-        placed.every((wordIdx, pos) => wordIdx === order[pos])
-    );
+    const correct = orders.some((order) => asText(order) === given);
     if (correct) setFeedbackMsg(getPositiveFeedback());
     setState(correct ? "correct" : "wrong");
   }
