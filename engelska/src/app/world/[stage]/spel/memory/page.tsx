@@ -146,7 +146,14 @@ function MemoryGame({ stageId, stage, student }: {
   const mins = Math.floor(seconds / 60);
   const secs = seconds % 60;
   const timeStr = mins > 0 ? `${mins}:${secs.toString().padStart(2, "0")}` : `${secs}s`;
-  const score = Math.max(10, 200 - moves * 3 - Math.floor(seconds / 5));
+  // Svårare bräde ska löna sig. Utan vikten gav Lätt mest, eftersom fyra par
+  // klaras på några få drag medan Svår kostar många drag och mycket tid – det
+  // gjorde det mest lönsamt att spela den enklaste nivån om och om igen.
+  const DIFF_WEIGHT: Record<Difficulty, number> = { easy: 0.7, medium: 1, hard: 1.3 };
+  const score = Math.max(
+    10,
+    Math.round((200 - moves * 3 - Math.floor(seconds / 5)) * DIFF_WEIGHT[difficulty])
+  );
 
   // Spara poängen till elevens konto vid vinst (en gång per runda)
   useEffect(() => {
