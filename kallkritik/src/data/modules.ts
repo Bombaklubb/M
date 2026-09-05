@@ -184,7 +184,7 @@ export const MODULES: ModuleMeta[] = [
     displayNumber: 11,
     title: 'Fakebilder & Deepfakes',
     subtitle: 'Se vad AI gömmer',
-    description: 'Lär dig de fem tecknen på AI-genererade bilder – händer, text, ansikten, skuggor och bakgrund.',
+    description: 'Lär dig de fyra tecknen på AI-genererade bilder – text, ansikten, skuggor och bakgrund – och varför de inte alltid räcker.',
     icon: '🖼️',
     gradient: 'from-rose-600 to-pink-800',
     xpReward: 15,

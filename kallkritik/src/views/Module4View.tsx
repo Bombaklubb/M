@@ -14,7 +14,6 @@ interface ModuleViewProps {
 type Phase = 'intro' | 'learn' | 'game' | 'result';
 
 const signColor: Record<string, { bg: string; text: string }> = {
-  hander:    { bg: 'bg-violet-100 border-violet-300', text: 'text-violet-700' },
   text:      { bg: 'bg-amber-100 border-amber-300',   text: 'text-amber-700' },
   ansikten:  { bg: 'bg-rose-100 border-rose-300',     text: 'text-rose-700' },
   ljus:      { bg: 'bg-sky-100 border-sky-300',       text: 'text-sky-700' },
@@ -33,7 +32,7 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
   const current = questions[currentIndex];
   const correctCount = scores.filter(Boolean).length;
   const xpEarned = correctCount * 15;
-  const earnedBadge = correctCount >= 5 ? { name: 'Bilddetektiven', icon: '🖼️' } : null;
+  const earnedBadge = correctCount >= 4 ? { name: 'Bilddetektiven', icon: '🖼️' } : null;
 
   function handleAnswer(optId: string) {
     if (revealed) return;
@@ -99,8 +98,9 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
               Fakebilder & Deepfakes
             </h1>
             <p className="text-gray-500 font-semibold mb-5 leading-relaxed text-sm">
-              AI kan skapa bilder som ser helt äkta ut. Men det finns alltid små ledtrådar som avslöjar dem.
-              Lär dig de <span className="text-rose-600 font-bold">5 tecknen</span> och bli en bilddetektiv!
+              AI kan skapa bilder som ser helt äkta ut. Lär dig de{' '}
+              <span className="text-rose-600 font-bold">4 tecknen</span> som kan avslöja dem – och varför
+              de inte alltid räcker.
             </p>
 
             <div className="grid grid-cols-1 gap-2 mb-5 text-left">
@@ -118,9 +118,17 @@ export function Module4View({ onComplete, onExit }: ModuleViewProps) {
               })}
             </div>
 
+            <div className="text-left bg-sky-50 border-2 border-sky-200 rounded-2xl px-4 py-3 mb-4">
+              <p className="text-xs text-sky-800 font-semibold leading-relaxed">
+                <span className="font-extrabold">Viktigt:</span> AI-bilder blir hela tiden bättre. Tecknen
+                nedan avslöjar allt färre bilder – hittar du inget fel betyder det <em>inte</em> att bilden är
+                äkta. Det säkraste är att ta reda på var bilden kommer ifrån (se modulen <em>Sök i sidled</em>).
+              </p>
+            </div>
+
             <div className="flex items-center justify-center gap-2 bg-amber-50 border-2 border-amber-200 rounded-2xl px-4 py-3 mb-6">
               <Zap className="w-4 h-4 text-amber-600 shrink-0" />
-              <p className="text-sm text-amber-700 font-bold">6 frågor · 15 XP per rätt · Märke vid 5/6</p>
+              <p className="text-sm text-amber-700 font-bold">5 frågor · 15 XP per rätt · Märke vid 4/5</p>
             </div>
 
             <div className="flex gap-3">
