@@ -232,7 +232,7 @@ export const LESSON_GUIDES: Record<number, LessonGuide> = {
       'Varför kan fejkbilder vara farligare än fejktext?',
     ],
     during: 'Gör lär-delen (de 5 tecknen) noggrant – gärna på storskärm. Quizet görs sedan enskilt.',
-    pairMode: 'Diskutera vid varje fråga: vilket av de 5 tecknen handlar det om? Kom överens innan ni svarar.',
+    pairMode: 'Diskutera vid varje fråga: vilket av de 4 tecknen handlar det om? Kom överens innan ni svarar.',
     after: [
       'Vilket av de fem tecknen tror ni försvinner först när AI blir bättre?',
       'Vad gör man om man INTE kan avgöra om en bild är äkta?',
@@ -240,7 +240,7 @@ export const LESSON_GUIDES: Record<number, LessonGuide> = {
     groupActivity: 'Bildgranskning på storskärm: läraren visar en AI-bild och ett äkta foto. Klassen letar tecken tillsammans med checklistan från lär-delen.',
     mission: {
       title: 'Bilddetektiv hemma',
-      task: 'Hitta en bild du misstänker är AI-genererad. Gå igenom de 5 tecknen: händer, text, ansikten, skuggor, bakgrund. Vilka ser du?',
+      task: 'Hitta en bild du misstänker är AI-genererad. Gå igenom de 4 tecknen: text, ansikten, skuggor, bakgrund. Hittar du inget – testa att söka upp var bilden kommer ifrån.',
       followUp: 'Visa bilden i smågrupp och låt de andra leta tecken innan du berättar vad du hittat.',
     },
   },

@@ -23,30 +23,21 @@ export interface Module4Question {
   discussionPrompt?: string;
 }
 
-// The 5 telltale signs of AI-generated images
+// De 4 tecknen på AI-genererade bilder.
+// OBS: tekniken förbättras snabbt – tecknen bekräftar AI när de syns,
+// men frånvaro av tecken bevisar INTE att en bild är äkta.
 export const AI_SIGNS: AiSign[] = [
-  {
-    key: 'hander',
-    icon: '🖐️',
-    title: 'Händer & fingrar',
-    question: 'Hur många fingrar?',
-    desc: 'AI har länge haft svårt att rita händer. Räkna fingrarna – ibland blir det sex eller fyra, eller så ser fingrarna böjda och hopsmälta ut.',
-    checks: [
-      'Räkna alltid fingrarna – är de fem på varje hand?',
-      'Ser fingrarna onaturligt långa, korta eller böjda ut?',
-      'Smälter två händer eller fingrar ihop?',
-    ],
-  },
   {
     key: 'text',
     icon: '🔤',
     title: 'Text & bokstäver',
     question: 'Går texten att läsa?',
-    desc: 'AI kan oftast inte skriva riktig text. Skyltar, logotyper och böcker i AI-bilder innehåller ofta påhittade bokstäver eller rappakalja som ser ut som text men inte betyder något.',
+    desc: 'AI har haft svårt med text i bilder: skyltar och logotyper blir ofta påhittade bokstäver som ser ut som text men inte betyder något. Nyare AI klarar text allt bättre – hittar du rappakalja är det ett starkt tecken på AI, men läsbar text bevisar inte att bilden är äkta.',
     checks: [
       'Zooma in på skyltar, böcker och logotyper',
       'Är bokstäverna riktiga ord eller bara klotter?',
       'Specialtecken som å, ä, ö blir ofta fel',
+      'Men obs: att texten går att läsa bevisar ingenting',
     ],
   },
   {
@@ -54,11 +45,12 @@ export const AI_SIGNS: AiSign[] = [
     icon: '👁️',
     title: 'Ögon, hud & ansikten',
     question: 'Ser ansiktet äkta ut?',
-    desc: 'I deepfakes och AI-porträtt är huden ofta onaturligt slät (som plast), ögonen kan peka åt olika håll, och öron, tänder eller glasögon kan ha konstiga former.',
+    desc: 'I deepfakes och AI-porträtt kan huden bli onaturligt slät (som plast), ögonen peka åt olika håll, och öron, tänder eller glasögon få konstiga former. Dagens AI gör dock allt mer verklighetstrogna ansikten – ett felfritt ansikte betyder inte att bilden är äkta.',
     checks: [
       'Är huden onaturligt slät – inga porer eller ojämnheter?',
       'Pekar båda ögonen åt samma håll? Matchar reflexerna?',
       'Ser öron, tänder och glasögon naturliga ut?',
+      'Ser allt normalt ut? Då vet du fortfarande inte – kolla källan',
     ],
   },
   {
@@ -89,24 +81,6 @@ export const AI_SIGNS: AiSign[] = [
 
 export const MODULE4_QUESTIONS: Module4Question[] = [
   {
-    id: 'm4-1',
-    discussionPrompt: 'Vad händer när AI blir bättre på att rita händer – vilka tecken letar vi efter då?',
-    imageEmoji: '🖐️',
-    imageBg: 'from-violet-100 to-purple-100',
-    scenario: 'Du ser en bild på en person som vinkar. Den delas som ett "äkta foto" på sociala medier.',
-    question: 'Vad är det FÖRSTA du bör granska för att se om bilden är AI-genererad?',
-    options: [
-      { id: 'a', text: 'Vilka kläder personen har på sig' },
-      { id: 'b', text: 'Räkna fingrarna på handen – AI ritar ofta fel antal fingrar' },
-      { id: 'c', text: 'Om personen ler eller inte' },
-      { id: 'd', text: 'Vilken färg bakgrunden har' },
-    ],
-    correctId: 'b',
-    explanation: 'Händer är en av AI:s svagaste punkter. En vinkande hand är perfekt att granska – räkna fingrarna! Ofta blir det sex fingrar, fyra fingrar, eller fingrar som böjer sig på omöjliga sätt.',
-    tip: 'Händer och fingrar är det enklaste tecknet att leta efter i AI-bilder med människor.',
-    sign: 'hander',
-  },
-  {
     id: 'm4-2',
     discussionPrompt: 'Varför är text i bilder så svårt för AI? Har ni sett exempel på konstig text i en AI-bild?',
     imageEmoji: '🏪',
@@ -121,7 +95,7 @@ export const MODULE4_QUESTIONS: Module4Question[] = [
     ],
     correctId: 'c',
     explanation: 'AI kan oftast inte skriva riktig text. På skyltar, butiksnamn och affischer blir det ofta bokstäver som ser nästan rätt ut men bildar rappakalja. Zooma in på all text i bilden!',
-    tip: 'Text på skyltar och logotyper är ett säkert ställe att avslöja AI-bilder. Zooma in och försök läsa.',
+    tip: 'Zooma in på text i bilder – rappakalja avslöjar AI. Men nyare AI skriver allt bättre text, så läsbar text bevisar inte att bilden är äkta.',
     sign: 'text',
   },
   {
@@ -138,8 +112,8 @@ export const MODULE4_QUESTIONS: Module4Question[] = [
       { id: 'd', text: 'Slät hud betyder att bilden är gammal' },
     ],
     correctId: 'b',
-    explanation: 'Deepfakes och AI-porträtt gör ofta huden onaturligt slät, nästan som plast eller vax. Riktig mänsklig hud har alltid porer, små hår, ojämnheter och struktur. Titta också på öron och ögon – de brukar avslöja deepfakes.',
-    tip: 'Onaturligt perfekt, slät hud (som plast) är ett klassiskt tecken på en deepfake eller AI-bild.',
+    explanation: 'Deepfakes och AI-porträtt gör ofta huden onaturligt slät, nästan som plast eller vax. Riktig mänsklig hud har alltid porer, små hår, ojämnheter och struktur. Titta också på öron och ögon. Men tänk på att tekniken förbättras snabbt – de här tecknen fångar allt färre bilder.',
+    tip: 'Onaturligt slät, plastig hud är ett klassiskt tecken på deepfake. Men ansikten blir hela tiden mer verklighetstrogna – ser huden äkta ut måste du ändå kolla varifrån bilden kommer.',
     sign: 'ansikten',
   },
   {
