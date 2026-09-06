@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import { colorOf, DAYS, dayItems, FAMILY_GRADIENT, forPerson, MEMBERS, TABS, TINT, WEEK_LABEL, type PrintKey, type TabId } from './data';
+import { useEffect, useState } from 'react';
+import { colorOf, dayItems, FAMILY_GRADIENT, forPerson, MEMBERS, TABS, TINT, weekDays, weekLabel, type Day, type PrintKey, type TabId } from './data';
 import { PrintSheets, WeekSheet } from './PrintSheets';
 import { DetailSheet, PrintPanel, SheetPreview, type DetailItem } from './Sheets';
 import { toggle, usePersisted, type Flags } from './usePersisted';
-import { Datum } from './views/Datum';
 import { Hem } from './views/Hem';
 import { Mat } from './views/Mat';
 import { Stad } from './views/Stad';
@@ -15,10 +14,21 @@ export default function App() {
   const [tab, setTab] = useState<TabId>('hem');
   const [filter, setFilter] = useState<string | null>(null);
   const [sheet, setSheet] = useState<SheetState>(null);
-  const [stadView, setStadView] = useState<'person' | 'vecka'>('person');
   const [selStored, setSel] = usePersisted<Flags>('print-sel', { vecka: true, mat: true, stad: true, tran: true, dat: false });
   const [orient, setOrient] = usePersisted<'port' | 'land'>('orient', 'port');
   const [preview, setPreview] = useState(false);
+
+  // Tavlan kan stå framme dygnet runt: håll koll på datumet så "idag"
+  // flyttar sig vid midnatt utan att någon behöver ladda om.
+  const [idag, setIdag] = useState(() => new Date().toDateString());
+  useEffect(() => {
+    const id = setInterval(() => {
+      const nu = new Date().toDateString();
+      setIdag((förra) => (förra === nu ? förra : nu));
+    }, 60_000);
+    return () => clearInterval(id);
+  }, []);
+  const days = weekDays(new Date(idag));
 
   // Veckobladet kom till efteråt: sparade val utan det ska ändå få det påslaget.
   const sel = { vecka: true, ...selStored };
@@ -38,7 +48,7 @@ export default function App() {
     requestAnimationFrame(() => window.print());
   };
 
-  const detail = buildDetail(sheet, filter);
+  const detail = buildDetail(sheet, filter, days);
 
   return (
     <>
@@ -57,7 +67,7 @@ export default function App() {
               title="Till startsidan"
               style={{ flex: 1, minWidth: 0, cursor: 'pointer' }}
             >
-              <div style={{ fontSize: 12, fontWeight: 800, opacity: .8, letterSpacing: '.08em', textTransform: 'uppercase' }}>{WEEK_LABEL}</div>
+              <div style={{ fontSize: 12, fontWeight: 800, opacity: .8, letterSpacing: '.08em', textTransform: 'uppercase' }}>{weekLabel(new Date(idag))}</div>
               <div style={{ fontSize: 26, fontWeight: 900, letterSpacing: '-.02em', lineHeight: 1.1, textShadow: '0 2px 4px rgba(0,0,0,.3)' }}>Familjeliv</div>
             </div>
             <button
@@ -99,11 +109,10 @@ export default function App() {
         )}
 
         <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
-          {tab === 'hem' && <Hem filter={filter} onOpenDay={(i) => setSheet({ type: 'day', i })} />}
+          {tab === 'hem' && <Hem days={days} filter={filter} onOpenDay={(i) => setSheet({ type: 'day', i })} />}
           {tab === 'mat' && <Mat onPrint={openPrint} />}
-          {tab === 'stad' && <Stad filter={filter} view={stadView} onView={setStadView} onPrint={openPrint} />}
+          {tab === 'stad' && <Stad filter={filter} onPrint={openPrint} />}
           {tab === 'tran' && <Tran filter={filter} onPrint={openPrint} />}
-          {tab === 'dat' && <Datum />}
 
           <div
             style={{
@@ -151,11 +160,11 @@ export default function App() {
   );
 }
 
-function buildDetail(sheet: SheetState, filter: string | null): { title: string; sub: string; items: DetailItem[] } | null {
+function buildDetail(sheet: SheetState, filter: string | null, days: Day[]): { title: string; sub: string; items: DetailItem[] } | null {
   if (!sheet || sheet.type === 'print') return null;
 
   if (sheet.type === 'day') {
-    const d = DAYS[sheet.i];
+    const d = days[sheet.i];
     const items = dayItems(d).filter((it) => forPerson(it.p, filter));
     return {
       title: `${d.long} ${d.date}`,

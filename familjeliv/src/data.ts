@@ -7,9 +7,54 @@ export const TINT: Record<Kind, string> = {
   dat: '#e0e8ff',
 };
 
-export const WEEK_LABEL = 'Vecka 37 · 7–13 sep';
-export const WEEK_LONG = 'Vecka 37 · 7–13 september';
-export const MONTH_LABEL = 'September 2026';
+/* ── Veckan räknas ut från dagens datum ─────────────────────────
+   Schemat är kopplat till veckodagar, så samma uppgifter gäller vecka
+   efter vecka. Datum och "idag" hämtas från klockan i telefonen. */
+
+const DAY_NAMES = ['mån', 'tis', 'ons', 'tor', 'fre', 'lör', 'sön'];
+const DAY_LONG = ['Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag'];
+const MONTH_SHORT = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
+const MONTH_LONG = ['januari', 'februari', 'mars', 'april', 'maj', 'juni', 'juli', 'augusti', 'september', 'oktober', 'november', 'december'];
+
+const dagensDatum = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+
+/** Måndagen i den vecka datumet ligger i. */
+function veckansStart(now: Date): Date {
+  const d = dagensDatum(now);
+  d.setDate(d.getDate() - ((d.getDay() + 6) % 7));
+  return d;
+}
+
+/** ISO-veckonummer — samma numrering som kalendrar och skolscheman använder. */
+function isoVecka(datum: Date): number {
+  const d = dagensDatum(datum);
+  d.setDate(d.getDate() + 3 - ((d.getDay() + 6) % 7));
+  const förstaTorsdagen = new Date(d.getFullYear(), 0, 4);
+  förstaTorsdagen.setDate(förstaTorsdagen.getDate() + 3 - ((förstaTorsdagen.getDay() + 6) % 7));
+  return 1 + Math.round((d.getTime() - förstaTorsdagen.getTime()) / (7 * 86400000));
+}
+
+/** "Vecka 36 · 31 aug–6 sep" */
+export function weekLabel(now = new Date()): string {
+  const start = veckansStart(now);
+  const slut = new Date(start);
+  slut.setDate(start.getDate() + 6);
+  const från = start.getMonth() === slut.getMonth()
+    ? `${start.getDate()}`
+    : `${start.getDate()} ${MONTH_SHORT[start.getMonth()]}`;
+  return `Vecka ${isoVecka(now)} · ${från}–${slut.getDate()} ${MONTH_SHORT[slut.getMonth()]}`;
+}
+
+/** Samma sak men utskrivet, för utskriftsbladen. */
+export function weekLong(now = new Date()): string {
+  const start = veckansStart(now);
+  const slut = new Date(start);
+  slut.setDate(start.getDate() + 6);
+  const från = start.getMonth() === slut.getMonth()
+    ? `${start.getDate()}`
+    : `${start.getDate()} ${MONTH_LONG[start.getMonth()]}`;
+  return `Vecka ${isoVecka(now)} · ${från}–${slut.getDate()} ${MONTH_LONG[slut.getMonth()]}`;
+}
 
 /**
  * Varje person har en egen färg som följer med genom appen: ringen runt
@@ -74,17 +119,28 @@ export type DayItem = { icon: string; label: string; meta: string; k: Kind; p: s
 /** Filtret i toppen: visa raden när ingen är vald, när den gäller alla eller den valda. */
 export const forPerson = (p: DayItem['p'], filter: string | null) =>
   !filter || p === 'alla' || (Array.isArray(p) ? p.includes(filter) : p === filter);
-export type Day = { name: string; long: string; date: string; today?: boolean };
+export type Day = { name: string; long: string; date: string; sheetDay: string; today: boolean };
 
-export const DAYS: Day[] = [
-  { name: 'mån', long: 'Måndag', date: '7/9' },
-  { name: 'tis', long: 'Tisdag', date: '8/9', today: true },
-  { name: 'ons', long: 'Onsdag', date: '9/9' },
-  { name: 'tor', long: 'Torsdag', date: '10/9' },
-  { name: 'fre', long: 'Fredag', date: '11/9' },
-  { name: 'lör', long: 'Lördag', date: '12/9' },
-  { name: 'sön', long: 'Söndag', date: '13/9' },
-];
+/** Veckans sju dagar med riktiga datum, och dagens dag markerad. */
+export function weekDays(now = new Date()): Day[] {
+  const start = veckansStart(now);
+  const idag = dagensDatum(now).getTime();
+  return DAY_NAMES.map((name, i) => {
+    const d = new Date(start);
+    d.setDate(start.getDate() + i);
+    return {
+      name,
+      long: DAY_LONG[i],
+      date: `${d.getDate()}/${d.getMonth() + 1}`,
+      sheetDay: `${name[0].toUpperCase()}${name.slice(1)} ${d.getDate()}`,
+      today: d.getTime() === idag,
+    };
+  });
+}
+
+/** "Mån 7" för utskriftsbladen, uträknat ur veckodagens namn. */
+export const sheetDayFor = (namn: string, now = new Date()) =>
+  weekDays(now).find((d) => d.name === namn)?.sheetDay ?? namn;
 
 /**
  * Dagens rader byggs av träningarna och matansvaret — samma källa som flikarna
@@ -112,7 +168,6 @@ export type Slot = 'lunch' | 'middag';
 
 export type Meal = {
   day: string;
-  sheetDay: string;
   slot: Slot;
   /** Vem som har ansvaret. null = flexibelt, ingen är utsedd. */
   cook: string | null;
@@ -124,46 +179,53 @@ export const mealWho = (m: Meal) => m.cook ?? 'Flexibelt';
 export const SLOT_LABEL: Record<Slot, string> = { lunch: 'Lunch', middag: 'Middag' };
 
 export const MEALS: Meal[] = [
-  { day: 'mån', sheetDay: 'Mån 7', slot: 'middag', cook: 'Karin' },
-  { day: 'tis', sheetDay: 'Tis 8', slot: 'lunch', cook: 'Karin' },
-  { day: 'tis', sheetDay: 'Tis 8', slot: 'middag', cook: 'Karin' },
-  { day: 'ons', sheetDay: 'Ons 9', slot: 'middag', cook: 'Martin' },
-  { day: 'tor', sheetDay: 'Tor 10', slot: 'middag', cook: 'Martin' },
-  { day: 'fre', sheetDay: 'Fre 11', slot: 'middag', cook: 'Martin' },
-  { day: 'lör', sheetDay: 'Lör 12', slot: 'lunch', cook: 'Martin' },
-  { day: 'lör', sheetDay: 'Lör 12', slot: 'middag', cook: 'Karin' },
-  { day: 'sön', sheetDay: 'Sön 13', slot: 'lunch', cook: null },
-  { day: 'sön', sheetDay: 'Sön 13', slot: 'middag', cook: null },
+  { day: 'mån', slot: 'middag', cook: 'Karin' },
+  { day: 'tis', slot: 'lunch', cook: 'Karin' },
+  { day: 'tis', slot: 'middag', cook: 'Karin' },
+  { day: 'ons', slot: 'middag', cook: 'Martin' },
+  { day: 'tor', slot: 'middag', cook: 'Martin' },
+  { day: 'fre', slot: 'middag', cook: 'Martin' },
+  { day: 'lör', slot: 'lunch', cook: 'Martin' },
+  { day: 'lör', slot: 'middag', cook: 'Karin' },
+  { day: 'sön', slot: 'lunch', cook: null },
+  { day: 'sön', slot: 'middag', cook: null },
 ];
 
-export type Chore = { label: string; day: string; d: number; time?: string };
+export type Chore = {
+  label: string;
+  day: string;
+  d: number;
+  time?: string;
+  /** Kort form för veckobladets smala städkolumn, där sysslan står sju gånger. */
+  short?: string;
+};
 export type Person = { name: string; role: string; avatar: string; tasks: Chore[] };
 
 export const PEOPLE: Person[] = [
   {
     name: 'Astrid', role: '11 år', avatar: '/avatars/astrid.svg', tasks: [
-      { label: 'Städa sitt rum', day: 'dagl', d: 0, time: '18:45' },
+      { label: 'Städa sitt rum', day: 'dagl', d: 0, time: '18:45', short: 'rummet' },
     ],
   },
   {
     name: 'Signe', role: '8 år', avatar: '/avatars/signe.svg', tasks: [
-      { label: 'Städa sitt rum', day: 'dagl', d: 0, time: '18:45' },
+      { label: 'Städa sitt rum', day: 'dagl', d: 0, time: '18:45', short: 'rummet' },
     ],
   },
   {
     name: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg', tasks: [
-      { label: 'Plocka ur diskmaskinen', day: 'dagl', d: 0 },
-      { label: 'Tömma kompost och skräp', day: 'dagl', d: 0 },
-      { label: 'Plocka undan leksaker i kök och vardagsrum', day: 'dagl', d: 0 },
+      { label: 'Plocka ur diskmaskinen', day: 'dagl', d: 0, short: 'diskmaskin' },
+      { label: 'Tömma kompost och skräp', day: 'dagl', d: 0, short: 'kompost' },
+      { label: 'Plocka undan leksaker i kök och vardagsrum', day: 'dagl', d: 0, short: 'leksaker' },
     ],
   },
   {
     name: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg', tasks: [
-      { label: 'Hjälper Astrid och Signe med rummen', day: 'dagl', d: 0, time: '18:45' },
-      { label: 'Städa toaletterna', day: 'lör', d: 5 },
-      { label: 'Dammsuga', day: 'lör', d: 5 },
-      { label: 'Tvättstugan', day: 'lör', d: 5 },
-      { label: 'Hallen', day: 'lör', d: 5 },
+      { label: 'Hjälper Astrid och Signe med rummen', day: 'dagl', d: 0, time: '18:45', short: 'hjälper rummen' },
+      { label: 'Städa toaletterna', day: 'lör', d: 5, short: 'toaletterna' },
+      { label: 'Dammsuga', day: 'lör', d: 5, short: 'dammsuga' },
+      { label: 'Tvättstugan', day: 'lör', d: 5, short: 'tvättstugan' },
+      { label: 'Hallen', day: 'lör', d: 5, short: 'hallen' },
     ],
   },
 ];
@@ -189,7 +251,6 @@ export const TC: Record<string, TrainingColor> = {
 
 export type Training = {
   day: string;
-  sheetDay: string;
   time: string;
   title: string;
   /** Kortare namn i veckobladets smala kolumn. */
@@ -204,10 +265,10 @@ export type Training = {
 };
 
 export const TRAININGS: Training[] = [
-  { day: 'mån', sheetDay: 'Mån 7', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', dropoff: { by: 'Karin' }, pickup: { by: 'Martin', time: '18:15' }, c: 'ord' },
-  { day: 'tis', sheetDay: 'Tis 8', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'ord' },
-  { day: 'lör', sheetDay: 'Lör 12', time: '10:30', title: 'Street feet', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
-  { day: 'lör', sheetDay: 'Lör 12', time: '13:00', title: 'Street feet', person: 'Signe', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
+  { day: 'mån', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', dropoff: { by: 'Karin' }, pickup: { by: 'Martin', time: '18:15' }, c: 'ord' },
+  { day: 'tis', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'ord' },
+  { day: 'lör', time: '10:30', title: 'Street feet', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
+  { day: 'lör', time: '13:00', title: 'Street feet', person: 'Signe', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
 ];
 
 /**
@@ -237,22 +298,12 @@ export function trainingRide(t: Training): string {
   return rad.charAt(0).toUpperCase() + rad.slice(1);
 }
 
-export type ImportantDate = { num: string; mon: string; title: string; meta: string };
-
-export const DATES: ImportantDate[] = [];
-
-/** Månadsrutnätet markerar de dagar familjen faktiskt tränar. */
-export const CAL_MARK: Record<number, string> = Object.fromEntries(
-  DAYS.filter((d) => TRAININGS.some((t) => t.day === d.name)).map((d) => [Number(d.date.split('/')[0]), '🤸']),
-);
-
-export type TabId = 'hem' | 'mat' | 'stad' | 'tran' | 'dat';
+export type TabId = 'hem' | 'mat' | 'stad' | 'tran';
 export const TABS: { id: TabId; icon: string; label: string }[] = [
   { id: 'hem', icon: '🏡', label: 'Hem' },
   { id: 'mat', icon: '🍽', label: 'Mat' },
   { id: 'stad', icon: '🧹', label: 'Städ' },
   { id: 'tran', icon: '🤸', label: 'Träning' },
-  { id: 'dat', icon: '📅', label: 'Datum' },
 ];
 
 /** Utskriftsbladen: veckobladet först, det är kylskåpslappen. */
@@ -263,16 +314,28 @@ export const PRINTS: { k: PrintKey; label: string; icon: string }[] = [
   { k: 'mat', label: 'Matschema', icon: '🍽' },
   { k: 'stad', label: 'Städschema per person', icon: '🧹' },
   { k: 'tran', label: 'Träningskalender', icon: '🤸' },
-  { k: 'dat', label: 'Viktiga datum, månad', icon: '📅' },
 ];
 
 export const FAMILY_PARENTS = 'Martin & Karin';
 export const FAMILY_KIDS = [...new Set(TRAININGS.map((t) => t.person))].join(' · ');
 
 /** Sysslor som återkommer varje dag hamnar i veckobladets sidfot, inte i varje ruta. */
+type ChoreGroup = { who: string; labels: string[] };
+
+/** Slår ihop personer med identiska sysslor: "Astrid & Signe rummen". */
+function slåIhop(grupper: ChoreGroup[]): ChoreGroup[] {
+  const ihop: ChoreGroup[] = [];
+  for (const g of grupper) {
+    const lika = ihop.find((x) => x.labels.join('|') === g.labels.join('|'));
+    if (lika) lika.who += ` & ${g.who}`;
+    else ihop.push({ ...g });
+  }
+  return ihop;
+}
+
 /** En rad per dag: träningen, matansvaret och dagens sysslor. */
-export function weekRows() {
-  return DAYS.map((d) => ({
+export function weekRows(now = new Date()) {
+  return weekDays(now).map((d) => ({
     day: `${d.name} ${d.date.split('/')[0]}`,
     today: !!d.today,
     trainings: TRAININGS.filter((t) => t.day === d.name).map((t) => ({
@@ -281,9 +344,16 @@ export function weekRows() {
       ride: trainingRide(t),
     })),
     meals: MEALS.filter((m) => m.day === d.name),
-    chores: PEOPLE.map((p) => ({
-      who: p.name,
-      labels: p.tasks.filter((t) => t.day === d.name).map((t) => t.label),
-    })).filter((g) => g.labels.length > 0),
+    // Dagliga sysslor står på varje dag, inte bara en gång — så syns det att
+    // Astrid och Signe städar sina rum alla dagar. Den som har exakt samma
+    // sysslor slås ihop till en post ("Astrid & Signe rummet").
+    chores: slåIhop(
+      PEOPLE.map((p) => ({
+        who: p.name,
+        labels: p.tasks
+          .filter((t) => t.day === 'dagl' || t.day === d.name)
+          .map((t) => t.short ?? t.label.toLowerCase()),
+      })).filter((g) => g.labels.length > 0),
+    ),
   }));
 }
