@@ -1,7 +1,7 @@
 # Familjeliv
 
-Familjens vecka på ett ställe: dagöversikt, matschema med inköpslista, städschema,
-träningar och viktiga datum — plus färdiga A4-blad att sätta på kylskåpet.
+Familjens vecka på ett ställe: veckotavlan med alla sju dagar, matansvar, städschema
+och träningar — plus färdiga A4-blad att sätta på kylskåpet.
 
 Byggd från en Claude Design-prototyp (`Familjetavlan.dc.html`) med React + Vite + TypeScript.
 
@@ -31,13 +31,14 @@ lokalt (`npm run dev`) är appen olåst.
 
 | Fil | Innehåll |
 | --- | --- |
-| `src/data.ts` | Familjen, veckans dagar, måltider, sysslor, träningar och datum |
+| `src/data.ts` | Familjen, veckans dagar, måltider, sysslor och träningar |
 | | `PERSON_COLOR`: varje persons färg — ring, platta och textfärg, uppslagen med `colorOf(namn)` |
 | | Matansvaret: `cook` per måltid — middag mån–fre, lunch och middag lör–sön |
+| | `weekDays()`: veckan räknas ut från dagens datum, så "idag" flyttar sig av sig självt |
 | `src/App.tsx` | Skalet: rubrik med avatarfilter, flikar, bottenpaneler |
-| `src/views/` | En fil per flik: Hem, Mat, Städ, Träning, Datum |
+| `src/views/` | En fil per flik: Hem, Mat, Städ, Träning |
 | `src/Sheets.tsx` | Detaljpanelen och utskriftspanelen |
-| `src/PrintSheets.tsx` | De fem A4-bladen, renderas bara i `@media print` |
+| `src/PrintSheets.tsx` | De fyra A4-bladen, renderas bara i `@media print` |
 | `src/usePersisted.ts` | Sparar utskriftsvalen i `localStorage` |
 | `middleware.ts` | Lösenordsskyddet på Vercels edge |
 | `design/` | Designprototyperna från Claude Design som appen är byggd efter |
@@ -75,16 +76,21 @@ en färgnyckel längst ned på veckobladet.
 
 | Blad | Innehåll |
 | --- | --- |
-| **Veckobladet** | Kylskåpslappen: en rad per dag med träningen och vem som har matansvaret |
+| **Veckobladet** | Kylskåpslappen: en rad per dag med träning, matansvar och städ |
 | Matansvar | Vem som fixar lunch och middag, dag för dag |
 | Städschema | Sysslorna per person |
 | Träningskalender | Tider och vem som skjutsar och hämtar |
-| Viktiga datum | Månadsrutnät och kommande händelser |
 
 Veckobladet är förvalt och går att titta på i appen innan utskrift — knappen
 👁 **Titta på veckobladet** i utskriftspanelen visar bladet nedskalat, precis som det
-kommer ut på papper. Sysslor som återkommer varje dag hamnar i sidfoten i stället för
-i varje ruta, så rutnätet bara visar det som skiljer dagarna åt.
+kommer ut på papper. Sysslorna som görs varje dag står på alla sju dagarna, inte bara
+en gång: den som läser lappen ska se att rummen städas dagligen. För att veckan ska
+rymmas på ett enda A4 skrivs de som löpande text, och personer med identiska sysslor
+slås ihop ("Astrid & Signe rummet").
+
+Bladen måste rymmas på sidan — en rad som växer förbi papperskanten klipps bort utan
+att synas på skärmen. Efter varje ändring i `PrintSheets.tsx` är det värt att mäta i
+en riktig webbläsare att inget element har `scrollHeight` större än `clientHeight`.
 
 ## Deploy
 
@@ -99,3 +105,18 @@ Eget Vercel-projekt, importerat från `Bombaklubb/M`:
 
 `middleware.ts` ligger i mappens rot och plockas upp av Vercel utan extra konfiguration.
 Adressen finns inte hårdkodad någonstans i koden, så den går att byta när som helst.
+
+Miljövariabler läses vid bygget. Lägger du till eller ändrar `APP_PASSWORD` eller
+`AUTH_SECRET` måste du göra en **Redeploy** efteråt, annars kör den gamla bygget vidare
+utan dem.
+
+### När en ny version inte dyker upp
+
+`vercel.json` har en `ignoreCommand` som hoppar över bygget när ingenting i `familjeliv/`
+ändrats — repot innehåller ett tiotal appar och alla får en deploy vid varje push.
+
+Hobby-kontot tillåter 100 deployer per dygn för hela kontot. Slår taket i får pushar
+inga bygge alls, och då syns de inte ens som misslyckade rader under **Deployments** —
+de saknas helt. Jämför översta radens commit med `git log origin/main` för att se vad
+som faktiskt är ute. En **Redeploy** hjälper inte då: den bygger om den deploy du pekar
+på, alltså den gamla commiten.
