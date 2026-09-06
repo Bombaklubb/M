@@ -55,7 +55,7 @@ Eget Vercel-projekt, importerat från `Bombaklubb/M`:
 | Inställning | Värde |
 | --- | --- |
 | Project Name | `familjeliv` → familjeliv.vercel.app |
-| Root Directory | `familjen` |
+| Root Directory | `familjeliv` |
 | Framework | Vite (hittas automatiskt) |
 | Environment Variables | `APP_PASSWORD`, `AUTH_SECRET` |
 
