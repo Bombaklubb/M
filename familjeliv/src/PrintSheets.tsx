@@ -1,7 +1,8 @@
-import { Fragment } from 'react';
+import { Fragment, type ReactNode } from 'react';
 import {
-  BUYS, CAL_MARK, CHORE_FOOTER, DAILY_CHORES, DATES, FAMILY_KIDS, FAMILY_PARENTS, MEALS,
-  mealWho, MONTH_LABEL, PEOPLE, SLOT_LABEL, TRAININGS, TRAINING_FOOTER, WEEK_LONG, weekRows,
+  BUYS, CAL_MARK, CHORE_FOOTER, colorOf, DAILY_CHORES, DATES, FAMILY_KIDS, FAMILY_PARENTS,
+  MEALS, mealWho, MEMBERS, MONTH_LABEL, PEOPLE, PERSON_COLOR, SLOT_LABEL, TRAININGS,
+  TRAINING_FOOTER, WEEK_LONG, weekRows,
 } from './data';
 import type { Flags } from './usePersisted';
 
@@ -32,6 +33,53 @@ export function PrintSheets({ sel, orient, bought }: Props) {
   );
 }
 
+const FAMILY = MEMBERS.map((m) => m.name);
+const NAME_RE = new RegExp(`\\b(${Object.keys(PERSON_COLOR).join('|')})\\b`, 'g');
+
+/**
+ * Skriver ut en text där familjens namn får sin egen färg. Samma färgkod som i
+ * appen, så den som läser bladet på kylskåpet hittar sitt namn direkt.
+ */
+function Named({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(NAME_RE).map((part, i) =>
+        FAMILY.includes(part)
+          ? <span key={i} style={{ color: colorOf(part).fg, fontWeight: 800 }}>{part}</span>
+          : <Fragment key={i}>{part}</Fragment>,
+      )}
+    </>
+  );
+}
+
+/** Ramen som alla blad delar: kant, rundade hörn och familjebandet överst. */
+function Sheet({ children }: { children: ReactNode }) {
+  return (
+    <div className="sheet">
+      <div className="sheet-frame">
+        <div className="sheet-ribbon">
+          {FAMILY.map((name) => <span key={name} style={{ background: colorOf(name).base }} />)}
+        </div>
+        <div className="sheet-body">{children}</div>
+      </div>
+    </div>
+  );
+}
+
+/** Färgnyckeln: prickar med namn, så koden går att läsa utan appen. */
+function Legend() {
+  return (
+    <div style={{ display: 'flex', gap: 11, alignItems: 'center', flexWrap: 'wrap', padding: '9px 0 8px' }}>
+      {FAMILY.map((name) => (
+        <span key={name} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 10.5, fontWeight: 800, color: colorOf(name).fg }}>
+          <span style={{ width: 8, height: 8, borderRadius: 99, background: colorOf(name).base }} />
+          {name}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 function Page({ children }: { children: React.ReactNode }) {
   return <div className="page">{children}</div>;
 }
@@ -51,7 +99,7 @@ function Head({ title, sub, right }: { title: string; sub: string; right: string
 function Foot({ left }: { left: string }) {
   return (
     <div className="sfoot">
-      <span>{left}</span>
+      <span><Named text={left} /></span>
       <span>Familjeliv</span>
     </div>
   );
@@ -78,7 +126,7 @@ export function WeekSheet() {
   });
 
   return (
-    <div className="sheet">
+    <Sheet>
       <Head title="Veckan" sub={WEEK_LONG} right="Familjen" />
       <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '44px 1.3fr 1fr 1.05fr', gridTemplateRows: 'auto repeat(7,auto)', marginTop: 8 }}>
         {['', '🤸 Träning', '🍽 Mat', '🧹 Vem gör vad'].map((h, i) => (
@@ -100,7 +148,7 @@ export function WeekSheet() {
                 {r.trainings.map((t, j) => (
                   <div key={j}>
                     <div style={{ fontSize: 11.5, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{t.title}</div>
-                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}>{t.meta}</div>
+                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}><Named text={t.meta} /></div>
                   </div>
                 ))}
               </div>
@@ -115,7 +163,7 @@ export function WeekSheet() {
                       </div>
                     )}
                     <div style={{ fontSize: 11.5, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{m.dish}</div>
-                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}>{m.cook} · {m.when}</div>
+                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}><Named text={`${m.cook} · ${m.when}`} /></div>
                   </div>
                 ))}
               </div>
@@ -124,7 +172,7 @@ export function WeekSheet() {
                 {r.chores.length === 0 && <Empty />}
                 {r.chores.map((c, j) => (
                   <div key={j} style={{ fontSize: 10.5, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}>
-                    <span style={{ fontWeight: 900, color: '#111827' }}>{c.who}</span> {c.label.toLowerCase()}
+                    <Named text={`${c.who} ${c.label.toLowerCase()}`} />
                   </div>
                 ))}
               </div>
@@ -132,8 +180,9 @@ export function WeekSheet() {
           );
         })}
       </div>
+      <Legend />
       <Foot left={`Varje dag: ${DAILY_CHORES.join(' · ')} · ${CHORE_FOOTER.toLowerCase()}`} />
-    </div>
+    </Sheet>
   );
 }
 
@@ -144,7 +193,7 @@ function Empty() {
 function MealSheet({ bought }: { bought: Flags }) {
   const left = BUYS.filter((b) => !bought[b]).map((b) => b.toLowerCase());
   return (
-    <div className="sheet">
+    <Sheet>
       <Head title="Matschema" sub="Vecka 37 · vem som lagar" right={FAMILY_PARENTS} />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', marginTop: 6 }}>
         {MEALS.map((m, i) => {
@@ -155,47 +204,51 @@ function MealSheet({ bought }: { bought: Flags }) {
               <div className="sk">{firstOfDay ? m.sheetDay : ''}</div>
               <div style={{ flex: 1 }}>
                 <div className="st">{twoMeals ? `${SLOT_LABEL[m.slot]}: ${m.dish}` : m.dish}</div>
-                <div className="sm">{mealWho(m)}{m.note ? ` · ${m.note}` : ''}</div>
+                <div className="sm"><Named text={`${mealWho(m)}${m.note ? ` · ${m.note}` : ''}`} /></div>
               </div>
             </div>
           );
         })}
       </div>
       <Foot left={left.length ? `Handla: ${left.join(', ')}` : 'Allt är inhandlat'} />
-    </div>
+    </Sheet>
   );
 }
 
 function ChoreSheet() {
   return (
-    <div className="sheet">
+    <Sheet>
       <Head title="Städschema" sub="Vecka 37 · kryssa av när det är klart" right="Familjen" />
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 10, marginTop: 12 }}>
-        {PEOPLE.map((p) => (
-          <div className="pers" key={p.name}>
-            <div className="pnm">
-              {p.name}
-              {/\d+\s*år/.test(p.role) && <span> · {p.role}</span>}
+      <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 8, marginTop: 10 }}>
+        {PEOPLE.map((p) => {
+          const c = colorOf(p.name);
+          return (
+            <div className="pers" key={p.name} style={{ borderColor: c.base }}>
+              <div className="pnm" style={{ color: c.fg }}>
+                <span style={{ display: 'inline-block', width: 9, height: 9, borderRadius: 99, background: c.base, marginRight: 7 }} />
+                {p.name}
+                {/\d+\s*år/.test(p.role) && <span> · {p.role}</span>}
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                {p.tasks.map((t, i) => (
+                  <div className="ptask" key={i}>
+                    <span className="box" style={{ borderColor: c.base }} />
+                    {t.label} — {t.day}
+                  </div>
+                ))}
+              </div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-              {p.tasks.map((t, i) => (
-                <div className="ptask" key={i}>
-                  <span className="box" />
-                  {t.label} — {t.day}
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <Foot left={CHORE_FOOTER} />
-    </div>
+    </Sheet>
   );
 }
 
 function TrainingSheet() {
   return (
-    <div className="sheet">
+    <Sheet>
       <Head title="Träningar" sub="Vecka 37 · tider, plats och skjuts" right={FAMILY_KIDS} />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', marginTop: 6 }}>
         {TRAININGS.map((t, i) => (
@@ -203,20 +256,20 @@ function TrainingSheet() {
             <div className="sk">{t.sheetDay}</div>
             <div style={{ flex: 1 }}>
               <div className="st">{t.sheet.title}</div>
-              <div className="sm">{t.sheet.meta}</div>
+              <div className="sm"><Named text={t.sheet.meta} /></div>
             </div>
           </div>
         ))}
       </div>
       <Foot left={TRAINING_FOOTER} />
-    </div>
+    </Sheet>
   );
 }
 
 function DateSheet() {
   const cells = [null, ...Array.from({ length: 30 }, (_, i) => i + 1)];
   return (
-    <div className="sheet">
+    <Sheet>
       <Head title="Viktiga datum" sub={`${MONTH_LABEL} · månadsöversikt`} right="Familjen" />
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7,1fr)', gap: 4, margin: '14px 0 6px' }}>
         {['Mån', 'Tis', 'Ons', 'Tor', 'Fre', 'Lör', 'Sön'].map((d) => (
@@ -240,13 +293,13 @@ function DateSheet() {
           <div className="srow" key={i}>
             <div className="sk">{d.num} {d.mon}</div>
             <div style={{ flex: 1 }}>
-              <div className="st">{d.title}</div>
-              <div className="sm">{d.meta}</div>
+              <div className="st"><Named text={d.title} /></div>
+              <div className="sm"><Named text={d.meta} /></div>
             </div>
           </div>
         ))}
       </div>
       <Foot left="🤸 träning · 📅 möte · 🎂 födelsedag" />
-    </div>
+    </Sheet>
   );
 }

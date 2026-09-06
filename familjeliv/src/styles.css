@@ -39,16 +39,36 @@ button { font-family: inherit; }
 
 .print-root { display: none; }
 
+/* Bladen ska tåla att sitta uppe i köket: ram, familjeband och luft. */
 .sheet {
   width: 496px;
   height: 701px;
   background: #fff;
-  padding: 38px 40px;
+  padding: 15px;
   box-sizing: border-box;
   font-family: 'Baloo 2', system-ui, sans-serif;
   display: flex;
-  flex-direction: column;
   color: #111827;
+}
+.sheet-frame {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  border: 2.5px solid #111827;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+}
+/* Familjens färger som ett band längst upp — samma ordning som i appen. */
+.sheet-ribbon { display: flex; flex: none; height: 8px; }
+.sheet-ribbon > span { flex: 1; }
+.sheet-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px 14px;
 }
 .shead { display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 3px solid #111827; padding-bottom: 10px; }
 .sh1 { font-size: 29px; font-weight: 900; color: #111827; line-height: 1; }
@@ -60,8 +80,8 @@ button { font-family: inherit; }
 .sm { font-size: 14px; font-weight: 600; color: #4b5563; }
 .sfoot { border-top: 3px solid #111827; padding-top: 10px; display: flex; justify-content: space-between; gap: 16px; font-size: 13px; font-weight: 700; color: #4b5563; }
 .box { width: 17px; height: 17px; border: 2px solid #111827; border-radius: 4px; display: inline-block; flex: none; }
-.pers { border: 2px solid #111827; border-radius: 12px; padding: 10px 14px; }
-.pnm { font-size: 18px; font-weight: 900; color: #111827; margin-bottom: 5px; }
+.pers { border: 2px solid #111827; border-radius: 12px; padding: 8px 13px 9px; }
+.pnm { font-size: 18px; font-weight: 900; color: #111827; margin-bottom: 4px; }
 .pnm span { font-size: 14px; font-weight: 700; color: #4b5563; }
 .ptask { display: flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 600; color: #111827; }
 
