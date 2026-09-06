@@ -101,16 +101,17 @@ export const FAMILY_GRADIENT = [
 export type Member = {
   name: string;
   short: string;
-  role: string;
+  /** Vad personen har hand om. Utelämnat för barnen — åldrar står ingenstans. */
+  role?: string;
   avatar: string;
 };
 
 export const MEMBERS: Member[] = [
   { name: 'Martin', short: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg' },
   { name: 'Karin', short: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg' },
-  { name: 'Astrid', short: 'Astrid', role: '11 år', avatar: '/avatars/astrid.svg' },
-  { name: 'Signe', short: 'Signe', role: '8 år', avatar: '/avatars/signe.svg' },
-  { name: 'Bodil', short: 'Bodil', role: '1 år', avatar: '/avatars/bodil.svg' },
+  { name: 'Astrid', short: 'Astrid', avatar: '/avatars/astrid.svg' },
+  { name: 'Signe', short: 'Signe', avatar: '/avatars/signe.svg' },
+  { name: 'Bodil', short: 'Bodil', avatar: '/avatars/bodil.svg' },
 ];
 
 /** p = vem raden gäller: ett namn, flera namn eller 'alla'. */
@@ -199,16 +200,16 @@ export type Chore = {
   /** Kort form för veckobladets smala städkolumn, där sysslan står sju gånger. */
   short?: string;
 };
-export type Person = { name: string; role: string; avatar: string; tasks: Chore[] };
+export type Person = { name: string; role?: string; avatar: string; tasks: Chore[] };
 
 export const PEOPLE: Person[] = [
   {
-    name: 'Astrid', role: '11 år', avatar: '/avatars/astrid.svg', tasks: [
+    name: 'Astrid', avatar: '/avatars/astrid.svg', tasks: [
       { label: 'Städa sitt rum', day: 'dagl', d: 0, time: '18:45', short: 'rummet' },
     ],
   },
   {
-    name: 'Signe', role: '8 år', avatar: '/avatars/signe.svg', tasks: [
+    name: 'Signe', avatar: '/avatars/signe.svg', tasks: [
       { label: 'Städa sitt rum', day: 'dagl', d: 0, time: '18:45', short: 'rummet' },
     ],
   },
@@ -229,15 +230,6 @@ export const PEOPLE: Person[] = [
     ],
   },
 ];
-
-/** Sysslor som görs varje dag — de står en gång på veckobladet, inte i sju rutor. */
-export const DAILY_CHORES = PEOPLE.flatMap((p) =>
-  p.tasks
-    .filter((t) => t.day === 'dagl')
-    // Bara första bokstaven gemen: "Martin hjälper Astrid och Signe …" ska
-    // behålla namnen med versal, annars färgas de inte.
-    .map((t) => `${p.name} ${t.label[0].toLowerCase()}${t.label.slice(1)}${t.time ? ` ${t.time}` : ''}`),
-);
 
 /** "varje dag 18:45" läser bättre på ett blad än "dagl". */
 export const choreDay = (t: Chore) => (t.day === 'dagl' ? 'varje dag' : t.day) + (t.time ? ` ${t.time}` : '');
@@ -265,8 +257,8 @@ export type Training = {
 };
 
 export const TRAININGS: Training[] = [
-  { day: 'mån', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', dropoff: { by: 'Karin' }, pickup: { by: 'Martin', time: '18:15' }, c: 'ord' },
-  { day: 'tis', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'ord' },
+  { day: 'mån', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', dropoff: { by: 'Karin', time: '17:45' }, pickup: { by: 'Martin', time: '19:00' }, c: 'ord' },
+  { day: 'tis', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', dropoff: { by: 'Karin', time: '17:00' }, pickup: { by: 'Karin', time: '18:15' }, c: 'ord' },
   { day: 'lör', time: '10:30', title: 'Street feet', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
   { day: 'lör', time: '13:00', title: 'Street feet', person: 'Signe', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
 ];

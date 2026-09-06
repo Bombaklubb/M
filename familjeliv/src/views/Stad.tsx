@@ -39,7 +39,7 @@ export function Stad({ filter, onPrint }: Props) {
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontSize: 17, fontWeight: 900, color: c.fg, lineHeight: 1.15 }}>{p.name}</div>
-                  <div style={{ fontSize: 12.5, fontWeight: 700, color: '#6b7280' }}>{p.role}</div>
+                  {p.role && <div style={{ fontSize: 12.5, fontWeight: 700, color: '#6b7280' }}>{p.role}</div>}
                 </div>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>

@@ -234,7 +234,6 @@ function ChoreSheet() {
               <div className="pnm" style={{ color: c.fg }}>
                 <span style={{ display: 'inline-block', width: 9, height: 9, borderRadius: 99, background: c.base, marginRight: 7 }} />
                 {p.name}
-                {/\d+\s*år/.test(p.role) && <span> · {p.role}</span>}
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
                 {p.tasks.map((t, i) => (
