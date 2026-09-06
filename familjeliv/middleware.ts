@@ -1,5 +1,4 @@
 import { next } from '@vercel/edge';
-import { FAMILY_GRADIENT } from './src/data';
 
 /**
  * Lösenordsskydd som körs på Vercels edge, före att något innehåll levereras.
@@ -66,6 +65,24 @@ export default async function middleware(req: Request) {
 
   return loginPage(false);
 }
+
+/**
+ * Samma bakgrund som appens rubrik — familjens fem färger blandade över en mörk bas.
+ *
+ * Skriven i klartext i stället för importerad från `src/data.ts`: middleware körs på
+ * Vercels edge och paketeras för sig, och en import härifrån in i appens källkod fällde
+ * hela funktionen (MIDDLEWARE_INVOCATION_FAILED — sidan svarade 500 i stället för att
+ * be om lösenordet). Testet i `mw-test.mjs` jämför strängen med `FAMILY_GRADIENT`, så
+ * de två kan inte glida isär obemärkt.
+ */
+const FAMILY_GRADIENT =
+  'linear-gradient(180deg, rgba(17,24,39,.34) 0%, rgba(17,24,39,.10) 46%, rgba(17,24,39,.24) 100%), ' +
+  'radial-gradient(90% 130% at 4% 18%, #16a34ad9 0%, #16a34a66 38%, #16a34a00 62%), ' +
+  'radial-gradient(85% 140% at 30% 96%, #2563ebd9 0%, #2563eb66 38%, #2563eb00 62%), ' +
+  'radial-gradient(80% 130% at 52% -6%, #9333ead9 0%, #9333ea66 38%, #9333ea00 62%), ' +
+  'radial-gradient(85% 130% at 76% 104%, #ec4899d9 0%, #ec489966 38%, #ec489900 62%), ' +
+  'radial-gradient(90% 140% at 100% 12%, #f97316d9 0%, #f9731666 38%, #f9731600 62%), ' +
+  'linear-gradient(150deg, #1e1b4b 0%, #312e81 52%, #4c1d95 100%)';
 
 const AVATARS = ['martin', 'karin', 'astrid', 'signe', 'bodil'];
 const RINGS: Record<string, string> = { martin: '#86efac', karin: '#93c5fd', astrid: '#d8b4fe', signe: '#f9a8d4', bodil: '#fdba74' };
