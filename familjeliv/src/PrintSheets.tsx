@@ -1,8 +1,9 @@
 import { Fragment, type ReactNode } from 'react';
 import {
   choreDay, colorOf, FAMILY_KIDS, FAMILY_PARENTS, MEALS, mealWho, MEMBERS, PEOPLE,
-  PERSON_COLOR, sheetDayFor, SLOT_LABEL, TRAININGS, trainingRide, weekLong, weekRows,
+  sheetDayFor, SLOT_LABEL, TRAININGS, trainingRide, weekLong, weekRows,
 } from './data';
+import { Named } from './Named';
 
 const A4_W = 793.7;
 const A4_H = 1122.5;
@@ -31,23 +32,6 @@ export function PrintSheets({ sel, orient }: Props) {
 }
 
 const FAMILY = MEMBERS.map((m) => m.name);
-const NAME_RE = new RegExp(`\\b(${Object.keys(PERSON_COLOR).join('|')})\\b`, 'g');
-
-/**
- * Skriver ut en text där familjens namn får sin egen färg. Samma färgkod som i
- * appen, så den som läser bladet på kylskåpet hittar sitt namn direkt.
- */
-function Named({ text }: { text: string }) {
-  return (
-    <>
-      {text.split(NAME_RE).map((part, i) =>
-        FAMILY.includes(part)
-          ? <span key={i} style={{ color: colorOf(part).fg, fontWeight: 800 }}>{part}</span>
-          : <Fragment key={i}>{part}</Fragment>,
-      )}
-    </>
-  );
-}
 
 /** Ramen som alla blad delar: kant, rundade hörn och familjebandet överst. */
 function Sheet({ children }: { children: ReactNode }) {
@@ -235,10 +219,10 @@ function ChoreSheet() {
                 <span style={{ display: 'inline-block', width: 9, height: 9, borderRadius: 99, background: c.base, marginRight: 7 }} />
                 {p.name}
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
                 {p.tasks.map((t, i) => (
                   <div className="ptask" key={i}>
-                    <span style={{ width: 9, height: 9, borderRadius: 99, background: c.base, flex: 'none' }} />
+                    <span style={{ width: 8, height: 8, borderRadius: 99, background: c.base, flex: 'none' }} />
                     {t.label} — {choreDay(t)}
                   </div>
                 ))}

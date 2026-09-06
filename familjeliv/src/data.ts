@@ -115,7 +115,15 @@ export const MEMBERS: Member[] = [
 ];
 
 /** p = vem raden gäller: ett namn, flera namn eller 'alla'. */
-export type DayItem = { icon: string; label: string; meta: string; k: Kind; p: string | string[] };
+export type DayItem = {
+  icon: string;
+  label: string;
+  meta: string;
+  /** Skjutsen, på egen rad under raden: "Karin lämnar 17:45 · Martin hämtar 19:00". */
+  ride?: string;
+  k: Kind;
+  p: string | string[];
+};
 
 /** Filtret i toppen: visa raden när ingen är vald, när den gäller alla eller den valda. */
 export const forPerson = (p: DayItem['p'], filter: string | null) =>
@@ -139,6 +147,9 @@ export function weekDays(now = new Date()): Day[] {
   });
 }
 
+/** Stor bokstav först, resten orört — namn mitt i texten ska behålla sin versal. */
+const versal = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
 /** "Mån 7" för utskriftsbladen, uträknat ur veckodagens namn. */
 export const sheetDayFor = (namn: string, now = new Date()) =>
   weekDays(now).find((d) => d.name === namn)?.sheetDay ?? namn;
@@ -146,12 +157,20 @@ export const sheetDayFor = (namn: string, now = new Date()) =>
 /**
  * Dagens rader byggs av träningarna och matansvaret — samma källa som flikarna
  * och utskriften, så tavlan aldrig kan säga något annat än schemat.
+ *
+ * Sysslorna kommer med först när man filtrerat fram en person. Allas sysslor på
+ * alla sju dagar blir ett trettiotal rader och tavlan slutar rymmas i en bild,
+ * men "vad ska jag göra idag" är precis vad man vill se när man tryckt på sitt
+ * eget ansikte.
  */
-export function dayItems(d: Day): DayItem[] {
+export function dayItems(d: Day, filter: string | null = null): DayItem[] {
   const träning: DayItem[] = TRAININGS.filter((t) => t.day === d.name).map((t) => ({
     icon: '🤸',
     label: `${t.short ?? t.title} ${t.time}`,
     meta: t.place ? `${t.person} · ${t.place}` : t.person,
+    // Skjutsen står på tavlan, inte bara under Träning: det är den som avgör
+    // vem som måste vara hemma när.
+    ride: trainingRide(t) || undefined,
     k: 'tran',
     p: t.person,
   }));
@@ -162,7 +181,19 @@ export function dayItems(d: Day): DayItem[] {
     k: 'mat',
     p: 'alla',
   }));
-  return [...träning, ...mat];
+  // Dagens sysslor blir en enda rad. Karins tre dagliga blir annars tjugoen
+  // rader på en vecka, och då ryms inte dagarna på en telefonskärm.
+  const dagens = (PEOPLE.find((p) => p.name === filter)?.tasks ?? []).filter((t) => choreOnDay(t, d.name));
+  const städ: DayItem[] = dagens.length === 0 ? [] : [{
+    icon: '🧹',
+    label: versal(dagens.map((t) => t.short ?? t.label.toLowerCase()).join(', ')),
+    // Dagen står redan på kortet; bara klockslaget behöver upprepas.
+    meta: dagens.find((t) => t.time)?.time ?? '',
+    k: 'stad',
+    p: filter as string,
+  }];
+
+  return [...träning, ...mat, ...städ];
 }
 
 export type Slot = 'lunch' | 'middag';
@@ -194,8 +225,12 @@ export const MEALS: Meal[] = [
 
 export type Chore = {
   label: string;
-  day: string;
-  d: number;
+  /**
+   * När sysslan görs: en veckodag ('mån'…'sön'), 'dagl' varje dag, 'helg' både
+   * lördag och söndag, eller 'behov' — något man har ansvar för men som inte
+   * hör till en viss dag.
+   */
+  day: 'dagl' | 'helg' | 'behov' | 'mån' | 'tis' | 'ons' | 'tor' | 'fre' | 'lör' | 'sön';
   time?: string;
   /** Kort form för veckobladets smala städkolumn, där sysslan står sju gånger. */
   short?: string;
@@ -205,34 +240,48 @@ export type Person = { name: string; role?: string; avatar: string; tasks: Chore
 export const PEOPLE: Person[] = [
   {
     name: 'Astrid', avatar: '/avatars/astrid.svg', tasks: [
-      { label: 'Städa sitt rum', day: 'dagl', d: 0, time: '18:45', short: 'rummet' },
+      { label: 'Städa sitt rum', day: 'dagl', time: '18:45', short: 'rummet' },
     ],
   },
   {
     name: 'Signe', avatar: '/avatars/signe.svg', tasks: [
-      { label: 'Städa sitt rum', day: 'dagl', d: 0, time: '18:45', short: 'rummet' },
+      { label: 'Städa sitt rum', day: 'dagl', time: '18:45', short: 'rummet' },
     ],
   },
   {
     name: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg', tasks: [
-      { label: 'Plocka ur diskmaskinen', day: 'dagl', d: 0, short: 'diskmaskin' },
-      { label: 'Tömma kompost och skräp', day: 'dagl', d: 0, short: 'kompost' },
-      { label: 'Plocka undan leksaker i kök och vardagsrum', day: 'dagl', d: 0, short: 'leksaker' },
+      { label: 'Plocka ur diskmaskinen', day: 'dagl', short: 'diskmaskin' },
+      { label: 'Tömma kompost och skräp', day: 'dagl', short: 'kompost' },
+      { label: 'Plocka undan leksaker i kök och vardagsrum', day: 'dagl', short: 'leksaker' },
+      { label: 'Tvätta barnkläder', day: 'helg', short: 'barnkläder' },
+      { label: 'Extra ansvar Signes rum', day: 'behov', short: 'Signes rum' },
     ],
   },
   {
-    name: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg', tasks: [
-      { label: 'Hjälper Astrid och Signe med rummen', day: 'dagl', d: 0, time: '18:45', short: 'hjälper rummen' },
-      { label: 'Städa toaletterna', day: 'lör', d: 5, short: 'toaletterna' },
-      { label: 'Dammsuga', day: 'lör', d: 5, short: 'dammsuga' },
-      { label: 'Tvättstugan', day: 'lör', d: 5, short: 'tvättstugan' },
-      { label: 'Hallen', day: 'lör', d: 5, short: 'hallen' },
+    name: 'Martin', avatar: '/avatars/martin.svg', tasks: [
+      { label: 'Hjälper Astrid och Signe med rummen', day: 'dagl', time: '18:45', short: 'hjälper rummen' },
+      { label: 'Städa toaletterna', day: 'lör', short: 'toaletterna' },
+      { label: 'Dammsuga', day: 'lör', short: 'dammsuga' },
+      { label: 'Tvättstugan', day: 'lör', short: 'tvättstugan' },
+      { label: 'Hallen', day: 'lör', short: 'hallen' },
+      { label: 'Vita rummet', day: 'helg', short: 'vita rummet' },
+      { label: 'Extra ansvar Astrids rum', day: 'behov', short: 'Astrids rum' },
     ],
   },
 ];
 
+const CHORE_DAY: Partial<Record<Chore['day'], string>> = {
+  dagl: 'varje dag',
+  helg: 'helgen',
+  behov: 'vid behov',
+};
+
 /** "varje dag 18:45" läser bättre på ett blad än "dagl". */
-export const choreDay = (t: Chore) => (t.day === 'dagl' ? 'varje dag' : t.day) + (t.time ? ` ${t.time}` : '');
+export const choreDay = (t: Chore) => (CHORE_DAY[t.day] ?? t.day) + (t.time ? ` ${t.time}` : '');
+
+/** Gäller sysslan den här dagen? 'behov' hör inte till någon dag och räknas aldrig med. */
+const choreOnDay = (t: Chore, dag: string) =>
+  t.day === 'dagl' || t.day === dag || (t.day === 'helg' && (dag === 'lör' || dag === 'sön'));
 
 export type TrainingColor = { border: string; tint: string; fg: string };
 export const TC: Record<string, TrainingColor> = {
@@ -343,7 +392,7 @@ export function weekRows(now = new Date()) {
       PEOPLE.map((p) => ({
         who: p.name,
         labels: p.tasks
-          .filter((t) => t.day === 'dagl' || t.day === d.name)
+          .filter((t) => choreOnDay(t, d.name))
           .map((t) => t.short ?? t.label.toLowerCase()),
       })).filter((g) => g.labels.length > 0),
     ),
