@@ -39,6 +39,7 @@ export function Tran({ filter, onPrint }: Props) {
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontSize: 17, fontWeight: 900, color: '#111827', lineHeight: 1.2 }}>{t.title}</div>
+              {t.place && <div style={{ fontSize: 13.5, fontWeight: 600, color: '#4b5563' }}>{t.place}</div>}
               <div style={{ fontSize: 14, fontWeight: 800, color: person.fg }}>{t.person}</div>
               {t.driver && (
                 <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', marginTop: 2 }}>
