@@ -158,6 +158,8 @@ export type Training = {
   sheetDay: string;
   time: string;
   title: string;
+  /** Kortare namn när plats saknas, som i veckobladets smala kolumn. */
+  short?: string;
   place: string;
   who: string;
   c: keyof typeof TC;
@@ -177,7 +179,7 @@ export const TRAININGS: Training[] = [
     sheet: { title: 'Gymnastik 17:00–18:15', meta: 'Astrid · Idrottshuset sal B · Martin skjutsar · ta med vattenflaska' },
   },
   {
-    day: 'tis', sheetDay: 'Tis 8', time: '17:30', title: 'Street feet (dans)', place: 'Kulturskolan, sal 2',
+    day: 'tis', sheetDay: 'Tis 8', time: '17:30', title: 'Street feet (dans)', short: 'Street feet', place: 'Kulturskolan, sal 2',
     who: 'Signe · Karin skjutsar', c: 'gram',
     det: [
       { icon: '⏱', label: '17:30–18:30', meta: 'Terminen slutar 12 dec', k: 'tran' },
@@ -205,7 +207,7 @@ export const TRAININGS: Training[] = [
     sheet: { title: 'Simskola 09:00–09:45', meta: 'Bodil · Simhallen · Martin följer med i vattnet' },
   },
   {
-    day: 'lör', sheetDay: 'Lör 12', time: '11:00', title: 'Uppvisning Street feet', place: 'Kulturhuset, stora scenen',
+    day: 'lör', sheetDay: 'Lör 12', time: '11:00', title: 'Uppvisning Street feet', short: 'Uppvisning', place: 'Kulturhuset, stora scenen',
     who: 'Signe · hela familjen kommer', c: 'gram',
     det: [
       { icon: '⏱', label: '11:00, på plats 10:30', meta: 'Ca 40 min', k: 'tran' },
@@ -239,8 +241,12 @@ export const TABS: { id: TabId; icon: string; label: string }[] = [
   { id: 'dat', icon: '📅', label: 'Datum' },
 ];
 
-export const PRINTS: { k: Kind; label: string; icon: string }[] = [
-  { k: 'mat', label: 'Matschema (kylskåpslapp)', icon: '🍽' },
+/** Utskriftsbladen: veckobladet först, det är kylskåpslappen. */
+export type PrintKey = Kind | 'vecka';
+
+export const PRINTS: { k: PrintKey; label: string; icon: string }[] = [
+  { k: 'vecka', label: 'Veckobladet (allt på ett)', icon: '🗓' },
+  { k: 'mat', label: 'Matschema', icon: '🍽' },
   { k: 'stad', label: 'Städschema per person', icon: '🧹' },
   { k: 'tran', label: 'Träningskalender', icon: '🤸' },
   { k: 'dat', label: 'Viktiga datum, månad', icon: '📅' },
@@ -248,3 +254,24 @@ export const PRINTS: { k: Kind; label: string; icon: string }[] = [
 
 export const FAMILY_PARENTS = 'Martin & Karin';
 export const FAMILY_KIDS = 'Astrid · Signe · Bodil';
+
+/** Sysslor som återkommer varje dag hamnar i veckobladets sidfot, inte i varje ruta. */
+export const DAILY_CHORES = PEOPLE.flatMap((p) =>
+  p.tasks.filter((t) => t.day === 'dagl').map((t) => `${p.name} ${t.label.toLowerCase()}`),
+);
+
+/** En rad per dag: träning, middag och vem som gör vad — grunden för veckobladet. */
+export function weekRows() {
+  return DAYS.map((d) => ({
+    day: `${d.name} ${d.date.split('/')[0]}`,
+    today: !!d.today,
+    trainings: TRAININGS.filter((t) => t.day === d.name).map((t) => ({
+      title: `${t.short ?? t.title} ${t.time}`,
+      meta: t.who,
+    })),
+    meal: MEALS.find((m) => m.day === d.name) ?? null,
+    chores: PEOPLE.flatMap((p) =>
+      p.tasks.filter((t) => t.day === d.name).map((t) => ({ who: p.name, label: t.label })),
+    ),
+  }));
+}

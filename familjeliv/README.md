@@ -35,7 +35,7 @@ lokalt (`npm run dev`) är appen olåst.
 | `src/App.tsx` | Skalet: rubrik med avatarfilter, flikar, bottenpaneler |
 | `src/views/` | En fil per flik: Hem, Mat, Städ, Träning, Datum |
 | `src/Sheets.tsx` | Detaljpanelen och utskriftspanelen |
-| `src/PrintSheets.tsx` | De fyra A4-bladen, renderas bara i `@media print` |
+| `src/PrintSheets.tsx` | De fem A4-bladen, renderas bara i `@media print` |
 | `src/usePersisted.ts` | Sparar avbockat, inköpslista och utskriftsval i `localStorage` |
 | `middleware.ts` | Lösenordsskyddet på Vercels edge |
 | `design/` | Designprototyperna från Claude Design som appen är byggd efter |
@@ -44,9 +44,21 @@ Avbockade sysslor och inköpslistan sparas per enhet i webbläsaren — ingen se
 
 ## Utskrift
 
-🖨-knappen väljer vilka blad som ska med (matschema, städschema, träningskalender,
-viktiga datum) och stående eller liggande A4. Bladen skalas till exakt A4-format och
-skrivs ut via webbläsarens vanliga utskrift.
+🖨-knappen väljer vilka blad som ska med och stående eller liggande A4. Bladen skalas
+till exakt A4-format och skrivs ut via webbläsarens vanliga utskrift.
+
+| Blad | Innehåll |
+| --- | --- |
+| **Veckobladet** | Kylskåpslappen: en rad per dag med träning, middag och vem som gör vad |
+| Matschema | Veckans middagar plus vad som är kvar att handla |
+| Städschema | Per person, med rutor att kryssa i för hand |
+| Träningskalender | Tider, plats, skjuts och vad som ska tas med |
+| Viktiga datum | Månadsrutnät och kommande händelser |
+
+Veckobladet är förvalt och går att titta på i appen innan utskrift — knappen
+👁 **Titta på veckobladet** i utskriftspanelen visar bladet nedskalat, precis som det
+kommer ut på papper. Sysslor som återkommer varje dag hamnar i sidfoten i stället för
+i varje ruta, så rutnätet bara visar det som skiljer dagarna åt.
 
 ## Deploy
 
