@@ -1,7 +1,8 @@
 import { Fragment, type ReactNode } from 'react';
 import {
-  CAL_MARK, choreDay, colorOf, DATES, FAMILY_KIDS, FAMILY_PARENTS, MEALS, mealWho, MEMBERS,
-  MONTH_LABEL, PEOPLE, PERSON_COLOR, SLOT_LABEL, TRAININGS, trainingDriver, WEEK_LONG, weekRows,
+  CAL_MARK, choreDay, colorOf, DAILY_CHORES, DATES, FAMILY_KIDS, FAMILY_PARENTS, MEALS, mealWho,
+  MEMBERS, MONTH_LABEL, PEOPLE, PERSON_COLOR, SLOT_LABEL, TRAININGS, trainingRide, WEEK_LONG,
+  weekRows,
 } from './data';
 
 const A4_W = 793.7;
@@ -112,7 +113,7 @@ export function WeekSheet() {
   const cell = (weekend: boolean): React.CSSProperties => ({
     borderBottom: '1px solid #d1d5db',
     background: weekend ? '#f4f5f7' : 'transparent',
-    padding: '7px 8px 7px 6px',
+    padding: '6px 7px 6px 5px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -126,12 +127,20 @@ export function WeekSheet() {
   return (
     <Sheet>
       <Head title="Veckan" sub={WEEK_LONG} right="Familjen" />
-      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '52px 1.15fr 1fr', gridTemplateRows: 'auto repeat(7,auto)', marginTop: 8 }}>
-        {['', '🤸 Träning', '🍽 Mat'].map((h, i) => (
+      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '40px 1.5fr 0.7fr 0.9fr', gridTemplateRows: 'auto auto repeat(7,auto)', marginTop: 8 }}>
+        {['', '🤸 Träning', '🍽 Mat', '🧹 Städ'].map((h, i) => (
           <div key={i} style={{ borderBottom: '2px solid #111827', padding: '0 8px 5px 6px', fontSize: 10, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#4b5563' }}>
             {h}
           </div>
         ))}
+
+        {/* De dagliga sysslorna står en gång, inte i sju rutor. */}
+        <div style={{ gridColumn: '1 / -1', display: 'flex', gap: 8, alignItems: 'baseline', padding: '6px 6px 7px', borderBottom: '1px solid #d1d5db', background: '#fafafa' }}>
+          <span style={{ flex: 'none', fontSize: 8.5, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#6b7280' }}>Varje dag</span>
+          <span style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.25 }}>
+            <Named text={DAILY_CHORES.join(' · ')} />
+          </span>
+        </div>
 
         {rows.map((r, i) => {
           const weekend = i >= 5;
@@ -145,8 +154,13 @@ export function WeekSheet() {
                 {r.trainings.length === 0 && <Empty />}
                 {r.trainings.map((t, j) => (
                   <div key={j}>
-                    <div style={{ fontSize: 12.5, fontWeight: 800, color: '#111827', lineHeight: 1.15 }}>{t.title}</div>
-                    <div style={{ fontSize: 11, fontWeight: 700, lineHeight: 1.2 }}><Named text={t.meta} /></div>
+                    <div style={{ fontSize: 12, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{t.title}</div>
+                    <div style={{ fontSize: 10.5, fontWeight: 700, lineHeight: 1.15 }}><Named text={t.meta} /></div>
+                    {t.ride && (
+                      <div style={{ fontSize: 9.5, fontWeight: 600, color: '#6b7280', lineHeight: 1.15 }}>
+                        🚗 <Named text={t.ride} />
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -154,11 +168,25 @@ export function WeekSheet() {
               <div style={cell(weekend)}>
                 {r.meals.length === 0 && <Empty />}
                 {r.meals.map((m) => (
-                  <div key={m.slot} style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
-                    <span style={{ flex: 'none', width: 46, fontSize: 9.5, fontWeight: 900, letterSpacing: '.05em', textTransform: 'uppercase', color: '#6b7280' }}>
+                  <div key={m.slot} style={{ minWidth: 0 }}>
+                    <div style={{ fontSize: 8.5, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#6b7280', lineHeight: 1.25 }}>
                       {SLOT_LABEL[m.slot]}
-                    </span>
-                    <span style={{ fontSize: 12.5, fontWeight: 800, color: '#111827' }}><Named text={mealWho(m)} /></span>
+                    </div>
+                    <div style={{ fontSize: 12, fontWeight: 800, color: '#111827', lineHeight: 1.15 }}><Named text={mealWho(m)} /></div>
+                  </div>
+                ))}
+              </div>
+
+              <div style={cell(weekend)}>
+                {r.chores.length === 0 && <Empty />}
+                {r.chores.map((g) => (
+                  <div key={g.who}>
+                    <div style={{ fontSize: 11, fontWeight: 800, color: colorOf(g.who).fg, lineHeight: 1.2 }}>{g.who}</div>
+                    {g.labels.map((label) => (
+                      <div key={label} style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.2 }}>
+                        {label[0].toLowerCase() + label.slice(1)}
+                      </div>
+                    ))}
                   </div>
                 ))}
               </div>
@@ -245,7 +273,7 @@ function TrainingSheet() {
               <div className="sm">
                 <Named text={t.person} />
                 {t.place && <> · {t.place}</>}
-                {t.driver && <> · <Named text={trainingDriver(t)} /></>}
+                {trainingRide(t) && <> · <Named text={trainingRide(t)} /></>}
               </div>
             </div>
           </div>
