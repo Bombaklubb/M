@@ -1,19 +1,17 @@
 import { Fragment, type ReactNode } from 'react';
 import {
-  BUYS, CAL_MARK, CHORE_FOOTER, colorOf, DAILY_CHORES, DATES, FAMILY_KIDS, FAMILY_PARENTS,
-  choreDay, MEALS, mealWho, MEMBERS, MONTH_LABEL, PEOPLE, PERSON_COLOR, SLOT_LABEL,
-  TRAININGS, TRAINING_FOOTER, WEEK_LONG, weekRows,
+  CAL_MARK, choreDay, colorOf, DATES, FAMILY_KIDS, FAMILY_PARENTS, MEALS, mealWho, MEMBERS,
+  MONTH_LABEL, PEOPLE, PERSON_COLOR, SLOT_LABEL, TRAININGS, trainingDriver, WEEK_LONG, weekRows,
 } from './data';
-import type { Flags } from './usePersisted';
 
 const A4_W = 793.7;
 const A4_H = 1122.5;
 const SHEET_W = 496;
 const SHEET_H = 701;
 
-type Props = { sel: Flags; orient: 'port' | 'land'; bought: Flags };
+type Props = { sel: Record<string, boolean>; orient: 'port' | 'land' };
 
-export function PrintSheets({ sel, orient, bought }: Props) {
+export function PrintSheets({ sel, orient }: Props) {
   const port = orient === 'port';
   const vars = {
     '--page-w': `${port ? A4_W : A4_H}px`,
@@ -25,7 +23,7 @@ export function PrintSheets({ sel, orient, bought }: Props) {
     <div className="print-root" style={vars}>
       <style>{`@page { size: A4 ${port ? 'portrait' : 'landscape'}; margin: 0; }`}</style>
       {sel.vecka && <Page><WeekSheet /></Page>}
-      {sel.mat && <Page><MealSheet bought={bought} /></Page>}
+      {sel.mat && <Page><MealSheet /></Page>}
       {sel.stad && <Page><ChoreSheet /></Page>}
       {sel.tran && <Page><TrainingSheet /></Page>}
       {sel.dat && <Page><DateSheet /></Page>}
@@ -114,40 +112,32 @@ export function WeekSheet() {
   const cell = (weekend: boolean): React.CSSProperties => ({
     borderBottom: '1px solid #d1d5db',
     background: weekend ? '#f4f5f7' : 'transparent',
-    padding: '5px 7px 5px 6px',
+    padding: '7px 8px 7px 6px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    gap: 3,
+    gap: 4,
     minWidth: 0,
     // Raderna delar sidan lika; overflow hidden är spärren mot att en lång
-    // syssla trycker ut bladet under papperskanten.
+    // rad trycker ut bladet under papperskanten.
     overflow: 'hidden',
   });
 
   return (
     <Sheet>
       <Head title="Veckan" sub={WEEK_LONG} right="Familjen" />
-      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '44px 1.35fr 1.15fr 0.8fr', gridTemplateRows: 'auto auto repeat(7,auto)', marginTop: 8 }}>
-        {['', '🤸 Träning', '🍽 Mat', '🧹 Vem gör vad'].map((h, i) => (
-          <div key={i} style={{ borderBottom: '2px solid #111827', padding: '0 7px 4px 6px', fontSize: 9.5, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#4b5563' }}>
+      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '52px 1.15fr 1fr', gridTemplateRows: 'auto repeat(7,auto)', marginTop: 8 }}>
+        {['', '🤸 Träning', '🍽 Mat'].map((h, i) => (
+          <div key={i} style={{ borderBottom: '2px solid #111827', padding: '0 8px 5px 6px', fontSize: 10, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#4b5563' }}>
             {h}
           </div>
         ))}
-
-        {/* De dagliga sysslorna står en gång, inte i sju rutor. */}
-        <div style={{ gridColumn: '1 / -1', display: 'flex', gap: 8, alignItems: 'baseline', padding: '6px 6px 7px', borderBottom: '1px solid #d1d5db', background: '#fafafa' }}>
-          <span style={{ flex: 'none', fontSize: 8.5, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#6b7280' }}>Varje dag</span>
-          <span style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.25 }}>
-            <Named text={DAILY_CHORES.join(' · ')} />
-          </span>
-        </div>
 
         {rows.map((r, i) => {
           const weekend = i >= 5;
           return (
             <Fragment key={r.day}>
-              <div style={{ ...cell(weekend), paddingLeft: 0, fontSize: 12.5, fontWeight: 900, textTransform: 'uppercase', color: '#111827', justifyContent: 'center' }}>
+              <div style={{ ...cell(weekend), paddingLeft: 0, fontSize: 13.5, fontWeight: 900, textTransform: 'uppercase', color: '#111827' }}>
                 {r.day}
               </div>
 
@@ -155,8 +145,8 @@ export function WeekSheet() {
                 {r.trainings.length === 0 && <Empty />}
                 {r.trainings.map((t, j) => (
                   <div key={j}>
-                    <div style={{ fontSize: 11.5, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{t.title}</div>
-                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}><Named text={t.meta} /></div>
+                    <div style={{ fontSize: 12.5, fontWeight: 800, color: '#111827', lineHeight: 1.15 }}>{t.title}</div>
+                    <div style={{ fontSize: 11, fontWeight: 700, lineHeight: 1.2 }}><Named text={t.meta} /></div>
                   </div>
                 ))}
               </div>
@@ -164,23 +154,11 @@ export function WeekSheet() {
               <div style={cell(weekend)}>
                 {r.meals.length === 0 && <Empty />}
                 {r.meals.map((m) => (
-                  <div key={m.slot}>
-                    {r.meals.length > 1 && (
-                      <div style={{ fontSize: 8.5, fontWeight: 900, letterSpacing: '.06em', color: '#6b7280', lineHeight: 1.3 }}>
-                        {SLOT_LABEL[m.slot].toUpperCase()}
-                      </div>
-                    )}
-                    <div style={{ fontSize: 11.5, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{m.dish}</div>
-                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}><Named text={`${m.cook ?? 'Flexibelt'} · ${m.when}`} /></div>
-                  </div>
-                ))}
-              </div>
-
-              <div style={cell(weekend)}>
-                {r.chores.length === 0 && <Empty />}
-                {r.chores.map((c, j) => (
-                  <div key={j} style={{ fontSize: 10.5, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}>
-                    <Named text={`${c.who} ${c.label.toLowerCase()}`} />
+                  <div key={m.slot} style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
+                    <span style={{ flex: 'none', width: 46, fontSize: 9.5, fontWeight: 900, letterSpacing: '.05em', textTransform: 'uppercase', color: '#6b7280' }}>
+                      {SLOT_LABEL[m.slot]}
+                    </span>
+                    <span style={{ fontSize: 12.5, fontWeight: 800, color: '#111827' }}><Named text={mealWho(m)} /></span>
                   </div>
                 ))}
               </div>
@@ -189,7 +167,7 @@ export function WeekSheet() {
         })}
       </div>
       <Legend />
-      <Foot left={TRAINING_FOOTER} />
+      <Foot left="" />
     </Sheet>
   );
 }
@@ -198,27 +176,27 @@ function Empty() {
   return <div style={{ fontSize: 12, fontWeight: 700, color: '#9ca3af' }}>—</div>;
 }
 
-function MealSheet({ bought }: { bought: Flags }) {
-  const left = BUYS.filter((b) => !bought[b]).map((b) => b.toLowerCase());
+function MealSheet() {
   return (
     <Sheet>
-      <Head title="Matschema" sub="Vecka 37 · vem som lagar" right={FAMILY_PARENTS} />
+      <Head title="Matansvar" sub="Vecka 37 · vem som fixar maten" right={FAMILY_PARENTS} />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', marginTop: 6 }}>
         {MEALS.map((m, i) => {
-          const twoMeals = MEALS.filter((x) => x.day === m.day).length > 1;
           const firstOfDay = MEALS.findIndex((x) => x.day === m.day) === i;
           return (
             <div className="srow" key={`${m.day}-${m.slot}`}>
               <div className="sk">{firstOfDay ? m.sheetDay : ''}</div>
-              <div style={{ flex: 1 }}>
-                <div className="st">{twoMeals ? `${SLOT_LABEL[m.slot]}: ${m.dish}` : m.dish}</div>
-                <div className="sm"><Named text={`${mealWho(m)}${m.note ? ` · ${m.note}` : ''}`} /></div>
+              <div style={{ flex: 1, display: 'flex', alignItems: 'baseline', gap: 12 }}>
+                <div className="sm" style={{ width: 74, flex: 'none', textTransform: 'uppercase', fontWeight: 800, fontSize: 12.5 }}>
+                  {SLOT_LABEL[m.slot]}
+                </div>
+                <div className="st"><Named text={mealWho(m)} /></div>
               </div>
             </div>
           );
         })}
       </div>
-      <Foot left={left.length ? `Handla: ${left.join(', ')}` : 'Allt är inhandlat'} />
+      <Foot left="" />
     </Sheet>
   );
 }
@@ -226,7 +204,7 @@ function MealSheet({ bought }: { bought: Flags }) {
 function ChoreSheet() {
   return (
     <Sheet>
-      <Head title="Städschema" sub="Vecka 37 · kryssa av när det är klart" right="Familjen" />
+      <Head title="Städschema" sub={WEEK_LONG} right="Familjen" />
       <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 8, marginTop: 10 }}>
         {PEOPLE.map((p) => {
           const c = colorOf(p.name);
@@ -240,7 +218,7 @@ function ChoreSheet() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
                 {p.tasks.map((t, i) => (
                   <div className="ptask" key={i}>
-                    <span className="box" style={{ borderColor: c.base }} />
+                    <span style={{ width: 9, height: 9, borderRadius: 99, background: c.base, flex: 'none' }} />
                     {t.label} — {choreDay(t)}
                   </div>
                 ))}
@@ -249,7 +227,7 @@ function ChoreSheet() {
           );
         })}
       </div>
-      <Foot left={CHORE_FOOTER} />
+      <Foot left="" />
     </Sheet>
   );
 }
@@ -257,19 +235,22 @@ function ChoreSheet() {
 function TrainingSheet() {
   return (
     <Sheet>
-      <Head title="Träningar" sub="Vecka 37 · tider, plats och skjuts" right={FAMILY_KIDS} />
+      <Head title="Träningar" sub="Vecka 37 · tider och skjuts" right={FAMILY_KIDS} />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', marginTop: 6 }}>
         {TRAININGS.map((t, i) => (
           <div className="srow" key={i}>
             <div className="sk">{t.sheetDay}</div>
             <div style={{ flex: 1 }}>
-              <div className="st">{t.sheet.title}</div>
-              <div className="sm"><Named text={t.sheet.meta} /></div>
+              <div className="st">{t.title} {t.time}</div>
+              <div className="sm">
+                <Named text={t.person} />
+                {t.driver && <> · <Named text={trainingDriver(t)} /></>}
+              </div>
             </div>
           </div>
         ))}
       </div>
-      <Foot left={TRAINING_FOOTER} />
+      <Foot left="" />
     </Sheet>
   );
 }

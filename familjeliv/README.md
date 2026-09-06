@@ -38,11 +38,16 @@ lokalt (`npm run dev`) är appen olåst.
 | `src/views/` | En fil per flik: Hem, Mat, Städ, Träning, Datum |
 | `src/Sheets.tsx` | Detaljpanelen och utskriftspanelen |
 | `src/PrintSheets.tsx` | De fem A4-bladen, renderas bara i `@media print` |
-| `src/usePersisted.ts` | Sparar avbockat, inköpslista och utskriftsval i `localStorage` |
+| `src/usePersisted.ts` | Sparar utskriftsvalen i `localStorage` |
 | `middleware.ts` | Lösenordsskyddet på Vercels edge |
 | `design/` | Designprototyperna från Claude Design som appen är byggd efter |
 
-Avbockade sysslor och inköpslistan sparas per enhet i webbläsaren — ingen server, inget konto.
+## Vad appen innehåller
+
+Bara det familjen själv fört in: vem som har matansvaret för varje lunch och middag,
+sysslorna per person, och träningarna med tid och vem som skjutsar. Rätter, inköpslistor
+och packlistor finns medvetet inte — de bestäms löpande och hör inte hemma på ett schema
+som ska gälla en hel vecka.
 
 ## Familjen
 
@@ -70,10 +75,10 @@ en färgnyckel längst ned på veckobladet.
 
 | Blad | Innehåll |
 | --- | --- |
-| **Veckobladet** | Kylskåpslappen: en rad per dag med träning, mat och vem som gör vad |
-| Matschema | Veckans mat med ansvarig, plus vad som är kvar att handla |
-| Städschema | Per person, med rutor att kryssa i för hand |
-| Träningskalender | Tider, plats, skjuts och vad som ska tas med |
+| **Veckobladet** | Kylskåpslappen: en rad per dag med träningen och vem som har matansvaret |
+| Matansvar | Vem som fixar lunch och middag, dag för dag |
+| Städschema | Sysslorna per person |
+| Träningskalender | Tider och vem som skjutsar och hämtar |
 | Viktiga datum | Månadsrutnät och kommande händelser |
 
 Veckobladet är förvalt och går att titta på i appen innan utskrift — knappen

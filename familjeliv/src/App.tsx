@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { colorOf, DAYS, forPerson, MEMBERS, TABS, TINT, TRAININGS, WEEK_LABEL, type PrintKey, type TabId } from './data';
+import { colorOf, DAYS, dayItems, forPerson, MEMBERS, TABS, TINT, WEEK_LABEL, type PrintKey, type TabId } from './data';
 import { PrintSheets, WeekSheet } from './PrintSheets';
 import { DetailSheet, PrintPanel, SheetPreview, type DetailItem } from './Sheets';
 import { toggle, usePersisted, type Flags } from './usePersisted';
@@ -9,15 +9,13 @@ import { Mat } from './views/Mat';
 import { Stad } from './views/Stad';
 import { Tran } from './views/Tran';
 
-type SheetState = null | { type: 'day' | 'tran'; i: number } | { type: 'print' };
+type SheetState = null | { type: 'day'; i: number } | { type: 'print' };
 
 export default function App() {
   const [tab, setTab] = useState<TabId>('hem');
   const [filter, setFilter] = useState<string | null>(null);
   const [sheet, setSheet] = useState<SheetState>(null);
   const [stadView, setStadView] = useState<'person' | 'vecka'>('person');
-  const [done, setDone] = usePersisted<Flags>('done', {});
-  const [bought, setBought] = usePersisted<Flags>('bought', { Sirap: true });
   const [selStored, setSel] = usePersisted<Flags>('print-sel', { vecka: true, mat: true, stad: true, tran: true, dat: false });
   const [orient, setOrient] = usePersisted<'port' | 'land'>('orient', 'port');
   const [preview, setPreview] = useState(false);
@@ -102,24 +100,9 @@ export default function App() {
 
         <div style={{ flex: 1, overflow: 'hidden', position: 'relative' }}>
           {tab === 'hem' && <Hem filter={filter} onOpenDay={(i) => setSheet({ type: 'day', i })} />}
-          {tab === 'mat' && (
-            <Mat
-              bought={bought}
-              onToggleBuy={(b) => setBought((s) => toggle(s, b))}
-              onPrint={openPrint}
-            />
-          )}
-          {tab === 'stad' && (
-            <Stad
-              filter={filter}
-              done={done}
-              onToggleTask={(k) => setDone((s) => toggle(s, k))}
-              view={stadView}
-              onView={setStadView}
-              onPrint={openPrint}
-            />
-          )}
-          {tab === 'tran' && <Tran filter={filter} onOpenTraining={(i) => setSheet({ type: 'tran', i })} onPrint={openPrint} />}
+          {tab === 'mat' && <Mat onPrint={openPrint} />}
+          {tab === 'stad' && <Stad filter={filter} view={stadView} onView={setStadView} onPrint={openPrint} />}
+          {tab === 'tran' && <Tran filter={filter} onPrint={openPrint} />}
           {tab === 'dat' && <Datum />}
 
           <div
@@ -163,7 +146,7 @@ export default function App() {
         </div>
       </div>
 
-      <PrintSheets sel={sel} orient={orient} bought={bought} />
+      <PrintSheets sel={sel} orient={orient} />
     </>
   );
 }
@@ -173,7 +156,7 @@ function buildDetail(sheet: SheetState, filter: string | null): { title: string;
 
   if (sheet.type === 'day') {
     const d = DAYS[sheet.i];
-    const items = d.items.filter((it) => forPerson(it.p, filter));
+    const items = dayItems(d).filter((it) => forPerson(it.p, filter));
     return {
       title: `${d.long} ${d.date}`,
       sub: `${items.length} saker på tavlan`,
@@ -181,10 +164,5 @@ function buildDetail(sheet: SheetState, filter: string | null): { title: string;
     };
   }
 
-  const t = TRAININGS[sheet.i];
-  return {
-    title: t.title,
-    sub: `${t.day} ${t.time} · ${t.place}`,
-    items: t.det.map((o) => ({ icon: o.icon, label: o.label, meta: o.meta, tint: TINT[o.k] })),
-  };
+  return null;
 }

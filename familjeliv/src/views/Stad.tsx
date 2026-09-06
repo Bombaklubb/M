@@ -1,16 +1,13 @@
-import { choreDay, choreKey, colorOf, PEOPLE } from '../data';
-import type { Flags } from '../usePersisted';
+import { choreDay, colorOf, PEOPLE } from '../data';
 
 type Props = {
   filter: string | null;
-  done: Flags;
-  onToggleTask: (key: string) => void;
   view: 'person' | 'vecka';
   onView: (v: 'person' | 'vecka') => void;
   onPrint: () => void;
 };
 
-export function Stad({ filter, done, onToggleTask, view, onView, onPrint }: Props) {
+export function Stad({ filter, view, onView, onPrint }: Props) {
   const person = view === 'person';
   const people = PEOPLE.filter((p) => !filter || p.name === filter);
 
@@ -66,30 +63,18 @@ export function Stad({ filter, done, onToggleTask, view, onView, onPrint }: Prop
                   <div style={{ fontSize: 17, fontWeight: 900, color: c.fg, lineHeight: 1.15 }}>{p.name}</div>
                   <div style={{ fontSize: 12.5, fontWeight: 700, color: '#6b7280' }}>{p.role}</div>
                 </div>
-                <div style={{ fontSize: 13, fontWeight: 800, color: c.fg, background: c.tint, border: `2px solid ${c.ring}`, borderRadius: 999, padding: '3px 10px 4px' }}>
-                  {p.tasks.filter((t) => done[choreKey(p.name, t)]).length}/{p.tasks.length}
-                </div>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
-                {p.tasks.map((t) => {
-                  const key = choreKey(p.name, t);
-                  const on = !!done[key];
-                  return (
-                    <div
-                      key={key}
-                      onClick={() => onToggleTask(key)}
-                      style={{ display: 'flex', alignItems: 'center', gap: 10, background: '#f9fafb', border: '2px solid #e5e7eb', borderRadius: 14, padding: '9px 10px', cursor: 'pointer' }}
-                    >
-                      <div style={{ width: 24, height: 24, flex: 'none', borderRadius: 8, border: `3px solid ${on ? '#10b981' : '#bfdbfe'}`, background: on ? '#10b981' : '#fff', color: '#fff', fontSize: 14, fontWeight: 900, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        {on ? '✓' : ''}
-                      </div>
-                      <div style={{ flex: 1, minWidth: 0, fontSize: 15, fontWeight: 700, color: on ? '#9ca3af' : '#111827', textDecoration: on ? 'line-through' : 'none' }}>
-                        {t.label}
-                      </div>
-                      <div style={{ fontSize: 12.5, fontWeight: 800, color: '#9ca3af', textTransform: 'uppercase', textAlign: 'right', flex: 'none' }}>{choreDay(t)}</div>
-                    </div>
-                  );
-                })}
+                {p.tasks.map((t) => (
+                  <div
+                    key={t.label}
+                    style={{ display: 'flex', alignItems: 'center', gap: 10, background: '#f9fafb', border: '2px solid #e5e7eb', borderRadius: 14, padding: '9px 10px' }}
+                  >
+                    <div style={{ width: 10, height: 10, flex: 'none', borderRadius: 99, background: c.base }} />
+                    <div style={{ flex: 1, minWidth: 0, fontSize: 15, fontWeight: 700, color: '#111827' }}>{t.label}</div>
+                    <div style={{ fontSize: 12.5, fontWeight: 800, color: '#9ca3af', textTransform: 'uppercase', textAlign: 'right', flex: 'none' }}>{choreDay(t)}</div>
+                  </div>
+                ))}
               </div>
             </div>
             );
