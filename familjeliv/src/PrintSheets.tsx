@@ -1,7 +1,7 @@
 import { Fragment, type ReactNode } from 'react';
 import {
   choreDay, colorOf, FAMILY_KIDS, FAMILY_PARENTS, MEALS, mealWho, MEMBERS, PEOPLE,
-  sheetDayFor, SLOT_LABEL, TRAININGS, trainingRide, weekLong, weekRows,
+  sheetDayFor, SLOT_LABEL, TRAININGS, trainingRide, weekRows,
 } from './data';
 import { Named } from './Named';
 
@@ -108,7 +108,7 @@ export function WeekSheet() {
 
   return (
     <Sheet>
-      <Head title="Veckan" sub={weekLong()} right="Familjen" />
+      <Head title="Veckan" sub="Träning, mat och städ – dag för dag" right="Familjen" />
       <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '34px 0.98fr 0.55fr 1.47fr', gridTemplateRows: 'auto repeat(7,auto)', marginTop: 8 }}>
         {['', '🤸 Träning', '🍽 Mat', '🧹 Städ'].map((h, i) => (
           <div key={i} style={{ borderBottom: '2px solid #111827', padding: '0 8px 5px 6px', fontSize: 10, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#4b5563' }}>
@@ -184,7 +184,7 @@ function Empty() {
 function MealSheet() {
   return (
     <Sheet>
-      <Head title="Matansvar" sub={`${weekLong()} · vem som fixar maten`} right={FAMILY_PARENTS} />
+      <Head title="Matansvar" sub="Vem som fixar lunch och middag" right={FAMILY_PARENTS} />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', marginTop: 6 }}>
         {MEALS.map((m, i) => {
           const firstOfDay = MEALS.findIndex((x) => x.day === m.day) === i;
@@ -209,7 +209,7 @@ function MealSheet() {
 function ChoreSheet() {
   return (
     <Sheet>
-      <Head title="Städschema" sub={weekLong()} right="Familjen" />
+      <Head title="Städschema" sub="Sysslorna per person" right="Familjen" />
       <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 8, marginTop: 10 }}>
         {PEOPLE.map((p) => {
           const c = colorOf(p.name);
@@ -239,7 +239,7 @@ function ChoreSheet() {
 function TrainingSheet() {
   return (
     <Sheet>
-      <Head title="Träningar" sub={`${weekLong()} · tider och skjuts`} right={FAMILY_KIDS} />
+      <Head title="Träningar" sub="Tider, plats och skjuts" right={FAMILY_KIDS} />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', marginTop: 6 }}>
         {TRAININGS.map((t, i) => (
           <div className="srow" key={i}>

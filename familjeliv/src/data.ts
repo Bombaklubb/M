@@ -14,7 +14,6 @@ export const TINT: Record<Kind, string> = {
 const DAY_NAMES = ['mån', 'tis', 'ons', 'tor', 'fre', 'lör', 'sön'];
 const DAY_LONG = ['Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag', 'Söndag'];
 const MONTH_SHORT = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
-const MONTH_LONG = ['januari', 'februari', 'mars', 'april', 'maj', 'juni', 'juli', 'augusti', 'september', 'oktober', 'november', 'december'];
 
 const dagensDatum = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
 
@@ -43,17 +42,6 @@ export function weekLabel(now = new Date()): string {
     ? `${start.getDate()}`
     : `${start.getDate()} ${MONTH_SHORT[start.getMonth()]}`;
   return `Vecka ${isoVecka(now)} · ${från}–${slut.getDate()} ${MONTH_SHORT[slut.getMonth()]}`;
-}
-
-/** Samma sak men utskrivet, för utskriftsbladen. */
-export function weekLong(now = new Date()): string {
-  const start = veckansStart(now);
-  const slut = new Date(start);
-  slut.setDate(start.getDate() + 6);
-  const från = start.getMonth() === slut.getMonth()
-    ? `${start.getDate()}`
-    : `${start.getDate()} ${MONTH_LONG[start.getMonth()]}`;
-  return `Vecka ${isoVecka(now)} · ${från}–${slut.getDate()} ${MONTH_LONG[slut.getMonth()]}`;
 }
 
 /**
@@ -128,7 +116,7 @@ export type DayItem = {
 /** Filtret i toppen: visa raden när ingen är vald, när den gäller alla eller den valda. */
 export const forPerson = (p: DayItem['p'], filter: string | null) =>
   !filter || p === 'alla' || (Array.isArray(p) ? p.includes(filter) : p === filter);
-export type Day = { name: string; long: string; date: string; sheetDay: string; today: boolean };
+export type Day = { name: string; long: string; date: string; today: boolean };
 
 /** Veckans sju dagar med riktiga datum, och dagens dag markerad. */
 export function weekDays(now = new Date()): Day[] {
@@ -141,7 +129,6 @@ export function weekDays(now = new Date()): Day[] {
       name,
       long: DAY_LONG[i],
       date: `${d.getDate()}/${d.getMonth() + 1}`,
-      sheetDay: `${name[0].toUpperCase()}${name.slice(1)} ${d.getDate()}`,
       today: d.getTime() === idag,
     };
   });
@@ -150,9 +137,11 @@ export function weekDays(now = new Date()): Day[] {
 /** Stor bokstav först, resten orört — namn mitt i texten ska behålla sin versal. */
 const versal = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
-/** "Mån 7" för utskriftsbladen, uträknat ur veckodagens namn. */
-export const sheetDayFor = (namn: string, now = new Date()) =>
-  weekDays(now).find((d) => d.name === namn)?.sheetDay ?? namn;
+/**
+ * "Mån" på utskriftsbladen. Utan datum med flit: lapparna sitter uppe tills
+ * schemat ändras, och ett datum från utskriftsdagen skulle bara bli fel.
+ */
+export const sheetDayFor = (namn: string) => versal(namn);
 
 /**
  * Dagens rader byggs av träningarna och matansvaret — samma källa som flikarna
@@ -377,7 +366,8 @@ function slåIhop(grupper: ChoreGroup[]): ChoreGroup[] {
 /** En rad per dag: träningen, matansvaret och dagens sysslor. */
 export function weekRows(now = new Date()) {
   return weekDays(now).map((d) => ({
-    day: `${d.name} ${d.date.split('/')[0]}`,
+    // Bara veckodagen: bladet ska gälla tills schemat ändras, inte till söndag.
+    day: d.name,
     today: !!d.today,
     trainings: TRAININGS.filter((t) => t.day === d.name).map((t) => ({
       title: `${t.short ?? t.title} ${t.time}`,
