@@ -134,21 +134,14 @@ export const PEOPLE: Person[] = [
   },
   {
     name: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg', tasks: [
+      { label: 'Hjälper Astrid och Signe med rummen', day: 'dagl', d: 0, time: '18:45' },
       { label: 'Städa toaletterna', day: 'lör', d: 5 },
     ],
   },
 ];
 
-/**
- * Nyckeln för avbockning följer sysslan, inte dess plats i listan — annars
- * ärver en ny syssla bocken från den som stod på samma rad förut.
- */
-export const choreKey = (name: string, t: Chore) => `${name}-${t.label}`;
-
 /** "varje dag 18:45" läser bättre på ett blad än "dagl". */
 export const choreDay = (t: Chore) => (t.day === 'dagl' ? 'varje dag' : t.day) + (t.time ? ` ${t.time}` : '');
-
-export const CHORE_FOOTER = 'Sysslor märkta varje dag gäller alla veckans dagar';
 
 export type TrainingColor = { border: string; tint: string; fg: string };
 export const TC: Record<string, TrainingColor> = {
@@ -215,12 +208,6 @@ export const FAMILY_PARENTS = 'Martin & Karin';
 export const FAMILY_KIDS = [...new Set(TRAININGS.map((t) => t.person))].join(' · ');
 
 /** Sysslor som återkommer varje dag hamnar i veckobladets sidfot, inte i varje ruta. */
-export const DAILY_CHORES = PEOPLE.flatMap((p) =>
-  p.tasks
-    .filter((t) => t.day === 'dagl')
-    .map((t) => `${p.name} ${t.label.toLowerCase()}${t.time ? ` ${t.time}` : ''}`),
-);
-
 /** En rad per dag: träningen och vem som har matansvaret. */
 export function weekRows() {
   return DAYS.map((d) => ({
