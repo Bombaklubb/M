@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { PRINTS, type PrintKey } from './data';
+import { Named } from './Named';
 import type { Flags } from './usePersisted';
 
 function Backdrop({ onClose, children }: { onClose: () => void; children: ReactNode }) {
@@ -19,7 +20,7 @@ function Backdrop({ onClose, children }: { onClose: () => void; children: ReactN
   );
 }
 
-export type DetailItem = { icon: string; label: string; meta: string; tint: string };
+export type DetailItem = { icon: string; label: string; meta: string; ride?: string; tint: string };
 
 export function DetailSheet({ title, sub, items, onClose }: { title: string; sub: string; items: DetailItem[]; onClose: () => void }) {
   return (
@@ -33,6 +34,11 @@ export function DetailSheet({ title, sub, items, onClose }: { title: string; sub
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontSize: 16, fontWeight: 800, color: '#111827', lineHeight: 1.2 }}>{s.label}</div>
               <div style={{ fontSize: 13.5, fontWeight: 600, color: '#6b7280' }}>{s.meta}</div>
+              {s.ride && (
+                <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', marginTop: 2 }}>
+                  🚗 <Named text={s.ride} />
+                </div>
+              )}
             </div>
           </div>
         ))}

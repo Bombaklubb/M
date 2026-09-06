@@ -47,7 +47,7 @@ button { font-family: inherit; }
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 5px;
   justify-content: space-between;
   padding: 12px 14px calc(env(safe-area-inset-bottom, 0px) + 92px);
   /* Sju dagar ryms på en vanlig telefon; på riktigt små skärmar får man
@@ -64,7 +64,7 @@ button { font-family: inherit; }
   background: #fff;
   border: 2.5px solid #dbeafe;
   border-radius: 18px;
-  padding: 7px 11px;
+  padding: 6px 11px;
   cursor: pointer;
   box-shadow: 0 3px 0 0 rgba(37, 99, 235, .10), inset 0 2px 4px 0 rgba(255, 255, 255, .8);
 }
@@ -90,8 +90,13 @@ button { font-family: inherit; }
   padding: 2px 6px 3px;
 }
 .dayitems { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
-.dayitem { display: flex; align-items: baseline; gap: 7px; min-width: 0; }
-.dayline { flex: none; display: flex; align-items: baseline; gap: 5px; min-width: 0; }
+/* Skjutsen hamnar på egen rad under träningen — därav wrap och basis 100%. */
+.dayitem { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1px 7px; min-width: 0; }
+/* display:block + width:100% i stället för flex-basis: i kolumnläget nedan
+   skulle basis gälla höjden, och skjutsen hamnade bredvid och klipptes. */
+.dayride { display: block; width: 100%; font-size: 11px; font-weight: 600; color: #6b7280; line-height: 1.25; }
+/* Får krympa och radbryta: en lång städrad ska vika ner sig, inte klippas. */
+.dayline { flex: 0 1 auto; display: flex; align-items: baseline; gap: 5px; min-width: 0; }
 .dayicon { flex: none; font-size: 12px; }
 .daylabel { font-size: 13px; font-weight: 800; color: #111827; line-height: 1.25; }
 .daymeta {
@@ -174,10 +179,10 @@ button { font-family: inherit; }
 .sm { font-size: 14px; font-weight: 600; color: #4b5563; }
 .sfoot { border-top: 3px solid #111827; padding-top: 10px; display: flex; justify-content: space-between; gap: 16px; font-size: 13px; font-weight: 700; color: #4b5563; }
 .box { width: 17px; height: 17px; border: 2px solid #111827; border-radius: 4px; display: inline-block; flex: none; }
-.pers { border: 2px solid #111827; border-radius: 12px; padding: 8px 13px 9px; }
-.pnm { font-size: 18px; font-weight: 900; color: #111827; margin-bottom: 4px; }
-.pnm span { font-size: 14px; font-weight: 700; color: #4b5563; }
-.ptask { display: flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 600; color: #111827; }
+.pers { border: 2px solid #111827; border-radius: 12px; padding: 7px 12px 8px; }
+.pnm { font-size: 17px; font-weight: 900; color: #111827; margin-bottom: 3px; }
+.pnm span { font-size: 13px; font-weight: 700; color: #4b5563; }
+.ptask { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #111827; line-height: 1.25; }
 
 @media print {
   html, body { background: #fff; }

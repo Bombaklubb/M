@@ -1,4 +1,5 @@
 import { dayItems, forPerson, type Day } from '../data';
+import { Named } from '../Named';
 
 type Props = { days: Day[]; filter: string | null; onOpenDay: (i: number) => void };
 
@@ -7,7 +8,7 @@ export function Hem({ days, filter, onOpenDay }: Props) {
   return (
     <div className="week">
       {days.map((d, i) => {
-        const items = dayItems(d).filter((it) => forPerson(it.p, filter));
+        const items = dayItems(d, filter).filter((it) => forPerson(it.p, filter));
         return (
           <div
             key={d.name}
@@ -28,6 +29,7 @@ export function Hem({ days, filter, onOpenDay }: Props) {
                     <span className="daylabel">{it.label}</span>
                   </div>
                   <span className="daymeta">{it.meta}</span>
+                  {it.ride && <span className="dayride">🚗 <Named text={it.ride} /></span>}
                 </div>
               ))}
             </div>

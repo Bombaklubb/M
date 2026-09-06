@@ -165,11 +165,11 @@ function buildDetail(sheet: SheetState, filter: string | null, days: Day[]): { t
 
   if (sheet.type === 'day') {
     const d = days[sheet.i];
-    const items = dayItems(d).filter((it) => forPerson(it.p, filter));
+    const items = dayItems(d, filter).filter((it) => forPerson(it.p, filter));
     return {
       title: `${d.long} ${d.date}`,
       sub: `${items.length} saker på tavlan`,
-      items: items.map((it) => ({ icon: it.icon, label: it.label, meta: it.meta, tint: TINT[it.k] })),
+      items: items.map((it) => ({ icon: it.icon, label: it.label, meta: it.meta, ride: it.ride, tint: TINT[it.k] })),
     };
   }
 

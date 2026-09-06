@@ -1,4 +1,5 @@
 import { colorOf, TC, TRAININGS, trainingRide } from '../data';
+import { Named } from '../Named';
 
 type Props = { filter: string | null; onPrint: () => void };
 
@@ -44,11 +45,7 @@ export function Tran({ filter, onPrint }: Props) {
               <div style={{ fontSize: 14, fontWeight: 800, color: person.fg }}>{t.person}</div>
               {ride && (
                 <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', marginTop: 2 }}>
-                  🚗 {ride.split(/\b(Martin|Karin|Astrid|Signe|Bodil)\b/).map((del, k) =>
-                    ['Martin', 'Karin', 'Astrid', 'Signe', 'Bodil'].includes(del)
-                      ? <span key={k} style={{ fontWeight: 800, color: colorOf(del).fg }}>{del}</span>
-                      : <span key={k}>{del}</span>,
-                  )}
+                  🚗 <Named text={ride} />
                 </div>
               )}
             </div>
