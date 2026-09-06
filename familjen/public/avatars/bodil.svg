@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Enhörningen">
+  
+  <circle cx="64" cy="64" r="62" fill="#4a044e"></circle>
+  <radialGradient id="ug" cx="50%" cy="40%" r="55%">
+    <stop offset="0%" stop-color="#ec4899" stop-opacity="0.5"></stop>
+    <stop offset="100%" stop-color="#4a044e" stop-opacity="0"></stop>
+  </radialGradient>
+  <circle cx="64" cy="64" r="62" fill="url(#ug)"></circle>
+  
+  <circle cx="20" cy="25" r="2" fill="#f472b6" opacity="0.8"></circle>
+  <circle cx="108" cy="20" r="1.5" fill="#a78bfa" opacity="0.7"></circle>
+  <circle cx="15" cy="85" r="1.5" fill="#60a5fa" opacity="0.6"></circle>
+  <circle cx="112" cy="78" r="2" fill="#34d399" opacity="0.7"></circle>
+  <circle cx="25" cy="108" r="1" fill="#fbbf24" opacity="0.8"></circle>
+  <circle cx="100" cy="110" r="1.5" fill="#f87171" opacity="0.7"></circle>
+  
+  <ellipse cx="64" cy="92" rx="32" ry="28" fill="white"></ellipse>
+  
+  <ellipse cx="54" cy="82" rx="12" ry="18" fill="white" opacity="0.3"></ellipse>
+  
+  <path d="M94,88 Q115,80 118,100 Q112,115 98,108 Q92,98 90,88Z" fill="#f9a8d4"></path>
+  <path d="M95,90 Q114,84 116,103 Q110,115 99,108" fill="none" stroke="#c084fc" stroke-width="3" opacity="0.8"></path>
+  <path d="M93,88 Q112,82 114,101" fill="none" stroke="#93c5fd" stroke-width="2" opacity="0.6"></path>
+  <path d="M96,92 Q115,88 116,106" fill="none" stroke="#86efac" stroke-width="2" opacity="0.6"></path>
+  
+  <rect x="42" y="108" width="14" height="20" rx="6" fill="#fdf4ff"></rect>
+  <rect x="72" y="108" width="14" height="20" rx="6" fill="#fdf4ff"></rect>
+  
+  <rect x="42" y="124" width="14" height="8" rx="4" fill="#e879f9"></rect>
+  <rect x="72" y="124" width="14" height="8" rx="4" fill="#e879f9"></rect>
+  
+  <ellipse cx="32" cy="88" rx="14" ry="10" fill="white"></ellipse>
+  <ellipse cx="96" cy="88" rx="14" ry="10" fill="white"></ellipse>
+  
+  <rect x="52" y="58" width="24" height="24" rx="10" fill="white"></rect>
+  
+  <path d="M52,60 Q46,68 50,75" stroke="#f9a8d4" stroke-width="3" fill="none" stroke-linecap="round"></path>
+  <path d="M52,62 Q44,72 48,80" stroke="#c084fc" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+  <path d="M52,65 Q44,76 48,84" stroke="#93c5fd" stroke-width="2" fill="none" stroke-linecap="round"></path>
+  
+  <ellipse cx="64" cy="46" rx="26" ry="24" fill="white"></ellipse>
+  
+  <path d="M40,36 Q36,20 42,10 Q48,22 48,34" fill="#f9a8d4"></path>
+  <path d="M44,32 Q38,16 46,6 Q52,18 52,30" fill="#c084fc"></path>
+  <path d="M48,30 Q44,14 50,5 Q56,16 56,28" fill="#93c5fd"></path>
+  <path d="M52,28 Q50,12 56,4 Q60,16 60,26" fill="#86efac"></path>
+  
+  <polygon points="64,8 60,30 68,30" fill="#fbbf24"></polygon>
+  <polygon points="64,8 60,30 68,30" fill="none" stroke="#f59e0b" stroke-width="1"></polygon>
+  
+  <line x1="64" y1="10" x2="61" y2="18" stroke="#fef3c7" stroke-width="1" opacity="0.8"></line>
+  <line x1="63" y1="16" x2="66" y2="23" stroke="#fef3c7" stroke-width="1" opacity="0.8"></line>
+  
+  <polygon points="42,28 36,14 52,26" fill="white"></polygon>
+  <polygon points="44,27 40,18 50,26" fill="#f9a8d4"></polygon>
+  <polygon points="86,28 92,14 76,26" fill="white"></polygon>
+  <polygon points="84,27 88,18 78,26" fill="#f9a8d4"></polygon>
+  
+  <ellipse cx="52" cy="44" rx="8" ry="7" fill="#fdf4ff"></ellipse>
+  <ellipse cx="76" cy="44" rx="8" ry="7" fill="#fdf4ff"></ellipse>
+  <circle cx="53" cy="45" r="5.5" fill="#7c3aed"></circle>
+  <circle cx="77" cy="45" r="5.5" fill="#7c3aed"></circle>
+  <circle cx="53" cy="45" r="3" fill="#111"></circle>
+  <circle cx="77" cy="45" r="3" fill="#111"></circle>
+  <circle cx="54.5" cy="43.5" r="1.5" fill="white"></circle>
+  <circle cx="78.5" cy="43.5" r="1.5" fill="white"></circle>
+  
+  <line x1="46" y1="39" x2="44" y2="36" stroke="#c084fc" stroke-width="1.2"></line>
+  <line x1="49" y1="37" x2="48" y2="34" stroke="#c084fc" stroke-width="1.2"></line>
+  <line x1="52" y1="37" x2="52" y2="34" stroke="#c084fc" stroke-width="1.2"></line>
+  <line x1="70" y1="39" x2="68" y2="36" stroke="#c084fc" stroke-width="1.2"></line>
+  <line x1="73" y1="37" x2="72" y2="34" stroke="#c084fc" stroke-width="1.2"></line>
+  <line x1="76" y1="37" x2="76" y2="34" stroke="#c084fc" stroke-width="1.2"></line>
+  
+  <ellipse cx="44" cy="52" rx="6" ry="4" fill="#f9a8d4" opacity="0.5"></ellipse>
+  <ellipse cx="84" cy="52" rx="6" ry="4" fill="#f9a8d4" opacity="0.5"></ellipse>
+  
+  <ellipse cx="64" cy="56" rx="4" ry="3" fill="#f9a8d4"></ellipse>
+  
+  <path d="M56,62 Q64,68 72,62" stroke="#e879f9" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+</svg>
