@@ -1,0 +1,13 @@
+{
+  "name": "Familjetavlan",
+  "short_name": "Familjen",
+  "description": "Familjens vecka: mat, städ, träning och viktiga datum – enkelt att skriva ut.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f6fa",
+  "theme_color": "#1e3a8a",
+  "lang": "sv",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

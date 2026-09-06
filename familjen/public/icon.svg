@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Familjetavlan">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="55%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#9f1239"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <rect x="96" y="120" width="320" height="272" rx="40" fill="#ffffff" opacity="0.95"/>
+  <rect x="96" y="120" width="320" height="64" rx="32" fill="#bfdbfe"/>
+  <g fill="#1d4ed8">
+    <rect x="132" y="216" width="112" height="26" rx="13"/>
+    <rect x="132" y="268" width="152" height="26" rx="13"/>
+    <rect x="132" y="320" width="88" height="26" rx="13"/>
+  </g>
+  <g fill="#e11d48">
+    <circle cx="330" cy="229" r="17"/>
+    <circle cx="330" cy="281" r="17"/>
+    <circle cx="330" cy="333" r="17"/>
+  </g>
+</svg>

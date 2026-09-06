@@ -1,0 +1,88 @@
+* { -webkit-tap-highlight-color: transparent; }
+
+body {
+  margin: 0;
+  background: #e8ebf3;
+  font-family: 'Baloo 2', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #111827;
+}
+
+button { font-family: inherit; }
+
+.app-shell {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  background: #f5f6fa;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-shell ::-webkit-scrollbar { width: 0; height: 0; }
+
+.press { transition: transform .08s ease, box-shadow .08s ease; }
+.press:active { transform: translateY(2px); }
+
+@media (min-width: 560px) and (min-height: 720px) {
+  body { display: flex; align-items: center; justify-content: center; min-height: 100dvh; }
+  .app-shell {
+    width: 402px;
+    height: min(874px, calc(100dvh - 48px));
+    border-radius: 44px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, .28);
+  }
+}
+
+/* ── Utskriftsblad ─────────────────────────────────────────── */
+
+.print-root { display: none; }
+
+.sheet {
+  width: 496px;
+  height: 701px;
+  background: #fff;
+  padding: 38px 40px;
+  box-sizing: border-box;
+  font-family: 'Baloo 2', system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: #111827;
+}
+.shead { display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 3px solid #111827; padding-bottom: 10px; }
+.sh1 { font-size: 29px; font-weight: 900; color: #111827; line-height: 1; }
+.sh2 { font-size: 15px; font-weight: 700; color: #4b5563; }
+.srow { flex: 1; display: flex; align-items: center; gap: 14px; border-bottom: 1px solid #d1d5db; }
+.srow:last-child { border-bottom: none; }
+.sk { width: 74px; font-size: 16px; font-weight: 900; color: #111827; text-transform: uppercase; }
+.st { font-size: 19px; font-weight: 800; color: #111827; }
+.sm { font-size: 14px; font-weight: 600; color: #4b5563; }
+.sfoot { border-top: 3px solid #111827; padding-top: 10px; display: flex; justify-content: space-between; gap: 16px; font-size: 13px; font-weight: 700; color: #4b5563; }
+.box { width: 17px; height: 17px; border: 2px solid #111827; border-radius: 4px; display: inline-block; flex: none; }
+.pers { border: 2px solid #111827; border-radius: 12px; padding: 10px 14px; }
+.pnm { font-size: 18px; font-weight: 900; color: #111827; margin-bottom: 5px; }
+.pnm span { font-size: 14px; font-weight: 700; color: #4b5563; }
+.ptask { display: flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 600; color: #111827; }
+
+@media print {
+  html, body { background: #fff; }
+  .app-shell { display: none !important; }
+  .print-root { display: block; }
+  .page {
+    width: var(--page-w);
+    height: var(--page-h);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    break-after: page;
+    page-break-after: always;
+  }
+  .page:last-child { break-after: auto; page-break-after: auto; }
+  .page > .sheet {
+    transform: scale(var(--print-scale));
+    transform-origin: top center;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
