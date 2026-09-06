@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:'Baloo 2',system-ui,sans-serif}
+a{color:#1d4ed8}a:hover{color:#e11d48}
+.wrap{padding:40px 44px 48px;display:flex;gap:36px;align-items:flex-start;flex-wrap:wrap}
+.col{display:flex;flex-direction:column;gap:10px}
+.lbl{display:flex;align-items:baseline;gap:8px;font:700 12px/1.3 'Baloo 2',system-ui;color:rgba(17,24,39,.6)}
+.tag{font:800 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(30,58,138,.1);color:#1e3a8a;border-radius:5px}
+.note{max-width:560px;font:500 13px/1.6 'Baloo 2',system-ui;color:#374151}
+.sheet{width:496px;height:701px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:38px 40px;box-sizing:border-box;font-family:'Baloo 2',system-ui;display:flex;flex-direction:column}
+.srow{flex:1;display:flex;align-items:center;gap:14px;border-bottom:1px solid #d1d5db}
+.sk{width:74px;font-size:16px;font-weight:900;color:#111827;text-transform:uppercase}
+.st{font-size:19px;font-weight:800;color:#111827}
+.sm{font-size:14px;font-weight:600;color:#4b5563}
+.box{width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block;flex:none}
+.pers{border:2px solid #111827;border-radius:12px;padding:10px 14px}
+.pnm{font-size:18px;font-weight:900;color:#111827;margin-bottom:5px}
+.ptask{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:600;color:#111827}
+.sfoot{border-top:3px solid #111827;padding-top:10px;display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:#4b5563}
+.shead{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:3px solid #111827;padding-bottom:10px}
+.sh1{font-size:29px;font-weight:900;color:#111827;line-height:1}
+.sh2{font-size:15px;font-weight:700;color:#4b5563}
+</style></helmet>
+
+<div class="wrap">
+<div class="col">
+<div class="lbl"><span class="tag">app</span>Familjetavlan — klickbar prototyp (flikar, dagvy, avbockning, utskrift)</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ devW }}" height="{{ devH }}" hint-size="402px,874px">
+<div style="position:relative;height:100%;display:flex;flex-direction:column;background:#f5f6fa;font-family:'Baloo 2',system-ui;overflow:hidden">
+
+  <div style="padding:54px 16px 12px;background:linear-gradient(160deg,#1e3a8a 0%,#1d4ed8 55%,#9f1239 100%);color:#fff;flex:none">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="flex:1;min-width:0">
+        <div style="font-size:12px;font-weight:800;opacity:.8;letter-spacing:.08em;text-transform:uppercase">Vecka 37 · 7–13 sep</div>
+        <div style="font-size:26px;font-weight:900;letter-spacing:-.02em;line-height:1.1;text-shadow:0 2px 4px rgba(0,0,0,.3)">Familjetavlan</div>
+      </div>
+      <button onClick="{{ openPrint }}" style="display:flex;align-items:center;gap:6px;border:3px solid rgba(255,255,255,.55);background:rgba(255,255,255,.18);backdrop-filter:blur(6px);color:#fff;font-family:inherit;font-size:14px;font-weight:800;padding:9px 13px 10px;border-radius:20px;cursor:pointer;box-shadow:0 4px 0 0 rgba(0,0,0,.2),inset 0 2px 4px 0 rgba(255,255,255,.3)" style-active="transform:translateY(2px);box-shadow:0 1px 0 0 rgba(0,0,0,.2)">🖨 Skriv ut</button>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:11px">
+      <sc-for list="{{ members }}" as="m" hint-placeholder-count="5">
+        <div onClick="{{ m.onPick }}" style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;opacity:{{ m.dim }}">
+          <div style="width:44px;height:44px;border-radius:999px;border:3px solid {{ m.ring }};overflow:hidden;background:#fff;box-shadow:0 3px 0 0 rgba(0,0,0,.18)">
+            <div style="width:100%;height:100%;background:#eff6ff center/cover no-repeat url({{ m.avatar }})"></div>
+          </div>
+          <div style="font-size:11.5px;font-weight:800;letter-spacing:.01em">{{ m.short }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <sc-if value="{{ filtered }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ clearFilter }}" style="flex:none;display:flex;align-items:center;justify-content:center;gap:8px;background:#eff6ff;border-bottom:3px solid #bfdbfe;padding:8px 0 9px;font-size:14px;font-weight:800;color:#1d4ed8;cursor:pointer">Visar bara {{ filterName }} · tryck för att visa alla ✕</div>
+  </sc-if>
+
+  <div style="flex:1;overflow:hidden;position:relative">
+
+    <sc-if value="{{ isHem }}" hint-placeholder-val="{{ true }}">
+      <div style="height:100%;display:flex;gap:12px;overflow-x:auto;padding:14px 16px 100px;scroll-snap-type:x mandatory;box-sizing:border-box">
+        <sc-for list="{{ days }}" as="d" hint-placeholder-count="3">
+          <div onClick="{{ d.onOpen }}" style="flex:none;width:178px;scroll-snap-align:start;display:flex;flex-direction:column;gap:8px;background:#fff;border:3px solid {{ d.border }};border-radius:24px;padding:12px 11px;cursor:pointer;box-shadow:0 4px 0 0 rgba(37,99,235,.12),0 8px 16px -4px rgba(37,99,235,.08),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+            <div style="display:flex;align-items:baseline;justify-content:space-between">
+              <div style="font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.04em;color:{{ d.fg }}">{{ d.name }}</div>
+              <div style="font-size:13px;font-weight:800;color:#9ca3af">{{ d.date }}</div>
+            </div>
+            <sc-for list="{{ d.items }}" as="it" hint-placeholder-count="3">
+              <div style="display:flex;gap:8px;align-items:flex-start;background:#f9fafb;border:2px solid #e5e7eb;border-radius:14px;padding:8px 9px">
+                <div style="width:26px;height:26px;flex:none;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;background:{{ it.tint }}">{{ it.icon }}</div>
+                <div style="min-width:0;flex:1">
+                  <div style="font-size:14px;font-weight:800;color:#111827;line-height:1.2;text-wrap:pretty">{{ it.label }}</div>
+                  <div style="font-size:12.5px;font-weight:600;color:#6b7280;line-height:1.25">{{ it.meta }}</div>
+                </div>
+              </div>
+            </sc-for>
+            <div style="font-size:12.5px;font-weight:800;color:#9ca3af;text-align:center;padding-top:2px">{{ d.empty }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isMat }}" hint-placeholder-val="{{ false }}">
+      <div style="height:100%;overflow-y:auto;padding:16px 16px 100px;box-sizing:border-box;display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:22px;font-weight:900;color:#111827">🍽 Matschema</div>
+          <button onClick="{{ openPrint }}" style="border:3px solid #fde68a;background:linear-gradient(to bottom,#fffbeb,#fef3c7);color:#b45309;font-family:inherit;font-size:13.5px;font-weight:800;padding:7px 12px 8px;border-radius:16px;cursor:pointer;box-shadow:0 3px 0 0 rgba(245,158,11,.25),inset 0 2px 4px 0 rgba(255,255,255,.8)">🖨 A4</button>
+        </div>
+        <sc-for list="{{ meals }}" as="m" hint-placeholder-count="7">
+          <div onClick="{{ m.onOpen }}" style="display:flex;align-items:center;gap:12px;background:#fff;border:3px solid #dbeafe;border-radius:22px;padding:12px 14px;cursor:pointer;box-shadow:0 4px 0 0 rgba(37,99,235,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+            <div style="width:46px;flex:none;text-align:center">
+              <div style="font-size:14px;font-weight:900;text-transform:uppercase;color:#1d4ed8">{{ m.day }}</div>
+              <div style="font-size:12px;font-weight:800;color:#9ca3af">{{ m.date }}</div>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:17px;font-weight:800;color:#111827;line-height:1.2">{{ m.dish }}</div>
+              <div style="font-size:13px;font-weight:600;color:#6b7280">{{ m.who }}</div>
+            </div>
+            <div style="font-size:20px">{{ m.emoji }}</div>
+          </div>
+        </sc-for>
+        <sc-if value="{{ showShop }}" hint-placeholder-val="{{ true }}">
+        <div style="background:#fff;border:3px solid #bfdbfe;border-radius:24px;padding:13px 15px 15px;box-shadow:0 4px 0 0 rgba(37,99,235,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:9px">
+            <div style="font-size:17px;font-weight:900;color:#111827">🛒 Inköpslista</div>
+            <div style="font-size:12.5px;font-weight:800;color:#1d4ed8;background:#eff6ff;border:2px solid #bfdbfe;border-radius:999px;padding:3px 10px 4px">{{ buyCount }}</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <sc-for list="{{ buys }}" as="b" hint-placeholder-count="6">
+              <div onClick="{{ b.onToggle }}" style="display:flex;align-items:center;gap:6px;background:{{ b.bg }};border:2px solid {{ b.border }};border-radius:999px;padding:6px 12px 7px;cursor:pointer;font-size:14px;font-weight:700;color:{{ b.fg }};text-decoration:{{ b.strike }}">{{ b.label }}</div>
+            </sc-for>
+          </div>
+        </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isStad }}" hint-placeholder-val="{{ false }}">
+      <div style="height:100%;overflow-y:auto;padding:16px 16px 100px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:22px;font-weight:900;color:#111827">🧹 Städschema</div>
+          <button onClick="{{ openPrint }}" style="border:3px solid #bfdbfe;background:linear-gradient(to bottom,#eff6ff,#dbeafe);color:#1d4ed8;font-family:inherit;font-size:13.5px;font-weight:800;padding:7px 12px 8px;border-radius:16px;cursor:pointer;box-shadow:0 3px 0 0 rgba(37,99,235,.2),inset 0 2px 4px 0 rgba(255,255,255,.8)">🖨 A4</button>
+        </div>
+        <div style="display:flex;gap:7px;background:#eef1f7;border:3px solid #e5e7eb;border-radius:18px;padding:5px">
+          <div onClick="{{ viewPerson }}" style="flex:1;text-align:center;font-size:14px;font-weight:800;border-radius:13px;padding:7px 0 8px;cursor:pointer;background:{{ segPersonBg }};color:{{ segPersonFg }}">Per person</div>
+          <div onClick="{{ viewWeek }}" style="flex:1;text-align:center;font-size:14px;font-weight:800;border-radius:13px;padding:7px 0 8px;cursor:pointer;background:{{ segWeekBg }};color:{{ segWeekFg }}">Veckorutnät</div>
+        </div>
+        <sc-if value="{{ stadPerson }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <sc-for list="{{ chorePeople }}" as="p" hint-placeholder-count="4">
+              <div style="background:#fff;border:3px solid #dbeafe;border-radius:24px;padding:12px 14px 14px;box-shadow:0 4px 0 0 rgba(37,99,235,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+                  <div style="width:38px;height:38px;border-radius:999px;border:3px solid {{ p.ring }};overflow:hidden;flex:none">
+                    <div style="width:100%;height:100%;background:#eff6ff center/cover no-repeat url({{ p.avatar }})"></div>
+                  </div>
+                  <div style="flex:1;min-width:0">
+                    <div style="font-size:17px;font-weight:900;color:#111827;line-height:1.15">{{ p.name }}</div>
+                    <div style="font-size:12.5px;font-weight:700;color:#6b7280">{{ p.role }}</div>
+                  </div>
+                  <div style="font-size:13px;font-weight:800;color:#1d4ed8;background:#eff6ff;border:2px solid #bfdbfe;border-radius:999px;padding:3px 10px 4px">{{ p.count }}</div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:7px">
+                  <sc-for list="{{ p.tasks }}" as="t" hint-placeholder-count="3">
+                    <div onClick="{{ t.onToggle }}" style="display:flex;align-items:center;gap:10px;background:#f9fafb;border:2px solid #e5e7eb;border-radius:14px;padding:9px 10px;cursor:pointer">
+                      <div style="width:24px;height:24px;flex:none;border-radius:8px;border:3px solid {{ t.boxBorder }};background:{{ t.boxBg }};color:#fff;font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center">{{ t.mark }}</div>
+                      <div style="flex:1;min-width:0;font-size:15px;font-weight:700;color:{{ t.fg }};text-decoration:{{ t.strike }}">{{ t.label }}</div>
+                      <div style="font-size:12.5px;font-weight:800;color:#9ca3af;text-transform:uppercase">{{ t.day }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ stadWeek }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#fff;border:3px solid #dbeafe;border-radius:24px;padding:12px 12px 14px;box-shadow:0 4px 0 0 rgba(37,99,235,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+            <div style="display:grid;grid-template-columns:66px repeat(7,minmax(0,1fr));gap:4px;align-items:center">
+              <div></div>
+              <div style="font-size:11.5px;font-weight:900;color:#9ca3af;text-align:center">M</div>
+              <div style="font-size:11.5px;font-weight:900;color:#9ca3af;text-align:center">T</div>
+              <div style="font-size:11.5px;font-weight:900;color:#9ca3af;text-align:center">O</div>
+              <div style="font-size:11.5px;font-weight:900;color:#9ca3af;text-align:center">T</div>
+              <div style="font-size:11.5px;font-weight:900;color:#9ca3af;text-align:center">F</div>
+              <div style="font-size:11.5px;font-weight:900;color:#9ca3af;text-align:center">L</div>
+              <div style="font-size:11.5px;font-weight:900;color:#9ca3af;text-align:center">S</div>
+              <sc-for list="{{ gridRows }}" as="g" hint-placeholder-count="5">
+                <div style="font-size:14px;font-weight:900;color:#111827">{{ g.name }}</div>
+                <sc-for list="{{ g.cells }}" as="c" hint-placeholder-count="7">
+                  <div style="aspect-ratio:1;border-radius:9px;border:2px solid {{ c.border }};background:{{ c.bg }};display:flex;align-items:center;justify-content:center;font-size:13px">{{ c.mark }}</div>
+                </sc-for>
+              </sc-for>
+            </div>
+            <div style="font-size:13px;font-weight:700;color:#6b7280;margin-top:10px;text-align:center">Ifylld ruta = syssla den dagen</div>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isTran }}" hint-placeholder-val="{{ false }}">
+      <div style="height:100%;overflow-y:auto;padding:16px 16px 100px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:22px;font-weight:900;color:#111827">🤸 Träningar</div>
+          <button onClick="{{ openPrint }}" style="border:3px solid #fecdd3;background:linear-gradient(to bottom,#fff1f2,#ffe4e6);color:#be123c;font-family:inherit;font-size:13.5px;font-weight:800;padding:7px 12px 8px;border-radius:16px;cursor:pointer;box-shadow:0 3px 0 0 rgba(225,29,72,.2),inset 0 2px 4px 0 rgba(255,255,255,.8)">🖨 A4</button>
+        </div>
+        <sc-for list="{{ trainings }}" as="t" hint-placeholder-count="4">
+          <div onClick="{{ t.onOpen }}" style="display:flex;gap:12px;background:#fff;border:3px solid {{ t.border }};border-radius:24px;padding:13px 14px;cursor:pointer;box-shadow:0 4px 0 0 rgba(225,29,72,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+            <div style="width:58px;flex:none;text-align:center;background:{{ t.tint }};border-radius:16px;padding:8px 0 9px">
+              <div style="font-size:13px;font-weight:900;text-transform:uppercase;color:{{ t.fg }}">{{ t.day }}</div>
+              <div style="font-size:17px;font-weight:900;color:{{ t.fg }};line-height:1.1">{{ t.time }}</div>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:17px;font-weight:900;color:#111827;line-height:1.2">{{ t.title }}</div>
+              <div style="font-size:13.5px;font-weight:600;color:#4b5563">{{ t.place }}</div>
+              <div style="font-size:13px;font-weight:800;color:{{ t.fg }};margin-top:3px">{{ t.who }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isDat }}" hint-placeholder-val="{{ false }}">
+      <div style="height:100%;overflow-y:auto;padding:16px 16px 100px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:22px;font-weight:900;color:#111827">📅 Viktiga datum</div>
+        <div style="background:#fff;border:3px solid #e0e8ff;border-radius:24px;padding:13px 13px 15px;box-shadow:0 4px 0 0 rgba(79,70,229,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+          <div style="font-size:15px;font-weight:900;color:#312e81;margin-bottom:9px">September 2026</div>
+          <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px">
+            <sc-for list="{{ cal }}" as="c" hint-placeholder-count="30">
+              <div style="aspect-ratio:1;border-radius:11px;border:2px solid {{ c.border }};background:{{ c.bg }};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px">
+                <div style="font-size:13px;font-weight:800;color:{{ c.fg }};line-height:1">{{ c.num }}</div>
+                <div style="font-size:9px;line-height:1">{{ c.dot }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <sc-for list="{{ dates }}" as="d" hint-placeholder-count="5">
+          <div style="display:flex;gap:12px;align-items:center;background:#fff;border:3px solid #e0e8ff;border-radius:22px;padding:11px 14px;box-shadow:0 4px 0 0 rgba(79,70,229,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+            <div style="width:46px;flex:none;text-align:center;background:#f0f4ff;border-radius:14px;padding:6px 0 7px">
+              <div style="font-size:19px;font-weight:900;color:#4338ca;line-height:1">{{ d.num }}</div>
+              <div style="font-size:11.5px;font-weight:800;color:#6366f1;text-transform:uppercase">{{ d.mon }}</div>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:16.5px;font-weight:800;color:#111827;line-height:1.2;text-wrap:pretty">{{ d.title }}</div>
+              <div style="font-size:13px;font-weight:600;color:#6b7280">{{ d.meta }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <div style="position:absolute;left:0;right:0;bottom:0;display:flex;gap:2px;padding:9px 8px 30px;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);border-top:3px solid #dbeafe">
+      <sc-for list="{{ tabs }}" as="tb" hint-placeholder-count="5">
+        <div onClick="{{ tb.onPick }}" style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0 4px;border-radius:16px;cursor:pointer;background:{{ tb.bg }}">
+          <div style="font-size:19px">{{ tb.icon }}</div>
+          <div style="font-size:11.5px;font-weight:800;color:{{ tb.fg }}">{{ tb.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <sc-if value="{{ dayOpen }}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{ closeSheet }}" style="position:absolute;inset:0;background:rgba(17,24,39,.45);backdrop-filter:blur(2px);display:flex;align-items:flex-end">
+        <div style="width:100%;max-height:78%;overflow-y:auto;background:#fff;border-top:3px solid #bfdbfe;border-radius:32px 32px 0 0;padding:16px 18px 34px;box-sizing:border-box">
+          <div style="width:52px;height:5px;border-radius:99px;background:#e5e7eb;margin:0 auto 14px"></div>
+          <div style="font-size:23px;font-weight:900;color:#111827;line-height:1.1">{{ sheetTitle }}</div>
+          <div style="font-size:13.5px;font-weight:700;color:#6b7280;margin-bottom:12px">{{ sheetSub }}</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <sc-for list="{{ sheetItems }}" as="s" hint-placeholder-count="3">
+              <div style="display:flex;gap:11px;align-items:flex-start;background:#f9fafb;border:3px solid #e5e7eb;border-radius:18px;padding:11px 12px">
+                <div style="width:34px;height:34px;flex:none;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:17px;background:{{ s.tint }}">{{ s.icon }}</div>
+                <div style="flex:1;min-width:0">
+                  <div style="font-size:16px;font-weight:800;color:#111827;line-height:1.2">{{ s.label }}</div>
+                  <div style="font-size:13.5px;font-weight:600;color:#6b7280">{{ s.meta }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <button onClick="{{ closeSheet }}" style="width:100%;margin-top:14px;border:3px solid #bfdbfe;background:#fff;font-family:inherit;font-size:16.5px;font-weight:900;color:#1d4ed8;border-radius:20px;padding:12px 0 13px;cursor:pointer;box-shadow:0 4px 0 0 rgba(37,99,235,.18),inset 0 2px 4px 0 rgba(255,255,255,.8)">Stäng</button>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ printOpen }}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{ closeSheet }}" style="position:absolute;inset:0;background:rgba(17,24,39,.45);backdrop-filter:blur(2px);display:flex;align-items:flex-end">
+        <div style="width:100%;background:#fff;border-top:3px solid #bfdbfe;border-radius:32px 32px 0 0;padding:16px 18px 34px;box-sizing:border-box">
+          <div style="width:52px;height:5px;border-radius:99px;background:#e5e7eb;margin:0 auto 14px"></div>
+          <div style="font-size:21px;font-weight:900;color:#111827">Skriv ut veckan</div>
+          <div style="font-size:13.5px;font-weight:600;color:#6b7280;margin-bottom:12px">Valen sparas till nästa vecka.</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <sc-for list="{{ printItems }}" as="p" hint-placeholder-count="4">
+              <div onClick="{{ p.onToggle }}" style="display:flex;align-items:center;gap:11px;background:#f9fafb;border:3px solid {{ p.border }};border-radius:18px;padding:11px 12px;cursor:pointer">
+                <div style="width:26px;height:26px;flex:none;border-radius:9px;border:3px solid {{ p.boxBorder }};background:{{ p.boxBg }};color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center">{{ p.mark }}</div>
+                <div style="flex:1;min-width:0;font-size:15.5px;font-weight:800;color:#111827">{{ p.label }}</div>
+                <div style="font-size:19px">{{ p.icon }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:8px;margin:12px 0 14px">
+            <div onClick="{{ setPortrait }}" style="flex:1;text-align:center;font-size:14px;font-weight:800;border-radius:16px;padding:8px 0 9px;cursor:pointer;background:{{ portBg }};border:3px solid {{ portBorder }};color:{{ portFg }}">A4 stående</div>
+            <div onClick="{{ setLandscape }}" style="flex:1;text-align:center;font-size:14px;font-weight:800;border-radius:16px;padding:8px 0 9px;cursor:pointer;background:{{ landBg }};border:3px solid {{ landBorder }};color:{{ landFg }}">A4 liggande</div>
+          </div>
+          <button onClick="{{ closeSheet }}" style="width:100%;border:none;font-family:inherit;font-size:18px;font-weight:900;color:#fff;background:linear-gradient(to bottom,#dc2626,#b91c1c);border-radius:22px;padding:14px 0 15px;cursor:pointer;box-shadow:0 4px 0 0 rgba(0,0,0,.2),0 6px 12px -2px rgba(0,0,0,.15),inset 0 2px 4px 0 rgba(255,255,255,.3)" style-active="transform:translateY(2px);box-shadow:0 1px 0 0 rgba(0,0,0,.2)">Skriv ut {{ printCount }} sidor →</button>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+</div>
+</x-import>
+</div>
+
+<div class="col">
+<div class="lbl"><span class="tag">utskrift 1</span>Matschema · A4 stående</div>
+<div class="sheet">
+  <div class="shead"><div><div class="sh1">Matschema</div><div class="sh2">Vecka 37 · 7–13 september</div></div><div class="sh2" style="font-weight:800">Martin &amp; Karin</div></div>
+  <div style="flex:1;display:flex;flex-direction:column;margin-top:6px">
+    <div class="srow"><div class="sk">Mån 7</div><div style="flex:1"><div class="st">Tacos</div><div class="sm">Martin lagar · 18:30</div></div></div>
+    <div class="srow"><div class="sk">Tis 8</div><div style="flex:1"><div class="st">Korv stroganoff</div><div class="sm">Karin lagar · 18:45, efter Street feet</div></div></div>
+    <div class="srow"><div class="sk">Ons 9</div><div style="flex:1"><div class="st">Fisk, potatis &amp; ärtor</div><div class="sm">Tidig middag 17:15 · föräldramöte 18:00</div></div></div>
+    <div class="srow"><div class="sk">Tor 10</div><div style="flex:1"><div class="st">Kycklinggryta</div><div class="sm">Karin lagar · 18:30, efter gymnastiken</div></div></div>
+    <div class="srow"><div class="sk">Fre 11</div><div style="flex:1"><div class="st">Fredagspizza</div><div class="sm">Astrid och Signe kavlar · 18:00</div></div></div>
+    <div class="srow"><div class="sk">Lör 12</div><div style="flex:1"><div class="st">Pannkakor</div><div class="sm">Lunch efter uppvisningen</div></div></div>
+    <div class="srow" style="border-bottom:none"><div class="sk">Sön 13</div><div style="flex:1"><div class="st">Söndagsstek</div><div class="sm">Farmor äter med oss · 16:00</div></div></div>
+  </div>
+  <div class="sfoot"><span>Handla: köttfärs, korv, lax, kycklingfilé, pizzadeg, sirap, grädde</span><span>Familjetavlan</span></div>
+</div>
+</div>
+
+<div class="col">
+<div class="lbl"><span class="tag">utskrift 2</span>Städschema per person · A4 stående</div>
+<div class="sheet">
+  <div class="shead"><div><div class="sh1">Städschema</div><div class="sh2">Vecka 37 · kryssa av när det är klart</div></div><div class="sh2" style="font-weight:800">Familjen</div></div>
+  <div style="flex:1;display:grid;grid-template-rows:repeat(5,1fr);gap:10px;margin-top:12px">
+    <div class="pers"><div class="pnm">Astrid <span style="font-size:14px;font-weight:700;color:#4b5563">· 11 år</span></div>
+      <div style="display:flex;flex-direction:column;gap:5px">
+        <div class="ptask"><span class="box"></span>Dammsuga hallen — tis</div>
+        <div class="ptask"><span class="box"></span>Duka och duka av — mån, tor</div>
+      </div></div>
+    <div class="pers"><div class="pnm">Signe <span style="font-size:14px;font-weight:700;color:#4b5563">· 8 år</span></div>
+      <div style="display:flex;flex-direction:column;gap:5px">
+        <div class="ptask"><span class="box"></span>Sopsortering — mån</div>
+        <div class="ptask"><span class="box"></span>Duka fram frukost — ons</div>
+      </div></div>
+    <div class="pers"><div class="pnm">Bodil <span style="font-size:14px;font-weight:700;color:#4b5563">· 5 år</span></div>
+      <div style="display:flex;flex-direction:column;gap:5px">
+        <div class="ptask"><span class="box"></span>Vattna blommorna — fre</div>
+        <div class="ptask"><span class="box"></span>Plocka undan leksaker — sön</div>
+      </div></div>
+    <div class="pers"><div class="pnm">Karin</div>
+      <div style="display:flex;flex-direction:column;gap:5px">
+        <div class="ptask"><span class="box"></span>Badrum — ons</div>
+        <div class="ptask"><span class="box"></span>Tvätt — tor, sön</div>
+      </div></div>
+    <div class="pers"><div class="pnm">Martin</div>
+      <div style="display:flex;flex-direction:column;gap:5px">
+        <div class="ptask"><span class="box"></span>Köket + diskmaskin — varje dag</div>
+        <div class="ptask"><span class="box"></span>Dammsuga övervåningen — tor</div>
+      </div></div>
+  </div>
+  <div class="sfoot"><span>Storstädning tillsammans lördag 13:00</span><span>Familjetavlan</span></div>
+</div>
+</div>
+
+<div class="col">
+<div class="lbl"><span class="tag">utskrift 3</span>Träningskalender · A4 stående</div>
+<div class="sheet">
+  <div class="shead"><div><div class="sh1">Träningar</div><div class="sh2">Vecka 37 · tider, plats och skjuts</div></div><div class="sh2" style="font-weight:800">Astrid · Signe · Bodil</div></div>
+  <div style="flex:1;display:flex;flex-direction:column;margin-top:6px">
+    <div class="srow"><div class="sk">Mån 7</div><div style="flex:1"><div class="st">Gymnastik 17:00–18:15</div><div class="sm">Astrid · Idrottshuset sal B · Martin skjutsar · ta med vattenflaska</div></div></div>
+    <div class="srow"><div class="sk">Tis 8</div><div style="flex:1"><div class="st">Street feet, dans 17:30–18:30</div><div class="sm">Signe · Kulturskolan sal 2 · Karin skjutsar · inneskor</div></div></div>
+    <div class="srow"><div class="sk">Tor 10</div><div style="flex:1"><div class="st">Gymnastik 17:00–18:15</div><div class="sm">Astrid · Idrottshuset sal B · Karin skjutsar</div></div></div>
+    <div class="srow"><div class="sk">Lör 12</div><div style="flex:1"><div class="st">Simskola 09:00–09:45</div><div class="sm">Bodil · Simhallen · Martin följer med i vattnet</div></div></div>
+    <div class="srow" style="border-bottom:none"><div class="sk">Lör 12</div><div style="flex:1"><div class="st">Uppvisning Street feet 11:00</div><div class="sm">Signe · Kulturhuset stora scenen · alla kommer · på plats 10:30</div></div></div>
+  </div>
+  <div class="sfoot"><span>Avanmälan: ring ledaren senast kl 15 samma dag</span><span>Familjetavlan</span></div>
+</div>
+</div>
+
+<div class="col" style="max-width:560px">
+<div class="lbl"><span class="tag">om</span>Så fungerar den</div>
+<p class="note" style="margin:0">Veckotavlan är basen: sju dagkolumner du swipar mellan, en rad med familjens avatarer högst upp som filtrerar veckan till en person, och 🖨-knappen alltid inom räckhåll. Flikarna ger djupet — matschemat har inköpslista, städschemat kan visas per person eller som veckorutnät, träningarna har plats och skjuts, datumen har månadsrutnät. Barnen ser samma tavla men bara sin egen rad, utan poäng.<br><br>Säg till om åldrarna (Astrid 11, Signe 8, Bodil 5) eller sysslorna ska ändras, eller om du vill att jag lägger till skärmar för att lägga in nya aktiviteter och ett allt-i-ett veckoblad för utskrift.</p>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showShoppingList&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Beteende&quot;}}">
+const AC = { mat:{tint:'#fef3c7'}, stad:{tint:'#dbeafe'}, tran:{tint:'#ffe4e6'}, dat:{tint:'#e0e8ff'} };
+const MEMBERS = [
+  { name:'Martin', short:'Martin', role:'Köket i veckan', avatar:'avatars/martin.svg', ring:'#bfdbfe' },
+  { name:'Karin', short:'Karin', role:'Sambo', avatar:'avatars/karin.svg', ring:'#c7d7fe' },
+  { name:'Astrid', short:'Astrid', role:'11 år', avatar:'avatars/astrid.svg', ring:'#fecdd3' },
+  { name:'Signe', short:'Signe', role:'8 år', avatar:'avatars/signe.svg', ring:'#fde68a' },
+  { name:'Bodil', short:'Bodil', role:'5 år', avatar:'avatars/bodil.svg', ring:'#fecaca' },
+];
+const DAYS = [
+  { name:'mån', date:'7/9', items:[
+    { icon:'🤸', label:'Gymnastik 17:00', meta:'Astrid · Idrottshuset', k:'tran', p:'Astrid' },
+    { icon:'🍽', label:'Tacos', meta:'Martin lagar · 18:30', k:'mat', p:'alla' },
+    { icon:'🧹', label:'Sopsortering', meta:'Signe', k:'stad', p:'Signe' } ] },
+  { name:'tis', date:'8/9', today:true, items:[
+    { icon:'🤸', label:'Street feet 17:30', meta:'Signe · Kulturskolan', k:'tran', p:'Signe' },
+    { icon:'🍽', label:'Korv stroganoff', meta:'Karin lagar · 18:45', k:'mat', p:'alla' },
+    { icon:'🧹', label:'Dammsuga hallen', meta:'Astrid', k:'stad', p:'Astrid' } ] },
+  { name:'ons', date:'9/9', items:[
+    { icon:'📅', label:'Föräldramöte 18:00', meta:'Astrids klass · aulan', k:'dat', p:'Karin' },
+    { icon:'🍽', label:'Fisk & potatis', meta:'Tidig middag 17:15', k:'mat', p:'alla' },
+    { icon:'🧹', label:'Badrum', meta:'Karin', k:'stad', p:'Karin' } ] },
+  { name:'tor', date:'10/9', items:[
+    { icon:'🤸', label:'Gymnastik 17:00', meta:'Astrid · Karin skjutsar', k:'tran', p:'Astrid' },
+    { icon:'🍽', label:'Kycklinggryta', meta:'Karin lagar · 18:30', k:'mat', p:'alla' },
+    { icon:'🧹', label:'Dammsuga övervåningen', meta:'Martin', k:'stad', p:'Martin' } ] },
+  { name:'fre', date:'11/9', items:[
+    { icon:'🍽', label:'Fredagspizza', meta:'Astrid & Signe kavlar · 18:00', k:'mat', p:'alla' },
+    { icon:'🧹', label:'Vattna blommorna', meta:'Bodil', k:'stad', p:'Bodil' },
+    { icon:'📅', label:'Lönedag', meta:'Sätt över till sparkontot', k:'dat', p:'Martin' } ] },
+  { name:'lör', date:'12/9', items:[
+    { icon:'🤸', label:'Simskola 09:00', meta:'Bodil · Simhallen', k:'tran', p:'Bodil' },
+    { icon:'🤸', label:'Uppvisning 11:00', meta:'Signe · Kulturhuset', k:'tran', p:'Signe' },
+    { icon:'🧹', label:'Storstädning 13:00', meta:'Alla hjälper till', k:'stad', p:'alla' },
+    { icon:'🍽', label:'Pannkakor', meta:'Lunch efteråt', k:'mat', p:'alla' } ] },
+  { name:'sön', date:'13/9', items:[
+    { icon:'📅', label:'Farmor på besök 15:00', meta:'Fika och middag', k:'dat', p:'alla' },
+    { icon:'🍽', label:'Söndagsstek', meta:'16:00', k:'mat', p:'alla' },
+    { icon:'🧹', label:'Plocka undan leksaker', meta:'Bodil', k:'stad', p:'Bodil' } ] },
+];
+const MEALS = [
+  { day:'mån', date:'7/9', dish:'Tacos', who:'Martin lagar · 18:30', emoji:'🌮', ing:['Köttfärs 500 g','Tacoskal','Gurka, paprika','Créme fraiche'] },
+  { day:'tis', date:'8/9', dish:'Korv stroganoff', who:'Karin lagar · 18:45', emoji:'🍚', ing:['Falukorv','Tomatpuré','Grädde','Ris'] },
+  { day:'ons', date:'9/9', dish:'Fisk, potatis & ärtor', who:'Tidig middag 17:15', emoji:'🐟', ing:['Laxfilé 4 bitar','Potatis','Ärtor','Dill'] },
+  { day:'tor', date:'10/9', dish:'Kycklinggryta', who:'Karin lagar · 18:30', emoji:'🍗', ing:['Kycklingfilé','Kokosmjölk','Curry','Ris'] },
+  { day:'fre', date:'11/9', dish:'Fredagspizza', who:'Astrid & Signe kavlar · 18:00', emoji:'🍕', ing:['Pizzadeg','Krossade tomater','Mozzarella','Skinka'] },
+  { day:'lör', date:'12/9', dish:'Pannkakor', who:'Lunch efter uppvisningen', emoji:'🥞', ing:['Mjöl','Mjölk','Ägg','Sylt'] },
+  { day:'sön', date:'13/9', dish:'Söndagsstek', who:'Farmor äter med oss · 16:00', emoji:'🥩', ing:['Högrev 1,2 kg','Rotfrukter','Grädde','Lingonsylt'] },
+];
+const BUYS = ['Köttfärs','Falukorv','Laxfilé','Kycklingfilé','Pizzadeg','Grädde','Sirap','Potatis','Ris'];
+const PEOPLE = [
+  { name:'Astrid', role:'11 år', avatar:'avatars/astrid.svg', ring:'#fecdd3', tasks:[
+    { label:'Dammsuga hallen', day:'tis', d:1 }, { label:'Duka och duka av', day:'mån', d:0 }, { label:'Duka av', day:'tor', d:3 } ] },
+  { name:'Signe', role:'8 år', avatar:'avatars/signe.svg', ring:'#fde68a', tasks:[
+    { label:'Sopsortering', day:'mån', d:0 }, { label:'Duka fram frukost', day:'ons', d:2 } ] },
+  { name:'Bodil', role:'5 år', avatar:'avatars/bodil.svg', ring:'#fecaca', tasks:[
+    { label:'Vattna blommorna', day:'fre', d:4 }, { label:'Plocka undan leksaker', day:'sön', d:6 } ] },
+  { name:'Karin', role:'Sambo', avatar:'avatars/karin.svg', ring:'#c7d7fe', tasks:[
+    { label:'Badrum', day:'ons', d:2 }, { label:'Tvätt', day:'tor', d:3 } ] },
+  { name:'Martin', role:'Köket i veckan', avatar:'avatars/martin.svg', ring:'#bfdbfe', tasks:[
+    { label:'Köket + diskmaskin', day:'dagl', d:0 }, { label:'Dammsuga övervåningen', day:'tor', d:3 } ] },
+];
+const TC = { ord:{border:'#fecdd3',tint:'#fff1f2',fg:'#be123c'}, gram:{border:'#bfdbfe',tint:'#eff6ff',fg:'#1d4ed8'}, warn:{border:'#fde68a',tint:'#fffbeb',fg:'#b45309'} };
+const TRAININGS = [
+  { day:'mån', time:'17:00', title:'Gymnastik', place:'Idrottshuset, sal B', who:'Astrid · Martin skjutsar', c:'ord',
+    det:[{icon:'⏱',label:'17:00–18:15',meta:'Var på plats 10 min innan',k:'tran'},{icon:'🎒',label:'Ta med',meta:'Vattenflaska, gymnastikdress',k:'stad'},{icon:'🚗',label:'Martin skjutsar',meta:'Karin hämtar 18:15',k:'mat'}] },
+  { day:'tis', time:'17:30', title:'Street feet (dans)', place:'Kulturskolan, sal 2', who:'Signe · Karin skjutsar', c:'gram',
+    det:[{icon:'⏱',label:'17:30–18:30',meta:'Terminen slutar 12 dec',k:'tran'},{icon:'🎒',label:'Ta med',meta:'Inneskor, vattenflaska',k:'stad'},{icon:'🚗',label:'Karin skjutsar',meta:'Martin hämtar',k:'mat'}] },
+  { day:'tor', time:'17:00', title:'Gymnastik', place:'Idrottshuset, sal B', who:'Astrid · Karin skjutsar', c:'ord',
+    det:[{icon:'⏱',label:'17:00–18:15',meta:'Middag 18:30 hemma',k:'tran'},{icon:'🎒',label:'Ta med',meta:'Vattenflaska, gymnastikdress',k:'stad'}] },
+  { day:'lör', time:'09:00', title:'Simskola', place:'Simhallen, lilla bassängen', who:'Bodil · Martin följer med', c:'warn',
+    det:[{icon:'⏱',label:'09:00–09:45',meta:'Ombyte från 08:40',k:'tran'},{icon:'🎒',label:'Ta med',meta:'Badkläder, handduk, badring',k:'stad'}] },
+  { day:'lör', time:'11:00', title:'Uppvisning Street feet', place:'Kulturhuset, stora scenen', who:'Signe · hela familjen kommer', c:'gram',
+    det:[{icon:'⏱',label:'11:00, på plats 10:30',meta:'Ca 40 min',k:'tran'},{icon:'👕',label:'Svart tröja + leggings',meta:'Håret i tofs',k:'stad'},{icon:'🥞',label:'Pannkakor efteråt',meta:'Lunch hemma',k:'mat'}] },
+];
+const DATES = [
+  { num:'09', mon:'sep', title:'Föräldramöte, Astrids klass', meta:'18:00 · aulan' },
+  { num:'12', mon:'sep', title:'Uppvisning Street feet', meta:'11:00 · Kulturhuset' },
+  { num:'25', mon:'sep', title:'Bodil fyller 6 år', meta:'Kalas lördagen efter' },
+  { num:'30', mon:'sep', title:'Utvecklingssamtal Astrid', meta:'15:20 · boka ledigt' },
+  { num:'26', mon:'okt', title:'Höstlov, vecka 44', meta:'Planera dagarna i god tid' },
+];
+const CAL_MARK = { 7:'🤸', 8:'🤸', 9:'📅', 10:'🤸', 12:'🤸', 13:'📅', 25:'🎂', 30:'📅' };
+const TABS = [
+  { id:'hem', icon:'🏡', label:'Hem' }, { id:'mat', icon:'🍽', label:'Mat' },
+  { id:'stad', icon:'🧹', label:'Städ' }, { id:'tran', icon:'🤸', label:'Träning' },
+  { id:'dat', icon:'📅', label:'Datum' },
+];
+const PRINTS = [
+  { k:'mat', label:'Matschema (kylskåpslapp)', icon:'🍽' },
+  { k:'stad', label:'Städschema per person', icon:'🧹' },
+  { k:'tran', label:'Träningskalender', icon:'🤸' },
+  { k:'dat', label:'Viktiga datum, månad', icon:'📅' },
+];
+
+class Component extends DCLogic {
+  state = { tab:'hem', filter:null, sheet:null, stadView:'person', orient:'port',
+    done:{ 'Signe-0':true, 'Astrid-1':true }, bought:{ 'Sirap':true },
+    sel:{ mat:true, stad:true, tran:true, dat:false } };
+
+  set(patch) { this.setState(patch); }
+  toggleIn(bag, key) { this.setState(s => ({ [bag]: { ...s[bag], [key]: !s[bag][key] } })); }
+
+  renderVals() {
+    const devW = 402, devH = 874;
+    const st = this.state, f = st.filter, t = st.tab;
+    const keep = it => !f || it.p === f || it.p === 'alla';
+
+    const days = DAYS.map((d, i) => {
+      const items = d.items.filter(keep);
+      return { name:d.name, date:d.date,
+        border: d.today ? '#1d4ed8' : '#dbeafe', fg: d.today ? '#1d4ed8' : '#111827',
+        items: items.map(it => ({ ...it, tint: AC[it.k].tint })),
+        empty: items.length ? '' : 'Inget inplanerat',
+        onOpen: () => this.set({ sheet:{ type:'day', i } }) };
+    });
+
+    const chorePeople = PEOPLE.filter(p => !f || p.name === f).map(p => ({
+      name:p.name, role:p.role, avatar:p.avatar, ring:p.ring,
+      count: p.tasks.filter((_, i) => st.done[p.name + '-' + i]).length + '/' + p.tasks.length,
+      tasks: p.tasks.map((task, i) => {
+        const key = p.name + '-' + i, on = !!st.done[key];
+        return { label:task.label, day:task.day, mark: on ? '✓' : '',
+          boxBorder: on ? '#10b981' : '#bfdbfe', boxBg: on ? '#10b981' : '#fff',
+          fg: on ? '#9ca3af' : '#111827', strike: on ? 'line-through' : 'none',
+          onToggle: () => this.toggleIn('done', key) };
+      }) }));
+
+    const gridRows = PEOPLE.map(p => ({
+      name: p.name,
+      cells: [0,1,2,3,4,5,6].map(d => {
+        const has = p.tasks.some(task => task.d === d || task.day === 'dagl');
+        return { mark: has ? '🧹' : '', bg: has ? '#eff6ff' : '#f9fafb', border: has ? '#bfdbfe' : '#e5e7eb' };
+      }) }));
+
+    const cal = [];
+    for (let i = 0; i < 1; i++) cal.push({ num:'', dot:'', bg:'transparent', border:'transparent', fg:'#9ca3af' });
+    for (let d = 1; d <= 30; d++) {
+      const mark = CAL_MARK[d];
+      cal.push({ num:String(d), dot: mark || '',
+        bg: mark ? '#f0f4ff' : '#fff', border: mark ? '#c7d7fe' : '#e5e7eb',
+        fg: mark ? '#312e81' : '#6b7280' });
+    }
+
+    const buys = BUYS.map(b => {
+      const on = !!st.bought[b];
+      return { label:b, bg: on ? '#ecfdf5' : '#f9fafb', border: on ? '#a7f3d0' : '#e5e7eb',
+        fg: on ? '#9ca3af' : '#111827', strike: on ? 'line-through' : 'none',
+        onToggle: () => this.toggleIn('bought', b) };
+    });
+
+    const printItems = PRINTS.map(p => {
+      const on = !!st.sel[p.k];
+      return { label:p.label, icon:p.icon, mark: on ? '✓' : '', border: on ? '#bfdbfe' : '#e5e7eb',
+        boxBorder: on ? '#2563eb' : '#d1d5db', boxBg: on ? '#2563eb' : '#fff',
+        onToggle: () => this.toggleIn('sel', p.k) };
+    });
+
+    const sh = st.sheet;
+    let sheetTitle = '', sheetSub = '', sheetItems = [];
+    if (sh && sh.type === 'day') {
+      const d = DAYS[sh.i];
+      sheetTitle = { 'mån':'Måndag','tis':'Tisdag','ons':'Onsdag','tor':'Torsdag','fre':'Fredag','lör':'Lördag','sön':'Söndag' }[d.name] + ' ' + d.date;
+      const items = d.items.filter(keep);
+      sheetSub = items.length + ' saker på tavlan';
+      sheetItems = items.map(it => ({ icon:it.icon, label:it.label, meta:it.meta, tint:AC[it.k].tint }));
+    } else if (sh && sh.type === 'meal') {
+      const m = MEALS[sh.i];
+      sheetTitle = m.dish; sheetSub = m.day + ' ' + m.date + ' · ' + m.who;
+      sheetItems = m.ing.map(x => ({ icon:'🛒', label:x, meta:'', tint:'#fef3c7' }));
+    } else if (sh && sh.type === 'tran') {
+      const x = TRAININGS[sh.i];
+      sheetTitle = x.title; sheetSub = x.day + ' ' + x.time + ' · ' + x.place;
+      sheetItems = x.det.map(o => ({ icon:o.icon, label:o.label, meta:o.meta, tint:AC[o.k].tint }));
+    }
+
+    const seg = st.stadView === 'person';
+    const port = st.orient === 'port';
+    return {
+      devW, devH,
+      members: MEMBERS.map(m => ({ ...m, dim: (!f || f === m.name) ? 1 : 0.42,
+        ring: f === m.name ? '#ffffff' : m.ring, onPick: () => this.set({ filter: f === m.name ? null : m.name }) })),
+      filtered: !!f, filterName: f || '', clearFilter: () => this.set({ filter:null }),
+      days, chorePeople, gridRows, cal, buys, printItems, dates: DATES,
+      meals: MEALS.map((m, i) => ({ ...m, onOpen: () => this.set({ sheet:{ type:'meal', i } }) })),
+      trainings: TRAININGS.filter(x => !f || x.who.indexOf(f) === 0 || x.who.indexOf(f) > -1)
+        .map(x => ({ ...x, ...TC[x.c], onOpen: () => this.set({ sheet:{ type:'tran', i: TRAININGS.indexOf(x) } }) })),
+      buyCount: BUYS.filter(b => !st.bought[b]).length + ' kvar',
+      showShop: this.props.showShoppingList ?? true,
+      tabs: TABS.map(tb => ({ ...tb, bg: tb.id === t ? '#eff6ff' : 'transparent',
+        fg: tb.id === t ? '#1d4ed8' : '#9ca3af', onPick: () => this.set({ tab: tb.id, sheet:null }) })),
+      isHem: t === 'hem', isMat: t === 'mat', isStad: t === 'stad', isTran: t === 'tran', isDat: t === 'dat',
+      stadPerson: seg, stadWeek: !seg,
+      segPersonBg: seg ? '#fff' : 'transparent', segPersonFg: seg ? '#1d4ed8' : '#6b7280',
+      segWeekBg: seg ? 'transparent' : '#fff', segWeekFg: seg ? '#6b7280' : '#1d4ed8',
+      viewPerson: () => this.set({ stadView:'person' }), viewWeek: () => this.set({ stadView:'vecka' }),
+      dayOpen: !!sh && sh.type !== 'print', printOpen: !!sh && sh.type === 'print',
+      sheetTitle, sheetSub, sheetItems,
+      openPrint: () => this.set({ sheet:{ type:'print' } }),
+      closeSheet: () => this.set({ sheet:null }),
+      setPortrait: () => this.set({ orient:'port' }), setLandscape: () => this.set({ orient:'land' }),
+      portBg: port ? '#eff6ff' : '#fff', portBorder: port ? '#bfdbfe' : '#e5e7eb', portFg: port ? '#1d4ed8' : '#9ca3af',
+      landBg: port ? '#fff' : '#eff6ff', landBorder: port ? '#e5e7eb' : '#bfdbfe', landFg: port ? '#9ca3af' : '#1d4ed8',
+      printCount: PRINTS.filter(p => st.sel[p.k]).length,
+    };
+  }
+}
+</script>
+</body>
+</html>

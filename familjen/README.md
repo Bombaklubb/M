@@ -38,6 +38,7 @@ lokalt (`npm run dev`) är appen olåst.
 | `src/PrintSheets.tsx` | De fyra A4-bladen, renderas bara i `@media print` |
 | `src/usePersisted.ts` | Sparar avbockat, inköpslista och utskriftsval i `localStorage` |
 | `middleware.ts` | Lösenordsskyddet på Vercels edge |
+| `design/` | Designprototyperna från Claude Design som appen är byggd efter |
 
 Avbockade sysslor och inköpslistan sparas per enhet i webbläsaren — ingen server, inget konto.
 
