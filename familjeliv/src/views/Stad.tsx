@@ -1,4 +1,4 @@
-import { colorOf, PEOPLE } from '../data';
+import { choreDay, choreKey, colorOf, PEOPLE } from '../data';
 import type { Flags } from '../usePersisted';
 
 type Props = {
@@ -67,12 +67,12 @@ export function Stad({ filter, done, onToggleTask, view, onView, onPrint }: Prop
                   <div style={{ fontSize: 12.5, fontWeight: 700, color: '#6b7280' }}>{p.role}</div>
                 </div>
                 <div style={{ fontSize: 13, fontWeight: 800, color: c.fg, background: c.tint, border: `2px solid ${c.ring}`, borderRadius: 999, padding: '3px 10px 4px' }}>
-                  {p.tasks.filter((_, i) => done[`${p.name}-${i}`]).length}/{p.tasks.length}
+                  {p.tasks.filter((t) => done[choreKey(p.name, t)]).length}/{p.tasks.length}
                 </div>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
-                {p.tasks.map((t, i) => {
-                  const key = `${p.name}-${i}`;
+                {p.tasks.map((t) => {
+                  const key = choreKey(p.name, t);
                   const on = !!done[key];
                   return (
                     <div
@@ -86,7 +86,7 @@ export function Stad({ filter, done, onToggleTask, view, onView, onPrint }: Prop
                       <div style={{ flex: 1, minWidth: 0, fontSize: 15, fontWeight: 700, color: on ? '#9ca3af' : '#111827', textDecoration: on ? 'line-through' : 'none' }}>
                         {t.label}
                       </div>
-                      <div style={{ fontSize: 12.5, fontWeight: 800, color: '#9ca3af', textTransform: 'uppercase' }}>{t.day}</div>
+                      <div style={{ fontSize: 12.5, fontWeight: 800, color: '#9ca3af', textTransform: 'uppercase', textAlign: 'right', flex: 'none' }}>{choreDay(t)}</div>
                     </div>
                   );
                 })}

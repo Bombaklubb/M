@@ -45,60 +45,73 @@ export const MEMBERS: Member[] = [
   { name: 'Bodil', short: 'Bodil', role: '5 år', avatar: '/avatars/bodil.svg' },
 ];
 
-export type DayItem = { icon: string; label: string; meta: string; k: Kind; p: string };
+/** p = vem raden gäller: ett namn, flera namn eller 'alla'. */
+export type DayItem = { icon: string; label: string; meta: string; k: Kind; p: string | string[] };
+
+/** Filtret i toppen: visa raden när ingen är vald, när den gäller alla eller den valda. */
+export const forPerson = (p: DayItem['p'], filter: string | null) =>
+  !filter || p === 'alla' || (Array.isArray(p) ? p.includes(filter) : p === filter);
 export type Day = { name: string; long: string; date: string; today?: boolean; items: DayItem[] };
 
 export const DAYS: Day[] = [
   {
     name: 'mån', long: 'Måndag', date: '7/9', items: [
-      { icon: '🤸', label: 'Gymnastik 17:00', meta: 'Astrid · Idrottshuset', k: 'tran', p: 'Astrid' },
+      { icon: '🤸', label: 'Gymnastik 17:00', meta: 'Astrid · Martin skjutsar', k: 'tran', p: 'Astrid' },
       { icon: '🍽', label: 'Tacos', meta: 'Martin lagar · 18:30', k: 'mat', p: 'alla' },
-      { icon: '🧹', label: 'Sopsortering', meta: 'Signe', k: 'stad', p: 'Signe' },
+      { icon: '🧹', label: 'Städa rummen 18:45', meta: 'Astrid & Signe', k: 'stad', p: ['Astrid', 'Signe'] },
+      { icon: '🧹', label: 'Diskmaskin, kompost & skräp', meta: 'Karin', k: 'stad', p: 'Karin' },
     ],
   },
   {
     name: 'tis', long: 'Tisdag', date: '8/9', today: true, items: [
-      { icon: '🤸', label: 'Street feet 17:30', meta: 'Signe · Kulturskolan', k: 'tran', p: 'Signe' },
+      { icon: '🤸', label: 'Street feet 17:30', meta: 'Signe · Karin skjutsar', k: 'tran', p: 'Signe' },
       { icon: '🍽', label: 'Korv stroganoff', meta: 'Karin lagar · 18:45', k: 'mat', p: 'alla' },
-      { icon: '🧹', label: 'Dammsuga hallen', meta: 'Astrid', k: 'stad', p: 'Astrid' },
+      { icon: '🧹', label: 'Städa rummen 18:45', meta: 'Astrid & Signe', k: 'stad', p: ['Astrid', 'Signe'] },
+      { icon: '🧹', label: 'Diskmaskin, kompost & skräp', meta: 'Karin', k: 'stad', p: 'Karin' },
     ],
   },
   {
     name: 'ons', long: 'Onsdag', date: '9/9', items: [
-      { icon: '📅', label: 'Föräldramöte 18:00', meta: 'Astrids klass · aulan', k: 'dat', p: 'Karin' },
       { icon: '🍽', label: 'Fisk & potatis', meta: 'Martin lagar · 17:15', k: 'mat', p: 'alla' },
-      { icon: '🧹', label: 'Badrum', meta: 'Karin', k: 'stad', p: 'Karin' },
+      { icon: '🧹', label: 'Städa rummen 18:45', meta: 'Astrid & Signe', k: 'stad', p: ['Astrid', 'Signe'] },
+      { icon: '🧹', label: 'Diskmaskin, kompost & skräp', meta: 'Karin', k: 'stad', p: 'Karin' },
+      { icon: '📅', label: 'Föräldramöte 18:00', meta: 'Astrids klass · aulan', k: 'dat', p: 'Karin' },
     ],
   },
   {
     name: 'tor', long: 'Torsdag', date: '10/9', items: [
       { icon: '🤸', label: 'Gymnastik 17:00', meta: 'Astrid · Karin skjutsar', k: 'tran', p: 'Astrid' },
-      { icon: '🍽', label: 'Kycklinggryta', meta: 'Karin lagar · 18:30', k: 'mat', p: 'alla' },
-      { icon: '🧹', label: 'Dammsuga övervåningen', meta: 'Martin', k: 'stad', p: 'Martin' },
+      { icon: '🍽', label: 'Kycklinggryta', meta: 'Martin lagar · 18:30', k: 'mat', p: 'alla' },
+      { icon: '🧹', label: 'Städa rummen 18:45', meta: 'Astrid & Signe', k: 'stad', p: ['Astrid', 'Signe'] },
+      { icon: '🧹', label: 'Diskmaskin, kompost & skräp', meta: 'Karin', k: 'stad', p: 'Karin' },
     ],
   },
   {
     name: 'fre', long: 'Fredag', date: '11/9', items: [
-      { icon: '🍽', label: 'Fredagspizza', meta: 'Astrid & Signe kavlar · 18:00', k: 'mat', p: 'alla' },
-      { icon: '🧹', label: 'Vattna blommorna', meta: 'Bodil', k: 'stad', p: 'Bodil' },
+      { icon: '🍽', label: 'Fredagspizza', meta: 'Martin lagar · 18:00', k: 'mat', p: 'alla' },
+      { icon: '🧹', label: 'Städa rummen 18:45', meta: 'Astrid & Signe', k: 'stad', p: ['Astrid', 'Signe'] },
+      { icon: '🧹', label: 'Diskmaskin, kompost & skräp', meta: 'Karin', k: 'stad', p: 'Karin' },
       { icon: '📅', label: 'Lönedag', meta: 'Sätt över till sparkontot', k: 'dat', p: 'Martin' },
     ],
   },
   {
     name: 'lör', long: 'Lördag', date: '12/9', items: [
-      { icon: '🤸', label: 'Simskola 09:00', meta: 'Bodil · Simhallen', k: 'tran', p: 'Bodil' },
-      { icon: '🤸', label: 'Uppvisning 11:00', meta: 'Signe · Kulturhuset', k: 'tran', p: 'Signe' },
-      { icon: '🧹', label: 'Storstädning 13:00', meta: 'Alla hjälper till', k: 'stad', p: 'alla' },
+      { icon: '🤸', label: 'Simskola 09:00', meta: 'Bodil · Martin följer med', k: 'tran', p: 'Bodil' },
+      { icon: '🤸', label: 'Uppvisning 11:00', meta: 'Signe · hela familjen kommer', k: 'tran', p: 'Signe' },
       { icon: '🍽', label: 'Pannkakor (lunch)', meta: 'Martin lagar · 12:30', k: 'mat', p: 'alla' },
       { icon: '🍽', label: 'Soppa & mackor', meta: 'Karin lagar · 18:00', k: 'mat', p: 'alla' },
+      { icon: '🧹', label: 'Städa toaletterna', meta: 'Martin', k: 'stad', p: 'Martin' },
+      { icon: '🧹', label: 'Städa rummen 18:45', meta: 'Astrid & Signe', k: 'stad', p: ['Astrid', 'Signe'] },
+      { icon: '🧹', label: 'Diskmaskin, kompost & skräp', meta: 'Karin', k: 'stad', p: 'Karin' },
     ],
   },
   {
     name: 'sön', long: 'Söndag', date: '13/9', items: [
-      { icon: '📅', label: 'Farmor på besök 15:00', meta: 'Fika och middag', k: 'dat', p: 'alla' },
-      { icon: '🍽', label: 'Mackor och frukt (lunch)', meta: 'Karin lagar · 12:30', k: 'mat', p: 'alla' },
+      { icon: '🍽', label: 'Mackor och frukt (lunch)', meta: 'Flexibelt · 12:30', k: 'mat', p: 'alla' },
       { icon: '🍽', label: 'Söndagsstek', meta: 'Martin lagar · 16:00', k: 'mat', p: 'alla' },
-      { icon: '🧹', label: 'Plocka undan leksaker', meta: 'Bodil', k: 'stad', p: 'Bodil' },
+      { icon: '🧹', label: 'Städa rummen 18:45', meta: 'Astrid & Signe', k: 'stad', p: ['Astrid', 'Signe'] },
+      { icon: '🧹', label: 'Diskmaskin, kompost & skräp', meta: 'Karin', k: 'stad', p: 'Karin' },
+      { icon: '📅', label: 'Farmor på besök 15:00', meta: 'Fika och middag', k: 'dat', p: 'alla' },
     ],
   },
 ];
@@ -111,72 +124,70 @@ export type Meal = {
   date: string;
   slot: Slot;
   dish: string;
-  /** Matansvaret: middagen mån–fre, både lunch och middag lör–sön. */
-  cook: string;
+  /** Matansvaret: middagen mån–fre, både lunch och middag lör–sön. null = flexibelt. */
+  cook: string | null;
   when: string;
   /** Extra som bara syns på utskriften, t.ex. varför middagen är tidig. */
   note?: string;
   emoji: string;
-  ing: string[];
 };
 
-/** "Martin lagar · 18:30" — ansvaret i klartext. */
-export const mealWho = (m: Meal) => `${m.cook} lagar · ${m.when}`;
+/** "Martin lagar · 18:30" — ansvaret i klartext, "Flexibelt" när ingen är utsedd. */
+export const mealWho = (m: Meal) => (m.cook ? `${m.cook} lagar · ${m.when}` : `Flexibelt · ${m.when}`);
 
 export const SLOT_LABEL: Record<Slot, string> = { lunch: 'Lunch', middag: 'Middag' };
 
 export const MEALS: Meal[] = [
-  { day: 'mån', sheetDay: 'Mån 7', date: '7/9', slot: 'middag', dish: 'Tacos', cook: 'Martin', when: '18:30', emoji: '🌮', ing: ['Köttfärs 500 g', 'Tacoskal', 'Gurka, paprika', 'Créme fraiche'] },
-  { day: 'tis', sheetDay: 'Tis 8', date: '8/9', slot: 'middag', dish: 'Korv stroganoff', cook: 'Karin', when: '18:45', note: 'efter Street feet', emoji: '🍚', ing: ['Falukorv', 'Tomatpuré', 'Grädde', 'Ris'] },
-  { day: 'ons', sheetDay: 'Ons 9', date: '9/9', slot: 'middag', dish: 'Fisk, potatis & ärtor', cook: 'Martin', when: '17:15', note: 'tidig middag, Karin på föräldramöte 18:00', emoji: '🐟', ing: ['Laxfilé 4 bitar', 'Potatis', 'Ärtor', 'Dill'] },
-  { day: 'tor', sheetDay: 'Tor 10', date: '10/9', slot: 'middag', dish: 'Kycklinggryta', cook: 'Karin', when: '18:30', note: 'efter gymnastiken', emoji: '🍗', ing: ['Kycklingfilé', 'Kokosmjölk', 'Curry', 'Ris'] },
-  { day: 'fre', sheetDay: 'Fre 11', date: '11/9', slot: 'middag', dish: 'Fredagspizza', cook: 'Astrid & Signe', when: '18:00', note: 'de kavlar själva', emoji: '🍕', ing: ['Pizzadeg', 'Krossade tomater', 'Mozzarella', 'Skinka'] },
-  { day: 'lör', sheetDay: 'Lör 12', date: '12/9', slot: 'lunch', dish: 'Pannkakor', cook: 'Martin', when: '12:30', note: 'efter uppvisningen', emoji: '🥞', ing: ['Mjöl', 'Mjölk', 'Ägg', 'Sylt'] },
-  { day: 'lör', sheetDay: 'Lör 12', date: '12/9', slot: 'middag', dish: 'Soppa & mackor', cook: 'Karin', when: '18:00', emoji: '🥣', ing: ['Bröd', 'Ost', 'Morötter', 'Grädde'] },
-  { day: 'sön', sheetDay: 'Sön 13', date: '13/9', slot: 'lunch', dish: 'Mackor och frukt', cook: 'Karin', when: '12:30', emoji: '🥪', ing: ['Bröd', 'Frukt', 'Ägg'] },
-  { day: 'sön', sheetDay: 'Sön 13', date: '13/9', slot: 'middag', dish: 'Söndagsstek', cook: 'Martin', when: '16:00', note: 'farmor äter med oss', emoji: '🥩', ing: ['Högrev 1,2 kg', 'Rotfrukter', 'Grädde', 'Lingonsylt'] },
+  { day: 'mån', sheetDay: 'Mån 7', date: '7/9', slot: 'middag', dish: 'Tacos', cook: 'Martin', when: '18:30', emoji: '🌮' },
+  { day: 'tis', sheetDay: 'Tis 8', date: '8/9', slot: 'middag', dish: 'Korv stroganoff', cook: 'Karin', when: '18:45', note: 'efter Street feet', emoji: '🍚' },
+  { day: 'ons', sheetDay: 'Ons 9', date: '9/9', slot: 'middag', dish: 'Fisk, potatis & ärtor', cook: 'Martin', when: '17:15', note: 'tidig middag, Karin på föräldramöte 18:00', emoji: '🐟' },
+  { day: 'tor', sheetDay: 'Tor 10', date: '10/9', slot: 'middag', dish: 'Kycklinggryta', cook: 'Martin', when: '18:30', note: 'efter gymnastiken', emoji: '🍗' },
+  { day: 'fre', sheetDay: 'Fre 11', date: '11/9', slot: 'middag', dish: 'Fredagspizza', cook: 'Martin', when: '18:00', emoji: '🍕' },
+  { day: 'lör', sheetDay: 'Lör 12', date: '12/9', slot: 'lunch', dish: 'Pannkakor', cook: 'Martin', when: '12:30', note: 'efter uppvisningen', emoji: '🥞' },
+  { day: 'lör', sheetDay: 'Lör 12', date: '12/9', slot: 'middag', dish: 'Soppa & mackor', cook: 'Karin', when: '18:00', emoji: '🥣' },
+  { day: 'sön', sheetDay: 'Sön 13', date: '13/9', slot: 'lunch', dish: 'Mackor och frukt', cook: null, when: '12:30', note: 'flexibelt – den som är hemma fixar', emoji: '🥪' },
+  { day: 'sön', sheetDay: 'Sön 13', date: '13/9', slot: 'middag', dish: 'Söndagsstek', cook: 'Martin', when: '16:00', note: 'farmor äter med oss', emoji: '🥩' },
 ];
 
 export const BUYS = ['Köttfärs', 'Falukorv', 'Laxfilé', 'Kycklingfilé', 'Pizzadeg', 'Grädde', 'Sirap', 'Potatis', 'Ris', 'Bröd', 'Frukt'];
 
-export type Chore = { label: string; day: string; d: number };
+export type Chore = { label: string; day: string; d: number; time?: string };
 export type Person = { name: string; role: string; avatar: string; tasks: Chore[] };
 
 export const PEOPLE: Person[] = [
   {
     name: 'Astrid', role: '11 år', avatar: '/avatars/astrid.svg', tasks: [
-      { label: 'Dammsuga hallen', day: 'tis', d: 1 },
-      { label: 'Duka och duka av', day: 'mån', d: 0 },
-      { label: 'Duka av', day: 'tor', d: 3 },
+      { label: 'Städa sitt rum', day: 'dagl', d: 0, time: '18:45' },
     ],
   },
   {
     name: 'Signe', role: '8 år', avatar: '/avatars/signe.svg', tasks: [
-      { label: 'Sopsortering', day: 'mån', d: 0 },
-      { label: 'Duka fram frukost', day: 'ons', d: 2 },
-    ],
-  },
-  {
-    name: 'Bodil', role: '5 år', avatar: '/avatars/bodil.svg', tasks: [
-      { label: 'Vattna blommorna', day: 'fre', d: 4 },
-      { label: 'Plocka undan leksaker', day: 'sön', d: 6 },
+      { label: 'Städa sitt rum', day: 'dagl', d: 0, time: '18:45' },
     ],
   },
   {
     name: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg', tasks: [
-      { label: 'Badrum', day: 'ons', d: 2 },
-      { label: 'Tvätt', day: 'tor', d: 3 },
+      { label: 'Plocka ur diskmaskinen', day: 'dagl', d: 0 },
+      { label: 'Tömma kompost och skräp', day: 'dagl', d: 0 },
     ],
   },
   {
     name: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg', tasks: [
-      { label: 'Köket + diskmaskin', day: 'dagl', d: 0 },
-      { label: 'Dammsuga övervåningen', day: 'tor', d: 3 },
+      { label: 'Städa toaletterna', day: 'lör', d: 5 },
     ],
   },
 ];
 
-export const CHORE_FOOTER = 'Storstädning tillsammans lördag 13:00';
+/**
+ * Nyckeln för avbockning följer sysslan, inte dess plats i listan — annars
+ * ärver en ny syssla bocken från den som stod på samma rad förut.
+ */
+export const choreKey = (name: string, t: Chore) => `${name}-${t.label}`;
+
+/** "varje dag 18:45" läser bättre på ett blad än "dagl". */
+export const choreDay = (t: Chore) => (t.day === 'dagl' ? 'varje dag' : t.day) + (t.time ? ` ${t.time}` : '');
+
+export const CHORE_FOOTER = 'Sysslor märkta varje dag gäller alla veckans dagar';
 
 export type TrainingColor = { border: string; tint: string; fg: string };
 export const TC: Record<string, TrainingColor> = {
@@ -290,7 +301,9 @@ export const FAMILY_KIDS = 'Astrid · Signe · Bodil';
 
 /** Sysslor som återkommer varje dag hamnar i veckobladets sidfot, inte i varje ruta. */
 export const DAILY_CHORES = PEOPLE.flatMap((p) =>
-  p.tasks.filter((t) => t.day === 'dagl').map((t) => `${p.name} ${t.label.toLowerCase()}`),
+  p.tasks
+    .filter((t) => t.day === 'dagl')
+    .map((t) => `${p.name} ${t.label.toLowerCase()}${t.time ? ` ${t.time}` : ''}`),
 );
 
 /** En rad per dag: träning, middag och vem som gör vad — grunden för veckobladet. */

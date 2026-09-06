@@ -1,8 +1,8 @@
 import { Fragment, type ReactNode } from 'react';
 import {
   BUYS, CAL_MARK, CHORE_FOOTER, colorOf, DAILY_CHORES, DATES, FAMILY_KIDS, FAMILY_PARENTS,
-  MEALS, mealWho, MEMBERS, MONTH_LABEL, PEOPLE, PERSON_COLOR, SLOT_LABEL, TRAININGS,
-  TRAINING_FOOTER, WEEK_LONG, weekRows,
+  choreDay, MEALS, mealWho, MEMBERS, MONTH_LABEL, PEOPLE, PERSON_COLOR, SLOT_LABEL,
+  TRAININGS, TRAINING_FOOTER, WEEK_LONG, weekRows,
 } from './data';
 import type { Flags } from './usePersisted';
 
@@ -128,12 +128,20 @@ export function WeekSheet() {
   return (
     <Sheet>
       <Head title="Veckan" sub={WEEK_LONG} right="Familjen" />
-      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '44px 1.3fr 1fr 1.05fr', gridTemplateRows: 'auto repeat(7,auto)', marginTop: 8 }}>
+      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '44px 1.35fr 1.15fr 0.8fr', gridTemplateRows: 'auto auto repeat(7,auto)', marginTop: 8 }}>
         {['', '🤸 Träning', '🍽 Mat', '🧹 Vem gör vad'].map((h, i) => (
           <div key={i} style={{ borderBottom: '2px solid #111827', padding: '0 7px 4px 6px', fontSize: 9.5, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#4b5563' }}>
             {h}
           </div>
         ))}
+
+        {/* De dagliga sysslorna står en gång, inte i sju rutor. */}
+        <div style={{ gridColumn: '1 / -1', display: 'flex', gap: 8, alignItems: 'baseline', padding: '6px 6px 7px', borderBottom: '1px solid #d1d5db', background: '#fafafa' }}>
+          <span style={{ flex: 'none', fontSize: 8.5, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#6b7280' }}>Varje dag</span>
+          <span style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.25 }}>
+            <Named text={DAILY_CHORES.join(' · ')} />
+          </span>
+        </div>
 
         {rows.map((r, i) => {
           const weekend = i >= 5;
@@ -163,7 +171,7 @@ export function WeekSheet() {
                       </div>
                     )}
                     <div style={{ fontSize: 11.5, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{m.dish}</div>
-                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}><Named text={`${m.cook} · ${m.when}`} /></div>
+                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}><Named text={`${m.cook ?? 'Flexibelt'} · ${m.when}`} /></div>
                   </div>
                 ))}
               </div>
@@ -181,7 +189,7 @@ export function WeekSheet() {
         })}
       </div>
       <Legend />
-      <Foot left={`Varje dag: ${DAILY_CHORES.join(' · ')} · ${CHORE_FOOTER.toLowerCase()}`} />
+      <Foot left={TRAINING_FOOTER} />
     </Sheet>
   );
 }
@@ -233,7 +241,7 @@ function ChoreSheet() {
                 {p.tasks.map((t, i) => (
                   <div className="ptask" key={i}>
                     <span className="box" style={{ borderColor: c.base }} />
-                    {t.label} — {t.day}
+                    {t.label} — {choreDay(t)}
                   </div>
                 ))}
               </div>

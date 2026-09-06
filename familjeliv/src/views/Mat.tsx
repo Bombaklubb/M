@@ -5,11 +5,10 @@ import type { Flags } from '../usePersisted';
 type Props = {
   bought: Flags;
   onToggleBuy: (item: string) => void;
-  onOpenMeal: (i: number) => void;
   onPrint: () => void;
 };
 
-export function Mat({ bought, onToggleBuy, onOpenMeal, onPrint }: Props) {
+export function Mat({ bought, onToggleBuy, onPrint }: Props) {
   const left = BUYS.filter((b) => !bought[b]).length;
 
   return (
@@ -29,13 +28,12 @@ export function Mat({ bought, onToggleBuy, onOpenMeal, onPrint }: Props) {
         </button>
       </div>
 
-      {MEALS.map((m, i) => (
+      {MEALS.map((m) => (
         <div
           key={`${m.day}-${m.slot}`}
-          onClick={() => onOpenMeal(i)}
           style={{
             display: 'flex', alignItems: 'center', gap: 12, background: '#fff', border: '3px solid #dbeafe',
-            borderRadius: 22, padding: '12px 14px', cursor: 'pointer',
+            borderRadius: 22, padding: '12px 14px',
             boxShadow: '0 4px 0 0 rgba(37,99,235,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)',
           }}
         >
@@ -51,13 +49,19 @@ export function Mat({ bought, onToggleBuy, onOpenMeal, onPrint }: Props) {
             )}
             <div style={{ fontSize: 17, fontWeight: 800, color: '#111827', lineHeight: 1.2 }}>{m.dish}</div>
             <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280' }}>
-              {/* "Astrid & Signe" är två ansvariga – båda ska få sin egen färg. */}
-              {m.cook.split(' & ').map((name, k) => (
-                <Fragment key={name}>
-                  {k > 0 && ' & '}
-                  <span style={{ fontWeight: 800, color: colorOf(name).fg }}>{name}</span>
-                </Fragment>
-              ))} lagar · {m.when}
+              {m.cook ? (
+                <>
+                  {/* Två ansvariga ska få var sin färg: "Astrid & Signe". */}
+                  {m.cook.split(' & ').map((name, k) => (
+                    <Fragment key={name}>
+                      {k > 0 && ' & '}
+                      <span style={{ fontWeight: 800, color: colorOf(name).fg }}>{name}</span>
+                    </Fragment>
+                  ))} lagar · {m.when}
+                </>
+              ) : (
+                <>Flexibelt · {m.when}</>
+              )}
             </div>
           </div>
           <div style={{ fontSize: 20 }}>{m.emoji}</div>

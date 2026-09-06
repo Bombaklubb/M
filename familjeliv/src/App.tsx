@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { colorOf, DAYS, MEALS, mealWho, MEMBERS, SLOT_LABEL, TABS, TINT, TRAININGS, WEEK_LABEL, type PrintKey, type TabId } from './data';
+import { colorOf, DAYS, forPerson, MEMBERS, TABS, TINT, TRAININGS, WEEK_LABEL, type PrintKey, type TabId } from './data';
 import { PrintSheets, WeekSheet } from './PrintSheets';
 import { DetailSheet, PrintPanel, SheetPreview, type DetailItem } from './Sheets';
 import { toggle, usePersisted, type Flags } from './usePersisted';
@@ -9,14 +9,14 @@ import { Mat } from './views/Mat';
 import { Stad } from './views/Stad';
 import { Tran } from './views/Tran';
 
-type SheetState = null | { type: 'day' | 'meal' | 'tran'; i: number } | { type: 'print' };
+type SheetState = null | { type: 'day' | 'tran'; i: number } | { type: 'print' };
 
 export default function App() {
   const [tab, setTab] = useState<TabId>('hem');
   const [filter, setFilter] = useState<string | null>(null);
   const [sheet, setSheet] = useState<SheetState>(null);
   const [stadView, setStadView] = useState<'person' | 'vecka'>('person');
-  const [done, setDone] = usePersisted<Flags>('done', { 'Signe-0': true, 'Astrid-1': true });
+  const [done, setDone] = usePersisted<Flags>('done', {});
   const [bought, setBought] = usePersisted<Flags>('bought', { Sirap: true });
   const [selStored, setSel] = usePersisted<Flags>('print-sel', { vecka: true, mat: true, stad: true, tran: true, dat: false });
   const [orient, setOrient] = usePersisted<'port' | 'land'>('orient', 'port');
@@ -106,7 +106,6 @@ export default function App() {
             <Mat
               bought={bought}
               onToggleBuy={(b) => setBought((s) => toggle(s, b))}
-              onOpenMeal={(i) => setSheet({ type: 'meal', i })}
               onPrint={openPrint}
             />
           )}
@@ -174,20 +173,11 @@ function buildDetail(sheet: SheetState, filter: string | null): { title: string;
 
   if (sheet.type === 'day') {
     const d = DAYS[sheet.i];
-    const items = d.items.filter((it) => !filter || it.p === filter || it.p === 'alla');
+    const items = d.items.filter((it) => forPerson(it.p, filter));
     return {
       title: `${d.long} ${d.date}`,
       sub: `${items.length} saker på tavlan`,
       items: items.map((it) => ({ icon: it.icon, label: it.label, meta: it.meta, tint: TINT[it.k] })),
-    };
-  }
-
-  if (sheet.type === 'meal') {
-    const m = MEALS[sheet.i];
-    return {
-      title: m.dish,
-      sub: `${m.day} ${m.date} · ${SLOT_LABEL[m.slot].toLowerCase()} · ${mealWho(m)}`,
-      items: m.ing.map((x) => ({ icon: '🛒', label: x, meta: '', tint: '#fef3c7' })),
     };
   }
 
