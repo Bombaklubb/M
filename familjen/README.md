@@ -38,6 +38,7 @@ lokalt (`npm run dev`) är appen olåst.
 | `src/PrintSheets.tsx` | De fyra A4-bladen, renderas bara i `@media print` |
 | `src/usePersisted.ts` | Sparar avbockat, inköpslista och utskriftsval i `localStorage` |
 | `middleware.ts` | Lösenordsskyddet på Vercels edge |
+| `design/` | Designprototyperna från Claude Design som appen är byggd efter |
 
 Avbockade sysslor och inköpslistan sparas per enhet i webbläsaren — ingen server, inget konto.
 
@@ -49,5 +50,14 @@ skrivs ut via webbläsarens vanliga utskrift.
 
 ## Deploy
 
-Eget Vercel-projekt med **Root Directory** `familjen`. Vite hittas automatiskt och
-`middleware.ts` plockas upp utan extra konfiguration.
+Eget Vercel-projekt, importerat från `Bombaklubb/M`:
+
+| Inställning | Värde |
+| --- | --- |
+| Project Name | `familjetavlan` → familjetavlan.vercel.app |
+| Root Directory | `familjen` |
+| Framework | Vite (hittas automatiskt) |
+| Environment Variables | `APP_PASSWORD`, `AUTH_SECRET` |
+
+`middleware.ts` ligger i mappens rot och plockas upp av Vercel utan extra konfiguration.
+Adressen finns inte hårdkodad någonstans i koden, så den går att byta när som helst.

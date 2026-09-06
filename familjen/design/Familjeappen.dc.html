@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:'Baloo 2',system-ui,sans-serif}
+a{color:#1d4ed8}a:hover{color:#e11d48}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08)}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:800 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1e3a8a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:800 14px/1.2 'Baloo 2',system-ui;color:#111827}
+.dv-opts{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:800 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(30,58,138,.1);color:#1e3a8a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:600 12px/1.3 'Baloo 2',system-ui;color:rgba(17,24,39,.6)}
+.dv-opt:target .dv-oid{background:#2563eb;color:#fff}
+.dv-next{margin:22px 0 0;font:600 12px/1.5 'Baloo 2',system-ui;color:rgba(17,24,39,.5)}
+.dv-note{max-width:620px;font:500 13px/1.6 'Baloo 2',system-ui;color:#374151}
+</style></helmet>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Familjeappen — tre startskärmar + utskrift</span></div>
+<p class="dv-note" style="margin:0 0 22px">Antaganden: familjen är du, Emma, Elsa (9) och Vilmer (6). Träning = Elsas gymnastik och Vilmers Street feet. Barnen kan bara <em>se</em> sitt schema, inga poäng. Utskrift sker som A4 stående via en kryssruta-panel: matschema, städschema per person och träningskalender. Byt namnen och jag uppdaterar allt. <a href="#1a">1a</a> är klickbar — testa flikarna och 🖨-knappen.</p>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a"><div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Veckotavlan — dagkolumner, klickbar prototyp</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ devW }}" height="{{ devH }}" hint-size="402px,874px">
+<div style="position:relative;height:100%;display:flex;flex-direction:column;background:#f5f6fa;font-family:'Baloo 2',system-ui">
+  <div style="padding:56px 16px 14px;background:linear-gradient(160deg,#1e3a8a 0%,#1d4ed8 55%,#9f1239 100%);color:#fff;flex:none">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="flex:1;min-width:0">
+        <div style="font-size:12px;font-weight:700;opacity:.8;letter-spacing:.08em;text-transform:uppercase">Vecka 37 · 8–14 sep</div>
+        <div style="font-size:27px;font-weight:900;letter-spacing:-.02em;text-shadow:0 2px 4px rgba(0,0,0,.3)">Familjetavlan</div>
+      </div>
+      <button onClick="{{ openPrint }}" style="display:flex;align-items:center;gap:7px;border:3px solid rgba(255,255,255,.55);background:rgba(255,255,255,.18);backdrop-filter:blur(6px);color:#fff;font-family:inherit;font-size:14px;font-weight:800;padding:9px 14px 10px;border-radius:20px;cursor:pointer;box-shadow:0 4px 0 0 rgba(0,0,0,.2),inset 0 2px 4px 0 rgba(255,255,255,.3)" style-active="transform:translateY(2px);box-shadow:0 1px 0 0 rgba(0,0,0,.2)">🖨 Skriv ut</button>
+    </div>
+    <div style="display:flex;gap:6px;margin-top:12px">
+      <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.2);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 10px 5px;font-size:12.5px;font-weight:700">🤸 2 träningar</div>
+      <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.2);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 10px 5px;font-size:12.5px;font-weight:700">📅 Föräldramöte ons</div>
+    </div>
+  </div>
+
+  <div style="flex:1;overflow:hidden;position:relative">
+    <sc-if value="{{ isHem }}" hint-placeholder-val="{{ true }}">
+      <div style="height:100%;display:flex;gap:12px;overflow-x:auto;padding:14px 16px 96px;scroll-snap-type:x mandatory">
+        <sc-for list="{{ days }}" as="d" hint-placeholder-count="3">
+          <div onClick="{{ d.onPick }}" style="flex:none;width:176px;scroll-snap-align:start;display:flex;flex-direction:column;gap:8px;background:#fff;border:3px solid {{ d.border }};border-radius:24px;padding:12px 11px;cursor:pointer;box-shadow:0 4px 0 0 rgba(37,99,235,.12),0 8px 16px -4px rgba(37,99,235,.08),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+            <div style="display:flex;align-items:baseline;justify-content:space-between">
+              <div style="font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.04em;color:{{ d.fg }}">{{ d.name }}</div>
+              <div style="font-size:13px;font-weight:700;color:#9ca3af">{{ d.date }}</div>
+            </div>
+            <sc-for list="{{ d.items }}" as="it" hint-placeholder-count="3">
+              <div style="display:flex;gap:8px;align-items:flex-start;background:#f9fafb;border:2px solid #e5e7eb;border-radius:14px;padding:8px 9px">
+                <div style="width:26px;height:26px;flex:none;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;background:{{ it.tint }}">{{ it.icon }}</div>
+                <div style="min-width:0;flex:1">
+                  <div style="font-size:14px;font-weight:800;color:#111827;line-height:1.2;text-wrap:pretty">{{ it.label }}</div>
+                  <div style="font-size:12.5px;font-weight:600;color:#6b7280;line-height:1.25">{{ it.meta }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isMat }}" hint-placeholder-val="{{ false }}">
+      <div style="height:100%;overflow-y:auto;padding:16px 16px 96px;display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:22px;font-weight:900;color:#111827">🍽 Matschema</div>
+          <button onClick="{{ printMat }}" style="border:3px solid #fde68a;background:linear-gradient(to bottom,#fffbeb,#fef3c7);color:#b45309;font-family:inherit;font-size:13.5px;font-weight:800;padding:7px 12px 8px;border-radius:16px;cursor:pointer;box-shadow:0 3px 0 0 rgba(245,158,11,.25),inset 0 2px 4px 0 rgba(255,255,255,.8)">🖨 A4</button>
+        </div>
+        <sc-for list="{{ meals }}" as="m" hint-placeholder-count="7">
+          <div style="display:flex;align-items:center;gap:12px;background:#fff;border:3px solid #dbeafe;border-radius:22px;padding:12px 14px;box-shadow:0 4px 0 0 rgba(37,99,235,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+            <div style="width:46px;flex:none;text-align:center">
+              <div style="font-size:14px;font-weight:900;text-transform:uppercase;color:#1d4ed8">{{ m.day }}</div>
+              <div style="font-size:12px;font-weight:700;color:#9ca3af">{{ m.date }}</div>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:17px;font-weight:800;color:#111827;line-height:1.2">{{ m.dish }}</div>
+              <div style="font-size:13px;font-weight:600;color:#6b7280">{{ m.who }}</div>
+            </div>
+            <div style="font-size:20px">{{ m.emoji }}</div>
+          </div>
+        </sc-for>
+        <div style="display:flex;align-items:center;gap:10px;background:#eff6ff;border:3px dashed #bfdbfe;border-radius:22px;padding:12px 14px;font-size:14.5px;font-weight:700;color:#1e40af">🛒 Inköpslista skapas från veckans rätter</div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isStad }}" hint-placeholder-val="{{ false }}">
+      <div style="height:100%;overflow-y:auto;padding:16px 16px 96px;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:22px;font-weight:900;color:#111827">🧹 Städschema</div>
+          <button onClick="{{ printStad }}" style="border:3px solid #bfdbfe;background:linear-gradient(to bottom,#eff6ff,#dbeafe);color:#1d4ed8;font-family:inherit;font-size:13.5px;font-weight:800;padding:7px 12px 8px;border-radius:16px;cursor:pointer;box-shadow:0 3px 0 0 rgba(37,99,235,.2),inset 0 2px 4px 0 rgba(255,255,255,.8)">🖨 A4</button>
+        </div>
+        <sc-for list="{{ chorePeople }}" as="p" hint-placeholder-count="4">
+          <div style="background:#fff;border:3px solid #dbeafe;border-radius:24px;padding:12px 14px 14px;box-shadow:0 4px 0 0 rgba(37,99,235,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+              <div style="width:38px;height:38px;border-radius:999px;border:3px solid #bfdbfe;overflow:hidden;background:#eff6ff;flex:none"><div style="width:100%;height:100%;background:#eff6ff center/cover no-repeat url({{ p.avatar }})"></div></div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:17px;font-weight:900;color:#111827;line-height:1.15">{{ p.name }}</div>
+                <div style="font-size:12.5px;font-weight:700;color:#6b7280">{{ p.role }}</div>
+              </div>
+              <div style="font-size:13px;font-weight:800;color:#1d4ed8;background:#eff6ff;border:2px solid #bfdbfe;border-radius:999px;padding:3px 10px 4px">{{ p.count }}</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <sc-for list="{{ p.tasks }}" as="t" hint-placeholder-count="3">
+                <div onClick="{{ t.onToggle }}" style="display:flex;align-items:center;gap:10px;background:#f9fafb;border:2px solid #e5e7eb;border-radius:14px;padding:9px 10px;cursor:pointer">
+                  <div style="width:24px;height:24px;flex:none;border-radius:8px;border:3px solid {{ t.boxBorder }};background:{{ t.boxBg }};color:#fff;font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center">{{ t.mark }}</div>
+                  <div style="flex:1;min-width:0;font-size:15px;font-weight:700;color:{{ t.fg }};text-decoration:{{ t.strike }}">{{ t.label }}</div>
+                  <div style="font-size:12.5px;font-weight:700;color:#9ca3af;text-transform:uppercase">{{ t.day }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isTran }}" hint-placeholder-val="{{ false }}">
+      <div style="height:100%;overflow-y:auto;padding:16px 16px 96px;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="font-size:22px;font-weight:900;color:#111827">🤸 Träningar</div>
+          <button onClick="{{ printTran }}" style="border:3px solid #fecdd3;background:linear-gradient(to bottom,#fff1f2,#ffe4e6);color:#be123c;font-family:inherit;font-size:13.5px;font-weight:800;padding:7px 12px 8px;border-radius:16px;cursor:pointer;box-shadow:0 3px 0 0 rgba(225,29,72,.2),inset 0 2px 4px 0 rgba(255,255,255,.8)">🖨 A4</button>
+        </div>
+        <sc-for list="{{ trainings }}" as="t" hint-placeholder-count="4">
+          <div style="display:flex;gap:12px;background:#fff;border:3px solid {{ t.border }};border-radius:24px;padding:13px 14px;box-shadow:0 4px 0 0 rgba(225,29,72,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+            <div style="width:56px;flex:none;text-align:center;background:{{ t.tint }};border-radius:16px;padding:8px 0 9px">
+              <div style="font-size:13px;font-weight:900;text-transform:uppercase;color:{{ t.fg }}">{{ t.day }}</div>
+              <div style="font-size:17px;font-weight:900;color:{{ t.fg }};line-height:1.1">{{ t.time }}</div>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:17px;font-weight:900;color:#111827;line-height:1.2">{{ t.title }}</div>
+              <div style="font-size:13.5px;font-weight:600;color:#4b5563">{{ t.place }}</div>
+              <div style="font-size:13px;font-weight:700;color:{{ t.fg }};margin-top:3px">{{ t.who }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isDat }}" hint-placeholder-val="{{ false }}">
+      <div style="height:100%;overflow-y:auto;padding:16px 16px 96px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:22px;font-weight:900;color:#111827">📅 Viktiga datum</div>
+        <div style="font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.06em">September</div>
+        <sc-for list="{{ dates }}" as="d" hint-placeholder-count="5">
+          <div style="display:flex;gap:12px;align-items:center;background:#fff;border:3px solid #e0e8ff;border-radius:22px;padding:11px 14px;box-shadow:0 4px 0 0 rgba(79,70,229,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+            <div style="width:44px;flex:none;text-align:center;background:#f0f4ff;border-radius:14px;padding:6px 0 7px">
+              <div style="font-size:19px;font-weight:900;color:#4338ca;line-height:1">{{ d.num }}</div>
+              <div style="font-size:11.5px;font-weight:800;color:#6366f1;text-transform:uppercase">{{ d.mon }}</div>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:16.5px;font-weight:800;color:#111827;line-height:1.2">{{ d.title }}</div>
+              <div style="font-size:13px;font-weight:600;color:#6b7280">{{ d.meta }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <div style="position:absolute;left:0;right:0;bottom:0;display:flex;gap:2px;padding:9px 8px 30px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-top:3px solid #dbeafe">
+      <sc-for list="{{ tabs }}" as="tb" hint-placeholder-count="5">
+        <div onClick="{{ tb.onPick }}" style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0 4px;border-radius:16px;cursor:pointer;background:{{ tb.bg }}">
+          <div style="font-size:19px">{{ tb.icon }}</div>
+          <div style="font-size:11.5px;font-weight:800;color:{{ tb.fg }}">{{ tb.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <sc-if value="{{ printOpen }}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{ closePrint }}" style="position:absolute;inset:0;background:rgba(17,24,39,.45);backdrop-filter:blur(2px);display:flex;align-items:flex-end">
+        <div style="width:100%;background:#fff;border-top:3px solid #bfdbfe;border-radius:32px 32px 0 0;padding:18px 18px 34px;box-shadow:0 -8px 40px rgba(0,0,0,.25)">
+          <div style="width:52px;height:5px;border-radius:99px;background:#e5e7eb;margin:0 auto 14px"></div>
+          <div style="font-size:21px;font-weight:900;color:#111827">Skriv ut veckan</div>
+          <div style="font-size:13.5px;font-weight:600;color:#6b7280;margin-bottom:12px">Väljs en gång, kommer ihåg nästa vecka.</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <sc-for list="{{ printItems }}" as="p" hint-placeholder-count="3">
+              <div onClick="{{ p.onToggle }}" style="display:flex;align-items:center;gap:11px;background:#f9fafb;border:3px solid {{ p.border }};border-radius:18px;padding:11px 12px;cursor:pointer">
+                <div style="width:26px;height:26px;flex:none;border-radius:9px;border:3px solid {{ p.boxBorder }};background:{{ p.boxBg }};color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center">{{ p.mark }}</div>
+                <div style="flex:1;min-width:0;font-size:15.5px;font-weight:800;color:#111827">{{ p.label }}</div>
+                <div style="font-size:19px">{{ p.icon }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:8px;margin:12px 0 14px">
+            <div style="flex:1;text-align:center;font-size:14px;font-weight:800;color:#1d4ed8;background:#eff6ff;border:3px solid #bfdbfe;border-radius:16px;padding:8px 0 9px">A4 stående</div>
+            <div style="flex:1;text-align:center;font-size:14px;font-weight:700;color:#9ca3af;background:#fff;border:3px solid #e5e7eb;border-radius:16px;padding:8px 0 9px">A4 liggande</div>
+          </div>
+          <button onClick="{{ closePrint }}" style="width:100%;border:none;font-family:inherit;font-size:18px;font-weight:900;color:#fff;background:linear-gradient(to bottom,#dc2626,#b91c1c);border-radius:22px;padding:14px 0 15px;cursor:pointer;box-shadow:0 4px 0 0 rgba(0,0,0,.2),0 6px 12px -2px rgba(0,0,0,.15),inset 0 2px 4px 0 rgba(255,255,255,.3)" style-active="transform:translateY(2px);box-shadow:0 1px 0 0 rgba(0,0,0,.2)">Skriv ut {{ printCount }} sidor →</button>
+        </div>
+      </div>
+    </sc-if>
+  </div>
+</div>
+</x-import>
+</div>
+
+<div class="dv-opt" id="1b"><div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Idag i fokus — en dag åt gången, veckan som remsa</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ devW }}" height="{{ devH }}" hint-size="402px,874px">
+<div style="height:100%;background:#f5f6fa;font-family:'Baloo 2',system-ui;padding:56px 16px 24px;box-sizing:border-box;overflow-y:auto">
+  <div style="font-size:13px;font-weight:800;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em">Tisdag 9 september</div>
+  <div style="font-size:30px;font-weight:900;color:#111827;letter-spacing:-.02em;line-height:1.1;margin-bottom:12px">Idag hos oss</div>
+  <div style="display:flex;gap:6px;margin-bottom:14px">
+    <div style="flex:none;width:44px;text-align:center;padding:7px 0 8px;border-radius:14px;background:#1d4ed8;color:#fff;font-size:13px;font-weight:900">TIS<div style="font-size:12px;opacity:.85">9</div></div>
+    <div style="flex:none;width:44px;text-align:center;padding:7px 0 8px;border-radius:14px;background:#fff;border:2px solid #e5e7eb;color:#6b7280;font-size:13px;font-weight:800">ONS<div style="font-size:12px;color:#9ca3af">10</div></div>
+    <div style="flex:none;width:44px;text-align:center;padding:7px 0 8px;border-radius:14px;background:#fff;border:2px solid #e5e7eb;color:#6b7280;font-size:13px;font-weight:800">TOR<div style="font-size:12px;color:#9ca3af">11</div></div>
+    <div style="flex:none;width:44px;text-align:center;padding:7px 0 8px;border-radius:14px;background:#fff;border:2px solid #e5e7eb;color:#6b7280;font-size:13px;font-weight:800">FRE<div style="font-size:12px;color:#9ca3af">12</div></div>
+    <div style="flex:none;width:44px;text-align:center;padding:7px 0 8px;border-radius:14px;background:#fff;border:2px solid #e5e7eb;color:#6b7280;font-size:13px;font-weight:800">LÖR<div style="font-size:12px;color:#9ca3af">13</div></div>
+    <div style="flex:none;width:44px;text-align:center;padding:7px 0 8px;border-radius:14px;background:#fff;border:2px solid #e5e7eb;color:#6b7280;font-size:13px;font-weight:800">SÖN<div style="font-size:12px;color:#9ca3af">14</div></div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:11px">
+    <div style="background:linear-gradient(160deg,#9f1239,#e11d48);border:3px solid #fb7185;border-radius:26px;padding:15px 16px 16px;color:#fff;box-shadow:0 8px 0 0 rgba(0,0,0,.14),0 20px 40px -8px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.5)">
+      <div style="font-size:13px;font-weight:800;opacity:.85;text-transform:uppercase;letter-spacing:.08em">Nästa om 2 h</div>
+      <div style="font-size:26px;font-weight:900;line-height:1.1;text-shadow:0 2px 4px rgba(0,0,0,.3)">🤸 Street feet 17:30</div>
+      <div style="font-size:15px;font-weight:600;margin-top:2px">Vilmer · Kulturskolan, sal 2 · ta med vattenflaska</div>
+    </div>
+    <div style="background:#fff;border:3px solid #fde68a;border-radius:26px;padding:14px 16px 15px;box-shadow:0 4px 0 0 rgba(245,158,11,.2),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+      <div style="font-size:13px;font-weight:800;color:#b45309;text-transform:uppercase;letter-spacing:.06em">Middag 18:45</div>
+      <div style="font-size:22px;font-weight:900;color:#111827">🍽 Korv stroganoff</div>
+      <div style="font-size:14.5px;font-weight:600;color:#6b7280">Emma lagar · ris finns hemma</div>
+    </div>
+    <div style="background:#fff;border:3px solid #dbeafe;border-radius:26px;padding:14px 16px 15px;box-shadow:0 4px 0 0 rgba(37,99,235,.14),inset 0 2px 4px 0 rgba(255,255,255,.8)">
+      <div style="font-size:13px;font-weight:800;color:#1d4ed8;text-transform:uppercase;letter-spacing:.06em">Kvällens sysslor</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:24px;height:24px;border-radius:8px;border:3px solid #bfdbfe"></div><div style="font-size:15.5px;font-weight:700;color:#111827">Elsa · dammsuga hallen</div></div>
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:24px;height:24px;border-radius:8px;border:3px solid #10b981;background:#10b981;color:#fff;font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center">✓</div><div style="font-size:15.5px;font-weight:700;color:#9ca3af;text-decoration:line-through">Vilmer · sopsortering</div></div>
+        <div style="display:flex;align-items:center;gap:10px"><div style="width:24px;height:24px;border-radius:8px;border:3px solid #bfdbfe"></div><div style="font-size:15.5px;font-weight:700;color:#111827">Du · diskmaskinen</div></div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:11px;background:#f0f4ff;border:3px solid #c7d7fe;border-radius:22px;padding:13px 15px">
+      <div style="font-size:22px">📅</div>
+      <div style="flex:1"><div style="font-size:15.5px;font-weight:800;color:#312e81">Föräldramöte i morgon 18:00</div><div style="font-size:13.5px;font-weight:600;color:#4338ca">Elsas klass · aula</div></div>
+    </div>
+    <button style="width:100%;border:3px solid #bfdbfe;background:#fff;font-family:inherit;font-size:17px;font-weight:900;color:#1d4ed8;border-radius:22px;padding:13px 0 14px;cursor:pointer;box-shadow:0 4px 0 0 rgba(37,99,235,.18),inset 0 2px 4px 0 rgba(255,255,255,.8)">🖨 Skriv ut veckans blad</button>
+  </div>
+</div>
+</x-import>
+</div>
+
+<div class="dv-opt" id="1c"><div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Vem gör vad — en kolumn per familjemedlem</div>
+<x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ devW }}" height="{{ devH }}" hint-size="402px,874px">
+<div style="height:100%;background:#1e3268;font-family:'Baloo 2',system-ui;padding:56px 0 0;box-sizing:border-box;display:flex;flex-direction:column">
+  <div style="padding:0 16px 12px;color:#fff;display:flex;align-items:flex-end;justify-content:space-between">
+    <div><div style="font-size:12.5px;font-weight:800;opacity:.75;text-transform:uppercase;letter-spacing:.08em">Tisdag 9 sep</div><div style="font-size:26px;font-weight:900;letter-spacing:-.02em">Vem gör vad</div></div>
+    <div style="font-size:13.5px;font-weight:800;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:5px 12px 6px">🖨 Utskrift</div>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 12px 16px;overflow-y:auto">
+    <div style="background:#fff;border:3px solid #fecdd3;border-radius:22px;padding:11px 11px 13px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px"><div style="width:34px;height:34px;border-radius:999px;border:3px solid #fecdd3;overflow:hidden;flex:none"><img src="avatars/elsa.svg" alt="" style="width:100%;height:100%"></div><div><div style="font-size:16px;font-weight:900;color:#111827;line-height:1">Elsa</div><div style="font-size:12px;font-weight:700;color:#e11d48">9 år</div></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="background:#fff1f2;border:2px solid #fecdd3;border-radius:12px;padding:7px 9px"><div style="font-size:13.5px;font-weight:900;color:#be123c">17:00 Gymnastik</div><div style="font-size:12.5px;font-weight:600;color:#6b7280">Idrottshuset</div></div>
+        <div style="background:#eff6ff;border:2px solid #bfdbfe;border-radius:12px;padding:7px 9px"><div style="font-size:13.5px;font-weight:800;color:#1d4ed8">🧹 Dammsuga hallen</div></div>
+        <div style="background:#f9fafb;border:2px solid #e5e7eb;border-radius:12px;padding:7px 9px"><div style="font-size:13.5px;font-weight:700;color:#374151">📖 Läsa 15 min</div></div>
+      </div>
+    </div>
+    <div style="background:#fff;border:3px solid #bfdbfe;border-radius:22px;padding:11px 11px 13px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px"><div style="width:34px;height:34px;border-radius:999px;border:3px solid #bfdbfe;overflow:hidden;flex:none"><img src="avatars/vilmer.svg" alt="" style="width:100%;height:100%"></div><div><div style="font-size:16px;font-weight:900;color:#111827;line-height:1">Vilmer</div><div style="font-size:12px;font-weight:700;color:#1d4ed8">6 år</div></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="background:#fff1f2;border:2px solid #fecdd3;border-radius:12px;padding:7px 9px"><div style="font-size:13.5px;font-weight:900;color:#be123c">17:30 Street feet</div><div style="font-size:12.5px;font-weight:600;color:#6b7280">Kulturskolan</div></div>
+        <div style="background:#ecfdf5;border:2px solid #a7f3d0;border-radius:12px;padding:7px 9px"><div style="font-size:13.5px;font-weight:800;color:#047857">✓ Sopsortering</div></div>
+      </div>
+    </div>
+    <div style="background:#fff;border:3px solid #dbeafe;border-radius:22px;padding:11px 11px 13px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px"><div style="width:34px;height:34px;border-radius:999px;border:3px solid #dbeafe;overflow:hidden;flex:none"><img src="avatars/emma.svg" alt="" style="width:100%;height:100%"></div><div><div style="font-size:16px;font-weight:900;color:#111827;line-height:1">Emma</div><div style="font-size:12px;font-weight:700;color:#6b7280">Sambo</div></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="background:#fffbeb;border:2px solid #fde68a;border-radius:12px;padding:7px 9px"><div style="font-size:13.5px;font-weight:900;color:#b45309">🍽 Middag 18:45</div><div style="font-size:12.5px;font-weight:600;color:#6b7280">Korv stroganoff</div></div>
+        <div style="background:#eff6ff;border:2px solid #bfdbfe;border-radius:12px;padding:7px 9px"><div style="font-size:13.5px;font-weight:800;color:#1d4ed8">🧹 Badrum (ons)</div></div>
+      </div>
+    </div>
+    <div style="background:#fff;border:3px solid #e5e7eb;border-radius:22px;padding:11px 11px 13px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px"><div style="width:34px;height:34px;border-radius:999px;border:3px solid #e5e7eb;overflow:hidden;flex:none"><img src="avatars/du.svg" alt="" style="width:100%;height:100%"></div><div><div style="font-size:16px;font-weight:900;color:#111827;line-height:1">Du</div><div style="font-size:12px;font-weight:700;color:#6b7280">Skjutsar idag</div></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="background:#f9fafb;border:2px solid #e5e7eb;border-radius:12px;padding:7px 9px"><div style="font-size:13.5px;font-weight:800;color:#374151">🚗 17:15 lämna Vilmer</div></div>
+        <div style="background:#eff6ff;border:2px solid #bfdbfe;border-radius:12px;padding:7px 9px"><div style="font-size:13.5px;font-weight:800;color:#1d4ed8">🧹 Diskmaskinen</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="background:rgba(255,255,255,.1);border-top:1px solid rgba(255,255,255,.18);padding:11px 16px 30px;display:flex;gap:8px;align-items:center">
+    <div style="flex:1;color:#fff;font-size:13.5px;font-weight:700;opacity:.85">Barnen ser bara sin egen kolumn i sin app</div>
+    <div style="font-size:13.5px;font-weight:900;color:#1e3268;background:#fff;border-radius:999px;padding:6px 14px 7px">Byt dag →</div>
+  </div>
+</div>
+</x-import>
+</div>
+
+<div class="dv-opt" id="1d"><div class="dv-olabel"><a class="dv-oid" href="#1d">1d</a>Utskrift: matschema, A4 stående (kylskåpslapp)</div>
+<div style="width:496px;height:701px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:38px 40px;box-sizing:border-box;font-family:'Baloo 2',system-ui;display:flex;flex-direction:column">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;border-bottom:3px solid #111827;padding-bottom:10px">
+    <div><div style="font-size:30px;font-weight:900;color:#111827;line-height:1">Matschema</div><div style="font-size:15px;font-weight:700;color:#4b5563">Vecka 37 · 8–14 september</div></div>
+    <div style="font-size:15px;font-weight:800;color:#4b5563">Familjen</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;margin-top:6px">
+    <div style="flex:1;display:flex;align-items:center;gap:14px;border-bottom:1px solid #d1d5db"><div style="width:74px;font-size:16px;font-weight:900;color:#111827;text-transform:uppercase">Mån 8</div><div style="flex:1"><div style="font-size:20px;font-weight:800;color:#111827">Tacos</div><div style="font-size:14px;font-weight:600;color:#4b5563">Du lagar · 18:30</div></div></div>
+    <div style="flex:1;display:flex;align-items:center;gap:14px;border-bottom:1px solid #d1d5db"><div style="width:74px;font-size:16px;font-weight:900;color:#111827;text-transform:uppercase">Tis 9</div><div style="flex:1"><div style="font-size:20px;font-weight:800;color:#111827">Korv stroganoff</div><div style="font-size:14px;font-weight:600;color:#4b5563">Emma lagar · 18:45 (efter Street feet)</div></div></div>
+    <div style="flex:1;display:flex;align-items:center;gap:14px;border-bottom:1px solid #d1d5db"><div style="width:74px;font-size:16px;font-weight:900;color:#111827;text-transform:uppercase">Ons 10</div><div style="flex:1"><div style="font-size:20px;font-weight:800;color:#111827">Fisk, potatis &amp; ärtor</div><div style="font-size:14px;font-weight:600;color:#4b5563">Tidig middag 17:15 · föräldramöte 18:00</div></div></div>
+    <div style="flex:1;display:flex;align-items:center;gap:14px;border-bottom:1px solid #d1d5db"><div style="width:74px;font-size:16px;font-weight:900;color:#111827;text-transform:uppercase">Tor 11</div><div style="flex:1"><div style="font-size:20px;font-weight:800;color:#111827">Kycklinggryta</div><div style="font-size:14px;font-weight:600;color:#4b5563">Emma lagar · 18:30 (efter gymnastik)</div></div></div>
+    <div style="flex:1;display:flex;align-items:center;gap:14px;border-bottom:1px solid #d1d5db"><div style="width:74px;font-size:16px;font-weight:900;color:#111827;text-transform:uppercase">Fre 12</div><div style="flex:1"><div style="font-size:20px;font-weight:800;color:#111827">Fredagspizza</div><div style="font-size:14px;font-weight:600;color:#4b5563">Barnen kavlar · 18:00</div></div></div>
+    <div style="flex:1;display:flex;align-items:center;gap:14px;border-bottom:1px solid #d1d5db"><div style="width:74px;font-size:16px;font-weight:900;color:#111827;text-transform:uppercase">Lör 13</div><div style="flex:1"><div style="font-size:20px;font-weight:800;color:#111827">Pannkakor</div><div style="font-size:14px;font-weight:600;color:#4b5563">Lunch efter uppvisningen</div></div></div>
+    <div style="flex:1;display:flex;align-items:center;gap:14px"><div style="width:74px;font-size:16px;font-weight:900;color:#111827;text-transform:uppercase">Sön 14</div><div style="flex:1"><div style="font-size:20px;font-weight:800;color:#111827">Söndagsstek</div><div style="font-size:14px;font-weight:600;color:#4b5563">Mormor äter med oss · 16:00</div></div></div>
+  </div>
+  <div style="border-top:3px solid #111827;padding-top:10px;display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:#4b5563"><span>Handla: köttfärs, korv, lax, kycklingfilé, pizzadeg, sirap</span><span>Familjeappen</span></div>
+</div>
+</div>
+
+<div class="dv-opt" id="1e"><div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>Utskrift: städschema per person, A4 stående</div>
+<div style="width:496px;height:701px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:38px 40px;box-sizing:border-box;font-family:'Baloo 2',system-ui;display:flex;flex-direction:column">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;border-bottom:3px solid #111827;padding-bottom:10px">
+    <div><div style="font-size:30px;font-weight:900;color:#111827;line-height:1">Städschema</div><div style="font-size:15px;font-weight:700;color:#4b5563">Vecka 37 · kryssa av när det är klart</div></div>
+    <div style="font-size:15px;font-weight:800;color:#4b5563">Familjen</div>
+  </div>
+  <div style="flex:1;display:grid;grid-template-rows:repeat(4,1fr);gap:12px;margin-top:14px">
+    <div style="border:2px solid #111827;border-radius:12px;padding:11px 14px"><div style="font-size:19px;font-weight:900;color:#111827;margin-bottom:6px">Elsa</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#111827">
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block"></span>Dammsuga hallen — tis</div>
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block"></span>Duka och duka av — mån, tor</div>
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block"></span>Plocka undan leksaker — sön</div>
+      </div></div>
+    <div style="border:2px solid #111827;border-radius:12px;padding:11px 14px"><div style="font-size:19px;font-weight:900;color:#111827;margin-bottom:6px">Vilmer</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#111827">
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block"></span>Sopsortering — mån</div>
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block"></span>Vattna blommorna — ons</div>
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block"></span>Plocka undan leksaker — sön</div>
+      </div></div>
+    <div style="border:2px solid #111827;border-radius:12px;padding:11px 14px"><div style="font-size:19px;font-weight:900;color:#111827;margin-bottom:6px">Emma</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#111827">
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block"></span>Badrum — ons</div>
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block"></span>Tvätt — tor, sön</div>
+      </div></div>
+    <div style="border:2px solid #111827;border-radius:12px;padding:11px 14px"><div style="font-size:19px;font-weight:900;color:#111827;margin-bottom:6px">Du</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#111827">
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block"></span>Köket + diskmaskin — varje dag</div>
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:17px;height:17px;border:2px solid #111827;border-radius:4px;display:inline-block"></span>Dammsuga övervåningen — tor</div>
+      </div></div>
+  </div>
+  <div style="border-top:3px solid #111827;padding-top:10px;display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:#4b5563"><span>Storstädning tillsammans lördag 10:00</span><span>Familjeappen</span></div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Testa nästa: "kör vidare med <a class="dv-oid" href="#1a">1a</a> men lägg in <a class="dv-oid" href="#1b">1b</a>:s Nästa-kort högst upp" · "gör en utskriftssida för träningskalendern" · "byt till våra riktiga namn"</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const AC = {
+  mat:  { tint:'#fef3c7', fg:'#b45309' },
+  stad: { tint:'#dbeafe', fg:'#1d4ed8' },
+  tran: { tint:'#ffe4e6', fg:'#be123c' },
+  dat:  { tint:'#e0e8ff', fg:'#4338ca' },
+};
+const DAYS = [
+  { name:'mån', date:'8/9', items:[
+    { icon:'🍽', label:'Tacos', meta:'Du lagar · 18:30', k:'mat' },
+    { icon:'🧹', label:'Sopsortering', meta:'Vilmer', k:'stad' } ] },
+  { name:'tis', date:'9/9', today:true, items:[
+    { icon:'🤸', label:'Street feet 17:30', meta:'Vilmer · Kulturskolan', k:'tran' },
+    { icon:'🍽', label:'Korv stroganoff', meta:'Emma lagar · 18:45', k:'mat' },
+    { icon:'🧹', label:'Dammsuga hallen', meta:'Elsa', k:'stad' } ] },
+  { name:'ons', date:'10/9', items:[
+    { icon:'📅', label:'Föräldramöte 18:00', meta:'Elsas klass · aula', k:'dat' },
+    { icon:'🍽', label:'Fisk & potatis', meta:'Tidig middag 17:15', k:'mat' },
+    { icon:'🧹', label:'Badrum', meta:'Emma', k:'stad' } ] },
+  { name:'tor', date:'11/9', items:[
+    { icon:'🤸', label:'Gymnastik 17:00', meta:'Elsa · Idrottshuset', k:'tran' },
+    { icon:'🍽', label:'Kycklinggryta', meta:'Emma lagar · 18:30', k:'mat' },
+    { icon:'🧹', label:'Dammsuga övervåningen', meta:'Du', k:'stad' } ] },
+  { name:'fre', date:'12/9', items:[
+    { icon:'🍽', label:'Fredagspizza', meta:'Barnen kavlar · 18:00', k:'mat' },
+    { icon:'📅', label:'Lönedag', meta:'Sätt över till sparkontot', k:'dat' } ] },
+  { name:'lör', date:'13/9', items:[
+    { icon:'🤸', label:'Uppvisning 11:00', meta:'Street feet · Kulturhuset', k:'tran' },
+    { icon:'🧹', label:'Storstädning 10:00', meta:'Alla hjälper till', k:'stad' },
+    { icon:'🍽', label:'Pannkakor', meta:'Lunch efteråt', k:'mat' } ] },
+  { name:'sön', date:'14/9', items:[
+    { icon:'📅', label:'Mormor på besök 15:00', meta:'Fika + middag', k:'dat' },
+    { icon:'🍽', label:'Söndagsstek', meta:'16:00', k:'mat' },
+    { icon:'🧹', label:'Plocka undan leksaker', meta:'Elsa + Vilmer', k:'stad' } ] },
+];
+const MEALS = [
+  { day:'mån', date:'8/9', dish:'Tacos', who:'Du lagar · 18:30', emoji:'🌮' },
+  { day:'tis', date:'9/9', dish:'Korv stroganoff', who:'Emma lagar · 18:45', emoji:'🍚' },
+  { day:'ons', date:'10/9', dish:'Fisk, potatis & ärtor', who:'Tidig middag 17:15', emoji:'🐟' },
+  { day:'tor', date:'11/9', dish:'Kycklinggryta', who:'Emma lagar · 18:30', emoji:'🍗' },
+  { day:'fre', date:'12/9', dish:'Fredagspizza', who:'Barnen kavlar · 18:00', emoji:'🍕' },
+  { day:'lör', date:'13/9', dish:'Pannkakor', who:'Lunch efter uppvisningen', emoji:'🥞' },
+  { day:'sön', date:'14/9', dish:'Söndagsstek', who:'Mormor äter med oss · 16:00', emoji:'🥩' },
+];
+const PEOPLE = [
+  { name:'Elsa', role:'9 år', avatar:'avatars/elsa.svg', tasks:[
+    { label:'Dammsuga hallen', day:'tis' }, { label:'Duka och duka av', day:'mån' }, { label:'Plocka undan leksaker', day:'sön' } ] },
+  { name:'Vilmer', role:'6 år', avatar:'avatars/vilmer.svg', tasks:[
+    { label:'Sopsortering', day:'mån' }, { label:'Vattna blommorna', day:'ons' } ] },
+  { name:'Emma', role:'Sambo', avatar:'avatars/emma.svg', tasks:[
+    { label:'Badrum', day:'ons' }, { label:'Tvätt', day:'tor' } ] },
+  { name:'Du', role:'Köket i veckan', avatar:'avatars/du.svg', tasks:[
+    { label:'Köket + diskmaskin', day:'dagl' }, { label:'Dammsuga övervåningen', day:'tor' } ] },
+];
+const TRAININGS = [
+  { day:'mån', time:'17:00', title:'Gymnastik', place:'Idrottshuset, sal B', who:'Elsa · Du skjutsar', c:'ord' },
+  { day:'tis', time:'17:30', title:'Street feet (dans)', place:'Kulturskolan, sal 2', who:'Vilmer · Emma skjutsar', c:'gram' },
+  { day:'tor', time:'17:00', title:'Gymnastik', place:'Idrottshuset, sal B', who:'Elsa · Emma skjutsar', c:'ord' },
+  { day:'lör', time:'11:00', title:'Uppvisning Street feet', place:'Kulturhuset, stora scenen', who:'Vilmer · alla kommer', c:'gram' },
+];
+const TC = { ord:{ border:'#fecdd3', tint:'#fff1f2', fg:'#be123c' }, gram:{ border:'#bfdbfe', tint:'#eff6ff', fg:'#1d4ed8' } };
+const DATES = [
+  { num:'10', mon:'sep', title:'Föräldramöte, Elsas klass', meta:'18:00 · aulan' },
+  { num:'13', mon:'sep', title:'Uppvisning Street feet', meta:'11:00 · Kulturhuset' },
+  { num:'22', mon:'sep', title:'Vilmer fyller 7 år', meta:'Kalas lördagen efter' },
+  { num:'30', mon:'sep', title:'Utvecklingssamtal Elsa', meta:'15:20 · boka ledigt' },
+  { num:'04', mon:'okt', title:'Höstlov börjar', meta:'Vecka 44 · planera dagarna' },
+];
+const TABS = [
+  { id:'hem', icon:'🏡', label:'Hem' }, { id:'mat', icon:'🍽', label:'Mat' },
+  { id:'stad', icon:'🧹', label:'Städ' }, { id:'tran', icon:'🤸', label:'Träning' },
+  { id:'dat', icon:'📅', label:'Datum' },
+];
+
+class Component extends DCLogic {
+  state = { tab:'hem', print:false, day:1, done:{ 'Vilmer-0':true }, sel:{ mat:true, stad:true, tran:true } };
+
+  toggleTask(key) { this.setState(s => ({ done:{ ...s.done, [key]: !s.done[key] } })); }
+  togglePrint(k) { this.setState(s => ({ sel:{ ...s.sel, [k]: !s.sel[k] } })); }
+
+  renderVals() {
+    const devW = 402, devH = 874;
+    const t = this.state.tab;
+    const days = DAYS.map((d, i) => ({
+      ...d,
+      border: i === this.state.day ? '#1d4ed8' : '#dbeafe',
+      fg: i === this.state.day ? '#1d4ed8' : '#111827',
+      onPick: () => this.setState({ day:i }),
+      items: d.items.map(it => ({ ...it, tint: AC[it.k].tint })),
+    }));
+    const chorePeople = PEOPLE.map(p => ({
+      ...p,
+      count: p.tasks.filter((_, i) => this.state.done[p.name + '-' + i]).length + '/' + p.tasks.length,
+      tasks: p.tasks.map((task, i) => {
+        const key = p.name + '-' + i, on = !!this.state.done[key];
+        return { ...task, mark: on ? '✓' : '', boxBorder: on ? '#10b981' : '#bfdbfe', boxBg: on ? '#10b981' : '#fff',
+          fg: on ? '#9ca3af' : '#111827', strike: on ? 'line-through' : 'none', onToggle: () => this.toggleTask(key) };
+      }),
+    }));
+    const printDefs = [
+      { k:'mat', label:'Matschema (kylskåpslapp)', icon:'🍽' },
+      { k:'stad', label:'Städschema per person', icon:'🧹' },
+      { k:'tran', label:'Träningskalender', icon:'🤸' },
+    ];
+    const printItems = printDefs.map(p => {
+      const on = !!this.state.sel[p.k];
+      return { ...p, mark: on ? '✓' : '', border: on ? '#bfdbfe' : '#e5e7eb',
+        boxBorder: on ? '#2563eb' : '#d1d5db', boxBg: on ? '#2563eb' : '#fff', onToggle: () => this.togglePrint(p.k) };
+    });
+    return {
+      devW, devH,
+      days, meals: MEALS, chorePeople, dates: DATES, printItems,
+      trainings: TRAININGS.map(x => ({ ...x, ...TC[x.c] })),
+      tabs: TABS.map(tb => ({ ...tb, bg: tb.id === t ? '#eff6ff' : 'transparent', fg: tb.id === t ? '#1d4ed8' : '#9ca3af',
+        onPick: () => this.setState({ tab: tb.id, print:false }) })),
+      isHem: t === 'hem', isMat: t === 'mat', isStad: t === 'stad', isTran: t === 'tran', isDat: t === 'dat',
+      printOpen: this.state.print, printCount: printItems.filter(p => p.mark).length || 0,
+      openPrint: () => this.setState({ print:true }),
+      closePrint: () => this.setState({ print:false }),
+      printMat: () => this.setState({ print:true }),
+      printStad: () => this.setState({ print:true }),
+      printTran: () => this.setState({ print:true }),
+    };
+  }
+}
+</script>
+</body>
+</html>
