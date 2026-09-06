@@ -50,7 +50,7 @@ function Foot({ left }: { left: string }) {
   return (
     <div className="sfoot">
       <span>{left}</span>
-      <span>Familjetavlan</span>
+      <span>Familjeliv</span>
     </div>
   );
 }
