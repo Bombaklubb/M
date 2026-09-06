@@ -1,4 +1,4 @@
-import { colorOf, TC, TRAININGS } from '../data';
+import { colorOf, TC, TRAININGS, trainingRide } from '../data';
 
 type Props = { filter: string | null; onPrint: () => void };
 
@@ -21,7 +21,8 @@ export function Tran({ filter, onPrint }: Props) {
       </div>
 
       {TRAININGS.map((t, i) => {
-        if (filter && t.person !== filter && t.driver !== filter) return null;
+        const ride = trainingRide(t);
+        if (filter && t.person !== filter && !ride.includes(filter)) return null;
         const c = TC[t.c];
         const person = colorOf(t.person);
         return (
@@ -41,9 +42,13 @@ export function Tran({ filter, onPrint }: Props) {
               <div style={{ fontSize: 17, fontWeight: 900, color: '#111827', lineHeight: 1.2 }}>{t.title}</div>
               {t.place && <div style={{ fontSize: 13.5, fontWeight: 600, color: '#4b5563' }}>{t.place}</div>}
               <div style={{ fontSize: 14, fontWeight: 800, color: person.fg }}>{t.person}</div>
-              {t.driver && (
+              {ride && (
                 <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280', marginTop: 2 }}>
-                  <span style={{ fontWeight: 800, color: colorOf(t.driver).fg }}>{t.driver}</span> skjutsar och hämtar
+                  🚗 {ride.split(/\b(Martin|Karin|Astrid|Signe|Bodil)\b/).map((del, k) =>
+                    ['Martin', 'Karin', 'Astrid', 'Signe', 'Bodil'].includes(del)
+                      ? <span key={k} style={{ fontWeight: 800, color: colorOf(del).fg }}>{del}</span>
+                      : <span key={k}>{del}</span>,
+                  )}
                 </div>
               )}
             </div>

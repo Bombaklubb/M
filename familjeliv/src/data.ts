@@ -136,9 +136,21 @@ export const PEOPLE: Person[] = [
     name: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg', tasks: [
       { label: 'Hjälper Astrid och Signe med rummen', day: 'dagl', d: 0, time: '18:45' },
       { label: 'Städa toaletterna', day: 'lör', d: 5 },
+      { label: 'Dammsuga', day: 'lör', d: 5 },
+      { label: 'Tvättstugan', day: 'lör', d: 5 },
+      { label: 'Hallen', day: 'lör', d: 5 },
     ],
   },
 ];
+
+/** Sysslor som görs varje dag — de står en gång på veckobladet, inte i sju rutor. */
+export const DAILY_CHORES = PEOPLE.flatMap((p) =>
+  p.tasks
+    .filter((t) => t.day === 'dagl')
+    // Bara första bokstaven gemen: "Martin hjälper Astrid och Signe …" ska
+    // behålla namnen med versal, annars färgas de inte.
+    .map((t) => `${p.name} ${t.label[0].toLowerCase()}${t.label.slice(1)}${t.time ? ` ${t.time}` : ''}`),
+);
 
 /** "varje dag 18:45" läser bättre på ett blad än "dagl". */
 export const choreDay = (t: Chore) => (t.day === 'dagl' ? 'varje dag' : t.day) + (t.time ? ` ${t.time}` : '');
@@ -160,20 +172,45 @@ export type Training = {
   place?: string;
   /** Barnet som tränar. */
   person: string;
-  /** Samma person skjutsar och hämtar. Tom tills familjen bestämt vem. */
-  driver?: string;
+  /** Lämning och hämtning. Utelämnat = behövs inte, tomt objekt = behövs men vem är inte bestämt. */
+  dropoff?: { by?: string; time?: string };
+  pickup?: { by?: string; time?: string };
   c: keyof typeof TC;
 };
 
 export const TRAININGS: Training[] = [
-  { day: 'mån', sheetDay: 'Mån 7', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', c: 'ord' },
-  { day: 'tis', sheetDay: 'Tis 8', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', c: 'ord' },
-  { day: 'lör', sheetDay: 'Lör 12', time: '10:30', title: 'Street feet', person: 'Astrid', c: 'gram' },
-  { day: 'lör', sheetDay: 'Lör 12', time: '13:00', title: 'Street feet', person: 'Signe', c: 'gram' },
+  { day: 'mån', sheetDay: 'Mån 7', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', pickup: { by: 'Martin', time: '18:15' }, c: 'ord' },
+  { day: 'tis', sheetDay: 'Tis 8', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', dropoff: {}, pickup: {}, c: 'ord' },
+  { day: 'lör', sheetDay: 'Lör 12', time: '10:30', title: 'Street feet', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
+  { day: 'lör', sheetDay: 'Lör 12', time: '13:00', title: 'Street feet', person: 'Signe', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
 ];
 
-/** "Martin skjutsar och hämtar" — samma person båda vägarna. */
-export const trainingDriver = (t: Training) => (t.driver ? `${t.driver} skjutsar och hämtar` : '');
+/**
+ * Skjutsen i klartext: "Martin hämtar 18:15", "Lämning och hämtning" när det
+ * behövs men ingen är utsedd, tom sträng när passet inte kräver skjuts.
+ */
+export function trainingRide(t: Training): string {
+  const { dropoff: d, pickup: p } = t;
+  if (!d && !p) return '';
+
+  // Samma person båda vägarna blir en mening: "Martin lämnar och hämtar".
+  if (d && p && d.by && d.by === p.by) {
+    const tider = [d.time && `lämnar ${d.time}`, p.time && `hämtar ${p.time}`].filter(Boolean);
+    return tider.length ? `${d.by} ${tider.join(' och ')}` : `${d.by} lämnar och hämtar`;
+  }
+
+  const del = (r: { by?: string; time?: string } | undefined, med: string, utan: string) => {
+    if (!r) return '';
+    if (!r.by) return utan;
+    return `${r.by} ${med}${r.time ? ` ${r.time}` : ''}`;
+  };
+  const lämning = del(d, 'lämnar', 'lämning');
+  const hämtning = del(p, 'hämtar', 'hämtning');
+  // Utan namn läser "Lämning och hämtning" bättre än "Lämning · hämtning".
+  const utanNamn = !d?.by && !p?.by;
+  const rad = [lämning, hämtning].filter(Boolean).join(utanNamn ? ' och ' : ' · ');
+  return rad.charAt(0).toUpperCase() + rad.slice(1);
+}
 
 export type ImportantDate = { num: string; mon: string; title: string; meta: string };
 
@@ -208,7 +245,7 @@ export const FAMILY_PARENTS = 'Martin & Karin';
 export const FAMILY_KIDS = [...new Set(TRAININGS.map((t) => t.person))].join(' · ');
 
 /** Sysslor som återkommer varje dag hamnar i veckobladets sidfot, inte i varje ruta. */
-/** En rad per dag: träningen och vem som har matansvaret. */
+/** En rad per dag: träningen, matansvaret och dagens sysslor. */
 export function weekRows() {
   return DAYS.map((d) => ({
     day: `${d.name} ${d.date.split('/')[0]}`,
@@ -216,7 +253,12 @@ export function weekRows() {
     trainings: TRAININGS.filter((t) => t.day === d.name).map((t) => ({
       title: `${t.short ?? t.title} ${t.time}`,
       meta: t.place ? `${t.person} · ${t.place}` : t.person,
+      ride: trainingRide(t),
     })),
     meals: MEALS.filter((m) => m.day === d.name),
+    chores: PEOPLE.map((p) => ({
+      who: p.name,
+      labels: p.tasks.filter((t) => t.day === d.name).map((t) => t.label),
+    })).filter((g) => g.labels.length > 0),
   }));
 }
