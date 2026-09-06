@@ -244,6 +244,7 @@ function TrainingSheet() {
               <div className="st">{t.title} {t.time}</div>
               <div className="sm">
                 <Named text={t.person} />
+                {t.place && <> · {t.place}</>}
                 {t.driver && <> · <Named text={trainingDriver(t)} /></>}
               </div>
             </div>
@@ -278,6 +279,11 @@ function DateSheet() {
         ))}
       </div>
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        {DATES.length === 0 && (
+          <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, color: '#9ca3af' }}>
+            Skriv in månadens datum för hand
+          </div>
+        )}
         {DATES.map((d, i) => (
           <div className="srow" key={i}>
             <div className="sk">{d.num} {d.mon}</div>

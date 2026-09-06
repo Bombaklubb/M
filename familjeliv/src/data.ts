@@ -71,7 +71,7 @@ export function dayItems(d: Day): DayItem[] {
   const träning: DayItem[] = TRAININGS.filter((t) => t.day === d.name).map((t) => ({
     icon: '🤸',
     label: `${t.short ?? t.title} ${t.time}`,
-    meta: t.person,
+    meta: t.place ? `${t.person} · ${t.place}` : t.person,
     k: 'tran',
     p: t.person,
   }));
@@ -164,19 +164,19 @@ export type Training = {
   title: string;
   /** Kortare namn i veckobladets smala kolumn. */
   short?: string;
+  place?: string;
   /** Barnet som tränar. */
   person: string;
-  /** Samma person skjutsar och hämtar. */
+  /** Samma person skjutsar och hämtar. Tom tills familjen bestämt vem. */
   driver?: string;
   c: keyof typeof TC;
 };
 
 export const TRAININGS: Training[] = [
-  { day: 'mån', sheetDay: 'Mån 7', time: '17:00', title: 'Gymnastik', person: 'Astrid', driver: 'Martin', c: 'ord' },
-  { day: 'tis', sheetDay: 'Tis 8', time: '17:30', title: 'Street feet (dans)', short: 'Street feet', person: 'Signe', driver: 'Karin', c: 'gram' },
-  { day: 'tor', sheetDay: 'Tor 10', time: '17:00', title: 'Gymnastik', person: 'Astrid', driver: 'Karin', c: 'ord' },
-  { day: 'lör', sheetDay: 'Lör 12', time: '09:00', title: 'Simskola', person: 'Bodil', driver: 'Martin', c: 'warn' },
-  { day: 'lör', sheetDay: 'Lör 12', time: '11:00', title: 'Uppvisning Street feet', short: 'Uppvisning', person: 'Signe', driver: 'Karin', c: 'gram' },
+  { day: 'mån', sheetDay: 'Mån 7', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', c: 'ord' },
+  { day: 'tis', sheetDay: 'Tis 8', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', c: 'ord' },
+  { day: 'lör', sheetDay: 'Lör 12', time: '10:30', title: 'Street feet', person: 'Astrid', c: 'gram' },
+  { day: 'lör', sheetDay: 'Lör 12', time: '13:00', title: 'Street feet', person: 'Signe', c: 'gram' },
 ];
 
 /** "Martin skjutsar och hämtar" — samma person båda vägarna. */
@@ -184,15 +184,12 @@ export const trainingDriver = (t: Training) => (t.driver ? `${t.driver} skjutsar
 
 export type ImportantDate = { num: string; mon: string; title: string; meta: string };
 
-export const DATES: ImportantDate[] = [
-  { num: '09', mon: 'sep', title: 'Föräldramöte, Astrids klass', meta: '18:00 · aulan' },
-  { num: '12', mon: 'sep', title: 'Uppvisning Street feet', meta: '11:00 · Kulturhuset' },
-  { num: '25', mon: 'sep', title: 'Bodil fyller 2 år', meta: '' },
-  { num: '30', mon: 'sep', title: 'Utvecklingssamtal Astrid', meta: '15:20 · boka ledigt' },
-  { num: '26', mon: 'okt', title: 'Höstlov, vecka 44', meta: 'Planera dagarna i god tid' },
-];
+export const DATES: ImportantDate[] = [];
 
-export const CAL_MARK: Record<number, string> = { 7: '🤸', 8: '🤸', 9: '📅', 10: '🤸', 12: '🤸', 13: '📅', 25: '🎂', 30: '📅' };
+/** Månadsrutnätet markerar de dagar familjen faktiskt tränar. */
+export const CAL_MARK: Record<number, string> = Object.fromEntries(
+  DAYS.filter((d) => TRAININGS.some((t) => t.day === d.name)).map((d) => [Number(d.date.split('/')[0]), '🤸']),
+);
 
 export type TabId = 'hem' | 'mat' | 'stad' | 'tran' | 'dat';
 export const TABS: { id: TabId; icon: string; label: string }[] = [
@@ -215,7 +212,7 @@ export const PRINTS: { k: PrintKey; label: string; icon: string }[] = [
 ];
 
 export const FAMILY_PARENTS = 'Martin & Karin';
-export const FAMILY_KIDS = 'Astrid · Signe · Bodil';
+export const FAMILY_KIDS = [...new Set(TRAININGS.map((t) => t.person))].join(' · ');
 
 /** Sysslor som återkommer varje dag hamnar i veckobladets sidfot, inte i varje ruta. */
 export const DAILY_CHORES = PEOPLE.flatMap((p) =>
@@ -231,7 +228,7 @@ export function weekRows() {
     today: !!d.today,
     trainings: TRAININGS.filter((t) => t.day === d.name).map((t) => ({
       title: `${t.short ?? t.title} ${t.time}`,
-      meta: t.person,
+      meta: t.place ? `${t.person} · ${t.place}` : t.person,
     })),
     meals: MEALS.filter((m) => m.day === d.name),
   }));

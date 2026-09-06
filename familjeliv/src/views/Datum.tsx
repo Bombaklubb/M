@@ -42,6 +42,15 @@ export function Datum() {
         </div>
       </div>
 
+      {DATES.length === 0 && (
+        <div style={{ background: '#fff', border: '3px solid #e0e8ff', borderRadius: 22, padding: '16px 16px 18px', textAlign: 'center', boxShadow: '0 4px 0 0 rgba(79,70,229,.12),inset 0 2px 4px 0 rgba(255,255,255,.8)' }}>
+          <div style={{ fontSize: 16, fontWeight: 800, color: '#111827' }}>Inga datum inlagda</div>
+          <div style={{ fontSize: 13.5, fontWeight: 600, color: '#6b7280', marginTop: 3 }}>
+            🤸 i rutnätet visar veckans träningsdagar.
+          </div>
+        </div>
+      )}
+
       {DATES.map((d, i) => (
         <div
           key={i}
