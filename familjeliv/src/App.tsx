@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { colorOf, DAYS, dayItems, forPerson, MEMBERS, TABS, TINT, WEEK_LABEL, type PrintKey, type TabId } from './data';
+import { colorOf, DAYS, dayItems, FAMILY_GRADIENT, forPerson, MEMBERS, TABS, TINT, WEEK_LABEL, type PrintKey, type TabId } from './data';
 import { PrintSheets, WeekSheet } from './PrintSheets';
 import { DetailSheet, PrintPanel, SheetPreview, type DetailItem } from './Sheets';
 import { toggle, usePersisted, type Flags } from './usePersisted';
@@ -46,7 +46,7 @@ export default function App() {
         <div
           style={{
             padding: 'calc(env(safe-area-inset-top, 0px) + 16px) 16px 12px',
-            background: 'linear-gradient(160deg,#1e3a8a 0%,#1d4ed8 55%,#9f1239 100%)',
+            background: FAMILY_GRADIENT,
             color: '#fff', flex: 'none',
           }}
         >
