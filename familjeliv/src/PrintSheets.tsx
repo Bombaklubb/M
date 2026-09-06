@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import {
   BUYS, CAL_MARK, CHORE_FOOTER, DAILY_CHORES, DATES, FAMILY_KIDS, FAMILY_PARENTS, MEALS,
-  MONTH_LABEL, PEOPLE, TRAININGS, TRAINING_FOOTER, WEEK_LONG, weekRows,
+  mealWho, MONTH_LABEL, PEOPLE, SLOT_LABEL, TRAININGS, TRAINING_FOOTER, WEEK_LONG, weekRows,
 } from './data';
 import type { Flags } from './usePersisted';
 
@@ -81,7 +81,7 @@ export function WeekSheet() {
     <div className="sheet">
       <Head title="Veckan" sub={WEEK_LONG} right="Familjen" />
       <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '44px 1.3fr 1fr 1.05fr', gridTemplateRows: 'auto repeat(7,auto)', marginTop: 8 }}>
-        {['', '🤸 Träning', '🍽 Middag', '🧹 Vem gör vad'].map((h, i) => (
+        {['', '🤸 Träning', '🍽 Mat', '🧹 Vem gör vad'].map((h, i) => (
           <div key={i} style={{ borderBottom: '2px solid #111827', padding: '0 7px 4px 6px', fontSize: 9.5, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#4b5563' }}>
             {h}
           </div>
@@ -106,14 +106,18 @@ export function WeekSheet() {
               </div>
 
               <div style={cell(weekend)}>
-                {r.meal ? (
-                  <div>
-                    <div style={{ fontSize: 11.5, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{r.meal.dish}</div>
-                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}>{r.meal.who}</div>
+                {r.meals.length === 0 && <Empty />}
+                {r.meals.map((m) => (
+                  <div key={m.slot}>
+                    {r.meals.length > 1 && (
+                      <div style={{ fontSize: 8.5, fontWeight: 900, letterSpacing: '.06em', color: '#6b7280', lineHeight: 1.3 }}>
+                        {SLOT_LABEL[m.slot].toUpperCase()}
+                      </div>
+                    )}
+                    <div style={{ fontSize: 11.5, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{m.dish}</div>
+                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}>{m.cook} · {m.when}</div>
                   </div>
-                ) : (
-                  <Empty />
-                )}
+                ))}
               </div>
 
               <div style={cell(weekend)}>
@@ -141,17 +145,21 @@ function MealSheet({ bought }: { bought: Flags }) {
   const left = BUYS.filter((b) => !bought[b]).map((b) => b.toLowerCase());
   return (
     <div className="sheet">
-      <Head title="Matschema" sub={WEEK_LONG} right={FAMILY_PARENTS} />
+      <Head title="Matschema" sub="Vecka 37 · vem som lagar" right={FAMILY_PARENTS} />
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', marginTop: 6 }}>
-        {MEALS.map((m) => (
-          <div className="srow" key={m.day}>
-            <div className="sk">{m.sheetDay}</div>
-            <div style={{ flex: 1 }}>
-              <div className="st">{m.dish}</div>
-              <div className="sm">{m.printNote ?? m.who}</div>
+        {MEALS.map((m, i) => {
+          const twoMeals = MEALS.filter((x) => x.day === m.day).length > 1;
+          const firstOfDay = MEALS.findIndex((x) => x.day === m.day) === i;
+          return (
+            <div className="srow" key={`${m.day}-${m.slot}`}>
+              <div className="sk">{firstOfDay ? m.sheetDay : ''}</div>
+              <div style={{ flex: 1 }}>
+                <div className="st">{twoMeals ? `${SLOT_LABEL[m.slot]}: ${m.dish}` : m.dish}</div>
+                <div className="sm">{mealWho(m)}{m.note ? ` · ${m.note}` : ''}</div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <Foot left={left.length ? `Handla: ${left.join(', ')}` : 'Allt är inhandlat'} />
     </div>

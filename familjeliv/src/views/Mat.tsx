@@ -1,4 +1,4 @@
-import { BUYS, MEALS } from '../data';
+import { BUYS, MEALS, mealWho, SLOT_LABEL } from '../data';
 import type { Flags } from '../usePersisted';
 
 type Props = {
@@ -30,7 +30,7 @@ export function Mat({ bought, onToggleBuy, onOpenMeal, onPrint }: Props) {
 
       {MEALS.map((m, i) => (
         <div
-          key={m.day}
+          key={`${m.day}-${m.slot}`}
           onClick={() => onOpenMeal(i)}
           style={{
             display: 'flex', alignItems: 'center', gap: 12, background: '#fff', border: '3px solid #dbeafe',
@@ -43,8 +43,13 @@ export function Mat({ bought, onToggleBuy, onOpenMeal, onPrint }: Props) {
             <div style={{ fontSize: 12, fontWeight: 800, color: '#9ca3af' }}>{m.date}</div>
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
+            {MEALS.filter((x) => x.day === m.day).length > 1 && (
+              <div style={{ fontSize: 11, fontWeight: 900, letterSpacing: '.05em', textTransform: 'uppercase', color: '#9ca3af', lineHeight: 1.2 }}>
+                {SLOT_LABEL[m.slot]}
+              </div>
+            )}
             <div style={{ fontSize: 17, fontWeight: 800, color: '#111827', lineHeight: 1.2 }}>{m.dish}</div>
-            <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280' }}>{m.who}</div>
+            <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280' }}>{mealWho(m)}</div>
           </div>
           <div style={{ fontSize: 20 }}>{m.emoji}</div>
         </div>

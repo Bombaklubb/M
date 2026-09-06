@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DAYS, MEALS, MEMBERS, TABS, TINT, TRAININGS, WEEK_LABEL, type PrintKey, type TabId } from './data';
+import { DAYS, MEALS, mealWho, MEMBERS, SLOT_LABEL, TABS, TINT, TRAININGS, WEEK_LABEL, type PrintKey, type TabId } from './data';
 import { PrintSheets, WeekSheet } from './PrintSheets';
 import { DetailSheet, PrintPanel, SheetPreview, type DetailItem } from './Sheets';
 import { toggle, usePersisted, type Flags } from './usePersisted';
@@ -174,7 +174,7 @@ function buildDetail(sheet: SheetState, filter: string | null): { title: string;
     const m = MEALS[sheet.i];
     return {
       title: m.dish,
-      sub: `${m.day} ${m.date} · ${m.who}`,
+      sub: `${m.day} ${m.date} · ${SLOT_LABEL[m.slot].toLowerCase()} · ${mealWho(m)}`,
       items: m.ing.map((x) => ({ icon: '🛒', label: x, meta: '', tint: '#fef3c7' })),
     };
   }
