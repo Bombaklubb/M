@@ -32,6 +32,7 @@ lokalt (`npm run dev`) är appen olåst.
 | Fil | Innehåll |
 | --- | --- |
 | `src/data.ts` | Familjen, veckans dagar, måltider, sysslor, träningar och datum |
+| | Matansvaret: `cook` per måltid — middag mån–fre, lunch och middag lör–sön |
 | `src/App.tsx` | Skalet: rubrik med avatarfilter, flikar, bottenpaneler |
 | `src/views/` | En fil per flik: Hem, Mat, Städ, Träning, Datum |
 | `src/Sheets.tsx` | Detaljpanelen och utskriftspanelen |
@@ -49,8 +50,8 @@ till exakt A4-format och skrivs ut via webbläsarens vanliga utskrift.
 
 | Blad | Innehåll |
 | --- | --- |
-| **Veckobladet** | Kylskåpslappen: en rad per dag med träning, middag och vem som gör vad |
-| Matschema | Veckans middagar plus vad som är kvar att handla |
+| **Veckobladet** | Kylskåpslappen: en rad per dag med träning, mat och vem som gör vad |
+| Matschema | Veckans mat med ansvarig, plus vad som är kvar att handla |
 | Städschema | Per person, med rutor att kryssa i för hand |
 | Träningskalender | Tider, plats, skjuts och vad som ska tas med |
 | Viktiga datum | Månadsrutnät och kommande händelser |

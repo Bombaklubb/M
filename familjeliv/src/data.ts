@@ -48,7 +48,7 @@ export const DAYS: Day[] = [
   {
     name: 'ons', long: 'Onsdag', date: '9/9', items: [
       { icon: '📅', label: 'Föräldramöte 18:00', meta: 'Astrids klass · aulan', k: 'dat', p: 'Karin' },
-      { icon: '🍽', label: 'Fisk & potatis', meta: 'Tidig middag 17:15', k: 'mat', p: 'alla' },
+      { icon: '🍽', label: 'Fisk & potatis', meta: 'Martin lagar · 17:15', k: 'mat', p: 'alla' },
       { icon: '🧹', label: 'Badrum', meta: 'Karin', k: 'stad', p: 'Karin' },
     ],
   },
@@ -71,40 +71,55 @@ export const DAYS: Day[] = [
       { icon: '🤸', label: 'Simskola 09:00', meta: 'Bodil · Simhallen', k: 'tran', p: 'Bodil' },
       { icon: '🤸', label: 'Uppvisning 11:00', meta: 'Signe · Kulturhuset', k: 'tran', p: 'Signe' },
       { icon: '🧹', label: 'Storstädning 13:00', meta: 'Alla hjälper till', k: 'stad', p: 'alla' },
-      { icon: '🍽', label: 'Pannkakor', meta: 'Lunch efteråt', k: 'mat', p: 'alla' },
+      { icon: '🍽', label: 'Pannkakor (lunch)', meta: 'Martin lagar · 12:30', k: 'mat', p: 'alla' },
+      { icon: '🍽', label: 'Soppa & mackor', meta: 'Karin lagar · 18:00', k: 'mat', p: 'alla' },
     ],
   },
   {
     name: 'sön', long: 'Söndag', date: '13/9', items: [
       { icon: '📅', label: 'Farmor på besök 15:00', meta: 'Fika och middag', k: 'dat', p: 'alla' },
-      { icon: '🍽', label: 'Söndagsstek', meta: '16:00', k: 'mat', p: 'alla' },
+      { icon: '🍽', label: 'Mackor och frukt (lunch)', meta: 'Karin lagar · 12:30', k: 'mat', p: 'alla' },
+      { icon: '🍽', label: 'Söndagsstek', meta: 'Martin lagar · 16:00', k: 'mat', p: 'alla' },
       { icon: '🧹', label: 'Plocka undan leksaker', meta: 'Bodil', k: 'stad', p: 'Bodil' },
     ],
   },
 ];
 
+export type Slot = 'lunch' | 'middag';
+
 export type Meal = {
   day: string;
   sheetDay: string;
   date: string;
+  slot: Slot;
   dish: string;
-  who: string;
-  printNote?: string;
+  /** Matansvaret: middagen mån–fre, både lunch och middag lör–sön. */
+  cook: string;
+  when: string;
+  /** Extra som bara syns på utskriften, t.ex. varför middagen är tidig. */
+  note?: string;
   emoji: string;
   ing: string[];
 };
 
+/** "Martin lagar · 18:30" — ansvaret i klartext. */
+export const mealWho = (m: Meal) => `${m.cook} lagar · ${m.when}`;
+
+export const SLOT_LABEL: Record<Slot, string> = { lunch: 'Lunch', middag: 'Middag' };
+
 export const MEALS: Meal[] = [
-  { day: 'mån', sheetDay: 'Mån 7', date: '7/9', dish: 'Tacos', who: 'Martin lagar · 18:30', emoji: '🌮', ing: ['Köttfärs 500 g', 'Tacoskal', 'Gurka, paprika', 'Créme fraiche'] },
-  { day: 'tis', sheetDay: 'Tis 8', date: '8/9', dish: 'Korv stroganoff', who: 'Karin lagar · 18:45', printNote: 'Karin lagar · 18:45, efter Street feet', emoji: '🍚', ing: ['Falukorv', 'Tomatpuré', 'Grädde', 'Ris'] },
-  { day: 'ons', sheetDay: 'Ons 9', date: '9/9', dish: 'Fisk, potatis & ärtor', who: 'Tidig middag 17:15', printNote: 'Tidig middag 17:15 · föräldramöte 18:00', emoji: '🐟', ing: ['Laxfilé 4 bitar', 'Potatis', 'Ärtor', 'Dill'] },
-  { day: 'tor', sheetDay: 'Tor 10', date: '10/9', dish: 'Kycklinggryta', who: 'Karin lagar · 18:30', printNote: 'Karin lagar · 18:30, efter gymnastiken', emoji: '🍗', ing: ['Kycklingfilé', 'Kokosmjölk', 'Curry', 'Ris'] },
-  { day: 'fre', sheetDay: 'Fre 11', date: '11/9', dish: 'Fredagspizza', who: 'Astrid & Signe kavlar · 18:00', emoji: '🍕', ing: ['Pizzadeg', 'Krossade tomater', 'Mozzarella', 'Skinka'] },
-  { day: 'lör', sheetDay: 'Lör 12', date: '12/9', dish: 'Pannkakor', who: 'Lunch efter uppvisningen', emoji: '🥞', ing: ['Mjöl', 'Mjölk', 'Ägg', 'Sylt'] },
-  { day: 'sön', sheetDay: 'Sön 13', date: '13/9', dish: 'Söndagsstek', who: 'Farmor äter med oss · 16:00', emoji: '🥩', ing: ['Högrev 1,2 kg', 'Rotfrukter', 'Grädde', 'Lingonsylt'] },
+  { day: 'mån', sheetDay: 'Mån 7', date: '7/9', slot: 'middag', dish: 'Tacos', cook: 'Martin', when: '18:30', emoji: '🌮', ing: ['Köttfärs 500 g', 'Tacoskal', 'Gurka, paprika', 'Créme fraiche'] },
+  { day: 'tis', sheetDay: 'Tis 8', date: '8/9', slot: 'middag', dish: 'Korv stroganoff', cook: 'Karin', when: '18:45', note: 'efter Street feet', emoji: '🍚', ing: ['Falukorv', 'Tomatpuré', 'Grädde', 'Ris'] },
+  { day: 'ons', sheetDay: 'Ons 9', date: '9/9', slot: 'middag', dish: 'Fisk, potatis & ärtor', cook: 'Martin', when: '17:15', note: 'tidig middag, Karin på föräldramöte 18:00', emoji: '🐟', ing: ['Laxfilé 4 bitar', 'Potatis', 'Ärtor', 'Dill'] },
+  { day: 'tor', sheetDay: 'Tor 10', date: '10/9', slot: 'middag', dish: 'Kycklinggryta', cook: 'Karin', when: '18:30', note: 'efter gymnastiken', emoji: '🍗', ing: ['Kycklingfilé', 'Kokosmjölk', 'Curry', 'Ris'] },
+  { day: 'fre', sheetDay: 'Fre 11', date: '11/9', slot: 'middag', dish: 'Fredagspizza', cook: 'Astrid & Signe', when: '18:00', note: 'de kavlar själva', emoji: '🍕', ing: ['Pizzadeg', 'Krossade tomater', 'Mozzarella', 'Skinka'] },
+  { day: 'lör', sheetDay: 'Lör 12', date: '12/9', slot: 'lunch', dish: 'Pannkakor', cook: 'Martin', when: '12:30', note: 'efter uppvisningen', emoji: '🥞', ing: ['Mjöl', 'Mjölk', 'Ägg', 'Sylt'] },
+  { day: 'lör', sheetDay: 'Lör 12', date: '12/9', slot: 'middag', dish: 'Soppa & mackor', cook: 'Karin', when: '18:00', emoji: '🥣', ing: ['Bröd', 'Ost', 'Morötter', 'Grädde'] },
+  { day: 'sön', sheetDay: 'Sön 13', date: '13/9', slot: 'lunch', dish: 'Mackor och frukt', cook: 'Karin', when: '12:30', emoji: '🥪', ing: ['Bröd', 'Frukt', 'Ägg'] },
+  { day: 'sön', sheetDay: 'Sön 13', date: '13/9', slot: 'middag', dish: 'Söndagsstek', cook: 'Martin', when: '16:00', note: 'farmor äter med oss', emoji: '🥩', ing: ['Högrev 1,2 kg', 'Rotfrukter', 'Grädde', 'Lingonsylt'] },
 ];
 
-export const BUYS = ['Köttfärs', 'Falukorv', 'Laxfilé', 'Kycklingfilé', 'Pizzadeg', 'Grädde', 'Sirap', 'Potatis', 'Ris'];
+export const BUYS = ['Köttfärs', 'Falukorv', 'Laxfilé', 'Kycklingfilé', 'Pizzadeg', 'Grädde', 'Sirap', 'Potatis', 'Ris', 'Bröd', 'Frukt'];
 
 export type Chore = { label: string; day: string; d: number };
 export type Person = { name: string; role: string; avatar: string; ring: string; tasks: Chore[] };
@@ -269,7 +284,7 @@ export function weekRows() {
       title: `${t.short ?? t.title} ${t.time}`,
       meta: t.who,
     })),
-    meal: MEALS.find((m) => m.day === d.name) ?? null,
+    meals: MEALS.filter((m) => m.day === d.name),
     chores: PEOPLE.flatMap((p) =>
       p.tasks.filter((t) => t.day === d.name).map((t) => ({ who: p.name, label: t.label })),
     ),
