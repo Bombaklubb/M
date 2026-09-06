@@ -25,6 +25,13 @@ export default function App() {
   // Veckobladet kom till efteråt: sparade val utan det ska ändå få det påslaget.
   const sel = { vecka: true, ...selStored };
 
+  /** Rubriken är vägen hem: tillbaka till veckotavlan och stäng det som är öppet. */
+  const goHome = () => {
+    setTab('hem');
+    setSheet(null);
+    setPreview(false);
+  };
+
   const openPrint = () => setSheet({ type: 'print' });
   const closeSheet = () => setSheet(null);
 
@@ -46,7 +53,12 @@ export default function App() {
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <div style={{ flex: 1, minWidth: 0 }}>
+            <div
+              onClick={goHome}
+              className="press"
+              title="Till startsidan"
+              style={{ flex: 1, minWidth: 0, cursor: 'pointer' }}
+            >
               <div style={{ fontSize: 12, fontWeight: 800, opacity: .8, letterSpacing: '.08em', textTransform: 'uppercase' }}>{WEEK_LABEL}</div>
               <div style={{ fontSize: 26, fontWeight: 900, letterSpacing: '-.02em', lineHeight: 1.1, textShadow: '0 2px 4px rgba(0,0,0,.3)' }}>Familjeliv</div>
             </div>

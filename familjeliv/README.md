@@ -55,14 +55,18 @@ Avbockade sysslor och inköpslistan sparas per enhet i webbläsaren — ingen se
 | Bodil | Orm | Orange |
 
 Avatarerna är handritade SVG:er i `public/avatars/` med personens färg som bakgrund.
-Färgen följer med genom appen: ringen runt avataren, namnet på städkortet, räknaren
-och den som är matansvarig. Utskriftsbladen är medvetet svartvita — de ska gå att skriva
-ut på vilken skrivare som helst och sitta läsligt på kylskåpet.
+Färgen följer med genom hela appen *och* utskrifterna: ringen runt avataren, namnet på
+städkortet, räknaren, den som är matansvarig — och varje gång ett namn dyker upp på ett
+utskriftsblad. `<Named>` i `PrintSheets.tsx` färgar namnen i vilken text som helst, så
+ansvaret går att läsa på en meter från kylskåpsdörren.
 
 ## Utskrift
 
 🖨-knappen väljer vilka blad som ska med och stående eller liggande A4. Bladen skalas
 till exakt A4-format och skrivs ut via webbläsarens vanliga utskrift.
+
+Alla blad delar samma ram: rundad kant, familjens färger som ett band överst och
+en färgnyckel längst ned på veckobladet.
 
 | Blad | Innehåll |
 | --- | --- |
