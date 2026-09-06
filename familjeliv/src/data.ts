@@ -124,7 +124,8 @@ export const mealWho = (m: Meal) => m.cook ?? 'Flexibelt';
 export const SLOT_LABEL: Record<Slot, string> = { lunch: 'Lunch', middag: 'Middag' };
 
 export const MEALS: Meal[] = [
-  { day: 'mån', sheetDay: 'Mån 7', slot: 'middag', cook: 'Martin' },
+  { day: 'mån', sheetDay: 'Mån 7', slot: 'middag', cook: 'Karin' },
+  { day: 'tis', sheetDay: 'Tis 8', slot: 'lunch', cook: 'Karin' },
   { day: 'tis', sheetDay: 'Tis 8', slot: 'middag', cook: 'Karin' },
   { day: 'ons', sheetDay: 'Ons 9', slot: 'middag', cook: 'Martin' },
   { day: 'tor', sheetDay: 'Tor 10', slot: 'middag', cook: 'Martin' },
@@ -153,6 +154,7 @@ export const PEOPLE: Person[] = [
     name: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg', tasks: [
       { label: 'Plocka ur diskmaskinen', day: 'dagl', d: 0 },
       { label: 'Tömma kompost och skräp', day: 'dagl', d: 0 },
+      { label: 'Plocka undan leksaker i kök och vardagsrum', day: 'dagl', d: 0 },
     ],
   },
   {
