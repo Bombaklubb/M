@@ -32,6 +32,7 @@ lokalt (`npm run dev`) är appen olåst.
 | Fil | Innehåll |
 | --- | --- |
 | `src/data.ts` | Familjen, veckans dagar, måltider, sysslor, träningar och datum |
+| | `PERSON_COLOR`: varje persons färg — ring, platta och textfärg, uppslagen med `colorOf(namn)` |
 | | Matansvaret: `cook` per måltid — middag mån–fre, lunch och middag lör–sön |
 | `src/App.tsx` | Skalet: rubrik med avatarfilter, flikar, bottenpaneler |
 | `src/views/` | En fil per flik: Hem, Mat, Städ, Träning, Datum |
@@ -42,6 +43,21 @@ lokalt (`npm run dev`) är appen olåst.
 | `design/` | Designprototyperna från Claude Design som appen är byggd efter |
 
 Avbockade sysslor och inköpslistan sparas per enhet i webbläsaren — ingen server, inget konto.
+
+## Familjen
+
+| Person | Djur | Färg |
+| --- | --- | --- |
+| Martin | Gris | Grön |
+| Karin | Kanin | Blå |
+| Astrid | Tupp | Lila |
+| Signe | Mus | Rosa |
+| Bodil | Orm | Orange |
+
+Avatarerna är handritade SVG:er i `public/avatars/` med personens färg som bakgrund.
+Färgen följer med genom appen: ringen runt avataren, namnet på städkortet, räknaren
+och den som är matansvarig. Utskriftsbladen är medvetet svartvita — de ska gå att skriva
+ut på vilken skrivare som helst och sitta läsligt på kylskåpet.
 
 ## Utskrift
 

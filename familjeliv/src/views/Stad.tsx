@@ -1,4 +1,4 @@
-import { PEOPLE } from '../data';
+import { colorOf, PEOPLE } from '../data';
 import type { Flags } from '../usePersisted';
 
 type Props = {
@@ -48,7 +48,9 @@ export function Stad({ filter, done, onToggleTask, view, onView, onPrint }: Prop
 
       {person ? (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {people.map((p) => (
+          {people.map((p) => {
+            const c = colorOf(p.name);
+            return (
             <div
               key={p.name}
               style={{
@@ -57,14 +59,14 @@ export function Stad({ filter, done, onToggleTask, view, onView, onPrint }: Prop
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
-                <div style={{ width: 38, height: 38, borderRadius: 999, border: `3px solid ${p.ring}`, overflow: 'hidden', flex: 'none' }}>
+                <div style={{ width: 38, height: 38, borderRadius: 999, border: `3px solid ${c.ring}`, overflow: 'hidden', flex: 'none' }}>
                   <div style={{ width: '100%', height: '100%', background: `#eff6ff center/cover no-repeat url(${p.avatar})` }} />
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: 17, fontWeight: 900, color: '#111827', lineHeight: 1.15 }}>{p.name}</div>
+                  <div style={{ fontSize: 17, fontWeight: 900, color: c.fg, lineHeight: 1.15 }}>{p.name}</div>
                   <div style={{ fontSize: 12.5, fontWeight: 700, color: '#6b7280' }}>{p.role}</div>
                 </div>
-                <div style={{ fontSize: 13, fontWeight: 800, color: '#1d4ed8', background: '#eff6ff', border: '2px solid #bfdbfe', borderRadius: 999, padding: '3px 10px 4px' }}>
+                <div style={{ fontSize: 13, fontWeight: 800, color: c.fg, background: c.tint, border: `2px solid ${c.ring}`, borderRadius: 999, padding: '3px 10px 4px' }}>
                   {p.tasks.filter((_, i) => done[`${p.name}-${i}`]).length}/{p.tasks.length}
                 </div>
               </div>
@@ -90,7 +92,8 @@ export function Stad({ filter, done, onToggleTask, view, onView, onPrint }: Prop
                 })}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       ) : (
         <div

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DAYS, MEALS, mealWho, MEMBERS, SLOT_LABEL, TABS, TINT, TRAININGS, WEEK_LABEL, type PrintKey, type TabId } from './data';
+import { colorOf, DAYS, MEALS, mealWho, MEMBERS, SLOT_LABEL, TABS, TINT, TRAININGS, WEEK_LABEL, type PrintKey, type TabId } from './data';
 import { PrintSheets, WeekSheet } from './PrintSheets';
 import { DetailSheet, PrintPanel, SheetPreview, type DetailItem } from './Sheets';
 import { toggle, usePersisted, type Flags } from './usePersisted';
@@ -70,7 +70,7 @@ export default function App() {
                 onClick={() => setFilter(filter === m.name ? null : m.name)}
                 style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3, cursor: 'pointer', opacity: !filter || filter === m.name ? 1 : 0.42 }}
               >
-                <div style={{ width: 44, height: 44, borderRadius: 999, border: `3px solid ${filter === m.name ? '#ffffff' : m.ring}`, overflow: 'hidden', background: '#fff', boxShadow: '0 3px 0 0 rgba(0,0,0,.18)' }}>
+                <div style={{ width: 44, height: 44, borderRadius: 999, border: `3px solid ${filter === m.name ? '#ffffff' : colorOf(m.name).ring}`, overflow: 'hidden', background: '#fff', boxShadow: '0 3px 0 0 rgba(0,0,0,.18)' }}>
                   <div style={{ width: '100%', height: '100%', background: `#eff6ff center/cover no-repeat url(${m.avatar})` }} />
                 </div>
                 <div style={{ fontSize: 11.5, fontWeight: 800, letterSpacing: '.01em' }}>{m.short}</div>
