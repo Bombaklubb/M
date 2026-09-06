@@ -11,20 +11,38 @@ export const WEEK_LABEL = 'Vecka 37 · 7–13 sep';
 export const WEEK_LONG = 'Vecka 37 · 7–13 september';
 export const MONTH_LABEL = 'September 2026';
 
+/**
+ * Varje person har en egen färg som följer med genom appen: ringen runt
+ * avataren, namnet och den lilla räknaren. base används i avatarens bakgrund.
+ */
+export type PersonColor = { base: string; ring: string; tint: string; fg: string };
+
+export const PERSON_COLOR: Record<string, PersonColor> = {
+  Martin: { ring: '#86efac', base: '#16a34a', tint: '#dcfce7', fg: '#15803d' },
+  Karin: { ring: '#93c5fd', base: '#2563eb', tint: '#dbeafe', fg: '#1d4ed8' },
+  Astrid: { ring: '#d8b4fe', base: '#9333ea', tint: '#f3e8ff', fg: '#7e22ce' },
+  Signe: { ring: '#f9a8d4', base: '#ec4899', tint: '#fce7f3', fg: '#be185d' },
+  Bodil: { ring: '#fdba74', base: '#f97316', tint: '#ffedd5', fg: '#c2410c' },
+};
+
+const NEUTRAL: PersonColor = { ring: '#e5e7eb', base: '#6b7280', tint: '#f9fafb', fg: '#4b5563' };
+
+/** Färgen för ett namn — grå om namnet inte är någon i familjen. */
+export const colorOf = (name: string): PersonColor => PERSON_COLOR[name] ?? NEUTRAL;
+
 export type Member = {
   name: string;
   short: string;
   role: string;
   avatar: string;
-  ring: string;
 };
 
 export const MEMBERS: Member[] = [
-  { name: 'Martin', short: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg', ring: '#bfdbfe' },
-  { name: 'Karin', short: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg', ring: '#c7d7fe' },
-  { name: 'Astrid', short: 'Astrid', role: '11 år', avatar: '/avatars/astrid.svg', ring: '#fecdd3' },
-  { name: 'Signe', short: 'Signe', role: '8 år', avatar: '/avatars/signe.svg', ring: '#fde68a' },
-  { name: 'Bodil', short: 'Bodil', role: '5 år', avatar: '/avatars/bodil.svg', ring: '#fecaca' },
+  { name: 'Martin', short: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg' },
+  { name: 'Karin', short: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg' },
+  { name: 'Astrid', short: 'Astrid', role: '11 år', avatar: '/avatars/astrid.svg' },
+  { name: 'Signe', short: 'Signe', role: '8 år', avatar: '/avatars/signe.svg' },
+  { name: 'Bodil', short: 'Bodil', role: '5 år', avatar: '/avatars/bodil.svg' },
 ];
 
 export type DayItem = { icon: string; label: string; meta: string; k: Kind; p: string };
@@ -122,36 +140,36 @@ export const MEALS: Meal[] = [
 export const BUYS = ['Köttfärs', 'Falukorv', 'Laxfilé', 'Kycklingfilé', 'Pizzadeg', 'Grädde', 'Sirap', 'Potatis', 'Ris', 'Bröd', 'Frukt'];
 
 export type Chore = { label: string; day: string; d: number };
-export type Person = { name: string; role: string; avatar: string; ring: string; tasks: Chore[] };
+export type Person = { name: string; role: string; avatar: string; tasks: Chore[] };
 
 export const PEOPLE: Person[] = [
   {
-    name: 'Astrid', role: '11 år', avatar: '/avatars/astrid.svg', ring: '#fecdd3', tasks: [
+    name: 'Astrid', role: '11 år', avatar: '/avatars/astrid.svg', tasks: [
       { label: 'Dammsuga hallen', day: 'tis', d: 1 },
       { label: 'Duka och duka av', day: 'mån', d: 0 },
       { label: 'Duka av', day: 'tor', d: 3 },
     ],
   },
   {
-    name: 'Signe', role: '8 år', avatar: '/avatars/signe.svg', ring: '#fde68a', tasks: [
+    name: 'Signe', role: '8 år', avatar: '/avatars/signe.svg', tasks: [
       { label: 'Sopsortering', day: 'mån', d: 0 },
       { label: 'Duka fram frukost', day: 'ons', d: 2 },
     ],
   },
   {
-    name: 'Bodil', role: '5 år', avatar: '/avatars/bodil.svg', ring: '#fecaca', tasks: [
+    name: 'Bodil', role: '5 år', avatar: '/avatars/bodil.svg', tasks: [
       { label: 'Vattna blommorna', day: 'fre', d: 4 },
       { label: 'Plocka undan leksaker', day: 'sön', d: 6 },
     ],
   },
   {
-    name: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg', ring: '#c7d7fe', tasks: [
+    name: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg', tasks: [
       { label: 'Badrum', day: 'ons', d: 2 },
       { label: 'Tvätt', day: 'tor', d: 3 },
     ],
   },
   {
-    name: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg', ring: '#bfdbfe', tasks: [
+    name: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg', tasks: [
       { label: 'Köket + diskmaskin', day: 'dagl', d: 0 },
       { label: 'Dammsuga övervåningen', day: 'tor', d: 3 },
     ],

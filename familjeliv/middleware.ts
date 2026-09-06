@@ -67,7 +67,7 @@ export default async function middleware(req: Request) {
 }
 
 const AVATARS = ['martin', 'karin', 'astrid', 'signe', 'bodil'];
-const RINGS: Record<string, string> = { martin: '#bfdbfe', karin: '#c7d7fe', astrid: '#fecdd3', signe: '#fde68a', bodil: '#fecaca' };
+const RINGS: Record<string, string> = { martin: '#86efac', karin: '#93c5fd', astrid: '#d8b4fe', signe: '#f9a8d4', bodil: '#fdba74' };
 
 function loginPage(wrong: boolean) {
   const html = `<!doctype html>

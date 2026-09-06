@@ -1,4 +1,5 @@
-import { BUYS, MEALS, mealWho, SLOT_LABEL } from '../data';
+import { Fragment } from 'react';
+import { BUYS, colorOf, MEALS, SLOT_LABEL } from '../data';
 import type { Flags } from '../usePersisted';
 
 type Props = {
@@ -49,7 +50,15 @@ export function Mat({ bought, onToggleBuy, onOpenMeal, onPrint }: Props) {
               </div>
             )}
             <div style={{ fontSize: 17, fontWeight: 800, color: '#111827', lineHeight: 1.2 }}>{m.dish}</div>
-            <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280' }}>{mealWho(m)}</div>
+            <div style={{ fontSize: 13, fontWeight: 600, color: '#6b7280' }}>
+              {/* "Astrid & Signe" är två ansvariga – båda ska få sin egen färg. */}
+              {m.cook.split(' & ').map((name, k) => (
+                <Fragment key={name}>
+                  {k > 0 && ' & '}
+                  <span style={{ fontWeight: 800, color: colorOf(name).fg }}>{name}</span>
+                </Fragment>
+              ))} lagar · {m.when}
+            </div>
           </div>
           <div style={{ fontSize: 20 }}>{m.emoji}</div>
         </div>
