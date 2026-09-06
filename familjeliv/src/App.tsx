@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { DAYS, MEALS, MEMBERS, TABS, TINT, TRAININGS, WEEK_LABEL, type Kind, type TabId } from './data';
-import { PrintSheets } from './PrintSheets';
-import { DetailSheet, PrintPanel, type DetailItem } from './Sheets';
+import { DAYS, MEALS, MEMBERS, TABS, TINT, TRAININGS, WEEK_LABEL, type PrintKey, type TabId } from './data';
+import { PrintSheets, WeekSheet } from './PrintSheets';
+import { DetailSheet, PrintPanel, SheetPreview, type DetailItem } from './Sheets';
 import { toggle, usePersisted, type Flags } from './usePersisted';
 import { Datum } from './views/Datum';
 import { Hem } from './views/Hem';
@@ -18,8 +18,12 @@ export default function App() {
   const [stadView, setStadView] = useState<'person' | 'vecka'>('person');
   const [done, setDone] = usePersisted<Flags>('done', { 'Signe-0': true, 'Astrid-1': true });
   const [bought, setBought] = usePersisted<Flags>('bought', { Sirap: true });
-  const [sel, setSel] = usePersisted<Flags>('print-sel', { mat: true, stad: true, tran: true, dat: false });
+  const [selStored, setSel] = usePersisted<Flags>('print-sel', { vecka: true, mat: true, stad: true, tran: true, dat: false });
   const [orient, setOrient] = usePersisted<'port' | 'land'>('orient', 'port');
+  const [preview, setPreview] = useState(false);
+
+  // Veckobladet kom till efteråt: sparade val utan det ska ändå få det påslaget.
+  const sel = { vecka: true, ...selStored };
 
   const openPrint = () => setSheet({ type: 'print' });
   const closeSheet = () => setSheet(null);
@@ -131,12 +135,19 @@ export default function App() {
           {sheet?.type === 'print' && (
             <PrintPanel
               sel={sel}
-              onToggle={(k: Kind) => setSel((s) => toggle(s, k))}
+              onToggle={(k: PrintKey) => setSel(() => toggle(sel, k))}
               orient={orient}
               onOrient={setOrient}
               onPrint={print}
+              onPreview={() => setPreview(true)}
               onClose={closeSheet}
             />
+          )}
+
+          {preview && (
+            <SheetPreview onClose={() => setPreview(false)}>
+              <WeekSheet />
+            </SheetPreview>
           )}
         </div>
       </div>

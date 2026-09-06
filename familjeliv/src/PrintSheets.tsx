@@ -1,6 +1,7 @@
+import { Fragment } from 'react';
 import {
-  BUYS, CAL_MARK, CHORE_FOOTER, DATES, FAMILY_KIDS, FAMILY_PARENTS, MEALS, MONTH_LABEL,
-  PEOPLE, TRAININGS, TRAINING_FOOTER, WEEK_LONG,
+  BUYS, CAL_MARK, CHORE_FOOTER, DAILY_CHORES, DATES, FAMILY_KIDS, FAMILY_PARENTS, MEALS,
+  MONTH_LABEL, PEOPLE, TRAININGS, TRAINING_FOOTER, WEEK_LONG, weekRows,
 } from './data';
 import type { Flags } from './usePersisted';
 
@@ -22,6 +23,7 @@ export function PrintSheets({ sel, orient, bought }: Props) {
   return (
     <div className="print-root" style={vars}>
       <style>{`@page { size: A4 ${port ? 'portrait' : 'landscape'}; margin: 0; }`}</style>
+      {sel.vecka && <Page><WeekSheet /></Page>}
       {sel.mat && <Page><MealSheet bought={bought} /></Page>}
       {sel.stad && <Page><ChoreSheet /></Page>}
       {sel.tran && <Page><TrainingSheet /></Page>}
@@ -53,6 +55,86 @@ function Foot({ left }: { left: string }) {
       <span>Familjeliv</span>
     </div>
   );
+}
+
+/**
+ * Veckobladet: en rad per dag med träning, middag och vem som gör vad.
+ * Kylskåpslappen — den som sätts upp en gång och gäller veckan ut.
+ */
+export function WeekSheet() {
+  const rows = weekRows();
+  const cell = (weekend: boolean): React.CSSProperties => ({
+    borderBottom: '1px solid #d1d5db',
+    background: weekend ? '#f4f5f7' : 'transparent',
+    padding: '5px 7px 5px 6px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    gap: 3,
+    minWidth: 0,
+    // Raderna delar sidan lika; overflow hidden är spärren mot att en lång
+    // syssla trycker ut bladet under papperskanten.
+    overflow: 'hidden',
+  });
+
+  return (
+    <div className="sheet">
+      <Head title="Veckan" sub={WEEK_LONG} right="Familjen" />
+      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '44px 1.3fr 1fr 1.05fr', gridTemplateRows: 'auto repeat(7,auto)', marginTop: 8 }}>
+        {['', '🤸 Träning', '🍽 Middag', '🧹 Vem gör vad'].map((h, i) => (
+          <div key={i} style={{ borderBottom: '2px solid #111827', padding: '0 7px 4px 6px', fontSize: 9.5, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#4b5563' }}>
+            {h}
+          </div>
+        ))}
+
+        {rows.map((r, i) => {
+          const weekend = i >= 5;
+          return (
+            <Fragment key={r.day}>
+              <div style={{ ...cell(weekend), paddingLeft: 0, fontSize: 12.5, fontWeight: 900, textTransform: 'uppercase', color: '#111827', justifyContent: 'center' }}>
+                {r.day}
+              </div>
+
+              <div style={cell(weekend)}>
+                {r.trainings.length === 0 && <Empty />}
+                {r.trainings.map((t, j) => (
+                  <div key={j}>
+                    <div style={{ fontSize: 11.5, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{t.title}</div>
+                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}>{t.meta}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div style={cell(weekend)}>
+                {r.meal ? (
+                  <div>
+                    <div style={{ fontSize: 11.5, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{r.meal.dish}</div>
+                    <div style={{ fontSize: 10, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}>{r.meal.who}</div>
+                  </div>
+                ) : (
+                  <Empty />
+                )}
+              </div>
+
+              <div style={cell(weekend)}>
+                {r.chores.length === 0 && <Empty />}
+                {r.chores.map((c, j) => (
+                  <div key={j} style={{ fontSize: 10.5, fontWeight: 600, color: '#4b5563', lineHeight: 1.15 }}>
+                    <span style={{ fontWeight: 900, color: '#111827' }}>{c.who}</span> {c.label.toLowerCase()}
+                  </div>
+                ))}
+              </div>
+            </Fragment>
+          );
+        })}
+      </div>
+      <Foot left={`Varje dag: ${DAILY_CHORES.join(' · ')} · ${CHORE_FOOTER.toLowerCase()}`} />
+    </div>
+  );
+}
+
+function Empty() {
+  return <div style={{ fontSize: 12, fontWeight: 700, color: '#9ca3af' }}>—</div>;
 }
 
 function MealSheet({ bought }: { bought: Flags }) {

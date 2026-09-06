@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { PRINTS, type Kind } from './data';
+import { PRINTS, type PrintKey } from './data';
 import type { Flags } from './usePersisted';
 
 function Backdrop({ onClose, children }: { onClose: () => void; children: ReactNode }) {
@@ -54,14 +54,15 @@ export function DetailSheet({ title, sub, items, onClose }: { title: string; sub
 
 type PrintProps = {
   sel: Flags;
-  onToggle: (k: Kind) => void;
+  onToggle: (k: PrintKey) => void;
   orient: 'port' | 'land';
   onOrient: (o: 'port' | 'land') => void;
   onPrint: () => void;
+  onPreview: () => void;
   onClose: () => void;
 };
 
-export function PrintPanel({ sel, onToggle, orient, onOrient, onPrint, onClose }: PrintProps) {
+export function PrintPanel({ sel, onToggle, orient, onOrient, onPrint, onPreview, onClose }: PrintProps) {
   const port = orient === 'port';
   const count = PRINTS.filter((p) => sel[p.k]).length;
 
@@ -87,6 +88,17 @@ export function PrintPanel({ sel, onToggle, orient, onOrient, onPrint, onClose }
           );
         })}
       </div>
+      <button
+        onClick={onPreview}
+        className="press"
+        style={{
+          width: '100%', marginTop: 10, border: '3px solid #e5e7eb', background: '#fff', fontSize: 15,
+          fontWeight: 800, color: '#4b5563', borderRadius: 18, padding: '10px 0 11px', cursor: 'pointer',
+          boxShadow: '0 3px 0 0 rgba(17,24,39,.08),inset 0 2px 4px 0 rgba(255,255,255,.8)',
+        }}
+      >
+        👁 Titta på veckobladet
+      </button>
       <div style={{ display: 'flex', gap: 8, margin: '12px 0 14px' }}>
         <div
           onClick={() => onOrient('port')}
@@ -115,5 +127,33 @@ export function PrintPanel({ sel, onToggle, orient, onOrient, onPrint, onClose }
         {count === 0 ? 'Välj minst ett blad' : `Skriv ut ${count} ${count === 1 ? 'sida' : 'sidor'} →`}
       </button>
     </Backdrop>
+  );
+}
+
+/** Visar ett utskriftsblad nedskalat i appen, precis som det kommer ut på papper. */
+export function SheetPreview({ onClose, children }: { onClose: () => void; children: ReactNode }) {
+  const s = 0.72;
+  return (
+    <div
+      onClick={onClose}
+      style={{ position: 'absolute', inset: 0, zIndex: 40, background: 'rgba(17,24,39,.6)', backdropFilter: 'blur(2px)', overflowY: 'auto', padding: '18px 0 26px' }}
+    >
+      <div onClick={(e) => e.stopPropagation()} style={{ width: 496 * s, height: 701 * s, margin: '0 auto', position: 'relative' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, transform: `scale(${s})`, transformOrigin: 'top left', boxShadow: '0 12px 30px rgba(0,0,0,.35)' }}>
+          {children}
+        </div>
+      </div>
+      <button
+        onClick={onClose}
+        className="press"
+        style={{
+          display: 'block', width: 496 * s, margin: '14px auto 0', border: '3px solid #bfdbfe', background: '#fff',
+          fontSize: 16, fontWeight: 900, color: '#1d4ed8', borderRadius: 20, padding: '11px 0 12px', cursor: 'pointer',
+          boxShadow: '0 4px 0 0 rgba(37,99,235,.18),inset 0 2px 4px 0 rgba(255,255,255,.8)',
+        }}
+      >
+        Stäng
+      </button>
+    </div>
   );
 }
