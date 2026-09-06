@@ -9,6 +9,7 @@ Byggd från en Claude Design-prototyp (`Familjetavlan.dc.html`) med React + Vite
 npm install
 npm run dev      # http://localhost:5173
 npm run build    # bygger till dist/
+npm test         # testar lösenordsskyddet
 ```
 
 ## Lösenordsskydd
@@ -25,7 +26,14 @@ Sätt i Vercel under **Settings → Environment Variables**:
 | `AUTH_SECRET` | valfri lång slumpsträng som signerar kakan | nej, men rekommenderas |
 
 Byter du någon av dem loggas alla ut automatiskt. Middleware kör bara på Vercel —
-lokalt (`npm run dev`) är appen olåst.
+lokalt (`npm run dev`) är appen olåst. `npm test` paketerar middleware på samma sätt
+som Vercel gör och provkör inloggningen; kör det efter varje ändring i filen.
+
+**Importera ingenting från `src/` i `middleware.ts`.** Edge-funktionen paketeras för sig,
+och en import in i appens källkod fäller hela funktionen: sidan svarar 500
+(`MIDDLEWARE_INVOCATION_FAILED`) i stället för att fråga efter lösenordet, alltså är
+appen nere. Behöver middleware något från appen skrivs det i klartext i filen, med ett
+test som jämför värdena så de inte glider isär.
 
 ## Så hänger koden ihop
 
