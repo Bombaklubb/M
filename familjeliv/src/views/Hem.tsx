@@ -1,4 +1,4 @@
-import { DAYS, TINT } from '../data';
+import { DAYS, forPerson, TINT } from '../data';
 
 type Props = { filter: string | null; onOpenDay: (i: number) => void };
 
@@ -11,7 +11,7 @@ export function Hem({ filter, onOpenDay }: Props) {
       }}
     >
       {DAYS.map((d, i) => {
-        const items = d.items.filter((it) => !filter || it.p === filter || it.p === 'alla');
+        const items = d.items.filter((it) => forPerson(it.p, filter));
         return (
           <div
             key={d.name}
