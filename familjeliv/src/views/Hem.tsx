@@ -1,12 +1,12 @@
-import { DAYS, dayItems, forPerson } from '../data';
+import { dayItems, forPerson, type Day } from '../data';
 
-type Props = { filter: string | null; onOpenDay: (i: number) => void };
+type Props = { days: Day[]; filter: string | null; onOpenDay: (i: number) => void };
 
 /** Veckotavlan: sju dagar som alltid ryms — rader på telefonen, kolumner på skärm. */
-export function Hem({ filter, onOpenDay }: Props) {
+export function Hem({ days, filter, onOpenDay }: Props) {
   return (
     <div className="week">
-      {DAYS.map((d, i) => {
+      {days.map((d, i) => {
         const items = dayItems(d).filter((it) => forPerson(it.p, filter));
         return (
           <div
@@ -17,6 +17,7 @@ export function Hem({ filter, onOpenDay }: Props) {
             <div className="dayhead">
               <div className="dayname">{d.name}</div>
               <div className="daydate">{d.date}</div>
+              {d.today && <div className="todaytag">idag</div>}
             </div>
             <div className="dayitems">
               {items.length === 0 && <div className="dayempty">Inget inplanerat</div>}
