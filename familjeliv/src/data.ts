@@ -30,6 +30,29 @@ const NEUTRAL: PersonColor = { ring: '#e5e7eb', base: '#6b7280', tint: '#f9fafb'
 /** Färgen för ett namn — grå om namnet inte är någon i familjen. */
 export const colorOf = (name: string): PersonColor => PERSON_COLOR[name] ?? NEUTRAL;
 
+/**
+ * Familjens fem färger blandade till en mjuk bakgrund: en färgfläck per person
+ * som flyter in i de andra, över en djup bas så vit text håller sig läsbar.
+ * Ordningen följer avatarraden, så varje person har "sitt" hörn av rubriken.
+ */
+const BLOBS: [string, string][] = [
+  ['Martin', '90% 130% at 4% 18%'],
+  ['Karin', '85% 140% at 30% 96%'],
+  ['Astrid', '80% 130% at 52% -6%'],
+  ['Signe', '85% 130% at 76% 104%'],
+  ['Bodil', '90% 140% at 100% 12%'],
+];
+
+export const FAMILY_GRADIENT = [
+  // Slöjan överst håller nere ljusstyrkan där texten ligger.
+  'linear-gradient(180deg, rgba(17,24,39,.34) 0%, rgba(17,24,39,.10) 46%, rgba(17,24,39,.24) 100%)',
+  ...BLOBS.map(([namn, pos]) => {
+    const c = PERSON_COLOR[namn].base;
+    return `radial-gradient(${pos}, ${c}d9 0%, ${c}66 38%, ${c}00 62%)`;
+  }),
+  'linear-gradient(150deg, #1e1b4b 0%, #312e81 52%, #4c1d95 100%)',
+].join(', ');
+
 export type Member = {
   name: string;
   short: string;
@@ -179,8 +202,8 @@ export type Training = {
 };
 
 export const TRAININGS: Training[] = [
-  { day: 'mån', sheetDay: 'Mån 7', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', pickup: { by: 'Martin', time: '18:15' }, c: 'ord' },
-  { day: 'tis', sheetDay: 'Tis 8', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', dropoff: {}, pickup: {}, c: 'ord' },
+  { day: 'mån', sheetDay: 'Mån 7', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', dropoff: { by: 'Karin' }, pickup: { by: 'Martin', time: '18:15' }, c: 'ord' },
+  { day: 'tis', sheetDay: 'Tis 8', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'ord' },
   { day: 'lör', sheetDay: 'Lör 12', time: '10:30', title: 'Street feet', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
   { day: 'lör', sheetDay: 'Lör 12', time: '13:00', title: 'Street feet', person: 'Signe', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
 ];

@@ -1,4 +1,5 @@
 import { next } from '@vercel/edge';
+import { FAMILY_GRADIENT } from './src/data';
 
 /**
  * Lösenordsskydd som körs på Vercels edge, före att något innehåll levereras.
@@ -88,7 +89,7 @@ function loginPage(wrong: boolean) {
     margin: 0; min-height: 100dvh; display: flex; flex-direction: column;
     align-items: center; justify-content: center; padding: 0 26px; gap: 0;
     font-family: 'Baloo 2', system-ui, -apple-system, sans-serif; color: #fff;
-    background: linear-gradient(160deg, #1e3a8a 0%, #1d4ed8 55%, #9f1239 100%);
+    background: ${FAMILY_GRADIENT};
     -webkit-font-smoothing: antialiased;
   }
   .faces { display: flex; gap: 6px; margin-bottom: 22px; }
