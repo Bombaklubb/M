@@ -77,7 +77,7 @@ function loginPage(wrong: boolean) {
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#1e3a8a">
-<title>Familjetavlan</title>
+<title>Familjeliv</title>
 <link rel="icon" href="/icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,7 +118,7 @@ function loginPage(wrong: boolean) {
   <div class="faces">
     ${AVATARS.map((a) => `<div class="face" style="border:3px solid ${RINGS[a]}"><img src="/avatars/${a}.svg" alt=""></div>`).join('')}
   </div>
-  <h1>Familjetavlan</h1>
+  <h1>Familjeliv</h1>
   <p class="sub">Skriv familjens lösenord för att komma in.</p>
   <form method="POST" action="/login">
     <input type="password" name="password" placeholder="Lösenord" autofocus autocomplete="current-password">

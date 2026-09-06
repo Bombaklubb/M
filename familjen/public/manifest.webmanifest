@@ -1,6 +1,6 @@
 {
-  "name": "Familjetavlan",
-  "short_name": "Familjen",
+  "name": "Familjeliv",
+  "short_name": "Familjeliv",
   "description": "Familjens vecka: mat, städ, träning och viktiga datum – enkelt att skriva ut.",
   "start_url": "/",
   "display": "standalone",

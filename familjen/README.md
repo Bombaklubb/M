@@ -1,4 +1,4 @@
-# Familjetavlan
+# Familjeliv
 
 Familjens vecka på ett ställe: dagöversikt, matschema med inköpslista, städschema,
 träningar och viktiga datum — plus färdiga A4-blad att sätta på kylskåpet.
