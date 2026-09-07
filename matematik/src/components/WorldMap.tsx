@@ -5,8 +5,8 @@ import { TOPICS } from '../data/topics';
 import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { getDifficultyLevel, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../utils/adaptive';
 import { getErrorBank } from '../utils/errorBank';
-import { getProblemsForWorld } from '../data/problemSolving';
-import { loadProblemProgress, solvedCount } from '../utils/problemStorage';
+import { getProblemsForWorld, subTaskCount } from '../data/problemSolving';
+import { loadProblemProgress, problemDoneCount } from '../utils/problemStorage';
 import { GRADE_LABELS } from '../types';
 import AppHeader from './AppHeader';
 
@@ -24,8 +24,8 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
   // Problemlösning: antal klarade nivåer (E/C/A) av totalt i denna värld.
   const worldProblems = getProblemsForWorld(worldId);
   const problemProgress = loadProblemProgress(currentStudent.id);
-  const problemsTotal = worldProblems.length * 3;
-  const problemsDone = worldProblems.reduce((s, p) => s + solvedCount(problemProgress, p.id), 0);
+  const problemsTotal = worldProblems.reduce((s, p) => s + subTaskCount(p), 0);
+  const problemsDone = worldProblems.reduce((s, p) => s + problemDoneCount(problemProgress, p.id), 0);
 
   const worldTopics = world.topicIds
     .map(id => TOPICS.find(t => t.id === id))
