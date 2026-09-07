@@ -5,11 +5,13 @@ import { TOPICS } from '../data/topics';
 import { getProgress, getPoints, initPoints } from '../utils/storage';
 import { getDifficultyLevel, DIFFICULTY_LABELS, DIFFICULTY_COLORS } from '../utils/adaptive';
 import { getErrorBank } from '../utils/errorBank';
+import { getProblemsForWorld } from '../data/problemSolving';
+import { loadProblemProgress, solvedCount } from '../utils/problemStorage';
 import { GRADE_LABELS } from '../types';
 import AppHeader from './AppHeader';
 
 export default function WorldMap({ worldId }: { worldId: WorldId }) {
-  const { currentStudent, selectTopic, setView, startSluttest, startQuest, startGames, startErrorBank } = useApp();
+  const { currentStudent, selectTopic, setView, startSluttest, startQuest, startGames, startErrorBank, startProblemSolving } = useApp();
   const [showAll, setShowAll] = useState(false);
   if (!currentStudent) return null;
 
@@ -18,6 +20,12 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
   const progress = getProgress(currentStudent.id);
   const errorCount = getErrorBank(currentStudent.id)
     .filter(e => world.topicIds.includes(e.topicId)).length;
+
+  // Problemlösning: antal klarade nivåer (E/C/A) av totalt i denna värld.
+  const worldProblems = getProblemsForWorld(worldId);
+  const problemProgress = loadProblemProgress(currentStudent.id);
+  const problemsTotal = worldProblems.length * 3;
+  const problemsDone = worldProblems.reduce((s, p) => s + solvedCount(problemProgress, p.id), 0);
 
   const worldTopics = world.topicIds
     .map(id => TOPICS.find(t => t.id === id))
@@ -95,8 +103,8 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
 
       {/* Content */}
       <div className="max-w-lg mx-auto px-4 py-5 space-y-3">
-        {/* Quest + Spel + Försök igen shortcuts */}
-        <div className="grid grid-cols-3 gap-2">
+        {/* Quest + Spel + Försök igen + Problemlösning shortcuts */}
+        <div className="grid grid-cols-2 gap-2">
           <button
             onClick={() => startQuest(worldId)}
             className="rounded-2xl p-3 hover:scale-[1.02] transition-all text-left flex items-center gap-2"
@@ -148,6 +156,23 @@ export default function WorldMap({ worldId }: { worldId: WorldId }) {
                 {errorCount}
               </span>
             )}
+          </button>
+          <button
+            onClick={() => startProblemSolving(worldId)}
+            className="rounded-2xl p-3 hover:scale-[1.02] transition-all text-left flex items-center gap-2"
+            style={{
+              background: 'rgba(255, 255, 255, 0.88)',
+              backdropFilter: 'blur(12px)',
+              border: '1px solid rgba(139, 92, 246, 0.40)',
+            }}
+          >
+            <span className="text-xl">🧩</span>
+            <div className="min-w-0">
+              <p className="font-black text-gray-800 text-xs">Problemlösning</p>
+              <p className="text-[10px] truncate text-gray-500">
+                {problemsDone > 0 ? `${problemsDone}/${problemsTotal} klara` : 'Rika problem · E C A'}
+              </p>
+            </div>
           </button>
         </div>
 

@@ -26,7 +26,7 @@ export type ExtendedView =
   | AppView
   | 'world-dino' | 'world-fantasy' | 'world-scifi' | 'world-gym'
   | 'quick-drill' | 'error-bank' | 'quest' | 'collection' | 'my-page'
-  | 'sluttest' | 'kistor' | 'shop'
+  | 'sluttest' | 'kistor' | 'shop' | 'problem-solving'
   | 'games' | 'game-quick-answer' | 'game-boss-battle' | 'game-time-attack' | 'game-collect-coins'
   | 'game-memory' | 'game-hangman';
 
@@ -39,6 +39,7 @@ interface AppContextValue {
   questWorldId: WorldId | null;
   gameWorldId: WorldId | null;
   errorBankWorldId: WorldId | null;
+  problemWorldId: WorldId | null;
   pendingChestResult: { newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number; bonusMultiplier: number } | null;
   clearPendingChestResult: () => void;
   dailyBonus: number | null;
@@ -52,6 +53,7 @@ interface AppContextValue {
   startQuest: (worldId: WorldId) => void;
   startGames: (worldId: WorldId) => void;
   startErrorBank: (worldId: WorldId) => void;
+  startProblemSolving: (worldId: WorldId) => void;
   getStudentStats: (student: Student) => any;
   submitTopicResult: (topicId: string, correct: number, total: number, timeSpent: number) => { newAchievements: string[]; pointsGained: number; newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number; bonusMultiplier: number };
   updateAvatar: (avatarIndex: number) => void;
@@ -68,6 +70,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [questWorldId, setQuestWorldId] = useState<WorldId | null>(null);
   const [gameWorldId, setGameWorldId] = useState<WorldId | null>(null);
   const [errorBankWorldId, setErrorBankWorldId] = useState<WorldId | null>(null);
+  const [problemWorldId, setProblemWorldId] = useState<WorldId | null>(null);
   const [pendingChestResult, setPendingChestResult] = useState<{ newChests: MattChest[]; mysteryReward: MysteryBoxReward | null; wasAlreadyCompleted: boolean; attemptNumber: number; bonusMultiplier: number } | null>(null);
   const [dailyBonus, setDailyBonus] = useState<number | null>(null);
 
@@ -159,6 +162,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const startErrorBank = useCallback((worldId: WorldId) => {
     setErrorBankWorldId(worldId);
     setCurrentView('error-bank');
+  }, []);
+
+  const startProblemSolving = useCallback((worldId: WorldId) => {
+    setProblemWorldId(worldId);
+    setCurrentView('problem-solving');
   }, []);
 
   const getStudentStats = useCallback((student: Student) => {
@@ -329,7 +337,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, [currentStudent, getStudentStats]);
 
   return (
-    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, errorBankWorldId, pendingChestResult, clearPendingChestResult, dailyBonus, clearDailyBonus, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, startErrorBank, getStudentStats, submitTopicResult, updateAvatar }}>
+    <AppContext.Provider value={{ currentStudent, currentView, selectedTopic, isTeacher, sluttestWorldId, questWorldId, gameWorldId, errorBankWorldId, problemWorldId, pendingChestResult, clearPendingChestResult, dailyBonus, clearDailyBonus, login, logout, setView, selectTopic, setTeacher, startSluttest, startQuest, startGames, startErrorBank, startProblemSolving, getStudentStats, submitTopicResult, updateAvatar }}>
       {children}
     </AppContext.Provider>
   );

@@ -18,6 +18,7 @@ import MinSidaView from './components/MinSidaView';
 import SluttestView from './components/SluttestView';
 import KistorView from './components/KistorView';
 import ShopView from './components/ShopView';
+import ProblemSolvingView from './components/ProblemSolvingView';
 import GamesHub from './components/games/GamesHub';
 import TimeAttackGame from './components/games/TimeAttackGame';
 import CollectCoinsGame from './components/games/CollectCoinsGame';
@@ -91,7 +92,7 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, EBSta
 // ─── App Inner ───────────────────────────────────────────────────────────────
 
 function AppInner() {
-  const { currentView, selectedTopic, setView, errorBankWorldId } = useApp();
+  const { currentView, selectedTopic, setView, errorBankWorldId, problemWorldId } = useApp();
 
   // Ctrl+Shift+P öppnar lärarvy
   useEffect(() => {
@@ -129,6 +130,7 @@ function AppInner() {
           case 'sluttest':          return <SluttestView />;
           case 'kistor':            return <KistorView />;
           case 'shop':              return <ShopView />;
+          case 'problem-solving':   return <ProblemSolvingView worldId={problemWorldId ?? undefined} />;
           case 'games':             return <GamesHub />;
           case 'game-time-attack':  return <TimeAttackGame />;
           case 'game-collect-coins': return <CollectCoinsGame />;
