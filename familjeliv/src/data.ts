@@ -295,7 +295,7 @@ export type Training = {
 };
 
 export const TRAININGS: Training[] = [
-  { day: 'mån', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', dropoff: { by: 'Karin', time: '17:45' }, pickup: { by: 'Martin', time: '19:00' }, c: 'ord' },
+  { day: 'mån', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', dropoff: { by: 'Karin', time: '17:45' }, pickup: { by: 'Karin', time: '19:00' }, c: 'ord' },
   { day: 'tis', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', dropoff: { by: 'Karin', time: '17:00' }, pickup: { by: 'Karin', time: '18:15' }, c: 'ord' },
   { day: 'lör', time: '10:30', title: 'Street feet', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
   { day: 'lör', time: '13:00', title: 'Street feet', person: 'Signe', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
