@@ -161,7 +161,9 @@ export function dayItems(d: Day, filter: string | null = null): DayItem[] {
     // vem som måste vara hemma när.
     ride: trainingRide(t) || undefined,
     k: 'tran',
-    p: t.person,
+    // Passet gäller barnet *och* den som kör: filtrerar Martin fram sig själv
+    // ska lördagens Street feet stå kvar, för det är han som ska köra dit.
+    p: trainingWho(t),
   }));
   const mat: DayItem[] = MEALS.filter((m) => m.day === d.name).map((m) => ({
     icon: '🍽',
@@ -300,6 +302,10 @@ export const TRAININGS: Training[] = [
   { day: 'lör', time: '10:30', title: 'Street feet', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
   { day: 'lör', time: '13:00', title: 'Street feet', person: 'Signe', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
 ];
+
+/** Alla som berörs av passet: barnet som tränar och den som lämnar eller hämtar. */
+export const trainingWho = (t: Training): string[] =>
+  [...new Set([t.person, t.dropoff?.by, t.pickup?.by].filter(Boolean) as string[])];
 
 /**
  * Skjutsen i klartext: "Martin hämtar 18:15", "Lämning och hämtning" när det
