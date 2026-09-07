@@ -1,4 +1,4 @@
-import { colorOf, TC, TRAININGS, trainingRide } from '../data';
+import { colorOf, TC, TRAININGS, trainingRide, trainingWho } from '../data';
 import { Named } from '../Named';
 
 type Props = { filter: string | null; onPrint: () => void };
@@ -23,7 +23,7 @@ export function Tran({ filter, onPrint }: Props) {
 
       {TRAININGS.map((t, i) => {
         const ride = trainingRide(t);
-        if (filter && t.person !== filter && !ride.includes(filter)) return null;
+        if (filter && !trainingWho(t).includes(filter)) return null;
         const c = TC[t.c];
         const person = colorOf(t.person);
         return (
