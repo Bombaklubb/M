@@ -5,6 +5,7 @@ import { WORLDS, WorldId } from '../data/worlds';
 import { addPoints } from '../utils/storage';
 import { rollPointsBonus } from '../utils/pointsBonus';
 import { Confetti } from './magicui/confetti';
+import ProblemFigure from './ProblemFigure';
 import {
   getProblemsForWorld, LEVEL_META, checkSubTaskAnswer, collectGoal, subTaskCount,
   type RichProblem, type ProblemLevel, type SubTask,
@@ -133,6 +134,8 @@ export default function ProblemSolvingView({ worldId }: { worldId?: WorldId }) {
           <div className="rounded-2xl p-5" style={{ background: 'rgba(255,255,255,0.95)', border: '1px solid rgba(139,92,246,0.30)' }}>
             <p className="text-[11px] font-black uppercase tracking-wide text-violet-500 mb-2">Problemet</p>
             <p className="text-gray-800 leading-relaxed whitespace-pre-line">{active.context}</p>
+            {/* Nivåns egen figur går före problemets standardfigur. */}
+            <ProblemFigure name={lt.figure ?? active.figure} />
           </div>
 
           {/* Nivåväljare */}

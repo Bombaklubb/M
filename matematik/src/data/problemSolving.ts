@@ -45,6 +45,8 @@ export interface LevelTask {
   level: ProblemLevel;
   /** Kort rubrik för vad nivån går ut på. */
   intro: string;
+  /** Figur som ersätter problemets standardfigur på just denna nivå. */
+  figure?: string;
   subTasks: SubTask[];
 }
 
@@ -55,6 +57,8 @@ export interface RichProblem {
   emoji: string;
   /** Själva problemsituationen – texten eleven läser först. */
   context: string;
+  /** Namn på SVG-figur i ProblemFigure – ritas under problemtexten. */
+  figure?: string;
   topicIds: string[];
   tags: string[];
   levels: LevelTask[];
@@ -130,6 +134,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Ägg i två bon',
     emoji: '🥚',
     context: 'Dino har 10 ägg och lägger dem i två bon – ett stort och ett litet. Båda bona ska få minst 1 ägg.',
+    figure: 'agg-tva-bon',
     topicIds: ['tio-kamraterna', 'addition-bas', 'problemlosning-lag'],
     tags: ['Tiokamrater', 'Hitta alla'],
     levels: [
@@ -376,6 +381,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Mönstret av kvadrater',
     emoji: '🟦',
     context: 'Dino bygger figurer av kvadrater. Figur 1 har 3 kvadrater, figur 2 har 5 kvadrater och figur 3 har 7 kvadrater.',
+    figure: 'monster-kvadrater',
     topicIds: ['likheter-monster', 'addition-strategier', 'rakna-till-100'],
     tags: ['Mönster', 'Generalisering'],
     levels: [
@@ -547,6 +553,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Hagen till dinobebisen',
     emoji: '🦕',
     context: 'Dino bygger en rektangulär hage av 12 meter staket. Sidorna ska vara hela meter.',
+    figure: 'rektangler-12m',
     topicIds: ['former-och-figurer', 'omv-mat-lag', 'problemlosning-lag'],
     tags: ['Omkrets', 'Undersöka'],
     levels: [
@@ -633,6 +640,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Rektangeln – area och omkrets',
     emoji: '📐',
     context: 'En rektangel har omkretsen 24 cm. Sidorna är hela centimeter.',
+    figure: 'rektangler-24',
     topicIds: ['geometri-omfang', 'geometri-mel', 'multiplikation-steg-2'],
     tags: ['Omkrets', 'Area', 'Optimering'],
     levels: [
@@ -897,6 +905,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Mönstret',
     emoji: '🟦',
     context: 'Figurer byggs med kvadrater. Figur 1: 3 kvadrater. Figur 2: 5 kvadrater. Figur 3: 7 kvadrater. Figur 4: 9 kvadrater.',
+    figure: 'monster-kvadrater',
     topicIds: ['multiplikation-steg-2', 'ekvationer-mel-steg-2', 'taluppfattning-1'],
     tags: ['Mönster', 'Formel', 'Generalisering'],
     levels: [
@@ -987,6 +996,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Pizzorna',
     emoji: '🍕',
     context: 'Pizzor delas i lika stora bitar och ska fördelas rättvist mellan ett antal kompisar.',
+    figure: 'pizza-8',
     topicIds: ['brak-steg-1', 'brak-steg-2', 'brak-steg-3', 'division-steg-2'],
     tags: ['Bråk', 'Division', 'Samband'],
     levels: [
@@ -1416,6 +1426,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Omkretsjakten',
     emoji: '🌾',
     context: 'Du har 20 meter staket och ska bygga en rektangulär hage. Sidorna får vara vilka längder som helst (även decimaltal).',
+    figure: 'rektangler-20m',
     topicIds: ['geometri-omfang', 'geometri-mel', 'decimaler'],
     tags: ['Optimering', 'Bevisa'],
     levels: [
@@ -1617,6 +1628,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Robotarnas byggnadsställning',
     emoji: '🤖',
     context: 'Robotar bygger torn av stavar. Figur 1 har 4 stavar, figur 2 har 7 stavar och figur 3 har 10 stavar.',
+    figure: 'monster-stavar',
     topicIds: ['algebra-steg-1', 'algebra-steg-2', 'forenkla-uttryck', 'ekvationer-steg-2'],
     tags: ['Mönster', 'Algebra', 'Bevisa'],
     levels: [
@@ -1706,6 +1718,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Två abonnemang',
     emoji: '📡',
     context: 'Rymdstationen kan välja mellan två abonnemang för datatrafik.\n\nAbonnemang A: 200 kr i fast avgift + 20 kr per GB.\nAbonnemang B: 500 kr i fast avgift + 5 kr per GB.',
+    figure: 'abonnemang',
     topicIds: ['rata-linjen', 'ekvationer-steg-2', 'funktioner', 'koordinatsystem'],
     tags: ['Linjära modeller', 'Jämföra', 'Ekvation'],
     levels: [
@@ -1786,6 +1799,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Modellen av rymdbasen',
     emoji: '🏗️',
     context: 'En modell av rymdbasen byggs i skala 1:10. Det betyder att varje längd på modellen är 10 gånger mindre än i verkligheten.',
+    figure: 'skala-area',
     topicIds: ['skala', 'proportioner', 'geometri-area', 'geometri-volym'],
     tags: ['Skala', 'Area', 'Volym'],
     levels: [
@@ -1972,6 +1986,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Rätvinkliga trianglar i rymden',
     emoji: '📐',
     context: 'Navigationsdatorn använder rätvinkliga trianglar med heltalssidor – så kallade pythagoreiska tripplar, t.ex. 3, 4, 5.',
+    figure: 'pythagoras-345',
     topicIds: ['pythagoras', 'potenser-steg-1', 'geometri-area'],
     tags: ['Pythagoras', 'Mönster', 'Hitta alla'],
     levels: [
@@ -2058,6 +2073,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Hagen mot väggen',
     emoji: '🧮',
     context: 'En rektangulär hage ska byggas med 100 m staket. Den ena långsidan utgörs av en befintlig vägg och behöver inget staket – staketet räcker alltså till tre sidor.',
+    figure: 'hage-mot-vagg',
     topicIds: ['derivata', 'funktioner', 'ekvationer-gym'],
     tags: ['Optimering', 'Derivata', 'Modellering'],
     levels: [
@@ -2139,6 +2155,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Summan av talföljden',
     emoji: '➕',
     context: 'En signal består av talen 1, 2, 3, 4, … Besättningen behöver kunna summera långa talföljder snabbt.',
+    figure: 'udda-kvadrat',
     topicIds: ['talfoljder', 'funktioner', 'potenslagar-gym'],
     tags: ['Talföljder', 'Summor', 'Bevisa'],
     levels: [
@@ -2299,6 +2316,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Handskakningarna',
     emoji: '🤝',
     context: 'Vid en konferens hälsar alla deltagare på varandra – exakt en handskakning per par.',
+    figure: 'handskakningar',
     topicIds: ['kombinatorik', 'talfoljder', 'sannolikhet'],
     tags: ['Kombinatorik', 'Generalisering', 'Bevisa'],
     levels: [
