@@ -6,6 +6,7 @@ import { addPoints } from '../utils/storage';
 import { rollPointsBonus } from '../utils/pointsBonus';
 import { Confetti } from './magicui/confetti';
 import ProblemFigure from './ProblemFigure';
+import { useScrollTop } from '../utils/scroll';
 import {
   getProblemsForWorld, LEVEL_META, checkSubTaskAnswer, collectGoal, subTaskCount,
   type RichProblem, type ProblemLevel, type SubTask,
@@ -31,6 +32,10 @@ export default function ProblemSolvingView({ worldId }: { worldId?: WorldId }) {
   const [feedback, setFeedback] = useState<Record<string, 'ok' | 'no' | null>>({});
   const [celebrate, setCelebrate] = useState(0);
   const [, force] = useState(0);
+
+  // Ny uppgift eller ny nivå ⇒ börja högst upp vid problemtexten.
+  // OBS: måste ligga före den tidiga returen – hooks får inte hoppas över.
+  useScrollTop([activeId, level]);
 
   if (!currentStudent) return null;
   const sid = currentStudent.id;

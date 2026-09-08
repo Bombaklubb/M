@@ -6,6 +6,7 @@ import { getGameExercisePool, generateWrongOptions, analyzeWeakTopics, GameExerc
 import { recordGameSession, calculateGameXP, getGameDifficulty, loadGameProgress } from '../../utils/gameStorage';
 import { WORLDS } from '../../data/worlds';
 import { rollPointsBonus } from '../../utils/pointsBonus';
+import { useScrollTop } from '../../utils/scroll';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -61,6 +62,7 @@ export default function CollectCoinsGame() {
   const { exerciseCount } = getGameDifficulty(gameLevel);
 
   const [phase, setPhase] = useState<Phase>('intro');
+  useScrollTop([phase]);
   const [exercises, setExercises] = useState<GameExercise[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [options, setOptions] = useState<Option[]>([]);

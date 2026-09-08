@@ -7,6 +7,7 @@ import { recordGameSession, calculateGameXP, loadGameProgress } from '../../util
 import { getCorrectFeedback } from '../../utils/feedback';
 import { rollPointsBonus } from '../../utils/pointsBonus';
 import { WORLDS } from '../../data/worlds';
+import { useScrollTop } from '../../utils/scroll';
 
 const GAME_DURATION = 60; // seconds
 
@@ -26,6 +27,7 @@ export default function TimeAttackGame() {
   const gameLevel = gameProgress?.level ?? 1;
 
   const [phase, setPhase] = useState<Phase>('intro');
+  useScrollTop([phase]);
   const [exercises, setExercises] = useState<GameExercise[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [input, setInput] = useState('');

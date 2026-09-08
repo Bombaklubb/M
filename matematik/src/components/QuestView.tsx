@@ -8,6 +8,7 @@ import { addPoints } from '../utils/storage';
 import { rollPointsBonus } from '../utils/pointsBonus';
 import { COLLECTION_ITEMS } from '../data/collection';
 import { gradeToWorld } from '../data/worlds';
+import { useScrollTop } from '../utils/scroll';
 
 type Phase = 'list' | 'intro' | 'step' | 'result';
 
@@ -32,6 +33,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
   const [newItem, setNewItem] = useState<string | null>(null);
   const [ptsEarned, setPtsEarned] = useState(0);
   const [bonusMult, setBonusMult] = useState(1);
+  useScrollTop([phase, stepIdx]);
   const [alreadyDoneQuest, setAlreadyDoneQuest] = useState(false);
 
   if (!currentStudent) return null;
