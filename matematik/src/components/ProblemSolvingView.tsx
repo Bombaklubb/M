@@ -112,6 +112,7 @@ export default function ProblemSolvingView({ worldId }: { worldId?: WorldId }) {
     const lt = active.levels.find(l => l.level === level)!;
     const meta = LEVEL_META[level];
     const subCount = lt.subTasks.length;
+    const figName = lt.figure ?? active.figure;
 
     return (
       <div className="min-h-screen" style={BG}>
@@ -140,7 +141,7 @@ export default function ProblemSolvingView({ worldId }: { worldId?: WorldId }) {
             <p className="text-[11px] font-black uppercase tracking-wide text-violet-500 mb-2">Problemet</p>
             <p className="text-gray-800 leading-relaxed whitespace-pre-line">{active.context}</p>
             {/* Nivåns egen figur går före problemets standardfigur. */}
-            <ProblemFigure name={lt.figure ?? active.figure} />
+            <ProblemFigure name={figName} />
           </div>
 
           {/* Nivåväljare */}
@@ -201,6 +202,12 @@ export default function ProblemSolvingView({ worldId }: { worldId?: WorldId }) {
                   <p className="font-bold text-gray-800 leading-snug flex-1">{st.prompt}</p>
                 </div>
 
+                {/* Svarsytan till vänster, en liten figur bredvid – så slipper eleven
+                    skrolla upp till problemtexten för att se figuren.
+                    På mobil hamnar figuren ovanför svarsfältet (flex-col-reverse). */}
+                <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:gap-4">
+                <div className="flex-1 min-w-0">
+
                 {/* ── ÖPPEN FRÅGA ── */}
                 {st.kind === 'open' && (
                   <div className="pl-10">
@@ -211,10 +218,10 @@ export default function ProblemSolvingView({ worldId }: { worldId?: WorldId }) {
                         onChange={e => setInputs(i => ({ ...i, [key]: e.target.value }))}
                         onKeyDown={e => e.key === 'Enter' && submitOpen(st, key, subCount)}
                         placeholder={st.placeholder ?? 'Ditt svar…'}
-                        className="flex-1 border-2 border-gray-200 rounded-2xl px-4 py-2.5 font-bold focus:outline-none focus:border-violet-400"
+                        className="flex-1 min-w-0 border-2 border-gray-200 rounded-2xl px-4 py-2.5 font-bold focus:outline-none focus:border-violet-400"
                       />
                       <button onClick={() => submitOpen(st, key, subCount)}
-                        className="px-4 rounded-2xl font-black text-white transition-all active:scale-95 cursor-pointer"
+                        className="px-4 flex-shrink-0 rounded-2xl font-black text-white transition-all active:scale-95 cursor-pointer"
                         style={{ background: 'linear-gradient(135deg,#7c3aed,#6d28d9)' }}>
                         Kolla
                       </button>
@@ -255,10 +262,10 @@ export default function ProblemSolvingView({ worldId }: { worldId?: WorldId }) {
                           onChange={e => setInputs(i => ({ ...i, [key]: e.target.value }))}
                           onKeyDown={e => e.key === 'Enter' && submitCollect(st, key, subCount)}
                           placeholder={st.placeholder ?? 'Lägg till ett svar…'}
-                          className="flex-1 border-2 border-gray-200 rounded-2xl px-4 py-2.5 font-bold focus:outline-none focus:border-violet-400"
+                          className="flex-1 min-w-0 border-2 border-gray-200 rounded-2xl px-4 py-2.5 font-bold focus:outline-none focus:border-violet-400"
                         />
                         <button onClick={() => submitCollect(st, key, subCount)}
-                          className="px-4 rounded-2xl font-black text-white transition-all active:scale-95 cursor-pointer"
+                          className="px-4 flex-shrink-0 rounded-2xl font-black text-white transition-all active:scale-95 cursor-pointer"
                           style={{ background: 'linear-gradient(135deg,#7c3aed,#6d28d9)' }}>
                           Lägg till
                         </button>
@@ -322,6 +329,14 @@ export default function ProblemSolvingView({ worldId }: { worldId?: WorldId }) {
                     </div>
                   </div>
                 )}
+
+                </div>
+                {figName && (
+                  <div className="pl-10 sm:pl-0 mb-3 sm:mb-0 sm:w-52 flex-shrink-0 max-w-[260px]">
+                    <ProblemFigure name={figName} variant="mini" />
+                  </div>
+                )}
+                </div>
               </div>
             );
           })}

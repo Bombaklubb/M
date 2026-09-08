@@ -356,12 +356,19 @@ const FIGURES: Record<string, React.ReactNode> = {
   'skala-area': <Skala />,
 };
 
-export default function ProblemFigure({ name }: { name?: string }) {
+/**
+ * `mini` ritar samma figur i mindre format – används bredvid varje delfråga så
+ * att eleven slipper skrolla upp till problemtexten för att se figuren.
+ * Eftersom figurerna är SVG blir de lika skarpa i litet format.
+ */
+export default function ProblemFigure({ name, variant = 'full' }:
+  { name?: string; variant?: 'full' | 'mini' }) {
   if (!name) return null;
   const fig = FIGURES[name];
   if (!fig) return null;
+  const mini = variant === 'mini';
   return (
-    <div className="rounded-2xl px-3 py-3 mt-3"
+    <div className={mini ? 'rounded-xl px-2 py-1.5' : 'rounded-2xl px-3 py-3 mt-3'}
       style={{ background: 'rgba(139,92,246,0.06)', border: '1px solid rgba(139,92,246,0.20)' }}>
       {fig}
     </div>
