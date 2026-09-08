@@ -218,6 +218,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Betala med mynt',
     emoji: '🪙',
     context: 'I boden finns mynt som är värda 1 kr, 2 kr och 5 kr. Dino ska betala exakt 10 kr och får använda hur många mynt som helst av varje sort.',
+    figure: 'mynt-1-2-5',
     topicIds: ['addition-strategier', 'rakna-till-100', 'problemlosning-lag'],
     tags: ['Pengar', 'Kombinationer'],
     levels: [
@@ -300,6 +301,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Jag tänker på ett tal',
     emoji: '🔍',
     context: 'Dino tänker på ett tal mellan 1 och 20. Talet är jämnt och större än 10.',
+    figure: 'jamna-over-10',
     topicIds: ['tallinjen-lag', 'storleksordna-tal', 'position-lag', 'rakna-till-100'],
     tags: ['Villkor', 'Hitta alla'],
     levels: [
@@ -472,6 +474,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Dela kakorna lika',
     emoji: '🍪',
     context: 'Dino har en påse kakor som ska delas lika mellan kompisarna. Ibland går det jämnt ut, ibland blir det kakor över.',
+    figure: 'dela-lika-12',
     topicIds: ['halften-dubbelt', 'problemlosning-lag', 'rakna-till-100'],
     tags: ['Division', 'Delbarhet'],
     levels: [
@@ -749,6 +752,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Godisbitarna',
     emoji: '🍬',
     context: 'En klass har mellan 50 och 100 godisbitar. När godiset delas lika mellan 4 elever blir 2 bitar över.',
+    figure: 'godis-hopp',
     topicIds: ['division-steg-2', 'division-steg-3', 'primtal-faktorer'],
     tags: ['Division med rest', 'Hitta alla'],
     levels: [
@@ -829,6 +833,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Klassens pengar',
     emoji: '💰',
     context: 'Fyra elever har tillsammans 200 kr. De har olika mycket pengar var (inga två har lika mycket), och alla belopp är hela kronor.',
+    figure: 'pengar-staplar',
     topicIds: ['addition-strategier', 'huvudrakning', 'ekvationer-mel-steg-2'],
     tags: ['Kombinationer', 'Systematik'],
     levels: [
@@ -1086,6 +1091,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Det hemliga talet',
     emoji: '🔢',
     context: 'Jag tänker på ett tal mellan 1 och 100. Talet är delbart med 3 men INTE med 6.',
+    figure: 'multiplar-3-inte-6',
     topicIds: ['primtal-faktorer', 'division-steg-2', 'multiplikation-steg-2'],
     tags: ['Delbarhet', 'Hitta alla', 'Bevisa'],
     levels: [
@@ -1175,6 +1181,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Klassen går på bio',
     emoji: '🎬',
     context: 'En klass ska gå på bio. En barnbiljett kostar 80 kr och en vuxenbiljett 120 kr. Klassen består av 24 elever och 2 vuxna.',
+    figure: 'bio-jamfor',
     topicIds: ['multiplikation-steg-2', 'huvudrakning', 'rimlighetsoevningar-mel'],
     tags: ['Pengar', 'Jämföra alternativ'],
     levels: [
@@ -1255,6 +1262,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Pengaproblemet',
     emoji: '🪙',
     context: 'Du har mynt värda 1 kr, 2 kr, 5 kr och 10 kr, och obegränsat antal av varje sort. Du ska betala exakt 20 kr.',
+    figure: 'mynt-1-2-5-10',
     topicIds: ['addition-strategier', 'huvudrakning', 'statistik-mel'],
     tags: ['Kombinationer', 'Systematik'],
     levels: [
@@ -1347,6 +1355,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Jag tänker på ett tal',
     emoji: '🎯',
     context: 'Jag tänker på ett heltal mellan 1 och 100. Talet är större än 20, mindre än 80, delbart med 4 men inte delbart med 8.',
+    figure: 'fyror-inte-attor',
     topicIds: ['primtal-faktorer', 'division-steg-2', 'taluppfattning-2'],
     tags: ['Villkor', 'Hitta alla', 'Konstruera'],
     levels: [
@@ -1522,6 +1531,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Talet 100',
     emoji: '💯',
     context: 'Du har siffrorna 1, 2, 3, 4, 5 och 6. Med hjälp av räknesätt (+, −, ×, ÷) och parenteser ska du bygga uttryck med bestämda värden. Varje siffra får användas högst en gång.',
+    figure: 'siffror-100',
     topicIds: ['prioritering', 'forenkla-uttryck', 'huvudrakning'],
     tags: ['Uttryck', 'Kreativitet', 'Prioriteringsregler'],
     levels: [
@@ -1890,6 +1900,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Sensorernas mätvärden',
     emoji: '📊',
     context: 'En sensor loggar mätvärden. Besättningen analyserar medelvärde, median och hur känsliga måtten är för fel i mätningarna.',
+    figure: 'medel-median',
     topicIds: ['statistik', 'statistik-spridning', 'ekvationer-steg-2'],
     tags: ['Statistik', 'Resonemang'],
     levels: [
@@ -2236,6 +2247,7 @@ export const RICH_PROBLEMS: RichProblem[] = [
     title: 'Linjärt eller exponentiellt?',
     emoji: '📈',
     context: 'Två kolonier studeras.\n\nKoloni A börjar med 100 individer och ökar med 50 individer per dag.\nKoloni B börjar med 10 individer och fördubblas varje dag.',
+    figure: 'linjart-exp',
     topicIds: ['exponentialfunktioner', 'logaritmer', 'funktioner', 'rata-linjen-gym'],
     tags: ['Exponentiell tillväxt', 'Jämföra modeller'],
     levels: [
