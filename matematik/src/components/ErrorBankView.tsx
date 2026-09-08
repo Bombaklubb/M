@@ -8,6 +8,7 @@ import { addPoints } from '../utils/storage';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
 import { MultipleChoiceExercise, TrueFalseExercise } from '../types';
+import { useScrollTop } from '../utils/scroll';
 
 const BG: React.CSSProperties = {
   backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
@@ -25,6 +26,7 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
   const pointsEarnedRef = useRef(0);
   // Use a counter to force re-read of localStorage after changes
   const [version, setVersion] = useState(0);
+  useScrollTop([activeEntry?.id]);
 
   if (!currentStudent) return null;
 

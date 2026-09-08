@@ -6,6 +6,7 @@ import { WorldId } from '../../data/worlds';
 import { recordGameSession, loadGameProgress } from '../../utils/gameStorage';
 import { rollPointsBonus } from '../../utils/pointsBonus';
 import AppHeader from '../AppHeader';
+import { useScrollTop } from '../../utils/scroll';
 
 // ── Math pairs per world ──────────────────────────────────────────────────────
 
@@ -129,6 +130,7 @@ export default function MemoryGame() {
   const theme = WORLD_THEME[worldId];
 
   const [phase, setPhase] = useState<Phase>('select');
+  useScrollTop([phase]);
   const [difficulty, setDifficulty] = useState<Difficulty>('easy');
   const [cards, setCards] = useState<MemCard[]>([]);
   const [flippedIds, setFlippedIds] = useState<number[]>([]);

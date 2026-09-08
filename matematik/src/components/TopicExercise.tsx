@@ -8,6 +8,7 @@ import { getCorrectFeedback } from '../utils/feedback';
 import AppHeader from './AppHeader';
 import InteractiveClock from './InteractiveClock';
 import { Progress } from './ui/progress';
+import { useScrollTop } from '../utils/scroll';
 
 interface ExerciseState {
   answered: boolean;
@@ -18,6 +19,7 @@ interface ExerciseState {
 export default function TopicExercise({ topic }: { topic: Topic }) {
   const { setView, submitTopicResult, currentStudent, isTeacher } = useApp();
   const [currentIdx, setCurrentIdx] = useState(0);
+  useScrollTop([currentIdx]);
   const [states, setStates] = useState<ExerciseState[]>(
     topic.exercises.map(() => ({ answered: false, correct: false, userAnswer: '' }))
   );

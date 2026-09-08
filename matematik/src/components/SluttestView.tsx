@@ -11,6 +11,7 @@ import { updateAdaptive } from '../utils/adaptive';
 import AppHeader from './AppHeader';
 import { getCorrectFeedback } from '../utils/feedback';
 import InteractiveClock from './InteractiveClock';
+import { useScrollTop } from '../utils/scroll';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -70,6 +71,7 @@ function buildQuestions(topicIds: string[], easierPool = false): SluttestQuestio
 export default function SluttestView() {
   const { currentStudent, sluttestWorldId, setView } = useApp();
   const [phase, setPhase] = useState<'intro' | 'test' | 'result'>('intro');
+  useScrollTop([phase]);
   const [finalStates, setFinalStates] = useState<QuestionState[]>([]);
 
   const world = WORLDS.find(w => w.id === sluttestWorldId);

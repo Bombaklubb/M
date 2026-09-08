@@ -25,6 +25,7 @@ import CollectCoinsGame from './components/games/CollectCoinsGame';
 import MemoryGame from './components/games/MemoryGame';
 import HangmanGame from './components/games/HangmanGame';
 import JaktlankarMenu from './components/JaktlankarMenu';
+import { useScrollTop } from './utils/scroll';
 
 // ─── Error Boundary ─────────────────────────────────────────────────────────
 // Catches any uncaught error in the React tree and shows a recovery screen
@@ -93,6 +94,10 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, EBSta
 
 function AppInner() {
   const { currentView, selectedTopic, setView, errorBankWorldId, problemWorldId } = useApp();
+
+  // Börja alltid högst upp när en ny vy öppnas – annars ligger sidan kvar på
+  // föregående scrollposition och man hamnar mitt i den nya sidan.
+  useScrollTop([currentView, selectedTopic?.id]);
 
   // Ctrl+Shift+P öppnar lärarvy
   useEffect(() => {

@@ -7,6 +7,7 @@ import { rollPointsBonus } from '../utils/pointsBonus';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
 import { gradeToWorld, WORLDS } from '../data/worlds';
+import { useScrollTop } from '../utils/scroll';
 
 const DURATIONS = [60, 120] as const;
 
@@ -14,6 +15,7 @@ export default function QuickDrill() {
   const { currentStudent, setView } = useApp();
   const [duration, setDuration] = useState<60|120>(60);
   const [phase, setPhase] = useState<'setup'|'drill'|'result'>('setup');
+  useScrollTop([phase]);
   const [timeLeft, setTimeLeft] = useState(60);
   const [currentEx, setCurrentEx] = useState<any>(null);
   const [input, setInput] = useState('');
