@@ -95,8 +95,6 @@ button { font-family: inherit; }
 /* display:block + width:100% i stället för flex-basis: i kolumnläget nedan
    skulle basis gälla höjden, och skjutsen hamnade bredvid och klipptes. */
 .dayride { display: block; width: 100%; font-size: 11px; font-weight: 600; color: #6b7280; line-height: 1.25; }
-/* "Barn" märker upp skolskjutsen, så den inte blandas ihop med träningsskjutsen. */
-.daytag { font-weight: 900; color: #111827; letter-spacing: .01em; }
 /* Får krympa och radbryta: en lång städrad ska vika ner sig, inte klippas. */
 .dayline { flex: 0 1 auto; display: flex; align-items: baseline; gap: 5px; min-width: 0; }
 .dayicon { flex: none; font-size: 12px; }
