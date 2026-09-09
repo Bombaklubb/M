@@ -1,7 +1,7 @@
 import { Fragment, type ReactNode } from 'react';
 import {
   choreDay, colorOf, FAMILY_KIDS, FAMILY_PARENTS, MEALS, mealWho, MEMBERS, PEOPLE,
-  sheetDayFor, SLOT_LABEL, TRAININGS, trainingRide, weekRows,
+  RIDE_TAG, sheetDayFor, SLOT_LABEL, TRAININGS, trainingRide, weekRows,
 } from './data';
 import { Named } from './Named';
 
@@ -130,7 +130,7 @@ export function WeekSheet() {
                   // Skolskjutsen står överst: den gäller varje vardag och är det
                   // första man behöver veta om dagen.
                   <div style={{ fontSize: 9, fontWeight: 700, color: '#4b5563', lineHeight: 1.15 }}>
-                    🚗 <Named text={r.ride} />
+                    <span style={{ fontWeight: 900, color: '#111827' }}>{RIDE_TAG}</span> <Named text={r.ride} />
                   </div>
                 )}
                 {r.trainings.map((t, j) => (
