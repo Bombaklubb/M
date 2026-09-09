@@ -25,7 +25,7 @@ export function Hem({ days, filter, onOpenDay }: Props) {
               {items.map((it, j) => (
                 <div className="dayitem" key={j}>
                   {it.compact ? (
-                    <span className="dayride"><span className="daytag">{it.icon}</span> <Named text={it.meta} /></span>
+                    <span className="dayride"><Named text={it.meta} /></span>
                   ) : (
                     <>
                       <div className="dayline">

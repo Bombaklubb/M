@@ -157,10 +157,9 @@ export const sheetDayFor = (namn: string) => versal(namn);
 export function dayItems(d: Day, filter: string | null = null): DayItem[] {
   // Skolskjutsen först: den är dagens första och sista punkt.
   const skjuts: DayItem[] = dayRide(d.name)
-    // compact: "Barn" och "lämnar/hämtar" säger redan vad raden är, och rubriken
-    // på egen rad hade kostat en av de sju dagarna plats på skärmen. Ordet i
-    // stället för en bil skiljer också skolskjutsen från träningsskjutsen.
-    ? [{ icon: RIDE_TAG, label: RIDE_LABEL, meta: dayRide(d.name), compact: true, k: 'skjuts', p: dayRideWho(d.name) }]
+    // compact: meningen säger redan allt ("Karin lämnar · Martin hämtar barn"),
+    // och rubriken på egen rad hade kostat en av de sju dagarna plats.
+    ? [{ icon: '🚗', label: RIDE_LABEL, meta: dayRide(d.name), compact: true, k: 'skjuts', p: dayRideWho(d.name) }]
     : [];
 
   const träning: DayItem[] = TRAININGS.filter((t) => t.day === d.name).map((t) => ({
@@ -335,12 +334,14 @@ export const RIDES: { day: string; dropoff: Lift; pickup: Lift }[] = [
 
 export const RIDE_LABEL = 'Lämna och hämta barn';
 /** Kort märkning på tavlan och veckobladet, där hela rubriken inte får plats. */
-export const RIDE_TAG = 'Barn';
-
-/** Dagens skjuts som text, tom sträng när dagen inte har någon. */
+/**
+ * Dagens skjuts som text, tom sträng när dagen inte har någon. "barn" sist i
+ * meningen säger vad som körs — och skiljer den från träningsskjutsen, som
+ * hör till passet den står under.
+ */
 export const dayRide = (dag: string) => {
   const r = RIDES.find((x) => x.day === dag);
-  return r ? rideText(r.dropoff, r.pickup) : '';
+  return r ? `${rideText(r.dropoff, r.pickup)} barn` : '';
 };
 
 /** Vilka som kör den dagen — så raden följer med när man filtrerar på sig själv. */
