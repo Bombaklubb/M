@@ -48,16 +48,20 @@ button { font-family: inherit; }
   display: flex;
   flex-direction: column;
   gap: 5px;
-  justify-content: space-between;
   padding: 12px 14px calc(env(safe-area-inset-bottom, 0px) + 92px);
-  /* Sju dagar ryms på en vanlig telefon; på riktigt små skärmar får man
-     hellre scrolla än få lördagen avklippt. */
+  /* Sju dagar ryms på en vanlig telefon; på mindre skärmar scrollar tavlan.
+     Ingen justify-content här: den fördelar ledig plats *mellan* korten och
+     gör innehållet oåtkomligt när det inte finns någon. Korten växer i
+     stället själva (flex-grow nedan), vilket ser likadant ut när allt ryms
+     och scrollar som det ska när det inte gör det. */
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 .daycard {
-  /* Korten tar den plats innehållet behöver — hellre lite luft kvar än en
-     avklippt lördag. Ryms de inte (riktigt små skärmar) scrollar .week. */
-  flex: 0 0 auto;
+  /* Växer och fyller skärmen när det finns plats över, men krymper aldrig
+     under sitt innehåll — då scrollar .week i stället för att klippa. */
+  flex: 1 0 auto;
   display: flex;
   gap: 10px;
   overflow: hidden;
