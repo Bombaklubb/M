@@ -1,7 +1,7 @@
 [
   {
     "id": "ak1-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "djur",
     "title": "Katten Maja",
@@ -736,7 +736,7 @@
   },
   {
     "id": "ak1-miljo-05",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "miljö",
     "title": "Pappret i fel låda",
@@ -816,7 +816,7 @@
   },
   {
     "id": "ak1-musik-04",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "musik",
     "title": "Trumma i magen",
@@ -1062,7 +1062,7 @@
   },
   {
     "id": "ak1-natur-02",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "natur",
     "title": "Ett frö blir en blomma",
@@ -1391,7 +1391,7 @@
   },
   {
     "id": "ak1-natur-regn-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Regnet kommer",
@@ -2043,7 +2043,7 @@
   },
   {
     "id": "ak1-tema-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Leo går till skolan",
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "ak1-tema-002",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Besök på biblioteket",
@@ -2209,7 +2209,7 @@
   },
   {
     "id": "ak1-tema-003",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "sport",
     "title": "I parken",
@@ -2292,7 +2292,7 @@
   },
   {
     "id": "ak1-tema-004",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Tomater på balkongen",
@@ -2375,7 +2375,7 @@
   },
   {
     "id": "ak1-tema-005",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "teknik",
     "title": "Linas robot",
@@ -2458,7 +2458,7 @@
   },
   {
     "id": "ak1-tema-006",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Idrottslektionen",
@@ -2541,7 +2541,7 @@
   },
   {
     "id": "ak1-tema-007",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Snigeln",
@@ -2624,7 +2624,7 @@
   },
   {
     "id": "ak1-tema-008",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Sagostund",
@@ -2707,7 +2707,7 @@
   },
   {
     "id": "ak1-tema-009",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Temadag i skogen",
@@ -2790,7 +2790,7 @@
   },
   {
     "id": "ak1-tema-010",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Cykel till skolan",
@@ -3273,7 +3273,7 @@
   },
   {
     "id": "ak1-tema-016",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten i trädgården",
@@ -3356,7 +3356,7 @@
   },
   {
     "id": "ak1-tema-017",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "sport",
     "title": "Bollen på skolgården",
@@ -3439,7 +3439,7 @@
   },
   {
     "id": "ak1-tema-018",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vetenskap",
     "title": "En bok om havet",
@@ -3522,7 +3522,7 @@
   },
   {
     "id": "ak1-tema-019",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Bakning hemma",
@@ -3605,7 +3605,7 @@
   },
   {
     "id": "ak1-tema-020",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "geografi",
     "title": "Resan med tåget",
@@ -3688,7 +3688,7 @@
   },
   {
     "id": "ak1-tema-021",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "sport",
     "title": "Bollen i parken",
@@ -3771,7 +3771,7 @@
   },
   {
     "id": "ak1-tema-022",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten på trappan",
@@ -3854,7 +3854,7 @@
   },
   {
     "id": "ak1-tema-023",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vetenskap",
     "title": "Boken om rymden",
@@ -3937,7 +3937,7 @@
   },
   {
     "id": "ak1-tema-024",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Glass i solen",
@@ -4020,7 +4020,7 @@
   },
   {
     "id": "ak1-tema-025",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Cykeln",
@@ -4103,7 +4103,7 @@
   },
   {
     "id": "ak1-tema-026",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Fågeln i trädet",
@@ -4186,7 +4186,7 @@
   },
   {
     "id": "ak1-tema-027",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Bussen",
@@ -4269,7 +4269,7 @@
   },
   {
     "id": "ak1-tema-028",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Rita i klassrummet",
@@ -4352,7 +4352,7 @@
   },
   {
     "id": "ak1-tema-029",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Snögubben",
@@ -4435,7 +4435,7 @@
   },
   {
     "id": "ak1-tema-030",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Lunch i skolan",
@@ -4518,7 +4518,7 @@
   },
   {
     "id": "ak1-tema-031",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "sport",
     "title": "Bollen på gården",
@@ -4601,7 +4601,7 @@
   },
   {
     "id": "ak1-tema-032",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Katten vid huset",
@@ -4684,7 +4684,7 @@
   },
   {
     "id": "ak1-tema-033",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Boken i klassrummet",
@@ -4767,7 +4767,7 @@
   },
   {
     "id": "ak1-tema-034",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Vid badplatsen",
@@ -4850,7 +4850,7 @@
   },
   {
     "id": "ak1-tema-035",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Skorna som klämde",
@@ -4933,7 +4933,7 @@
   },
   {
     "id": "ak1-tema-036",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Ekorren vid stubben",
@@ -5016,7 +5016,7 @@
   },
   {
     "id": "ak1-tema-037",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Tåget utanför fönstret",
@@ -5099,7 +5099,7 @@
   },
   {
     "id": "ak1-tema-038",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Sagan som fröken läste",
@@ -5182,7 +5182,7 @@
   },
   {
     "id": "ak1-tema-039",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Isen på pölen",
@@ -5265,7 +5265,7 @@
   },
   {
     "id": "ak1-tema-040",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Mellanmål hemma",
@@ -6747,7 +6747,7 @@
   },
   {
     "id": "ak2-gpt-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "djur",
     "title": "Maja är hungrig",
@@ -6830,7 +6830,7 @@
   },
   {
     "id": "ak2-gpt-002",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "En tur i skogen",
@@ -6913,7 +6913,7 @@
   },
   {
     "id": "ak2-gpt-003",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "vänskap",
     "title": "En rolig rast",
@@ -6996,7 +6996,7 @@
   },
   {
     "id": "ak2-gpt-004",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "skola",
     "title": "Högläsning i 2B",
@@ -7079,7 +7079,7 @@
   },
   {
     "id": "ak2-gpt-005",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "familj",
     "title": "Söndag i simhallen",
@@ -8465,7 +8465,7 @@
   },
   {
     "id": "ak3-djur-006",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "djur",
     "title": "Så hittar myror hem",
@@ -8714,7 +8714,7 @@
   },
   {
     "id": "ak3-etik-018",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "etik",
     "title": "Att säga förlåt",
@@ -8880,7 +8880,7 @@
   },
   {
     "id": "ak3-existens-020",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "existentiella frågor",
     "title": "Vad är mod?",
@@ -8963,7 +8963,7 @@
   },
   {
     "id": "ak3-familj-005",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "familj",
     "title": "Pannkaksfredag",
@@ -9129,7 +9129,7 @@
   },
   {
     "id": "ak3-natur-002",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "natur",
     "title": "Varför löven byter färg",
@@ -9295,7 +9295,7 @@
   },
   {
     "id": "ak3-samhalle-009",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "samhälle",
     "title": "Varför vi har bibliotek",
@@ -9378,7 +9378,7 @@
   },
   {
     "id": "ak3-samhalle-017",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Övergångsstället",
@@ -9544,7 +9544,7 @@
   },
   {
     "id": "ak3-skola-013",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "skola",
     "title": "Så fungerar en rast",
@@ -9627,7 +9627,7 @@
   },
   {
     "id": "ak3-sport-004",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "sport",
     "title": "Sista varvet",
@@ -9710,7 +9710,7 @@
   },
   {
     "id": "ak3-sport-014",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "sport",
     "title": "Vad är uppvärmning?",
@@ -11994,7 +11994,7 @@
   },
   {
     "id": "ak3-vetenskap-008",
-    "grade": 1,
+    "grade": 2,
     "genre": "faktatext",
     "theme": "vetenskap",
     "title": "Så blir regn till",
@@ -29617,7 +29617,7 @@
   },
   {
     "id": "ak1-tema-041",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "sport",
     "title": "Hopprepet på rasten",
@@ -29700,7 +29700,7 @@
   },
   {
     "id": "ak1-tema-042",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Hunden som väntar",
@@ -29783,7 +29783,7 @@
   },
   {
     "id": "ak1-tema-043",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Torsdag på biblioteket",
@@ -29866,7 +29866,7 @@
   },
   {
     "id": "ak1-tema-044",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Kalas i trädgården",
@@ -29949,7 +29949,7 @@
   },
   {
     "id": "ak1-tema-045",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "Regn på vägen hem",
@@ -30032,7 +30032,7 @@
   },
   {
     "id": "ak1-tema-046",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Myrorna på stigen",
@@ -30115,7 +30115,7 @@
   },
   {
     "id": "ak1-tema-047",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "samhälle",
     "title": "Första gången i simhallen",
@@ -30198,7 +30198,7 @@
   },
   {
     "id": "ak1-tema-048",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "kultur",
     "title": "Sångstunden på fredag",
@@ -30281,7 +30281,7 @@
   },
   {
     "id": "ak1-tema-049",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "natur",
     "title": "Vanten som försvann",
@@ -30364,7 +30364,7 @@
   },
   {
     "id": "ak1-tema-050",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "hälsa",
     "title": "En sen frukost",
@@ -39858,7 +39858,7 @@
   },
   {
     "id": "ak1-kampsport-01",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "kampsport",
     "title": "Första gången på karate",
@@ -40658,7 +40658,7 @@
   },
   {
     "id": "ak1-abba-01",
-    "grade": 1,
+    "grade": 2,
     "genre": "berättelse",
     "theme": "musik",
     "title": "Låten på kalaset",
@@ -41454,6 +41454,1206 @@
     ],
     "meta": {
       "wordCount": 600
+    }
+  },
+  {
+    "id": "ak1-lattlast-01",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Bollen på gatan",
+    "imageUrl": "https://images.unsplash.com/photo-1628312816680-98e1bf8dfeac?w=600&h=400&fit=crop",
+    "text": "Max har en röd boll.\n\nBollen rullar ut på gatan.\n\nMax blir rädd.\n\nMamma springer och hämtar bollen.\n\nNu ler Max igen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken färg har bollen?",
+        "options": [
+          "Den är röd",
+          "Den är blå",
+          "Den är grön",
+          "Den är gul"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vart rullar bollen?",
+        "options": [
+          "In i huset",
+          "Ut på gatan",
+          "Ner i sjön",
+          "Upp i trädet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir Max rädd?",
+        "options": [
+          "För att bollen är röd",
+          "För att mamma är arg",
+          "För att bollen är blöt",
+          "För att gatan är farlig"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vem hämtar bollen?",
+        "options": [
+          "Max gör det",
+          "Pappa gör det",
+          "Mamma gör det",
+          "En hund gör det"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder hämtar?",
+        "options": [
+          "Kastar bort",
+          "Går och tar",
+          "Gömmer undan",
+          "Sparkar iväg"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En hund i en park",
+          "En bil på en väg",
+          "En kaka på ett bord",
+          "En boll som rullar bort"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 22
+    }
+  },
+  {
+    "id": "ak1-lattlast-02",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Tuss sover",
+    "imageUrl": "https://images.unsplash.com/photo-1786283531774-f92962b16562?w=600&h=400&fit=crop",
+    "text": "Katten heter Tuss.\n\nTuss ligger i solen.\n\nHon sover hela dagen.\n\nPå kvällen vaknar hon.\n\nDå vill Tuss ha mat.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter katten?",
+        "options": [
+          "Tuss",
+          "Bux",
+          "Pelle",
+          "Mira"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var ligger Tuss?",
+        "options": [
+          "I gräset",
+          "I korgen",
+          "I sängen",
+          "I solen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "När vaknar Tuss?",
+        "options": [
+          "Mitt i natten",
+          "På kvällen",
+          "Vid lunch",
+          "På morgonen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder vaknar?",
+        "options": [
+          "Springer ut",
+          "Blir hungrig",
+          "Slutar sova",
+          "Somnar om"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför ligger Tuss i solen?",
+        "options": [
+          "För att det är varmt där",
+          "För att hon letar mat",
+          "För att hon är rädd",
+          "För att hon leker"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En pojke som äter",
+          "En hund som skäller",
+          "En katt som sover",
+          "En fågel som sjunger"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 20
+    }
+  },
+  {
+    "id": "ak1-lattlast-03",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Mössan som flög",
+    "imageUrl": "https://images.unsplash.com/photo-1606927609126-0aa3c31dcb65?w=600&h=400&fit=crop",
+    "text": "Ida har en rosa mössa.\n\nDet blåser ute.\n\nMössan flyger av.\n\nIda springer efter den.\n\nHon får tag i mössan.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken färg har mössan?",
+        "options": [
+          "Vit",
+          "Svart",
+          "Rosa",
+          "Brun"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur är vädret ute?",
+        "options": [
+          "Det blåser",
+          "Det snöar",
+          "Det regnar",
+          "Det är varmt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför flyger mössan av?",
+        "options": [
+          "Ida kastar den",
+          "Vinden tar den",
+          "En fågel tar den",
+          "Den är för blöt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder får tag i?",
+        "options": [
+          "Går förbi",
+          "Tappar bort",
+          "Ger bort",
+          "Lyckas ta"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Ida när mössan flyger?",
+        "options": [
+          "Hon ropar på hjälp",
+          "Hon står stilla",
+          "Hon springer efter",
+          "Hon gråter högt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En mössa som blåser bort",
+          "En flicka som fryser",
+          "En fågel i ett träd",
+          "En jacka som blir blöt"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 20
+    }
+  },
+  {
+    "id": "ak1-lattlast-04",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Vi bakar bullar",
+    "imageUrl": "https://images.unsplash.com/photo-1654791226981-7b87a218d530?w=600&h=400&fit=crop",
+    "text": "Idag bakar vi bullar.\n\nPappa knådar degen.\n\nJag rullar bullarna.\n\nDe får jäsa en stund.\n\nSedan doftar hela huset gott.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad bakar de?",
+        "options": [
+          "Bröd",
+          "Bullar",
+          "Kakor",
+          "Tårta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem knådar degen?",
+        "options": [
+          "Mamma gör det",
+          "Pappa gör det",
+          "Farmor gör det",
+          "Jag gör det"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder jäsa?",
+        "options": [
+          "Bli kall",
+          "Bli hård",
+          "Växa sig större",
+          "Falla ihop"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör jag med bullarna?",
+        "options": [
+          "Rullar dem",
+          "Äter dem",
+          "Delar dem",
+          "Gömmer dem"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför doftar huset gott till slut?",
+        "options": [
+          "För att fönstret är öppet",
+          "För att degen är kall",
+          "För att pappa lagar mat",
+          "För att bullarna är färdiga"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En dag i skolan",
+          "En bakdag hemma",
+          "En resa till affären",
+          "En fest i parken"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 20
+    }
+  },
+  {
+    "id": "ak1-lattlast-05",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Pölen på gården",
+    "imageUrl": "https://images.unsplash.com/photo-1477511350923-3986459bdee1?w=600&h=400&fit=crop",
+    "text": "Det regnar hela morgonen.\n\nNoel tar på sig stövlar.\n\nHan hoppar i en pöl.\n\nVattnet stänker högt.\n\nByxorna blir blöta.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur är vädret?",
+        "options": [
+          "Det snöar",
+          "Det blåser",
+          "Det regnar",
+          "Det är sol"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad tar Noel på sig?",
+        "options": [
+          "Stövlar",
+          "Vantar",
+          "En mössa",
+          "En jacka"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad är en pöl?",
+        "options": [
+          "En hög med snö",
+          "Ett hål i marken",
+          "En hink med sand",
+          "Lite vatten på marken"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer med byxorna?",
+        "options": [
+          "De går sönder",
+          "De blir blöta",
+          "De blir borta",
+          "De blir torra"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir byxorna blöta?",
+        "options": [
+          "För att det snöar ute",
+          "För att Noel simmar",
+          "För att vattnet stänker",
+          "För att stövlarna läcker"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En pojke som hoppar i vatten",
+          "En pojke som tvättar kläder",
+          "En flicka som går vilse",
+          "En hund som blir blöt"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 20
+    }
+  },
+  {
+    "id": "ak1-lattlast-06",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Nya skor",
+    "imageUrl": "https://images.unsplash.com/photo-1700673698394-270378d1a70d?w=600&h=400&fit=crop",
+    "text": "Sara har nya skor.\n\nDe är vita och mjuka.\n\nHon vill visa dem i skolan.\n\nAlla tittar när hon kommer.\n\nSara blir glad.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har Sara fått?",
+        "options": [
+          "En ny väska",
+          "Nya skor",
+          "En ny mössa",
+          "En ny cykel"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur är skorna?",
+        "options": [
+          "Svarta och hårda",
+          "Röda och blanka",
+          "Bruna och stora",
+          "Vita och mjuka"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var vill Sara visa skorna?",
+        "options": [
+          "Hemma hos mormor",
+          "På fotbollsplanen",
+          "I skolan",
+          "I affären"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder visa?",
+        "options": [
+          "Låta andra se",
+          "Gömma undan",
+          "Ge bort",
+          "Sätta på"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir Sara glad?",
+        "options": [
+          "För att hon springer fort",
+          "För att andra ser skorna",
+          "För att skorna är billiga",
+          "För att skolan är slut"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En pojke som är ledsen",
+          "En lärare som är arg",
+          "En flicka som tappar en sko",
+          "En flicka som är stolt"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 23
+    }
+  },
+  {
+    "id": "ak1-lattlast-07",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Hunden Bux",
+    "imageUrl": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&h=400&fit=crop",
+    "text": "Vi har en hund.\n\nHan heter Bux.\n\nBux gömmer min strumpa.\n\nJag letar länge.\n\nStrumpan ligger under sängen.\n\nBux viftar på svansen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad heter hunden?",
+        "options": [
+          "Tuss",
+          "Bux",
+          "Sigge",
+          "Mira"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gömmer Bux?",
+        "options": [
+          "En strumpa",
+          "En boll",
+          "En sko",
+          "En vante"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var ligger strumpan?",
+        "options": [
+          "Bakom dörren",
+          "I hallen",
+          "Under sängen",
+          "I korgen"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder gömmer?",
+        "options": [
+          "Tvättar rent",
+          "River sönder",
+          "Lämnar kvar",
+          "Lägger undan"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar Bux när han viftar på svansen?",
+        "options": [
+          "Att han är glad",
+          "Att han är trött",
+          "Att han är arg",
+          "Att han är rädd"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En katt som springer bort",
+          "En hund som gömmer saker",
+          "En pojke som städar rummet",
+          "En säng som går sönder"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 22
+    }
+  },
+  {
+    "id": "ak1-lattlast-08",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Snögubben",
+    "imageUrl": "https://images.unsplash.com/photo-1612504156915-d231324c3f22?w=600&h=400&fit=crop",
+    "text": "Det har snöat i natt.\n\nVi bygger en snögubbe.\n\nHan får en morot som näsa.\n\nTvå stenar blir ögon.\n\nSnögubben ler mot oss.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har hänt i natt?",
+        "options": [
+          "Det har regnat",
+          "Det har blåst",
+          "Det har snöat",
+          "Det har frusit"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad blir snögubbens näsa?",
+        "options": [
+          "En sten",
+          "En pinne",
+          "En knapp",
+          "En morot"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad blir ögonen?",
+        "options": [
+          "Två knappar",
+          "Två stenar",
+          "Två pinnar",
+          "Två löv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder ler?",
+        "options": [
+          "Ser glad ut",
+          "Sover gott",
+          "Gråter mycket",
+          "Ropar högt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför går det att bygga en snögubbe?",
+        "options": [
+          "För att solen skiner",
+          "För att det är kväll",
+          "För att marken är torr",
+          "För att det finns snö ute"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En sten på en väg",
+          "En dag med snö och lek",
+          "En resa till fjällen",
+          "En morot i en trädgård"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 23
+    }
+  },
+  {
+    "id": "ak1-lattlast-09",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Äpplet",
+    "imageUrl": "https://images.unsplash.com/photo-1567974772901-1365e616baa9?w=600&h=400&fit=crop",
+    "text": "I trädgården står ett äppelträd.\n\nÄpplena är röda och mogna.\n\nFarfar lyfter upp mig.\n\nJag plockar ett äpple.\n\nDet smakar sött.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad står i trädgården?",
+        "options": [
+          "Ett äppelträd",
+          "En stor buske",
+          "En liten bänk",
+          "En gammal stege"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har äpplena?",
+        "options": [
+          "De är gula",
+          "De är röda",
+          "De är gröna",
+          "De är bruna"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem lyfter upp mig?",
+        "options": [
+          "Mamma gör det",
+          "Pappa gör det",
+          "Farfar gör det",
+          "Mormor gör det"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder mogna?",
+        "options": [
+          "Nyss planterade",
+          "Alldeles för små",
+          "Fulla med maskar",
+          "Färdiga att äta"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför måste jag lyftas upp?",
+        "options": [
+          "För att jag är trött",
+          "För att trädet lutar",
+          "För att äpplena hänger högt",
+          "För att marken är blöt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "Ett äpple som plockas i trädgården",
+          "En farfar som planterar ett träd",
+          "En trädgård som växer igen",
+          "En pojke som klättrar i ett träd"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 21
+    }
+  },
+  {
+    "id": "ak1-lattlast-10",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Bussen till mormor",
+    "imageUrl": "https://images.unsplash.com/photo-1779743541643-c90c5b595010?w=600&h=400&fit=crop",
+    "text": "Vi ska åka buss till mormor.\n\nBussen är gul.\n\nJag sitter vid fönstret.\n\nHusen far förbi.\n\nSnart är vi framme.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vem ska de åka till?",
+        "options": [
+          "Till skolan",
+          "Till farfar",
+          "Till en kompis",
+          "Till mormor"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg har bussen?",
+        "options": [
+          "Den är gul",
+          "Den är blå",
+          "Den är röd",
+          "Den är vit"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var sitter jag?",
+        "options": [
+          "I mitten",
+          "Längst bak",
+          "Vid fönstret",
+          "Bredvid föraren"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder framme?",
+        "options": [
+          "På fel ställe",
+          "Vid rätt plats",
+          "Långt bort än",
+          "Nästan hemma"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför far husen förbi?",
+        "options": [
+          "För att husen är små",
+          "För att jag springer",
+          "För att det blåser hårt",
+          "För att bussen kör fort"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En bussresa till mormor",
+          "En promenad i en stad",
+          "En dag hemma hos farfar",
+          "En bil som går sönder"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 20
+    }
+  },
+  {
+    "id": "ak1-lattlast-11",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Fågeln vid fönstret",
+    "imageUrl": "https://images.unsplash.com/photo-1721059166719-8b233059b2da?w=600&h=400&fit=crop",
+    "text": "En liten fågel sitter på grenen.\n\nDen tittar in genom fönstret.\n\nJag lägger ut frön.\n\nFågeln flyger ner och äter.\n\nSedan flyger den bort.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter fågeln först?",
+        "options": [
+          "På taket",
+          "På grenen",
+          "På marken",
+          "På staketet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad lägger jag ut?",
+        "options": [
+          "Frön",
+          "Bröd",
+          "Vatten",
+          "Bär"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad är frön?",
+        "options": [
+          "Små stenar",
+          "Torra löv",
+          "Små korn att äta",
+          "Bitar av bröd"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör fågeln sist?",
+        "options": [
+          "Den sjunger",
+          "Den sover",
+          "Den dricker",
+          "Den flyger bort"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför flyger fågeln ner?",
+        "options": [
+          "För att den är trött",
+          "För att det regnar",
+          "För att grenen knäcks",
+          "För att den vill äta"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En katt som jagar",
+          "Ett träd som blommar",
+          "En fågel som får mat",
+          "Ett fönster som går sönder"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 24
+    }
+  },
+  {
+    "id": "ak1-lattlast-12",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Elias cyklar",
+    "imageUrl": "https://images.unsplash.com/photo-1595663823619-c46779b2d840?w=600&h=400&fit=crop",
+    "text": "Elias lär sig cykla.\n\nPappa håller i sadeln.\n\nSedan släpper han taget.\n\nElias trampar helt själv.\n\nHan ropar: \"Jag kan!\"",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad lär sig Elias?",
+        "options": [
+          "Att simma",
+          "Att åka skridskor",
+          "Att cykla",
+          "Att springa fort"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad håller pappa i?",
+        "options": [
+          "Jackan",
+          "Sadeln",
+          "Styret",
+          "Hjulet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder släpper taget?",
+        "options": [
+          "Slutar hålla i",
+          "Ropar till",
+          "Springer bort",
+          "Håller hårdare"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad ropar Elias?",
+        "options": [
+          "Kom hit!",
+          "Vänta lite!",
+          "Jag kan!",
+          "Det gick fel!"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känner sig Elias på slutet?",
+        "options": [
+          "Han är rädd",
+          "Han är ledsen",
+          "Han är arg",
+          "Han är stolt"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En pojke som lär sig cykla",
+          "En pappa som köper en cykel",
+          "En cykel som går sönder",
+          "En pojke som ramlar av"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 20
+    }
+  },
+  {
+    "id": "ak1-lattlast-13",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "I sandlådan",
+    "imageUrl": "https://images.unsplash.com/photo-1700514854744-e43853301dd9?w=600&h=400&fit=crop",
+    "text": "Vi leker i sandlådan.\n\nAlva gräver ett djupt hål.\n\nJag bygger ett torn.\n\nEn lastbil kör sand.\n\nSedan rasar tornet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var leker de?",
+        "options": [
+          "I skogen",
+          "I sandlådan",
+          "I vattnet",
+          "I skolan"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör Alva?",
+        "options": [
+          "Gräver ett hål",
+          "Bygger ett torn",
+          "Kör en lastbil",
+          "Sitter och tittar"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder djupt?",
+        "options": [
+          "Går långt ner",
+          "Går långt bort",
+          "Är mycket smalt",
+          "Är alldeles nytt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad händer med tornet?",
+        "options": [
+          "Det blir högre",
+          "Det blir blött",
+          "Det rasar",
+          "Det försvinner"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder rasar?",
+        "options": [
+          "Byggs upp",
+          "Blir hårt",
+          "Står kvar",
+          "Faller ihop"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En lastbil på en gata",
+          "Två barn som leker i sand",
+          "Ett hål i en skog",
+          "Ett torn av klossar"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 20
+    }
+  },
+  {
+    "id": "ak1-lattlast-14",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Godnattsagan",
+    "imageUrl": "https://images.unsplash.com/photo-1577835724923-f591f5f98c89?w=600&h=400&fit=crop",
+    "text": "Det är dags att sova.\n\nMamma läser en saga.\n\nSagan handlar om en drake.\n\nDraken är snäll.\n\nJag somnar innan slutet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vem läser sagan?",
+        "options": [
+          "Pappa",
+          "Farmor",
+          "Läraren",
+          "Mamma"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad handlar sagan om?",
+        "options": [
+          "En drake",
+          "En båt",
+          "En prins",
+          "En häst"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Hur är draken?",
+        "options": [
+          "Han är arg",
+          "Han är stor",
+          "Han är snäll",
+          "Han är rädd"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder somnar?",
+        "options": [
+          "Vaknar upp",
+          "Reser sig",
+          "Ropar högt",
+          "Börjar sova"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför hör jag inte slutet?",
+        "options": [
+          "För att jag har somnat",
+          "För att mamma slutar läsa",
+          "För att boken tar slut",
+          "För att lampan släcks"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En drake som flyger",
+          "En kväll med en saga",
+          "En mamma som sjunger",
+          "En bok som tappas bort"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 21
+    }
+  },
+  {
+    "id": "ak1-lattlast-15",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "I simhallen",
+    "imageUrl": "https://images.unsplash.com/photo-1497638538792-bc3c26959486?w=600&h=400&fit=crop",
+    "text": "Vi badar i simhallen.\n\nVattnet är varmt.\n\nLiam vågar inte doppa huvudet.\n\nLäraren håller hans hand.\n\nTill slut vågar Liam också.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var badar de?",
+        "options": [
+          "I simhallen",
+          "I en bäck",
+          "I en sjö",
+          "I havet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Hur är vattnet?",
+        "options": [
+          "Det är grumligt",
+          "Det är djupt",
+          "Det är varmt",
+          "Det är kallt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad vågar Liam inte göra?",
+        "options": [
+          "Gå ner i vattnet",
+          "Doppa huvudet",
+          "Simma en längd",
+          "Hoppa från kanten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder vågar?",
+        "options": [
+          "Törs göra något",
+          "Vill helst vänta",
+          "Blir väldigt rädd",
+          "Går sin egen väg"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför vågar Liam till slut?",
+        "options": [
+          "För att vattnet är grunt",
+          "För att alla andra tittar",
+          "För att badet snart stänger",
+          "För att läraren håller handen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En lärare som simmar snabbt",
+          "En simhall som stängs",
+          "En flicka som lär sig dyka",
+          "En pojke som vågar till slut"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 21
     }
   }
 ]

@@ -38,8 +38,14 @@ const GILTIGA_GENRER = ['berättelse', 'faktatext'];
 const GRANSKADE_ENORDSMENINGAR = new Set(['gy-etik-05 Plagiat.']);
 
 // Målintervall för antal ord per årskurs (åk 10 = gymnasiet).
+// Nivå 1 var tidigare 40–60 ord. Den nivån visade sig vara för svår som
+// första steg: en text på femtio ord med fullständiga satser förutsätter att
+// eleven redan läser flytande. De texterna ligger nu på nivå 2, och nivå 1 är
+// omgjord till korta texter med några få meningar. Nivå 2 spänner därför över
+// ett bredare intervall än de andra, eftersom den rymmer både de flyttade
+// texterna och de som redan låg där.
 const ORDINTERVALL = {
-  1: [40, 60], 2: [65, 90], 3: [150, 165], 4: [200, 220], 5: [300, 320],
+  1: [20, 35], 2: [40, 90], 3: [150, 165], 4: [200, 220], 5: [300, 320],
   6: [400, 415], 7: [500, 530], 8: [530, 570], 9: [570, 590], 10: [590, 625],
 };
 
@@ -162,7 +168,9 @@ lib.forEach(t => {
   // gymnasietexternas – vilket pressat ihop satser utan skiljetecken.
   // Taket ligger på ungefär 1,6 gånger årskursens riktvärde, så bara verkliga
   // avvikelser flaggas.
-  const MENINGSTAK = { 1: 12, 2: 14, 3: 17, 4: 19, 5: 21, 6: 22, 7: 22, 8: 23, 9: 24, 10: 26 };
+  // Nivå 1 sänktes från 12 till 8 när nivån gjordes om. En nybörjarläsare
+  // orkar en sats i taget, och långa meningar är det som gör en kort text svår.
+  const MENINGSTAK = { 1: 8, 2: 14, 3: 17, 4: 19, 5: 21, 6: 22, 7: 22, 8: 23, 9: 24, 10: 26 };
   const riktiga = meningar.filter(Boolean);
   if (riktiga.length && MENINGSTAK[t.grade]) {
     const snitt = (t.text.trim().split(/\s+/).length) / riktiga.length;
