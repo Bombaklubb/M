@@ -95,11 +95,11 @@ export function WeekSheet() {
   const cell = (weekend: boolean): React.CSSProperties => ({
     borderBottom: '1px solid #d1d5db',
     background: weekend ? '#f4f5f7' : 'transparent',
-    padding: '6px 7px 6px 5px',
+    padding: '5px 7px 5px 5px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    gap: 4,
+    gap: 3,
     minWidth: 0,
     // Raderna delar sidan lika; overflow hidden är spärren mot att en lång
     // rad trycker ut bladet under papperskanten.
@@ -108,9 +108,9 @@ export function WeekSheet() {
 
   return (
     <Sheet>
-      <Head title="Veckan" sub="Träning, mat och städ – dag för dag" right="Familjen" />
-      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '34px 0.98fr 0.55fr 1.47fr', gridTemplateRows: 'auto repeat(7,auto)', marginTop: 8 }}>
-        {['', '🤸 Träning', '🍽 Mat', '🧹 Städ'].map((h, i) => (
+      <Head title="Veckan" sub="Skjuts, träning, mat och städ" right="Familjen" />
+      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', display: 'grid', gridTemplateColumns: '34px 1.12fr 0.56fr 1.32fr', gridTemplateRows: 'auto repeat(7,auto)', marginTop: 8 }}>
+        {['', '🚗 Skjuts & träning', '🍽 Mat', '🧹 Städ'].map((h, i) => (
           <div key={i} style={{ borderBottom: '2px solid #111827', padding: '0 8px 5px 6px', fontSize: 10, fontWeight: 900, letterSpacing: '.06em', textTransform: 'uppercase', color: '#4b5563' }}>
             {h}
           </div>
@@ -125,13 +125,20 @@ export function WeekSheet() {
               </div>
 
               <div style={cell(weekend)}>
-                {r.trainings.length === 0 && <Empty />}
+                {r.trainings.length === 0 && !r.ride && <Empty />}
+                {r.ride && (
+                  // Skolskjutsen står överst: den gäller varje vardag och är det
+                  // första man behöver veta om dagen.
+                  <div style={{ fontSize: 9, fontWeight: 700, color: '#4b5563', lineHeight: 1.15 }}>
+                    🚗 <Named text={r.ride} />
+                  </div>
+                )}
                 {r.trainings.map((t, j) => (
                   <div key={j}>
-                    <div style={{ fontSize: 12, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{t.title}</div>
-                    <div style={{ fontSize: 10.5, fontWeight: 700, lineHeight: 1.15 }}><Named text={t.meta} /></div>
+                    <div style={{ fontSize: 11.5, fontWeight: 800, color: '#111827', lineHeight: 1.1 }}>{t.title}</div>
+                    <div style={{ fontSize: 10, fontWeight: 700, lineHeight: 1.12 }}><Named text={t.meta} /></div>
                     {t.ride && (
-                      <div style={{ fontSize: 9, fontWeight: 600, color: '#6b7280', lineHeight: 1.15 }}>
+                      <div style={{ fontSize: 8.5, fontWeight: 600, color: '#6b7280', lineHeight: 1.12 }}>
                         🚗 <Named text={t.ride} />
                       </div>
                     )}

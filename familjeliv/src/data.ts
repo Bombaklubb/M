@@ -1,10 +1,10 @@
-export type Kind = 'mat' | 'stad' | 'tran' | 'dat';
+export type Kind = 'mat' | 'stad' | 'tran' | 'skjuts';
 
 export const TINT: Record<Kind, string> = {
   mat: '#fef3c7',
   stad: '#dbeafe',
   tran: '#ffe4e6',
-  dat: '#e0e8ff',
+  skjuts: '#e0e8ff',
 };
 
 /* ── Veckan räknas ut från dagens datum ─────────────────────────
@@ -109,6 +109,8 @@ export type DayItem = {
   meta: string;
   /** Skjutsen, på egen rad under raden: "Karin lämnar 17:45 · Martin hämtar 19:00". */
   ride?: string;
+  /** Ryms på en rad på tavlan: ikonen och `meta`, utan rubrik. */
+  compact?: boolean;
   k: Kind;
   p: string | string[];
 };
@@ -153,6 +155,13 @@ export const sheetDayFor = (namn: string) => versal(namn);
  * eget ansikte.
  */
 export function dayItems(d: Day, filter: string | null = null): DayItem[] {
+  // Skolskjutsen först: den är dagens första och sista punkt.
+  const skjuts: DayItem[] = dayRide(d.name)
+    // compact: bilen och "lämnar/hämtar" säger redan vad raden är, och rubriken
+    // på egen rad hade kostat en av de sju dagarna plats på skärmen.
+    ? [{ icon: '🚗', label: RIDE_LABEL, meta: dayRide(d.name), compact: true, k: 'skjuts', p: dayRideWho(d.name) }]
+    : [];
+
   const träning: DayItem[] = TRAININGS.filter((t) => t.day === d.name).map((t) => ({
     icon: '🤸',
     label: `${t.short ?? t.title} ${t.time}`,
@@ -184,7 +193,7 @@ export function dayItems(d: Day, filter: string | null = null): DayItem[] {
     p: filter as string,
   }];
 
-  return [...träning, ...mat, ...städ];
+  return [...skjuts, ...träning, ...mat, ...städ];
 }
 
 export type Slot = 'lunch' | 'middag';
@@ -272,6 +281,9 @@ export const choreDay = (t: Chore) => (CHORE_DAY[t.day] ?? t.day) + (t.time ? ` 
 const choreOnDay = (t: Chore, dag: string) =>
   t.day === 'dagl' || t.day === dag || (t.day === 'helg' && (dag === 'lör' || dag === 'sön'));
 
+/** En lämning eller hämtning: vem, och tiden när den är bestämd. */
+export type Lift = { by?: string; time?: string };
+
 export type TrainingColor = { border: string; tint: string; fg: string };
 export const TC: Record<string, TrainingColor> = {
   ord: { border: '#fecdd3', tint: '#fff1f2', fg: '#be123c' },
@@ -289,8 +301,8 @@ export type Training = {
   /** Barnet som tränar. */
   person: string;
   /** Lämning och hämtning. Utelämnat = behövs inte, tomt objekt = behövs men vem är inte bestämt. */
-  dropoff?: { by?: string; time?: string };
-  pickup?: { by?: string; time?: string };
+  dropoff?: Lift;
+  pickup?: Lift;
   c: keyof typeof TC;
 };
 
@@ -305,12 +317,41 @@ export const TRAININGS: Training[] = [
 export const trainingWho = (t: Training): string[] =>
   [...new Set([t.person, t.dropoff?.by, t.pickup?.by].filter(Boolean) as string[])];
 
+/** Skjutsen till och från passet. */
+export const trainingRide = (t: Training) => rideText(t.dropoff, t.pickup);
+
 /**
- * Skjutsen i klartext: "Martin hämtar 18:15", "Lämning och hämtning" när det
- * behövs men ingen är utsedd, tom sträng när passet inte kräver skjuts.
+ * Den dagliga skjutsen till och från skolan och förskolan — den som gäller varje
+ * vardag, oavsett träningar. Helgen står tom: då kör ingen någon.
  */
-export function trainingRide(t: Training): string {
-  const { dropoff: d, pickup: p } = t;
+export const RIDES: { day: string; dropoff: Lift; pickup: Lift }[] = [
+  { day: 'mån', dropoff: { by: 'Karin' }, pickup: { by: 'Karin' } },
+  { day: 'tis', dropoff: { by: 'Karin' }, pickup: { by: 'Karin' } },
+  { day: 'ons', dropoff: { by: 'Karin' }, pickup: { by: 'Martin' } },
+  { day: 'tor', dropoff: { by: 'Karin' }, pickup: { by: 'Martin' } },
+  { day: 'fre', dropoff: { by: 'Karin' }, pickup: { by: 'Martin' } },
+];
+
+export const RIDE_LABEL = 'Lämna och hämta barn';
+
+/** Dagens skjuts som text, tom sträng när dagen inte har någon. */
+export const dayRide = (dag: string) => {
+  const r = RIDES.find((x) => x.day === dag);
+  return r ? rideText(r.dropoff, r.pickup) : '';
+};
+
+/** Vilka som kör den dagen — så raden följer med när man filtrerar på sig själv. */
+export const dayRideWho = (dag: string): string[] => {
+  const r = RIDES.find((x) => x.day === dag);
+  return r ? [...new Set([r.dropoff.by, r.pickup.by].filter(Boolean) as string[])] : [];
+};
+
+/**
+ * Skjutsen i klartext, med eller utan tider: "Karin lämnar 17:45 och hämtar
+ * 19:00", "Karin lämnar · Martin hämtar", "Lämning och hämtning" när det behövs
+ * men ingen är utsedd. Tom sträng när ingen skjuts behövs.
+ */
+export function rideText(d?: Lift, p?: Lift): string {
   if (!d && !p) return '';
 
   // Samma person båda vägarna blir en mening: "Martin lämnar och hämtar".
@@ -319,7 +360,7 @@ export function trainingRide(t: Training): string {
     return tider.length ? `${d.by} ${tider.join(' och ')}` : `${d.by} lämnar och hämtar`;
   }
 
-  const del = (r: { by?: string; time?: string } | undefined, med: string, utan: string) => {
+  const del = (r: Lift | undefined, med: string, utan: string) => {
     if (!r) return '';
     if (!r.by) return utan;
     return `${r.by} ${med}${r.time ? ` ${r.time}` : ''}`;
@@ -373,6 +414,7 @@ export function weekRows(now = new Date()) {
     // Bara veckodagen: bladet ska gälla tills schemat ändras, inte till söndag.
     day: d.name,
     today: !!d.today,
+    ride: dayRide(d.name),
     trainings: TRAININGS.filter((t) => t.day === d.name).map((t) => ({
       title: `${t.short ?? t.title} ${t.time}`,
       meta: t.place ? `${t.person} · ${t.place}` : t.person,

@@ -24,12 +24,18 @@ export function Hem({ days, filter, onOpenDay }: Props) {
               {items.length === 0 && <div className="dayempty">Inget inplanerat</div>}
               {items.map((it, j) => (
                 <div className="dayitem" key={j}>
-                  <div className="dayline">
-                    <span className="dayicon">{it.icon}</span>
-                    <span className="daylabel">{it.label}</span>
-                  </div>
-                  <span className="daymeta">{it.meta}</span>
-                  {it.ride && <span className="dayride">🚗 <Named text={it.ride} /></span>}
+                  {it.compact ? (
+                    <span className="dayride">{it.icon} <Named text={it.meta} /></span>
+                  ) : (
+                    <>
+                      <div className="dayline">
+                        <span className="dayicon">{it.icon}</span>
+                        <span className="daylabel">{it.label}</span>
+                      </div>
+                      <span className="daymeta">{it.meta}</span>
+                      {it.ride && <span className="dayride">🚗 <Named text={it.ride} /></span>}
+                    </>
+                  )}
                 </div>
               ))}
             </div>
