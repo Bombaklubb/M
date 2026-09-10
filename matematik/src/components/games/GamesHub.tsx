@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useApp } from '../../contexts/AppContext';
 import { loadGameProgress, GameId } from '../../utils/gameStorage';
+import { loadGamification, BOSS_UNLOCK_THRESHOLD } from '../../utils/chestStorage';
 import AppHeader from '../AppHeader';
 import { WORLDS } from '../../data/worlds';
 
@@ -107,6 +108,16 @@ const GAMES: {
     gradient: 'from-yellow-500 via-amber-500 to-orange-500',
     border: 'border-yellow-400',
   },
+  {
+    id: 'boss-battle',
+    view: 'game-boss-battle',
+    emoji: '⚔️',
+    title: 'Boss Challenge',
+    subtitle: 'Besegra bossen innan den besegrar dig!',
+    description: 'Varje boss har egen mekanik – kombo, regenerering och sköld.',
+    gradient: 'from-red-600 via-rose-600 to-red-700',
+    border: 'border-red-500',
+  },
 ];
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -114,6 +125,10 @@ const GAMES: {
 export default function GamesHub() {
   const { currentStudent, setView, gameWorldId } = useApp();
   const progress = currentStudent ? loadGameProgress(currentStudent.id) : null;
+  // Bossen låses upp först när eleven klarat tillräckligt många övningar.
+  const gam = currentStudent ? loadGamification(currentStudent.id) : null;
+  const bossUnlocked = gam?.bossUnlocked ?? false;
+  const bossLeft = Math.max(0, BOSS_UNLOCK_THRESHOLD - (gam?.exercisesCompleted ?? 0));
 
   const worldCfg = gameWorldId ? WORLD_CONFIG[gameWorldId] : FALLBACK_WORLD_CONFIG;
   const world = gameWorldId ? WORLDS.find(w => w.id === gameWorldId) : null;
@@ -167,6 +182,7 @@ export default function GamesHub() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {GAMES.map((game, idx) => {
             const gp = progress?.games[game.id];
+            const locked = game.id === 'boss-battle' && !bossUnlocked;
             return (
               <motion.button
                 key={game.id}
@@ -175,8 +191,9 @@ export default function GamesHub() {
                 transition={{ delay: idx * 0.08 + 0.1 }}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                onClick={() => setView(game.view as any)}
-                className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${game.gradient} p-[2px] text-left cursor-pointer`}
+                onClick={() => !locked && setView(game.view as any)}
+                disabled={locked}
+                className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${game.gradient} p-[2px] text-left ${locked ? 'opacity-60 cursor-not-allowed grayscale' : 'cursor-pointer'}`}
               >
                 <div className="relative bg-[#080818]/92 rounded-2xl p-5 h-full backdrop-blur-sm">
                   {/* Subtle glow */}
@@ -185,7 +202,7 @@ export default function GamesHub() {
                   <div className="relative z-10">
                     {/* Emoji + Title row */}
                     <div className="flex items-start gap-3 mb-3">
-                      <span className="text-4xl">{game.emoji}</span>
+                      <span className="text-4xl">{locked ? '🔒' : game.emoji}</span>
                       <div>
                         <h3 className="text-lg font-black text-white leading-tight">{game.title}</h3>
                         <p className="text-xs font-semibold text-white/60">{game.subtitle}</p>
@@ -196,7 +213,11 @@ export default function GamesHub() {
 
                     {/* Stats row */}
                     <div className="flex items-center gap-3 flex-wrap text-xs">
-                      {gp && gp.totalPlays > 0 ? (
+                      {locked ? (
+                        <span className="bg-white/10 px-2.5 py-1 rounded-full text-white/70 font-bold">
+                          🔒 Klara {bossLeft} övning{bossLeft !== 1 ? 'ar' : ''} till för att låsa upp
+                        </span>
+                      ) : gp && gp.totalPlays > 0 ? (
                         <>
                           <span className="bg-white/10 px-2.5 py-1 rounded-full text-white/80 font-bold">
                             📈 Level {gp.level}

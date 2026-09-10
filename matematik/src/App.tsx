@@ -24,6 +24,7 @@ import TimeAttackGame from './components/games/TimeAttackGame';
 import CollectCoinsGame from './components/games/CollectCoinsGame';
 import MemoryGame from './components/games/MemoryGame';
 import HangmanGame from './components/games/HangmanGame';
+import BossBattleGame from './components/games/BossBattleGame';
 import JaktlankarMenu from './components/JaktlankarMenu';
 import { useScrollTop } from './utils/scroll';
 
@@ -141,6 +142,7 @@ function AppInner() {
           case 'game-collect-coins': return <CollectCoinsGame />;
           case 'game-memory':       return <MemoryGame />;
           case 'game-hangman':      return <HangmanGame />;
+          case 'game-boss-battle':  return <BossBattleGame />;
           default:                  return <Login />;
         }
       })()}

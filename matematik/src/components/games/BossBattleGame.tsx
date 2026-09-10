@@ -4,7 +4,14 @@ import { useApp } from '../../contexts/AppContext';
 import AppHeader from '../AppHeader';
 import { getGameExercisePool, generateWrongOptions, analyzeWeakTopics, GameExercise } from '../../utils/gameExercises';
 import { recordGameSession, calculateGameXP, getGameDifficulty, loadGameProgress } from '../../utils/gameStorage';
+import { loadGamification, saveGamification } from '../../utils/chestStorage';
+import { addPoints } from '../../utils/storage';
+import { rollPointsBonus } from '../../utils/pointsBonus';
+import { useScrollTop } from '../../utils/scroll';
 import { WORLDS } from '../../data/worlds';
+
+/** Poäng för att besegra bossen (utöver spelets XP). */
+const BOSS_VICTORY_POINTS = 120;
 
 // ── Boss config ──────────────────────────────────────────────────────────────
 
@@ -119,6 +126,9 @@ export default function BossBattleGame() {
   const boss = BOSSES[Math.min(Math.floor((gameLevel - 1) / 5), BOSSES.length - 1)];
 
   const [phase, setPhase] = useState<Phase>('intro');
+  useScrollTop([phase]);
+  const [victoryPoints, setVictoryPoints] = useState(0);
+  const [victoryBonus, setVictoryBonus] = useState(1);
   const [exercises, setExercises] = useState<GameExercise[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [options, setOptions] = useState<AnswerOption[]>([]);
@@ -270,6 +280,19 @@ export default function BossBattleGame() {
         isVictory: phase === 'victory',
         weakTopics: analyzeWeakTopics(exercises, results),
       });
+
+      // Segern räknas även i kist-systemet, som visar antalet vinster på
+      // Boss Challenge-kortet under Mina kistor.
+      if (phase === 'victory') {
+        const gam = loadGamification(currentStudent.id);
+        saveGamification(currentStudent.id, { ...gam, bossWins: (gam.bossWins ?? 0) + 1 });
+        // Seger ger riktiga poäng (inte bara spel-XP), med chans till slumpbonus.
+        const bonus = rollPointsBonus();
+        const earned = BOSS_VICTORY_POINTS * bonus;
+        addPoints(currentStudent.id, earned);
+        setVictoryPoints(earned);
+        setVictoryBonus(bonus);
+      }
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
@@ -350,10 +373,26 @@ export default function BossBattleGame() {
                 </div>
               ))}
             </div>
-            <div className="bg-amber-500/20 border border-amber-400/40 rounded-xl p-4 mb-5">
+            <div className="bg-amber-500/20 border border-amber-400/40 rounded-xl p-4 mb-3">
               <div className="text-amber-300 font-black text-2xl">+{xp} XP</div>
               <div className="text-amber-200/70 text-xs">intjänat denna omgång</div>
             </div>
+
+            {/* Seger ger även riktiga poäng till plånboken */}
+            {isVictory && victoryPoints > 0 && (
+              <div className="rounded-xl p-4 mb-3"
+                style={{ background: 'rgba(16,185,129,0.20)', border: '1px solid rgba(16,185,129,0.45)' }}>
+                <div className="text-emerald-300 font-black text-2xl">+{victoryPoints} ⭐</div>
+                <div className="text-emerald-200/70 text-xs">segerbelöning</div>
+                {victoryBonus > 1 && (
+                  <p className="mt-2 inline-block text-white font-black text-sm rounded-full px-3 py-1"
+                    style={{ background: 'linear-gradient(135deg,#7c3aed,#ec4899)' }}>
+                    🎲 TUR! ×{victoryBonus} poäng!
+                  </p>
+                )}
+              </div>
+            )}
+            <div className="mb-2" />
             {weakTopics.length > 0 && (
               <div className="bg-rose-900/30 border border-rose-400/30 rounded-xl p-4 mb-5 text-left">
                 <p className="text-rose-300 font-bold text-sm mb-1">📚 Träna mer på:</p>
