@@ -36,7 +36,6 @@ export interface ModuleMeta {
   icon: string;
   gradient: string;
   xpReward: number;
-  difficulty: 'Lätt' | 'Medel' | 'Svår';
   badge: string;
   badgeName: string;
 }

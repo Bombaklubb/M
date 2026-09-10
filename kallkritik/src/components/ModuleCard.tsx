@@ -14,12 +14,6 @@ interface ModuleCardProps {
   index: number;
 }
 
-const difficultyConfig: Record<string, { label: string; className: string }> = {
-  'Lätt':  { label: 'Lätt',  className: 'bg-emerald-100 text-emerald-700 border-emerald-300' },
-  'Medel': { label: 'Medel', className: 'bg-amber-100 text-amber-700 border-amber-300' },
-  'Svår':  { label: 'Svår',  className: 'bg-rose-100 text-rose-700 border-rose-300' },
-};
-
 const cardColorClass: Record<number, string> = {
   7: 'module-card-sky',
   10: 'module-card-lime',
@@ -70,7 +64,6 @@ const accentTextClass: Record<number, string> = {
 
 export function ModuleCard({ module, isCompleted, highScore, isLocked = false, isStartHere = false, onClick, index }: ModuleCardProps) {
   const [guideOpen, setGuideOpen] = useState(false);
-  const diff = difficultyConfig[module.difficulty] ?? difficultyConfig['Medel'];
   const colorClass = cardColorClass[module.id] ?? 'module-card-indigo';
   const iconBg = iconBgClass[module.id] ?? 'bg-indigo-100 border-indigo-200';
   const accentText = accentTextClass[module.id] ?? 'text-indigo-600';
@@ -129,9 +122,6 @@ export function ModuleCard({ module, isCompleted, highScore, isLocked = false, i
                   <Lock className="w-4 h-4" />
                 </div>
               )}
-              <span className={`text-xs font-bold px-2.5 py-1 rounded-full border-2 ${diff.className}`}>
-                {diff.label}
-              </span>
             </div>
           </div>
 
