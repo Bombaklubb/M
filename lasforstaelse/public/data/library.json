@@ -42655,5 +42655,805 @@
     "meta": {
       "wordCount": 21
     }
+  },
+  {
+    "id": "ak1-lattlast-16",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Nallen Lo",
+    "imageUrl": "https://images.unsplash.com/photo-1562040506-a9b32cb51b94?w=600&h=400&fit=crop",
+    "text": "Elsa har en nalle.\n\nNallen heter Lo.\n\nLo är gul.\n\nElsa sover med Lo.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad har Elsa?",
+        "options": [
+          "En nalle",
+          "En docka",
+          "En boll",
+          "En bok"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter nallen?",
+        "options": [
+          "Bo",
+          "Lo",
+          "Max",
+          "Tuss"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg är Lo?",
+        "options": [
+          "Blå",
+          "Röd",
+          "Gul",
+          "Grön"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "När är Elsa med Lo?",
+        "options": [
+          "När hon äter",
+          "När hon badar",
+          "När hon läser",
+          "När hon sover"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad är en nalle?",
+        "options": [
+          "En liten bil",
+          "En mjuk leksak",
+          "En varm tröja",
+          "En stor bok"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En hund i en park",
+          "En flickas nalle",
+          "En bil på en väg",
+          "En kaka på ett fat"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 14
+    }
+  },
+  {
+    "id": "ak1-lattlast-17",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Glassen smälter",
+    "imageUrl": "https://images.unsplash.com/photo-1705103654884-cbd03d95761a?w=600&h=400&fit=crop",
+    "text": "Vi köper glass.\n\nMin glass är rosa.\n\nSolen är varm.\n\nGlassen smälter.\n\nJag äter fort.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken färg är glassen?",
+        "options": [
+          "Vit",
+          "Brun",
+          "Rosa",
+          "Gul"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur är solen?",
+        "options": [
+          "Varm",
+          "Kall",
+          "Borta",
+          "Svag"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder smälter?",
+        "options": [
+          "Blir hårt",
+          "Blir flytande",
+          "Blir kallt",
+          "Blir borta"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur äter jag glassen?",
+        "options": [
+          "Sakta",
+          "Tyst",
+          "Fort",
+          "Lugnt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför äter jag fort?",
+        "options": [
+          "För att jag är hungrig",
+          "För att glassen är liten",
+          "För att jag ska hem",
+          "För att glassen smälter"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En glass en varm dag",
+          "En kaka i en affär",
+          "En sol bakom moln",
+          "En pojke som fryser"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 15
+    }
+  },
+  {
+    "id": "ak1-lattlast-18",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Fröet i jorden",
+    "imageUrl": "https://images.unsplash.com/photo-1557234195-bd9f290f0e4d?w=600&h=400&fit=crop",
+    "text": "Jag sår ett frö.\n\nFröet ligger i jord.\n\nJag vattnar varje dag.\n\nNu växer en blomma.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad sår jag?",
+        "options": [
+          "En sten",
+          "En pinne",
+          "Ett löv",
+          "Ett frö"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var ligger fröet?",
+        "options": [
+          "I snö",
+          "I jord",
+          "I vatten",
+          "I sand"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur ofta vattnar jag?",
+        "options": [
+          "En gång i veckan",
+          "Aldrig alls",
+          "Varje dag",
+          "Bara på våren"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder sår?",
+        "options": [
+          "Lägger ner ett frö",
+          "Gräver upp",
+          "Plockar bort",
+          "Klipper av"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad växer till slut?",
+        "options": [
+          "En buske",
+          "En blomma",
+          "Ett träd",
+          "Ett gräs"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En trädgård i en park",
+          "En hink full med jord",
+          "En regnig dag ute",
+          "Ett frö som blir en blomma"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 16
+    }
+  },
+  {
+    "id": "ak1-lattlast-19",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Tanden lossnar",
+    "imageUrl": "https://images.unsplash.com/photo-1531763655487-430202fce550?w=600&h=400&fit=crop",
+    "text": "Min tand vickar.\n\nJag äter ett äpple.\n\nDå lossnar tanden.\n\nJag ler stort.\n\nNu finns ett hål.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad gör tanden först?",
+        "options": [
+          "Den vickar",
+          "Den värker",
+          "Den växer",
+          "Den blir vit"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad äter jag?",
+        "options": [
+          "En kaka",
+          "Ett äpple",
+          "En bulle",
+          "En morot"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder lossnar?",
+        "options": [
+          "Sitter hårt",
+          "Blir större",
+          "Släpper taget",
+          "Gör mycket ont"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör jag när tanden lossnar?",
+        "options": [
+          "Jag gråter",
+          "Jag ropar",
+          "Jag springer",
+          "Jag ler"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför finns det ett hål?",
+        "options": [
+          "För att tanden är borta",
+          "För att äpplet var hårt",
+          "För att jag borstar fel",
+          "För att munnen är liten"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "Ett äpple i en skål",
+          "En tand som ramlar ut",
+          "En tandborste i ett glas",
+          "En flicka som har ont"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 17
+    }
+  },
+  {
+    "id": "ak1-lattlast-20",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Kaninen Pluff",
+    "imageUrl": "https://images.unsplash.com/photo-1617398881039-4c977f633b0e?w=600&h=400&fit=crop",
+    "text": "Vi har en kanin.\n\nKaninen är vit.\n\nHan äter morötter.\n\nHan hoppar högt.\n\nVi kallar honom Pluff.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilket djur har vi?",
+        "options": [
+          "En katt",
+          "En hund",
+          "En kanin",
+          "En fågel"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg är kaninen?",
+        "options": [
+          "Vit",
+          "Grå",
+          "Brun",
+          "Svart"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad äter kaninen?",
+        "options": [
+          "Blommor",
+          "Morötter",
+          "Frukter",
+          "Gurkor"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad heter kaninen?",
+        "options": [
+          "Bo",
+          "Lo",
+          "Pluff",
+          "Tuss"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder kallar honom?",
+        "options": [
+          "Leker med honom",
+          "Ropar på honom",
+          "Bär på honom",
+          "Ger honom ett namn"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En hund som hoppar",
+          "En kanin som vi har",
+          "En katt som sover",
+          "En morot i en trädgård"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 17
+    }
+  },
+  {
+    "id": "ak1-lattlast-21",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Var är bilen?",
+    "imageUrl": "https://images.unsplash.com/photo-1696824711591-018c23ff9248?w=600&h=400&fit=crop",
+    "text": "Jag letar min bil.\n\nBilen är röd.\n\nDen är inte i lådan.\n\nDen ligger under soffan.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad letar jag efter?",
+        "options": [
+          "Min bok",
+          "Min bil",
+          "Min boll",
+          "Min mössa"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg är bilen?",
+        "options": [
+          "Blå",
+          "Gul",
+          "Grön",
+          "Röd"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder letar?",
+        "options": [
+          "Söker efter",
+          "Kastar bort",
+          "Bygger ihop",
+          "Målar om"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var ligger bilen?",
+        "options": [
+          "I lådan",
+          "Under soffan",
+          "På bordet",
+          "I hallen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför hittar jag inte bilen först?",
+        "options": [
+          "För att den är liten",
+          "För att lampan är släckt",
+          "För att den ligger dolt",
+          "För att någon tog den"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En soffa som flyttas",
+          "En låda full med saker",
+          "En bil som körs fort",
+          "En bil som är borta"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 16
+    }
+  },
+  {
+    "id": "ak1-lattlast-22",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Ballongen flyger",
+    "imageUrl": "https://images.unsplash.com/photo-1645095542177-125b3e224eef?w=600&h=400&fit=crop",
+    "text": "Nils får en ballong.\n\nBallongen är blå.\n\nSnöret glider ur handen.\n\nBallongen flyger upp.\n\nNils blir ledsen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad får Nils?",
+        "options": [
+          "En ballong",
+          "En glass",
+          "En boll",
+          "En leksak"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg är ballongen?",
+        "options": [
+          "Röd",
+          "Blå",
+          "Gul",
+          "Vit"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad är ett snöre?",
+        "options": [
+          "En smal tråd",
+          "En liten pinne",
+          "En tunn påse",
+          "En låg gren"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vart flyger ballongen?",
+        "options": [
+          "Ner i vattnet",
+          "In i huset",
+          "Upp i luften",
+          "Bort på gatan"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir Nils ledsen?",
+        "options": [
+          "För att snöret är kort",
+          "För att det blåser hårt",
+          "För att ballongen är blå",
+          "För att ballongen är borta"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En pojke som tappar en ballong",
+          "En pojke som får en present",
+          "En flicka som blåser upp en ballong",
+          "En fågel som flyger högt"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 17
+    }
+  },
+  {
+    "id": "ak1-lattlast-23",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Fiskarna i skålen",
+    "imageUrl": "https://images.unsplash.com/photo-1765546939532-aa59165da7dd?w=600&h=400&fit=crop",
+    "text": "Vi har fiskar hemma.\n\nDe simmar i en skål.\n\nFiskarna är orange.\n\nJag ger dem mat.\n\nDe äter snabbt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var simmar fiskarna?",
+        "options": [
+          "I en sjö",
+          "I en skål",
+          "I en å",
+          "I ett hav"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg är fiskarna?",
+        "options": [
+          "Gula",
+          "Vita",
+          "Orange",
+          "Svarta"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad ger jag fiskarna?",
+        "options": [
+          "Vatten",
+          "Sand",
+          "Bröd",
+          "Mat"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder snabbt?",
+        "options": [
+          "Fort",
+          "Sakta",
+          "Tyst",
+          "Sent"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför äter fiskarna snabbt?",
+        "options": [
+          "För att maten är hård",
+          "För att skålen är liten",
+          "För att de är hungriga",
+          "För att vattnet är kallt"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En sjö full med fiskar",
+          "En skål som går sönder",
+          "En pojke som fiskar",
+          "Fiskar som får mat"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 19
+    }
+  },
+  {
+    "id": "ak1-lattlast-24",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Bilden till mormor",
+    "imageUrl": "https://images.unsplash.com/photo-1544773088-d142e38f5793?w=600&h=400&fit=crop",
+    "text": "Jag ritar en bild.\n\nBilden visar ett hus.\n\nSolen är gul.\n\nJag ger bilden till mormor.\n\nMormor blir glad.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad gör jag först?",
+        "options": [
+          "Ritar en bild",
+          "Läser en bok",
+          "Bygger ett hus",
+          "Målar en vägg"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad visar bilden?",
+        "options": [
+          "En båt",
+          "Ett hus",
+          "En bil",
+          "Ett träd"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem får bilden?",
+        "options": [
+          "Min lärare",
+          "Min kompis",
+          "Mormor",
+          "Pappa"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder visar?",
+        "options": [
+          "Tar helt bort",
+          "Gömmer bort",
+          "Ger tillbaka",
+          "Låter någon se"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir mormor glad?",
+        "options": [
+          "För att huset är stort",
+          "För att hon får en present",
+          "För att jag kommer hem",
+          "För att solen skiner ute"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En sol som går ner",
+          "Ett hus som byggs",
+          "En bild som ges bort",
+          "En mormor som ritar"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 19
+    }
+  },
+  {
+    "id": "ak1-lattlast-25",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Ankorna vid sjön",
+    "imageUrl": "https://images.unsplash.com/photo-1601338724126-56e36f72c54b?w=600&h=400&fit=crop",
+    "text": "Vi går till sjön.\n\nDär simmar ankor.\n\nJag kastar bröd.\n\nAnkorna kommer fram.\n\nDe äter allt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vart går vi?",
+        "options": [
+          "Till skogen",
+          "Till skolan",
+          "Till sjön",
+          "Till parken"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilka simmar där?",
+        "options": [
+          "Fiskar",
+          "Ankor",
+          "Svanar",
+          "Måsar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad kastar jag?",
+        "options": [
+          "Bröd",
+          "Stenar",
+          "Pinnar",
+          "Frön"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder kommer fram?",
+        "options": [
+          "Går sin väg",
+          "Simmar närmare",
+          "Dyker under",
+          "Flyger bort"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför kommer ankorna fram?",
+        "options": [
+          "För att de vill ha bröd",
+          "För att de är rädda",
+          "För att sjön är kall",
+          "För att vi ropar högt"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En sjö som fryser",
+          "En båt på vattnet",
+          "Ankor som får bröd",
+          "En pojke som simmar"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 16
+    }
   }
 ]

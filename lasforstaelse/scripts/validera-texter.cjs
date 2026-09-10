@@ -44,8 +44,12 @@ const GRANSKADE_ENORDSMENINGAR = new Set(['gy-etik-05 Plagiat.']);
 // omgjord till korta texter med några få meningar. Nivå 2 spänner därför över
 // ett bredare intervall än de andra, eftersom den rymmer både de flyttade
 // texterna och de som redan låg där.
+//
+// Nivå 1 sänktes sedan en gång till, från 20–35 till 12–25 ord. Även tjugo ord
+// med meningar på fem ord visade sig vara mer än det första steget behöver
+// vara. Den kortaste texten på nivån är nu fjorton ord i fyra meningar.
 const ORDINTERVALL = {
-  1: [20, 35], 2: [40, 90], 3: [150, 165], 4: [200, 220], 5: [300, 320],
+  1: [12, 25], 2: [40, 90], 3: [150, 165], 4: [200, 220], 5: [300, 320],
   6: [400, 415], 7: [500, 530], 8: [530, 570], 9: [570, 590], 10: [590, 625],
 };
 
