@@ -513,8 +513,36 @@ function App() {
 
       {/* Kontaktinfo - visas endast på Setup-sidan */}
       {appState === AppState.SETUP && (
-        <div className="fixed bottom-4 left-4 text-sm z-40 px-3 py-1.5 rounded-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm shadow border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-medium">
-          Contact: <a href="mailto:martin.akdogan@enkoping.se" className="font-semibold hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">martin.akdogan@enkoping.se</a>
+        <div className="group fixed bottom-4 left-4 z-40">
+          {/* Tooltip som fälls upp vid hover eller tangentbordsfokus */}
+          <div
+            role="tooltip"
+            className="pointer-events-none absolute bottom-full left-0 mb-2 w-max max-w-[260px]
+                       origin-bottom-left translate-y-1 scale-95 opacity-0
+                       transition-all duration-200 ease-out
+                       group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100
+                       group-focus-within:translate-y-0 group-focus-within:scale-100 group-focus-within:opacity-100"
+          >
+            <div className="rounded-xl border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800 px-3.5 py-2.5 shadow-lg">
+              <p className="text-[13px] font-semibold text-slate-800 dark:text-slate-100">
+                Hör av dig om du har
+              </p>
+              <div className="mt-1.5 flex gap-1.5">
+                <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-semibold text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">
+                  ❓ Frågor
+                </span>
+                <span className="rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700 dark:bg-amber-500/20 dark:text-amber-300">
+                  💡 Tips
+                </span>
+              </div>
+            </div>
+            {/* Liten pil ned mot kontaktrutan */}
+            <div className="absolute -bottom-[6px] left-5 h-3 w-3 rotate-45 border-b border-r border-slate-200 bg-white dark:border-slate-600 dark:bg-slate-800" />
+          </div>
+
+          <div className="text-sm px-3 py-1.5 rounded-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm shadow border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-medium">
+            Contact: <a href="mailto:martin.akdogan@enkoping.se" className="font-semibold hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">martin.akdogan@enkoping.se</a>
+          </div>
         </div>
       )}
 
