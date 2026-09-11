@@ -448,7 +448,16 @@ export default function KistorView() {
 
         {/* ── Boss challenge ────────────────────────────────── */}
         <div
-          className="rounded-3xl p-5"
+          onClick={() => gam.bossUnlocked && setView('game-boss-battle')}
+          role={gam.bossUnlocked ? 'button' : undefined}
+          tabIndex={gam.bossUnlocked ? 0 : undefined}
+          onKeyDown={e => {
+            if (gam.bossUnlocked && (e.key === 'Enter' || e.key === ' ')) {
+              e.preventDefault();
+              setView('game-boss-battle');
+            }
+          }}
+          className={`rounded-3xl p-5 transition-all ${gam.bossUnlocked ? 'cursor-pointer hover:scale-[1.02] active:scale-[0.99]' : ''}`}
           style={{
             background: gam.bossUnlocked
               ? 'linear-gradient(135deg, #7f1d1d, #991b1b, #dc2626)'
@@ -469,6 +478,12 @@ export default function KistorView() {
                 </p>
               </div>
             </div>
+            {gam.bossUnlocked && (
+              <span className="px-4 py-2 rounded-xl font-black text-white text-sm flex-shrink-0"
+                style={{ background: 'rgba(255,255,255,0.20)', border: '1px solid rgba(255,255,255,0.40)' }}>
+                Starta striden →
+              </span>
+            )}
             {!gam.bossUnlocked && (
               <div className="text-white/40 text-sm font-medium">
                 {gam.exercisesCompleted}/{BOSS_UNLOCK_THRESHOLD}
