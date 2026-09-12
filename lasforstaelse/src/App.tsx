@@ -12,7 +12,6 @@ import { KistorView } from './components/KistorView';
 import ShopView from './components/ShopView';
 import { BookLogo } from './components/BookLogo';
 import { JaktLinks } from './components/JaktLinks';
-import { KontaktRuta } from './components/KontaktRuta';
 import {
   loginUser,
   loadUser,
@@ -586,8 +585,12 @@ function App() {
         )}
       </main>
 
-      {/* Kontaktruta - visas endast på Setup-sidan */}
-      {appState === AppState.SETUP && <KontaktRuta />}
+      {/* Kontaktinfo - visas endast på Setup-sidan */}
+      {appState === AppState.SETUP && (
+        <div className="fixed bottom-4 left-4 text-sm text-slate-600 dark:text-slate-400 z-40">
+          Kontakt: <a href="mailto:martin.akdogan@enkoping.se" className="font-semibold hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">martin.akdogan@enkoping.se</a>
+        </div>
+      )}
 
       {/* Lärarvy (öppnas med F8, Ctrl+Shift+P eller ?teacher=1) */}
       {teacherOverlay}
