@@ -253,6 +253,7 @@ export const PEOPLE: Person[] = [
       { label: 'Plocka ur diskmaskinen', day: 'dagl', short: 'diskmaskin' },
       { label: 'Tömma kompost och skräp', day: 'dagl', short: 'kompost' },
       { label: 'Plocka undan leksaker i kök och vardagsrum', day: 'dagl', short: 'leksaker' },
+      { label: 'Dammsuga hallen och tvättstugan', day: 'lör', short: 'dammsuga hallen och tvättstugan' },
       { label: 'Tvätta barnkläder', day: 'helg', short: 'barnkläder' },
       { label: 'Extra ansvar Signes rum', day: 'behov', short: 'Signes rum' },
     ],
@@ -261,7 +262,6 @@ export const PEOPLE: Person[] = [
     name: 'Martin', avatar: '/avatars/martin.svg', tasks: [
       { label: 'Hjälper Astrid och Signe med rummen', day: 'dagl', time: '18:45', short: 'hjälper rummen' },
       { label: 'Städa toaletterna', day: 'lör', short: 'toaletterna' },
-      { label: 'Dammsuga tvättstugan och hallen', day: 'lör', short: 'dammsuga tvättstugan och hallen' },
       { label: 'Vita rummet', day: 'helg', short: 'vita rummet' },
       { label: 'Extra ansvar Astrids rum', day: 'behov', short: 'Astrids rum' },
     ],
