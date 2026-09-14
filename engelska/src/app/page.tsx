@@ -249,6 +249,19 @@ export default function HomePage() {
               </form>
             </div>
           </BlurFade>
+
+          {/* Om appen – nåbar redan innan man loggat in */}
+          <BlurFade delay={0.3} duration={0.5} inView>
+            <div className="text-center mt-4">
+              <Link
+                href="/om"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-white/80 hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors"
+              >
+                <span aria-hidden="true">❓</span>
+                Om Engelskajakten – så fungerar appen
+              </Link>
+            </div>
+          </BlurFade>
         </div>
       </div>
     );

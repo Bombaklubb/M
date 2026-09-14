@@ -74,6 +74,16 @@ function IconLogOut({ className = "w-4 h-4" }: { className?: string }) {
   );
 }
 
+function IconHelp({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+      <line x1="12" y1="17" x2="12.01" y2="17" />
+    </svg>
+  );
+}
+
 export default function Header({ student, onLogout }: HeaderProps) {
   const router = useRouter();
   const { dark, toggle } = useDarkMode();
@@ -124,7 +134,10 @@ export default function Header({ student, onLogout }: HeaderProps) {
           >
             <img src="/union-jack.svg" alt="Union Jack" className="w-full h-full object-cover" />
           </div>
-          <span className="font-black text-xl text-en-800 dark:text-white hidden sm:block tracking-tight">
+          {/* Namnet visas först när det finns plats. Mellan 640 och 880 px blev
+              headern annars bredare än sidan och knapparna längst till höger
+              (Logga ut) hamnade utanför skärmen. */}
+          <span className="font-black text-xl text-en-800 dark:text-white hidden lg:block tracking-tight">
             Engelskajakten
           </span>
         </Link>
@@ -152,7 +165,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             <Link
               href="/butik"
               title="Affären – poäng att spendera"
-              className="hidden xs:flex items-center gap-1.5 bg-gradient-to-b from-emerald-50 to-emerald-100 dark:bg-emerald-900/30 border-2 border-emerald-300 dark:border-emerald-700 px-3 py-1.5 rounded-xl hover:border-emerald-400 hover:scale-105 transition-all cursor-pointer touch-manipulation"
+              className="hidden sm:flex items-center gap-1.5 bg-gradient-to-b from-emerald-50 to-emerald-100 dark:bg-emerald-900/30 border-2 border-emerald-300 dark:border-emerald-700 px-3 py-1.5 rounded-xl hover:border-emerald-400 hover:scale-105 transition-all cursor-pointer touch-manipulation"
               style={{ boxShadow: "0 3px 0 0 rgba(16, 185, 129, 0.25), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)" }}
             >
               <IconCart className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
@@ -161,7 +174,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
 
             {/* Points */}
             <div
-              className="hidden xs:flex items-center gap-1.5 bg-gradient-to-b from-amber-50 to-amber-100 dark:bg-amber-900/30 border-2 border-amber-300 dark:border-amber-700 px-3 py-1.5 rounded-xl cursor-default"
+              className="hidden sm:flex items-center gap-1.5 bg-gradient-to-b from-amber-50 to-amber-100 dark:bg-amber-900/30 border-2 border-amber-300 dark:border-amber-700 px-3 py-1.5 rounded-xl cursor-default"
               style={{ boxShadow: "0 3px 0 0 rgba(245, 158, 11, 0.25), inset 0 2px 4px 0 rgba(255, 255, 255, 0.8)" }}
             >
               <IconStar className="w-4 h-4 text-amber-500" />
@@ -192,10 +205,21 @@ export default function Header({ student, onLogout }: HeaderProps) {
               {dark ? <IconSun className="w-5 h-5" /> : <IconMoon className="w-5 h-5" />}
             </button>
 
+            {/* Om Engelskajakten */}
+            <Link
+              href="/om"
+              title="Om Engelskajakten – så fungerar appen"
+              aria-label="Om Engelskajakten"
+              className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 dark:hover:text-gray-200 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-en-200"
+            >
+              <IconHelp className="w-5 h-5" />
+              <span className="hidden lg:inline text-sm font-bold">Om appen</span>
+            </Link>
+
             {/* Logout */}
             <button
               onClick={handleLogout}
-              className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold text-en-600 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-500 dark:hover:text-red-400 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-red-200"
+              className="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold text-en-600 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-500 dark:hover:text-red-400 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-red-200"
             >
               <IconLogOut className="w-4 h-4" />
               <span>Logga ut</span>
@@ -204,7 +228,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             {/* Mobile logout (icon only) */}
             <button
               onClick={handleLogout}
-              className="sm:hidden p-2.5 rounded-xl text-en-600 dark:text-gray-400 hover:bg-red-50 hover:text-red-500 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-red-200"
+              className="md:hidden p-2.5 rounded-xl text-en-600 dark:text-gray-400 hover:bg-red-50 hover:text-red-500 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-red-200"
               aria-label="Logga ut"
             >
               <IconLogOut className="w-5 h-5" />
@@ -213,13 +237,24 @@ export default function Header({ student, onLogout }: HeaderProps) {
         )}
 
         {!student && (
-          <button
-            onClick={toggle}
-            className="p-2.5 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 transition-all cursor-pointer"
-            aria-label={dark ? "Ljust läge" : "Mörkt läge"}
-          >
-            {dark ? <IconSun className="w-5 h-5" /> : <IconMoon className="w-5 h-5" />}
-          </button>
+          <div className="flex items-center gap-1.5">
+            <Link
+              href="/om"
+              title="Om Engelskajakten – så fungerar appen"
+              aria-label="Om Engelskajakten"
+              className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 transition-all cursor-pointer"
+            >
+              <IconHelp className="w-5 h-5" />
+              <span className="hidden sm:inline text-sm font-bold">Om appen</span>
+            </Link>
+            <button
+              onClick={toggle}
+              className="p-2.5 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 transition-all cursor-pointer"
+              aria-label={dark ? "Ljust läge" : "Mörkt läge"}
+            >
+              {dark ? <IconSun className="w-5 h-5" /> : <IconMoon className="w-5 h-5" />}
+            </button>
+          </div>
         )}
       </div>
     </header>
