@@ -243,15 +243,19 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
         <Section emoji="💡" title="Bra att veta">
           <ul className="space-y-1.5 list-disc pl-5 marker:text-slate-400">
             <li>
-              <strong>Poängen sparas i webbläsaren</strong> på den enhet man använder. Byter man dator eller
-              surfplatta börjar man om från noll, och rensar man webbläsarens data försvinner poängen.
+              <strong>All data sparas på den enhet du använder</strong> — poäng, märken, kistor och
+              köp i affären. Ingenting ligger på en server. Byter du dator, surfplatta eller
+              webbläsare börjar du därför om från noll, och rensar du webbläsarens data försvinner
+              allt.
             </li>
             <li>
               Flera elever kan använda samma enhet — var och en skriver sitt eget namn och har egna poäng,
               kistor och köp.
             </li>
             <li>
-              Appen samlar inte in några personuppgifter. Namnet lämnar aldrig enheten.
+              Appen samlar inte in några personuppgifter. Namnet lämnar aldrig enheten. Det enda som
+              skickas vidare är anonym statistik över hur många texter som läses och hur det går på
+              frågorna, utan koppling till någon person.
             </li>
             <li>
               Samma text kommer inte tillbaka förrän alla texter på nivån är lästa.
