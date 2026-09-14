@@ -11,6 +11,7 @@ interface SetupViewProps {
   onSelectGrade: (grade: number) => void;
   completedByGrade: Record<number, number>;
   lastCompletedText?: CompletedText | null;
+  onAboutClick?: () => void;
 }
 
 const GRADE_LABELS = [
@@ -30,6 +31,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
   onSelectGrade,
   completedByGrade: _completedByGrade,
   lastCompletedText,
+  onAboutClick,
 }) => {
   const [textCounts, setTextCounts] = useState<Record<number, number>>({});
   const [loading, setLoading] = useState(true);
@@ -255,6 +257,15 @@ export const SetupView: React.FC<SetupViewProps> = ({
               >
                 Start reading!
               </Button>
+              {onAboutClick && (
+                <button
+                  type="button"
+                  onClick={onAboutClick}
+                  className="mt-3 w-full text-center text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
+                >
+                  ❓ Om appen – så fungerar Readhunt
+                </button>
+              )}
             </motion.div>
           </CardContent>
         </Card>

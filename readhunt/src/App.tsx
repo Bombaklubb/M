@@ -9,6 +9,7 @@ import { ProfileView } from './components/ProfileView';
 import { TeacherView } from './components/TeacherView';
 import { KistorView } from './components/KistorView';
 import ShopView from './components/ShopView';
+import { AboutView } from './components/AboutView';
 import { BookLogo } from './components/BookLogo';
 import { JaktLinks } from './components/JaktLinks';
 import {
@@ -56,6 +57,7 @@ function App() {
   const [showTeacher, setShowTeacher] = useState(false);
   const [showKistor, setShowKistor] = useState(false);
   const [showShop, setShowShop] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   const quizStartTime = useRef<number | null>(null);
 
   // Ladda användare vid start
@@ -128,6 +130,7 @@ function App() {
     setShowProfile(false);
     setShowKistor(false);
     setShowShop(false);
+    setShowAbout(false);
     setAppState(AppState.LOGIN);
   };
 
@@ -283,6 +286,7 @@ function App() {
     setShowProfile(false);
     setShowKistor(false);
     setShowShop(false);
+    setShowAbout(false);
     setAppState(AppState.SETUP);
     window.scrollTo(0, 0);
   };
@@ -396,9 +400,14 @@ function App() {
     );
   }
 
+  // Om appen – nåbar även innan man loggat in
+  if (showAbout) {
+    return <AboutView onClose={() => setShowAbout(false)} />;
+  }
+
   // Login view
   if (appState === AppState.LOGIN || !user) {
-    return <LoginView onLogin={handleLogin} />;
+    return <LoginView onLogin={handleLogin} onAboutClick={() => setShowAbout(true)} />;
   }
 
   // Profile view
@@ -420,6 +429,7 @@ function App() {
           onProfileClick={() => setShowProfile(false)}
           onKistorClick={() => { setShowProfile(false); setShowKistor(true); }}
           onShopClick={() => { setShowProfile(false); setShowShop(true); }}
+          onAboutClick={() => { setShowProfile(false); setShowAbout(true); }}
           unopenedChests={getUnopenedChestsCount()}
         />
         <ProfileView
@@ -473,6 +483,7 @@ function App() {
         onProfileClick={() => setShowProfile(true)}
         onKistorClick={() => setShowKistor(true)}
         onShopClick={() => setShowShop(true)}
+        onAboutClick={() => setShowAbout(true)}
         unopenedChests={getUnopenedChestsCount()}
       />
 
@@ -482,6 +493,7 @@ function App() {
             onSelectGrade={handleSelectGrade}
             completedByGrade={getCompletedByGrade()}
             lastCompletedText={user ? getLastCompletedText(user) : null}
+            onAboutClick={() => setShowAbout(true)}
           />
         )}
 

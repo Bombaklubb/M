@@ -10,9 +10,10 @@ import { Sparkles } from './ui/sparkles';
 
 interface LoginViewProps {
   onLogin: (name: string, avatar: string) => void;
+  onAboutClick?: () => void;
 }
 
-export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
+export const LoginView: React.FC<LoginViewProps> = ({ onLogin, onAboutClick }) => {
   const [name, setName] = useState('');
   const [selectedAvatar, setSelectedAvatar] = useState(AVATAR_OPTIONS[0]);
 
@@ -107,6 +108,15 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin }) => {
               <p className="text-slate-500 dark:text-slate-400 text-xs">
                 Readhunt helps you practise English reading comprehension at your level
               </p>
+              {onAboutClick && (
+                <button
+                  type="button"
+                  onClick={onAboutClick}
+                  className="mt-2 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
+                >
+                  ❓ Om appen – så fungerar Readhunt
+                </button>
+              )}
             </motion.div>
           </CardContent>
         </Card>
