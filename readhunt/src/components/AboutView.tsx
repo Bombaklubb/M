@@ -253,11 +253,6 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
               kistor och köp.
             </li>
             <li>
-              Appen samlar inte in några personuppgifter. Namnet lämnar aldrig enheten. Det enda som
-              skickas vidare är anonym statistik över hur många texter som läses och hur det går på
-              frågorna, utan koppling till någon person.
-            </li>
-            <li>
               Samma text kommer inte tillbaka förrän alla texter på nivån är lästa.
             </li>
           </ul>
