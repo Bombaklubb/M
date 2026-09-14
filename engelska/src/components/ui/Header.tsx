@@ -74,16 +74,6 @@ function IconLogOut({ className = "w-4 h-4" }: { className?: string }) {
   );
 }
 
-function IconHelp({ className = "w-5 h-5" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" />
-      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-      <line x1="12" y1="17" x2="12.01" y2="17" />
-    </svg>
-  );
-}
-
 export default function Header({ student, onLogout }: HeaderProps) {
   const router = useRouter();
   const { dark, toggle } = useDarkMode();
@@ -212,12 +202,13 @@ export default function Header({ student, onLogout }: HeaderProps) {
               href="/om"
               title="Om Engelskajakten – så fungerar appen"
               aria-label="Om Engelskajakten"
-              className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 dark:hover:text-gray-200 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-en-200"
+              className="flex items-center px-2 py-2 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 dark:hover:text-gray-200 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-en-200"
             >
-              <IconHelp className="w-5 h-5" />
-              {/* Texten är lång, så den visas först på riktigt breda skärmar.
-                  Vid 1024 px blev headern annars 12 px för bred. */}
-              <span className="hidden xl:inline text-sm font-bold">Om Engelskajakten</span>
+              {/* Hela namnet ryms bara på riktigt breda skärmar – på smalare
+                  står det bara "Om". */}
+              <span className="text-sm font-bold">
+                Om<span className="hidden lg:inline"> Engelskajakten</span>
+              </span>
             </Link>
 
             {/* Logout */}
@@ -246,10 +237,11 @@ export default function Header({ student, onLogout }: HeaderProps) {
               href="/om"
               title="Om Engelskajakten – så fungerar appen"
               aria-label="Om Engelskajakten"
-              className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 transition-all cursor-pointer"
+              className="flex items-center px-3 py-2 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 transition-all cursor-pointer"
             >
-              <IconHelp className="w-5 h-5" />
-              <span className="hidden sm:inline text-sm font-bold">Om Engelskajakten</span>
+              <span className="text-sm font-bold">
+                Om<span className="hidden sm:inline"> Engelskajakten</span>
+              </span>
             </Link>
             <button
               onClick={toggle}
