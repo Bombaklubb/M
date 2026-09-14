@@ -38,16 +38,16 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
         {/* Right side */}
         <div className="flex items-center gap-1.5 md:gap-2">
 
-          {/* Om appen */}
+          {/* Om Readhunt */}
           {onAboutClick && (
             <button
               onClick={onAboutClick}
               className="hidden sm:flex h-9 px-2.5 md:px-3 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors items-center gap-1.5 border border-slate-200/80 dark:border-slate-700/80"
-              title="Om appen – så fungerar Readhunt"
-              aria-label="Om appen"
+              title="Om Readhunt – så fungerar appen"
+              aria-label="Om Readhunt"
             >
               <span className="text-base leading-none">❓</span>
-              <span className="hidden lg:inline text-sm font-medium text-slate-600 dark:text-slate-300">Om appen</span>
+              <span className="hidden lg:inline text-sm font-medium text-slate-600 dark:text-slate-300">Om Readhunt</span>
             </button>
           )}
 

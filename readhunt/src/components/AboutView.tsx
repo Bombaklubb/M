@@ -80,8 +80,8 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
           <div className="flex items-center gap-3">
             <span className="text-4xl">📖</span>
             <div>
-              <h1 className="text-2xl font-black">Om appen</h1>
-              <p className="text-white/80 text-sm">Så fungerar Readhunt</p>
+              <h1 className="text-2xl font-black">Om Readhunt</h1>
+              <p className="text-white/80 text-sm">Så fungerar appen</p>
             </div>
           </div>
         </div>

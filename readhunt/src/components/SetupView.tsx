@@ -263,7 +263,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                   onClick={onAboutClick}
                   className="mt-3 w-full text-center text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
                 >
-                  ❓ Om appen – så fungerar Readhunt
+                  ❓ Om Readhunt – så fungerar appen
                 </button>
               )}
             </motion.div>

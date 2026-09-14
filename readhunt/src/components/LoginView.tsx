@@ -114,7 +114,7 @@ export const LoginView: React.FC<LoginViewProps> = ({ onLogin, onAboutClick }) =
                   onClick={onAboutClick}
                   className="mt-2 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
                 >
-                  ❓ Om appen – så fungerar Readhunt
+                  ❓ Om Readhunt – så fungerar appen
                 </button>
               )}
             </motion.div>

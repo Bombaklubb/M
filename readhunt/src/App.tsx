@@ -400,7 +400,7 @@ function App() {
     );
   }
 
-  // Om appen – nåbar även innan man loggat in
+  // Om Readhunt – nåbar även innan man loggat in
   if (showAbout) {
     return <AboutView onClose={() => setShowAbout(false)} />;
   }
