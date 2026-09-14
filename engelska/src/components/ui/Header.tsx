@@ -118,7 +118,9 @@ export default function Header({ student, onLogout }: HeaderProps) {
         boxShadow: "0 4px 0 0 rgba(37, 99, 235, 0.06), 0 6px 16px -4px rgba(37, 99, 235, 0.1)"
       }}
     >
-      <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      {/* Headern får vara bredare än innehållskolumnen (max-w-5xl). Annars ryms
+          inte både apptiteln och texten "Om Engelskajakten" på breda skärmar. */}
+      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-2 lg:gap-4">
 
         {/* Logo */}
         <Link
@@ -213,7 +215,9 @@ export default function Header({ student, onLogout }: HeaderProps) {
               className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 dark:hover:text-gray-200 transition-all touch-manipulation cursor-pointer border-2 border-transparent hover:border-en-200"
             >
               <IconHelp className="w-5 h-5" />
-              <span className="hidden lg:inline text-sm font-bold">Om appen</span>
+              {/* Texten är lång, så den visas först på riktigt breda skärmar.
+                  Vid 1024 px blev headern annars 12 px för bred. */}
+              <span className="hidden xl:inline text-sm font-bold">Om Engelskajakten</span>
             </Link>
 
             {/* Logout */}
@@ -245,7 +249,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
               className="flex items-center gap-1.5 px-2.5 py-2 rounded-xl text-en-600 dark:text-gray-400 hover:bg-en-50 dark:hover:bg-gray-800 hover:text-en-600 transition-all cursor-pointer"
             >
               <IconHelp className="w-5 h-5" />
-              <span className="hidden sm:inline text-sm font-bold">Om appen</span>
+              <span className="hidden sm:inline text-sm font-bold">Om Engelskajakten</span>
             </Link>
             <button
               onClick={toggle}

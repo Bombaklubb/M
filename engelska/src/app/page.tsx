@@ -250,7 +250,7 @@ export default function HomePage() {
             </div>
           </BlurFade>
 
-          {/* Om appen – nåbar redan innan man loggat in */}
+          {/* Om Engelskajakten – nåbar redan innan man loggat in */}
           <BlurFade delay={0.3} duration={0.5} inView>
             <div className="text-center mt-4">
               <Link
