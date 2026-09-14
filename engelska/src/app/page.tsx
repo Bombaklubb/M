@@ -130,8 +130,10 @@ export default function HomePage() {
 
   // ─── Login screen ─────────────────────────────────────────────────────────────
   if (!student) {
+    // pb-12: den fasta kontaktlisten längst ned ligger ovanpå sidan, så kortet
+    // behöver marginal för att inte hamna under den på låga skärmar.
     return (
-      <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4 pb-12">
         <div className="w-full max-w-md">
 
           {/* Title */}
@@ -147,7 +149,9 @@ export default function HomePage() {
               >
                 <img src="/union-jack.svg" alt="Union Jack" className="w-full h-full object-cover" />
               </div>
-              <h1 className="text-5xl font-black tracking-tight text-white drop-shadow-lg">
+              {/* text-4xl på smala telefoner: text-5xl gjorde titeln bredare än
+                  skärmen, så hela startsidan gick att dra i sidled. */}
+              <h1 className="text-4xl xs:text-5xl font-black tracking-tight text-white drop-shadow-lg">
                 Engelskajakten
               </h1>
               <p className="mt-2 text-lg font-bold">
@@ -247,19 +251,20 @@ export default function HomePage() {
                   {returningName ? "Fortsätt jakten! →" : "Starta jakten! 🚀"}
                 </ShimmerButton>
               </form>
-            </div>
-          </BlurFade>
 
-          {/* Om Engelskajakten – nåbar redan innan man loggat in */}
-          <BlurFade delay={0.3} duration={0.5} inView>
-            <div className="text-center mt-4">
-              <Link
-                href="/om"
-                className="inline-flex items-center gap-1.5 text-sm font-bold text-white/80 hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors"
-              >
-                <span aria-hidden="true">❓</span>
-                Om Engelskajakten – så fungerar appen
-              </Link>
+              {/* Om Engelskajakten – nåbar redan innan man loggat in.
+                  Ligger inne i det vita kortet: utanför hamnade den bakom den
+                  fasta kontaktlisten på iPad och helt utanför fönstret på en
+                  skärm som är 768 px hög. */}
+              <div className="text-center mt-4 pt-4 border-t border-en-100">
+                <Link
+                  href="/om"
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-en-600 hover:text-en-700 hover:underline underline-offset-4 transition-colors"
+                >
+                  <span aria-hidden="true">❓</span>
+                  Om Engelskajakten – så fungerar appen
+                </Link>
+              </div>
             </div>
           </BlurFade>
         </div>
