@@ -52,7 +52,6 @@ export type PersonColor = { base: string; ring: string; tint: string; fg: string
 
 export const PERSON_COLOR: Record<string, PersonColor> = {
   Martin: { ring: '#86efac', base: '#16a34a', tint: '#dcfce7', fg: '#15803d' },
-  Karin: { ring: '#93c5fd', base: '#2563eb', tint: '#dbeafe', fg: '#1d4ed8' },
   Astrid: { ring: '#d8b4fe', base: '#9333ea', tint: '#f3e8ff', fg: '#7e22ce' },
   Signe: { ring: '#f9a8d4', base: '#ec4899', tint: '#fce7f3', fg: '#be185d' },
   Bodil: { ring: '#fdba74', base: '#f97316', tint: '#ffedd5', fg: '#c2410c' },
@@ -64,13 +63,12 @@ const NEUTRAL: PersonColor = { ring: '#e5e7eb', base: '#6b7280', tint: '#f9fafb'
 export const colorOf = (name: string): PersonColor => PERSON_COLOR[name] ?? NEUTRAL;
 
 /**
- * Familjens fem färger blandade till en mjuk bakgrund: en färgfläck per person
+ * Familjens färger blandade till en mjuk bakgrund: en färgfläck per person
  * som flyter in i de andra, över en djup bas så vit text håller sig läsbar.
  * Ordningen följer avatarraden, så varje person har "sitt" hörn av rubriken.
  */
 const BLOBS: [string, string][] = [
   ['Martin', '90% 130% at 4% 18%'],
-  ['Karin', '85% 140% at 30% 96%'],
   ['Astrid', '80% 130% at 52% -6%'],
   ['Signe', '85% 130% at 76% 104%'],
   ['Bodil', '90% 140% at 100% 12%'],
@@ -89,14 +87,11 @@ export const FAMILY_GRADIENT = [
 export type Member = {
   name: string;
   short: string;
-  /** Vad personen har hand om. Utelämnat för barnen — åldrar står ingenstans. */
-  role?: string;
   avatar: string;
 };
 
 export const MEMBERS: Member[] = [
-  { name: 'Martin', short: 'Martin', role: 'Köket i veckan', avatar: '/avatars/martin.svg' },
-  { name: 'Karin', short: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg' },
+  { name: 'Martin', short: 'Martin', avatar: '/avatars/martin.svg' },
   { name: 'Astrid', short: 'Astrid', avatar: '/avatars/astrid.svg' },
   { name: 'Signe', short: 'Signe', avatar: '/avatars/signe.svg' },
   { name: 'Bodil', short: 'Bodil', avatar: '/avatars/bodil.svg' },
@@ -107,7 +102,7 @@ export type DayItem = {
   icon: string;
   label: string;
   meta: string;
-  /** Skjutsen, på egen rad under raden: "Karin lämnar 17:45 · Martin hämtar 19:00". */
+  /** Skjutsen, på egen rad under raden: "Martin lämnar 17:45 och hämtar 19:00". */
   ride?: string;
   /** Ryms på en rad på tavlan: ikonen och `meta`, utan rubrik. */
   compact?: boolean;
@@ -157,7 +152,7 @@ export const sheetDayFor = (namn: string) => versal(namn);
 export function dayItems(d: Day, filter: string | null = null): DayItem[] {
   // Skolskjutsen först: den är dagens första och sista punkt.
   const skjuts: DayItem[] = dayRide(d.name)
-    // compact: meningen säger redan allt ("Karin lämnar · Martin hämtar barn"),
+    // compact: meningen säger redan allt ("Martin hämtar barn"),
     // och rubriken på egen rad hade kostat en av de sju dagarna plats.
     ? [{ icon: '🚗', label: RIDE_LABEL, meta: dayRide(d.name), compact: true, k: 'skjuts', p: dayRideWho(d.name) }]
     : [];
@@ -181,7 +176,7 @@ export function dayItems(d: Day, filter: string | null = null): DayItem[] {
     k: 'mat',
     p: 'alla',
   }));
-  // Dagens sysslor blir en enda rad. Karins tre dagliga blir annars tjugoen
+  // Dagens sysslor blir en enda rad. Tre dagliga sysslor blir annars tjugoen
   // rader på en vecka, och då ryms inte dagarna på en telefonskärm.
   const dagens = (PEOPLE.find((p) => p.name === filter)?.tasks ?? []).filter((t) => choreOnDay(t, d.name));
   const städ: DayItem[] = dagens.length === 0 ? [] : [{
@@ -211,14 +206,14 @@ export const mealWho = (m: Meal) => m.cook ?? 'Flexibelt';
 export const SLOT_LABEL: Record<Slot, string> = { lunch: 'Lunch', middag: 'Middag' };
 
 export const MEALS: Meal[] = [
-  { day: 'mån', slot: 'middag', cook: 'Karin' },
-  { day: 'tis', slot: 'lunch', cook: 'Karin' },
-  { day: 'tis', slot: 'middag', cook: 'Karin' },
+  { day: 'mån', slot: 'middag', cook: null },
+  { day: 'tis', slot: 'lunch', cook: null },
+  { day: 'tis', slot: 'middag', cook: null },
   { day: 'ons', slot: 'middag', cook: 'Martin' },
   { day: 'tor', slot: 'middag', cook: 'Martin' },
   { day: 'fre', slot: 'middag', cook: 'Martin' },
   { day: 'lör', slot: 'lunch', cook: 'Martin' },
-  { day: 'lör', slot: 'middag', cook: 'Karin' },
+  { day: 'lör', slot: 'middag', cook: null },
   { day: 'sön', slot: 'lunch', cook: null },
   { day: 'sön', slot: 'middag', cook: null },
 ];
@@ -246,16 +241,6 @@ export const PEOPLE: Person[] = [
   {
     name: 'Signe', avatar: '/avatars/signe.svg', tasks: [
       { label: 'Städa sitt rum', day: 'dagl', time: '18:45', short: 'rummet' },
-    ],
-  },
-  {
-    name: 'Karin', role: 'Sambo', avatar: '/avatars/karin.svg', tasks: [
-      { label: 'Plocka ur diskmaskinen', day: 'dagl', short: 'diskmaskin' },
-      { label: 'Tömma kompost och skräp', day: 'dagl', short: 'kompost' },
-      { label: 'Plocka undan leksaker i kök och vardagsrum', day: 'dagl', short: 'leksaker' },
-      { label: 'Dammsuga hallen och tvättstugan', day: 'lör', short: 'dammsuga hallen och tvättstugan' },
-      { label: 'Tvätta barnkläder', day: 'helg', short: 'barnkläder' },
-      { label: 'Extra ansvar Signes rum', day: 'behov', short: 'Signes rum' },
     ],
   },
   {
@@ -307,8 +292,8 @@ export type Training = {
 };
 
 export const TRAININGS: Training[] = [
-  { day: 'mån', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', dropoff: { by: 'Karin', time: '17:45' }, pickup: { by: 'Karin', time: '19:00' }, c: 'ord' },
-  { day: 'tis', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', dropoff: { by: 'Karin', time: '17:00' }, pickup: { by: 'Karin', time: '18:15' }, c: 'ord' },
+  { day: 'mån', time: '17:45', title: 'Gymnastik', place: 'Enahallen', person: 'Astrid', dropoff: { time: '17:45' }, pickup: { time: '19:00' }, c: 'ord' },
+  { day: 'tis', time: '17:00', title: 'Gymnastik', place: 'Aktivitetscenter', person: 'Astrid', dropoff: { time: '17:00' }, pickup: { time: '18:15' }, c: 'ord' },
   { day: 'lör', time: '10:30', title: 'Street feet', person: 'Astrid', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
   { day: 'lör', time: '13:00', title: 'Street feet', person: 'Signe', dropoff: { by: 'Martin' }, pickup: { by: 'Martin' }, c: 'gram' },
 ];
@@ -325,23 +310,25 @@ export const trainingRide = (t: Training) => rideText(t.dropoff, t.pickup);
  * vardag, oavsett träningar. Helgen står tom: då kör ingen någon.
  */
 export const RIDES: { day: string; dropoff: Lift; pickup: Lift }[] = [
-  { day: 'mån', dropoff: { by: 'Karin' }, pickup: { by: 'Karin' } },
-  { day: 'tis', dropoff: { by: 'Karin' }, pickup: { by: 'Karin' } },
-  { day: 'ons', dropoff: { by: 'Karin' }, pickup: { by: 'Martin' } },
-  { day: 'tor', dropoff: { by: 'Karin' }, pickup: { by: 'Martin' } },
-  { day: 'fre', dropoff: { by: 'Karin' }, pickup: { by: 'Martin' } },
+  { day: 'mån', dropoff: {}, pickup: {} },
+  { day: 'tis', dropoff: {}, pickup: {} },
+  { day: 'ons', dropoff: {}, pickup: { by: 'Martin' } },
+  { day: 'tor', dropoff: {}, pickup: { by: 'Martin' } },
+  { day: 'fre', dropoff: {}, pickup: { by: 'Martin' } },
 ];
 
 export const RIDE_LABEL = 'Lämna och hämta barn';
-/** Kort märkning på tavlan och veckobladet, där hela rubriken inte får plats. */
 /**
  * Dagens skjuts som text, tom sträng när dagen inte har någon. "barn" sist i
  * meningen säger vad som körs — och skiljer den från träningsskjutsen, som
- * hör till passet den står under.
+ * hör till passet den står under. Utan utsedd förare blir det "Lämning och
+ * hämtning av barn", för då finns inget verb att hänga ordet på.
  */
 export const dayRide = (dag: string) => {
   const r = RIDES.find((x) => x.day === dag);
-  return r ? `${rideText(r.dropoff, r.pickup)} barn` : '';
+  if (!r) return '';
+  const text = rideText(r.dropoff, r.pickup);
+  return /(lämnar|hämtar)$/.test(text) ? `${text} barn` : `${text} av barn`;
 };
 
 /** Vilka som kör den dagen — så raden följer med när man filtrerar på sig själv. */
@@ -351,8 +338,8 @@ export const dayRideWho = (dag: string): string[] => {
 };
 
 /**
- * Skjutsen i klartext, med eller utan tider: "Karin lämnar 17:45 och hämtar
- * 19:00", "Karin lämnar · Martin hämtar", "Lämning och hämtning" när det behövs
+ * Skjutsen i klartext, med eller utan tider: "Martin lämnar 17:45 och hämtar
+ * 19:00", "Lämning · Martin hämtar", "Lämning och hämtning" när det behövs
  * men ingen är utsedd. Tom sträng när ingen skjuts behövs.
  */
 export function rideText(d?: Lift, p?: Lift): string {
@@ -364,10 +351,12 @@ export function rideText(d?: Lift, p?: Lift): string {
     return tider.length ? `${d.by} ${tider.join(' och ')}` : `${d.by} lämnar och hämtar`;
   }
 
+  // Utan utsedd förare står tiden kvar: "lämning 17:45" säger fortfarande när
+  // passet börjar, även innan någon skrivit upp sig för att köra.
   const del = (r: Lift | undefined, med: string, utan: string) => {
     if (!r) return '';
-    if (!r.by) return utan;
-    return `${r.by} ${med}${r.time ? ` ${r.time}` : ''}`;
+    const tid = r.time ? ` ${r.time}` : '';
+    return r.by ? `${r.by} ${med}${tid}` : `${utan}${tid}`;
   };
   const lämning = del(d, 'lämnar', 'lämning');
   const hämtning = del(p, 'hämtar', 'hämtning');
@@ -395,7 +384,7 @@ export const PRINTS: { k: PrintKey; label: string; icon: string }[] = [
   { k: 'tran', label: 'Träningskalender', icon: '🤸' },
 ];
 
-export const FAMILY_PARENTS = 'Martin & Karin';
+export const FAMILY_PARENTS = 'Martin';
 export const FAMILY_KIDS = [...new Set(TRAININGS.map((t) => t.person))].join(' · ');
 
 /** Sysslor som återkommer varje dag hamnar i veckobladets sidfot, inte i varje ruta. */

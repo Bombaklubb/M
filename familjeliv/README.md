@@ -63,7 +63,6 @@ som ska gälla en hel vecka.
 | Person | Djur | Färg |
 | --- | --- | --- |
 | Martin | Gris | Grön |
-| Karin | Kanin | Blå |
 | Astrid | Tupp | Lila |
 | Signe | Mus | Rosa |
 | Bodil | Orm | Orange |
