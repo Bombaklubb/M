@@ -92,8 +92,8 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
         <Section emoji="🎯" title="Vad är Readhunt?">
           <p>
             Readhunt tränar <strong>läsförståelse på engelska</strong>. Eleven läser en text och svarar
-            på sex frågor om den. Biblioteket innehåller {242} texter fördelade på tio nivåer, i både
-            berättande och faktabaserad form.
+            på sex frågor om den. Texterna är fördelade på tio nivåer och finns i både berättande och
+            faktabaserad form.
           </p>
           <p>
             Appen är gratis, kräver inget konto och fungerar i webbläsaren på dator, surfplatta och mobil.
