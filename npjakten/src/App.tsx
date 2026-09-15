@@ -10,9 +10,11 @@ import WritingTaskView from "./components/WritingTaskView";
 import OralTaskView from "./components/OralTaskView";
 import PresentationTaskView from "./components/PresentationTaskView";
 import ReadingSettings from "./components/ReadingSettings";
+import AboutPage from "./components/AboutPage";
 
 type View =
   | { name: "start" }
+  | { name: "om" }
   | { name: "subject"; subject: Subject }
   | { name: "grade"; subject: Subject; gradeId: GradeId }
   | { name: "reading"; subject: Subject; gradeId: GradeId; testId: string }
@@ -52,9 +54,12 @@ export default function App() {
   }, [view]);
 
   // Ladda aktuellt ämne och årskurs vid behov (en i taget)
-  const subject = view.name === "start" ? null : view.subject;
+  const subject =
+    view.name === "start" || view.name === "om" ? null : view.subject;
   const gradeId =
-    view.name === "start" || view.name === "subject" ? null : view.gradeId;
+    view.name === "start" || view.name === "om" || view.name === "subject"
+      ? null
+      : view.gradeId;
   useEffect(() => {
     if (!gradeId || !subject) {
       setGrade(null);
@@ -103,7 +108,17 @@ export default function App() {
           >
             NP-jakten
           </button>
-          <ReadingSettings />
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => navigate({ name: "om" })}
+              title="Så fungerar appen"
+              className="rounded border border-white/40 px-3 py-1 text-sm font-semibold text-white transition hover:bg-white/15"
+            >
+              Om NP-jakten
+            </button>
+            <ReadingSettings />
+          </div>
         </div>
       </header>
 
@@ -114,6 +129,8 @@ export default function App() {
             onSelectSubject={(s) => navigate({ name: "subject", subject: s })}
           />
         )}
+
+        {view.name === "om" && <AboutPage onBack={() => navigate(START)} />}
 
         {view.name === "subject" && (
           <GradeChooser
@@ -126,11 +143,14 @@ export default function App() {
           />
         )}
 
-        {view.name !== "start" && view.name !== "subject" && !readyGrade && (
-          <p className="text-center text-sm text-stone-500">
-            {loading ? "Laddar övningar …" : ""}
-          </p>
-        )}
+        {view.name !== "start" &&
+          view.name !== "om" &&
+          view.name !== "subject" &&
+          !readyGrade && (
+            <p className="text-center text-sm text-stone-500">
+              {loading ? "Laddar övningar …" : ""}
+            </p>
+          )}
 
         {view.name === "grade" && readyGrade && (
           <GradePage
