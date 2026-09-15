@@ -1,49 +1,11 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { cn } from '@/lib/utils';
+import { rostPoang } from '@/utils/tal';
 
 interface TextWithSpeechProps {
   text: string;
   textSizeClass?: string;
   className?: string;
-}
-
-/**
- * Rangordnar de svenska rösterna webbläsaren erbjuder.
- *
- * Tidigare togs helt enkelt den första i listan. Ordningen bestäms av
- * operativsystemet och har inget med kvalitet att göra, så en elev kunde få
- * den gamla robotrösten trots att en betydligt bättre fanns installerad på
- * samma dator.
- *
- * Två saker skiljer rösterna åt i praktiken:
- *
- *  - Nätverksröster (localService === false) körs hos leverantören och låter
- *    nästan alltid mjukare än de som ligger lokalt i systemet.
- *  - Namnet avslöjar ofta motorn. Röster som innehåller Natural, Neural,
- *    Wavenet eller Enhanced bygger på nyare syntes, medan eSpeak och
- *    "compact" är de äldre, hackiga varianterna.
- *
- * Poängen är medvetet grov. Vilka röster som finns skiljer sig mellan
- * Chromebooks, och listan går inte att förutse – därför rankar vi det som
- * faktiskt går att läsa av i stället för att hårdkoda ett röstnamn.
- */
-function rostPoang(rost: SpeechSynthesisVoice): number {
-  const namn = rost.name.toLowerCase();
-  let poang = 0;
-
-  // Svenska som talas i Sverige framför andra svenska varianter.
-  if (rost.lang.toLowerCase() === 'sv-se') poang += 4;
-
-  // Nätverksröst slår lokal röst.
-  if (!rost.localService) poang += 6;
-
-  if (/natural|neural|wavenet|enhanced|premium|studio/.test(namn)) poang += 5;
-  if (namn.includes('google')) poang += 3;
-
-  // Kända lågkvalitativa motorer hamnar sist.
-  if (/espeak|compact|eloquence/.test(namn)) poang -= 8;
-
-  return poang;
 }
 
 export const TextWithSpeech: React.FC<TextWithSpeechProps> = ({

@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryText, UserAnswers } from '../types';
 import { Button } from './ui/button';
+import { FragaUpplasning } from './FragaUpplasning';
 import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
 import { TextWithGlossary } from './TextWithGlossary';
@@ -348,6 +349,17 @@ export const QuizView: React.FC<QuizViewProps> = ({
                             )}>
                               {typeInfo.label}
                             </span>
+
+                            {/* Uppläsning av frågan och alternativen. Texten
+                                har haft "Lyssna" länge – här tar stödet vid
+                                där uppgiften börjar. */}
+                            <div className="ml-auto">
+                              <FragaUpplasning
+                                fraga={currentQ.q}
+                                alternativ={currentQ.options}
+                                nyckel={currentQuestion}
+                              />
+                            </div>
                           </div>
                           <h3 className="text-lg font-bold text-slate-800 dark:text-white leading-relaxed">
                             {currentQ.q}
