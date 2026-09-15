@@ -19,6 +19,7 @@ import SluttestView from './components/SluttestView';
 import KistorView from './components/KistorView';
 import ShopView from './components/ShopView';
 import ProblemSolvingView from './components/ProblemSolvingView';
+import AboutView from './components/AboutView';
 import GamesHub from './components/games/GamesHub';
 import TimeAttackGame from './components/games/TimeAttackGame';
 import CollectCoinsGame from './components/games/CollectCoinsGame';
@@ -137,6 +138,7 @@ function AppInner() {
           case 'kistor':            return <KistorView />;
           case 'shop':              return <ShopView />;
           case 'problem-solving':   return <ProblemSolvingView worldId={problemWorldId ?? undefined} />;
+          case 'about':             return <AboutView />;
           case 'games':             return <GamesHub />;
           case 'game-time-attack':  return <TimeAttackGame />;
           case 'game-collect-coins': return <CollectCoinsGame />;
