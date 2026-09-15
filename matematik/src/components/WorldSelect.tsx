@@ -95,6 +95,21 @@ export default function WorldSelect() {
         </div>
 
 
+        {/* Om Mattejakten */}
+        <button
+          onClick={() => setView('about')}
+          className="flex items-center justify-center w-9 h-9 rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          style={{
+            background: 'rgba(255, 248, 220, 0.82)',
+            border: '1px solid rgba(180, 130, 40, 0.50)',
+            boxShadow: '0 2px 10px rgba(120,80,10,0.20)',
+          }}
+          title="Om Mattejakten – så fungerar appen"
+          aria-label="Om Mattejakten"
+        >
+          <span className="text-base leading-none">ℹ️</span>
+        </button>
+
         {/* Avatar + namn */}
         <button
           onClick={() => setView('my-page')}

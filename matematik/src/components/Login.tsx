@@ -9,7 +9,7 @@ import { Input } from './ui/input';
 const AVATARS = BASE_AVATARS;
 
 export default function Login() {
-  const { login } = useApp();
+  const { login, setView } = useApp();
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(0);
   const [error, setError] = useState('');
@@ -135,6 +135,19 @@ export default function Login() {
             }}
           >
             {AVATARS[avatar]} Starta äventyret! →
+          </button>
+
+          {/* Om Mattejakten – nåbar redan innan man loggat in */}
+          <button
+            onClick={() => setView('about')}
+            className="w-full mt-3 py-2 text-sm font-bold rounded-xl transition-all hover:scale-[1.02] active:scale-95 cursor-pointer"
+            style={{
+              background: 'rgba(255,255,255,0.55)',
+              border: '1px solid rgba(180,130,40,0.35)',
+              color: '#78350f',
+            }}
+          >
+            ℹ️ Om Mattejakten – så fungerar appen
           </button>
         </div>
       </div>
