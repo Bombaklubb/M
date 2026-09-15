@@ -12,10 +12,11 @@ interface HeaderProps {
   onProfileClick?: () => void;
   onKistorClick?: () => void;
   onShopClick?: () => void;
+  onOmClick?: () => void;
   unopenedChests?: number;
 }
 
-export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick, onKistorClick, onShopClick, unopenedChests = 0 }) => {
+export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick, onKistorClick, onShopClick, onOmClick, unopenedChests = 0 }) => {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   // Plånbokssaldo = livstidspoäng − spenderat i butiken
@@ -105,6 +106,19 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
             />
             <span className="font-bold text-slate-700 dark:text-white text-sm md:text-base hidden sm:inline">{user.name}</span>
           </button>
+
+          {/* Om Läsjakten. Hela namnet ryms bara på breda skärmar – på smalare
+              står det bara "Om", precis som i Engelskajakten. */}
+          {onOmClick && (
+            <button
+              onClick={onOmClick}
+              title="Om Läsjakten – så fungerar appen"
+              aria-label="Om Läsjakten"
+              className="px-3 py-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-800 dark:hover:text-white transition-colors font-bold text-sm md:text-base cursor-pointer"
+            >
+              Om<span className="hidden lg:inline"> Läsjakten</span>
+            </button>
+          )}
 
           {/* Logout */}
           <button

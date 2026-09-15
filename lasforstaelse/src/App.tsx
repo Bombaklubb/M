@@ -10,6 +10,7 @@ import { ProfileView } from './components/ProfileView';
 import { TeacherView } from './components/TeacherView';
 import { KistorView } from './components/KistorView';
 import ShopView from './components/ShopView';
+import { OmLasjakten } from './components/OmLasjakten';
 import { BookLogo } from './components/BookLogo';
 import { JaktLinks } from './components/JaktLinks';
 import {
@@ -58,6 +59,7 @@ function App() {
   const [showTeacher, setShowTeacher] = useState(false);
   const [showKistor, setShowKistor] = useState(false);
   const [showShop, setShowShop] = useState(false);
+  const [showOm, setShowOm] = useState(false);
   const quizStartTime = useRef<number | null>(null);
   const { darkMode } = useDarkMode();
   // De flytande bakgrundselementen är rent dekorativa och stängs av när
@@ -444,6 +446,16 @@ function App() {
     );
   }
 
+  // Om Läsjakten
+  if (showOm) {
+    return (
+      <>
+        <OmLasjakten onClose={() => setShowOm(false)} />
+        {teacherOverlay}
+      </>
+    );
+  }
+
   // Profile view
   if (showProfile) {
     return (
@@ -455,6 +467,7 @@ function App() {
           onProfileClick={() => setShowProfile(false)}
           onKistorClick={() => { setShowProfile(false); setShowKistor(true); }}
           onShopClick={() => { setShowProfile(false); setShowShop(true); }}
+          onOmClick={() => { setShowProfile(false); setShowOm(true); }}
           unopenedChests={getUnopenedChestsCount()}
         />
         <ProfileView
@@ -548,6 +561,7 @@ function App() {
         onProfileClick={() => setShowProfile(true)}
         onKistorClick={() => setShowKistor(true)}
         onShopClick={() => setShowShop(true)}
+        onOmClick={() => setShowOm(true)}
         unopenedChests={getUnopenedChestsCount()}
       />
 
@@ -588,7 +602,7 @@ function App() {
       {/* Kontaktinfo - visas endast på Setup-sidan */}
       {appState === AppState.SETUP && (
         <div className="fixed bottom-4 left-4 text-sm text-slate-600 dark:text-slate-400 z-40">
-          Kontakt: <a href="mailto:martin.akdogan@enkoping.se" className="font-semibold hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">martin.akdogan@enkoping.se</a>
+          <a href="mailto:martin.akdogan@enkoping.se" className="font-semibold hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Kontakta Martin</a>
         </div>
       )}
 
