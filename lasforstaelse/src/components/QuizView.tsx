@@ -349,21 +349,20 @@ export const QuizView: React.FC<QuizViewProps> = ({
                             )}>
                               {typeInfo.label}
                             </span>
-
-                            {/* Uppläsning av frågan och alternativen. Texten
-                                har haft "Lyssna" länge – här tar stödet vid
-                                där uppgiften börjar. */}
-                            <div className="ml-auto">
-                              <FragaUpplasning
-                                fraga={currentQ.q}
-                                alternativ={currentQ.options}
-                                nyckel={currentQuestion}
-                              />
-                            </div>
                           </div>
-                          <h3 className="text-lg font-bold text-slate-800 dark:text-white leading-relaxed">
+                          <h3 className="text-lg font-bold text-slate-800 dark:text-white leading-relaxed mb-3">
                             {currentQ.q}
                           </h3>
+
+                          {/* Uppläsning. Ligger under frågan och över
+                              alternativen, alltså i samma ordning som det
+                              läses upp. Raden bredvid frågetypen blir för
+                              trång för två knappar på en telefon. */}
+                          <FragaUpplasning
+                            fraga={currentQ.q}
+                            alternativ={currentQ.options}
+                            nyckel={currentQuestion}
+                          />
                         </div>
                       </div>
                     </div>
