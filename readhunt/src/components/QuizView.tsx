@@ -6,6 +6,7 @@ import { Card, CardContent } from './ui/card';
 import { cn } from '@/lib/utils';
 import { TextWithGlossary } from './TextWithGlossary';
 import { TextToSpeech } from './TextToSpeech';
+import { QuestionSpeech } from './QuestionSpeech';
 import { useSpeech } from '@/hooks/useSpeech';
 import { getThemeVisual } from '@/lib/themes';
 
@@ -371,6 +372,13 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
                         </div>
                       </div>
                     </div>
+
+                    <QuestionSpeech
+                      question={currentQ.q}
+                      options={currentQ.options}
+                      questionKey={currentQuestion}
+                      onBeforeSpeak={speech.stop}
+                    />
 
                     {/* Multiple Choice Options */}
                     <div className="space-y-3">

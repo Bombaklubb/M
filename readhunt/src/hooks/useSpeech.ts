@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { pickVoice, speechSupported } from '@/lib/speech';
 
-export const speechSupported =
-  typeof window !== 'undefined' && 'speechSynthesis' in window;
+export { speechSupported };
 
 export type SpeechRate = 0.75 | 0.95 | 1.1;
 
@@ -13,20 +13,6 @@ export interface UseSpeech {
   toggle: () => void;
   stop: () => void;
   cycleRate: () => void;
-}
-
-function pickVoice(lang: string): SpeechSynthesisVoice | null {
-  const voices = window.speechSynthesis.getVoices();
-  if (!voices.length) return null;
-  return (
-    voices.find((v) => v.localService && v.lang === lang) ||
-    voices.find((v) => v.localService && v.lang.startsWith('en-GB')) ||
-    voices.find((v) => v.localService && v.lang.startsWith('en')) ||
-    voices.find((v) => v.lang === lang) ||
-    voices.find((v) => v.lang.startsWith('en-GB')) ||
-    voices.find((v) => v.lang.startsWith('en')) ||
-    null
-  );
 }
 
 export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {

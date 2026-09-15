@@ -26,7 +26,7 @@ const TOOLS = [
   {
     chip: <span className="text-sm">🔊</span>,
     name: 'Uppläsning',
-    desc: 'Texten läses upp på engelska. Går att pausa, stoppa och ändra hastighet.',
+    desc: 'Texten läses upp på engelska, och går att pausa, stoppa och ändra hastighet. Vid varje fråga finns dessutom två knappar som läser upp frågan respektive svarsalternativen.',
   },
   {
     chip: <span className="text-sm">👆</span>,
