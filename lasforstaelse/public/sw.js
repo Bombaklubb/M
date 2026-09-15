@@ -22,7 +22,12 @@
  * fördröjning på en textändring.
  */
 
-const VERSION = 'lasjakten-v1';
+// Höjs när innehållet ändrats så mycket att en gammal cache gör mer skada än
+// nytta. Activate-steget nedan raderar allt som inte börjar med den aktuella
+// versionen, så en höjning tvingar fram en ny hämtning av både appskal och
+// library.json. Senast höjd när biblioteket gått från 487 till 532 texter och
+// nivå 1 gjorts om från grunden.
+const VERSION = 'lasjakten-v2';
 const APPSKAL = `${VERSION}-skal`;
 const DATA = `${VERSION}-data`;
 const STARTSIDA = '/index.html';
