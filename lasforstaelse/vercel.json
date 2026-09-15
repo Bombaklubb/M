@@ -10,5 +10,12 @@
       "destination": "/index.html"
     }
   ],
-  "ignoreCommand": "if [ \"${VERCEL_ENV:-production}\" != \"production\" ]; then exit 0; fi; git diff --quiet HEAD^ HEAD -- . 2>/dev/null && exit 0 || exit 1"
+  "git": {
+    "deploymentEnabled": {
+      "*": false,
+      "**": false,
+      "main": true
+    }
+  },
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . 2>/dev/null && exit 0 || exit 1"
 }
