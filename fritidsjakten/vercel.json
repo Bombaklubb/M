@@ -9,7 +9,7 @@
       "destination": "/"
     }
   ],
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . 2>/dev/null && exit 0 || exit 1",
+  "ignoreCommand": "if [ \"$VERCEL_ENV\" != \"production\" ]; then exit 0; fi; git diff --quiet HEAD^ HEAD -- . 2>/dev/null && exit 0 || exit 1",
   "headers": [
     {
       "source": "/(.*)",
