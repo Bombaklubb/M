@@ -2,48 +2,33 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { valjSvenskRost, talstodFinns } from '@/utils/tal';
 
-const LAGRINGSNYCKEL = 'lasforstaelse_las_upp_fragor';
-
 /**
- * Knapp som läser upp frågan och de fyra svarsalternativen.
+ * Två knappar som läser upp frågan respektive svarsalternativen.
  *
  * Texten har haft uppläsning länge, men frågan och alternativen har eleven
- * behövt läsa själv. För den som har svårt med avkodningen betyder det att
- * hjälpen tar slut just där uppgiften börjar: man har hört texten, men fastnar
- * på vad som efterfrågas.
+ * behövt läsa själv. För den som kämpar med avkodningen tar hjälpen slut just
+ * där uppgiften börjar: man har hört texten men fastnar på vad som efterfrågas.
  *
- * Valet sparas mellan texter. Den som behöver stödet behöver inte trycka på
- * knappen sextio gånger under en lektion – nästa fråga läses upp av sig själv.
+ * Frågan och svaren är skilda åt med flit. En elev som förstått frågan men
+ * behöver höra alternativen igen ska slippa lyssna på hela frågan en gång till,
+ * och tvärtom. Det är också färre ord att hålla i huvudet per knapptryck.
  *
- * Alternativen läses med bokstav före, "A. En nalle", eftersom eleven ska
- * kunna koppla det hen hör till rätt knapp på skärmen.
+ * Ett tryck på en knapp som redan läser stoppar uppläsningen.
  */
 
 interface Props {
   fraga: string;
   alternativ: string[];
-  /** Byts när eleven går till nästa fråga, så att uppläsningen startar om. */
+  /** Byts när eleven går till nästa fråga, så att uppläsningen tystnar. */
   nyckel: number;
 }
 
 const BOKSTAV = ['A', 'B', 'C', 'D'];
 
-function lasUppTexten(fraga: string, alternativ: string[]): string {
-  // Punkt efter bokstaven ger talsyntesen en paus, annars flyter alternativen
-  // ihop till en enda mening.
-  const delar = alternativ.map((a, i) => `${BOKSTAV[i]}. ${a}.`);
-  return [fraga, ...delar].join(' ');
-}
+type Vad = 'fraga' | 'svar';
 
 export const FragaUpplasning: React.FC<Props> = ({ fraga, alternativ, nyckel }) => {
-  const [pa, setPa] = useState(() => {
-    try {
-      return localStorage.getItem(LAGRINGSNYCKEL) === 'ja';
-    } catch {
-      return false;
-    }
-  });
-  const [talar, setTalar] = useState(false);
+  const [talar, setTalar] = useState<Vad | null>(null);
   const [stods] = useState(talstodFinns);
   const rostRef = useRef<SpeechSynthesisVoice | null>(null);
 
@@ -58,94 +43,81 @@ export const FragaUpplasning: React.FC<Props> = ({ fraga, alternativ, nyckel }) 
   const stoppa = useCallback(() => {
     if (!stods) return;
     window.speechSynthesis.cancel();
-    setTalar(false);
+    setTalar(null);
   }, [stods]);
 
-  const tala = useCallback(() => {
-    if (!stods) return;
-    // Avbryter allt som redan låter, inklusive uppläsningen av själva texten.
-    // Talsyntesen är delad av hela sidan, och två röster samtidigt hjälper
-    // ingen.
-    window.speechSynthesis.cancel();
+  const tala = useCallback(
+    (vad: Vad) => {
+      if (!stods) return;
 
-    const yttrande = new SpeechSynthesisUtterance(lasUppTexten(fraga, alternativ));
-    yttrande.lang = 'sv-SE';
-    yttrande.rate = 0.95;
-    if (rostRef.current) yttrande.voice = rostRef.current;
+      // Ett tryck på den knapp som redan läser stänger av.
+      if (talar === vad) {
+        stoppa();
+        return;
+      }
 
-    const avsluta = () => setTalar(false);
-    yttrande.onend = avsluta;
-    yttrande.onerror = avsluta;
+      // Avbryter allt som redan låter, inklusive uppläsningen av själva
+      // texten. Talsyntesen är delad av hela sidan, och två röster samtidigt
+      // hjälper ingen.
+      window.speechSynthesis.cancel();
 
-    setTalar(true);
-    window.speechSynthesis.speak(yttrande);
-  }, [stods, fraga, alternativ]);
+      // Punkt efter bokstaven ger talsyntesen en paus. Utan den flyter
+      // alternativen ihop till en enda mening, och eleven kan inte koppla det
+      // hen hör till rätt knapp på skärmen.
+      const text =
+        vad === 'fraga'
+          ? fraga
+          : alternativ.map((a, i) => `${BOKSTAV[i]}. ${a}.`).join(' ');
 
-  // Läs upp nästa fråga automatiskt när eleven bläddrar vidare, men bara när
-  // valet är påslaget.
-  useEffect(() => {
-    if (!pa) return;
-    tala();
-    return stoppa;
-    // Avsiktligt bara nyckeln och på-läget: tala() byts vid varje rendering
-    // och skulle annars starta om uppläsningen i onödan.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [nyckel, pa]);
+      const yttrande = new SpeechSynthesisUtterance(text);
+      yttrande.lang = 'sv-SE';
+      yttrande.rate = 0.95;
+      if (rostRef.current) yttrande.voice = rostRef.current;
 
-  // Tystna när komponenten försvinner, till exempel när eleven rättar svaren.
-  useEffect(() => stoppa, [stoppa]);
+      const avsluta = () => setTalar(null);
+      yttrande.onend = avsluta;
+      yttrande.onerror = avsluta;
+
+      setTalar(vad);
+      window.speechSynthesis.speak(yttrande);
+    },
+    [stods, talar, stoppa, fraga, alternativ]
+  );
+
+  // Tystna när eleven bläddrar vidare, och när vyn försvinner vid rättning.
+  useEffect(() => stoppa, [nyckel, stoppa]);
 
   if (!stods) return null;
 
-  const vaxla = () => {
-    const nytt = !pa;
-    setPa(nytt);
-    try {
-      localStorage.setItem(LAGRINGSNYCKEL, nytt ? 'ja' : 'nej');
-    } catch {
-      // Privat läge kan neka skrivning. Valet gäller då bara denna session.
-    }
-    // Ingen tala() här. Effekten ovan reagerar på att pa ändras och startar
-    // uppläsningen, och ett anrop här skulle ge två yttranden för samma fråga.
-    if (!nytt) stoppa();
+  const knapp = (vad: Vad, etikett: string, kort: string) => {
+    const aktiv = talar === vad;
+    return (
+      <button
+        type="button"
+        onClick={() => tala(vad)}
+        aria-label={aktiv ? 'Stoppa uppläsningen' : `Lyssna på ${etikett.toLowerCase()}`}
+        title={aktiv ? 'Stoppa uppläsningen' : `Lyssna på ${etikett.toLowerCase()}`}
+        className={cn(
+          'px-3 py-2 rounded-xl text-sm font-bold transition-all cursor-pointer whitespace-nowrap',
+          aktiv
+            ? 'bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-md'
+            : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600'
+        )}
+      >
+        {aktiv ? '⏹' : '🔊'}{' '}
+        {/* Hela etiketten ryms inte på en telefon, där räcker ordet. */}
+        <span className="hidden sm:inline">
+          {aktiv ? 'Stoppa' : `Lyssna på ${etikett.toLowerCase()}`}
+        </span>
+        <span className="sm:hidden">{aktiv ? 'Stoppa' : kort}</span>
+      </button>
+    );
   };
 
   return (
-    <div className="flex items-center gap-2">
-      <button
-        type="button"
-        onClick={vaxla}
-        aria-pressed={pa}
-        title={
-          pa
-            ? 'Frågan läses upp automatiskt. Klicka för att stänga av.'
-            : 'Läs upp frågan och svarsalternativen'
-        }
-        className={cn(
-          'px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer whitespace-nowrap',
-          pa
-            ? 'bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-md'
-            : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300'
-        )}
-      >
-        {/* Hela etiketten ryms inte bredvid frågetypen på en telefon. Där
-            räcker "Läs" – knappen sitter direkt ovanför frågan. */}
-        🔊 Läs<span className="hidden sm:inline"> frågan</span>
-      </button>
-
-      {/* Egen knapp för att höra om, utan att behöva stänga av och på valet. */}
-      {pa && (
-        <button
-          type="button"
-          onClick={talar ? stoppa : tala}
-          className="px-2 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors cursor-pointer whitespace-nowrap"
-          title={talar ? 'Stoppa uppläsningen' : 'Hör frågan igen'}
-          aria-label={talar ? 'Stoppa uppläsningen' : 'Hör frågan igen'}
-        >
-          {talar ? '⏹' : '↻'}
-          <span className="hidden sm:inline">{talar ? ' Stoppa' : ' Hör igen'}</span>
-        </button>
-      )}
+    <div className="flex flex-wrap items-center gap-2 mb-4">
+      {knapp('fraga', 'Frågan', 'Frågan')}
+      {knapp('svar', 'Svaren', 'Svaren')}
     </div>
   );
 };
