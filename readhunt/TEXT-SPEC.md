@@ -63,17 +63,22 @@ Kontrollera alltid mot befintliga ID:n innan något skrivs.
 
 | Åk | Ord | Åk | Ord |
 |---|---|---|---|
-| 1 | 20–40 | 6 | 400–415 |
-| 2 | 40–50 | 7 | 500–530 |
+| 1 | 15–25 | 6 | 400–415 |
+| 2 | 27–50 | 7 | 500–530 |
 | 3 | 60–80 | 8 | 530–570 |
 | 4 | 150–220 | 9 | 570–590 |
 | 5 | 300–320 | 10 (gymnasiet) | 590–625 |
 
 Texterna är på **engelska** (Readhunt är en engelsk läsförståelseapp).
 
+Nivå 1 låg tidigare på 20–40 ord men var för svår för många elever. De texterna
+flyttades upp till nivå 2, vilket är skälet till att nivå 2 spänner över ett
+bredare intervall än de övriga.
+
 ## 4. Språknivå
 
-- **Åk 1–3:** korta meningar, enkla ord, konkreta ämnen
+- **Åk 1:** meningar på 3–6 ord, bara de vanligaste orden, ett faktum per mening
+- **Åk 2–3:** korta meningar, enkla ord, konkreta ämnen
 - **Åk 4–6:** längre texter, mer abstrakta begrepp, ämnesord förklaras
 - **Åk 7–9:** komplexa texter, facktermer, kritiskt tänkande
 - **Gymnasiet:** större utmaning

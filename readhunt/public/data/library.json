@@ -1,7 +1,817 @@
 [
   {
-    "id": "ak1-disney-001",
+    "id": "ak1-latt-001",
     "grade": 1,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "My Hamster",
+    "imageUrl": "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=700&h=420&fit=crop",
+    "text": "I have a hamster. His name is Bo. Bo is small and brown. He sleeps all day. At night he runs and runs.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What animal is Bo?",
+        "options": [
+          "A hamster",
+          "A cat",
+          "A dog",
+          "A bird"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What colour is Bo?",
+        "options": [
+          "White",
+          "Brown",
+          "Black",
+          "Grey"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "When does Bo sleep?",
+        "options": [
+          "At night",
+          "In the evening",
+          "All day",
+          "Never"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does Bo do at night?",
+        "options": [
+          "He eats",
+          "He sings",
+          "He sleeps",
+          "He runs"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why do you not see Bo play in the day?",
+        "options": [
+          "He is asleep",
+          "He is too small",
+          "He is outside",
+          "He is afraid"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does Bo do when you are asleep?",
+        "options": [
+          "He sleeps too",
+          "He runs",
+          "He hides",
+          "He eats grass"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 23,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-002",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "Three Puppies",
+    "imageUrl": "https://images.unsplash.com/photo-1444212477490-ca407925329e?w=700&h=420&fit=crop",
+    "text": "Three puppies walk on the road. Two are white. One is black. The black one is last. He stops to smell a flower.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How many puppies are there?",
+        "options": [
+          "Three",
+          "Two",
+          "Four",
+          "One"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How many puppies are white?",
+        "options": [
+          "One",
+          "Two",
+          "Three",
+          "None"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What colour is the last puppy?",
+        "options": [
+          "White",
+          "Brown",
+          "Black",
+          "Grey"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does the black puppy stop to smell?",
+        "options": [
+          "A stone",
+          "The road",
+          "A car",
+          "A flower"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is the black puppy last?",
+        "options": [
+          "He stops to smell a flower",
+          "He is very small",
+          "He is tired",
+          "He walks the wrong way"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Which puppy walks most slowly?",
+        "options": [
+          "A white one",
+          "The black one",
+          "They are all the same",
+          "The first one"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 23,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-003",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "food",
+    "title": "The Pink Ice Cream",
+    "imageUrl": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=700&h=420&fit=crop",
+    "text": "It is a hot day. Mia buys an ice cream. It is pink. She eats it fast. The ice cream melts on her hand.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is the day like?",
+        "options": [
+          "Hot",
+          "Cold",
+          "Windy",
+          "Wet"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does Mia buy?",
+        "options": [
+          "A cake",
+          "An ice cream",
+          "A drink",
+          "An apple"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What colour is the ice cream?",
+        "options": [
+          "White",
+          "Brown",
+          "Pink",
+          "Green"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where does the ice cream melt?",
+        "options": [
+          "On the road",
+          "In the shop",
+          "On her shoe",
+          "On her hand"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the ice cream melt?",
+        "options": [
+          "The day is hot",
+          "Mia eats too slowly",
+          "It is old",
+          "The shop is warm"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does Mia eat fast?",
+        "options": [
+          "She is late",
+          "The ice cream is melting",
+          "She is hungry",
+          "Her friend is waiting"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 24,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-004",
+    "grade": 1,
+    "genre": "non-fiction",
+    "theme": "food",
+    "title": "Green and Yellow",
+    "imageUrl": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=700&h=420&fit=crop",
+    "text": "A banana is green when it is new. It is hard. Then it turns yellow. A yellow banana is soft and sweet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What colour is a new banana?",
+        "options": [
+          "Green",
+          "Yellow",
+          "Brown",
+          "Red"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is a green banana like?",
+        "options": [
+          "Soft",
+          "Hard",
+          "Wet",
+          "Warm"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What colour does the banana turn?",
+        "options": [
+          "Red",
+          "Green",
+          "Yellow",
+          "Black"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is a yellow banana like?",
+        "options": [
+          "Hard and sour",
+          "Cold and wet",
+          "Small and green",
+          "Soft and sweet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Which banana is good to eat?",
+        "options": [
+          "The yellow one",
+          "The green one",
+          "Both are the same",
+          "Neither of them"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What happens to a green banana if you wait?",
+        "options": [
+          "It gets harder",
+          "It turns yellow",
+          "It stays green",
+          "It gets smaller"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 22,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-005",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "nature",
+    "title": "Rain on the Window",
+    "imageUrl": "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=700&h=420&fit=crop",
+    "text": "It rains all morning. Lea sits by the window. She counts the drops. She stops at one hundred. Then the sun comes.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How long does it rain?",
+        "options": [
+          "All morning",
+          "All night",
+          "For an hour",
+          "All week"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where does Lea sit?",
+        "options": [
+          "On her bed",
+          "By the window",
+          "On the floor",
+          "In the garden"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does Lea count?",
+        "options": [
+          "Cars",
+          "Birds",
+          "The drops",
+          "Her books"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What number does she stop at?",
+        "options": [
+          "Ten",
+          "Twenty",
+          "Fifty",
+          "One hundred"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does Lea stay inside?",
+        "options": [
+          "It is raining",
+          "She is ill",
+          "It is night",
+          "She has no shoes"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What can Lea do when the sun comes?",
+        "options": [
+          "Count more drops",
+          "Go outside",
+          "Go to sleep",
+          "Close the window"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 22,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-006",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "technology",
+    "title": "The Long Train",
+    "imageUrl": "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=700&h=420&fit=crop",
+    "text": "A long train goes past. I stand and count the cars. I get to forty. The train is very loud. My dog hides.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What goes past?",
+        "options": [
+          "A train",
+          "A bus",
+          "A car",
+          "A boat"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does the child count?",
+        "options": [
+          "The people",
+          "The cars",
+          "The windows",
+          "The minutes"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How many does the child count?",
+        "options": [
+          "Fourteen",
+          "Four",
+          "Forty",
+          "Fifty"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does the dog do?",
+        "options": [
+          "Runs after the train",
+          "Sleeps",
+          "Barks",
+          "Hides"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the dog hide?",
+        "options": [
+          "The train is loud",
+          "The dog is tired",
+          "It is raining",
+          "The dog is hungry"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How does the dog feel?",
+        "options": [
+          "Happy",
+          "Afraid",
+          "Hungry",
+          "Angry"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 23,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-007",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "The Little Pig",
+    "imageUrl": "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=700&h=420&fit=crop",
+    "text": "A little pig sleeps in the hay. The hay is warm. His mother is near. She is very big. The pig is not afraid.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where does the pig sleep?",
+        "options": [
+          "In the hay",
+          "In a box",
+          "On the grass",
+          "In the house"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is the hay like?",
+        "options": [
+          "Cold",
+          "Warm",
+          "Wet",
+          "Hard"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who is near the pig?",
+        "options": [
+          "A farmer",
+          "A dog",
+          "His mother",
+          "A cat"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is his mother like?",
+        "options": [
+          "Very small",
+          "Very fast",
+          "Very old",
+          "Very big"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is the pig not afraid?",
+        "options": [
+          "His mother is near",
+          "He is asleep",
+          "The hay is soft",
+          "He is very big"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How does the little pig feel?",
+        "options": [
+          "Cold",
+          "Safe",
+          "Hungry",
+          "Lost"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 24,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-008",
+    "grade": 1,
+    "genre": "non-fiction",
+    "theme": "animals",
+    "title": "The Bird That Cannot Fly",
+    "imageUrl": "https://images.unsplash.com/photo-1441057206919-63d19fac2369?w=700&h=420&fit=crop",
+    "text": "A penguin is a bird. It cannot fly. It walks slowly on land. In the sea it swims very fast.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What is a penguin?",
+        "options": [
+          "A bird",
+          "A fish",
+          "A cat",
+          "A frog"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Can a penguin fly?",
+        "options": [
+          "Yes, very high",
+          "No, it cannot",
+          "Only at night",
+          "Only when it is cold"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How does a penguin walk on land?",
+        "options": [
+          "Very fast",
+          "On two wings",
+          "Slowly",
+          "It does not walk"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How does a penguin swim?",
+        "options": [
+          "Slowly",
+          "On its back",
+          "Not at all",
+          "Very fast"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Where is a penguin fastest?",
+        "options": [
+          "In the sea",
+          "On land",
+          "In the air",
+          "On a rock"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why is a penguin a strange bird?",
+        "options": [
+          "It is very big",
+          "It cannot fly",
+          "It lives in a tree",
+          "It sleeps all day"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 20,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-009",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "food",
+    "title": "Grandma's Basket",
+    "imageUrl": "https://images.unsplash.com/photo-1600626333392-59a20e646d97?w=700&h=420&fit=crop",
+    "text": "Grandma has a basket. In it are red apples and green apples. I take a green one. It is sour. Grandma laughs.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What does Grandma have?",
+        "options": [
+          "A basket",
+          "A bag",
+          "A box",
+          "A bowl"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is in it?",
+        "options": [
+          "Only red apples",
+          "Red and green apples",
+          "Bananas",
+          "Only green apples"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which apple does the child take?",
+        "options": [
+          "A red one",
+          "Two apples",
+          "A green one",
+          "None of them"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How does the apple taste?",
+        "options": [
+          "Sweet",
+          "Warm",
+          "Soft",
+          "Sour"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does Grandma laugh?",
+        "options": [
+          "She knew the green apple was sour",
+          "The basket falls",
+          "The apple is very big",
+          "She likes green apples"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Which apple will the child take next time?",
+        "options": [
+          "A green one",
+          "A red one",
+          "No apple at all",
+          "Two green ones"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 22,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-010",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "horses",
+    "title": "Nova Runs",
+    "imageUrl": "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=700&h=420&fit=crop",
+    "text": "A white horse runs in the field. Her name is Nova. She runs every morning. Today she runs fast. The grass is wet.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What colour is the horse?",
+        "options": [
+          "White",
+          "Brown",
+          "Black",
+          "Grey"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What is her name?",
+        "options": [
+          "Bella",
+          "Nova",
+          "Stella",
+          "Luna"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "When does Nova run?",
+        "options": [
+          "Every night",
+          "Once a week",
+          "Every morning",
+          "Only in summer"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is the grass like?",
+        "options": [
+          "Dry",
+          "Short",
+          "Yellow",
+          "Wet"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Where does Nova run?",
+        "options": [
+          "In the field",
+          "On the road",
+          "In the stable",
+          "By the sea"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Does Nova like to run?",
+        "options": [
+          "No, she is tired",
+          "Yes, she runs every morning",
+          "She cannot run",
+          "Only when it rains"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 23,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-disney-001",
+    "grade": 2,
     "genre": "fiction",
     "theme": "disney",
     "title": "Film Night",
@@ -82,7 +892,7 @@
   },
   {
     "id": "ak1-film-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "community",
     "title": "Mickey and the Red Kite",
@@ -163,7 +973,7 @@
   },
   {
     "id": "ak1-film-002",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "friendship",
     "title": "Minnie's Cupcakes",
@@ -244,7 +1054,7 @@
   },
   {
     "id": "ak1-film-003",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "nature",
     "title": "Donald's Picnic",
@@ -325,7 +1135,7 @@
   },
   {
     "id": "ak1-film-004",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "family",
     "title": "Mirabel's Celebration",
@@ -406,7 +1216,7 @@
   },
   {
     "id": "ak1-film-005",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "community",
     "title": "Elsa's Ice Shapes",
@@ -487,7 +1297,7 @@
   },
   {
     "id": "ak1-hp-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "harry potter",
     "title": "The First Chapter",
@@ -568,7 +1378,7 @@
   },
   {
     "id": "ak1-kamp-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "martial arts",
     "title": "My First Lesson",
@@ -649,7 +1459,7 @@
   },
   {
     "id": "ak1-manga-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "manga",
     "title": "Hana's New Book",
@@ -730,7 +1540,7 @@
   },
   {
     "id": "ak1-mario-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "super mario",
     "title": "Grandma's Old Game",
@@ -811,7 +1621,7 @@
   },
   {
     "id": "ak1-ny-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "animals",
     "title": "The Cat on the Roof",
@@ -892,7 +1702,7 @@
   },
   {
     "id": "ak1-orig-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "friendship",
     "title": "The Lost Hat",
@@ -973,7 +1783,7 @@
   },
   {
     "id": "ak1-orig-002",
-    "grade": 1,
+    "grade": 2,
     "genre": "non-fiction",
     "theme": "nature",
     "title": "The Tiny Garden",
@@ -1054,7 +1864,7 @@
   },
   {
     "id": "ak1-orig-003",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "sports",
     "title": "The New Soccer Ball",
@@ -1135,7 +1945,7 @@
   },
   {
     "id": "ak1-orig-004",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "everyday life",
     "title": "The Busy Library",
@@ -1216,7 +2026,7 @@
   },
   {
     "id": "ak1-orig-005",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "food",
     "title": "The Rainy Day Soup",
@@ -1297,7 +2107,7 @@
   },
   {
     "id": "ak1-sb-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "american football",
     "title": "Super Bowl Night",
@@ -1378,7 +2188,7 @@
   },
   {
     "id": "ak1-tema-001",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "animals",
     "title": "The Small Dog",
@@ -1459,7 +2269,7 @@
   },
   {
     "id": "ak1-tema-002",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "family",
     "title": "Baking Bread",
@@ -1540,7 +2350,7 @@
   },
   {
     "id": "ak1-tema-003",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "nature",
     "title": "At the Lake",
@@ -1621,7 +2431,7 @@
   },
   {
     "id": "ak1-tema-004",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "sports",
     "title": "Playing Football",
@@ -1702,7 +2512,7 @@
   },
   {
     "id": "ak1-tema-005",
-    "grade": 1,
+    "grade": 2,
     "genre": "fiction",
     "theme": "technology",
     "title": "The Little Robot",

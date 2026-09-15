@@ -6,7 +6,7 @@ interface AboutViewProps {
 
 // Nivåtabellen speglar readhunt/TEXT-SPEC.md och det faktiska biblioteket.
 const LEVELS = [
-  { range: '1–3', tier: 'Nybörjare', words: '25–80 ord', desc: 'Korta berättelser med vardagsord. Svåra ord förklaras på svenska.' },
+  { range: '1–3', tier: 'Nybörjare', words: '20–80 ord', desc: 'Mycket korta berättelser med vardagsord. Svåra ord förklaras på svenska.' },
   { range: '4–6', tier: 'Mellan', words: '150–415 ord', desc: 'Längre texter, både berättelser och faktatexter. Ordförklaringar på engelska.' },
   { range: '7–9', tier: 'Avancerad', words: '500–590 ord', desc: 'Resonerande faktatexter där svaret sällan står ordagrant i texten.' },
   { range: '10', tier: 'Expert', words: '590–625 ord', desc: 'Texter som väger argument mot varandra och kräver att man drar egna slutsatser.' },
