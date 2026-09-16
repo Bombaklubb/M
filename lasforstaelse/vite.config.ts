@@ -4,6 +4,17 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+
+  // Bygg-id som libraryService hänger på adressen till library.json.
+  //
+  // Servicearbetaren svarar ur cachen först för den filen, vilket är rätt för
+  // en två megabyte stor fil på ett skolnät. Men det gjorde också att en elev
+  // kunde se gårdagens nivåindelning i en app vars kod var ny: skalet hämtas
+  // över nätet, datafilen ur cachen. Med ett nytt id i adressen blir varje
+  // bygge en cachemiss, och filen hämtas om en gång per driftsättning.
+  define: {
+    __BIBLIOTEK_BYGGE__: JSON.stringify(Date.now().toString(36)),
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

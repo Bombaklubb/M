@@ -107,8 +107,18 @@ self.addEventListener('fetch', (event) => {
       caches.open(DATA).then(async (cache) => {
         const traff = await cache.match(request);
         const hamtning = fetch(request)
-          .then((svar) => {
-            if (svar.ok) cache.put(request, svar.clone());
+          .then(async (svar) => {
+            if (svar.ok) {
+              // Adressen bär ett bygg-id, så varje driftsättning skapar en ny
+              // post. Utan den här städningen blir det en två megabyte stor
+              // kopia kvar per bygge.
+              for (const nyckel of await cache.keys()) {
+                if (new URL(nyckel.url).pathname === url.pathname && nyckel.url !== request.url) {
+                  await cache.delete(nyckel);
+                }
+              }
+              await cache.put(request, svar.clone());
+            }
             return svar;
           })
           .catch(() => traff);
