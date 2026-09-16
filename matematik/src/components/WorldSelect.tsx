@@ -43,7 +43,7 @@ export default function WorldSelect() {
       style={bgStyle}
     >
       {/* Top bar – real clickable buttons */}
-      <div className="relative z-10 flex items-center justify-end gap-2 px-4 pt-4 pb-2">
+      <div className="relative z-10 flex flex-wrap items-center justify-end gap-2 px-4 pt-4 pb-2">
 
         {/* Kistor */}
         <button
@@ -95,19 +95,20 @@ export default function WorldSelect() {
         </div>
 
 
-        {/* Om Mattejakten */}
+        {/* Om Mattejakten – text i stället för ikon, som i Svenskajakten */}
         <button
           onClick={() => setView('about')}
-          className="flex items-center justify-center w-9 h-9 rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer"
+          className="flex items-center gap-1.5 font-bold text-sm px-3 py-1.5 rounded-full transition-all hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap"
           style={{
             background: 'rgba(255, 248, 220, 0.82)',
             border: '1px solid rgba(180, 130, 40, 0.50)',
             boxShadow: '0 2px 10px rgba(120,80,10,0.20)',
+            color: '#78350f',
           }}
           title="Om Mattejakten – så fungerar appen"
-          aria-label="Om Mattejakten"
         >
-          <span className="text-base leading-none">ℹ️</span>
+          <span aria-hidden="true">❓</span>
+          <span>Om Mattejakten</span>
         </button>
 
         {/* Avatar + namn */}
