@@ -105,16 +105,24 @@ export const SetupView: React.FC<SetupViewProps> = ({
 
   const colors = getGradeColor(selectedGrade);
 
+  // Startsidan ska rymmas utan att eleven behöver skrolla. Med panelen
+  // "Fortsätt där du slutade" blev sidan 731 pixlar, vilket är mer än en
+  // Chromebook visar, och "Börja läsa" hamnade under kanten. Måtten nedan är
+  // nedskruvade tills helheten ryms på 640 pixlars höjd. Det gäller bara den
+  // här vyn – lästexterna får skrollas som förut.
   return (
-    <div className="max-w-2xl mx-auto px-4 py-4">
+    <div className="max-w-2xl mx-auto px-4 py-3">
       {/* Header */}
       <motion.div
-        className="text-center mb-3"
+        // I ett riktigt lågt fönster är loggan det första som får vika.
+        // Den säger inget som rubriken inte redan säger, och utan den ryms
+        // allt ner till omkring 520 pixlars höjd.
+        className="text-center mb-2 [@media(max-height:620px)]:hidden"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <div className="flex items-center justify-center">
-          <BookLogo size={140} />
+          <BookLogo size={96} />
         </div>
       </motion.div>
 
@@ -126,10 +134,10 @@ export const SetupView: React.FC<SetupViewProps> = ({
         <Card className="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl border-white/20 shadow-2xl overflow-hidden">
           <BorderBeam size={200} duration={12} colorFrom="#6366f1" colorTo="#22c55e" />
 
-          <CardContent className="p-4 md:p-6">
+          <CardContent className="p-4 md:p-5">
             {/* Title */}
             <motion.h2
-              className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-4 text-center"
+              className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-3 text-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -140,14 +148,14 @@ export const SetupView: React.FC<SetupViewProps> = ({
             {/* Continue where you left off */}
             {lastCompletedText && (
               <motion.div
-                className="mb-6"
+                className="mb-3"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
               >
                 <button
                   onClick={() => onSelectGrade(lastCompletedText.grade)}
-                  className="w-full p-4 rounded-xl bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 border-2 border-emerald-200 dark:border-emerald-700 hover:border-emerald-400 dark:hover:border-emerald-500 transition-all group"
+                  className="w-full p-3 rounded-xl bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 border-2 border-emerald-200 dark:border-emerald-700 hover:border-emerald-400 dark:hover:border-emerald-500 transition-all group"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-xl shadow-lg">
@@ -174,7 +182,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
 
             {/* Grade display */}
             <motion.div
-              className="text-center mb-4"
+              className="text-center mb-3"
               layout
             >
               <AnimatePresence mode="wait">
@@ -185,7 +193,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ type: "spring", stiffness: 300, damping: 25 }}
                   className={cn(
-                    "inline-flex items-center justify-center w-20 h-20 rounded-2xl text-4xl font-bold text-white mb-2 shadow-xl",
+                    "inline-flex items-center justify-center w-16 h-16 rounded-2xl text-3xl font-bold text-white mb-1 shadow-xl",
                     `bg-gradient-to-br ${colors.gradient}`
                   )}
                 >
@@ -204,7 +212,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
 
             {/* Grade selector buttons */}
             <motion.div
-              className="grid grid-cols-5 md:grid-cols-10 gap-2 mb-4"
+              className="grid grid-cols-5 md:grid-cols-10 gap-2 mb-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -218,7 +226,7 @@ export const SetupView: React.FC<SetupViewProps> = ({
                     aria-label={getGradeLabel(item.grade)}
                     aria-pressed={item.grade === selectedGrade}
                     className={cn(
-                      "relative py-2 md:py-3 rounded-xl font-bold text-sm transition-all duration-200",
+                      "relative py-2 md:py-2.5 rounded-xl font-bold text-sm transition-all duration-200",
                       item.grade === selectedGrade
                         ? `bg-gradient-to-br ${itemColors.gradient} text-white shadow-lg`
                         : "bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600"
