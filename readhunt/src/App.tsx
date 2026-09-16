@@ -523,10 +523,19 @@ function App() {
         )}
       </main>
 
-      {/* Kontaktinfo - visas endast på Setup-sidan */}
+      {/* Kontaktinfo - visas endast på Setup-sidan.
+          Diskret som i Svenskajakten och Läsjakten, men med en ljus textfärg
+          och en mjuk skugga: startsidan har ett foto i bakgrunden, och grå
+          text på den blir svårläst. */}
       {appState === AppState.SETUP && (
-        <div className="fixed bottom-4 left-4 text-sm z-40 px-3 py-1.5 rounded-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm shadow border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-medium">
-          Contact: <a href="mailto:martin.akdogan@enkoping.se" className="font-semibold hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">martin.akdogan@enkoping.se</a>
+        <div className="fixed bottom-4 left-4 z-40 text-sm">
+          <a
+            href="mailto:martin.akdogan@enkoping.se"
+            className="font-semibold text-white/90 hover:text-white transition-colors"
+            style={{ textShadow: '0 1px 3px rgba(0,0,0,0.65)' }}
+          >
+            Kontakta Martin
+          </a>
         </div>
       )}
 
