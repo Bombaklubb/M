@@ -43455,5 +43455,805 @@
     "meta": {
       "wordCount": 16
     }
+  },
+  {
+    "id": "ak1-lattlast-26",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Vanten på grenen",
+    "imageUrl": "https://images.unsplash.com/photo-1730098016553-2844f370607d?w=600&h=400&fit=crop",
+    "text": "Jag tappar min vante.\n\nVi letar länge.\n\nDen hänger på en gren.\n\nMamma hittar den.\n\nNu är handen varm.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad tappar jag?",
+        "options": [
+          "Min vante",
+          "Min mössa",
+          "Min sko",
+          "Min bok"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Var hänger vanten?",
+        "options": [
+          "På en gren i häcken",
+          "På en krok",
+          "På en gren",
+          "På en bänk"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem hittar vanten?",
+        "options": [
+          "Pappa",
+          "Mamma",
+          "En granne",
+          "Jag själv"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder letar?",
+        "options": [
+          "Kastar bort",
+          "Springer hem",
+          "Ropar högt",
+          "Söker efter"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir handen varm?",
+        "options": [
+          "För att vanten är på igen",
+          "För att solen skiner",
+          "För att jag springer fort",
+          "För att vi går inomhus"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En mamma som fryser",
+          "En kall vinterdag",
+          "En vante som hittas",
+          "En gren som knäcks"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 19
+    }
+  },
+  {
+    "id": "ak1-lattlast-27",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Nyckelpigan",
+    "imageUrl": "https://images.unsplash.com/photo-1508232926939-f05374492c7b?w=600&h=400&fit=crop",
+    "text": "En nyckelpiga sitter på bladet.\n\nDen är röd med prickar.\n\nJag räknar prickarna.\n\nDet är sju.\n\nSedan flyger den bort.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter nyckelpigan?",
+        "options": [
+          "På en sten",
+          "På min hand",
+          "På bladet",
+          "På en pinne"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vilken färg är nyckelpigan?",
+        "options": [
+          "Röd",
+          "Gul",
+          "Grön",
+          "Brun"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Hur många prickar är det?",
+        "options": [
+          "Tre",
+          "Fem",
+          "Nio",
+          "Sju"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder räknar?",
+        "options": [
+          "Målar dem",
+          "Tar reda på antalet",
+          "Tvättar bort dem",
+          "Ritar av dem"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör nyckelpigan sist?",
+        "options": [
+          "Den flyger bort",
+          "Den somnar",
+          "Den äter ett blad",
+          "Den kryper ner"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En trädgård på våren",
+          "Ett blad som faller",
+          "En pojke som räknar",
+          "En liten nyckelpiga"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 20
+    }
+  },
+  {
+    "id": "ak1-lattlast-28",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Pannkakor",
+    "imageUrl": "https://images.unsplash.com/photo-1541288097308-7b8e3f58c4c6?w=600&h=400&fit=crop",
+    "text": "Vi äter pannkakor idag.\n\nMamma vänder dem i pannan.\n\nJag tar sylt.\n\nLillebror tar socker.\n\nTallriken blir tom fort.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad äter de?",
+        "options": [
+          "Bullar",
+          "Pannkakor",
+          "Soppa",
+          "Gröt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vem vänder pannkakorna?",
+        "options": [
+          "Pappa",
+          "Lillebror",
+          "Jag",
+          "Mamma"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad tar lillebror?",
+        "options": [
+          "Sylt",
+          "Smör",
+          "Socker",
+          "Mjölk"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder vänder?",
+        "options": [
+          "Vänder upp och ner",
+          "Skär i små bitar",
+          "Rör om i pannan",
+          "Tar bort från plattan"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir tallriken tom fort?",
+        "options": [
+          "För att de blir kalla",
+          "För att de smakar gott",
+          "För att de är för små",
+          "För att hunden äter upp"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En panna som går sönder",
+          "En resa till affären",
+          "En dag i skolan",
+          "En måltid hemma"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 19
+    }
+  },
+  {
+    "id": "ak1-lattlast-29",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Gungan",
+    "imageUrl": "https://images.unsplash.com/photo-1460788150444-d9dc07fa9dba?w=600&h=400&fit=crop",
+    "text": "Jag sitter i gungan.\n\nPappa knuffar på.\n\nJag flyger högt upp.\n\nMagen kittlar.\n\nJag vill gunga mer.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var sitter jag?",
+        "options": [
+          "I en bil",
+          "I sandlådan",
+          "På en bänk",
+          "I gungan"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vem knuffar på?",
+        "options": [
+          "Fröken",
+          "Pappa",
+          "Mamma",
+          "En kompis"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder kittlar?",
+        "options": [
+          "Pirrar lite",
+          "Blir alldeles kallt",
+          "Känns tungt",
+          "Gör riktigt ont"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Vad vill jag på slutet?",
+        "options": [
+          "Äta lunch",
+          "Sova en stund",
+          "Gunga mer",
+          "Gå hem"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Hur känns det att gunga?",
+        "options": [
+          "Det är läskigt",
+          "Det är tråkigt",
+          "Det gör ont",
+          "Det är roligt"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En rast i skolan",
+          "En stund i gungan",
+          "En lek i sanden",
+          "En pappa som jobbar"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 17
+    }
+  },
+  {
+    "id": "ak1-lattlast-30",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Igelkotten i häcken",
+    "imageUrl": "https://images.unsplash.com/photo-1748590601542-2ed4702e6c90?w=600&h=400&fit=crop",
+    "text": "En igelkott bor i häcken.\n\nDen kommer fram på kvällen.\n\nVi ställer ut vatten.\n\nIgelkotten dricker.\n\nSedan går den hem.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Var bor igelkotten?",
+        "options": [
+          "I häcken",
+          "I ett träd",
+          "I gräset",
+          "Under trappan"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "När kommer den fram?",
+        "options": [
+          "Mitt på dagen",
+          "På kvällen",
+          "Vid lunch",
+          "På morgonen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ställer vi ut?",
+        "options": [
+          "Mat",
+          "Mjölk",
+          "En skål bär",
+          "Vatten"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad är en häck?",
+        "options": [
+          "Litet hus",
+          "Djup grop",
+          "Rad med buskar",
+          "Hög med löv"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inferens",
+        "q": "Varför dricker igelkotten?",
+        "options": [
+          "För att den är törstig",
+          "För att vattnet är kallt",
+          "För att vi ropar",
+          "För att den är rädd"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En kväll i skogen",
+          "En igelkott i trädgården",
+          "En skål som går sönder",
+          "En häck som klipps"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 20
+    }
+  },
+  {
+    "id": "ak1-lattlast-31",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Paraplyet",
+    "imageUrl": "https://images.unsplash.com/photo-1580051235428-f88ae8a2d53b?w=600&h=400&fit=crop",
+    "text": "Det regnar på vägen hem.\n\nMitt paraply har många färger.\n\nJag håller det högt.\n\nRegnet trummar ovanpå.\n\nJag blir inte blöt.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Hur är vädret?",
+        "options": [
+          "Det blåser",
+          "Det är sol",
+          "Det regnar",
+          "Det snöar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Hur är paraplyet?",
+        "options": [
+          "Det är alldeles svart",
+          "Det är litet och grått",
+          "Det är trasigt",
+          "Det har många färger"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder trummar?",
+        "options": [
+          "Lyser starkt",
+          "Låter som slag",
+          "Luktar gott",
+          "Känns varmt"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Hur håller jag paraplyet?",
+        "options": [
+          "Högt upp",
+          "Bakom ryggen",
+          "Lågt ner",
+          "Under armen"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir jag inte blöt?",
+        "options": [
+          "För att jag springer",
+          "För att jag har stövlar",
+          "För att paraplyet skyddar",
+          "För att regnet slutar"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En pöl på gården",
+          "Ett paraply som går sönder",
+          "En dag med sol",
+          "En väg hem i regn"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 21
+    }
+  },
+  {
+    "id": "ak1-lattlast-32",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Min ryggsäck",
+    "imageUrl": "https://images.unsplash.com/photo-1504424715129-fa3bcb0b8903?w=600&h=400&fit=crop",
+    "text": "Min ryggsäck är grön.\n\nI den finns matlådan.\n\nDär finns också en bok.\n\nDen känns tung.\n\nMen jag bär den själv.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vilken färg är ryggsäcken?",
+        "options": [
+          "Blå",
+          "Grön",
+          "Röd",
+          "Gul"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad finns i ryggsäcken?",
+        "options": [
+          "En matlåda och en bok",
+          "En jacka och en mössa",
+          "En penna och ett sudd",
+          "En boll och en vante"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Hur känns ryggsäcken?",
+        "options": [
+          "Lätt",
+          "Blöt",
+          "Tung",
+          "Kall"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder bär?",
+        "options": [
+          "Tappar ner",
+          "Öppnar upp",
+          "Ger bort",
+          "Håller med sig"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inferens",
+        "q": "Vad visar att jag är stolt?",
+        "options": [
+          "Att matlådan är full",
+          "Att jag bär den själv",
+          "Att den är grön",
+          "Att boken är tjock"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En ryggsäck till skolan",
+          "En matlåda med mat",
+          "En dag på rasten",
+          "En bok som tappas bort"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 21
+    }
+  },
+  {
+    "id": "ak1-lattlast-33",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Blåbär i skogen",
+    "imageUrl": "https://images.unsplash.com/photo-1601721360034-a775cf0b7c63?w=600&h=400&fit=crop",
+    "text": "Vi plockar blåbär i skogen.\n\nHänderna blir blå.\n\nMunnen blir också blå.\n\nHinken blir full.\n\nHemma bakar vi paj.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad plockar vi?",
+        "options": [
+          "Löv",
+          "Kottar",
+          "Svamp",
+          "Blåbär"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var plockar vi?",
+        "options": [
+          "I trädgården",
+          "Vid sjön",
+          "I skogen",
+          "I parken"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vad blir blått?",
+        "options": [
+          "Händerna",
+          "Hinken",
+          "Skorna",
+          "Jackan"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "ord",
+        "q": "Vad betyder full?",
+        "options": [
+          "Mycket tung",
+          "Så mycket det ryms",
+          "Alldeles tom",
+          "Ganska liten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför blir munnen blå?",
+        "options": [
+          "För att det är kallt",
+          "För att jag sjunger",
+          "För att hinken läcker",
+          "För att jag äter bär"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En promenad i regn",
+          "En hink som går sönder",
+          "En dag med bärplockning",
+          "En paj som bränns"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 19
+    }
+  },
+  {
+    "id": "ak1-lattlast-34",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Maskrosen",
+    "imageUrl": "https://images.unsplash.com/photo-1544954412-78da2cfa1a0c?w=600&h=400&fit=crop",
+    "text": "Jag hittar en maskros.\n\nDen är vit och lurvig.\n\nJag blåser på den.\n\nFröna flyger iväg.\n\nDe ser ut som snö.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad hittar jag?",
+        "options": [
+          "En maskros",
+          "En pinne",
+          "En sten",
+          "En fjäder"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Hur är maskrosen?",
+        "options": [
+          "Gul och platt",
+          "Grön och våt",
+          "Brun och torr",
+          "Vit och lurvig"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Vad gör jag med den?",
+        "options": [
+          "Vattnar den",
+          "Plockar bort den",
+          "Blåser på den",
+          "Gräver ner den"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "ord",
+        "q": "Vad är frön?",
+        "options": [
+          "Bitar av jord",
+          "Små korn som växer",
+          "Delar av en sten",
+          "Små droppar vatten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inferens",
+        "q": "Varför liknar fröna snö?",
+        "options": [
+          "För att de är vita och lätta",
+          "För att de är kalla",
+          "För att de smälter",
+          "För att marken är vit"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En vinterdag med snö",
+          "En pojke som fryser",
+          "En äng full med gräs",
+          "En blomma som blåses på"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 21
+    }
+  },
+  {
+    "id": "ak1-lattlast-35",
+    "grade": 1,
+    "genre": "berättelse",
+    "theme": "vardag",
+    "title": "Brevet i lådan",
+    "imageUrl": "https://images.unsplash.com/photo-1577567751159-fdaaba7b2032?w=600&h=400&fit=crop",
+    "text": "Ett brev ligger i lådan.\n\nDet är till mig.\n\nFarmor har skrivit.\n\nHon ritar en sol.\n\nJag sätter brevet på väggen.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Vad ligger i lådan?",
+        "options": [
+          "En bok",
+          "En tidning",
+          "Ett brev",
+          "Ett paket"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Vem har skrivit?",
+        "options": [
+          "Fröken",
+          "Farmor",
+          "Mamma",
+          "En kompis"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Vad ritar hon?",
+        "options": [
+          "En båt",
+          "Ett hus",
+          "En katt",
+          "En sol"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Var sätter jag brevet?",
+        "options": [
+          "På väggen",
+          "I lådan",
+          "Under sängen",
+          "I väskan"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inferens",
+        "q": "Varför sätter jag upp brevet?",
+        "options": [
+          "För att lådan är full",
+          "För att farmor sagt det",
+          "För att jag blir glad av det",
+          "För att väggen är tom"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "sammanfatta",
+        "q": "Vad handlar texten om?",
+        "options": [
+          "En låda som töms",
+          "Ett brev från farmor",
+          "En sol som lyser",
+          "En vägg som målas"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 21
+    }
   }
 ]

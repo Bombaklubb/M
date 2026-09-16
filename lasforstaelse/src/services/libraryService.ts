@@ -28,7 +28,10 @@ export async function loadLibrary(): Promise<LibraryText[]> {
 
 async function hamtaBibliotek(): Promise<LibraryText[]> {
   try {
-    const response = await fetch('/data/library.json');
+    // Bygg-id i adressen gör att ett nytt bygge alltid ger en färsk hämtning.
+    // Servicearbetaren cachar per fullständig adress, så gamla versioner får
+    // en miss i stället för att serveras vidare.
+    const response = await fetch(`/data/library.json?v=${__BIBLIOTEK_BYGGE__}`);
     if (!response.ok) {
       throw new Error('Kunde inte ladda biblioteket');
     }
