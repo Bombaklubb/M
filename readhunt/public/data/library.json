@@ -810,6 +810,816 @@
     }
   },
   {
+    "id": "ak1-latt-011",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "The Cat and the Butterfly",
+    "imageUrl": "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=700&h=420&fit=crop",
+    "text": "A butterfly sits on the cat's nose. The cat is very still. Her eyes are big. She waits. Then the butterfly flies away.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What sits on the cat's nose?",
+        "options": [
+          "A butterfly",
+          "A fly",
+          "A leaf",
+          "A bird"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How still is the cat?",
+        "options": [
+          "Not still at all",
+          "Very still",
+          "She runs away",
+          "She jumps"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What are the cat’s eyes like?",
+        "options": [
+          "Closed",
+          "Small",
+          "Big",
+          "Green"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does the butterfly do at the end?",
+        "options": [
+          "It sleeps",
+          "It sits down",
+          "It sings",
+          "It flies away"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is the cat very still?",
+        "options": [
+          "She does not want the butterfly to fly away",
+          "She is asleep",
+          "She is cold",
+          "She cannot move"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How does the cat feel about the butterfly?",
+        "options": [
+          "She is afraid of it",
+          "She is very interested in it",
+          "She does not see it",
+          "She is angry"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 23,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-012",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "Rex at the Beach",
+    "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=700&h=420&fit=crop",
+    "text": "Rex runs on the sand. He jumps in the sea. The water is cold but Rex likes it. He runs back with a stick.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where does Rex run?",
+        "options": [
+          "On the sand",
+          "In the forest",
+          "On the road",
+          "In the garden"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where does Rex jump?",
+        "options": [
+          "On a rock",
+          "In the sea",
+          "Over a fence",
+          "Into a boat"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is the water like?",
+        "options": [
+          "Warm",
+          "Deep",
+          "Cold",
+          "Green"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does Rex bring back?",
+        "options": [
+          "A ball",
+          "A shell",
+          "A fish",
+          "A stick"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Does Rex mind the cold water?",
+        "options": [
+          "No, he likes it",
+          "Yes, he runs home",
+          "He does not go in",
+          "He only looks at it"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How does Rex feel at the beach?",
+        "options": [
+          "Tired",
+          "Happy",
+          "Afraid",
+          "Hungry"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 24,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-013",
+    "grade": 1,
+    "genre": "non-fiction",
+    "theme": "animals",
+    "title": "The Koala",
+    "imageUrl": "https://images.unsplash.com/photo-1519003300449-424ad0405076?w=700&h=420&fit=crop",
+    "text": "A koala lives in a tree. It eats leaves. It sleeps for many hours every day. Koalas live in Australia.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where does a koala live?",
+        "options": [
+          "In a tree",
+          "In a cave",
+          "Under the ground",
+          "In the water"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does a koala eat?",
+        "options": [
+          "Fish",
+          "Leaves",
+          "Grass",
+          "Nuts"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How long does a koala sleep?",
+        "options": [
+          "One hour",
+          "Only at night",
+          "Many hours every day",
+          "It does not sleep"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where do koalas live?",
+        "options": [
+          "Sweden",
+          "Africa",
+          "Canada",
+          "Australia"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Is a koala awake most of the day?",
+        "options": [
+          "No, it sleeps a lot",
+          "Yes, all day",
+          "Only in winter",
+          "The text does not say"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why does a koala not have to go far for food?",
+        "options": [
+          "Someone brings it food",
+          "It eats the leaves in its tree",
+          "It eats only once a year",
+          "It hunts at night"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 20,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-014",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "The Bird Sings",
+    "imageUrl": "https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?w=700&h=420&fit=crop",
+    "text": "A small bird sits on a branch. It sings every morning. Anna opens her window to listen. The bird sings again.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where does the bird sit?",
+        "options": [
+          "On a branch",
+          "On the roof",
+          "On the grass",
+          "On a wall"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "When does the bird sing?",
+        "options": [
+          "Every evening",
+          "Every morning",
+          "At night",
+          "Once a week"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does Anna open?",
+        "options": [
+          "The door",
+          "A book",
+          "Her window",
+          "A box"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why does Anna open it?",
+        "options": [
+          "To get some air",
+          "To call the bird",
+          "To see the sun",
+          "To listen"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Does Anna like the bird?",
+        "options": [
+          "Yes, she wants to hear it",
+          "No, it wakes her up",
+          "She does not notice it",
+          "She is afraid of it"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What can Anna hear from her bed in the morning?",
+        "options": [
+          "The wind",
+          "The bird",
+          "Her mum",
+          "A car"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 21,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-015",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "animals",
+    "title": "Six Calves",
+    "imageUrl": "https://images.unsplash.com/photo-1454179083322-198bb4daae41?w=700&h=420&fit=crop",
+    "text": "Six calves stand in the barn. They are brown and white. One calf is very small. The farmer gives it milk.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "How many calves are there?",
+        "options": [
+          "Six",
+          "Two",
+          "Ten",
+          "Four"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where do the calves stand?",
+        "options": [
+          "In the field",
+          "In the barn",
+          "By the road",
+          "In the water"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What colours are they?",
+        "options": [
+          "Black and grey",
+          "All white",
+          "Brown and white",
+          "All brown"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What does the farmer give the small calf?",
+        "options": [
+          "Hay",
+          "Water",
+          "Grass",
+          "Milk"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does the farmer help that calf?",
+        "options": [
+          "It is very small",
+          "It is the loudest",
+          "It is the oldest",
+          "It stands alone"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Who takes care of the calves?",
+        "options": [
+          "The other calves",
+          "The farmer",
+          "A dog",
+          "Nobody"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 21,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-016",
+    "grade": 1,
+    "genre": "non-fiction",
+    "theme": "food",
+    "title": "Where Honey Comes From",
+    "imageUrl": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=700&h=420&fit=crop",
+    "text": "Bees make honey. They take it from flowers. The honey is thick and sweet. People put honey on bread.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who makes honey?",
+        "options": [
+          "Bees",
+          "Birds",
+          "Farmers",
+          "Cows"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where do bees take it from?",
+        "options": [
+          "Trees",
+          "Flowers",
+          "Grass",
+          "The ground"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What is honey like?",
+        "options": [
+          "Cold and hard",
+          "Thin and sour",
+          "Thick and sweet",
+          "Dry and grey"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What do people put honey on?",
+        "options": [
+          "Fish",
+          "Soup",
+          "Eggs",
+          "Bread"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why do bees need flowers?",
+        "options": [
+          "To make honey",
+          "To sleep in",
+          "To hide from rain",
+          "To build a house"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What would happen if there were no flowers?",
+        "options": [
+          "The honey would be sour",
+          "There would be no honey",
+          "Bees would eat bread",
+          "Honey would be white"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 19,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-017",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "sport",
+    "title": "Up the Hill",
+    "imageUrl": "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?w=700&h=420&fit=crop",
+    "text": "Sam rides his bike up a big hill. It is hard work. At the top he stops. Then he rides down fast.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What does Sam ride?",
+        "options": [
+          "His bike",
+          "A horse",
+          "A bus",
+          "A car"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Where does he ride?",
+        "options": [
+          "Along the sea",
+          "Up a big hill",
+          "Round a park",
+          "Into town"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Where does Sam stop?",
+        "options": [
+          "At home",
+          "At the bottom",
+          "At the top",
+          "By a tree"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How does he ride down?",
+        "options": [
+          "Slowly",
+          "He walks",
+          "He does not ride down",
+          "Fast"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why does Sam stop at the top?",
+        "options": [
+          "He is tired",
+          "He is lost",
+          "His bike is broken",
+          "He sees a friend"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Which is easier for Sam?",
+        "options": [
+          "Riding up",
+          "Riding down",
+          "They are the same",
+          "Walking"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 22,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-018",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "nature",
+    "title": "Three Red Flowers",
+    "imageUrl": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=700&h=420&fit=crop",
+    "text": "The field is full of red flowers. Ida picks three. She gives one to her mum. She gives one to her friend.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What colour are the flowers?",
+        "options": [
+          "Red",
+          "Blue",
+          "White",
+          "Yellow"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How many flowers does Ida pick?",
+        "options": [
+          "One",
+          "Three",
+          "Five",
+          "Ten"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Who gets the first flower?",
+        "options": [
+          "Her friend",
+          "Her sister",
+          "Her mum",
+          "Her teacher"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Who gets the second flower?",
+        "options": [
+          "Her dad",
+          "Her mum",
+          "Nobody",
+          "Her friend"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "How many flowers does Ida keep?",
+        "options": [
+          "One",
+          "Two",
+          "Three",
+          "None"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is Ida like?",
+        "options": [
+          "She is shy",
+          "She likes to share",
+          "She is in a hurry",
+          "She is sad"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 22,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-019",
+    "grade": 1,
+    "genre": "fiction",
+    "theme": "everyday life",
+    "title": "Snow in the Night",
+    "imageUrl": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=700&h=420&fit=crop",
+    "text": "Snow falls all night. In the morning the car is white. Dad finds a brush. We help him. Then we play.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When does the snow fall?",
+        "options": [
+          "All night",
+          "All morning",
+          "For an hour",
+          "All week"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What colour is the car in the morning?",
+        "options": [
+          "Red",
+          "White",
+          "Grey",
+          "Blue"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What does Dad find?",
+        "options": [
+          "A key",
+          "A hat",
+          "A brush",
+          "A bag"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What do the children do after they help?",
+        "options": [
+          "Go to bed",
+          "Eat breakfast",
+          "Go to school",
+          "Play"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why is the car white?",
+        "options": [
+          "Snow fell on it",
+          "Dad painted it",
+          "It is a new car",
+          "The sun is bright"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does Dad use the brush for?",
+        "options": [
+          "To clean his shoes",
+          "To get the snow off the car",
+          "To sweep the floor",
+          "To brush the dog"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 21,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak1-latt-020",
+    "grade": 1,
+    "genre": "non-fiction",
+    "theme": "nature",
+    "title": "Fish Swim Together",
+    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700&h=420&fit=crop",
+    "text": "Many fish live under the sea. Some fish are yellow. They swim together in a big group. A group of fish is a school.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where do the fish live?",
+        "options": [
+          "Under the sea",
+          "In a river",
+          "In a lake",
+          "In a tank"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What colour are some of the fish?",
+        "options": [
+          "Red",
+          "Yellow",
+          "Black",
+          "Green"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "How do they swim?",
+        "options": [
+          "Alone",
+          "Very slowly",
+          "Together in a big group",
+          "On their backs"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "What is a group of fish called?",
+        "options": [
+          "A family",
+          "A team",
+          "A class",
+          "A school"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Do these fish swim alone?",
+        "options": [
+          "No, they swim together",
+          "Yes, always alone",
+          "Only at night",
+          "The text does not say"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why might fish swim in a big group?",
+        "options": [
+          "To swim faster",
+          "It is safer",
+          "To find the sun",
+          "To sleep"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 24,
+      "readingTime": 1
+    }
+  },
+  {
     "id": "ak1-disney-001",
     "grade": 2,
     "genre": "fiction",
