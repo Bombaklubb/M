@@ -52,6 +52,19 @@ export function Header({ gameState, currentView, onNavigate, userName, onLogout 
             </button>
 
             <button
+              onClick={() => onNavigate('om')}
+              className={`px-3 py-2 rounded-xl transition-all duration-200 cursor-pointer font-bold text-xs ${
+                currentView === 'om'
+                  ? 'bg-indigo-100 text-indigo-700 border-2 border-indigo-200 shadow-sm'
+                  : 'text-indigo-400 hover:text-indigo-700 hover:bg-indigo-50 border-2 border-transparent'
+              }`}
+              title="Om Källkritikjakten – så fungerar appen"
+              aria-label="Om Källkritikjakten"
+            >
+              Om<span className="hidden lg:inline"> Källkritikjakten</span>
+            </button>
+
+            <button
               onClick={() => setMenuOpen(true)}
               className="flex items-center gap-1.5 pl-1.5 pr-3 py-1.5 rounded-xl border-2 border-transparent hover:border-indigo-200 hover:bg-indigo-50 transition-all duration-200 cursor-pointer"
               title="Ditt konto och din statistik"

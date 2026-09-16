@@ -15,6 +15,7 @@ export type View =
   | 'module13'
   | 'kallkollen'
   | 'diploma'
+  | 'om'
   | 'stats';
 
 export interface GameState {

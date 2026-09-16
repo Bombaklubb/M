@@ -21,6 +21,7 @@ import { KallkollenView } from '@/views/KallkollenView';
 import { DiplomaView } from '@/views/DiplomaView';
 import { StatsView } from '@/views/StatsView';
 import { LoginView } from '@/views/LoginView';
+import { OmKallkritikView } from '@/views/OmKallkritikView';
 import { loadCurrentUser, login, logout } from '@/lib/userStore';
 
 const pageVariants = {
@@ -59,6 +60,27 @@ export default function App() {
           }}
         />
       )}
+
+      {/* Kontaktlänk – syns på alla sidor, även före inloggning.
+          På breda skärmar svävar den nere till vänster i marginalen. På mobil
+          finns ingen marginal, så där läggs den sist i flödet i stället –
+          annars hamnar den ovanpå svarsknapparna i modulerna. */}
+      <div className="hidden sm:block fixed bottom-4 left-4 z-40 print:hidden">
+        <a
+          href="mailto:martin.akdogan@enkoping.se"
+          className="inline-block bg-white/80 backdrop-blur-sm border-2 border-indigo-100 hover:border-indigo-300 hover:bg-white rounded-full px-3 py-1.5 text-xs font-bold text-indigo-600 hover:text-indigo-800 shadow-sm transition-colors"
+        >
+          Kontakta Martin
+        </a>
+      </div>
+      <div className="sm:hidden relative z-10 text-center pb-6 print:hidden">
+        <a
+          href="mailto:martin.akdogan@enkoping.se"
+          className="inline-block bg-white/80 border-2 border-indigo-100 rounded-full px-3 py-1.5 text-xs font-bold text-indigo-600 shadow-sm"
+        >
+          Kontakta Martin
+        </a>
+      </div>
     </div>
   );
 }
@@ -184,6 +206,12 @@ function AppShell({ user, onLogout }: { user: string; onLogout: () => void }) {
         return (
           <motion.div key="diploma" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
             <DiplomaView gameState={state} onNavigate={handleNavigate} userName={user} />
+          </motion.div>
+        );
+      case 'om':
+        return (
+          <motion.div key="om" variants={pageVariants} initial="initial" animate="animate" exit="exit" transition={pageTransition}>
+            <OmKallkritikView onNavigate={handleNavigate} />
           </motion.div>
         );
       case 'stats':
