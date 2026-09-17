@@ -4,9 +4,10 @@ import { LEVEL_BANDS } from '@/types';
 import { PROGRESSION_STEPS, MAX_STEP } from '@/data/progression';
 import { LETTER_BY_ID, LETTERS } from '@/data/letters';
 import {
-  exportAllData, getUsers, importAllData, removeUser,
-  saveProfile, saveProgress, setTeacherPin,
+  deleteCustomTheme, exportAllData, getActiveThemeId, getUsers, importAllData,
+  removeUser, saveProfile, saveProgress, setActiveThemeId, setTeacherPin,
 } from '@/lib/storage';
+import { allThemes } from '@/data/themes';
 import { emptyProgress } from '@/types';
 import { hasSwedishVoice } from '@/lib/speech';
 import { play } from '@/lib/audio';
@@ -22,16 +23,20 @@ export function TeacherView({
   progress,
   onProfileChange,
   onProgressChange,
+  onEditThemes,
   onExit,
 }: {
   profile: StudentProfile;
   progress: Progress;
   onProfileChange: (p: StudentProfile) => void;
   onProgressChange: (p: Progress) => void;
+  onEditThemes: () => void;
   onExit: () => void;
 }) {
   const [pin, setPin] = useState('');
   const [msg, setMsg] = useState<string | null>(null);
+  const [activeThemeId, setActive] = useState<string | null>(getActiveThemeId());
+  const themes = allThemes();
 
   const update = (patch: Partial<StudentProfile>) => {
     const next = { ...profile, ...patch };
@@ -147,6 +152,71 @@ export function TeacherView({
           />
           <span>Lås steget (appen höjer det inte automatiskt)</span>
         </label>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-xl font-bold">Klassens tema</h2>
+        <p className="text-ink-500">
+          Temat gäller hela enheten, inte en enskild elev – det är klassens aktuella ämne.
+          Eleven möter temats ord via bild, ljud och ordbygge i stället för löpande text.
+        </p>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {themes.map((t) => {
+            const isActive = activeThemeId === t.id;
+            return (
+              <div key={t.id} className="relative">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const next = isActive ? null : t.id;
+                    setActiveThemeId(next);
+                    setActive(next);
+                  }}
+                  className={`flex w-full flex-col items-center gap-2 rounded-tile border-2 px-3 py-4 ${
+                    isActive
+                      ? 'border-brand-600 bg-brand-50 ring-2 ring-brand-400 dark:bg-brand-900/40'
+                      : 'border-ink-200 dark:border-ink-700'
+                  }`}
+                >
+                  <span className="text-4xl" aria-hidden>{t.icon}</span>
+                  <span className="text-center text-sm font-bold leading-tight">{t.title}</span>
+                  <span className="text-xs text-ink-500">
+                    {t.subject}
+                    {t.origin === 'custom' && ' · eget'}
+                  </span>
+                </button>
+                {t.origin === 'custom' && (
+                  <button
+                    type="button"
+                    aria-label={`Ta bort temat ${t.title}`}
+                    onClick={() => {
+                      if (!confirm(`Ta bort temat "${t.title}"?`)) return;
+                      deleteCustomTheme(t.id);
+                      if (activeThemeId === t.id) setActive(null);
+                      setMsg('Temat borttaget.');
+                    }}
+                    className="absolute -right-2 -top-2 grid h-8 w-8 min-h-0 place-items-center
+                               rounded-full border-2 border-ink-300 bg-white text-sm dark:bg-ink-800"
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+            );
+          })}
+        </div>
+        {!activeThemeId && (
+          <p className="rounded-tile bg-amberx-100 px-4 py-3 font-semibold text-amberx-800">
+            Inget tema valt. Kortet "Klassens tema" visar då bara en uppmaning till dig.
+          </p>
+        )}
+        <button
+          type="button"
+          onClick={onEditThemes}
+          className="btn-pop rounded-tile border-brand-700 bg-brand-500 px-5 py-3 font-bold text-white"
+        >
+          + Eget tema
+        </button>
       </section>
 
       <section className="space-y-3">
