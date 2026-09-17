@@ -12,6 +12,7 @@ import Rorelsebanken from './components/Rorelsebanken'
 import Temadagar from './components/Temadagar'
 import Vardegrundskort from './components/Vardegrundskort'
 import IdagPanel from './components/IdagPanel'
+import Om from './components/Om'
 
 type ModulId =
   | 'hem'
@@ -46,6 +47,7 @@ const MODULER: ModulInfo[] = [
 
 export default function App() {
   const [aktiv, setAktiv] = useState<ModulId>('hem')
+  const [visaOm, setVisaOm] = useState(false)
 
   const aktuell = MODULER.find((m) => m.id === aktiv)
 
@@ -134,12 +136,24 @@ export default function App() {
         {aktiv === 'vardegrundskort' && <Vardegrundskort />}
       </main>
 
-      <div className="no-print fixed bottom-3 left-3 z-30 rounded-md bg-white/90 px-3 py-1.5 text-xs text-slate-500 shadow backdrop-blur">
-        Kontakt:{' '}
-        <a href="mailto:martin.akdogan@enkoping.se" className="text-brand-600 font-bold hover:underline">
-          martin.akdogan@enkoping.se
+      {/* Länkrad längst ner till vänster – syns oavsett scroll och modul. */}
+      <div className="no-print fixed bottom-3 left-3 z-30 flex items-center gap-0.5 rounded-md bg-white/90 p-1 text-xs shadow backdrop-blur">
+        <button
+          onClick={() => setVisaOm(true)}
+          className="rounded px-2 py-1 font-bold text-brand-600 hover:bg-brand-50 transition-colors"
+        >
+          Om Fritidsjakten
+        </button>
+        <span className="text-slate-300" aria-hidden="true">·</span>
+        <a
+          href="mailto:martin.akdogan@enkoping.se"
+          className="rounded px-2 py-1 font-bold text-brand-600 hover:bg-brand-50 transition-colors"
+        >
+          Kontakta Martin
         </a>
       </div>
+
+      {visaOm && <Om onClose={() => setVisaOm(false)} />}
     </div>
   )
 }
