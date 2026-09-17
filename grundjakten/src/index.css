@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* OpenDyslexic laddas bara om filerna finns i public/fonts/.
+   Saknas de faller font-family tillbaka på Lexend – inget går sönder. */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --bg: 250 250 255;
+    --surface: 255 255 255;
+    --text: 15 23 42;
+  }
+
+  .dark {
+    --bg: 2 6 23;
+    --surface: 30 41 59;
+    --text: 241 245 249;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  html, body, #root {
+    min-height: 100dvh;
+  }
+
+  body {
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+    background: rgb(var(--bg));
+    color: rgb(var(--text));
+    /* Ingen elev ska kunna markera text av misstag och tappa fokus. */
+    -webkit-user-select: none;
+    user-select: none;
+    overscroll-behavior: none;
+    /* Basstorlek större än normalt – hela appen ska gå att läsa på håll. */
+    font-size: 18px;
+  }
+
+  /* Synlig fokusring är hela tangentbordsnavigeringen i den här appen. */
+  :focus-visible {
+    outline: 3px solid #a3e635;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  /* Alla tryckytor är minst 56px – större än WCAG:s 44px, för att en
+     tioåring med motoriska svårigheter ska träffa på första försöket. */
+  button, a, [role="button"] {
+    min-height: 56px;
+  }
+
+  /* Textfält i lärarläget är det enda stället där markering ska funka. */
+  input, textarea {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+}
+
+@layer components {
+  /* "Arcade"-knapp: tjock kant + hård offset-skugga som trycks ned.
+     Läser som spel, inte som leksak. */
+  .btn-pop {
+    @apply relative rounded-tile border-2 border-ink-900/20 shadow-pop
+           transition-transform duration-75 active:translate-y-1 active:shadow-pop-sm;
+  }
+
+  .tile-pop {
+    @apply rounded-tile border-2 border-ink-900/15 shadow-tile
+           transition-transform duration-75 active:translate-y-0.5;
+  }
+
+  /* Bokstäver och ord eleven ska läsa renderas alltid i lästypsnittet. */
+  .reading {
+    font-family: 'Lexend', system-ui, sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  /* Sätts på <html> av inställningen i lärarläget. */
+  .font-dyslexic .reading {
+    font-family: 'OpenDyslexic', 'Lexend', sans-serif;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
