@@ -14,9 +14,11 @@ import {
 import {
   CHEST_META,
   ALL_BADGES,
-  BOSS_UNLOCK_THRESHOLD,
-  BOSS_CONFIGS,
   getBadge,
+  getBossGate,
+  bossWinsInStage,
+  completedModulesInStage,
+  nextBossForStage,
   openWoodChest,
   openSilverChest,
   openGoldChest,
@@ -26,7 +28,7 @@ import {
   openHemligChest,
   BADGE_HOW_TO_EARN,
 } from "@/lib/gamification";
-import type { BossId } from "@/lib/gamification";
+import { STAGES } from "@/lib/stages";
 import type { StudentData, GamificationData, Chest, ChestType } from "@/lib/types";
 
 const BG_LIGHT = "linear-gradient(160deg, #0a1744 0%, #0e2882 30%, #1242a0 55%, #0d246b 80%, #0a1744 100%)";
@@ -379,7 +381,6 @@ export default function KistorPage() {
 
   const bg = dark ? BG_DARK : BG_LIGHT;
   const unopened = gam.chests.filter((c) => !c.opened);
-  const exercisesLeft = Math.max(0, BOSS_UNLOCK_THRESHOLD - gam.exercisesCompleted);
 
   function handleOpenChest(chestId: string) {
     if (!gam || !student) return;
@@ -439,79 +440,56 @@ export default function KistorPage() {
 
       <main className="max-w-3xl mx-auto px-4 pb-10 space-y-8">
 
-        {/* ─── Boss challenges ── */}
+        {/* ─── Bossarna ──
+            Ingången ligger numera i varje världs Spel-flik, där det också står
+            hur många kapitel som återstår innan nästa strid. En global lista här
+            gjorde bossarna till en genväg förbi kapitlen. */}
         <section>
-          <SectionTitle emoji="⚔️" title="Boss Challenges" subtitle="Besegra bossarna för speciella belöningar" />
-
-          {!gam.bossUnlocked ? (
-            <div
-              className="rounded-2xl p-4 flex items-center gap-3"
-              style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.1)" }}
-            >
-              <span className="text-3xl">🔒</span>
-              <div className="flex-1">
-                <p className="text-sm font-black text-white">Boss Challenge</p>
-                <p className="text-white/60 text-xs">
-                  Slutför {exercisesLeft} övning{exercisesLeft !== 1 ? "ar" : ""} till för att låsa upp
-                </p>
-                <div className="flex items-center gap-2 mt-2">
-                  <div className="h-1.5 flex-1 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.1)" }}>
-                    <div
-                      className="h-full bg-white/50 rounded-full transition-all"
-                      style={{ width: `${Math.min(100, (gam.exercisesCompleted / BOSS_UNLOCK_THRESHOLD) * 100)}%` }}
-                    />
-                  </div>
-                  <span className="text-white/70 text-xs">{gam.exercisesCompleted}/{BOSS_UNLOCK_THRESHOLD}</span>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="space-y-3">
-              {(["dragon", "troll", "wizard"] as BossId[]).map((bossId) => {
-                const boss = BOSS_CONFIGS[bossId];
-                const beaten = (gam.bossesBeaten ?? []).includes(bossId);
-                return (
-                  <div
-                    key={bossId}
-                    className="rounded-2xl p-4"
-                    style={{
-                      background: boss.gradient,
-                      border: "1px solid rgba(255,255,255,0.15)",
-                      boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
-                    }}
-                  >
-                    <div className="flex items-center justify-between flex-wrap gap-3">
-                      <div className="flex items-center gap-3">
-                        <span className="text-3xl">{boss.emoji}</span>
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <h2 className="text-sm font-black text-white">{boss.name}</h2>
-                            {beaten && (
-                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white/20 text-white/90">
-                                ✓ Besegrad
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-white/60 text-xs">{boss.subtitle} · Belöning: {CHEST_META[boss.rewardChestType].label}</p>
-                        </div>
+          <SectionTitle emoji="⚔️" title="Bossar" subtitle="Möts i varje värld, när du förtjänat striden" />
+          <div className="space-y-3">
+            {STAGES.map((s) => {
+              const wins = bossWinsInStage(gam, s.id);
+              const boss = nextBossForStage(s.id, wins);
+              if (!boss) return null;
+              const gate = getBossGate(completedModulesInStage(student, s.id), wins);
+              return (
+                <div
+                  key={s.id}
+                  className="rounded-2xl p-4"
+                  style={{
+                    background: boss.gradient,
+                    border: "1px solid rgba(255,255,255,0.15)",
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+                  }}
+                >
+                  <div className="flex items-center justify-between flex-wrap gap-3">
+                    <div className="flex items-center gap-3">
+                      <span className="text-3xl">{gate.unlocked ? boss.emoji : "🔒"}</span>
+                      <div>
+                        <h2 className="text-sm font-black text-white">{boss.name}</h2>
+                        <p className="text-white/60 text-xs">
+                          {s.name} · {gate.unlocked
+                            ? `Striden väntar · Belöning: ${CHEST_META[boss.rewardChestType].label}`
+                            : `${gate.remaining} kapitel kvar (${gate.completed}/${gate.needed})`}
+                        </p>
                       </div>
-                      <Link
-                        href={`/boss?type=${bossId}`}
-                        className="px-4 py-2 rounded-xl font-bold text-xs cursor-pointer transition-all active:scale-95 flex-shrink-0"
-                        style={{
-                          background: "rgba(255,255,255,0.9)",
-                          color: boss.accentColor,
-                          border: "1px solid rgba(255,255,255,0.5)",
-                        }}
-                      >
-                        Utmana ⚔️
-                      </Link>
                     </div>
+                    <Link
+                      href={gate.unlocked ? `/boss?stage=${s.id}` : `/world/${s.id}?tab=grammar`}
+                      className="px-4 py-2 rounded-xl font-bold text-xs cursor-pointer transition-all active:scale-95 flex-shrink-0"
+                      style={{
+                        background: "rgba(255,255,255,0.9)",
+                        color: boss.accentColor,
+                        border: "1px solid rgba(255,255,255,0.5)",
+                      }}
+                    >
+                      {gate.unlocked ? "Utmana ⚔️" : "Gör kapitel →"}
+                    </Link>
                   </div>
-                );
-              })}
-            </div>
-          )}
+                </div>
+              );
+            })}
+          </div>
         </section>
 
         {/* ─── Unopened chests ── */}

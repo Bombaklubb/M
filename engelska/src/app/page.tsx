@@ -12,14 +12,17 @@ import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 
+// Alla fyra kapiteltyper räknas. Spelmodulerna saknades tidigare i båda
+// funktionerna, så Ordbyn visade "1/48" fast världen har 50 kapitel, och
+// poängen därifrån syntes inte alls på stadiekortet.
 function getStagePoints(student: StudentData, stageId: string): number {
   const sp = student.stages[stageId as StageId];
   if (!sp) return 0;
   let pts = 0;
   for (const m of Object.values(sp.grammarModules    ?? {})) pts += m.points;
-  for (const m of Object.values(sp.readingModules    ?? {})) pts += m.points;
   for (const m of Object.values(sp.spellingModules   ?? {})) pts += m.points;
   for (const m of Object.values(sp.wordsearchModules ?? {})) pts += m.points;
+  for (const m of Object.values(sp.spelModules       ?? {})) pts += m.points;
   return pts;
 }
 
@@ -30,6 +33,7 @@ function getStageCompleted(student: StudentData, stageId: string): number {
   for (const m of Object.values(sp.grammarModules    ?? {})) if (m.completed) done++;
   for (const m of Object.values(sp.spellingModules   ?? {})) if (m.completed) done++;
   for (const m of Object.values(sp.wordsearchModules ?? {})) if (m.completed) done++;
+  for (const m of Object.values(sp.spelModules       ?? {})) if (m.completed) done++;
   return done;
 }
 
@@ -91,7 +95,10 @@ export default function HomePage() {
             STAGES.map((s) => {
               const c = m[s.id];
               // Läsförståelse hör till Läsjakten och visas inte här – räknas därför inte.
-              const total = c ? (c.grammar ?? 0) + (c.spelling ?? 0) + (c.wordsearch ?? 0) : 0;
+              // Spelmodulerna räknas däremot med: de är kapitel som eleven klarar.
+              const total = c
+                ? (c.grammar ?? 0) + (c.spelling ?? 0) + (c.wordsearch ?? 0) + (c.spel ?? 0)
+                : 0;
               return [s.id, total] as [string, number];
             })
           )

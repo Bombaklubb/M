@@ -177,6 +177,10 @@ export interface StudentData {
   lastActive: string;
   totalPoints: number;
   stages: Record<StageId, StageProgress>;
+  /** Dagen (ÅÅÅÅ-MM-DD) eleven senast klarade ett kapitel. Snabbspelen öppnas
+   *  av dagens första klarade kapitel, så de förblir en belöning i stället för
+   *  en ersättning för övningarna. */
+  lastModuleDay?: string;
 }
 
 // ─── Gamification ─────────────────────────────────────────────────────────────

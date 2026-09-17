@@ -4,6 +4,8 @@ import type {
   MysteryBoxReward,
   GamificationData,
   StudentData,
+  StageId,
+  ModuleProgress,
 } from "./types";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -487,7 +489,114 @@ export const WIZARD_QUESTIONS: BossQuestion[] = [
 
 // ─── Boss configurations ──────────────────────────────────────────────────────
 
-export type BossId = "dragon" | "troll" | "wizard";
+// Professor boss – Engelska Akademin. Blandade frågetyper på gymnasienivå.
+export const PROFESSOR_QUESTIONS: BossQuestion[] = [
+  {
+    id: "pq1",
+    type: "multiple-choice",
+    category: "grammar",
+    question: "Which sentence is correct?",
+    options: [
+      "If I had known, I would have told you.",
+      "If I would have known, I would have told you.",
+      "If I knew, I would have told you.",
+      "If I have known, I would tell you.",
+    ],
+    correctIndex: 0,
+  },
+  {
+    id: "pq2",
+    type: "multiple-choice",
+    category: "grammar",
+    question: "Which sentence is in the passive voice?",
+    options: [
+      "The committee reviewed the proposal.",
+      "The proposal was reviewed by the committee.",
+      "The committee is reviewing the proposal.",
+      "The committee has reviewed the proposal.",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "pq3",
+    type: "fill-in-blank",
+    category: "grammar",
+    sentence: "She said she ___ finished the report the day before.",
+    answer: "had",
+    hint: "Indirekt tal: past perfect.",
+  },
+  {
+    id: "pq4",
+    type: "multiple-choice",
+    category: "grammar",
+    question: "Which sentence uses the subjunctive correctly?",
+    options: [
+      "I suggest that he goes home.",
+      "I suggest that he go home.",
+      "I suggest that he going home.",
+      "I suggest that he will go home.",
+    ],
+    correctIndex: 1,
+  },
+  {
+    id: "pq5",
+    type: "fill-in-blank",
+    category: "grammar",
+    sentence: "He must ___ forgotten the meeting – his chair is empty.",
+    answer: "have",
+    hint: "Modalt perfekt: must + have + particip.",
+  },
+  {
+    id: "pq6",
+    type: "build-sentence",
+    category: "grammar",
+    instruction: "Bygg meningen:",
+    words: ["did", "Not", "until", "later", "I", "understand", "."],
+    correctOrder: [1, 2, 3, 0, 4, 5, 6],
+    // Not until later did I understand .  – omvänd ordföljd efter inledande negation
+  },
+  {
+    id: "pq7",
+    type: "multiple-choice",
+    category: "grammar",
+    question: "Which relative pronoun fits? 'The report ___ conclusions were disputed is online.'",
+    options: ["which", "whose", "that", "who"],
+    correctIndex: 1,
+  },
+  {
+    id: "pq8",
+    type: "fill-in-blank",
+    category: "spelling",
+    sentence: "The results were thoroughly ___ before publication.",
+    answer: "analysed",
+    alternativeAnswers: ["analyzed"],
+    hint: "Verbet analyse i preteritum particip.",
+  },
+  {
+    id: "pq9",
+    type: "multiple-choice",
+    category: "grammar",
+    question: "Which sentence is grammatically correct?",
+    options: [
+      "Despite of the rain, the match continued.",
+      "Although the rain, the match continued.",
+      "Despite the rain, the match continued.",
+      "Despite the rain continued the match.",
+    ],
+    correctIndex: 2,
+  },
+  {
+    id: "pq10",
+    type: "build-sentence",
+    category: "grammar",
+    instruction: "Bygg meningen:",
+    words: ["been", "The", "has", "decision", "postponed", "again", "."],
+    correctOrder: [1, 3, 2, 0, 4, 5, 6],
+    // The decision has been postponed again .
+  },
+];
+
+export type BossId = "dragon" | "troll" | "wizard" | "professor";
 
 export interface BossConfig {
   id: BossId;
@@ -555,7 +664,113 @@ export const BOSS_CONFIGS: Record<BossId, BossConfig> = {
     rewardPoints: 200,
     rewardBadgeId: "word_wizard",
   },
+  professor: {
+    id: "professor",
+    name: "Språkprofessorn",
+    emoji: "🎓",
+    subtitle: "Akademins siste väktare",
+    description: "Professorn prövar avancerad engelska. Klara 6 av 10 frågor!",
+    gradient: "linear-gradient(135deg, #0c4a6e, #0369a1, #0284c7)",
+    cardBg: "#f0f9ff",
+    borderColor: "#7dd3fc",
+    accentColor: "#0284c7",
+    questions: PROFESSOR_QUESTIONS,
+    passThreshold: 0.6,
+    rewardChestType: "emerald",
+    rewardPoints: 200,
+    rewardBadgeId: "english_hero",
+  },
 };
+
+// ─── Bosslås ──────────────────────────────────────────────────────────────────
+// Bossen låstes tidigare upp av fem övningar var som helst i appen, en gång för
+// alltid. Den blev därmed ett sätt att tjäna poäng i stället för en belöning för
+// att ha tjänat dem. Låset hör nu till en värld och kommer tillbaka efter varje
+// match, så varje bossmatch måste förtjänas med nya kapitel i just den världen.
+
+/** Klarade kapitel som krävs i en värld för att förtjäna en bossmatch där. */
+export const BOSS_MODULES_PER_FIGHT = 10;
+
+/** Vilken boss som hör till vilken värld, lättast först. */
+export const BOSSES_BY_STAGE: Record<StageId, BossId[]> = {
+  lagstadiet: ["troll"],
+  mellanstadiet: ["dragon"],
+  hogstadiet: ["wizard"],
+  gymnasiet: ["professor"],
+};
+
+/** Hur många kapitel eleven klarat i en värld, alla fyra sorter räknade. */
+export function completedModulesInStage(
+  student: StudentData | null,
+  stageId: StageId
+): number {
+  const stage = student?.stages?.[stageId];
+  if (!stage) return 0;
+  const maps: (Record<string, ModuleProgress> | undefined)[] = [
+    stage.grammarModules,
+    stage.spellingModules,
+    stage.wordsearchModules,
+    stage.spelModules,
+  ];
+  return maps.reduce(
+    (n, map) => n + Object.values(map ?? {}).filter((m) => m.completed).length,
+    0
+  );
+}
+
+/** Vunna bossmatcher i en värld, summerat över den världens bossar. */
+export function bossWinsInStage(
+  gam: GamificationData | null,
+  stageId: StageId
+): number {
+  const wins = gam?.bossWinCounts ?? {};
+  return (BOSSES_BY_STAGE[stageId] ?? []).reduce((n, id) => n + (wins[id] ?? 0), 0);
+}
+
+export interface BossGate {
+  /** Sant när en match finns att spela i den här världen just nu. */
+  unlocked: boolean;
+  /** Antal klarade kapitel i världen som nästa match kostar. */
+  needed: number;
+  /** Kapitel kvar att klara. Noll när matchen är upplåst. */
+  remaining: number;
+  /** Klarade kapitel i världen. */
+  completed: number;
+}
+
+/**
+ * Om eleven har förtjänat en bossmatch i den här världen.
+ * Varje match kostar ytterligare BOSS_MODULES_PER_FIGHT kapitel.
+ */
+export function getBossGate(completed: number, winsInStage: number): BossGate {
+  const needed = BOSS_MODULES_PER_FIGHT * (winsInStage + 1);
+  return {
+    unlocked: completed >= needed,
+    needed,
+    remaining: Math.max(0, needed - completed),
+    completed,
+  };
+}
+
+/** Bossen världen erbjuder härnäst. Listan går runt när den tagit slut. */
+export function nextBossForStage(
+  stageId: StageId,
+  winsInStage: number
+): BossConfig | undefined {
+  const roster = BOSSES_BY_STAGE[stageId] ?? [];
+  if (roster.length === 0) return undefined;
+  return BOSS_CONFIGS[roster[winsInStage % roster.length]];
+}
+
+/**
+ * Vad en bossvinst ger. Lika mycket varje gång: kapitlen som låser upp matchen
+ * är bromsen, så en match som gav noll skulle bara sluta vara ett skäl att göra
+ * kapitel – vilket är hela poängen med låset.
+ */
+export const BOSS_MAX_REWARD = 200;
+export function bossPayout(boss: BossConfig): number {
+  return Math.min(boss.rewardPoints, BOSS_MAX_REWARD);
+}
 
 // ─── Pure helper functions ────────────────────────────────────────────────────
 

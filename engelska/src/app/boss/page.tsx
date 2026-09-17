@@ -5,10 +5,41 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import Header from "@/components/ui/Header";
 import { loadStudent, saveStudent, loadGamification, saveGamification } from "@/lib/storage";
-import { BOSS_CONFIGS, CHEST_META, getBadge } from "@/lib/gamification";
-import type { StudentData, GamificationData, Chest, ChestType } from "@/lib/types";
-import type { BossId, BossQuestion } from "@/lib/gamification";
+import {
+  BOSS_CONFIGS,
+  CHEST_META,
+  getBadge,
+  bossPayout,
+  bossWinsInStage,
+  completedModulesInStage,
+  getBossGate,
+  nextBossForStage,
+} from "@/lib/gamification";
+import type { StudentData, GamificationData, Chest, ChestType, StageId } from "@/lib/types";
+import type { BossId, BossQuestion, BossConfig } from "@/lib/gamification";
 import { getPositiveFeedback } from "@/lib/feedback";
+
+/** Fisher–Yates. Frågorna kom tidigare i fast ordning med fast rätt alternativ,
+ *  så en andra match tog tjugo sekunder ur minnet. */
+function shuffled<T>(arr: readonly T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/** Blandar även svarsalternativen och flyttar med facit. */
+function shuffleQuestion(q: BossQuestion): BossQuestion {
+  if (q.type !== "multiple-choice") return q;
+  const order = shuffled(q.options.map((_, i) => i));
+  return {
+    ...q,
+    options: order.map((i) => q.options[i]),
+    correctIndex: order.indexOf(q.correctIndex),
+  };
+}
 
 type Phase = "intro" | "battle" | "win" | "lose";
 
@@ -314,8 +345,7 @@ function BuildSentenceQuestion({
 function BossPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const bossId = (searchParams.get("type") ?? "dragon") as BossId;
-  const boss = BOSS_CONFIGS[bossId] ?? BOSS_CONFIGS.dragon;
+  const stageId = (searchParams.get("stage") ?? "lagstadiet") as StageId;
 
   const [student, setStudent] = useState<StudentData | null>(null);
   const [gam, setGam] = useState<GamificationData | null>(null);
@@ -323,6 +353,9 @@ function BossPageInner() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const [earnedBossPoints, setEarnedBossPoints] = useState(0);
+  // Frågeordningen slås fast en gång per match, annars blandas den om vid varje
+  // omrendering och eleven får en ny fråga mitt i striden.
+  const [runQuestions, setRunQuestions] = useState<BossQuestion[] | null>(null);
 
   useEffect(() => {
     const s = loadStudent();
@@ -330,12 +363,18 @@ function BossPageInner() {
     const g = loadGamification();
     setStudent(s);
     setGam(g);
-    if (!g.bossUnlocked) router.push("/kistor");
-  }, []);
+    // Matchen måste vara förtjänad med kapitel i den här världen.
+    const gate = getBossGate(completedModulesInStage(s, stageId), bossWinsInStage(g, stageId));
+    if (!gate.unlocked) { router.push(`/world/${stageId}?tab=spel`); return; }
+    const b = nextBossForStage(stageId, bossWinsInStage(g, stageId));
+    if (b) setRunQuestions(shuffled(b.questions).map(shuffleQuestion));
+  }, [stageId]);
 
   if (!student || !gam) return null;
 
-  const questions = boss.questions;
+  const boss: BossConfig =
+    nextBossForStage(stageId, bossWinsInStage(gam, stageId)) ?? BOSS_CONFIGS.dragon;
+  const questions = runQuestions ?? boss.questions;
   const currentQ = questions[currentIndex];
   const progress = (currentIndex / questions.length) * 100;
 
@@ -351,22 +390,19 @@ function BossPageInner() {
       if (passed) {
         const winCounts = currentGam.bossWinCounts ?? {};
         const prevWins = winCounts[boss.id] ?? 0;
-        const earnedPoints = prevWins === 0 ? Math.min(boss.rewardPoints, 200)
-                           : prevWins === 1 ? 50
-                           : 0;
+        // Platt utdelning. Låset – tio nya kapitel i världen per match – är
+        // bromsen, så en match som gav noll skulle bara sluta vara ett skäl att
+        // göra kapitel.
+        const earnedPoints = bossPayout(boss);
         const newWinCounts = { ...winCounts, [boss.id]: prevWins + 1 };
 
-        // Kistan följer samma trappa som poängen (2 första vinsterna). Utan detta
-        // gick bossen att spela om i all oändlighet för obegränsat med kistor,
-        // vilket kringgick poängtrappan helt.
-        const bonusChest: Chest | null = prevWins < 2
-          ? {
-              id: `chest_boss_${Date.now()}`,
-              type: boss.rewardChestType as ChestType,
-              earnedAt: new Date().toISOString(),
-              opened: false,
-            }
-          : null;
+        // Kistan följer utdelningen. Taket MAX_CHESTS_PER_TYPE gäller fortfarande.
+        const bonusChest: Chest = {
+          id: `chest_boss_${Date.now()}`,
+          type: boss.rewardChestType as ChestType,
+          earnedAt: new Date().toISOString(),
+          opened: false,
+        };
 
         const newBadges = currentGam.badges.includes(boss.rewardBadgeId)
           ? currentGam.badges
@@ -378,7 +414,7 @@ function BossPageInner() {
 
         const newGam: GamificationData = {
           ...currentGam,
-          chests: bonusChest ? [...currentGam.chests, bonusChest] : currentGam.chests,
+          chests: [...currentGam.chests, bonusChest],
           badges: newBadges,
           bossWins: currentGam.bossWins + 1,
           bossesBeaten: newBossesBeaten,
@@ -461,7 +497,7 @@ function BossPageInner() {
                 <p className="text-xs text-gray-400">frågor</p>
               </div>
               <div className="bg-gray-50 rounded-2xl p-3 border border-gray-100">
-                {(() => { const w = (gam?.bossWinCounts ?? {})[boss.id] ?? 0; const pts = w === 0 ? Math.min(boss.rewardPoints, 200) : w === 1 ? 50 : 0; return <><p className="text-2xl font-black text-amber-500">+{pts}</p><p className="text-xs text-gray-400">bonuspoäng</p></>; })()}
+                {(() => { const pts = bossPayout(boss); return <><p className="text-2xl font-black text-amber-500">+{pts}</p><p className="text-xs text-gray-400">bonuspoäng</p></>; })()}
               </div>
               <div className="bg-gray-50 rounded-2xl p-3 border border-gray-100">
                 <img

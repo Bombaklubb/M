@@ -218,6 +218,10 @@ export function saveModuleProgress(
     lastAttempt: new Date().toISOString(),
   };
 
+  // Ett klarat kapitel öppnar snabbspelen resten av dagen. Alla fyra
+  // kapiteltyper går genom den här funktionen, så det räcker att notera det här.
+  if (completed) data.lastModuleDay = todayStr();
+
   // Caller applies diminishing returns via getRepeatMultiplier before passing points
   data.totalPoints += points;
   saveStudent(data);
@@ -240,19 +244,44 @@ export function saveModuleProgress(
 /** Högsta antal poäng en enskild spelomgång kan ge, före dagens avtrappning. */
 export const MAX_POINTS_PER_GAME_ROUND = 150;
 
-interface GamePlayData { date: string; counts: Record<string, number>; }
+/**
+ * Högsta antal poäng ett enskilt spel kan ge under ett dygn.
+ *
+ * Avtrappningen bottnade på 20 procent men hade ingen botten i tid: svansen
+ * betalade omkring 30 poäng per omgång i all oändlighet, i fyra spel. Tjugo
+ * omgångar av varje gav runt 4 000 poäng på en dag utan en enda övning.
+ */
+export const MAX_GAME_POINTS_PER_DAY = 400;
+
+interface GamePlayData {
+  date: string;
+  counts: Record<string, number>;
+  /** Utdelade poäng per spel idag, för dagstaket. */
+  points?: Record<string, number>;
+}
 
 function gamePlayKey(name: string) {
   return `engelskajakten_gameplays_${name.toLowerCase().trim()}`;
 }
 
+/** Sant när eleven klarat ett kapitel idag, vilket öppnar spelen. */
+export function hasDoneModuleToday(student: StudentData | null): boolean {
+  return !!student && student.lastModuleDay === todayStr();
+}
+
 export function addGamePoints(
   gameId: string,
   rawPoints: number
-): { awarded: number; multiplier: number; lucky: LuckyBonus | null } {
-  if (typeof window === "undefined") return { awarded: 0, multiplier: 0, lucky: null };
+): { awarded: number; multiplier: number; lucky: LuckyBonus | null; locked: boolean } {
+  const empty = { awarded: 0, multiplier: 0, lucky: null, locked: false };
+  if (typeof window === "undefined") return empty;
   const student = loadStudent();
-  if (!student) return { awarded: 0, multiplier: 0, lucky: null };
+  if (!student) return empty;
+
+  // Spelen är en belöning för att ha gjort övningarna, så de ger ingenting en
+  // dag utan ett klarat kapitel bakom sig. De är låsta i gränssnittet också –
+  // att tyst ge noll hade sett ut som en bugg.
+  if (!hasDoneModuleToday(student)) return { ...empty, locked: true };
 
   const key = gamePlayKey(student.name);
   const today = todayStr();
@@ -264,6 +293,7 @@ export function addGamePoints(
   } catch {
     data = { date: today, counts: {} };
   }
+  if (!data.points) data.points = {};
 
   const plays = data.counts[gameId] ?? 0;
   const multiplier = plays < 3 ? 1 : plays < 5 ? 0.5 : 0.2;
@@ -273,7 +303,12 @@ export function addGamePoints(
   const capped = Math.min(Math.max(0, rawPoints), MAX_POINTS_PER_GAME_ROUND);
   let awarded = Math.round(capped * multiplier);
 
+  // Dagstak per spel.
+  const usedToday = data.points[gameId] ?? 0;
+  awarded = Math.min(awarded, Math.max(0, MAX_GAME_POINTS_PER_DAY - usedToday));
+
   data.counts[gameId] = plays + 1;
+  data.points[gameId] = usedToday + awarded;
   localStorage.setItem(key, JSON.stringify(data));
 
   // Turbonus: sällsynt slumpbonus (×2/×3)
@@ -285,7 +320,7 @@ export function addGamePoints(
     saveStudent(student);
   }
 
-  return { awarded, multiplier, lucky };
+  return { awarded, multiplier, lucky, locked: false };
 }
 
 // ─── Gamification persistence ─────────────────────────────────────────────────

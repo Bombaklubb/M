@@ -5,9 +5,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
 import ModuleCard from "@/components/ui/ModuleCard";
-import { loadStudent } from "@/lib/storage";
+import { loadStudent, hasDoneModuleToday, loadGamification } from "@/lib/storage";
 import { getStage } from "@/lib/stages";
-import type { StudentData, StageContent } from "@/lib/types";
+import {
+  getBossGate,
+  bossWinsInStage,
+  completedModulesInStage,
+  nextBossForStage,
+  bossPayout,
+  CHEST_META,
+} from "@/lib/gamification";
+import type { StudentData, StageContent, StageId, GamificationData } from "@/lib/types";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { NumberTicker } from "@/components/magicui/number-ticker";
@@ -42,6 +50,8 @@ export default function WorldPage({ params }: Props) {
   const [rules, setRules] = useState<RuleSection[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<Tab>("grammar");
+  const [gamification, setGamification] = useState<GamificationData | null>(null);
+  const [gamesOpen, setGamesOpen] = useState(false);
 
   useEffect(() => {
     // Spelen och kapitelsidorna länkar tillbaka med ?tab=... så eleven landar
@@ -52,6 +62,8 @@ export default function WorldPage({ params }: Props) {
 
     const s = loadStudent();
     setStudent(s);
+    setGamification(loadGamification());
+    setGamesOpen(hasDoneModuleToday(s));
     fetch(`/content/${stageId}/content.json`)
       .then((r) => r.json())
       .then((data: StageContent) => setContent(data))
@@ -338,6 +350,74 @@ export default function WorldPage({ params }: Props) {
               <h2 className="text-xl font-black text-gray-900 dark:text-gray-100">Spel</h2>
               <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">Träna engelskan med roliga spel!</p>
             </div>
+
+            {/* Bossen – förtjänas med kapitel i den här världen */}
+            {(() => {
+              const gate = getBossGate(
+                completedModulesInStage(student, stage.id as StageId),
+                bossWinsInStage(gamification, stage.id as StageId)
+              );
+              const boss = nextBossForStage(
+                stage.id as StageId,
+                bossWinsInStage(gamification, stage.id as StageId)
+              );
+              if (!boss) return null;
+              const card = (
+                <div
+                  className="relative rounded-2xl p-5 text-white overflow-hidden"
+                  style={{ background: boss.gradient }}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-4xl flex-shrink-0">{gate.unlocked ? boss.emoji : "🔒"}</span>
+                    <div className="min-w-0">
+                      <h3 className="text-lg font-black leading-tight">{boss.name}</h3>
+                      <p className="text-xs font-semibold text-white/70">{boss.subtitle}</p>
+                      <p className="text-sm text-white/85 mt-2">
+                        {gate.unlocked
+                          ? `Du har förtjänat en strid. Vinn och få +${bossPayout(boss)} poäng och en ${CHEST_META[boss.rewardChestType].label.toLowerCase()}.`
+                          : `${gate.remaining} kapitel kvar i ${stage.name} innan du får möta bossen.`}
+                      </p>
+                      <div className="mt-3 h-2 bg-white/25 rounded-full overflow-hidden max-w-xs">
+                        <div
+                          className="h-full bg-white rounded-full transition-all"
+                          style={{ width: `${Math.min(100, (gate.completed / gate.needed) * 100)}%` }}
+                        />
+                      </div>
+                      <p className="text-[11px] text-white/70 mt-1">
+                        {gate.completed} av {gate.needed} klarade kapitel
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+              return (
+                <div className="mb-4">
+                  {gate.unlocked ? (
+                    <Link href={`/boss?stage=${stage.id}`} className="block cursor-pointer hover:scale-[1.01] transition-transform">
+                      {card}
+                    </Link>
+                  ) : (
+                    <div className="opacity-80">{card}</div>
+                  )}
+                </div>
+              );
+            })()}
+
+            {/* Snabbspelen öppnas av dagens första klarade kapitel */}
+            {!gamesOpen && (
+              <div
+                role="status"
+                className="mb-4 rounded-2xl border-2 border-dashed border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-900/20 p-5 text-center"
+              >
+                <p className="text-3xl mb-1">🔒</p>
+                <p className="font-black text-amber-800 dark:text-amber-300">Spelen öppnas när du klarat ett kapitel idag</p>
+                <p className="text-sm text-amber-700 dark:text-amber-400 mt-1">
+                  Gör klart ett kapitel under Grammatik, Stavning eller Ordsökning, så är spelen öppna resten av dagen.
+                </p>
+              </div>
+            )}
+
+            {gamesOpen && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { href: "memory",     emoji: "🃏", title: "Memory",        sub: "Para ihop svenska med engelska!",       desc: "Lätt (8 kort) • Medel (14 kort) • Svår (20 kort). Hitta alla par!", gradient: "from-teal-500 via-cyan-500 to-blue-500" },
@@ -363,6 +443,7 @@ export default function WorldPage({ params }: Props) {
                 </Link>
               ))}
             </div>
+            )}
           </div>
         )}
 
