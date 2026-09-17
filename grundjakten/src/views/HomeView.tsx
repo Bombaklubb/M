@@ -2,10 +2,10 @@ import type { Progress, StudentProfile } from '@/types';
 import { useLongPress } from '@/hooks/useLongPress';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { play } from '@/lib/audio';
-import { getLevelTitle, xpForNextLevel } from '@/lib/utils';
+import { getLevelTitle, todayStamp, xpForNextLevel } from '@/lib/utils';
 import { hasSwedishVoice } from '@/lib/speech';
 
-export type Destination = 'bokstaver' | 'skriva' | 'tema';
+export type Destination = 'uppdrag' | 'bokstaver' | 'skriva' | 'tema';
 
 const CARDS: { id: Destination; icon: string; title: string; say: string; tint: string }[] = [
   { id: 'bokstaver', icon: '🔤', title: 'Bokstäver', say: 'Bokstäver', tint: 'bg-brand-500 border-brand-700' },
@@ -16,9 +16,12 @@ const CARDS: { id: Destination; icon: string; title: string; say: string; tint: 
 /**
  * Startskärmen.
  *
- * Tre stora kort med ikon. Rubriktexten finns för lärarens och för
- * skärmläsarens skull – eleven navigerar på ikon och på det korten säger
- * när man trycker på dem.
+ * Dagens uppdrag ligger överst och är dubbelt så stort som de andra korten.
+ * Det är avsiktligt: en elev som inte kan läsa ska inte behöva välja mellan
+ * spår och moment. Hon ska kunna trycka på det stora och komma igång.
+ *
+ * De tre korten under är biblioteket – dit läraren pekar när något särskilt
+ * ska tränas, inte något eleven förväntas navigera i själv.
  */
 export function HomeView({
   profile,
@@ -35,6 +38,7 @@ export function HomeView({
 }) {
   const longPress = useLongPress(onTeacher);
   const xp = xpForNextLevel(progress.xp);
+  const missionDoneToday = progress.lastMissionDate === todayStamp();
 
   useAutoSpeak(
     { id: 'home-greet', text: 'Vad vill du göra?', lang: 'sv-SE' },
@@ -82,6 +86,30 @@ export function HomeView({
       </header>
 
       <main className="grid flex-1 content-center gap-5">
+        {/* Dagens uppdrag – appens huvudknapp. Medvetet störst på skärmen. */}
+        <button
+          type="button"
+          aria-label={
+            missionDoneToday ? 'Dagens uppdrag, redan klart idag' : 'Dagens uppdrag'
+          }
+          onPointerDown={() =>
+            void play({ id: 'say-uppdrag', text: 'Dagens uppdrag', lang: 'sv-SE' })
+          }
+          onClick={() => onGo('uppdrag')}
+          className="btn-pop flex items-center gap-7 rounded-card border-amberx-700
+                     bg-gradient-to-r from-amberx-500 to-amberx-600 px-8 py-12 text-left text-white"
+        >
+          <span className="text-8xl leading-none" aria-hidden>
+            {missionDoneToday ? '✅' : '🗝️'}
+          </span>
+          <span className="flex flex-col">
+            <span className="text-5xl font-extrabold leading-tight">Dagens uppdrag</span>
+            <span className="text-2xl font-bold text-amberx-100">
+              {missionDoneToday ? 'Klart idag' : 'Hjälp Leo'}
+            </span>
+          </span>
+        </button>
+
         {CARDS.map((card) => (
           <button
             key={card.id}
@@ -89,10 +117,10 @@ export function HomeView({
             aria-label={card.say}
             onPointerDown={() => void play({ id: `say-${card.id}`, text: card.say, lang: 'sv-SE' })}
             onClick={() => onGo(card.id)}
-            className={`btn-pop flex items-center gap-6 rounded-card px-8 py-8 text-left text-white ${card.tint}`}
+            className={`btn-pop flex items-center gap-6 rounded-card px-8 py-5 text-left text-white ${card.tint}`}
           >
-            <span className="text-7xl leading-none" aria-hidden>{card.icon}</span>
-            <span className="text-4xl font-extrabold">{card.title}</span>
+            <span className="text-5xl leading-none" aria-hidden>{card.icon}</span>
+            <span className="text-3xl font-extrabold">{card.title}</span>
           </button>
         ))}
       </main>

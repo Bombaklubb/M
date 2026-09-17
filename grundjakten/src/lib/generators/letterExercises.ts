@@ -76,7 +76,13 @@ function makePictureMatch(letterId: string, step: number, rng: Rng): Exercise | 
       ? { text: matching[0].text, emoji: matching[0].emoji!, say: matching[0].say }
       : { text: letter.keyword.word, emoji: letter.keyword.emoji, say: letter.keyword.wordOnly };
 
-  const wrong = pickN(pool.filter((w) => w.graphemes[0] !== letterId && w.emoji), 2, rng);
+  // Samma sak här: distraktorbilderna läses aldrig, så de får komma från hela
+  // ordbanken. De får bara inte råka börja på samma bokstav som svaret.
+  const wrong = pickN(
+    picturableWords(8).filter((w) => w.graphemes[0] !== letterId),
+    2,
+    rng
+  );
   if (wrong.length < 2) return null;
 
   const choices = shuffle(
@@ -99,9 +105,11 @@ function makePictureMatch(letterId: string, step: number, rng: Rng): Exercise | 
 }
 
 /** Ljuda ihop: appen säger s… o… l… och eleven väljer bilden. */
-function makeBlend(word: WordEntry, step: number, rng: Rng): Exercise | null {
+function makeBlend(word: WordEntry, rng: Rng): Exercise | null {
   if (!word.emoji) return null;
-  const wrong = pickN(picturableWords(step).filter((w) => w.id !== word.id), 2, rng);
+  // Distraktorerna är bilder eleven aldrig läser, så de behöver inte ligga på
+  // hennes steg. Att begränsa dem gjorde tidiga steg nästan obyggbara.
+  const wrong = pickN(picturableWords(8).filter((w) => w.id !== word.id), 2, rng);
   if (wrong.length < 2) return null;
 
   const parts = word.graphemes.map((g) => {
@@ -126,9 +134,9 @@ function makeBlend(word: WordEntry, step: number, rng: Rng): Exercise | null {
 }
 
 /** Läs ordet själv – ordet SÄGS inte förrän eleven svarat. */
-function makeReadWord(word: WordEntry, step: number, rng: Rng): Exercise | null {
+function makeReadWord(word: WordEntry, rng: Rng): Exercise | null {
   if (!word.emoji) return null;
-  const wrong = pickN(picturableWords(step).filter((w) => w.id !== word.id), 2, rng);
+  const wrong = pickN(picturableWords(8).filter((w) => w.id !== word.id), 2, rng);
   if (wrong.length < 2) return null;
   return {
     id: `ex-read-${word.id}-${Math.floor(rng() * 1e6)}`,
@@ -195,11 +203,11 @@ export function generateLetterPass(step: number, level: LevelBand, seed = Date.n
     } else if (level === 2) {
       if (roll < 0.3) made = makeSoundMatch(pick(letterPool, rng), unlocked, rng);
       else if (roll < 0.6) made = makePictureMatch(pick(letterPool, rng), step, rng);
-      else if (words.length) made = makeBlend(pick(words, rng), step, rng);
+      else if (words.length) made = makeBlend(pick(words, rng), rng);
     } else {
       if (roll < 0.2) made = makePictureMatch(pick(letterPool, rng), step, rng);
-      else if (roll < 0.5 && words.length) made = makeBlend(pick(words, rng), step, rng);
-      else if (roll < 0.8 && words.length) made = makeReadWord(pick(words, rng), step, rng);
+      else if (roll < 0.5 && words.length) made = makeBlend(pick(words, rng), rng);
+      else if (roll < 0.8 && words.length) made = makeReadWord(pick(words, rng), rng);
       else made = makeSightWord(rng);
     }
 
