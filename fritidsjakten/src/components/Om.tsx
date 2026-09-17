@@ -3,7 +3,7 @@ import { X, Sparkles } from 'lucide-react'
 
 const EPOST = 'martin.akdogan@enkoping.se'
 
-// Kort presentation av appen – nås via länken längst ner till vänster.
+// Kort presentation av appen – nås via länken i headern.
 export default function Om({ onClose }: { onClose: () => void }) {
   // Escape stänger rutan, som i vilken dialog som helst.
   useEffect(() => {

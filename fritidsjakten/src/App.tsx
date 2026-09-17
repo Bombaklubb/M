@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {
   Sparkles, Library, Wand2, HeartHandshake, Layers, CalendarDays, Activity,
-  ArrowLeft, Printer, PartyPopper, MessagesSquare,
+  ArrowLeft, Printer, PartyPopper, MessagesSquare, Mail,
 } from 'lucide-react'
 import Temabanken from './components/Temabanken'
 import Aktivitetsgeneratorn from './components/Aktivitetsgeneratorn'
@@ -77,6 +77,31 @@ export default function App() {
               {aktiv === 'hem' ? 'Aktiviteter för fritids' : `Modul ${aktuell?.nr}`}
             </p>
           </div>
+          {/* Om- och kontaktlänkarna ligger i headern, som i syskonapparna.
+              Texterna kortas ner på smala skärmar så att raden inte spränger
+              sig på en telefon. */}
+          <button
+            onClick={() => setVisaOm(true)}
+            className="shrink-0 flex items-center rounded-lg px-2.5 min-h-[38px] text-sm
+                       font-bold text-brand-600 hover:bg-brand-50 transition-colors"
+            aria-label="Om Fritidsjakten"
+          >
+            <span className="hidden sm:inline">Om Fritidsjakten</span>
+            <span className="sm:hidden">Om</span>
+          </button>
+
+          {/* min-h och min-w: ikonen ensam ger annars bara 28 px tryckyta på telefon. */}
+          <a
+            href="mailto:martin.akdogan@enkoping.se"
+            className="shrink-0 flex items-center justify-center gap-1.5 rounded-lg px-2.5
+                       min-h-[38px] min-w-[38px] text-sm font-bold text-brand-600
+                       hover:bg-brand-50 transition-colors"
+            aria-label="Kontakta Martin"
+          >
+            <Mail size={18} className="sm:hidden" />
+            <span className="hidden sm:inline">Kontakta Martin</span>
+          </a>
+
           <button
             onClick={() => window.print()}
             className="btn-soft !py-2 !px-3 flex items-center gap-1.5 shrink-0"
@@ -95,8 +120,7 @@ export default function App() {
         </p>
       </div>
 
-      {/* pb-24: plats så att den fasta kontaktrutan aldrig skymmer sista innehållet */}
-      <main className="max-w-3xl mx-auto px-4 pt-6 pb-24 print:pb-6">
+      <main className="max-w-3xl mx-auto px-4 pt-6 pb-10 print:pb-6">
         {aktiv === 'hem' && (
           <div className="animate-fade-in">
             <IdagPanel onOppnaKompisuppdrag={() => setAktiv('kompisuppdrag')} />
@@ -135,23 +159,6 @@ export default function App() {
         {aktiv === 'temadagar' && <Temadagar />}
         {aktiv === 'vardegrundskort' && <Vardegrundskort />}
       </main>
-
-      {/* Länkrad längst ner till vänster – syns oavsett scroll och modul. */}
-      <div className="no-print fixed bottom-3 left-3 z-30 flex items-center gap-0.5 rounded-md bg-white/90 p-1 text-xs shadow backdrop-blur">
-        <button
-          onClick={() => setVisaOm(true)}
-          className="rounded px-2 py-1 font-bold text-brand-600 hover:bg-brand-50 transition-colors"
-        >
-          Om Fritidsjakten
-        </button>
-        <span className="text-slate-300" aria-hidden="true">·</span>
-        <a
-          href="mailto:martin.akdogan@enkoping.se"
-          className="rounded px-2 py-1 font-bold text-brand-600 hover:bg-brand-50 transition-colors"
-        >
-          Kontakta Martin
-        </a>
-      </div>
 
       {visaOm && <Om onClose={() => setVisaOm(false)} />}
     </div>
