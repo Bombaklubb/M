@@ -5,6 +5,8 @@ import { BuildWordTiles } from './BuildWordTiles';
 import { LetterFormation } from './LetterFormation';
 import { ReadSentence } from './ReadSentence';
 import { BuildSentenceCards } from './BuildSentenceCards';
+import { MicroTextExercise } from './MicroTextExercise';
+import { WordPicturePair } from './WordPicturePair';
 
 /**
  * Uttömmande switch på Exercise['kind'].
@@ -58,10 +60,22 @@ export function ExerciseRenderer({
     case 'build-sentence-cards':
       return <BuildSentenceCards exercise={exercise} onAnswer={onAnswer} locked={locked} />;
 
-    // Fas 3 – parallellspåret. Genereras inte än.
-    case 'first-sound-sort':
     case 'word-picture-pair':
+      return <WordPicturePair exercise={exercise} onAnswer={onAnswer} locked={locked} />;
+
     case 'micro-text':
+      return (
+        <MicroTextExercise
+          exercise={exercise}
+          onAnswer={onAnswer}
+          locked={locked}
+          guideTo={guideTo}
+          wrongId={wrongId}
+        />
+      );
+
+    // Typad men inte genererad än.
+    case 'first-sound-sort':
       return null;
 
     default: {

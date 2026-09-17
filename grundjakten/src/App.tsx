@@ -10,9 +10,13 @@ import { RewardView } from '@/views/RewardView';
 import { TeacherView } from '@/views/TeacherView';
 import { TeacherLoginView } from '@/views/TeacherLoginView';
 import { MissionView } from '@/views/MissionView';
+import { ThemeHubView } from '@/views/ThemeHubView';
+import { ThemeEditorView } from '@/views/ThemeEditorView';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import { generateWritePass, type WriteMode } from '@/lib/generators/writingExercises';
 import { generateMission } from '@/lib/generators/missionExercises';
+import { generateThemePass, type ThemeMode } from '@/lib/generators/themeExercises';
+import { activeTheme } from '@/data/themes';
 import { getCurrentUser, getProfile, getProgress, saveProfile, saveProgress, setCurrentUser } from '@/lib/storage';
 import { addXp, recordAnswer, shouldAdvanceStep, touchDailyStreak } from '@/lib/progress';
 import { setRateScale } from '@/lib/audio';
@@ -24,6 +28,8 @@ type View =
   | { name: 'mission' }
   | { name: 'letters' }
   | { name: 'write' }
+  | { name: 'theme' }
+  | { name: 'theme-editor' }
   | { name: 'session'; exercises: Exercise[]; repeat: () => Exercise[] }
   | { name: 'reward'; result: SessionResult; repeat: () => Exercise[] }
   | { name: 'teacher-pin' }
@@ -84,8 +90,14 @@ export default function App() {
 
     let next = progress;
     for (const { exercise, firstTry } of result.perItem) {
-      if ('letterId' in exercise) next = recordAnswer(next, 'letters', exercise.letterId, firstTry);
-      else if ('wordId' in exercise) next = recordAnswer(next, 'words', exercise.wordId, firstTry);
+      if ('letterId' in exercise) {
+        next = recordAnswer(next, 'letters', exercise.letterId, firstTry);
+      } else if ('wordId' in exercise) {
+        // Temaord räknas för sig. Annars skulle "skepp" från Vikingatiden
+        // blandas ihop med ljudenliga träningsord i lärarens överblick.
+        const bucket = exercise.module === 'tema' ? 'themeWords' : 'words';
+        next = recordAnswer(next, bucket, exercise.wordId, firstTry);
+      }
     }
 
     next = addXp(next, result.xpEarned);
@@ -145,11 +157,7 @@ export default function App() {
     if (dest === 'uppdrag') setView({ name: 'mission' });
     else if (dest === 'bokstaver') setView({ name: 'letters' });
     else if (dest === 'skriva') setView({ name: 'write' });
-    else {
-      // Parallellspåret byggs i nästa fas. Tills dess leder kortet
-      // tillbaka hem i stället för till en tom skärm.
-      setView({ name: 'home' });
-    }
+    else setView({ name: 'theme' });
   };
 
   return (
@@ -195,6 +203,25 @@ export default function App() {
         />
       )}
 
+      {view.name === 'theme' && (
+        <ThemeHubView
+          theme={activeTheme()}
+          profile={profile}
+          onBack={goHome}
+          onStart={(mode: ThemeMode) => {
+            const theme = activeTheme();
+            if (!theme) return;
+            startSession(() =>
+              generateThemePass(theme, mode, profile.progressionStep, profile.level)
+            );
+          }}
+        />
+      )}
+
+      {view.name === 'theme-editor' && (
+        <ThemeEditorView level={profile.level} onDone={() => setView({ name: 'teacher' })} />
+      )}
+
       {view.name === 'session' && (
         <SessionView
           exercises={view.exercises}
@@ -222,6 +249,7 @@ export default function App() {
           progress={progress}
           onProfileChange={setProfile}
           onProgressChange={setProgress}
+          onEditThemes={() => setView({ name: 'theme-editor' })}
           onExit={goHome}
         />
       )}

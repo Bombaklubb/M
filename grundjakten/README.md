@@ -51,6 +51,54 @@ kan kontrollera ordföljd, stor bokstav och att punkten hamnar sist – de tre
 sakerna eleven faktiskt ska lära sig här. Fritt skrivande hör hemma i ett
 läge där du som lärare läser texten, och det är inte byggt.
 
+## Klassens tema
+
+Parallellspåret. Eleven arbetar med **samma ord som resten av klassen**, men
+via lyssna-och-peka, bildstöd och ordbygge i stället för löpande text.
+
+Tre lägen: *Lyssna och välj*, *Para ihop* och *Lyssna på texten* (uppläst
+minitext med bildfrågor). Ett läge som temat inte räcker till visas inte
+alls — hellre färre kort än ett kort som leder till en tom skärm.
+
+Ett temapass är åtta uppgifter: fem från temat och tre från elevens vanliga
+bokstavsspår. Fonikträningen ska inte pausas för att eleven jobbar med SO.
+
+Läraren väljer tema i lärarläget. Valet gäller **hela enheten**, inte en
+enskild elev — det är klassens aktuella ämne. Är inget valt visar
+temaskärmen en uppmaning i stället för en övning.
+
+### Färdiga teman
+
+Tolv stycken i `data/themes/curated.ts`: Vattnets kretslopp, Kroppen, Djur i
+Sverige, Växter, Rymden, Väder och årstider, Vikingatiden, Stenåldern,
+Sverige, Animals, Food and drink, My family and home.
+
+Orden är medvetet **konkreta**, eftersom bildlagret är emoji. "Avdunstning"
+och "demokrati" har ingen bild och hör inte hemma här — de tas muntligt av
+läraren. Det är den uttalade kompromissen: eleven arbetar med klassens tema,
+men med temats gripbara ord.
+
+Ett nytt tema skrivs kompakt med `defineTheme` — ett ord är `['skepp', '⛵']`,
+resten (grafem, talsyntes-token, svarsalternativ) härleds.
+
+### Eget tema
+
+För när klassen jobbar med något banken inte täcker. Läraren skriver namn
+och 6–10 ord; emoji föreslås automatiskt ur `data/emojiIndex.ts` (skriv
+"räv" → 🦊, och bestämd form som "skolan" hittar stammen).
+
+**Ord utan bild tas inte bort — de ger bara färre övningstyper.** Ett ord med
+bild ger fyra typer, ett utan ger en (Bygg ordet). Redigeraren visar detta
+per ord medan du skriver, så att degraderingen syns i stället för att kännas
+godtycklig.
+
+Grafemuppdelningen visas också som chips, eftersom den *gissas*: `sj` hålls
+ihop, och `sk` är ett ljud i "sked" men två i "skog". Den blir ibland fel, och
+då ska du kunna se det.
+
+Egna teman får inga minitexter — de kräver frågor med bildsvar och blir för
+mycket att fylla i. De ger ordövningar i stället.
+
 ## Köra lokalt
 
 ```bash
@@ -100,6 +148,10 @@ skolan rensar webbläsardata.** Spara en backup från lärarläget då och då.
 
 ## Status
 
-Byggt: Dagens uppdrag, bokstavsmodulen, skrivmodulen, elevprofiler, lärarläge.
-Inte byggt än: parallellspåret "Klassens tema" (kortet finns men leder
-tillbaka hem), ordförrådsspåret, stavningsreglerna, samt siffror och räkning.
+Byggt: Dagens uppdrag, bokstavsmodulen, skrivmodulen, Klassens tema med
+färdiga och egna teman, elevprofiler, lärarläge.
+
+Inte byggt än: ordförrådsspåret (synonymer, motsatsord, kategorisera),
+stavningsreglerna (dubbelteckning, ng/nk, sj/tj, e/ä, o/å, j-ljud — alla sex
+är samma övningstyp med olika ordbanker), grammatikspåret, samt siffror och
+räkning.

@@ -10,6 +10,13 @@ interface Props {
   guideTo?: string | null;
   /** Alternativet eleven just tryckte fel på. */
   wrongId?: string | null;
+  /**
+   * Mindre rutor, för skärmar där något annat redan tar plats ovanför –
+   * t.ex. minitexten, som måste stå kvar medan eleven svarar. Utan det
+   * hamnar alternativen under skärmkanten på en 768px hög Chromebook, och
+   * en elev som inte kan läsa förstår inte att hon ska scrolla.
+   */
+  compact?: boolean;
 }
 
 /**
@@ -19,14 +26,14 @@ interface Props {
  * läsa måste kunna höra vad varje val ÄR innan hon väljer, annars är det
  * gissning och inte inlärning.
  */
-export function ChoiceGrid({ choices, onPick, disabled, guideTo, wrongId }: Props) {
+export function ChoiceGrid({ choices, onPick, disabled, guideTo, wrongId, compact }: Props) {
   const cols = choices.length <= 2 ? 'grid-cols-2' : 'grid-cols-3';
 
   return (
     // Stora rutor med flit: på en 1366×768-Chromebook ska alternativen fylla
     // skärmen så att en elev med lässvårigheter ser dem på håll och träffar
     // dem på första försöket.
-    <div className={cn('grid w-full max-w-5xl gap-6', cols)}>
+    <div className={cn('grid w-full gap-6', cols, compact ? 'max-w-3xl' : 'max-w-5xl')}>
       {choices.map((choice) => {
         const isGuided = guideTo === choice.id;
         const isWrong = wrongId === choice.id;
@@ -38,18 +45,37 @@ export function ChoiceGrid({ choices, onPick, disabled, guideTo, wrongId }: Prop
               onClick={() => onPick(choice)}
               aria-label={choice.say.text}
               className={cn(
-                'tile-pop grid min-h-[15rem] w-full place-items-center bg-white p-6',
+                'tile-pop grid w-full place-items-center bg-white',
+                compact ? 'min-h-[8rem] p-3' : 'min-h-[15rem] p-6',
                 'dark:bg-ink-800 disabled:opacity-100',
                 isGuided && 'ring-4 ring-lime-400 animate-guide-glow',
                 isWrong && 'opacity-40 grayscale animate-nudge'
               )}
             >
-              {choice.emoji && <span className="text-8xl leading-none">{choice.emoji}</span>}
+              {choice.emoji && (
+                <span className={cn('leading-none', compact ? 'text-6xl' : 'text-8xl')}>
+                  {choice.emoji}
+                </span>
+              )}
               {choice.letter && (
-                <span className="reading text-9xl font-bold leading-none">{choice.letter}</span>
+                <span
+                  className={cn(
+                    'reading font-bold leading-none',
+                    compact ? 'text-7xl' : 'text-9xl'
+                  )}
+                >
+                  {choice.letter}
+                </span>
               )}
               {choice.word && (
-                <span className="reading text-6xl font-medium leading-none">{choice.word}</span>
+                <span
+                  className={cn(
+                    'reading font-medium leading-none',
+                    compact ? 'text-4xl' : 'text-6xl'
+                  )}
+                >
+                  {choice.word}
+                </span>
               )}
             </button>
 
