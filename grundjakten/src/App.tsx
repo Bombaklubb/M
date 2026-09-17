@@ -9,8 +9,10 @@ import { SessionView, type SessionResult } from '@/views/SessionView';
 import { RewardView } from '@/views/RewardView';
 import { TeacherView } from '@/views/TeacherView';
 import { TeacherLoginView } from '@/views/TeacherLoginView';
+import { MissionView } from '@/views/MissionView';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import { generateWritePass, type WriteMode } from '@/lib/generators/writingExercises';
+import { generateMission } from '@/lib/generators/missionExercises';
 import { getCurrentUser, getProfile, getProgress, saveProfile, saveProgress, setCurrentUser } from '@/lib/storage';
 import { addXp, recordAnswer, shouldAdvanceStep, touchDailyStreak } from '@/lib/progress';
 import { setRateScale } from '@/lib/audio';
@@ -19,6 +21,7 @@ import { todayStamp } from '@/lib/utils';
 type View =
   | { name: 'login' }
   | { name: 'home' }
+  | { name: 'mission' }
   | { name: 'letters' }
   | { name: 'write' }
   | { name: 'session'; exercises: Exercise[]; repeat: () => Exercise[] }
@@ -87,6 +90,8 @@ export default function App() {
 
     next = addXp(next, result.xpEarned);
     next = touchDailyStreak(next);
+
+    const module = result.perItem[0]?.exercise.module ?? 'bokstaver';
     next = {
       ...next,
       chests: next.chests + 1,
@@ -94,13 +99,25 @@ export default function App() {
         ...next.sessions,
         {
           date: todayStamp(),
-          module: result.perItem[0]?.exercise.module ?? 'bokstaver',
+          module,
           items: result.total,
           firstTryCorrect: result.firstTryCorrect,
           seconds: result.seconds,
         },
       ],
     };
+
+    // Berättelsen går bara framåt en gång per dag. Att göra uppdraget igen
+    // samma dag är tillåtet och ger XP – repetition är själva poängen – men
+    // det spolar inte fram Leo till slutet på en eftermiddag.
+    if (module === 'uppdrag' && next.lastMissionDate !== todayStamp()) {
+      next = {
+        ...next,
+        missionBeat: next.missionBeat + 1,
+        missionsDone: next.missionsDone + 1,
+        lastMissionDate: todayStamp(),
+      };
+    }
 
     saveProgress(profile.name, next);
     setProgress(next);
@@ -125,7 +142,8 @@ export default function App() {
   }
 
   const go = (dest: Destination) => {
-    if (dest === 'bokstaver') setView({ name: 'letters' });
+    if (dest === 'uppdrag') setView({ name: 'mission' });
+    else if (dest === 'bokstaver') setView({ name: 'letters' });
     else if (dest === 'skriva') setView({ name: 'write' });
     else {
       // Parallellspåret byggs i nästa fas. Tills dess leder kortet
@@ -143,6 +161,17 @@ export default function App() {
           onGo={go}
           onTeacher={() => setView({ name: 'teacher-pin' })}
           onProfile={goHome}
+        />
+      )}
+
+      {view.name === 'mission' && (
+        <MissionView
+          profile={profile}
+          progress={progress}
+          onBack={goHome}
+          onStart={() =>
+            startSession(() => generateMission(profile.progressionStep, profile.level))
+          }
         />
       )}
 

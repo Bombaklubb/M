@@ -72,6 +72,17 @@ export function ChoiceExercise({
         </div>
       );
     }
+    if (exercise.kind === 'sentence-question') {
+      // Meningen står kvar medan eleven svarar. Att kräva att hon minns den
+      // vore ett minnestest, inte ett läsförståelsetest.
+      return (
+        <div className="reading max-w-3xl rounded-card border-4 border-brand-200 bg-white
+                        px-8 py-5 text-center text-4xl font-medium text-ink-900
+                        dark:bg-ink-800 dark:text-ink-50">
+          {exercise.sentence}
+        </div>
+      );
+    }
     return null;
   };
 
