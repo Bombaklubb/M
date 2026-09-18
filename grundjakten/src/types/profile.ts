@@ -49,6 +49,19 @@ export interface SessionLog {
   seconds: number;
 }
 
+/**
+ * Elevens resultat på en namngiven uppgift i övningsbanken.
+ *
+ * `basta` är bästa antal rätt på FÖRSTA försöket, inte senaste. En elev som
+ * haft en dålig dag ska inte se sitt bästa resultat försvinna.
+ */
+export interface TaskResult {
+  gjord: number;
+  basta: number;
+  antal: number;
+  senast: string;
+}
+
 export interface Progress {
   xp: number;
   /** Kosmetisk nivå 1–10, styr rangmärket. */
@@ -62,6 +75,8 @@ export interface Progress {
   themeWords: Record<string, ItemMastery>;
   /** Kapas till 200 poster, äldst först. */
   sessions: SessionLog[];
+  /** Resultat per uppgift i övningsbanken, nyckel = uppgiftens id. */
+  tasks: Record<string, TaskResult>;
 }
 
 export const DEFAULT_SETTINGS: ProfileSettings = {
@@ -83,5 +98,6 @@ export function emptyProgress(): Progress {
     words: {},
     themeWords: {},
     sessions: [],
+    tasks: {},
   };
 }

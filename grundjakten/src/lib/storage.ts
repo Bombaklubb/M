@@ -156,6 +156,25 @@ export function saveProfile(profile: StudentProfile): void {
   addUser(profile.name);
 }
 
+/**
+ * Hitta eller skapa elevens profil.
+ *
+ * Skriver eleven sitt namn igen ska hon FORTSÄTTA, inte börja om. Att låta
+ * createProfile skriva över skulle nollställa nivå, steg och alla framsteg –
+ * och en elev som stavar sitt namn likadant som igår har inte bett om det.
+ * Jämförelsen är skiftlägesokänslig, precis som i Mattejakten.
+ */
+export function findOrCreateProfile(name: string, avatar: string): StudentProfile {
+  const funnen = getProfile(name);
+  if (funnen) {
+    // Avataren får bytas vid inloggning, resten lämnas orörd.
+    const uppdaterad = { ...funnen, avatar };
+    saveProfile(uppdaterad);
+    return uppdaterad;
+  }
+  return createProfile(name, avatar);
+}
+
 export function createProfile(name: string, avatar: string): StudentProfile {
   const profile: StudentProfile = {
     name: name.trim(),
