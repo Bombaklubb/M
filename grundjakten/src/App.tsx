@@ -12,6 +12,7 @@ import { TeacherLoginView } from '@/views/TeacherLoginView';
 import { MissionView } from '@/views/MissionView';
 import { ThemeHubView } from '@/views/ThemeHubView';
 import { ThemeEditorView } from '@/views/ThemeEditorView';
+import { OvningsbankView } from '@/views/OvningsbankView';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import { generateWritePass, type WriteMode } from '@/lib/generators/writingExercises';
 import { generateMission } from '@/lib/generators/missionExercises';
@@ -30,6 +31,7 @@ type View =
   | { name: 'write' }
   | { name: 'theme' }
   | { name: 'theme-editor' }
+  | { name: 'ovningar' }
   | { name: 'session'; exercises: Exercise[]; repeat: () => Exercise[] }
   | { name: 'reward'; result: SessionResult; repeat: () => Exercise[] }
   | { name: 'teacher-pin' }
@@ -157,6 +159,7 @@ export default function App() {
     if (dest === 'uppdrag') setView({ name: 'mission' });
     else if (dest === 'bokstaver') setView({ name: 'letters' });
     else if (dest === 'skriva') setView({ name: 'write' });
+    else if (dest === 'ovningar') setView({ name: 'ovningar' });
     else setView({ name: 'theme' });
   };
 
@@ -215,6 +218,14 @@ export default function App() {
               generateThemePass(theme, mode, profile.progressionStep, profile.level)
             );
           }}
+        />
+      )}
+
+      {view.name === 'ovningar' && (
+        <OvningsbankView
+          profile={profile}
+          onBack={goHome}
+          onStart={(task) => startSession(() => task.build(Date.now()))}
         />
       )}
 

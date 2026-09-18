@@ -7,6 +7,9 @@ import { ReadSentence } from './ReadSentence';
 import { BuildSentenceCards } from './BuildSentenceCards';
 import { MicroTextExercise } from './MicroTextExercise';
 import { WordPicturePair } from './WordPicturePair';
+import { QuizExercise } from './QuizExercise';
+import { TypeTheWord } from './TypeTheWord';
+import { OrderItems } from './OrderItems';
 
 /**
  * Uttömmande switch på Exercise['kind'].
@@ -53,6 +56,23 @@ export function ExerciseRenderer({
 
     case 'letter-formation':
       return <LetterFormation exercise={exercise} onAnswer={onAnswer} locked={locked} />;
+
+    case 'quiz':
+      return (
+        <QuizExercise
+          exercise={exercise}
+          onAnswer={onAnswer}
+          locked={locked}
+          guideTo={guideTo}
+          wrongId={wrongId}
+        />
+      );
+
+    case 'type-the-word':
+      return <TypeTheWord exercise={exercise} onAnswer={onAnswer} locked={locked} />;
+
+    case 'order-items':
+      return <OrderItems exercise={exercise} onAnswer={onAnswer} locked={locked} />;
 
     case 'read-sentence':
       return <ReadSentence exercise={exercise} onAnswer={onAnswer} locked={locked} />;

@@ -5,11 +5,12 @@ import { play } from '@/lib/audio';
 import { getLevelTitle, todayStamp, xpForNextLevel } from '@/lib/utils';
 import { hasSwedishVoice } from '@/lib/speech';
 
-export type Destination = 'uppdrag' | 'bokstaver' | 'skriva' | 'tema';
+export type Destination = 'uppdrag' | 'bokstaver' | 'skriva' | 'tema' | 'ovningar';
 
 const CARDS: { id: Destination; icon: string; title: string; say: string; tint: string }[] = [
   { id: 'bokstaver', icon: '🔤', title: 'Bokstäver', say: 'Bokstäver', tint: 'bg-brand-500 border-brand-700' },
   { id: 'skriva', icon: '✍️', title: 'Skriva', say: 'Skriva', tint: 'bg-aqua-500 border-aqua-700' },
+  { id: 'ovningar', icon: '📚', title: 'Övningar', say: 'Övningar', tint: 'bg-amberx-500 border-amberx-700' },
   { id: 'tema', icon: '🌍', title: 'Klassens tema', say: 'Klassens tema', tint: 'bg-lime-500 border-lime-700' },
 ];
 
