@@ -51,6 +51,64 @@ kan kontrollera ordföljd, stor bokstav och att punkten hamnar sist – de tre
 sakerna eleven faktiskt ska lära sig här. Fritt skrivande hör hemma i ett
 läge där du som lärare läser texten, och det är inte byggt.
 
+## Övningsbanken
+
+97 **namngivna** uppgifter, grupperade i Svenska 1–4 precis som i lärarens
+egen lista. Skillnaden mot passen i Bokstäver och Skriva: de genereras
+utifrån elevens steg, medan de här går att peka ut. Du kan säga "gör
+Alfabetet – Första bokstaven 2" och eleven hittar exakt den.
+
+Innehållet varierar ändå mellan gångerna — varje uppgift byggs om ur sin
+ordbank vid start, så samma namn ger inte samma ord två dagar i rad.
+
+| Nivå | Uppgifter | Innehåll |
+|---|---|---|
+| Svenska 1 | 25 | Alfabetet, första bokstaven, ord↔bild, ljudenlig stavning, rim, räkneord, motsatsord, lägesord |
+| Svenska 2 | 29 | Alfabetisk ordning, vokal/konsonant, nästa bokstav, en/ett, en/flera, adjektivformer, dubbelteckning, veckodagar, månader, gåtor |
+| Svenska 3 | 31 | J-, M-, SJ-, TJ- och NG-ljudet (välj rätt stavning + skriv ordet), ordklasser, sammansatta ord, synonymer, liknelser |
+| Svenska 4 | 8 | Alfabetisk ordning med lika begynnelsebokstäver, lång/kort vokal, saknat ord, skiljetecken |
+
+### Hur det hänger ihop
+
+Nästan hela listan är samma handfull mekaniker med olika ord. Därför ligger
+orden i `data/banks.ts`, skilda från uppgifterna i `data/tasks.ts`. Att lägga
+till "Skriv ordet – Frukter" är en rad i katalogen och en lista i banken, inte
+en ny övningstyp.
+
+Tre motorer bär i princip allt:
+
+- **`quiz`** – välj bland alternativ. Bär välj rätt stavning, en/ett, den/det,
+  motsatsord, synonymer, ordklasser, skiljetecken, vokal/konsonant, nästa
+  bokstav, vilket ord rimmar inte, och mer.
+- **`type-the-word`** – hör ordet, skriv det. Bär alla "Skriv ordet", inklusive
+  siffrorna. Skärmtangentbordet finns alltid, eftersom en Chromebook kan stå
+  på amerikansk layout och då saknar å, ä och ö.
+- **`order-items`** – lägg i rätt ordning. Bär alfabetisk ordning, veckodagar
+  och månader.
+
+De sex ljudreglerna (J, M, SJ, TJ, NG, CK) är **samma två övningstyper med
+olika ordbanker**. Alternativen i "välj rätt stavning" måste låta identiskt –
+annars är det ingen stavningsövning, och det är därför banken lagrar
+felstavningen tillsammans med den rätta.
+
+### Innehållskontroll
+
+```bash
+npm run check
+```
+
+Bygger varje uppgift med tre olika frön (291 pass) och letar efter de fel som
+faktiskt drabbar en elev: tomma pass, frågor utan rätt svar, två alternativ
+som ser likadana ut, svar som inte går att skriva, brickor som saknas.
+Kontrollen hittade till exempel att "fri som en fågel" och "glad som en
+lärka" delade emoji och gjorde uppgiften omöjlig att svara rätt på.
+
+### Inte byggt
+
+**Korsorden** (10 uppgifter i listan) saknas. De kräver ett rutnät med
+korsande ord och är en egen sak att bygga — resten av banken är samma
+mekanik med olika ord, korsordet är det inte.
+
 ## Klassens tema
 
 Parallellspåret. Eleven arbetar med **samma ord som resten av klassen**, men
@@ -149,9 +207,7 @@ skolan rensar webbläsardata.** Spara en backup från lärarläget då och då.
 ## Status
 
 Byggt: Dagens uppdrag, bokstavsmodulen, skrivmodulen, Klassens tema med
-färdiga och egna teman, elevprofiler, lärarläge.
+färdiga och egna teman, övningsbanken med 97 namngivna uppgifter i Svenska
+1–4, elevprofiler, lärarläge.
 
-Inte byggt än: ordförrådsspåret (synonymer, motsatsord, kategorisera),
-stavningsreglerna (dubbelteckning, ng/nk, sj/tj, e/ä, o/å, j-ljud — alla sex
-är samma övningstyp med olika ordbanker), grammatikspåret, samt siffror och
-räkning.
+Inte byggt än: korsorden, och matematikspåret (siffror och räkning).

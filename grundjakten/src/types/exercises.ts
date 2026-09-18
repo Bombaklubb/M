@@ -1,7 +1,7 @@
 import type { SpeechToken } from './speech';
 import type { MicroText } from './theme';
 
-export type ModuleId = 'bokstaver' | 'skriva' | 'tema' | 'uppdrag';
+export type ModuleId = 'bokstaver' | 'skriva' | 'tema' | 'uppdrag' | 'ovningsbank';
 
 /**
  * Varje svarsalternativ går att lyssna på. Det är en hård invariant –
@@ -159,6 +159,65 @@ export interface BuildSentenceCardsEx extends Base {
   emoji: string | null;
 }
 
+/**
+ * Generell flervalsövning.
+ *
+ * Den här enda typen bär huvuddelen av övningsbanken: välj rätt stavning,
+ * en/ett, den/det, motsatsord, synonymer, ordklasser, skiljetecken, vokal
+ * eller konsonant, nästa bokstav, vilket ord rimmar inte, och så vidare.
+ * Det som skiljer dem åt är vad som visas ovanför alternativen och vilken
+ * ordbank frågorna byggs ur – inte mekaniken.
+ */
+export interface QuizEx extends Base {
+  kind: 'quiz';
+  /** Visas ovanför alternativen. Allt är valfritt. */
+  shown?: {
+    letter?: string;
+    word?: string;
+    sentence?: string;
+    emoji?: string;
+  };
+  choices: Choice[];
+  /** Två alternativ läggs bredvid varandra, tre eller fler i rutnät. */
+  compact?: boolean;
+}
+
+/**
+ * Skriv ordet.
+ *
+ * Eleven hör ordet (och ser ofta en bild) och skriver det på tangentbordet.
+ * Täcker alla "Skriv ordet"-uppgifter i banken, inklusive siffrorna.
+ *
+ * Till skillnad från build-word-tiles finns inga brickor att luta sig mot –
+ * det här är riktig stavning, och ligger därför senare i progressionen.
+ */
+export interface TypeTheWordEx extends Base {
+  kind: 'type-the-word';
+  answer: string;
+  /** Godtagna svar i gemener, t.ex. både "5" och "fem". */
+  accept: string[];
+  emoji?: string;
+  /** Meningen ordet saknas i, för "skriv det saknade ordet". */
+  sentence?: string;
+  /** Sifferknappar i stället för bokstäver. */
+  digits?: boolean;
+}
+
+/**
+ * Lägg i rätt ordning.
+ *
+ * Alfabetisk ordning, veckodagar, månader. Eleven klickar objekten i tur och
+ * ordning – samma tryck-för-att-placera som ordkorten, av samma skäl: drag
+ * på en Chromebook-styrplatta är ett finmotoriktest.
+ */
+export interface OrderItemsEx extends Base {
+  kind: 'order-items';
+  /** Rätt ordning. */
+  target: string[];
+  /** Blandade, som de visas. */
+  items: string[];
+}
+
 export type Exercise =
   | LetterSoundMatchEx
   | LetterPictureMatchEx
@@ -174,6 +233,9 @@ export type Exercise =
   | MicroTextEx
   | ReadSentenceEx
   | SentenceQuestionEx
-  | BuildSentenceCardsEx;
+  | BuildSentenceCardsEx
+  | QuizEx
+  | TypeTheWordEx
+  | OrderItemsEx;
 
 export type ExerciseKind = Exercise['kind'];
