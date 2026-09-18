@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import type { Choice, MicroTextEx } from '@/types';
 import { ChoiceGrid } from '@/components/ChoiceGrid';
 import { play, stop } from '@/lib/audio';
+import { EarButton } from '@/components/EarButton';
 import { cn } from '@/lib/utils';
 
 /**
@@ -99,8 +100,14 @@ export function MicroTextExercise({
       <div className="flex flex-col gap-2 rounded-card border-2 border-brand-200 bg-white
                       px-6 py-5 dark:border-ink-700 dark:bg-ink-800">
         {sentences.map((sentence, i) => (
+          <div key={i} className="flex items-center gap-2">
+            <EarButton
+              size="sm"
+              token={{ id: `${exercise.id}-s${i}`, text: sentence, lang }}
+              label={sentence}
+              className="shrink-0"
+            />
           <button
-            key={i}
             type="button"
             aria-label={`Lyssna på meningen: ${sentence}`}
             onClick={() => {
@@ -119,6 +126,7 @@ export function MicroTextExercise({
           >
             {sentence}
           </button>
+          </div>
         ))}
       </div>
 

@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { playMiss, playPlace } from '@/lib/sfx';
 import { LETTER_BY_ID } from '@/data/letters';
 import { play } from '@/lib/audio';
+import { EarButton } from '@/components/EarButton';
 
 /**
  * Bygg ordet av brickor.
@@ -79,23 +80,29 @@ export function BuildWordTiles({
         ))}
       </div>
 
-      <div className="flex max-w-2xl flex-wrap justify-center gap-3">
+      <div className="flex max-w-3xl flex-wrap justify-center gap-4">
         {exercise.tiles.map((tile, i) => (
-          <button
-            key={`${tile}-${i}`}
-            type="button"
-            disabled={locked || used.includes(i)}
-            aria-label={`Bokstaven ${tile.toUpperCase()}`}
-            onClick={() => tap(tile, i)}
-            className={cn(
-              'tile-pop reading h-20 w-16 bg-white text-4xl font-bold text-ink-800',
-              'dark:bg-ink-800 dark:text-ink-100',
-              used.includes(i) && 'invisible',
-              bounce === i && 'animate-nudge'
-            )}
-          >
-            {tile.toUpperCase()}
-          </button>
+          <div key={`${tile}-${i}`} className={cn('relative', used.includes(i) && 'invisible')}>
+            <button
+              type="button"
+              disabled={locked || used.includes(i)}
+              aria-label={`Bokstaven ${tile.toUpperCase()}`}
+              onClick={() => tap(tile, i)}
+              className={cn(
+                'tile-pop reading h-20 w-16 bg-white text-4xl font-bold text-ink-800',
+                'dark:bg-ink-800 dark:text-ink-100',
+                bounce === i && 'animate-nudge'
+              )}
+            >
+              {tile.toUpperCase()}
+            </button>
+            <EarButton
+              size="sm"
+              token={LETTER_BY_ID[tile]?.name ?? { id: `g-${tile}`, text: tile, lang: 'sv-SE' }}
+              label={tile.toUpperCase()}
+              className="absolute -right-2 -top-2"
+            />
+          </div>
         ))}
       </div>
     </div>

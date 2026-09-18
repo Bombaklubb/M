@@ -3,6 +3,7 @@ import type { BuildSentenceCardsEx } from '@/types';
 import { cn } from '@/lib/utils';
 import { playMiss, playPlace } from '@/lib/sfx';
 import { play } from '@/lib/audio';
+import { EarButton } from '@/components/EarButton';
 
 /**
  * Bygg meningen av ordkort.
@@ -85,24 +86,34 @@ export function BuildSentenceCards({
         })}
       </div>
 
-      <div className="flex max-w-3xl flex-wrap justify-center gap-3">
+      <div className="flex max-w-3xl flex-wrap justify-center gap-4">
         {exercise.cards.map((card, i) => (
-          <button
-            key={`${card}-${i}`}
-            type="button"
-            disabled={locked || used.includes(i)}
-            aria-label={card === '.' ? 'Punkt' : `Ordet ${card}`}
-            onClick={() => tap(card, i)}
-            className={cn(
-              'tile-pop reading h-20 bg-white text-3xl font-bold text-ink-800',
-              'dark:bg-ink-800 dark:text-ink-100',
-              card === '.' ? 'w-14' : 'min-w-[6rem] px-4',
-              used.includes(i) && 'invisible',
-              bounce === i && 'animate-nudge'
-            )}
-          >
-            {card}
-          </button>
+          <div key={`${card}-${i}`} className={cn('relative', used.includes(i) && 'invisible')}>
+            <button
+              type="button"
+              disabled={locked || used.includes(i)}
+              aria-label={card === '.' ? 'Punkt' : `Ordet ${card}`}
+              onClick={() => tap(card, i)}
+              className={cn(
+                'tile-pop reading h-20 bg-white text-3xl font-bold text-ink-800',
+                'dark:bg-ink-800 dark:text-ink-100',
+                card === '.' ? 'w-14' : 'min-w-[6rem] px-4',
+                bounce === i && 'animate-nudge'
+              )}
+            >
+              {card}
+            </button>
+            <EarButton
+              size="sm"
+              token={{
+                id: card === '.' ? 'tecken-punkt' : `ord-${card.toLowerCase()}`,
+                text: card === '.' ? 'punkt' : card,
+                lang: 'sv-SE',
+              }}
+              label={card === '.' ? 'punkt' : card}
+              className="absolute -right-2 -top-2"
+            />
+          </div>
         ))}
       </div>
     </div>

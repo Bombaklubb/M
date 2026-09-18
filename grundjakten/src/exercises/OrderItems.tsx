@@ -3,6 +3,7 @@ import type { OrderItemsEx } from '@/types';
 import { cn } from '@/lib/utils';
 import { playMiss, playPlace } from '@/lib/sfx';
 import { play } from '@/lib/audio';
+import { EarButton } from '@/components/EarButton';
 
 /**
  * Lägg i rätt ordning.
@@ -78,23 +79,29 @@ export function OrderItems({
         ))}
       </div>
 
-      <div className="flex max-w-3xl flex-wrap justify-center gap-3">
+      <div className="flex max-w-3xl flex-wrap justify-center gap-4">
         {exercise.items.map((item, i) => (
-          <button
-            key={`${item}-${i}`}
-            type="button"
-            disabled={locked || placerade.includes(item)}
-            aria-label={item}
-            onClick={() => tryck(item, i)}
-            className={cn(
-              'tile-pop reading h-20 min-w-[8rem] px-5 text-3xl font-bold text-ink-800',
-              'bg-white dark:bg-ink-800 dark:text-ink-100',
-              placerade.includes(item) && 'invisible',
-              studsar === i && 'animate-nudge'
-            )}
-          >
-            {item}
-          </button>
+          <div key={`${item}-${i}`} className={cn('relative', placerade.includes(item) && 'invisible')}>
+            <button
+              type="button"
+              disabled={locked || placerade.includes(item)}
+              aria-label={item}
+              onClick={() => tryck(item, i)}
+              className={cn(
+                'tile-pop reading h-20 min-w-[8rem] px-5 text-3xl font-bold text-ink-800',
+                'bg-white dark:bg-ink-800 dark:text-ink-100',
+                studsar === i && 'animate-nudge'
+              )}
+            >
+              {item}
+            </button>
+            <EarButton
+              size="sm"
+              token={{ id: `ord-${item.toLowerCase()}`, text: item, lang: 'sv-SE' }}
+              label={item}
+              className="absolute -right-2 -top-2"
+            />
+          </div>
         ))}
       </div>
     </div>

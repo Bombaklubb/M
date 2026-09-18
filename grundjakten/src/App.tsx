@@ -9,13 +9,11 @@ import { SessionView, type SessionResult } from '@/views/SessionView';
 import { RewardView } from '@/views/RewardView';
 import { TeacherView } from '@/views/TeacherView';
 import { TeacherLoginView } from '@/views/TeacherLoginView';
-import { MissionView } from '@/views/MissionView';
 import { ThemeHubView } from '@/views/ThemeHubView';
 import { ThemeEditorView } from '@/views/ThemeEditorView';
 import { OvningsbankView } from '@/views/OvningsbankView';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import { generateWritePass, type WriteMode } from '@/lib/generators/writingExercises';
-import { generateMission } from '@/lib/generators/missionExercises';
 import { generateThemePass, type ThemeMode } from '@/lib/generators/themeExercises';
 import { activeTheme } from '@/data/themes';
 import { getCurrentUser, getProfile, getProgress, saveProfile, saveProgress, setCurrentUser } from '@/lib/storage';
@@ -26,7 +24,6 @@ import { todayStamp } from '@/lib/utils';
 type View =
   | { name: 'login' }
   | { name: 'home' }
-  | { name: 'mission' }
   | { name: 'letters' }
   | { name: 'write' }
   | { name: 'theme' }
@@ -121,18 +118,6 @@ export default function App() {
       ],
     };
 
-    // Berättelsen går bara framåt en gång per dag. Att göra uppdraget igen
-    // samma dag är tillåtet och ger XP – repetition är själva poängen – men
-    // det spolar inte fram Leo till slutet på en eftermiddag.
-    if (module === 'uppdrag' && next.lastMissionDate !== todayStamp()) {
-      next = {
-        ...next,
-        missionBeat: next.missionBeat + 1,
-        missionsDone: next.missionsDone + 1,
-        lastMissionDate: todayStamp(),
-      };
-    }
-
     saveProgress(profile.name, next);
     setProgress(next);
 
@@ -156,8 +141,7 @@ export default function App() {
   }
 
   const go = (dest: Destination) => {
-    if (dest === 'uppdrag') setView({ name: 'mission' });
-    else if (dest === 'bokstaver') setView({ name: 'letters' });
+    if (dest === 'bokstaver') setView({ name: 'letters' });
     else if (dest === 'skriva') setView({ name: 'write' });
     else if (dest === 'ovningar') setView({ name: 'ovningar' });
     else setView({ name: 'theme' });
@@ -172,17 +156,6 @@ export default function App() {
           onGo={go}
           onTeacher={() => setView({ name: 'teacher-pin' })}
           onProfile={goHome}
-        />
-      )}
-
-      {view.name === 'mission' && (
-        <MissionView
-          profile={profile}
-          progress={progress}
-          onBack={goHome}
-          onStart={() =>
-            startSession(() => generateMission(profile.progressionStep, profile.level))
-          }
         />
       )}
 
