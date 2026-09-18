@@ -20,6 +20,13 @@ const CARDS: { id: Destination; icon: string; title: string; say: string; tint: 
  * Fyra stora kort med ikon. Rubriktexten finns för lärarens och för
  * skärmläsarens skull – eleven navigerar på ikon och på det korten säger när
  * man trycker på dem.
+ *
+ * Alla fyra korten ska rymmas utan att eleven behöver scrolla. En elev som
+ * inte kan läsa förstår inte att det finns mer nedanför kanten – ett kort
+ * utanför skärmen är i praktiken ett kort som inte finns.
+ *
+ * Därför är grundstorleken anpassad till en Chromebook med synlig yta runt
+ * 600 px, och korten växer först på högre skärmar.
  */
 export function HomeView({
   profile,
@@ -43,8 +50,10 @@ export function HomeView({
   );
 
   return (
-    <div className="mx-auto flex min-h-[100dvh] max-w-4xl flex-col px-4 py-5">
-      <header className="mb-8 flex items-center justify-between">
+    <div className="mx-auto flex min-h-[100dvh] max-w-4xl flex-col px-4 py-3
+                    [@media(min-height:760px)]:py-5">
+      <header className="mb-4 flex items-center justify-between
+                         [@media(min-height:760px)]:mb-8">
         {/* Lärarläget nås genom två sekunders långtryck på loggan. Ingen
             synlig knapp – en elev ska inte snubbla in. */}
         <button
@@ -82,7 +91,7 @@ export function HomeView({
         </button>
       </header>
 
-      <main className="grid flex-1 content-center gap-5">
+      <main className="grid flex-1 content-center gap-3 [@media(min-height:760px)]:gap-5">
         {CARDS.map((card) => (
           <button
             key={card.id}
@@ -90,10 +99,16 @@ export function HomeView({
             aria-label={card.say}
             onPointerDown={() => void play({ id: `say-${card.id}`, text: card.say, lang: 'sv-SE' })}
             onClick={() => onGo(card.id)}
-            className={`btn-pop flex items-center gap-6 rounded-card px-8 py-7 text-left text-white ${card.tint}`}
+            className={`btn-pop flex items-center gap-5 rounded-card px-6 py-4 text-left
+                        text-white [@media(min-height:760px)]:gap-6
+                        [@media(min-height:760px)]:px-8 [@media(min-height:760px)]:py-7 ${card.tint}`}
           >
-            <span className="text-6xl leading-none" aria-hidden>{card.icon}</span>
-            <span className="text-4xl font-extrabold">{card.title}</span>
+            <span className="text-5xl leading-none [@media(min-height:760px)]:text-6xl" aria-hidden>
+              {card.icon}
+            </span>
+            <span className="text-3xl font-extrabold [@media(min-height:760px)]:text-4xl">
+              {card.title}
+            </span>
           </button>
         ))}
       </main>

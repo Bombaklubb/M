@@ -1,6 +1,7 @@
 import type { Exercise, GruppMeta, TaskDef } from '@/types';
 import {
-  ADJEKTIV, ADJEKTIVFORMER, ALFABETET, CK_LJUDET, DJUR, DUBBELTECKNING, EGENNAMN, EN_FLERA,
+  ADJEKTIV, ADJEKTIVFORMER, ALFABETET, CK_LJUDET, DEN_ORD, DET_ORD, DJUR, DUBBELTECKNING,
+  EGENNAMN, EN_FLERA,
   EN_ORD, ETT_ORD, FARGER, GATOR, HOR_INTE_IHOP, J_LJUDET_G, J_LJUDET_J,
   J_LJUDET_OVRIGA, KONSONANTER, KORTA_ORD, KORTA_VOKALER, LAGESORD, LANGA_VOKALER,
   LIKNELSER_DJUR, LJUDSTRIDIGA, MANADER, MOTSATSORD, M_LJUDET, NG_LJUDET_N,
@@ -214,7 +215,7 @@ const SVENSKA_1: TaskDef[] = [
         const fel = pickN(bank.filter((r) => r.siffra !== item.siffra), 2, rng);
         return quiz(
           {
-            prompt: `Vilken siffra är ${item.ord}?`,
+            prompt: `Vilken siffra betyder ${item.ord}?`,
             replay: item.ord,
             ratt: { word: item.siffra, say: item.ord },
             fel: fel.map((f) => ({ word: f.siffra, say: f.ord })),
@@ -226,8 +227,9 @@ const SVENSKA_1: TaskDef[] = [
   { id: 'gram-den-det', grupp: 'Grammatik', namn: 'Den eller det', niva: 1,
     build: (seed) =>
       buildPass(seed, 8, (rng) => {
+        // Bestämd form: "det huset", inte "det hus".
         const denOrd = rng() < 0.5;
-        const ord = pick(denOrd ? EN_ORD : ETT_ORD, rng);
+        const ord = pick(denOrd ? DEN_ORD : DET_ORD, rng);
         return quiz(
           {
             prompt: `Säger man den eller det ${ord}?`,
@@ -391,8 +393,10 @@ const SVENSKA_2: TaskDef[] = [
         const fel = pickN(bank.filter((p) => p[1] !== flertal).map((p) => p[1]), 2, rng);
         return quiz(
           {
-            prompt: `Vad heter det när det är flera ${ental}?`,
-            replay: flertal,
+            // Ordet visas i stället för att stoppas in i frågan: "flera bok"
+            // är inte svenska, och att böja rätt i frågan vore att ge svaret.
+            prompt: 'Vad heter det när det är flera?',
+            replay: `en ${ental}, flera ${flertal}`,
             shown: { word: ental },
             ratt: { word: flertal },
             fel: fel.map((f) => ({ word: f })),

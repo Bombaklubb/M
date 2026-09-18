@@ -196,9 +196,22 @@ export const MANADER = [
 export const EN_ORD = ['bok', 'bil', 'stol', 'katt', 'hund', 'boll', 'penna', 'lampa', 'blomma', 'sked'];
 export const ETT_ORD = ['hus', 'bord', 'äpple', 'tåg', 'öga', 'brev', 'glas', 'träd', 'barn', 'ljus'];
 
-/** den-ord (utrum) och det-ord (neutrum), för "Den eller det". */
-export const DEN_ORD = EN_ORD;
-export const DET_ORD = ETT_ORD;
+/**
+ * Bestämd form, för "Den eller det".
+ *
+ * Den och det står framför ett BESTÄMT substantiv: "den boken", "det huset".
+ * Med obestämd form blir frågan fel svenska – "säger man den eller det hus"
+ * är inte något man säger. Därför en egen lista i stället för att återanvända
+ * en-orden och ett-orden.
+ */
+export const DEN_ORD = [
+  'boken', 'bilen', 'stolen', 'katten', 'hunden',
+  'bollen', 'pennan', 'lampan', 'blomman', 'skeden',
+];
+export const DET_ORD = [
+  'huset', 'bordet', 'äpplet', 'tåget', 'ögat',
+  'brevet', 'glaset', 'trädet', 'barnet', 'ljuset',
+];
 
 /** [singular, plural] */
 export const EN_FLERA: [string, string][] = [

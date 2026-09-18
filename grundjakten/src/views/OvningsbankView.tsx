@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { Niva, StudentProfile, TaskDef } from '@/types';
+import type { Niva, Progress, StudentProfile, TaskDef } from '@/types';
 import { grupperadeTasks, tasksForNiva } from '@/data/tasks';
 import { play } from '@/lib/audio';
 import { cn } from '@/lib/utils';
@@ -23,16 +23,20 @@ const NIVAER: { niva: Niva; namn: string }[] = [
  */
 export function OvningsbankView({
   profile,
+  progress,
   onStart,
   onBack,
 }: {
   profile: StudentProfile;
+  progress: Progress;
   onStart: (task: TaskDef) => void;
   onBack: () => void;
 }) {
   const [niva, setNiva] = useState<Niva>(profile.level);
   const grupper = grupperadeTasks(niva);
-  const antal = tasksForNiva(niva).length;
+  const tasks = tasksForNiva(niva);
+  const antal = tasks.length;
+  const klara = tasks.filter((t) => progress.tasks[t.id]).length;
 
   return (
     <div className="mx-auto flex min-h-[100dvh] max-w-3xl flex-col px-4 py-5">
@@ -48,7 +52,9 @@ export function OvningsbankView({
         </button>
         <div className="flex flex-col">
           <h1 className="text-3xl font-extrabold">Övningar</h1>
-          <span className="text-sm font-bold text-ink-500">{antal} uppgifter</span>
+          <span className="text-sm font-bold text-ink-500">
+            {klara} av {antal} klara
+          </span>
         </div>
       </header>
 
@@ -79,22 +85,40 @@ export function OvningsbankView({
               {grupp}
             </h2>
             <div className="flex flex-col gap-2">
-              {tasks.map((task) => (
-                <button
-                  key={task.id}
-                  type="button"
-                  aria-label={`${task.grupp} – ${task.namn}`}
-                  onPointerDown={() =>
-                    void play({ id: `t-${task.id}`, text: task.namn, lang: 'sv-SE' })
-                  }
-                  onClick={() => onStart(task)}
-                  className={`btn-pop flex items-center gap-4 rounded-tile px-5 py-4 text-left
-                              text-white ${meta.tint}`}
-                >
-                  <span className="text-3xl leading-none" aria-hidden>{meta.icon}</span>
-                  <span className="text-xl font-extrabold">{task.namn}</span>
-                </button>
-              ))}
+              {tasks.map((task) => {
+                const res = progress.tasks[task.id];
+                return (
+                  <button
+                    key={task.id}
+                    type="button"
+                    aria-label={
+                      res
+                        ? `${task.grupp} – ${task.namn}. Klar, ${res.basta} av ${res.antal} rätt.`
+                        : `${task.grupp} – ${task.namn}`
+                    }
+                    onPointerDown={() =>
+                      void play({ id: `t-${task.id}`, text: task.namn, lang: 'sv-SE' })
+                    }
+                    onClick={() => onStart(task)}
+                    className={`btn-pop flex items-center gap-4 rounded-tile px-5 py-4 text-left
+                                text-white ${meta.tint}`}
+                  >
+                    <span className="text-3xl leading-none" aria-hidden>{meta.icon}</span>
+                    <span className="flex-1 text-xl font-extrabold">{task.namn}</span>
+
+                    {/* Klarmarkering och bästa resultat. Bilden bär beskedet –
+                        siffran är ett tillägg för den som kan läsa den. */}
+                    {res && (
+                      <span className="flex shrink-0 items-center gap-2 rounded-tile bg-white/25 px-3 py-1.5">
+                        <span className="text-xl" aria-hidden>✅</span>
+                        <span className="text-lg font-extrabold tabular-nums">
+                          {res.basta}/{res.antal}
+                        </span>
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
             </div>
           </section>
         ))}

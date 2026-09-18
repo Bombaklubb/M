@@ -20,9 +20,20 @@ klassen läser och skriver texter?"**
    som ser deras skärm. Inga pastellfärger, inga rundade "småbarnstypsnitt",
    ingen maskot. Nivåer heter **Steg 1–8**, aldrig "årskurs 1".
 3. **Ett pass slutar alltid i framgång.** Ett missat svar ger inget avdrag –
-   uppgiften kommer tillbaka senare i passet. Efter andra missen lotsas
-   eleven till rätt svar. Det finns inga procent och inga poängsatser i
-   elevgränssnittet.
+   uppgiften kommer tillbaka senare i passet, och efter andra missen lotsas
+   eleven till rätt svar. Belöningsskärmen visar aldrig hur många fel hon
+   hade. Resultatet per övning syns däremot i övningsbanken efteråt, som ett
+   bästa-resultat hon kan slå.
+
+## Inloggning
+
+Samma modell som Svenskajakten: eleven skriver sitt namn för att **börja
+eller fortsätta**. Samma namn ger samma profil, med nivå och framsteg kvar.
+
+En skillnad som målgruppen kräver: en elev som inte kan läsa kan inte heller
+skriva sitt namn själv. Därför ligger de elever som redan finns på enheten
+överst som stora ansikten – ett tryck och hon är inne. Namnfältet under är
+för första gången, och då är det oftast läraren som fyller i det.
 
 ## Övningsbanken
 
@@ -33,6 +44,11 @@ Alfabetet – Första bokstaven 2" och eleven hittar exakt den.
 
 Innehållet varierar ändå mellan gångerna — varje uppgift byggs om ur sin
 ordbank vid start, så samma namn ger inte samma ord två dagar i rad.
+
+Varje klarad uppgift får en bock och sitt bästa resultat (`7/8`) direkt på
+kortet, och rubriken visar hur många av nivåns uppgifter som är klara.
+Bästa resultat räknas på första försöket och sänks aldrig – en elev som haft
+en dålig dag ska inte se sitt bästa försvinna.
 
 | Nivå | Uppgifter | Innehåll |
 |---|---|---|

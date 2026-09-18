@@ -29,8 +29,8 @@ type View =
   | { name: 'theme' }
   | { name: 'theme-editor' }
   | { name: 'ovningar' }
-  | { name: 'session'; exercises: Exercise[]; repeat: () => Exercise[] }
-  | { name: 'reward'; result: SessionResult; repeat: () => Exercise[] }
+  | { name: 'session'; exercises: Exercise[]; repeat: () => Exercise[]; taskId?: string }
+  | { name: 'reward'; result: SessionResult; repeat: () => Exercise[]; taskId?: string }
   | { name: 'teacher-pin' }
   | { name: 'teacher' };
 
@@ -71,10 +71,10 @@ export default function App() {
     setView({ name: 'home' });
   };
 
-  const startSession = useCallback((make: () => Exercise[]) => {
+  const startSession = useCallback((make: () => Exercise[], taskId?: string) => {
     const exercises = make();
     if (exercises.length === 0) return;
-    setView({ name: 'session', exercises, repeat: make });
+    setView({ name: 'session', exercises, repeat: make, taskId });
   }, []);
 
   /**
@@ -84,7 +84,7 @@ export default function App() {
    * annars skulle en elev som lotsats rätt två gånger räknas som att hon kan
    * bokstaven, och läraren skulle få fel bild.
    */
-  const finishSession = (result: SessionResult, repeat: () => Exercise[]) => {
+  const finishSession = (result: SessionResult, repeat: () => Exercise[], taskId?: string) => {
     if (!profile || !progress) return;
 
     let next = progress;
@@ -118,6 +118,23 @@ export default function App() {
       ],
     };
 
+    // Resultat per uppgift, så att eleven ser vad hon klarat och hur bra.
+    if (taskId) {
+      const fore = next.tasks[taskId];
+      next = {
+        ...next,
+        tasks: {
+          ...next.tasks,
+          [taskId]: {
+            gjord: (fore?.gjord ?? 0) + 1,
+            basta: Math.max(fore?.basta ?? 0, result.firstTryCorrect),
+            antal: result.total,
+            senast: todayStamp(),
+          },
+        },
+      };
+    }
+
     saveProgress(profile.name, next);
     setProgress(next);
 
@@ -127,7 +144,7 @@ export default function App() {
       setProfile(advanced);
     }
 
-    setView({ name: 'reward', result, repeat });
+    setView({ name: 'reward', result, repeat, taskId });
   };
 
   const goHome = () => setView({ name: 'home' });
@@ -197,8 +214,9 @@ export default function App() {
       {view.name === 'ovningar' && (
         <OvningsbankView
           profile={profile}
+          progress={progress}
           onBack={goHome}
-          onStart={(task) => startSession(() => task.build(Date.now()))}
+          onStart={(task) => startSession(() => task.build(Date.now()), task.id)}
         />
       )}
 
@@ -211,7 +229,7 @@ export default function App() {
           exercises={view.exercises}
           profile={profile}
           onHome={goHome}
-          onFinish={(result) => finishSession(result, view.repeat)}
+          onFinish={(result) => finishSession(result, view.repeat, view.taskId)}
         />
       )}
 
@@ -219,7 +237,7 @@ export default function App() {
         <RewardView
           result={view.result}
           onHome={goHome}
-          onAgain={() => startSession(view.repeat)}
+          onAgain={() => startSession(view.repeat, view.taskId)}
         />
       )}
 
