@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {
   Sparkles, Library, Wand2, HeartHandshake, Layers, CalendarDays, Activity,
-  ArrowLeft, Printer, PartyPopper, MessagesSquare, Mail,
+  ArrowLeft, Printer, PartyPopper, MessagesSquare,
 } from 'lucide-react'
 import Temabanken from './components/Temabanken'
 import Aktivitetsgeneratorn from './components/Aktivitetsgeneratorn'
@@ -77,9 +77,8 @@ export default function App() {
               {aktiv === 'hem' ? 'Aktiviteter för fritids' : `Modul ${aktuell?.nr}`}
             </p>
           </div>
-          {/* Om- och kontaktlänkarna ligger i headern, som i syskonapparna.
-              Texterna kortas ner på smala skärmar så att raden inte spränger
-              sig på en telefon. */}
+          {/* Om-länken ligger i headern. Kontaktlänken finns längst ner till
+              vänster, som i syskonapparna. */}
           <button
             onClick={() => setVisaOm(true)}
             className="shrink-0 flex items-center rounded-lg px-2.5 min-h-[38px] text-sm
@@ -89,18 +88,6 @@ export default function App() {
             <span className="hidden sm:inline">Om Fritidsjakten</span>
             <span className="sm:hidden">Om</span>
           </button>
-
-          {/* min-h och min-w: ikonen ensam ger annars bara 28 px tryckyta på telefon. */}
-          <a
-            href="mailto:martin.akdogan@enkoping.se"
-            className="shrink-0 flex items-center justify-center gap-1.5 rounded-lg px-2.5
-                       min-h-[38px] min-w-[38px] text-sm font-bold text-brand-600
-                       hover:bg-brand-50 transition-colors"
-            aria-label="Kontakta Martin"
-          >
-            <Mail size={18} className="sm:hidden" />
-            <span className="hidden sm:inline">Kontakta Martin</span>
-          </a>
 
           <button
             onClick={() => window.print()}
@@ -159,6 +146,26 @@ export default function App() {
         {aktiv === 'temadagar' && <Temadagar />}
         {aktiv === 'vardegrundskort' && <Vardegrundskort />}
       </main>
+
+      {/* Kontaktlänk – nere till vänster, som i syskonapparna. På breda skärmar
+          svävar den i marginalen. På mobil finns ingen marginal, så där läggs
+          den sist i flödet i stället för att hamna ovanpå innehållet. */}
+      <div className="hidden sm:block fixed bottom-4 left-4 z-40 print:hidden">
+        <a
+          href="mailto:martin.akdogan@enkoping.se"
+          className="inline-block bg-white/80 backdrop-blur-sm border-2 border-brand-100 hover:border-brand-300 hover:bg-white rounded-full px-3 py-1.5 text-xs font-bold text-brand-600 hover:text-brand-800 shadow-sm transition-colors"
+        >
+          Kontakta Martin
+        </a>
+      </div>
+      <div className="sm:hidden relative z-10 text-center pb-6 print:hidden">
+        <a
+          href="mailto:martin.akdogan@enkoping.se"
+          className="inline-block bg-white/80 border-2 border-brand-100 rounded-full px-3 py-1.5 text-xs font-bold text-brand-600 shadow-sm"
+        >
+          Kontakta Martin
+        </a>
+      </div>
 
       {visaOm && <Om onClose={() => setVisaOm(false)} />}
     </div>
