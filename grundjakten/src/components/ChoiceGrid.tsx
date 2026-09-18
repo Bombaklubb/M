@@ -1,6 +1,6 @@
 import type { Choice } from '@/types';
 import { cn } from '@/lib/utils';
-import { play } from '@/lib/audio';
+import { EarButton } from './EarButton';
 
 interface Props {
   choices: Choice[];
@@ -79,18 +79,11 @@ export function ChoiceGrid({ choices, onPick, disabled, guideTo, wrongId, compac
               )}
             </button>
 
-            <button
-              type="button"
-              aria-label={`Lyssna: ${choice.say.text}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                void play(choice.say);
-              }}
-              className="absolute -right-2 -top-2 grid h-14 w-14 min-h-0 place-items-center
-                         rounded-full border-2 border-aqua-700 bg-aqua-500 text-white shadow-pop-sm"
-            >
-              <span aria-hidden className="text-lg">🔊</span>
-            </button>
+            <EarButton
+              token={choice.say}
+              label={choice.say.text}
+              className="absolute -right-2 -top-2"
+            />
           </div>
         );
       })}

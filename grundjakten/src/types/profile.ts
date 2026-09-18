@@ -62,15 +62,6 @@ export interface Progress {
   themeWords: Record<string, ItemMastery>;
   /** Kapas till 200 poster, äldst först. */
   sessions: SessionLog[];
-
-  /**
-   * Hur långt eleven kommit i berättelsen om Leo och nyckeln.
-   * Index i STORY_BEATS. Höjs med ett per dag som ett uppdrag klaras.
-   */
-  missionBeat: number;
-  /** Datumet då dagens uppdrag senast klarades, svensk lokaltid. */
-  lastMissionDate: string;
-  missionsDone: number;
 }
 
 export const DEFAULT_SETTINGS: ProfileSettings = {
@@ -92,8 +83,5 @@ export function emptyProgress(): Progress {
     words: {},
     themeWords: {},
     sessions: [],
-    missionBeat: 0,
-    lastMissionDate: '',
-    missionsDone: 0,
   };
 }

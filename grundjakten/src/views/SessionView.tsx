@@ -116,10 +116,6 @@ export function SessionView({
     <div className="flex min-h-[100dvh] flex-col">
       <header className="flex items-center justify-between px-4 py-3">
         <ProgressDots total={queue.total} cleared={queue.cleared} />
-        {/* Uppdragssteget, t.ex. "Läs ordet". Bara i Dagens uppdrag. */}
-        {exercise.label && (
-          <span className="text-lg font-bold text-ink-500 dark:text-ink-400">{exercise.label}</span>
-        )}
         <span className="text-lg font-bold text-brand-600 dark:text-brand-300" aria-hidden>
           ⭐ {queue.xpEarned}
         </span>
@@ -135,11 +131,7 @@ export function SessionView({
         />
       </main>
 
-      <ListenAgainBar
-        replay={exercise.replay}
-        onHome={onHome}
-        baseRate={profile.settings.speechRate}
-      />
+      <ListenAgainBar replay={exercise.replay} onHome={onHome} />
       <FeedbackOverlay state={feedback} />
     </div>
   );

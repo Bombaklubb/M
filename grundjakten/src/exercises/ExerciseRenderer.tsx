@@ -3,7 +3,6 @@ import { ChoiceExercise } from './ChoiceExercise';
 import { TypeTheLetter } from './TypeTheLetter';
 import { BuildWordTiles } from './BuildWordTiles';
 import { LetterFormation } from './LetterFormation';
-import { ReadSentence } from './ReadSentence';
 import { BuildSentenceCards } from './BuildSentenceCards';
 import { MicroTextExercise } from './MicroTextExercise';
 import { WordPicturePair } from './WordPicturePair';
@@ -37,7 +36,6 @@ export function ExerciseRenderer({
     case 'read-word-pick-picture':
     case 'sight-word-pick':
     case 'listen-pick-picture':
-    case 'sentence-question':
       return (
         <ChoiceExercise
           exercise={exercise}
@@ -73,9 +71,6 @@ export function ExerciseRenderer({
 
     case 'order-items':
       return <OrderItems exercise={exercise} onAnswer={onAnswer} locked={locked} />;
-
-    case 'read-sentence':
-      return <ReadSentence exercise={exercise} onAnswer={onAnswer} locked={locked} />;
 
     case 'build-sentence-cards':
       return <BuildSentenceCards exercise={exercise} onAnswer={onAnswer} locked={locked} />;

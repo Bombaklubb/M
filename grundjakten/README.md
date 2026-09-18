@@ -9,9 +9,13 @@ klassen läser och skriver texter?"**
 ## Tre principer som styr all design
 
 1. **Ingenting kräver läsning.** Navigation, instruktioner och feedback bärs
-   av ikoner, bilder, färg och tal. Varje övningsskärm har en stor
-   öronknapp. Testet är: en vuxen som inte kan svenska ska kunna ta sig
-   igenom appen.
+   av ikoner, bilder, färg och tal. Testet är: en vuxen som inte kan svenska
+   ska kunna ta sig igenom appen.
+
+   Konkret: varje övningsskärm har en stor öronknapp längst ned, och **varje
+   sak eleven kan välja mellan har ett eget litet öra** – svarsalternativ,
+   bokstavsbrickor, ordkort, veckodagar, bilder. Ett alternativ utan öra är
+   en gissning för någon som inte kan läsa, inte ett val.
 2. **Åldersadekvat, inte barnsligt.** Tioåringar sitter bredvid klasskamrater
    som ser deras skärm. Inga pastellfärger, inga rundade "småbarnstypsnitt",
    ingen maskot. Nivåer heter **Steg 1–8**, aldrig "årskurs 1".
@@ -19,37 +23,6 @@ klassen läser och skriver texter?"**
    uppgiften kommer tillbaka senare i passet. Efter andra missen lotsas
    eleven till rätt svar. Det finns inga procent och inga poängsatser i
    elevgränssnittet.
-
-## Dagens uppdrag
-
-Appens framsida. En knapp, fem steg, fem minuter:
-
-1. **Läs ordet** – avkodning (ljudning på nivå 1–2)
-2. **Välj rätt bild** – ord ↔ bild
-3. **Läs meningen** – meningsläsning, bedöms inte
-4. **Svara** – läsförståelse, meningen står kvar
-5. **Skriv** – bygg meningen av ordkort
-
-Uppdrag 2–5 delar **samma mening**, så eleven möter samma ord i bild, i
-mening, i fråga och i bygge. Fyra möten med ett ord på fem minuter gör mer
-för ordförrådet än fem lösryckta övningar.
-
-Allt genereras ur `data/sentences.ts` (sex mallar × tre ordbanker) och
-elevens egen ordbank. Inga uppdrag är handskrivna, så de tar aldrig slut.
-Ramberättelsen om Leo och nyckeln ligger i `data/story.ts` och går fram ett
-avsnitt per dag – att göra uppdraget flera gånger samma dag ger XP men
-spolar inte fram berättelsen.
-
-Två regler i meningsdatan måste hålla, annars lär appen ut fel svenska:
-varje sak och djur bär sitt genus (`en`/`ett`), och platser lagras i bestämd
-form eftersom mallarna alltid säger "till skolan" / "i skogen".
-
-### Varför ordkort och inte fritt skrivfält
-
-Fri text går inte att rätta automatiskt. En mening byggd av kort går: appen
-kan kontrollera ordföljd, stor bokstav och att punkten hamnar sist – de tre
-sakerna eleven faktiskt ska lära sig här. Fritt skrivande hör hemma i ett
-läge där du som lärare läser texten, och det är inte byggt.
 
 ## Övningsbanken
 
@@ -108,6 +81,20 @@ lärka" delade emoji och gjorde uppgiften omöjlig att svara rätt på.
 **Korsorden** (10 uppgifter i listan) saknas. De kräver ett rutnät med
 korsande ord och är en egen sak att bygga — resten av banken är samma
 mekanik med olika ord, korsordet är det inte.
+
+## Forma bokstäver
+
+Två steg: först **visar** appen hur bokstaven skrivs, drag för drag. Sedan
+ritar eleven den själv med muspekaren eller fingret, ovanpå en blek förlaga.
+
+Bedömningen är avsiktligt generös. Målet är att följa formen och
+skrivriktningen, inte att träffa en linje på pixeln – en Chromebook-
+styrplatta duger inte till det, och en elev med motoriska svårigheter ska
+inte fastna. Därför mäts täckningen mot punkter längs förlagan (ett kladd
+utanför bokstaven sänker alltså inte resultatet), tröskeln är 60 % med bred
+tolerans, och efter två försök godkänns det oavsett.
+
+Knappar: sudda, visa hur man gör igen, och klar.
 
 ## Klassens tema
 
@@ -206,8 +193,8 @@ skolan rensar webbläsardata.** Spara en backup från lärarläget då och då.
 
 ## Status
 
-Byggt: Dagens uppdrag, bokstavsmodulen, skrivmodulen, Klassens tema med
-färdiga och egna teman, övningsbanken med 97 namngivna uppgifter i Svenska
-1–4, elevprofiler, lärarläge.
+Byggt: bokstavsmodulen, skrivmodulen, Klassens tema med färdiga och egna
+teman, övningsbanken med 97 namngivna uppgifter i Svenska 1–4,
+elevprofiler, lärarläge.
 
 Inte byggt än: korsorden, och matematikspåret (siffror och räkning).

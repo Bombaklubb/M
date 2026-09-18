@@ -1,7 +1,7 @@
 import type { SpeechToken } from './speech';
 import type { MicroText } from './theme';
 
-export type ModuleId = 'bokstaver' | 'skriva' | 'tema' | 'uppdrag' | 'ovningsbank';
+export type ModuleId = 'bokstaver' | 'skriva' | 'tema' | 'ovningsbank';
 
 /**
  * Varje svarsalternativ går att lyssna på. Det är en hård invariant –
@@ -24,14 +24,6 @@ interface Base {
   /** Det stora öronknappen spelar om. Oftast själva uppgiften, inte instruktionen. */
   replay: SpeechToken;
   xp: number;
-  /**
-   * Namnet på uppdragssteget, t.ex. "Läs ordet".
-   *
-   * Medvetet ett NAMN och inte "steg 3 av 5": en missad uppgift läggs tillbaka
-   * i kön, så positionen stämmer inte längre – men vad uppgiften går ut på
-   * stämmer alltid.
-   */
-  label?: string;
 }
 
 export interface LetterSoundMatchEx extends Base {
@@ -113,33 +105,6 @@ export interface MicroTextEx extends Base {
   kind: 'micro-text';
   text: MicroText;
   themeId: string;
-}
-
-/**
- * Läs meningen.
- *
- * Bedöms inte – precis som letter-formation. Eleven trycker på varje ord för
- * att höra det, och går vidare när hon är klar. Att sätta ett rätt/fel på
- * "har du läst?" vore meningslöst, och att kräva ett korrekt svar här skulle
- * blockera nästa uppdrag som faktiskt bygger på meningen.
- */
-export interface ReadSentenceEx extends Base {
-  kind: 'read-sentence';
-  /** Orden var för sig, så eleven kan trycka på ett i taget. */
-  words: string[];
-  /** Hela meningen som en talad enhet. */
-  whole: SpeechToken;
-  /** Per ord, för tryck-och-lyssna. */
-  wordTokens: SpeechToken[];
-  /** Läses upp automatiskt direkt (för elever som ännu inte avkodar). */
-  autoRead: boolean;
-}
-
-/** Svara på en fråga om meningen eleven just läste. Meningen står kvar. */
-export interface SentenceQuestionEx extends Base {
-  kind: 'sentence-question';
-  sentence: string;
-  choices: Choice[];
 }
 
 /**
@@ -231,8 +196,6 @@ export type Exercise =
   | ListenPickPictureEx
   | WordPicturePairEx
   | MicroTextEx
-  | ReadSentenceEx
-  | SentenceQuestionEx
   | BuildSentenceCardsEx
   | QuizEx
   | TypeTheWordEx
