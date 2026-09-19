@@ -46,9 +46,9 @@ Elevens namn står uppe till höger på startskärmen, och ett tryck där öppna
 hennes egen översikt: nivå, bokstäver hon kan, klarade övningar med bästa
 resultat, kistor och dagar i rad.
 
-Det här är **elevens** sida, inte lärarens. Skillnaden är medveten: lärarvyn
-visar hur många fel eleven haft, den här visar bara vad hon klarat. Varje
-avsnitt har ett öra som säger vad det visar, och varje siffra läses upp.
+Sidan visar bara vad hon **klarat**, aldrig hur många fel hon haft — samma
+regel som belöningsskärmen. Varje avsnitt har ett öra som säger vad det visar,
+och varje siffra läses upp.
 
 ## Övningsbanken
 
@@ -188,55 +188,20 @@ inte fastna. Därför mäts täckningen mot punkter längs förlagan (ett kladd
 utanför bokstaven sänker alltså inte resultatet), tröskeln är 60 % med bred
 tolerans, och efter två försök godkänns det oavsett.
 
+Visningen går **långsamt med flit**: två sekunder per drag och drygt två
+sekunders paus mellan dragen. Takten är satt efter en elev som ska hinna följa
+pennan med blicken, inte efter vad som ser bra ut. Farten är jämn (`linear`),
+inte mjukt bromsande — en `ease-out` rusar igång och saktar in på slutet,
+alltså snabbast just i början av draget, som är precis den del eleven ska lära
+sig.
+
+Visningen är också undantagen från `prefers-reduced-motion`. Den regeln
+stänger av all annan animation i appen, men den här rörelsen **är**
+undervisningen: utan den ritas bokstaven färdig direkt och skrivriktningen
+syns aldrig. Takten är långsam och förutsägbar, vilket är det inställningen
+egentligen skyddar mot.
+
 Knappar: sudda, visa hur man gör igen, och klar.
-
-## Klassens tema
-
-Parallellspåret. Eleven arbetar med **samma ord som resten av klassen**, men
-via lyssna-och-peka, bildstöd och ordbygge i stället för löpande text.
-
-Tre lägen: *Lyssna och välj*, *Para ihop* och *Lyssna på texten* (uppläst
-minitext med bildfrågor). Ett läge som temat inte räcker till visas inte
-alls — hellre färre kort än ett kort som leder till en tom skärm.
-
-Ett temapass är åtta uppgifter: fem från temat och tre från elevens vanliga
-bokstavsspår. Fonikträningen ska inte pausas för att eleven jobbar med SO.
-
-Läraren väljer tema i lärarläget. Valet gäller **hela enheten**, inte en
-enskild elev — det är klassens aktuella ämne. Är inget valt visar
-temaskärmen en uppmaning i stället för en övning.
-
-### Färdiga teman
-
-Tolv stycken i `data/themes/curated.ts`: Vattnets kretslopp, Kroppen, Djur i
-Sverige, Växter, Rymden, Väder och årstider, Vikingatiden, Stenåldern,
-Sverige, Animals, Food and drink, My family and home.
-
-Orden är medvetet **konkreta**, eftersom bildlagret är emoji. "Avdunstning"
-och "demokrati" har ingen bild och hör inte hemma här — de tas muntligt av
-läraren. Det är den uttalade kompromissen: eleven arbetar med klassens tema,
-men med temats gripbara ord.
-
-Ett nytt tema skrivs kompakt med `defineTheme` — ett ord är `['skepp', '⛵']`,
-resten (grafem, talsyntes-token, svarsalternativ) härleds.
-
-### Eget tema
-
-För när klassen jobbar med något banken inte täcker. Läraren skriver namn
-och 6–10 ord; emoji föreslås automatiskt ur `data/emojiIndex.ts` (skriv
-"räv" → 🦊, och bestämd form som "skolan" hittar stammen).
-
-**Ord utan bild tas inte bort — de ger bara färre övningstyper.** Ett ord med
-bild ger fyra typer, ett utan ger en (Bygg ordet). Redigeraren visar detta
-per ord medan du skriver, så att degraderingen syns i stället för att kännas
-godtycklig.
-
-Grafemuppdelningen visas också som chips, eftersom den *gissas*: `sj` hålls
-ihop, och `sk` är ett ljud i "sked" men två i "skog". Den blir ibland fel, och
-då ska du kunna se det.
-
-Egna teman får inga minitexter — de kräver frågor med bildsvar och blir för
-mycket att fylla i. De ger ordövningar i stället.
 
 ## Köra lokalt
 
@@ -247,16 +212,35 @@ npm run typecheck
 npm run build
 ```
 
-## Lärarläge
+## Nivå och steg sköter sig själva
 
-Håll inne **G-loggan** uppe till vänster i två sekunder, ange PIN (standard
-`1234`). Där kan du:
+Det finns **inget lärarläge**. Appen har inga inställningar alls — den ställer
+in sig efter eleven medan hon arbetar.
 
-- sätta elevens **nivå** (1–4), som styr vilka övningstyper som dyker upp
-- sätta och låsa **bokstavssteget** (1–8)
-- se vilka bokstäver som sitter, och de tio senaste passen
-- testa att den svenska rösten fungerar på datorn
-- spara och läsa in backup
+- **Bokstavssteget** (1–8) höjs när minst 80 % av stationens bokstäver sitter.
+- **Nivåbandet** (1–4), som styr vilka övningstyper som dyker upp, höjs efter
+  antal bemästrade bokstäver: band 2 vid 6, band 3 vid 13, band 4 vid 25.
+  Talen är satta mot bokstavsresan — band 2 infaller när station 1 är klar och
+  eleven kan ljuda sol, arm och mor.
+
+Bandet **sänks aldrig**. Samma princip som bästa resultat per uppgift: det en
+elev en gång har visat att hon klarar ska inte kunna tas ifrån henne av en
+dålig dag.
+
+Saknas svensk röst på datorn syns en varning uppe på startskärmen.
+
+### Vad som försvann med lärarläget
+
+Lärarläget togs bort på begäran, och med det två saker som inte finns någon
+annanstans:
+
+- **Ingen backup.** Se *Var data ligger* nedan — det finns inget sätt att
+  spara undan eller flytta en elevs framsteg.
+- **Ingen väg att ta bort en elev.** Ansiktena på inloggningssidan ligger kvar
+  även när en elev slutar. Enda sättet är att rensa webbläsardata, och det tar
+  alla elever på enheten.
+
+Båda går att bygga tillbaka utan ett lärarläge om de blir ett problem.
 
 ## Ljudet, och dess begränsning
 
@@ -283,12 +267,15 @@ börjar returnera true för B, vilket automatiskt låser upp de svårare
 
 Allt sparas i webbläsarens localStorage under prefixet `grundjakten_`. Det
 betyder att **framstegen försvinner om eleven byter Chromebook eller om
-skolan rensar webbläsardata.** Spara en backup från lärarläget då och då.
+skolan rensar webbläsardata** — och sedan lärarläget togs bort finns ingen
+backupfunktion kvar. Det är den kända risken med appen.
 
 ## Status
 
-Byggt: bokstavsmodulen, skrivmodulen, Klassens tema med färdiga och egna
-teman, övningsbanken med 97 namngivna uppgifter i Svenska 1–4,
-elevprofiler med inloggning och framstegssida, lärarläge.
+Byggt: bokstavsmodulen, skrivmodulen, övningsbanken med 97 namngivna
+uppgifter i Svenska 1–4, elevprofiler med inloggning och framstegssida.
+
+Borttaget på begäran: Klassens tema (parallellspåret med NO/SO/engelska) och
+lärarläget. Båda ligger kvar i git-historiken.
 
 Inte byggt än: korsorden, och matematikspåret (siffror och räkning).

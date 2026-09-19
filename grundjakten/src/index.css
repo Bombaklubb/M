@@ -91,7 +91,7 @@
     min-height: 56px;
   }
 
-  /* Textfält i lärarläget är det enda stället där markering ska funka. */
+  /* Textfält är det enda stället där markering ska funka. */
   input, textarea {
     -webkit-user-select: text;
     user-select: text;
@@ -117,14 +117,24 @@
     letter-spacing: 0.02em;
   }
 
-  /* Sätts på <html> av inställningen i lärarläget. */
+  /* Sätts på <html> av profilens dyslexiinställning. Den går inte att ändra
+     i appen i dag – standardvärdet i DEFAULT_SETTINGS gäller. */
   .font-dyslexic .reading {
     font-family: 'OpenDyslexic', 'Lexend', sans-serif;
   }
 }
 
+/* `.stroke-demo` är undantagen: visningen av hur en bokstav skrivs är inte
+   dekor, den ÄR undervisningen. Utan rörelsen ritas bokstaven färdig direkt
+   och eleven får aldrig se skrivriktningen – att stänga av den vore att ta
+   bort innehållet, inte bara effekten. Takten är långsam och förutsägbar,
+   vilket är det inställningen egentligen skyddar mot.
+
+   Undantaget görs i SELEKTORN, inte med en egen regel som återställer.
+   `animation-duration: revert` ger 0s, inte inline-stilens 2s, och skulle
+   alltså stänga av visningen ännu hårdare än regeln den skulle mildra. */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *:not(.stroke-demo), *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

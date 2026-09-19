@@ -1,4 +1,4 @@
-import type { Progress, StudentProfile, Theme } from '@/types';
+import type { Progress, StudentProfile } from '@/types';
 import { DEFAULT_SETTINGS, emptyProgress } from '@/types';
 
 /**
@@ -22,14 +22,8 @@ export const KEYS = {
   currentUser: 'grundjakten_current_user',
   profile: (n: string) => `grundjakten_profile_u_${norm(n)}`,
   progress: (n: string) => `grundjakten_progress_u_${norm(n)}`,
-  // Medvetet enhetsglobalt, inte per elev: det är KLASSENS aktuella tema.
-  activeTheme: 'grundjakten_active_theme',
-  customThemes: 'grundjakten_custom_themes',
-  teacherPin: 'grundjakten_teacher_pin',
   lastReward: 'grundjakten_last_reward',
 } as const;
-
-export const DEFAULT_PIN = '1234';
 
 function readJson<T>(key: string, validate: (v: unknown) => v is T): T | null {
   try {
@@ -106,21 +100,11 @@ export function addUser(name: string): void {
   }
 }
 
-export function removeUser(name: string): void {
-  writeJson(KEYS.users, getUsers().filter((u) => norm(u) !== norm(name)));
-  try {
-    localStorage.removeItem(KEYS.profile(name));
-    localStorage.removeItem(KEYS.progress(name));
-  } catch {
-    /* ignoreras */
-  }
-}
-
 export function getCurrentUser(): string | null {
   try {
     const name = localStorage.getItem(KEYS.currentUser);
     if (!name) return null;
-    // En elev som tagits bort i lärarläget ska inte kunna vara inloggad.
+    // En elev som inte finns i listan ska inte kunna vara inloggad.
     return getUsers().some((u) => norm(u) === norm(name)) ? name : null;
   } catch {
     return null;
@@ -182,7 +166,6 @@ export function createProfile(name: string, avatar: string): StudentProfile {
     createdAt: new Date().toISOString(),
     level: 1,
     progressionStep: 1,
-    stepLockedByTeacher: false,
     settings: { ...DEFAULT_SETTINGS },
   };
   saveProfile(profile);
@@ -208,94 +191,4 @@ export function saveProgress(name: string, progress: Progress): void {
   // Passloggen kapas så att localStorage inte växer obegränsat.
   const trimmed: Progress = { ...progress, sessions: progress.sessions.slice(-200) };
   writeJson(KEYS.progress(name), trimmed);
-}
-
-// ---------- Teman ----------
-
-function isThemeArray(v: unknown): v is Theme[] {
-  return Array.isArray(v) && v.every((t) => typeof t === 'object' && t !== null && 'id' in t && 'words' in t);
-}
-
-export function getCustomThemes(): Theme[] {
-  return readJson(KEYS.customThemes, isThemeArray) ?? [];
-}
-
-export function saveCustomTheme(theme: Theme): void {
-  const themes = getCustomThemes();
-  const idx = themes.findIndex((t) => t.id === theme.id);
-  if (idx >= 0) themes[idx] = theme;
-  else themes.push(theme);
-  writeJson(KEYS.customThemes, themes);
-}
-
-export function deleteCustomTheme(id: string): void {
-  writeJson(KEYS.customThemes, getCustomThemes().filter((t) => t.id !== id));
-  if (getActiveThemeId() === id) setActiveThemeId(null);
-}
-
-export function getActiveThemeId(): string | null {
-  try {
-    return localStorage.getItem(KEYS.activeTheme);
-  } catch {
-    return null;
-  }
-}
-
-export function setActiveThemeId(id: string | null): void {
-  try {
-    if (id === null) localStorage.removeItem(KEYS.activeTheme);
-    else localStorage.setItem(KEYS.activeTheme, id);
-  } catch {
-    /* ignoreras */
-  }
-}
-
-// ---------- Lärarens PIN ----------
-
-export function getTeacherPin(): string {
-  try {
-    return localStorage.getItem(KEYS.teacherPin) || DEFAULT_PIN;
-  } catch {
-    return DEFAULT_PIN;
-  }
-}
-
-export function setTeacherPin(pin: string): void {
-  try {
-    localStorage.setItem(KEYS.teacherPin, pin);
-  } catch {
-    /* ignoreras */
-  }
-}
-
-// ---------- Backup ----------
-
-/**
- * Enda sättet att flytta en elevs framsteg mellan enheter utan backend.
- * Läraren behöver veta att den finns – den står i README.
- */
-export function exportAllData(): string {
-  const dump: Record<string, string> = {};
-  try {
-    for (let i = 0; i < localStorage.length; i++) {
-      const k = localStorage.key(i);
-      if (k && k.startsWith('grundjakten_')) dump[k] = localStorage.getItem(k) ?? '';
-    }
-  } catch {
-    /* ignoreras */
-  }
-  return JSON.stringify(dump, null, 2);
-}
-
-export function importAllData(json: string): boolean {
-  try {
-    const parsed: unknown = JSON.parse(json);
-    if (typeof parsed !== 'object' || parsed === null) return false;
-    Object.entries(parsed as Record<string, unknown>).forEach(([k, v]) => {
-      if (k.startsWith('grundjakten_') && typeof v === 'string') localStorage.setItem(k, v);
-    });
-    return true;
-  } catch {
-    return false;
-  }
 }

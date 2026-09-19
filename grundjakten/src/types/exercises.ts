@@ -1,7 +1,6 @@
 import type { SpeechToken } from './speech';
-import type { MicroText } from './theme';
 
-export type ModuleId = 'bokstaver' | 'skriva' | 'tema' | 'ovningsbank';
+export type ModuleId = 'bokstaver' | 'skriva' | 'ovningsbank';
 
 /**
  * Varje svarsalternativ går att lyssna på. Det är en hård invariant –
@@ -91,20 +90,9 @@ export interface LetterFormationEx extends Base {
   traceOptional: true;
 }
 
-export interface ListenPickPictureEx extends Base {
-  kind: 'listen-pick-picture';
-  choices: Choice[];
-}
-
 export interface WordPicturePairEx extends Base {
   kind: 'word-picture-pair';
   pairs: { id: string; word: string; emoji: string; say: SpeechToken }[];
-}
-
-export interface MicroTextEx extends Base {
-  kind: 'micro-text';
-  text: MicroText;
-  themeId: string;
 }
 
 /**
@@ -193,9 +181,7 @@ export type Exercise =
   | TypeTheLetterEx
   | BuildWordTilesEx
   | LetterFormationEx
-  | ListenPickPictureEx
   | WordPicturePairEx
-  | MicroTextEx
   | BuildSentenceCardsEx
   | QuizEx
   | TypeTheWordEx

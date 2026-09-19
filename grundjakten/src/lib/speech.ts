@@ -32,7 +32,7 @@ export function pickVoice(lang: Lang): SpeechSynthesisVoice | null {
  * Finns det någon svensk röst alls på den här enheten?
  *
  * Skol-Chromebooks har sv-SE, men en lärare som förhandsgranskar på en
- * Linux-laptop kan sakna den helt. Lärarläget visar en varning när detta är
+ * Linux-laptop kan sakna den helt. Startskärmen visar en varning när detta är
  * false – appen fungerar fortfarande, men med fel uttal.
  */
 export function hasSwedishVoice(): boolean {

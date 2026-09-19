@@ -4,7 +4,6 @@ import { TypeTheLetter } from './TypeTheLetter';
 import { BuildWordTiles } from './BuildWordTiles';
 import { LetterFormation } from './LetterFormation';
 import { BuildSentenceCards } from './BuildSentenceCards';
-import { MicroTextExercise } from './MicroTextExercise';
 import { WordPicturePair } from './WordPicturePair';
 import { QuizExercise } from './QuizExercise';
 import { TypeTheWord } from './TypeTheWord';
@@ -35,7 +34,6 @@ export function ExerciseRenderer({
     case 'blend-word':
     case 'read-word-pick-picture':
     case 'sight-word-pick':
-    case 'listen-pick-picture':
       return (
         <ChoiceExercise
           exercise={exercise}
@@ -77,17 +75,6 @@ export function ExerciseRenderer({
 
     case 'word-picture-pair':
       return <WordPicturePair exercise={exercise} onAnswer={onAnswer} locked={locked} />;
-
-    case 'micro-text':
-      return (
-        <MicroTextExercise
-          exercise={exercise}
-          onAnswer={onAnswer}
-          locked={locked}
-          guideTo={guideTo}
-          wrongId={wrongId}
-        />
-      );
 
     // Typad men inte genererad än.
     case 'first-sound-sort':
