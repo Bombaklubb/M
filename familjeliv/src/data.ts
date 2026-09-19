@@ -212,8 +212,8 @@ export const MEALS: Meal[] = [
   { day: 'ons', slot: 'middag', cook: 'Martin' },
   { day: 'tor', slot: 'middag', cook: 'Martin' },
   { day: 'fre', slot: 'middag', cook: 'Martin' },
-  { day: 'lör', slot: 'lunch', cook: 'Martin' },
-  { day: 'lör', slot: 'middag', cook: null },
+  { day: 'lör', slot: 'lunch', cook: null },
+  { day: 'lör', slot: 'middag', cook: 'Martin' },
   { day: 'sön', slot: 'lunch', cook: null },
   { day: 'sön', slot: 'middag', cook: null },
 ];
