@@ -57,7 +57,7 @@ export interface WordEntry {
   emoji: string | null;
   /** Segmentering för brickor och ljudning. Digrafer hålls ihop: ['sk','o','g']. */
   graphemes: string[];
-  /** Lägsta steg där alla grafem är kända. */
+  /** Lägsta steg där alla grafem är kända. Härlett ur PROGRESSION_STEPS. */
   step: number;
   kind: 'decodable' | 'sight';
   lang: Lang;

@@ -27,10 +27,12 @@ const mod = await import(
 );
 
 const katalogfel = mod.kollaKatalog();
+const progfel = mod.kollaProgression();
 const { antal, fel } = mod.kollaAllaTasks();
-const alla = [...katalogfel, ...fel];
+const pass = mod.kollaBokstavspass();
+const alla = [...katalogfel, ...progfel, ...fel, ...pass.fel];
 
-console.log(`Byggde ${antal} pass ur övningsbanken.`);
+console.log(`Byggde ${antal} pass ur övningsbanken och ${pass.antal} pass ur Bokstavsresan.`);
 
 if (alla.length === 0) {
   console.log('Inga fel.');
