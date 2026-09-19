@@ -1,5 +1,10 @@
 import type { Exercise } from '@/types';
 import { TASKS } from '@/data/tasks';
+import { MAX_STEP, PROGRESSION_STEPS } from '@/data/progression';
+import { LETTERS } from '@/data/letters';
+import { WORDS, newWordsAtStep } from '@/data/words';
+import { generateLetterPass } from '@/lib/generators/letterExercises';
+import type { LevelBand } from '@/types';
 
 /**
  * Innehållskontroll för övningsbanken.
@@ -125,4 +130,87 @@ export function kollaKatalog(): Fel[] {
     }
   }
   return fel;
+}
+
+/** Hur många bildord en station minst måste låsa upp för att bära ett pass. */
+const MIN_BILDORD = 3;
+
+/**
+ * Kontrollerar Bokstavsresan.
+ *
+ * Det här fanns på riktigt: station 1 var S O L A och låste upp två ord, varav
+ * ett med bild. Fyra bokstäver och nästan inget att göra med dem – och på
+ * nivåband 3, som lutar på ordövningar, gick passet inte ens att fylla.
+ * Felet syntes inte i någon kontroll, bara som en skärm som kändes tom.
+ */
+export function kollaProgression(): Fel[] {
+  const fel: Fel[] = [];
+  const kant = new Set(LETTERS.map((l) => l.id));
+  const sedda = new Set<string>();
+
+  for (const st of PROGRESSION_STEPS) {
+    for (const id of st.letters) {
+      if (!kant.has(id)) {
+        fel.push({ task: `station ${st.step}`, seed: 0, meddelande: `okänd bokstav "${id}"` });
+      }
+      if (sedda.has(id)) {
+        fel.push({ task: `station ${st.step}`, seed: 0, meddelande: `bokstaven "${id}" finns i två stationer` });
+      }
+      sedda.add(id);
+    }
+
+    const bildord = newWordsAtStep(st.step).filter((w) => w.emoji !== null);
+    if (bildord.length < MIN_BILDORD) {
+      fel.push({
+        task: `station ${st.step}`,
+        seed: 0,
+        meddelande: `låser bara upp ${bildord.length} ord med bild (minst ${MIN_BILDORD} krävs för att bära ett pass)`,
+      });
+    }
+  }
+
+  for (const l of LETTERS) {
+    if (!sedda.has(l.id)) {
+      fel.push({ task: 'progression', seed: 0, meddelande: `bokstaven "${l.id}" saknar station` });
+    }
+  }
+
+  // Ett ord vars grafem aldrig blir upplåsta är innehåll ingen elev kan nå.
+  for (const w of WORDS) {
+    if (w.step > MAX_STEP) {
+      fel.push({ task: w.id, seed: 0, meddelande: `blir aldrig läsbar (härlett steg ${w.step} > ${MAX_STEP})` });
+    }
+  }
+
+  return fel;
+}
+
+/**
+ * Varje station ska gå att öva på, på varje nivåband.
+ *
+ * Generatorn skickar hellre ut ett kort pass än ett med tomma rutor, så ett
+ * pass som inte blir fullt är tyst – eleven märker bara att övningen tog slut
+ * direkt. Därför kontrolleras längden här.
+ */
+export function kollaBokstavspass(seeds = [1, 12345, 987654]): { antal: number; fel: Fel[] } {
+  const fel: Fel[] = [];
+  let antal = 0;
+  const PASS = 8;
+
+  for (const st of PROGRESSION_STEPS) {
+    for (const band of [1, 2, 3] as LevelBand[]) {
+      for (const seed of seeds) {
+        const pass = generateLetterPass(st.step, band, seed);
+        antal++;
+        if (pass.length < PASS) {
+          fel.push({
+            task: `station ${st.step}, nivåband ${band}`,
+            seed,
+            meddelande: `passet blev ${pass.length} uppgifter i stället för ${PASS}`,
+          });
+        }
+      }
+    }
+  }
+  return { antal, fel };
 }

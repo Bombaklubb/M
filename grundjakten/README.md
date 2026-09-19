@@ -107,11 +107,74 @@ som ser likadana ut, svar som inte går att skriva, brickor som saknas.
 Kontrollen hittade till exempel att "fri som en fågel" och "glad som en
 lärka" delade emoji och gjorde uppgiften omöjlig att svara rätt på.
 
+Den kontrollerar också Bokstavsresan: att varje bokstav har exakt en station,
+att inget ord blir omöjligt att nå, att varje station går att öva på i alla
+tre nivåbanden (72 pass), och att **varje station låser upp minst tre ord med
+bild**. Den sista regeln finns därför att station 1 en gång bara låste upp
+ett – fyra bokstäver och nästan inget att göra med dem. Det syntes inte i
+någon kontroll, bara som en skärm som kändes tom.
+
 ### Inte byggt
 
 **Korsorden** (10 uppgifter i listan) saknas. De kräver ett rutnät med
 korsande ord och är en egen sak att bygga — resten av banken är samma
 mekanik med olika ord, korsordet är det inte.
+
+## Bokstavsresan
+
+Åtta stationer. Varje station låser upp några bokstäver, och kortet visar
+**orden stationen ger** – med bild och med ett öra per ord. Den raden är hela
+poängen med kortet: utan den ser indelningen godtycklig ut, och med den är den
+självklar. S, O, L, A, R och M hör ihop därför att det är precis de bokstäver
+som behövs för sol, arm, mor, orm, ram och ros.
+
+| Station | Bokstäver | Nya ord | Ord totalt |
+|---|---|---|---|
+| 1 ☀️ | S O L A R M | 8 | 8 |
+| 2 🦌 | I V E N | 11 | 19 |
+| 3 5️⃣ | T F Ä | 5 | 24 |
+| 4 🐄 | K Ö U | 14 | 38 |
+| 5 🐷 | P Å G | 14 | 52 |
+| 6 📖 | B D H | 15 | 67 |
+| 7 🚲 | J Y C | 5 | 72 |
+| 8 🏁 | X Z W Q | 4 | 76 |
+
+### Varför ordningen inte är alfabetisk
+
+Det här är den fråga alla ställer, så den står nedskriven. Ordningen är
+**ljudordning**. Räknat ur appens egen ordbank:
+
+| Bokstäver eleven mött | Ord hon kan läsa |
+|---|---|
+| Alfabetiskt A–F (två stationer) | **1** – "bad" |
+| Alfabetiskt A–I (tre stationer) | **2** – bad, dag |
+| S O L A R M (en station) | **8** – sal sol arm mor mos orm ram ros |
+
+Alfabetisk ordning lägger dessutom B, C och D först. B och D är två av de sex
+klusiler där talsyntesen inte klarar ljudet isolerat och säger "bö" i stället
+för /b/ (se *Ljudet, och dess begränsning*). C har inget eget ljud i svenskan
+och ligger därför sent.
+
+Station 1 är den klassiska SALORM-gruppen och är större än de andra, eftersom
+den måste bära de första riktiga orden.
+
+**Alfabetet tränas ändå** – i Övningsbanken, i gruppen *Alfabetet*: alfabetisk
+ordning, nästa bokstav, stor/liten bokstav. De två spåren delar upp arbetet:
+Bokstavsresan lär ut ljudning, Övningar lär ut alfabetet som ordningsföljd.
+
+### En sanning om vilken bokstav som hör till vilket steg
+
+`PROGRESSION_STEPS` i `data/progression.ts` är enda stället indelningen
+skrivs. En bokstavs `step` och ett ords `step` **härleds** därifrån
+(`stepForLetter`, `stepForGraphemes`) i stället för att skrivas av för hand.
+
+Det är inte städning: ett ords steg är per definition lägsta steg där alla
+dess grafem är kända, och skrevs de 98 siffrorna av för hand skulle varje
+ändring av stationerna kräva att de uppdaterades rätt – och en missad siffra
+syns inte, den yttrar sig bara som att ett ord dyker upp för tidigt eller
+aldrig. `stepForGraphemes` delar upp flerteckensgrafem (`ng`, `sk`, `skj`,
+`rd`, `rt`, `ck`) i sina bokstäver, för ett ord går inte att läsa förrän
+varenda bokstav i det är introducerad.
 
 ## Forma bokstäver
 

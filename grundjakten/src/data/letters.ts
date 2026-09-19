@@ -1,4 +1,5 @@
 import type { Letter } from '@/types';
+import { stepForLetter } from './progression';
 
 /**
  * Alla 29 bokstäver, i INLÄRNINGSORDNING (progression 1–29), inte alfabetisk.
@@ -12,11 +13,15 @@ import type { Letter } from '@/types';
  * att uppfatta isolerat OCH de enda som talsyntesen inte klarar – den lägger
  * på ett schwa och säger "bö" i stället för /b/. Därför är `sound: null` för
  * dem, och de lärs ut via nyckelordet ("B som i boll"). Se lib/audio.ts.
+ *
+ * `step` skrivs inte här. Vilken station en bokstav tillhör bestäms av
+ * PROGRESSION_STEPS, och härleds därifrån – annars finns indelningen på två
+ * ställen som tyst kan glida isär.
  */
-export const LETTERS: Letter[] = [
+const RA_BOKSTAVER: Omit<Letter, 'step'>[] = [
   {
     id: 's', upper: 'S', lower: 's',
-    progression: 1, step: 1, soundClass: 'continuant',
+    progression: 1, soundClass: 'continuant',
     name: { id: 'name-s', text: 'ess', lang: 'sv-SE' },
     sound: { id: 'snd-s', text: 'sssss', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -31,7 +36,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'o', upper: 'O', lower: 'o',
-    progression: 2, step: 1, soundClass: 'vowel',
+    progression: 2, soundClass: 'vowel',
     name: { id: 'name-o', text: 'o', lang: 'sv-SE' },
     sound: { id: 'snd-o', text: 'ooooo', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -46,7 +51,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'l', upper: 'L', lower: 'l',
-    progression: 3, step: 1, soundClass: 'continuant',
+    progression: 3, soundClass: 'continuant',
     name: { id: 'name-l', text: 'ell', lang: 'sv-SE' },
     sound: { id: 'snd-l', text: 'llllll', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -61,7 +66,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'a', upper: 'A', lower: 'a',
-    progression: 4, step: 1, soundClass: 'vowel',
+    progression: 4, soundClass: 'vowel',
     name: { id: 'name-a', text: 'a', lang: 'sv-SE' },
     sound: { id: 'snd-a', text: 'aaaaa', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -76,7 +81,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'r', upper: 'R', lower: 'r',
-    progression: 5, step: 2, soundClass: 'continuant',
+    progression: 5, soundClass: 'continuant',
     name: { id: 'name-r', text: 'err', lang: 'sv-SE' },
     sound: { id: 'snd-r', text: 'rrrrr', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -91,7 +96,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'm', upper: 'M', lower: 'm',
-    progression: 6, step: 2, soundClass: 'continuant',
+    progression: 6, soundClass: 'continuant',
     name: { id: 'name-m', text: 'em', lang: 'sv-SE' },
     sound: { id: 'snd-m', text: 'mmmmm', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -106,7 +111,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'i', upper: 'I', lower: 'i',
-    progression: 7, step: 2, soundClass: 'vowel',
+    progression: 7, soundClass: 'vowel',
     name: { id: 'name-i', text: 'i', lang: 'sv-SE' },
     sound: { id: 'snd-i', text: 'iiiii', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -121,7 +126,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'v', upper: 'V', lower: 'v',
-    progression: 8, step: 3, soundClass: 'continuant',
+    progression: 8, soundClass: 'continuant',
     name: { id: 'name-v', text: 've', lang: 'sv-SE' },
     sound: { id: 'snd-v', text: 'vvvvv', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -136,7 +141,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'e', upper: 'E', lower: 'e',
-    progression: 9, step: 3, soundClass: 'vowel',
+    progression: 9, soundClass: 'vowel',
     name: { id: 'name-e', text: 'e', lang: 'sv-SE' },
     sound: { id: 'snd-e', text: 'eeeee', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -151,7 +156,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'n', upper: 'N', lower: 'n',
-    progression: 10, step: 3, soundClass: 'continuant',
+    progression: 10, soundClass: 'continuant',
     name: { id: 'name-n', text: 'enn', lang: 'sv-SE' },
     sound: { id: 'snd-n', text: 'nnnnn', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -166,7 +171,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 't', upper: 'T', lower: 't',
-    progression: 11, step: 4, soundClass: 'plosive',
+    progression: 11, soundClass: 'plosive',
     name: { id: 'name-t', text: 'te', lang: 'sv-SE' },
     sound: null,
     keyword: {
@@ -181,7 +186,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'f', upper: 'F', lower: 'f',
-    progression: 12, step: 4, soundClass: 'continuant',
+    progression: 12, soundClass: 'continuant',
     name: { id: 'name-f', text: 'eff', lang: 'sv-SE' },
     sound: { id: 'snd-f', text: 'fffff', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -196,7 +201,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'ä', upper: 'Ä', lower: 'ä',
-    progression: 13, step: 4, soundClass: 'vowel',
+    progression: 13, soundClass: 'vowel',
     name: { id: 'name-ä', text: 'ä', lang: 'sv-SE' },
     sound: { id: 'snd-ä', text: 'ääää', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -211,7 +216,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'k', upper: 'K', lower: 'k',
-    progression: 14, step: 5, soundClass: 'plosive',
+    progression: 14, soundClass: 'plosive',
     name: { id: 'name-k', text: 'kå', lang: 'sv-SE' },
     sound: null,
     keyword: {
@@ -226,7 +231,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'ö', upper: 'Ö', lower: 'ö',
-    progression: 15, step: 5, soundClass: 'vowel',
+    progression: 15, soundClass: 'vowel',
     name: { id: 'name-ö', text: 'ö', lang: 'sv-SE' },
     sound: { id: 'snd-ö', text: 'öööö', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -241,7 +246,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'u', upper: 'U', lower: 'u',
-    progression: 16, step: 5, soundClass: 'vowel',
+    progression: 16, soundClass: 'vowel',
     name: { id: 'name-u', text: 'u', lang: 'sv-SE' },
     sound: { id: 'snd-u', text: 'uuuuu', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -256,7 +261,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'p', upper: 'P', lower: 'p',
-    progression: 17, step: 6, soundClass: 'plosive',
+    progression: 17, soundClass: 'plosive',
     name: { id: 'name-p', text: 'pe', lang: 'sv-SE' },
     sound: null,
     keyword: {
@@ -271,7 +276,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'å', upper: 'Å', lower: 'å',
-    progression: 18, step: 6, soundClass: 'vowel',
+    progression: 18, soundClass: 'vowel',
     name: { id: 'name-å', text: 'å', lang: 'sv-SE' },
     sound: { id: 'snd-å', text: 'åååå', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -286,7 +291,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'g', upper: 'G', lower: 'g',
-    progression: 19, step: 6, soundClass: 'plosive',
+    progression: 19, soundClass: 'plosive',
     name: { id: 'name-g', text: 'ge', lang: 'sv-SE' },
     sound: null,
     keyword: {
@@ -301,7 +306,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'b', upper: 'B', lower: 'b',
-    progression: 20, step: 7, soundClass: 'plosive',
+    progression: 20, soundClass: 'plosive',
     name: { id: 'name-b', text: 'be', lang: 'sv-SE' },
     sound: null,
     keyword: {
@@ -316,7 +321,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'd', upper: 'D', lower: 'd',
-    progression: 21, step: 7, soundClass: 'plosive',
+    progression: 21, soundClass: 'plosive',
     name: { id: 'name-d', text: 'de', lang: 'sv-SE' },
     sound: null,
     keyword: {
@@ -331,7 +336,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'h', upper: 'H', lower: 'h',
-    progression: 22, step: 7, soundClass: 'continuant',
+    progression: 22, soundClass: 'continuant',
     name: { id: 'name-h', text: 'hå', lang: 'sv-SE' },
     sound: { id: 'snd-h', text: 'hhhhh', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -346,7 +351,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'j', upper: 'J', lower: 'j',
-    progression: 23, step: 7, soundClass: 'continuant',
+    progression: 23, soundClass: 'continuant',
     name: { id: 'name-j', text: 'ji', lang: 'sv-SE' },
     sound: { id: 'snd-j', text: 'jjjjj', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -361,7 +366,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'y', upper: 'Y', lower: 'y',
-    progression: 24, step: 8, soundClass: 'vowel',
+    progression: 24, soundClass: 'vowel',
     name: { id: 'name-y', text: 'y', lang: 'sv-SE' },
     sound: { id: 'snd-y', text: 'yyyyy', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -376,7 +381,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'c', upper: 'C', lower: 'c',
-    progression: 25, step: 8, soundClass: 'plosive',
+    progression: 25, soundClass: 'plosive',
     name: { id: 'name-c', text: 'se', lang: 'sv-SE' },
     sound: null,
     keyword: {
@@ -391,7 +396,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'x', upper: 'X', lower: 'x',
-    progression: 26, step: 8, soundClass: 'continuant',
+    progression: 26, soundClass: 'continuant',
     name: { id: 'name-x', text: 'eks', lang: 'sv-SE' },
     sound: { id: 'snd-x', text: 'kssss', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -406,7 +411,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'z', upper: 'Z', lower: 'z',
-    progression: 27, step: 8, soundClass: 'continuant',
+    progression: 27, soundClass: 'continuant',
     name: { id: 'name-z', text: 'säta', lang: 'sv-SE' },
     sound: { id: 'snd-z', text: 'sssss', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -421,7 +426,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'w', upper: 'W', lower: 'w',
-    progression: 28, step: 8, soundClass: 'continuant',
+    progression: 28, soundClass: 'continuant',
     name: { id: 'name-w', text: 'dubbel-ve', lang: 'sv-SE' },
     sound: { id: 'snd-w', text: 'vvvvv', lang: 'sv-SE', rate: 0.55 },
     keyword: {
@@ -436,7 +441,7 @@ export const LETTERS: Letter[] = [
   },
   {
     id: 'q', upper: 'Q', lower: 'q',
-    progression: 29, step: 8, soundClass: 'plosive',
+    progression: 29, soundClass: 'plosive',
     name: { id: 'name-q', text: 'ku', lang: 'sv-SE' },
     sound: null,
     keyword: {
@@ -450,6 +455,11 @@ export const LETTERS: Letter[] = [
     },
   },
 ];
+
+export const LETTERS: Letter[] = RA_BOKSTAVER.map((l) => ({
+  ...l,
+  step: stepForLetter(l.id),
+}));
 
 /** Uppslag per bokstavs-id. */
 export const LETTER_BY_ID: Record<string, Letter> = Object.fromEntries(
