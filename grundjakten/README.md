@@ -35,6 +35,21 @@ skriva sitt namn själv. Därför ligger de elever som redan finns på enheten
 överst som stora ansikten – ett tryck och hon är inne. Namnfältet under är
 för första gången, och då är det oftast läraren som fyller i det.
 
+Appen återupptar senast inloggad elev vid start. **Byt elev** ligger längst
+ned på framstegssidan och är vägen tillbaka till inloggningen – utan den gick
+den aldrig att nå igen efter första gången. Knappen frågar en gång till innan
+den släpper eleven, eftersom ett feltryck avbryter mitt i en lektion.
+
+## Mina framsteg
+
+Elevens namn står uppe till höger på startskärmen, och ett tryck där öppnar
+hennes egen översikt: nivå, bokstäver hon kan, klarade övningar med bästa
+resultat, kistor och dagar i rad.
+
+Det här är **elevens** sida, inte lärarens. Skillnaden är medveten: lärarvyn
+visar hur många fel eleven haft, den här visar bara vad hon klarat. Varje
+avsnitt har ett öra som säger vad det visar, och varje siffra läses upp.
+
 ## Övningsbanken
 
 97 **namngivna** uppgifter, grupperade i Svenska 1–4 precis som i lärarens
@@ -211,6 +226,6 @@ skolan rensar webbläsardata.** Spara en backup från lärarläget då och då.
 
 Byggt: bokstavsmodulen, skrivmodulen, Klassens tema med färdiga och egna
 teman, övningsbanken med 97 namngivna uppgifter i Svenska 1–4,
-elevprofiler, lärarläge.
+elevprofiler med inloggning och framstegssida, lärarläge.
 
 Inte byggt än: korsorden, och matematikspåret (siffror och räkning).
