@@ -30,6 +30,16 @@
     --text: 241 245 249;
   }
 
+  /* Mot nästan svart syns färgen tidigare, så tvätten dras ned i stället för
+     upp. Samma fyra hörn, bara dovare. */
+  .dark body {
+    background-image:
+      radial-gradient(58rem 42rem at 6% -8%, rgb(139 92 246 / 0.30), transparent 62%),
+      radial-gradient(52rem 38rem at 98% 4%, rgb(6 182 212 / 0.24), transparent 62%),
+      radial-gradient(48rem 40rem at 92% 100%, rgb(245 158 11 / 0.20), transparent 62%),
+      radial-gradient(54rem 44rem at 0% 96%, rgb(132 204 22 / 0.22), transparent 62%);
+  }
+
   * {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
@@ -39,9 +49,26 @@
     min-height: 100dvh;
   }
 
+  /* Bakgrunden är kortens egna fyra färger, utsmetade i varsitt hörn så att
+     de flyter in i varandra. Samma färgvärld som eleven trycker på, alltså –
+     inte en ny dekor att hålla reda på.
+
+     Genomskinligheten är låg med flit: ovanpå det här ligger vit text på
+     mättade kort och mörk text på vita paneler, och båda måste fortsätta
+     hålla kontrast. Färgen ska kännas, inte synas.
+
+     `fixed` gör att tvätten står still när sidan rullar. En bakgrund som
+     glider under fingret drar blicken från uppgiften. */
   body {
     font-family: 'Outfit', system-ui, -apple-system, sans-serif;
-    background: rgb(var(--bg));
+    background-color: rgb(var(--bg));
+    background-image:
+      radial-gradient(58rem 42rem at 6% -8%, rgb(139 92 246 / 0.24), transparent 62%),
+      radial-gradient(52rem 38rem at 98% 4%, rgb(6 182 212 / 0.22), transparent 62%),
+      radial-gradient(48rem 40rem at 92% 100%, rgb(245 158 11 / 0.22), transparent 62%),
+      radial-gradient(54rem 44rem at 0% 96%, rgb(132 204 22 / 0.24), transparent 62%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: rgb(var(--text));
     /* Ingen elev ska kunna markera text av misstag och tappa fokus. */
     -webkit-user-select: none;

@@ -12,6 +12,7 @@ import { TeacherLoginView } from '@/views/TeacherLoginView';
 import { ThemeHubView } from '@/views/ThemeHubView';
 import { ThemeEditorView } from '@/views/ThemeEditorView';
 import { OvningsbankView } from '@/views/OvningsbankView';
+import { FramstegView } from '@/views/FramstegView';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import { generateWritePass, type WriteMode } from '@/lib/generators/writingExercises';
 import { generateThemePass, type ThemeMode } from '@/lib/generators/themeExercises';
@@ -29,6 +30,7 @@ type View =
   | { name: 'theme' }
   | { name: 'theme-editor' }
   | { name: 'ovningar' }
+  | { name: 'framsteg' }
   | { name: 'session'; exercises: Exercise[]; repeat: () => Exercise[]; taskId?: string }
   | { name: 'reward'; result: SessionResult; repeat: () => Exercise[]; taskId?: string }
   | { name: 'teacher-pin' }
@@ -63,6 +65,18 @@ export default function App() {
     setRateScale(profile.settings.speechRate);
     document.documentElement.classList.toggle('font-dyslexic', profile.settings.dyslexicFont);
   }, [profile?.settings.speechRate, profile?.settings.dyslexicFont]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  /**
+   * Varje ny skärm börjar överst.
+   *
+   * Utan det här ärver nästa vy föregående vys scrollposition: trycker eleven
+   * "Byt elev" längst ned på framstegssidan öppnas inloggningen halvvägs
+   * nedskrollad, med rubriken ovanför kanten. En elev som inte kan läsa
+   * förstår inte att hon ska dra uppåt.
+   */
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [view.name, profile === null]);
 
   const login = (p: StudentProfile) => {
     setCurrentUser(p.name);
@@ -149,6 +163,20 @@ export default function App() {
 
   const goHome = () => setView({ name: 'home' });
 
+  /**
+   * Byt elev.
+   *
+   * Appen återupptar annars alltid senast inloggad elev, och utan det här
+   * gick inloggningssidan inte att nå igen efter första gången. Framstegen
+   * ligger kvar på namnet – det är bara den aktiva eleven som släpps.
+   */
+  const logout = () => {
+    setCurrentUser(null);
+    setProfile(null);
+    setProgress(null);
+    setView({ name: 'login' });
+  };
+
   if (!profile || !progress) {
     return (
       <ErrorBoundary>
@@ -172,7 +200,16 @@ export default function App() {
           progress={progress}
           onGo={go}
           onTeacher={() => setView({ name: 'teacher-pin' })}
-          onProfile={goHome}
+          onProfile={() => setView({ name: 'framsteg' })}
+        />
+      )}
+
+      {view.name === 'framsteg' && (
+        <FramstegView
+          profile={profile}
+          progress={progress}
+          onBack={goHome}
+          onLogout={logout}
         />
       )}
 
