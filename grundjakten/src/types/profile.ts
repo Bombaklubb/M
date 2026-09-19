@@ -1,6 +1,13 @@
 import type { ModuleId } from './exercises';
 
-/** Vad läraren faktiskt ställer in. Styr vilka övningstyper som dyker upp. */
+/**
+ * Styr vilka övningstyper som dyker upp.
+ *
+ * Höjs automatiskt när eleven bemästrar bokstäver (se shouldAdvanceLevel i
+ * lib/progress.ts) och sänks aldrig. Tidigare satte läraren bandet för hand i
+ * lärarläget; med det borta måste appen sköta det själv, annars skulle varje
+ * elev stå kvar på band 1 för alltid och aldrig nå ljudning eller ordläsning.
+ */
 export type LevelBand = 1 | 2 | 3 | 4;
 
 export const LEVEL_BANDS: { band: LevelBand; title: string; desc: string }[] = [
@@ -24,9 +31,8 @@ export interface StudentProfile {
   avatar: string;
   createdAt: string;
   level: LevelBand;
-  /** 1–8. Höjs automatiskt vid bemästring; läraren kan låsa. */
+  /** 1–8. Höjs automatiskt vid bemästring. */
   progressionStep: number;
-  stepLockedByTeacher: boolean;
   settings: ProfileSettings;
 }
 
@@ -72,7 +78,6 @@ export interface Progress {
   lastPlayedDate: string;
   letters: Record<string, ItemMastery>;
   words: Record<string, ItemMastery>;
-  themeWords: Record<string, ItemMastery>;
   /** Kapas till 200 poster, äldst först. */
   sessions: SessionLog[];
   /** Resultat per uppgift i övningsbanken, nyckel = uppgiftens id. */
@@ -96,7 +101,6 @@ export function emptyProgress(): Progress {
     lastPlayedDate: '',
     letters: {},
     words: {},
-    themeWords: {},
     sessions: [],
     tasks: {},
   };

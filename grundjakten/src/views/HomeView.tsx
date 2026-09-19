@@ -1,27 +1,25 @@
 import type { Progress, StudentProfile } from '@/types';
-import { useLongPress } from '@/hooks/useLongPress';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { play } from '@/lib/audio';
 import { getLevelTitle, xpForNextLevel } from '@/lib/utils';
 import { hasSwedishVoice } from '@/lib/speech';
 
-export type Destination = 'bokstaver' | 'skriva' | 'tema' | 'ovningar';
+export type Destination = 'bokstaver' | 'skriva' | 'ovningar';
 
 const CARDS: { id: Destination; icon: string; title: string; say: string; tint: string }[] = [
   { id: 'bokstaver', icon: '🔤', title: 'Bokstäver', say: 'Bokstäver', tint: 'bg-brand-500 border-brand-700' },
   { id: 'skriva', icon: '✍️', title: 'Skriva', say: 'Skriva', tint: 'bg-aqua-500 border-aqua-700' },
   { id: 'ovningar', icon: '📚', title: 'Övningar', say: 'Övningar', tint: 'bg-amberx-500 border-amberx-700' },
-  { id: 'tema', icon: '🌍', title: 'Klassens tema', say: 'Klassens tema', tint: 'bg-lime-500 border-lime-700' },
 ];
 
 /**
  * Startskärmen.
  *
- * Fyra stora kort med ikon. Rubriktexten finns för lärarens och för
+ * Tre stora kort med ikon. Rubriktexten finns för lärarens och för
  * skärmläsarens skull – eleven navigerar på ikon och på det korten säger när
  * man trycker på dem.
  *
- * Alla fyra korten ska rymmas utan att eleven behöver scrolla. En elev som
+ * Alla korten ska rymmas utan att eleven behöver scrolla. En elev som
  * inte kan läsa förstår inte att det finns mer nedanför kanten – ett kort
  * utanför skärmen är i praktiken ett kort som inte finns.
  *
@@ -32,16 +30,13 @@ export function HomeView({
   profile,
   progress,
   onGo,
-  onTeacher,
   onProfile,
 }: {
   profile: StudentProfile;
   progress: Progress;
   onGo: (dest: Destination) => void;
-  onTeacher: () => void;
   onProfile: () => void;
 }) {
-  const longPress = useLongPress(onTeacher);
   const xp = xpForNextLevel(progress.xp);
 
   useAutoSpeak(
@@ -54,17 +49,10 @@ export function HomeView({
                     [@media(min-height:760px)]:py-5">
       <header className="mb-4 flex items-center justify-between
                          [@media(min-height:760px)]:mb-8">
-        {/* Lärarläget nås genom två sekunders långtryck på loggan. Ingen
-            synlig knapp – en elev ska inte snubbla in. */}
-        <button
-          type="button"
-          aria-label="Grundjakten"
-          {...longPress}
-          className="grid h-14 w-14 min-h-0 place-items-center rounded-tile bg-brand-700 text-2xl
-                     font-extrabold text-lime-300"
-        >
-          <span aria-hidden>G</span>
-        </button>
+        {/* Vänsterkanten är tom med flit. Här satt tidigare en G-logga som
+            dolde lärarläget bakom ett långtryck; båda är borta. Röstvarningen
+            får inte glida hit – namnet ska ligga kvar till höger. */}
+        <span aria-hidden />
 
         {!hasSwedishVoice() && (
           <span

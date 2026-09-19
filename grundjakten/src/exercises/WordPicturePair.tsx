@@ -9,9 +9,9 @@ import { mulberry32, shuffle } from '@/lib/rng';
 /**
  * Para ihop ord och bild.
  *
- * Tränar temaorden som ordbilder, så att eleven känner igen dem när läraren
- * skriver dem på tavlan. Ordet läses upp när hon trycker på det – annars vore
- * övningen ren gissning för någon som inte avkodar.
+ * Tränar orden som ordbilder – eleven kopplar ihop ordet med vad det betyder
+ * utan att behöva ljuda det. Ordet läses upp när hon trycker på det; annars
+ * vore övningen ren gissning för någon som inte avkodar.
  *
  * Tryck-tryck, inte drag: välj ett ord, välj sedan en bild.
  */

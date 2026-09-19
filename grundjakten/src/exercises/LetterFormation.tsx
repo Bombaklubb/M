@@ -29,6 +29,20 @@ const KRAV = 0.6;
 /** Efter så här många försök godkänns det oavsett. */
 const MAX_FORSOK = 2;
 
+/**
+ * Hur länge ett drag ritas, och hur lång paus det är mellan dragen.
+ *
+ * Takten är satt efter en elev som ska HINNA FÖLJA pennan med blicken, inte
+ * efter vad som ser bra ut. Den som inte kan skriva behöver se var draget
+ * börjar, åt vilket håll det går och var det slutar – och det tar tid.
+ *
+ * Kurvan är `linear` med flit. `ease-out` rusar igång och bromsar på slutet,
+ * alltså snabbast just i början av draget, som är precis den del eleven ska
+ * lära sig. En hand som skriver håller jämn fart.
+ */
+const DRAG_SEKUNDER = 2;
+const DRAG_PAUS = 2.4;
+
 type Fas = 'visar' | 'ritar';
 
 interface Punkt {
@@ -214,7 +228,10 @@ export function LetterFormation({
               pathLength={100}
               strokeDasharray={100}
               strokeDashoffset={100}
-              style={{ animation: `draw-stroke 1s ease-out ${i * 1.1}s forwards` }}
+              className="stroke-demo"
+              style={{
+                animation: `draw-stroke ${DRAG_SEKUNDER}s linear ${i * DRAG_PAUS}s forwards`,
+              }}
             />
           ))}
 

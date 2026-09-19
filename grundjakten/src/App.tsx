@@ -7,18 +7,12 @@ import { LetterMapView } from '@/views/LetterMapView';
 import { WriteHubView } from '@/views/WriteHubView';
 import { SessionView, type SessionResult } from '@/views/SessionView';
 import { RewardView } from '@/views/RewardView';
-import { TeacherView } from '@/views/TeacherView';
-import { TeacherLoginView } from '@/views/TeacherLoginView';
-import { ThemeHubView } from '@/views/ThemeHubView';
-import { ThemeEditorView } from '@/views/ThemeEditorView';
 import { OvningsbankView } from '@/views/OvningsbankView';
 import { FramstegView } from '@/views/FramstegView';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import { generateWritePass, type WriteMode } from '@/lib/generators/writingExercises';
-import { generateThemePass, type ThemeMode } from '@/lib/generators/themeExercises';
-import { activeTheme } from '@/data/themes';
 import { getCurrentUser, getProfile, getProgress, saveProfile, saveProgress, setCurrentUser } from '@/lib/storage';
-import { addXp, recordAnswer, shouldAdvanceStep, touchDailyStreak } from '@/lib/progress';
+import { addXp, recordAnswer, shouldAdvanceLevel, shouldAdvanceStep, touchDailyStreak } from '@/lib/progress';
 import { setRateScale } from '@/lib/audio';
 import { todayStamp } from '@/lib/utils';
 
@@ -27,14 +21,10 @@ type View =
   | { name: 'home' }
   | { name: 'letters' }
   | { name: 'write' }
-  | { name: 'theme' }
-  | { name: 'theme-editor' }
   | { name: 'ovningar' }
-  | { name: 'framsteg' }
   | { name: 'session'; exercises: Exercise[]; repeat: () => Exercise[]; taskId?: string }
   | { name: 'reward'; result: SessionResult; repeat: () => Exercise[]; taskId?: string }
-  | { name: 'teacher-pin' }
-  | { name: 'teacher' };
+  | { name: 'framsteg' };
 
 /**
  * Ingen router med flit.
@@ -106,10 +96,7 @@ export default function App() {
       if ('letterId' in exercise) {
         next = recordAnswer(next, 'letters', exercise.letterId, firstTry);
       } else if ('wordId' in exercise) {
-        // Temaord räknas för sig. Annars skulle "skepp" från Vikingatiden
-        // blandas ihop med ljudenliga träningsord i lärarens överblick.
-        const bucket = exercise.module === 'tema' ? 'themeWords' : 'words';
-        next = recordAnswer(next, bucket, exercise.wordId, firstTry);
+        next = recordAnswer(next, 'words', exercise.wordId, firstTry);
       }
     }
 
@@ -152,10 +139,19 @@ export default function App() {
     saveProgress(profile.name, next);
     setProgress(next);
 
+    // Steg och nivåband höjs båda automatiskt. Tidigare satte läraren dem för
+    // hand i lärarläget; med det borta är det här enda sättet en elev kan gå
+    // vidare från igenkänningsövningar till ljudning och ordläsning.
+    let uppdaterad = profile;
     if (shouldAdvanceStep(profile, next)) {
-      const advanced = { ...profile, progressionStep: profile.progressionStep + 1 };
-      saveProfile(advanced);
-      setProfile(advanced);
+      uppdaterad = { ...uppdaterad, progressionStep: uppdaterad.progressionStep + 1 };
+    }
+    const nyttBand = shouldAdvanceLevel(profile, next);
+    if (nyttBand) uppdaterad = { ...uppdaterad, level: nyttBand };
+
+    if (uppdaterad !== profile) {
+      saveProfile(uppdaterad);
+      setProfile(uppdaterad);
     }
 
     setView({ name: 'reward', result, repeat, taskId });
@@ -188,8 +184,7 @@ export default function App() {
   const go = (dest: Destination) => {
     if (dest === 'bokstaver') setView({ name: 'letters' });
     else if (dest === 'skriva') setView({ name: 'write' });
-    else if (dest === 'ovningar') setView({ name: 'ovningar' });
-    else setView({ name: 'theme' });
+    else setView({ name: 'ovningar' });
   };
 
   return (
@@ -199,7 +194,6 @@ export default function App() {
           profile={profile}
           progress={progress}
           onGo={go}
-          onTeacher={() => setView({ name: 'teacher-pin' })}
           onProfile={() => setView({ name: 'framsteg' })}
         />
       )}
@@ -233,21 +227,6 @@ export default function App() {
         />
       )}
 
-      {view.name === 'theme' && (
-        <ThemeHubView
-          theme={activeTheme()}
-          profile={profile}
-          onBack={goHome}
-          onStart={(mode: ThemeMode) => {
-            const theme = activeTheme();
-            if (!theme) return;
-            startSession(() =>
-              generateThemePass(theme, mode, profile.progressionStep, profile.level)
-            );
-          }}
-        />
-      )}
-
       {view.name === 'ovningar' && (
         <OvningsbankView
           profile={profile}
@@ -255,10 +234,6 @@ export default function App() {
           onBack={goHome}
           onStart={(task) => startSession(() => task.build(Date.now()), task.id)}
         />
-      )}
-
-      {view.name === 'theme-editor' && (
-        <ThemeEditorView level={profile.level} onDone={() => setView({ name: 'teacher' })} />
       )}
 
       {view.name === 'session' && (
@@ -278,20 +253,6 @@ export default function App() {
         />
       )}
 
-      {view.name === 'teacher-pin' && (
-        <TeacherLoginView onUnlock={() => setView({ name: 'teacher' })} onCancel={goHome} />
-      )}
-
-      {view.name === 'teacher' && (
-        <TeacherView
-          profile={profile}
-          progress={progress}
-          onProfileChange={setProfile}
-          onProgressChange={setProgress}
-          onEditThemes={() => setView({ name: 'theme-editor' })}
-          onExit={goHome}
-        />
-      )}
     </ErrorBoundary>
   );
 }
