@@ -24,6 +24,16 @@ klassen läser och skriver texter?"**
    eleven till rätt svar. Belöningsskärmen visar aldrig hur många fel hon
    hade. Resultatet per övning syns däremot i övningsbanken efteråt, som ett
    bästa-resultat hon kan slå.
+4. **Eleven bestämmer takten, och allt syns utan att scrolla.** Passet byter
+   aldrig uppgift av sig självt: när svaret är rätt tänds en grön pil i
+   listen längst ned, och den ska tryckas. En elev som behöver tio sekunder
+   på sig att se att hon svarade rätt hann inte med när skärmen bytte efter
+   900 ms, och hon kan inte läsa sig till vad som hände.
+
+   Övningsskärmen är exakt en skärmhöjd hög och scrollar aldrig. En elev som
+   inte kan läsa vet inte att man kan dra uppåt – en knapp hon inte ser är en
+   knapp som inte finns. Därför är storlekarna satta för en Chromebook med
+   omkring 560 px synlig yta, och växer först på högre skärmar.
 
 ## Inloggning
 

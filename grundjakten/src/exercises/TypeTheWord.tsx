@@ -72,9 +72,10 @@ export function TypeTheWord({
     : ALFABETET;
 
   return (
-    <div className="flex w-full flex-col items-center gap-6">
+    <div className="flex w-full flex-col items-center gap-3 [@media(min-height:760px)]:gap-6">
       {exercise.emoji && (
-        <span className="text-[6rem] leading-none" aria-hidden>{exercise.emoji}</span>
+        <span className="text-[3.5rem] leading-none [@media(min-height:760px)]:text-[6rem]"
+              aria-hidden>{exercise.emoji}</span>
       )}
 
       {exercise.sentence && (
@@ -87,13 +88,15 @@ export function TypeTheWord({
       {/* Skrivfältet. Ingen <input>, för att Chromebookens eget skärmtangentbord
           inte ska poppa upp ovanpå appens egna knappar. */}
       <div
-        className="reading grid min-h-[6rem] w-full max-w-2xl place-items-center rounded-card
-                   border-4 border-dashed border-brand-300 bg-white px-6 dark:bg-ink-800"
+        className="reading grid min-h-[4rem] w-full max-w-2xl place-items-center rounded-card
+                   border-4 border-dashed border-brand-300 bg-white px-6 dark:bg-ink-800
+                   [@media(min-height:760px)]:min-h-[6rem]"
         role="textbox"
         aria-label={`Ditt svar: ${text || 'tomt'}`}
         aria-live="polite"
       >
-        <span className="text-6xl font-bold tracking-wide text-brand-700 dark:text-brand-300">
+        <span className="text-4xl font-bold tracking-wide text-brand-700 dark:text-brand-300
+                         [@media(min-height:760px)]:text-6xl">
           {text || ' '}
         </span>
       </div>
@@ -111,8 +114,10 @@ export function TypeTheWord({
               if (!exercise.digits) void play({ id: `kn-${t}`, text: t, lang: 'sv-SE' });
             }}
             onClick={() => setText((v) => (v.length >= 20 ? v : v + t))}
-            className="tile-pop reading h-14 w-12 bg-white text-2xl font-bold text-ink-800
-                       dark:bg-ink-800 dark:text-ink-100"
+            className="tile-pop reading h-11 w-10 min-h-0 bg-white text-xl font-bold text-ink-800
+                       dark:bg-ink-800 dark:text-ink-100
+                       [@media(min-height:760px)]:h-14 [@media(min-height:760px)]:w-12
+                       [@media(min-height:760px)]:text-2xl"
           >
             {exercise.digits ? t : t.toUpperCase()}
           </button>
@@ -125,8 +130,9 @@ export function TypeTheWord({
           aria-label="Radera en bokstav"
           disabled={locked || !text}
           onClick={() => setText((t) => t.slice(0, -1))}
-          className="btn-pop grid h-16 w-20 place-items-center rounded-tile border-ink-300
-                     bg-ink-100 disabled:opacity-40 dark:border-ink-600 dark:bg-ink-800"
+          className="btn-pop grid h-12 w-16 min-h-0 place-items-center rounded-tile border-ink-300
+                     bg-ink-100 disabled:opacity-40 dark:border-ink-600 dark:bg-ink-800
+                     [@media(min-height:760px)]:h-16 [@media(min-height:760px)]:w-20"
         >
           <Delete size={26} aria-hidden />
         </button>
@@ -137,8 +143,10 @@ export function TypeTheWord({
           disabled={locked || !text.trim()}
           onClick={submit}
           className={cn(
-            'btn-pop grid h-16 w-36 place-items-center rounded-tile border-lime-700',
-            'bg-lime-500 text-3xl text-white disabled:opacity-40'
+            'btn-pop grid h-12 w-32 min-h-0 place-items-center rounded-tile border-lime-700',
+            'bg-lime-500 text-2xl text-white disabled:opacity-40',
+            '[@media(min-height:760px)]:h-16 [@media(min-height:760px)]:w-36',
+            '[@media(min-height:760px)]:text-3xl'
           )}
         >
           <span aria-hidden>✓</span>

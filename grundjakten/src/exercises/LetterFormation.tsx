@@ -171,7 +171,7 @@ export function LetterFormation({
   const harRitat = drag.some((d) => d.length > 1);
 
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div className="flex flex-col items-center gap-3 [@media(min-height:760px)]:gap-5">
       <div className="flex items-center gap-3">
         <span className="reading text-4xl font-extrabold text-brand-600 dark:text-brand-300">
           {letter.upper}{letter.lower}
@@ -184,7 +184,9 @@ export function LetterFormation({
         ref={svgRef}
         viewBox="0 0 100 100"
         className={cn(
-          'h-72 w-72 touch-none rounded-card border-4 bg-white dark:bg-ink-800',
+          'h-56 w-56 touch-none rounded-card border-4 bg-white dark:bg-ink-800',
+          '[@media(min-height:700px)]:h-64 [@media(min-height:700px)]:w-64',
+          '[@media(min-height:800px)]:h-72 [@media(min-height:800px)]:w-72',
           fas === 'ritar' ? 'cursor-crosshair border-lime-400' : 'border-ink-200',
           nastan && 'animate-nudge'
         )}
@@ -257,8 +259,9 @@ export function LetterFormation({
             type="button"
             aria-label="Visa igen"
             onClick={() => setVisningsNyckel((k) => k + 1)}
-            className="btn-pop grid h-16 w-20 place-items-center rounded-tile border-brand-700
-                       bg-brand-500 text-3xl text-white"
+            className="btn-pop grid h-12 w-20 min-h-0 place-items-center rounded-tile border-brand-700
+                       bg-brand-500 text-2xl text-white
+                       [@media(min-height:760px)]:h-16 [@media(min-height:760px)]:text-3xl"
           >
             <span aria-hidden>🔁</span>
           </button>
@@ -270,8 +273,10 @@ export function LetterFormation({
               setDrag([]);
               void play({ id: 'din-tur', text: 'Nu ritar du själv.', lang: 'sv-SE' });
             }}
-            className="btn-pop flex h-16 items-center gap-3 rounded-tile border-lime-700
-                       bg-lime-500 px-7 text-2xl font-extrabold text-white"
+            className="btn-pop flex h-12 min-h-0 items-center gap-3 rounded-tile border-lime-700
+                       bg-lime-500 px-6 text-xl font-extrabold text-white
+                       [@media(min-height:760px)]:h-16 [@media(min-height:760px)]:px-7
+                       [@media(min-height:760px)]:text-2xl"
           >
             <span aria-hidden>✏️</span> Min tur
           </button>
@@ -284,8 +289,9 @@ export function LetterFormation({
             type="button"
             aria-label="Sudda och börja om"
             onClick={() => { setDrag([]); setNastan(false); }}
-            className="btn-pop grid h-16 w-20 place-items-center rounded-tile border-ink-300
-                       bg-ink-100 text-2xl dark:border-ink-600 dark:bg-ink-800"
+            className="btn-pop grid h-12 w-20 min-h-0 place-items-center rounded-tile border-ink-300
+                       bg-ink-100 text-xl dark:border-ink-600 dark:bg-ink-800
+                       [@media(min-height:760px)]:h-16 [@media(min-height:760px)]:text-2xl"
           >
             <span aria-hidden>🧽</span>
           </button>
@@ -293,8 +299,9 @@ export function LetterFormation({
             type="button"
             aria-label="Visa hur man gör igen"
             onClick={() => { setFas('visar'); setVisningsNyckel((k) => k + 1); }}
-            className="btn-pop grid h-16 w-20 place-items-center rounded-tile border-brand-700
-                       bg-brand-500 text-3xl text-white"
+            className="btn-pop grid h-12 w-20 min-h-0 place-items-center rounded-tile border-brand-700
+                       bg-brand-500 text-2xl text-white
+                       [@media(min-height:760px)]:h-16 [@media(min-height:760px)]:text-3xl"
           >
             <span aria-hidden>🔁</span>
           </button>
@@ -303,8 +310,10 @@ export function LetterFormation({
             aria-label="Klar"
             disabled={locked || !harRitat}
             onClick={klar}
-            className="btn-pop grid h-16 w-32 place-items-center rounded-tile border-lime-700
-                       bg-lime-500 text-3xl text-white disabled:opacity-40"
+            className="btn-pop grid h-12 w-28 min-h-0 place-items-center rounded-tile border-lime-700
+                       bg-lime-500 text-2xl text-white disabled:opacity-40
+                       [@media(min-height:760px)]:h-16 [@media(min-height:760px)]:w-32
+                       [@media(min-height:760px)]:text-3xl"
           >
             <span aria-hidden>✓</span>
           </button>
