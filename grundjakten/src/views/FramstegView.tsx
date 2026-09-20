@@ -3,6 +3,7 @@ import type { Niva, Progress, StudentProfile } from '@/types';
 import { LETTERS } from '@/data/letters';
 import { tasksForNiva } from '@/data/tasks';
 import { EarButton } from '@/components/EarButton';
+import { FigurValjare } from '@/components/FigurValjare';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { getLevelTitle, xpForNextLevel } from '@/lib/utils';
 
@@ -28,14 +29,14 @@ export function FramstegView({
   profile,
   progress,
   onBack,
-  onLogout,
+  onValjFigur,
 }: {
   profile: StudentProfile;
   progress: Progress;
   onBack: () => void;
-  onLogout: () => void;
+  onValjFigur: (avatar: string) => void;
 }) {
-  const [byterElev, setByterElev] = useState(false);
+  const [byterFigur, setByterFigur] = useState(false);
   const xp = xpForNextLevel(progress.xp);
 
   const bemastrade = LETTERS.filter((l) => progress.letters[l.id]?.mastered).length;
@@ -69,7 +70,17 @@ export function FramstegView({
         >
           <span aria-hidden>←</span>
         </button>
-        <span className="text-5xl leading-none" aria-hidden>{profile.avatar}</span>
+        {/* Ansiktet är en knapp: ett tryck och eleven byter figur. */}
+        <button
+          type="button"
+          onClick={() => setByterFigur((v) => !v)}
+          aria-label="Byt figur"
+          aria-expanded={byterFigur}
+          className="btn-pop grid h-16 w-16 min-h-0 place-items-center rounded-tile
+                     border-ink-200 bg-white text-4xl dark:border-ink-700 dark:bg-ink-800"
+        >
+          <span aria-hidden>{profile.avatar}</span>
+        </button>
         <div className="flex flex-col">
           <h1 className="reading text-3xl font-extrabold leading-tight">{profile.name}</h1>
           <span className="font-bold text-ink-500">
@@ -77,6 +88,8 @@ export function FramstegView({
           </span>
         </div>
       </header>
+
+      {byterFigur && <FigurValjare vald={profile.avatar} onValj={onValjFigur} />}
 
       {/* XP-mätaren. Aldrig procent, aldrig antal fel – bara hur långt kvar
           det är till nästa nivå. */}
@@ -212,50 +225,6 @@ export function FramstegView({
         })}
       </section>
 
-      {/* Byt elev ligger sist, efter allt annat, och kräver ett andra tryck.
-          En elev som råkar trycka fel ska inte kastas ut mitt i en lektion –
-          framstegen ligger kvar på namnet, men avbrottet kostar ändå tid. */}
-      <section className="mt-auto pt-4">
-        {byterElev ? (
-          <div className="flex items-center gap-3 rounded-card bg-white/85 p-4 dark:bg-ink-800/85">
-            <span className="flex-1 font-bold">Byta elev?</span>
-            <EarButton
-              size="sm"
-              token={{ id: 'fr-byt-fraga', text: 'Vill du byta elev?', lang: 'sv-SE' }}
-              label="Vill du byta elev"
-            />
-            <button
-              type="button"
-              aria-label="Nej, stanna kvar"
-              onClick={() => setByterElev(false)}
-              className="btn-pop grid h-14 w-14 place-items-center rounded-tile border-ink-300
-                         bg-ink-100 text-2xl dark:border-ink-600 dark:bg-ink-700"
-            >
-              <span aria-hidden>✖️</span>
-            </button>
-            <button
-              type="button"
-              aria-label="Ja, byt elev"
-              onClick={onLogout}
-              className="btn-pop grid h-14 w-14 place-items-center rounded-tile border-lime-700
-                         bg-lime-500 text-2xl text-white"
-            >
-              <span aria-hidden>✔️</span>
-            </button>
-          </div>
-        ) : (
-          <button
-            type="button"
-            aria-label="Byt elev"
-            onClick={() => setByterElev(true)}
-            className="btn-pop flex w-full items-center justify-center gap-3 rounded-tile
-                       border-ink-300 bg-white/85 px-6 py-4 text-xl font-extrabold
-                       dark:border-ink-600 dark:bg-ink-800/85"
-          >
-            <span aria-hidden>🚪</span> Byt elev
-          </button>
-        )}
-      </section>
     </div>
   );
 }

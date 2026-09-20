@@ -3,9 +3,8 @@ import type { StudentProfile } from '@/types';
 import { findOrCreateProfile, getProfile, getUsers } from '@/lib/storage';
 import { play, unlock } from '@/lib/audio';
 import { EarButton } from '@/components/EarButton';
+import { AVATARER, STANDARD_AVATAR } from '@/data/avatars';
 import { cn } from '@/lib/utils';
-
-const AVATARER = ['🦊', '🐻', '🦅', '🐺', '🦁', '🐯', '🦈', '🐲', '🦉', '🐙', '🦎', '🐆'];
 
 /**
  * Inloggning.
@@ -25,7 +24,7 @@ const AVATARER = ['🦊', '🐻', '🦅', '🐺', '🦁', '🐯', '🦈', '🐲'
  */
 export function LoginView({ onLogin }: { onLogin: (profile: StudentProfile) => void }) {
   const [namn, setNamn] = useState('');
-  const [avatar, setAvatar] = useState(AVATARER[0]);
+  const [avatar, setAvatar] = useState(STANDARD_AVATAR);
   const users = getUsers();
 
   const gaIn = (profile: StudentProfile) => {

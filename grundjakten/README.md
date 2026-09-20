@@ -45,10 +45,32 @@ skriva sitt namn själv. Därför ligger de elever som redan finns på enheten
 överst som stora ansikten – ett tryck och hon är inne. Namnfältet under är
 för första gången, och då är det oftast läraren som fyller i det.
 
-Appen återupptar senast inloggad elev vid start. **Byt elev** ligger längst
-ned på framstegssidan och är vägen tillbaka till inloggningen – utan den gick
-den aldrig att nå igen efter första gången. Knappen frågar en gång till innan
-den släpper eleven, eftersom ett feltryck avbryter mitt i en lektion.
+Appen återupptar senast inloggad elev vid start. **Logga ut** uppe till höger
+är vägen tillbaka till inloggningen – utan den gick den aldrig att nå igen
+efter första gången, och en Chromebook som delas av två–tre elever kunde inte
+byta mellan dem. Placeringen är hämtad från Svenskajakten.
+
+Eleven kan **byta figur** när som helst, genom att trycka på sitt eget
+ansikte: antingen det lilla uppe till höger eller det stora på
+framstegssidan. Samma tolv figurer som vid inloggningen, och valet sparas
+direkt – ingen bekräftelse på något hon redan ser resultatet av.
+
+## Startskärmen
+
+Tre kort i den ordning läraren vill ha dem: **Övningar**, **Bokstäver**,
+**Skriva**. Headern följer Svenskajakten – appens namn till vänster, och till
+höger *Om Grundjakten*, elevens ansikte, elevens namn och *Logga ut*.
+
+Ansiktet och namnet är **två knappar**, inte en, eftersom de leder olika
+vägar. Båda behåller full tryckyta; två mål i samma knapp vore fel för en elev
+med motoriska svårigheter.
+
+## Om Grundjakten
+
+En sida för **läraren**, byggd som Svenskajaktens: färgad hero överst och
+därefter kort med emoji, rubrik och text. Eleven kan inte läsa den, och
+behöver inte – allt hon behöver går att höra eller se som bild inne i appen.
+Det är därför också appens enda skärm med löpande text.
 
 ## Mina framsteg
 
@@ -237,7 +259,12 @@ Bandet **sänks aldrig**. Samma princip som bästa resultat per uppgift: det en
 elev en gång har visat att hon klarar ska inte kunna tas ifrån henne av en
 dålig dag.
 
-Saknas svensk röst på datorn syns en varning uppe på startskärmen.
+Det finns ingen varning för saknad svensk röst. Den som fanns läste
+`speechSynthesis.getVoices()` en enda gång under render, och eftersom Chrome
+fyller röstlistan asynkront tändes den vid varje kall sidladdning – även på
+Chromebooks som har rösten. Den visade alltså fel och togs bort.
+`hasSwedishVoice()` ligger kvar i `lib/speech.ts`; det var anropsstället som
+var felet, inte funktionen.
 
 ### Vad som försvann med lärarläget
 
