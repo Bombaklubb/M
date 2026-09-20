@@ -2,7 +2,8 @@ import type { Progress, StudentProfile } from '@/types';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { FigurValjare } from '@/components/FigurValjare';
 import { GrundjaktenLogo } from '@/components/GrundjaktenLogo';
-import { play } from '@/lib/audio';
+import { EarButton } from '@/components/EarButton';
+import { KistBild } from '@/components/KistBild';
 import { cn, getLevelTitle, xpForNextLevel } from '@/lib/utils';
 
 export type Destination = 'bokstaver' | 'skriva' | 'ovningar';
@@ -104,7 +105,12 @@ export function HomeView({
             className="btn-pop relative grid h-14 w-14 min-h-0 shrink-0 place-items-center
                        rounded-tile border-amberx-700 bg-amberx-500 text-3xl"
           >
-            <span className={cn(oOppnade > 0 && 'animate-chest-shake')} aria-hidden>🎁</span>
+            <KistBild
+              typ="tra"
+              oppnad={oOppnade === 0}
+              size={36}
+              className={cn(oOppnade > 0 && 'animate-chest-shake')}
+            />
             {oOppnade > 0 && (
               <span
                 className="absolute -right-1 -top-1 grid h-6 min-w-[1.5rem] place-items-center
@@ -170,23 +176,36 @@ export function HomeView({
 
       <main className="grid flex-1 content-center gap-3 [@media(min-height:760px)]:gap-5">
         {CARDS.map((card) => (
-          <button
-            key={card.id}
-            type="button"
-            aria-label={card.say}
-            onPointerDown={() => void play({ id: `say-${card.id}`, text: card.say, lang: 'sv-SE' })}
-            onClick={() => onGo(card.id)}
-            className={`btn-pop flex items-center gap-5 rounded-card px-6 py-4 text-left
-                        text-white [@media(min-height:760px)]:gap-6
-                        [@media(min-height:760px)]:px-8 [@media(min-height:760px)]:py-7 ${card.tint}`}
-          >
-            <span className="text-5xl leading-none [@media(min-height:760px)]:text-6xl" aria-hidden>
-              {card.icon}
-            </span>
-            <span className="text-3xl font-extrabold [@media(min-height:760px)]:text-4xl">
-              {card.title}
-            </span>
-          </button>
+          /* Örat ligger bredvid kortet, inte i det: en knapp får inte ligga i
+             en annan knapp, och eleven ska kunna höra vad kortet heter utan
+             att skickas vidare. Samma lösning som i övningsbanken. */
+          <div key={card.id} className="flex items-center gap-2 sm:gap-3">
+            {/* min-w-0 och smalare luft på telefon: utan det vägrar kortet
+                krympa under sitt innehåll och trycker ut örat ur skärmen. */}
+            <button
+              type="button"
+              aria-label={card.say}
+              onClick={() => onGo(card.id)}
+              className={`btn-pop flex min-w-0 flex-1 items-center gap-3 rounded-card px-4 py-4
+                          text-left text-white sm:gap-5 sm:px-6
+                          [@media(min-height:760px)]:gap-6
+                          [@media(min-height:760px)]:px-8 [@media(min-height:760px)]:py-7 ${card.tint}`}
+            >
+              <span className="shrink-0 text-4xl leading-none sm:text-5xl
+                               [@media(min-height:760px)]:text-6xl" aria-hidden>
+                {card.icon}
+              </span>
+              <span className="min-w-0 text-2xl font-extrabold sm:text-3xl
+                               [@media(min-height:760px)]:text-4xl">
+                {card.title}
+              </span>
+            </button>
+
+            <EarButton
+              token={{ id: `say-${card.id}`, text: card.say, lang: 'sv-SE' }}
+              label={card.say}
+            />
+          </div>
         ))}
       </main>
     </div>
