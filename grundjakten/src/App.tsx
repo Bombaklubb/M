@@ -9,6 +9,7 @@ import { SessionView, type SessionResult } from '@/views/SessionView';
 import { RewardView } from '@/views/RewardView';
 import { OvningsbankView } from '@/views/OvningsbankView';
 import { FramstegView } from '@/views/FramstegView';
+import { OmView } from '@/views/OmView';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import { generateWritePass, type WriteMode } from '@/lib/generators/writingExercises';
 import { getCurrentUser, getProfile, getProgress, saveProfile, saveProgress, setCurrentUser } from '@/lib/storage';
@@ -24,7 +25,8 @@ type View =
   | { name: 'ovningar' }
   | { name: 'session'; exercises: Exercise[]; repeat: () => Exercise[]; taskId?: string }
   | { name: 'reward'; result: SessionResult; repeat: () => Exercise[]; taskId?: string }
-  | { name: 'framsteg' };
+  | { name: 'framsteg' }
+  | { name: 'om' };
 
 /**
  * Ingen router med flit.
@@ -37,6 +39,8 @@ export default function App() {
   const [profile, setProfile] = useState<StudentProfile | null>(null);
   const [progress, setProgress] = useState<Progress | null>(null);
   const [view, setView] = useState<View>({ name: 'login' });
+  /** Figurväljaren på startsidan. Fälls ut och in med ansiktet i headern. */
+  const [figurOppen, setFigurOppen] = useState(false);
 
   // Återuppta senast inloggad elev.
   useEffect(() => {
@@ -59,10 +63,10 @@ export default function App() {
   /**
    * Varje ny skärm börjar överst.
    *
-   * Utan det här ärver nästa vy föregående vys scrollposition: trycker eleven
-   * "Byt elev" längst ned på framstegssidan öppnas inloggningen halvvägs
-   * nedskrollad, med rubriken ovanför kanten. En elev som inte kan läsa
-   * förstår inte att hon ska dra uppåt.
+   * Utan det här ärver nästa vy föregående vys scrollposition: kommer eleven
+   * från botten av en lång sida öppnas nästa halvvägs nedskrollad, med
+   * rubriken ovanför kanten. En elev som inte kan läsa förstår inte att hon
+   * ska dra uppåt.
    */
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -160,16 +164,31 @@ export default function App() {
   const goHome = () => setView({ name: 'home' });
 
   /**
-   * Byt elev.
+   * Byt figur.
    *
-   * Appen återupptar annars alltid senast inloggad elev, och utan det här
-   * gick inloggningssidan inte att nå igen efter första gången. Framstegen
-   * ligger kvar på namnet – det är bara den aktiva eleven som släpps.
+   * Sparas direkt. Profilen ägs här, så både startsidans och framstegssidans
+   * väljare skickar hit – annars skulle de två kunna hamna i otakt.
+   */
+  const valjFigur = (avatar: string) => {
+    if (!profile) return;
+    const uppdaterad = { ...profile, avatar };
+    saveProfile(uppdaterad);
+    setProfile(uppdaterad);
+  };
+
+  /**
+   * Logga ut.
+   *
+   * Appen återupptar annars alltid senast inloggad elev, och utan det här går
+   * inloggningssidan inte att nå igen efter första gången – en Chromebook som
+   * delas av två–tre elever kunde inte byta mellan dem. Framstegen ligger kvar
+   * på namnet; det är bara den aktiva eleven som släpps.
    */
   const logout = () => {
     setCurrentUser(null);
     setProfile(null);
     setProgress(null);
+    setFigurOppen(false);
     setView({ name: 'login' });
   };
 
@@ -195,15 +214,22 @@ export default function App() {
           progress={progress}
           onGo={go}
           onProfile={() => setView({ name: 'framsteg' })}
+          onOm={() => setView({ name: 'om' })}
+          onLogout={logout}
+          onValjFigur={valjFigur}
+          figurOppen={figurOppen}
+          onToggleFigur={() => setFigurOppen((v) => !v)}
         />
       )}
+
+      {view.name === 'om' && <OmView onBack={goHome} />}
 
       {view.name === 'framsteg' && (
         <FramstegView
           profile={profile}
           progress={progress}
           onBack={goHome}
-          onLogout={logout}
+          onValjFigur={valjFigur}
         />
       )}
 
