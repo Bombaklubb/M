@@ -1,8 +1,9 @@
 import type { Progress, StudentProfile } from '@/types';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { FigurValjare } from '@/components/FigurValjare';
+import { GrundjaktenLogo } from '@/components/GrundjaktenLogo';
 import { play } from '@/lib/audio';
-import { getLevelTitle, xpForNextLevel } from '@/lib/utils';
+import { cn, getLevelTitle, xpForNextLevel } from '@/lib/utils';
 
 export type Destination = 'bokstaver' | 'skriva' | 'ovningar';
 
@@ -35,6 +36,7 @@ export function HomeView({
   onGo,
   onProfile,
   onOm,
+  onKistor,
   onLogout,
   onValjFigur,
   figurOppen,
@@ -45,12 +47,14 @@ export function HomeView({
   onGo: (dest: Destination) => void;
   onProfile: () => void;
   onOm: () => void;
+  onKistor: () => void;
   onLogout: () => void;
   onValjFigur: (avatar: string) => void;
   figurOppen: boolean;
   onToggleFigur: () => void;
 }) {
   const xp = xpForNextLevel(progress.xp);
+  const oOppnade = progress.kistor.filter((k) => !k.oppnad).length;
 
   useAutoSpeak(
     { id: 'home-greet', text: 'Vad vill du göra?', lang: 'sv-SE' },
@@ -60,25 +64,56 @@ export function HomeView({
   return (
     <div className="mx-auto flex min-h-[100dvh] max-w-4xl flex-col px-4 py-3
                     [@media(min-height:760px)]:py-5">
-      <header className="mb-3 flex items-center justify-between gap-2
-                         [@media(min-height:760px)]:mb-6">
-        {/* Bara text. Ingen knapp och ingenting dolt bakom långtryck – den
-            G-rutan är borttagen med flit. */}
-        <span className="hidden text-xl font-extrabold tracking-tight text-brand-700
-                         dark:text-brand-300 sm:block">
-          Grundjakten
+      <header className="mb-3 flex items-center justify-between gap-1.5
+                         [@media(min-height:760px)]:mb-6 sm:gap-2">
+        {/* Märket och namnet. Ingen knapp och ingenting dolt bakom långtryck
+            – den G-rutan är borttagen med flit. */}
+        <span className="hidden items-center gap-2 sm:flex">
+          <GrundjaktenLogo size={36} />
+          <span className="hidden text-xl font-extrabold tracking-tight text-brand-700
+                           dark:text-brand-300 sm:block">
+            Grundjakten
+          </span>
         </span>
 
-        <nav className="flex flex-1 items-center justify-end gap-2">
+        {/* min-w-0 på både nav och namnknappen: utan det vägrar namnet krympa
+            och trycker i stället ut "Logga ut" ur skärmen på en telefon. */}
+        <nav className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2">
           <button
             type="button"
             onClick={onOm}
             aria-label="Om Grundjakten"
-            className="flex h-14 items-center gap-2 rounded-tile px-3 font-bold text-ink-500
-                       hover:bg-white/70 dark:text-ink-300 dark:hover:bg-ink-800/70"
+            className="grid h-14 w-12 min-h-0 shrink-0 place-items-center rounded-tile font-bold
+                       text-ink-500 hover:bg-white/70 dark:text-ink-300 dark:hover:bg-ink-800/70
+                       lg:flex lg:w-auto lg:items-center lg:gap-2 lg:px-3"
           >
             <span className="text-xl" aria-hidden>❓</span>
             <span className="hidden lg:block">Om Grundjakten</span>
+          </button>
+
+          {/* Kistorna. Siffran är det enda som lockar en elev som inte kan
+              läsa – därför är den röd och sitter på själva ikonen. */}
+          <button
+            type="button"
+            onClick={onKistor}
+            aria-label={
+              oOppnade > 0
+                ? `Kistor, ${oOppnade} att öppna`
+                : 'Kistor, inga att öppna just nu'
+            }
+            className="btn-pop relative grid h-14 w-14 min-h-0 shrink-0 place-items-center
+                       rounded-tile border-amberx-700 bg-amberx-500 text-3xl"
+          >
+            <span className={cn(oOppnade > 0 && 'animate-chest-shake')} aria-hidden>🎁</span>
+            {oOppnade > 0 && (
+              <span
+                className="absolute -right-1 -top-1 grid h-6 min-w-[1.5rem] place-items-center
+                           rounded-full bg-red-500 px-1 text-sm font-extrabold text-white"
+                aria-hidden
+              >
+                {oOppnade > 9 ? '9+' : oOppnade}
+              </span>
+            )}
           </button>
 
           {/* Ansiktet: byter figur. */}
@@ -87,8 +122,8 @@ export function HomeView({
             onClick={onToggleFigur}
             aria-label="Byt figur"
             aria-expanded={figurOppen}
-            className="btn-pop grid h-14 w-14 place-items-center rounded-tile border-ink-200
-                       bg-white text-3xl dark:border-ink-700 dark:bg-ink-800"
+            className="btn-pop grid h-14 w-14 min-h-0 shrink-0 place-items-center rounded-tile
+                       border-ink-200 bg-white text-3xl dark:border-ink-700 dark:bg-ink-800"
           >
             <span aria-hidden>{profile.avatar}</span>
           </button>
@@ -98,11 +133,12 @@ export function HomeView({
             type="button"
             onClick={onProfile}
             aria-label={`${profile.name}, nivå ${progress.level}, ${getLevelTitle(progress.level)}. Se dina framsteg.`}
-            className="btn-pop flex h-14 items-center rounded-tile border-ink-200 bg-white px-4
-                       dark:border-ink-700 dark:bg-ink-800"
+            className="btn-pop flex h-14 min-w-0 shrink items-center rounded-tile border-ink-200
+                       bg-white px-2 dark:border-ink-700 dark:bg-ink-800 sm:px-4"
           >
-            <span className="flex flex-col items-start">
-              <span className="reading max-w-[9rem] truncate text-lg font-extrabold leading-tight">
+            <span className="flex min-w-0 flex-col items-start">
+              <span className="reading max-w-[4.5rem] truncate text-lg font-extrabold leading-tight
+                               sm:max-w-[9rem]">
                 {profile.name}
               </span>
               <span className="mt-1 h-2 w-full min-w-[4rem] overflow-hidden rounded-full
@@ -116,8 +152,9 @@ export function HomeView({
             type="button"
             onClick={onLogout}
             aria-label="Logga ut"
-            className="flex h-14 items-center gap-2 rounded-tile px-3 font-bold text-ink-500
-                       hover:bg-amberx-100 hover:text-amberx-700 dark:text-ink-300"
+            className="grid h-14 w-12 min-h-0 shrink-0 place-items-center rounded-tile font-bold
+                       text-ink-500 hover:bg-amberx-100 hover:text-amberx-700 dark:text-ink-300
+                       lg:flex lg:w-auto lg:items-center lg:gap-2 lg:px-3"
           >
             <span className="text-xl" aria-hidden>🚪</span>
             <span className="hidden lg:block">Logga ut</span>

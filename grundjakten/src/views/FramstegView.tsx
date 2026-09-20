@@ -4,8 +4,9 @@ import { LETTERS } from '@/data/letters';
 import { tasksForNiva } from '@/data/tasks';
 import { EarButton } from '@/components/EarButton';
 import { FigurValjare } from '@/components/FigurValjare';
+import { UTMARKELSER } from '@/data/belohningar';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
-import { getLevelTitle, xpForNextLevel } from '@/lib/utils';
+import { cn, getLevelTitle, xpForNextLevel } from '@/lib/utils';
 
 const NIVAER: { niva: Niva; namn: string }[] = [
   { niva: 1, namn: 'Svenska 1' },
@@ -41,6 +42,8 @@ export function FramstegView({
 
   const bemastrade = LETTERS.filter((l) => progress.letters[l.id]?.mastered).length;
   const klaradeTotalt = Object.keys(progress.tasks).length;
+  const oOppnade = progress.kistor.filter((k) => !k.oppnad).length;
+  const vunna = UTMARKELSER.filter((u) => progress.badges.includes(u.id));
 
   useAutoSpeak(
     {
@@ -54,7 +57,7 @@ export function FramstegView({
   const rutor = [
     { icon: '🔤', tal: bemastrade, av: LETTERS.length, say: `Du kan ${bemastrade} bokstäver.`, tint: 'bg-brand-500' },
     { icon: '📚', tal: klaradeTotalt, av: null, say: `Du har klarat ${klaradeTotalt} övningar.`, tint: 'bg-amberx-500' },
-    { icon: '🎁', tal: progress.chests, av: null, say: `Du har ${progress.chests} kistor.`, tint: 'bg-aqua-500' },
+    { icon: '🎁', tal: oOppnade, av: null, say: oOppnade === 1 ? 'Du har en kista att öppna.' : `Du har ${oOppnade} kistor att öppna.`, tint: 'bg-aqua-500' },
     { icon: '🔥', tal: progress.streak, av: null, say: `Du har spelat ${progress.streak} dagar i rad.`, tint: 'bg-lime-500' },
   ];
 
@@ -169,6 +172,70 @@ export function FramstegView({
               </span>
             );
           })}
+        </div>
+      </section>
+
+      <section className="space-y-3">
+        <div className="flex items-center gap-2">
+          <h2 className="text-xl font-extrabold">Utmärkelser</h2>
+          <EarButton
+            size="sm"
+            token={{
+              id: 'fr-utm',
+              text: `Utmärkelser. Du har ${vunna.length} av ${UTMARKELSER.length}.`,
+              lang: 'sv-SE',
+            }}
+            label="Utmärkelser"
+          />
+          <span className="font-bold text-ink-500">
+            {vunna.length}/{UTMARKELSER.length}
+          </span>
+        </div>
+
+        {/* Vunna först, låsta efter. Att se vad som finns kvar är halva
+            motivationen – men det som redan sitter ska komma först. */}
+        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {[...UTMARKELSER]
+            .sort((a, b) =>
+              Number(progress.badges.includes(b.id)) - Number(progress.badges.includes(a.id))
+            )
+            .map((u) => {
+              const vunnen = progress.badges.includes(u.id);
+              return (
+                <div
+                  key={u.id}
+                  className={cn(
+                    // min-w-0: ett grid-barn har min-width:auto och vägrar
+                    // annars krympa under sitt innehåll – raden blev 23 px
+                    // bredare än skärmen på telefon.
+                    'flex min-w-0 items-center gap-2 rounded-tile p-2',
+                    vunnen
+                      ? 'bg-amberx-100 dark:bg-amberx-500/20'
+                      : 'bg-white/60 opacity-60 dark:bg-ink-800/60'
+                  )}
+                >
+                  <span className="text-3xl leading-none" aria-hidden>
+                    {vunnen ? u.emoji : '🔒'}
+                  </span>
+                  {/* Namnet får radbrytas – en avkortad utmärkelse
+                      ("Hela alfab…") säger ingenting. Kravet under kapas
+                      däremot, det är en påminnelse och inte huvudsaken. */}
+                  <span className="flex min-w-0 flex-1 flex-col">
+                    <span className="font-extrabold leading-tight">{u.namn}</span>
+                    <span className="truncate text-xs text-ink-500">{u.krav}</span>
+                  </span>
+                  <EarButton
+                    size="sm"
+                    token={{
+                      id: `utm-${u.id}`,
+                      text: vunnen ? `${u.namn}. Klar!` : `${u.namn}. ${u.krav}`,
+                      lang: 'sv-SE',
+                    }}
+                    label={u.namn}
+                  />
+                </div>
+              );
+            })}
         </div>
       </section>
 

@@ -58,8 +58,14 @@ direkt – ingen bekräftelse på något hon redan ser resultatet av.
 ## Startskärmen
 
 Tre kort i den ordning läraren vill ha dem: **Övningar**, **Bokstäver**,
-**Skriva**. Headern följer Svenskajakten – appens namn till vänster, och till
-höger *Om Grundjakten*, elevens ansikte, elevens namn och *Logga ut*.
+**Skriva**. Headern följer Svenskajakten – märket och appens namn till
+vänster, och till höger *Om Grundjakten*, kistorna, elevens ansikte, elevens
+namn och *Logga ut*.
+
+Märket är en egen SVG (`components/GrundjaktenLogo.tsx`): ett A som står på
+tre block. Namnet betyder just det – grunderna, det allt annat vilar på. Ritad
+som SVG och inte som emoji, eftersom emoji renderas olika på olika system och
+det här är appens enda fasta identitet.
 
 Ansiktet och namnet är **två knappar**, inte en, eftersom de leder olika
 vägar. Båda behåller full tryckyta; två mål i samma knapp vore fel för en elev
@@ -71,6 +77,41 @@ En sida för **läraren**, byggd som Svenskajaktens: färgad hero överst och
 därefter kort med emoji, rubrik och text. Eleven kan inte läsa den, och
 behöver inte – allt hon behöver går att höra eller se som bild inne i appen.
 Det är därför också appens enda skärm med löpande text.
+
+## Kistor och utmärkelser
+
+Motivationsdelen, byggd som Svenskajaktens.
+
+**Kistor** nås via kist-ikonen i headern, som bär en röd siffra när något är
+oöppnat – siffran är det enda som lockar en elev som inte kan läsa. En oöppnad
+kista är stor, skakar, och det finns inget annat att göra med den än att
+trycka. Öppningen ger poäng, och silver och guld kan dessutom ge en utmärkelse.
+
+| Kista | Ges vid |
+|---|---|
+| 📦 Träkista | varje avklarat pass |
+| 🪙 Silverkista | 5, 10 och 25 pass, samt 250 poäng |
+| 🏆 Guldkista | 15, 40, 60 och 100 pass, samt 700, 1350 och 2700 poäng |
+
+Varje pass ger en kista *och* milstolparna ger silver och guld ovanpå: täta
+små framgångar för en elev som behöver dem, och något att jobba mot.
+
+Varje milstolpe bokförs i `progress.utdelade` och kan bara betalas en gång.
+Det är vad som hindrar en kedjereaktion – en öppnad kista ger poäng, som kan
+passera nästa poängmilstolpe, som ger en ny kista.
+
+**Utmärkelserna** ligger på framstegssidan, tolv stycken. Kraven räknas på
+sådant appen faktiskt mäter: avklarade pass, bemästrade bokstäver, klarade
+uppgifter, dagar i rad. Låsta visas som hänglås med sitt krav – att se vad som
+finns kvar är halva motivationen – och varje utmärkelse har ett öra som säger
+antingen vad som krävs eller att den är klar.
+
+Regeln ligger som en funktion bredvid sin egen beskrivning i
+`data/belohningar.ts`. Skrevs de på två ställen kunde texten och villkoret
+glida isär, och eleven skulle se ett krav hon redan uppfyllt stå kvarlåst.
+
+En utmärkelse tas aldrig ifrån eleven, inte ens om villkoret skulle sluta
+gälla. Samma princip som bästa resultat per uppgift.
 
 ## Mina framsteg
 
@@ -91,6 +132,10 @@ Alfabetet – Första bokstaven 2" och eleven hittar exakt den.
 
 Innehållet varierar ändå mellan gångerna — varje uppgift byggs om ur sin
 ordbank vid start, så samma namn ger inte samma ord två dagar i rad.
+
+Varje uppgift har ett **öra** bredvid sig som läser upp namnet. Det sitter
+utanför kortet, inte i det: en knapp får inte ligga i en annan knapp, och örat
+ska gå att trycka utan att uppgiften startar.
 
 Varje klarad uppgift får en bock och sitt bästa resultat (`7/8`) direkt på
 kortet, och rubriken visar hur många av nivåns uppgifter som är klara.
