@@ -3,6 +3,7 @@ import type { Kista, Progress, StudentProfile } from '@/types';
 import { KIST_META } from '@/data/belohningar';
 import { utmarkelseById } from '@/data/belohningar';
 import { EarButton } from '@/components/EarButton';
+import { KistBild } from '@/components/KistBild';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { playFanfare } from '@/lib/sfx';
 import { play } from '@/lib/audio';
@@ -67,7 +68,7 @@ export function KistorView({
             <span aria-hidden>←</span> Tillbaka
           </button>
           <div className="flex items-center gap-4">
-            <span className="text-5xl leading-none" aria-hidden>🎁</span>
+            <KistBild typ="tra" oppnad size={56} />
             <div className="flex flex-col">
               <h1 className="text-3xl font-extrabold">Kistor</h1>
               <span className="font-bold text-amberx-100">
@@ -88,9 +89,7 @@ export function KistorView({
                        border-lime-400 bg-white p-5 dark:bg-ink-800"
             role="status"
           >
-            <span className="text-6xl leading-none" aria-hidden>
-              {KIST_META[nyssOppnad.typ].emoji}
-            </span>
+            <KistBild typ={nyssOppnad.typ} oppnad size={72} />
             <div className="flex flex-1 flex-col gap-1">
               <span className="text-2xl font-extrabold">
                 ⭐ {nyssOppnad.xp} poäng
@@ -139,9 +138,8 @@ export function KistorView({
                     meta.tint
                   )}
                 >
-                  <span className="animate-chest-shake text-5xl leading-none" aria-hidden>
-                    {meta.emoji}
-                  </span>
+                  <KistBild typ={k.typ} oppnad={false} size={64}
+                            className="animate-chest-shake" />
                   <span className="flex-1 text-2xl font-extrabold">{meta.namn}</span>
                   <span className="text-3xl" aria-hidden>👆</span>
                 </button>
@@ -171,7 +169,7 @@ export function KistorView({
                   className="grid h-12 w-12 place-items-center rounded-tile bg-white/70
                              text-2xl opacity-60 dark:bg-ink-800/70"
                 >
-                  <span aria-hidden>{KIST_META[k.typ].emoji}</span>
+                  <KistBild typ={k.typ} oppnad size={34} />
                 </span>
               ))}
             </div>
@@ -185,7 +183,10 @@ export function KistorView({
             Så får man kistor
           </h2>
           <ul className="flex flex-col gap-1 text-ink-700 dark:text-ink-200">
-            <li>📦 <strong>Träkista</strong> – varje avklarat pass.</li>
+            <li className="flex items-center gap-2">
+              <KistBild typ="tra" oppnad={false} size={28} />
+              <span><strong>Träkista</strong> – varje avklarat pass.</span>
+            </li>
             <li>🪙 <strong>Silverkista</strong> – vid 5, 10 och 25 pass, och vid 250 poäng.</li>
             <li>🏆 <strong>Guldkista</strong> – vid 15, 40, 60 och 100 pass, och vid 700, 1350 och 2700 poäng.</li>
           </ul>

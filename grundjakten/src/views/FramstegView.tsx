@@ -1,6 +1,16 @@
 import { useState } from 'react';
 import type { Niva, Progress, StudentProfile } from '@/types';
 import { LETTERS } from '@/data/letters';
+
+/**
+ * Bokstäverna i alfabetisk ordning.
+ *
+ * `LETTERS` ligger i inlärningsordning (S O L A R M …). Sorteringen görs en
+ * gång här i stället för vid varje rendering.
+ */
+const ALFABETISKA_LETTERS = [...LETTERS].sort((a, b) =>
+  a.upper.localeCompare(b.upper, 'sv')
+);
 import { tasksForNiva } from '@/data/tasks';
 import { EarButton } from '@/components/EarButton';
 import { FigurValjare } from '@/components/FigurValjare';
@@ -147,7 +157,11 @@ export function FramstegView({
           />
         </div>
         <div className="flex flex-wrap gap-2">
-          {LETTERS.map((l) => {
+          {/* Alfabetisk ordning här, inte inlärningsordning. Rutnätet är en
+              ÖVERSIKT eleven ska hitta en bokstav i, och då är alfabetet den
+              ordning hon möter överallt annars. Bokstavsresan visar dem i
+              ljudordning, för där är ordningen hela poängen. */}
+          {ALFABETISKA_LETTERS.map((l) => {
             const m = progress.letters[l.id];
             // Mörk text på de mättade tonerna, inte vit: vitt på lime-500 ger
             // drygt 2:1 och är oläsligt för den som ska känna igen tecknet.

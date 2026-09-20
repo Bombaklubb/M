@@ -1,4 +1,6 @@
 import type { KistTyp, Progress } from '@/types';
+import { tasksForNiva } from './tasks';
+import { LETTERS } from './letters';
 
 /**
  * Kistor och utmärkelser.
@@ -78,92 +80,101 @@ const bemastrade = (p: Progress) =>
 const passMed = (p: Progress, modul: string) =>
   p.sessions.filter((s) => s.module === modul).length;
 
+const klarade = (p: Progress) => Object.keys(p.tasks).length;
+
+const perfekta = (p: Progress) =>
+  Object.values(p.tasks).filter((t) => t.antal > 0 && t.basta === t.antal).length;
+
+const oppnadeKistor = (p: Progress) => p.kistor.filter((k) => k.oppnad).length;
+
+/** Alla nio vokaler bemästrade. Vokalerna bär varje ord – de är nyckeln. */
+const allaVokaler = (p: Progress) =>
+  LETTERS.filter((l) => l.soundClass === 'vowel').every((l) => p.letters[l.id]?.mastered);
+
+const nivaKlar = (p: Progress, niva: 1 | 2 | 3 | 4) =>
+  tasksForNiva(niva).every((t) => p.tasks[t.id]);
+
+/**
+ * Trettio utmärkelser.
+ *
+ * Bredden är avsiktlig: det ska alltid finnas något inom räckhåll. En elev
+ * som ligger på åk 1-nivå i åk 4 får sällan höra att hon klarat något, och
+ * en låst lista där allt är långt borta är ingen morot alls. Därför ligger
+ * flera av trösklarna tätt i början.
+ */
 export const UTMARKELSER: Utmarkelse[] = [
-  {
-    id: 'forsta-passet',
-    emoji: '🌱',
-    namn: 'Första passet',
-    krav: 'Gör ditt första pass.',
-    uppfyllt: (p) => p.sessions.length >= 1,
-  },
-  {
-    id: 'tio-pass',
-    emoji: '🔥',
-    namn: 'Tio pass',
-    krav: 'Gör tio pass.',
-    uppfyllt: (p) => p.sessions.length >= 10,
-  },
-  {
-    id: 'femtio-pass',
-    emoji: '🏅',
-    namn: 'Femtio pass',
-    krav: 'Gör femtio pass.',
-    uppfyllt: (p) => p.sessions.length >= 50,
-  },
-  {
-    id: 'forsta-bokstaven',
-    emoji: '🔤',
-    namn: 'Första bokstaven',
-    krav: 'Lär dig din första bokstav.',
-    uppfyllt: (p) => bemastrade(p) >= 1,
-  },
-  {
-    id: 'forsta-stationen',
-    emoji: '☀️',
-    namn: 'Första stationen',
+  // ── Pass ──
+  { id: 'forsta-passet', emoji: '🌱', namn: 'Första passet',
+    krav: 'Gör ditt första pass.', uppfyllt: (p) => p.sessions.length >= 1 },
+  { id: 'fem-pass', emoji: '🌿', namn: 'Fem pass',
+    krav: 'Gör fem pass.', uppfyllt: (p) => p.sessions.length >= 5 },
+  { id: 'tio-pass', emoji: '🔥', namn: 'Tio pass',
+    krav: 'Gör tio pass.', uppfyllt: (p) => p.sessions.length >= 10 },
+  { id: 'tjugofem-pass', emoji: '⚡', namn: 'Tjugofem pass',
+    krav: 'Gör tjugofem pass.', uppfyllt: (p) => p.sessions.length >= 25 },
+  { id: 'femtio-pass', emoji: '🏅', namn: 'Femtio pass',
+    krav: 'Gör femtio pass.', uppfyllt: (p) => p.sessions.length >= 50 },
+  { id: 'hundra-pass', emoji: '💯', namn: 'Hundra pass',
+    krav: 'Gör hundra pass.', uppfyllt: (p) => p.sessions.length >= 100 },
+
+  // ── Bokstäver ──
+  { id: 'forsta-bokstaven', emoji: '🔤', namn: 'Första bokstaven',
+    krav: 'Lär dig din första bokstav.', uppfyllt: (p) => bemastrade(p) >= 1 },
+  { id: 'tre-bokstaver', emoji: '🧩', namn: 'Tre bokstäver',
+    krav: 'Lär dig tre bokstäver.', uppfyllt: (p) => bemastrade(p) >= 3 },
+  { id: 'forsta-stationen', emoji: '☀️', namn: 'Första stationen',
     krav: 'Lär dig alla sex bokstäverna på station ett.',
-    uppfyllt: (p) => bemastrade(p) >= 6,
-  },
-  {
-    id: 'halva-alfabetet',
-    emoji: '📖',
-    namn: 'Halva alfabetet',
-    krav: 'Lär dig femton bokstäver.',
-    uppfyllt: (p) => bemastrade(p) >= 15,
-  },
-  {
-    id: 'hela-alfabetet',
-    emoji: '👑',
-    namn: 'Hela alfabetet',
-    krav: 'Lär dig alla tjugonio bokstäverna.',
-    uppfyllt: (p) => bemastrade(p) >= 29,
-  },
-  {
-    id: 'tio-ovningar',
-    emoji: '📚',
-    namn: 'Tio övningar',
-    krav: 'Klara tio olika övningar.',
-    uppfyllt: (p) => Object.keys(p.tasks).length >= 10,
-  },
-  {
-    id: 'allt-ratt',
-    emoji: '🎯',
-    namn: 'Allt rätt',
-    krav: 'Klara en övning helt utan fel.',
-    uppfyllt: (p) =>
-      Object.values(p.tasks).some((t) => t.antal > 0 && t.basta === t.antal),
-  },
-  {
-    id: 'skrivaren',
-    emoji: '✍️',
-    namn: 'Skrivaren',
-    krav: 'Gör fem pass i Skriva.',
-    uppfyllt: (p) => passMed(p, 'skriva') >= 5,
-  },
-  {
-    id: 'tre-dagar',
-    emoji: '📅',
-    namn: 'Tre dagar i rad',
-    krav: 'Spela tre dagar i rad.',
-    uppfyllt: (p) => p.streak >= 3,
-  },
-  {
-    id: 'en-vecka',
-    emoji: '🗓️',
-    namn: 'En vecka i rad',
-    krav: 'Spela sju dagar i rad.',
-    uppfyllt: (p) => p.streak >= 7,
-  },
+    uppfyllt: (p) => bemastrade(p) >= 6 },
+  { id: 'tio-bokstaver', emoji: '🔟', namn: 'Tio bokstäver',
+    krav: 'Lär dig tio bokstäver.', uppfyllt: (p) => bemastrade(p) >= 10 },
+  { id: 'halva-alfabetet', emoji: '📖', namn: 'Halva alfabetet',
+    krav: 'Lär dig femton bokstäver.', uppfyllt: (p) => bemastrade(p) >= 15 },
+  { id: 'tjugotva-bokstaver', emoji: '🗝️', namn: 'Tjugotvå bokstäver',
+    krav: 'Lär dig tjugotvå bokstäver.', uppfyllt: (p) => bemastrade(p) >= 22 },
+  { id: 'hela-alfabetet', emoji: '👑', namn: 'Hela alfabetet',
+    krav: 'Lär dig alla tjugonio bokstäverna.', uppfyllt: (p) => bemastrade(p) >= 29 },
+  { id: 'alla-vokaler', emoji: '🎵', namn: 'Alla vokaler',
+    krav: 'Lär dig alla nio vokaler.', uppfyllt: allaVokaler },
+
+  // ── Övningar ──
+  { id: 'forsta-ovningen', emoji: '📗', namn: 'Första övningen',
+    krav: 'Klara din första övning.', uppfyllt: (p) => klarade(p) >= 1 },
+  { id: 'fem-ovningar', emoji: '📘', namn: 'Fem övningar',
+    krav: 'Klara fem olika övningar.', uppfyllt: (p) => klarade(p) >= 5 },
+  { id: 'tio-ovningar', emoji: '📚', namn: 'Tio övningar',
+    krav: 'Klara tio olika övningar.', uppfyllt: (p) => klarade(p) >= 10 },
+  { id: 'tjugofem-ovningar', emoji: '🗂️', namn: 'Tjugofem övningar',
+    krav: 'Klara tjugofem olika övningar.', uppfyllt: (p) => klarade(p) >= 25 },
+  { id: 'femtio-ovningar', emoji: '🎓', namn: 'Femtio övningar',
+    krav: 'Klara femtio olika övningar.', uppfyllt: (p) => klarade(p) >= 50 },
+  { id: 'svenska-1-klar', emoji: '🥇', namn: 'Svenska 1 klar',
+    krav: 'Klara alla övningar i Svenska 1.', uppfyllt: (p) => nivaKlar(p, 1) },
+
+  // ── Träffsäkerhet ──
+  { id: 'allt-ratt', emoji: '🎯', namn: 'Allt rätt',
+    krav: 'Klara en övning helt utan fel.', uppfyllt: (p) => perfekta(p) >= 1 },
+  { id: 'fem-perfekta', emoji: '💎', namn: 'Fem gånger allt rätt',
+    krav: 'Klara fem övningar helt utan fel.', uppfyllt: (p) => perfekta(p) >= 5 },
+
+  // ── Moduler ──
+  { id: 'skrivaren', emoji: '✍️', namn: 'Skrivaren',
+    krav: 'Gör fem pass i Skriva.', uppfyllt: (p) => passMed(p, 'skriva') >= 5 },
+  { id: 'bokstavsjagaren', emoji: '🔎', namn: 'Bokstavsjägaren',
+    krav: 'Gör tio pass i Bokstäver.', uppfyllt: (p) => passMed(p, 'bokstaver') >= 10 },
+  { id: 'banksamlaren', emoji: '🦊', namn: 'Banksamlaren',
+    krav: 'Gör tjugo pass i Övningar.', uppfyllt: (p) => passMed(p, 'ovningsbank') >= 20 },
+
+  // ── Uthållighet och samlande ──
+  { id: 'tre-dagar', emoji: '📅', namn: 'Tre dagar i rad',
+    krav: 'Spela tre dagar i rad.', uppfyllt: (p) => p.streak >= 3 },
+  { id: 'en-vecka', emoji: '🗓️', namn: 'En vecka i rad',
+    krav: 'Spela sju dagar i rad.', uppfyllt: (p) => p.streak >= 7 },
+  { id: 'tva-veckor', emoji: '🌠', namn: 'Två veckor i rad',
+    krav: 'Spela fjorton dagar i rad.', uppfyllt: (p) => p.streak >= 14 },
+  { id: 'kistoppnaren', emoji: '🎁', namn: 'Kistöppnaren',
+    krav: 'Öppna tio kistor.', uppfyllt: (p) => oppnadeKistor(p) >= 10 },
+  { id: 'niva-fem', emoji: '🚀', namn: 'Nivå fem',
+    krav: 'Nå nivå fem.', uppfyllt: (p) => p.level >= 5 },
 ];
 
 export function utmarkelseById(id: string): Utmarkelse | undefined {
