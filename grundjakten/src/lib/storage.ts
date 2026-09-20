@@ -184,7 +184,24 @@ function isProgress(v: unknown): v is Progress {
 export function getProgress(name: string): Progress {
   const p = readJson(KEYS.progress(name), isProgress);
   if (!p) return emptyProgress();
-  return { ...emptyProgress(), ...p };
+  return migreraKistor({ ...emptyProgress(), ...p });
+}
+
+/**
+ * Kistorna var förut bara en räknare (`chests: number`) som aldrig gick att
+ * göra något med. En elev som spelat sedan tidigare har den siffran sparad,
+ * och den ska inte bara försvinna – varje räknad kista blir en oöppnad
+ * träkista hon får öppna på riktigt.
+ */
+function migreraKistor(p: Progress): Progress {
+  const gammal = (p as unknown as { chests?: unknown }).chests;
+  if (typeof gammal !== 'number' || gammal <= 0 || p.kistor.length > 0) return p;
+
+  const kistor: Progress['kistor'] = Array.from(
+    { length: Math.min(gammal, 50) },
+    (_, i) => ({ id: `migrerad-${i}`, typ: 'tra' as const, oppnad: false })
+  );
+  return { ...p, kistor };
 }
 
 export function saveProgress(name: string, progress: Progress): void {

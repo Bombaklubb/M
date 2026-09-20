@@ -68,11 +68,30 @@ export interface TaskResult {
   senast: string;
 }
 
+export type KistTyp = 'tra' | 'silver' | 'guld';
+
+/**
+ * En kista eleven tjänat men kanske inte öppnat än.
+ *
+ * Ersätter den gamla räknaren `chests: number`, som bara räknade uppåt och
+ * aldrig gick att göra något med. Poängen med en kista är att öppna den.
+ */
+export interface Kista {
+  id: string;
+  typ: KistTyp;
+  oppnad: boolean;
+  /** Vad den gav, satt när den öppnas. */
+  xp?: number;
+  utmarkelse?: string;
+}
+
 export interface Progress {
   xp: number;
   /** Kosmetisk nivå 1–10, styr rangmärket. */
   level: number;
-  chests: number;
+  kistor: Kista[];
+  /** Milstolpar som redan gett kista, så inget delas ut två gånger. */
+  utdelade: string[];
   badges: string[];
   streak: number;
   lastPlayedDate: string;
@@ -95,7 +114,8 @@ export function emptyProgress(): Progress {
   return {
     xp: 0,
     level: 1,
-    chests: 0,
+    kistor: [],
+    utdelade: [],
     badges: [],
     streak: 0,
     lastPlayedDate: '',

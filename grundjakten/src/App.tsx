@@ -10,10 +10,12 @@ import { RewardView } from '@/views/RewardView';
 import { OvningsbankView } from '@/views/OvningsbankView';
 import { FramstegView } from '@/views/FramstegView';
 import { OmView } from '@/views/OmView';
+import { KistorView } from '@/views/KistorView';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import { generateWritePass, type WriteMode } from '@/lib/generators/writingExercises';
 import { getCurrentUser, getProfile, getProgress, saveProfile, saveProgress, setCurrentUser } from '@/lib/storage';
 import { addXp, recordAnswer, shouldAdvanceLevel, shouldAdvanceStep, touchDailyStreak } from '@/lib/progress';
+import { nyaKistor, oppnaKista, passKista, utvarderaUtmarkelser } from '@/lib/belohningar';
 import { setRateScale } from '@/lib/audio';
 import { todayStamp } from '@/lib/utils';
 
@@ -26,7 +28,8 @@ type View =
   | { name: 'session'; exercises: Exercise[]; repeat: () => Exercise[]; taskId?: string }
   | { name: 'reward'; result: SessionResult; repeat: () => Exercise[]; taskId?: string }
   | { name: 'framsteg' }
-  | { name: 'om' };
+  | { name: 'om' }
+  | { name: 'kistor' };
 
 /**
  * Ingen router med flit.
@@ -110,7 +113,9 @@ export default function App() {
     const module = result.perItem[0]?.exercise.module ?? 'bokstaver';
     next = {
       ...next,
-      chests: next.chests + 1,
+      // Varje avklarat pass ger en träkista. Milstolparna nedan lägger till
+      // silver och guld ovanpå.
+      kistor: [...next.kistor, passKista()],
       sessions: [
         ...next.sessions,
         {
@@ -140,6 +145,10 @@ export default function App() {
       };
     }
 
+    // Kistor och utmärkelser räknas EFTER att passet bokförts, eftersom båda
+    // bygger på antal pass, XP och bemästrade bokstäver som just ändrats.
+    next = belona(next);
+
     saveProgress(profile.name, next);
     setProgress(next);
 
@@ -159,6 +168,33 @@ export default function App() {
     }
 
     setView({ name: 'reward', result, repeat, taskId });
+  };
+
+  /**
+   * Delar ut milstolpekistor och utmärkelser eleven tjänat in.
+   *
+   * Körs både efter ett pass och efter en öppnad kista – öppningen ger XP som
+   * i sin tur kan passera en milstolpe. Varje milstolpe är bokförd i
+   * `utdelade` och kan bara betalas en gång, så kedjan kan inte löpa amok.
+   */
+  const belona = (p: Progress): Progress => {
+    const { kistor, nycklar } = nyaKistor(p);
+    const nyaMarken = utvarderaUtmarkelser(p);
+    if (kistor.length === 0 && nyaMarken.length === 0) return p;
+    return {
+      ...p,
+      kistor: [...p.kistor, ...kistor],
+      utdelade: [...p.utdelade, ...nycklar],
+      badges: [...p.badges, ...nyaMarken],
+    };
+  };
+
+  /** Eleven öppnar en kista. Belöningen kan i sin tur ge en ny kista. */
+  const oppna = (kistId: string) => {
+    if (!profile || !progress) return;
+    const next = belona(oppnaKista(progress, kistId));
+    saveProgress(profile.name, next);
+    setProgress(next);
   };
 
   const goHome = () => setView({ name: 'home' });
@@ -215,6 +251,7 @@ export default function App() {
           onGo={go}
           onProfile={() => setView({ name: 'framsteg' })}
           onOm={() => setView({ name: 'om' })}
+          onKistor={() => setView({ name: 'kistor' })}
           onLogout={logout}
           onValjFigur={valjFigur}
           figurOppen={figurOppen}
@@ -223,6 +260,15 @@ export default function App() {
       )}
 
       {view.name === 'om' && <OmView onBack={goHome} />}
+
+      {view.name === 'kistor' && (
+        <KistorView
+          profile={profile}
+          progress={progress}
+          onOppna={oppna}
+          onBack={goHome}
+        />
+      )}
 
       {view.name === 'framsteg' && (
         <FramstegView

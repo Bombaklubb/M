@@ -41,7 +41,7 @@ export function EarButton({
         void play(token);
       }}
       className={cn(
-        'grid min-h-0 place-items-center rounded-full border-2 border-aqua-700',
+        'grid min-h-0 shrink-0 place-items-center rounded-full border-2 border-aqua-700',
         'bg-aqua-500 text-white shadow-pop-sm active:translate-y-0.5',
         sizes[size],
         className

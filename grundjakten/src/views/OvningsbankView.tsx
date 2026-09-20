@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { Niva, Progress, StudentProfile, TaskDef } from '@/types';
 import { grupperadeTasks, tasksForNiva } from '@/data/tasks';
-import { play } from '@/lib/audio';
+import { EarButton } from '@/components/EarButton';
 import { cn } from '@/lib/utils';
 
 const NIVAER: { niva: Niva; namn: string }[] = [
@@ -88,35 +88,41 @@ export function OvningsbankView({
               {tasks.map((task) => {
                 const res = progress.tasks[task.id];
                 return (
-                  <button
-                    key={task.id}
-                    type="button"
-                    aria-label={
-                      res
-                        ? `${task.grupp} – ${task.namn}. Klar, ${res.basta} av ${res.antal} rätt.`
-                        : `${task.grupp} – ${task.namn}`
-                    }
-                    onPointerDown={() =>
-                      void play({ id: `t-${task.id}`, text: task.namn, lang: 'sv-SE' })
-                    }
-                    onClick={() => onStart(task)}
-                    className={`btn-pop flex items-center gap-4 rounded-tile px-5 py-4 text-left
-                                text-white ${meta.tint}`}
-                  >
-                    <span className="text-3xl leading-none" aria-hidden>{meta.icon}</span>
-                    <span className="flex-1 text-xl font-extrabold">{task.namn}</span>
+                  /* Örat ligger UTANFÖR kortet, inte i det: en knapp får inte
+                     ligga i en annan knapp, och örat ska dessutom gå att
+                     trycka utan att uppgiften startar. */
+                  <div key={task.id} className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      aria-label={
+                        res
+                          ? `${task.grupp} – ${task.namn}. Klar, ${res.basta} av ${res.antal} rätt.`
+                          : `${task.grupp} – ${task.namn}`
+                      }
+                      onClick={() => onStart(task)}
+                      className={`btn-pop flex flex-1 items-center gap-4 rounded-tile px-5 py-4
+                                  text-left text-white ${meta.tint}`}
+                    >
+                      <span className="text-3xl leading-none" aria-hidden>{meta.icon}</span>
+                      <span className="flex-1 text-xl font-extrabold">{task.namn}</span>
 
-                    {/* Klarmarkering och bästa resultat. Bilden bär beskedet –
-                        siffran är ett tillägg för den som kan läsa den. */}
-                    {res && (
-                      <span className="flex shrink-0 items-center gap-2 rounded-tile bg-white/25 px-3 py-1.5">
-                        <span className="text-xl" aria-hidden>✅</span>
-                        <span className="text-lg font-extrabold tabular-nums">
-                          {res.basta}/{res.antal}
+                      {/* Klarmarkering och bästa resultat. Bilden bär beskedet –
+                          siffran är ett tillägg för den som kan läsa den. */}
+                      {res && (
+                        <span className="flex shrink-0 items-center gap-2 rounded-tile bg-white/25 px-3 py-1.5">
+                          <span className="text-xl" aria-hidden>✅</span>
+                          <span className="text-lg font-extrabold tabular-nums">
+                            {res.basta}/{res.antal}
+                          </span>
                         </span>
-                      </span>
-                    )}
-                  </button>
+                      )}
+                    </button>
+
+                    <EarButton
+                      token={{ id: `t-${task.id}`, text: task.namn, lang: 'sv-SE' }}
+                      label={task.namn}
+                    />
+                  </div>
                 );
               })}
             </div>
