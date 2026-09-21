@@ -42,8 +42,6 @@ export default function App() {
   const [profile, setProfile] = useState<StudentProfile | null>(null);
   const [progress, setProgress] = useState<Progress | null>(null);
   const [view, setView] = useState<View>({ name: 'login' });
-  /** Figurväljaren på startsidan. Fälls ut och in med ansiktet i headern. */
-  const [figurOppen, setFigurOppen] = useState(false);
 
   // Återuppta senast inloggad elev.
   useEffect(() => {
@@ -224,7 +222,6 @@ export default function App() {
     setCurrentUser(null);
     setProfile(null);
     setProgress(null);
-    setFigurOppen(false);
     setView({ name: 'login' });
   };
 
@@ -254,9 +251,6 @@ export default function App() {
           onOm={() => setView({ name: 'om' })}
           onKistor={() => setView({ name: 'kistor' })}
           onLogout={logout}
-          onValjFigur={valjFigur}
-          figurOppen={figurOppen}
-          onToggleFigur={() => setFigurOppen((v) => !v)}
         />
       )}
 

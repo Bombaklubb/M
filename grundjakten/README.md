@@ -57,16 +57,16 @@ dold med CSS och inte borttagen – samma bygge, samma knapp, bara inte på den
 skärm där den kostar mest plats.
 
 Eleven kan **byta figur** när som helst, genom att trycka på sitt eget
-ansikte: antingen det lilla uppe till höger eller det stora på
-framstegssidan. Samma tolv figurer som vid inloggningen, och valet sparas
-direkt – ingen bekräftelse på något hon redan ser resultatet av.
+ansikte uppe till höger och sedan på det stora ansiktet på framstegssidan.
+Samma tolv figurer som vid inloggningen, och valet sparas direkt – ingen
+bekräftelse på något hon redan ser resultatet av.
 
 ## Startskärmen
 
 Tre kort i den ordning läraren vill ha dem: **Övningar**, **Bokstäver**,
 **Skriva**. Headern följer Svenskajakten – märket och appens namn till
-vänster, och till höger *Om Grundjakten*, kistorna, elevens ansikte, elevens
-namn och *Logga ut*.
+vänster, och till höger *Om Grundjakten*, kistorna, elevens ansikte och namn
+i en knapp, och *Logga ut*.
 
 ### Sidhuvudet på telefon
 
@@ -120,9 +120,16 @@ Läget är **enhetsglobalt**, inte per elev: knappen syns på varje skärm och t
 ett tryck, så den som vill ha ljud slår på det direkt. Per elev hade krävt ett
 värde även på inloggningssidan, där ingen är inloggad än.
 
-Ansiktet och namnet är **två knappar**, inte en, eftersom de leder olika
-vägar. Båda behåller full tryckyta; två mål i samma knapp vore fel för en elev
-med motoriska svårigheter.
+Ansiktet och namnet är **en knapp**, inte två, och den leder till
+framstegen. De var delade så länge de ledde olika vägar – ansiktet fällde ut
+figurväljaren, namnet öppnade framstegen – men två närliggande mål som ser ut
+som en enhet är svårt för en elev med motoriska svårigheter att träffa rätt i.
+Ett mål är enklare än två.
+
+Figurbytet försvann inte, det flyttade: knappen landar eleven på
+framstegssidan, och där är hennes eget ansikte det största på skärmen och
+byter figur när hon trycker på det. Ett tryck till, på en yta som är lättare
+att träffa än den lilla i sidhuvudet.
 
 ## Om Grundjakten
 
