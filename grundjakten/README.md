@@ -30,6 +30,20 @@ klassen läser och skriver texter?"**
    på sig att se att hon svarade rätt hann inte med när skärmen bytte efter
    900 ms, och hon kan inte läsa sig till vad som hände.
 
+   Samma tanke styr **berömmet**. Vid rätt svar dyker en positiv emoji upp,
+   och den står kvar på full styrka i drygt en sekund innan den tonar bort –
+   totalt 1800 ms (`BEROM_MS` i `components/FeedbackOverlay.tsx`). Tidigare
+   låg emojin i samma element som den gröna blixten och tvingades tona bort i
+   dess takt; den nådde aldrig ens full styrka, och var tydlig i 116 ms.
+   Läraren rapporterade att eleverna inte hann uppfatta den, och mätningen
+   gav henne rätt.
+
+   Blixten och emojin är därför **skilda element** med var sin animation.
+   Blixten är kvar på 700 ms – den är signal, inte innehåll – och den gröna
+   pilen tänds när den slocknar, precis som förut. Emojin ligger sedan kvar
+   ovanpå den tända pilen. Överlägget är `pointer-events-none`, så en elev
+   som redan är klar kan trycka vidare medan bilden fortfarande syns.
+
    Övningsskärmen är exakt en skärmhöjd hög och scrollar aldrig. En elev som
    inte kan läsa vet inte att man kan dra uppåt – en knapp hon inte ser är en
    knapp som inte finns. Därför är storlekarna satta för en Chromebook med

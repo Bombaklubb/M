@@ -62,6 +62,16 @@ export default {
           '25%': { opacity: '0.85' },
           '100%': { opacity: '0' },
         },
+        /* Berömmet: poppa in, STÅ KVAR, tona bort.
+           Den långa platån i mitten är hela poängen – en elev som behöver
+           tid ska hinna se vad som dök upp innan det börjar blekna. */
+        'berom': {
+          '0%': { transform: 'scale(0.85)', opacity: '0' },
+          '8%': { transform: 'scale(1.06)', opacity: '1' },
+          '14%': { transform: 'scale(1)', opacity: '1' },
+          '72%': { transform: 'scale(1)', opacity: '1' },
+          '100%': { transform: 'scale(0.96)', opacity: '0' },
+        },
         'nudge': {
           '0%, 100%': { transform: 'translateX(0)' },
           '25%': { transform: 'translateX(-6px)' },
@@ -93,6 +103,8 @@ export default {
       animation: {
         'pop-in': 'pop-in 250ms ease-out',
         'flash-ok': 'flash-ok 700ms ease-out',
+        /* Håll i synk med BEROM_MS i components/FeedbackOverlay.tsx. */
+        'berom': 'berom 1800ms ease-out',
         'nudge': 'nudge 300ms ease-in-out',
         'ear-pulse': 'ear-pulse 900ms ease-in-out infinite',
         'guide-glow': 'guide-glow 1400ms ease-out infinite',
