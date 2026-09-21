@@ -2,7 +2,12 @@ import { useCallback, useEffect, useState } from 'react';
 import type { Choice, Exercise, StudentProfile } from '@/types';
 import { ProgressDots } from '@/components/ProgressDots';
 import { ListenAgainBar } from '@/components/ListenAgainBar';
-import { FeedbackOverlay, type FeedbackState } from '@/components/FeedbackOverlay';
+import {
+  FeedbackOverlay,
+  BEROM_MS,
+  BLIXT_MS,
+  type FeedbackState,
+} from '@/components/FeedbackOverlay';
 import { ExerciseRenderer } from '@/exercises/ExerciseRenderer';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import {
@@ -92,12 +97,14 @@ export function SessionView({
       const perItem = [...results, { exercise, firstTry }];
       setResults(perItem);
 
-      // Den gröna blixten slocknar, men uppgiften står kvar tills eleven
-      // trycker på pilen. Ingen automatisk växling.
-      window.setTimeout(() => {
-        setFeedback('none');
-        setVantarPaNasta(true);
-      }, 700);
+      // Pilen tänds när blixten slocknat – den ska inte dröja bara för att
+      // berömmet står kvar längre. Uppgiften byts ändå aldrig av sig själv.
+      window.setTimeout(() => setVantarPaNasta(true), BLIXT_MS);
+
+      // Berömmet lever vidare en stund till, ovanpå den tända pilen.
+      // Överlägget är pointer-events-none, så eleven kan trycka vidare
+      // under tiden – bilden hindrar ingen som redan är klar.
+      window.setTimeout(() => setFeedback('none'), BEROM_MS);
       return;
     }
 
@@ -105,7 +112,7 @@ export function SessionView({
     playMiss();
     setFeedback('miss');
     setWrongId(choice?.id ?? null);
-    window.setTimeout(() => setFeedback('none'), 700);
+    window.setTimeout(() => setFeedback('none'), BLIXT_MS);
 
     const alreadyMissed = queue.missed.has(exercise.id);
     if (alreadyMissed) {
