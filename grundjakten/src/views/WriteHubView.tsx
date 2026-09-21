@@ -1,6 +1,7 @@
 import type { WriteMode } from '@/lib/generators/writingExercises';
 import { play } from '@/lib/audio';
 import { AppMarke } from '@/components/AppMarke';
+import { LjudKnapp } from '@/components/LjudKnapp';
 
 const MODES: { id: WriteMode; icon: string; title: string; tint: string }[] = [
   { id: 'type', icon: '⌨️', title: 'Tryck bokstaven', tint: 'bg-brand-500 border-brand-700' },
@@ -19,6 +20,7 @@ export function WriteHubView({
     <div className="mx-auto flex min-h-[100dvh] max-w-3xl flex-col px-4 py-5">
       <header className="mb-8 flex items-center gap-4">
         <AppMarke onHome={onBack} />
+        <LjudKnapp />
         <button
           type="button"
           aria-label="Tillbaka"

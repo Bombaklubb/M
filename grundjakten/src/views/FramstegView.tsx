@@ -18,6 +18,7 @@ import { UTMARKELSER } from '@/data/belohningar';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { cn, getLevelTitle, xpForNextLevel } from '@/lib/utils';
 import { AppMarke } from '@/components/AppMarke';
+import { LjudKnapp } from '@/components/LjudKnapp';
 
 const NIVAER: { niva: Niva; namn: string }[] = [
   { niva: 1, namn: 'Svenska 1' },
@@ -74,14 +75,15 @@ export function FramstegView({
 
   return (
     <div className="mx-auto flex min-h-[100dvh] max-w-3xl flex-col gap-6 px-4 py-5">
-      <header className="flex items-center gap-4">
+      <header className="flex items-center gap-2 sm:gap-4">
         <AppMarke onHome={onBack} />
+        <LjudKnapp />
         <button
           type="button"
           aria-label="Tillbaka"
           onClick={onBack}
-          className="btn-pop grid h-14 w-14 place-items-center rounded-tile border-ink-300
-                     bg-ink-100 text-2xl dark:border-ink-600 dark:bg-ink-800"
+          className="btn-pop grid h-14 w-14 min-h-0 shrink-0 place-items-center rounded-tile
+                     border-ink-300 bg-ink-100 text-2xl dark:border-ink-600 dark:bg-ink-800"
         >
           <span aria-hidden>←</span>
         </button>
@@ -91,14 +93,20 @@ export function FramstegView({
           onClick={() => setByterFigur((v) => !v)}
           aria-label="Byt figur"
           aria-expanded={byterFigur}
-          className="btn-pop grid h-16 w-16 min-h-0 place-items-center rounded-tile
-                     border-ink-200 bg-white text-4xl dark:border-ink-700 dark:bg-ink-800"
+          className="btn-pop grid h-14 w-14 min-h-0 shrink-0 place-items-center rounded-tile
+                     border-ink-200 bg-white text-3xl dark:border-ink-700 dark:bg-ink-800
+                     sm:h-16 sm:w-16 sm:text-4xl"
         >
           <span aria-hidden>{profile.avatar}</span>
         </button>
-        <div className="flex flex-col">
-          <h1 className="reading text-3xl font-extrabold leading-tight">{profile.name}</h1>
-          <span className="font-bold text-ink-500">
+        {/* min-w-0 + truncate: sidhuvudet bär nu märke, ljudknapp, bakåt och
+            ansikte, och namnet måste få krympa i stället för att trycka ut
+            raden ur skärmen på telefon. */}
+        <div className="flex min-w-0 flex-col">
+          <h1 className="reading truncate text-2xl font-extrabold leading-tight sm:text-3xl">
+            {profile.name}
+          </h1>
+          <span className="truncate text-sm font-bold text-ink-500 sm:text-base">
             Nivå {progress.level} · {getLevelTitle(progress.level)}
           </span>
         </div>

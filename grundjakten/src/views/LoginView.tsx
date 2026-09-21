@@ -5,6 +5,7 @@ import { play, unlock } from '@/lib/audio';
 import { EarButton } from '@/components/EarButton';
 import { AVATARER, STANDARD_AVATAR } from '@/data/avatars';
 import { GrundjaktenLogo } from '@/components/GrundjaktenLogo';
+import { LjudKnapp } from '@/components/LjudKnapp';
 import { cn } from '@/lib/utils';
 
 /**
@@ -48,6 +49,12 @@ export function LoginView({ onLogin }: { onLogin: (profile: StudentProfile) => v
 
   return (
     <div className="mx-auto flex min-h-[100dvh] w-full max-w-lg flex-col justify-center gap-6 px-4 py-6">
+      {/* Ljudknappen finns även här: appen hälsar med tal så fort någon
+          loggar in, och den som vill ha tyst ska kunna välja det innan. */}
+      <div className="flex justify-end">
+        <LjudKnapp />
+      </div>
+
       <header className="flex flex-col items-center gap-2">
         {/* Samma märke som i huvudet på alla andra sidor. Den gamla G-rutan
             låg kvar här och sa fel bokstav. */}

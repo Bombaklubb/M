@@ -11,6 +11,7 @@
  */
 
 import { AppMarke } from '@/components/AppMarke';
+import { LjudKnapp } from '@/components/LjudKnapp';
 
 interface Kort {
   ikon: string;
@@ -104,6 +105,7 @@ export function OmView({ onBack }: { onBack: () => void }) {
         <div className="mx-auto flex max-w-3xl flex-col gap-3">
           <div className="flex items-center gap-2">
             <AppMarke onHome={onBack} paFarg />
+            <LjudKnapp paFarg />
             <button
               type="button"
               onClick={onBack}

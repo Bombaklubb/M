@@ -2,6 +2,7 @@ import type { Progress, StudentProfile } from '@/types';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { FigurValjare } from '@/components/FigurValjare';
 import { AppMarke } from '@/components/AppMarke';
+import { LjudKnapp } from '@/components/LjudKnapp';
 import { EarButton } from '@/components/EarButton';
 import { KistBild } from '@/components/KistBild';
 import { cn, getLevelTitle, xpForNextLevel } from '@/lib/utils';
@@ -67,7 +68,11 @@ export function HomeView({
   return (
     <div className="mx-auto flex min-h-[100dvh] max-w-4xl flex-col px-4 py-3
                     [@media(min-height:760px)]:py-5">
-      <header className="mb-3 flex items-center justify-between gap-1.5
+      {/* flex-wrap: sju saker får inte plats på en telefonbredd. Utan
+          brytningen lade de sig ovanpå varandra – "Om Grundjakten" hamnade
+          under ljudknappen och gick inte att trycka på, och namnet klämdes
+          ihop till 20 px. Hellre två rader än en oåtkomlig knapp. */}
+      <header className="mb-3 flex flex-wrap items-center justify-between gap-1.5
                          [@media(min-height:760px)]:mb-6 sm:gap-2">
         {/* Samma märke på samma plats som på alla andra sidor. Här är det
             redan hemma, men klicket ska finnas överallt – annars måste eleven
@@ -76,7 +81,9 @@ export function HomeView({
 
         {/* min-w-0 på både nav och namnknappen: utan det vägrar namnet krympa
             och trycker i stället ut "Logga ut" ur skärmen på en telefon. */}
-        <nav className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2">
+        <nav className="flex min-w-0 flex-1 flex-wrap items-center justify-end gap-1.5 sm:gap-2">
+          <LjudKnapp />
+
           <button
             type="button"
             onClick={onOm}

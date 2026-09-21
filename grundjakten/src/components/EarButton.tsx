@@ -1,6 +1,7 @@
 import type { SpeechToken } from '@/types';
 import { cn } from '@/lib/utils';
 import { play } from '@/lib/audio';
+import { useLjud } from '@/hooks/useLjud';
 
 /**
  * Örat – den lilla lyssna-knappen.
@@ -25,6 +26,8 @@ export function EarButton({
   size?: 'sm' | 'md';
   className?: string;
 }) {
+  const { av } = useLjud();
+
   const sizes = {
     sm: 'h-10 w-10 text-base',
     md: 'h-12 w-12 text-xl',
@@ -33,7 +36,7 @@ export function EarButton({
   return (
     <button
       type="button"
-      aria-label={`Lyssna: ${label}`}
+      aria-label={av ? `Lyssna: ${label}. Ljudet är avstängt.` : `Lyssna: ${label}`}
       onPointerDown={(e) => e.stopPropagation()}
       onClick={(e) => {
         e.stopPropagation();
@@ -44,6 +47,9 @@ export function EarButton({
         'grid min-h-0 shrink-0 place-items-center rounded-full border-2 border-aqua-700',
         'bg-aqua-500 text-white shadow-pop-sm active:translate-y-0.5',
         sizes[size],
+        // Dämpat när ljudet är av: örat gör då ingenting, och en knapp som
+        // inte svarar ska synas vara avstängd.
+        av && 'opacity-40',
         className
       )}
     >

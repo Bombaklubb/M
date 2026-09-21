@@ -4,6 +4,7 @@ import { grupperadeTasks, tasksForNiva } from '@/data/tasks';
 import { EarButton } from '@/components/EarButton';
 import { cn } from '@/lib/utils';
 import { AppMarke } from '@/components/AppMarke';
+import { LjudKnapp } from '@/components/LjudKnapp';
 
 const NIVAER: { niva: Niva; namn: string }[] = [
   { niva: 1, namn: 'Svenska 1' },
@@ -43,6 +44,7 @@ export function OvningsbankView({
     <div className="mx-auto flex min-h-[100dvh] max-w-3xl flex-col px-4 py-5">
       <header className="mb-5 flex items-center gap-4">
         <AppMarke onHome={onBack} />
+        <LjudKnapp />
         <button
           type="button"
           aria-label="Tillbaka"

@@ -23,6 +23,10 @@ export const KEYS = {
   profile: (n: string) => `grundjakten_profile_u_${norm(n)}`,
   progress: (n: string) => `grundjakten_progress_u_${norm(n)}`,
   lastReward: 'grundjakten_last_reward',
+  // Enhetsglobal med flit, inte per elev: knappen syns på varje skärm och
+  // tar ett tryck, så den som vill ha ljud slår på det direkt. Per elev hade
+  // krävt ett värde även på inloggningssidan, där ingen är inloggad än.
+  ljudAv: 'grundjakten_ljud_av',
 } as const;
 
 function readJson<T>(key: string, validate: (v: unknown) => v is T): T | null {
@@ -208,4 +212,23 @@ export function saveProgress(name: string, progress: Progress): void {
   // Passloggen kapas så att localStorage inte växer obegränsat.
   const trimmed: Progress = { ...progress, sessions: progress.sessions.slice(-200) };
   writeJson(KEYS.progress(name), trimmed);
+}
+
+// ---------- Ljud på/av ----------
+
+export function getLjudAv(): boolean {
+  try {
+    return localStorage.getItem(KEYS.ljudAv) === '1';
+  } catch {
+    return false;
+  }
+}
+
+export function setLjudAv(av: boolean): void {
+  try {
+    if (av) localStorage.setItem(KEYS.ljudAv, '1');
+    else localStorage.removeItem(KEYS.ljudAv);
+  } catch {
+    /* ignoreras */
+  }
 }

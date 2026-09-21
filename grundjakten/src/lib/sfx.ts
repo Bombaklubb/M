@@ -6,6 +6,8 @@
  * ofta är precis när feedbacken ska spelas.
  */
 
+import { ljudetArAv } from './ljud';
+
 let ctx: AudioContext | null = null;
 
 function context(): AudioContext | null {
@@ -24,6 +26,8 @@ function context(): AudioContext | null {
 }
 
 function tone(freq: number, startAt: number, duration: number, type: OscillatorType, gain: number): void {
+  // Alla effekter går genom tone(), så den här raden tystar dem allihop.
+  if (ljudetArAv()) return;
   const ac = context();
   if (!ac) return;
   const osc = ac.createOscillator();
