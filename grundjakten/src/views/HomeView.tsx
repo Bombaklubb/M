@@ -1,6 +1,5 @@
 import type { Progress, StudentProfile } from '@/types';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
-import { FigurValjare } from '@/components/FigurValjare';
 import { AppMarke } from '@/components/AppMarke';
 import { LjudKnapp } from '@/components/LjudKnapp';
 import { EarButton } from '@/components/EarButton';
@@ -41,9 +40,6 @@ export function HomeView({
   onOm,
   onKistor,
   onLogout,
-  onValjFigur,
-  figurOppen,
-  onToggleFigur,
 }: {
   profile: StudentProfile;
   progress: Progress;
@@ -53,9 +49,6 @@ export function HomeView({
   onOm: () => void;
   onKistor: () => void;
   onLogout: () => void;
-  onValjFigur: (avatar: string) => void;
-  figurOppen: boolean;
-  onToggleFigur: () => void;
 }) {
   const xp = xpForNextLevel(progress.xp);
   const oOppnade = progress.kistor.filter((k) => !k.oppnad).length;
@@ -133,28 +126,20 @@ export function HomeView({
             )}
           </button>
 
-          {/* Ansiktet: byter figur. */}
-          <button
-            type="button"
-            onClick={onToggleFigur}
-            aria-label="Byt figur"
-            aria-expanded={figurOppen}
-            className="btn-pop grid h-11 w-11 min-h-0 shrink-0 place-items-center rounded-tile
-                       border-ink-200 bg-white text-2xl dark:border-ink-700 dark:bg-ink-800
-                       sm:h-14 sm:w-14 sm:text-3xl"
-          >
-            <span aria-hidden>{profile.avatar}</span>
-          </button>
-
-          {/* Namnet: öppnar framstegen. */}
+          {/* Ansiktet OCH namnet i EN knapp, som leder till framstegen.
+              Figurbytet ligger kvar på framstegssidan, där ansiktet är stort
+              – ett tryck här landar eleven på just den sidan. */}
           <button
             type="button"
             onClick={onProfile}
-            aria-label={`${profile.name}, nivå ${progress.level}, ${getLevelTitle(progress.level)}. Se dina framsteg.`}
-            className="btn-pop flex h-11 min-h-0 min-w-0 shrink items-center rounded-tile
-                       border-ink-200 bg-white px-2 dark:border-ink-700 dark:bg-ink-800
-                       sm:h-14 sm:px-4"
+            aria-label={`${profile.name}, nivå ${progress.level}, ${getLevelTitle(progress.level)}. Se dina framsteg och byt figur.`}
+            className="btn-pop flex h-11 min-h-0 min-w-0 shrink items-center gap-1.5 rounded-tile
+                       border-ink-200 bg-white pl-1.5 pr-2 dark:border-ink-700 dark:bg-ink-800
+                       sm:h-14 sm:gap-2 sm:pl-2 sm:pr-4"
           >
+            <span className="shrink-0 text-2xl leading-none sm:text-3xl" aria-hidden>
+              {profile.avatar}
+            </span>
             <span className="flex min-w-0 flex-col items-start">
               <span className="reading max-w-[5rem] truncate text-base font-extrabold leading-tight
                                sm:max-w-[9rem] sm:text-lg">
@@ -181,12 +166,6 @@ export function HomeView({
           </button>
         </nav>
       </header>
-
-      {figurOppen && (
-        <div className="mb-3">
-          <FigurValjare vald={profile.avatar} onValj={onValjFigur} />
-        </div>
-      )}
 
       <main className="grid flex-1 content-center gap-3 [@media(min-height:760px)]:gap-5">
         {CARDS.map((card) => (
