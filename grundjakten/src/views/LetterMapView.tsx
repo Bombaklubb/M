@@ -6,6 +6,7 @@ import { EarButton } from '@/components/EarButton';
 import { play } from '@/lib/audio';
 import { cn } from '@/lib/utils';
 import { AppMarke } from '@/components/AppMarke';
+import { LjudKnapp } from '@/components/LjudKnapp';
 
 /** Så många ordbilder får plats utan att kortet växer ur skärmen. */
 const MAX_ORD = 6;
@@ -41,6 +42,7 @@ export function LetterMapView({
                     [@media(min-height:760px)]:py-5">
       <header className="mb-4 flex items-center gap-4 [@media(min-height:760px)]:mb-6">
         <AppMarke onHome={onBack} />
+        <LjudKnapp />
         <button
           type="button"
           aria-label="Tillbaka"

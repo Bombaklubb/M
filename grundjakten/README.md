@@ -76,6 +76,24 @@ Undantaget är **övningsskärmen**. Där finns redan en hus-knapp längst ned, 
 en andra väg ut mitt i en uppgift är något en elev kan trycka på av misstag
 och tappa passet på.
 
+## Ljud på och av
+
+En knapp på **varje** skärm, även mitt i ett pass och på inloggningssidan.
+Ljud är appens huvudkanal, så den som vill ha tyst måste kunna få det direkt
+där hon är – inte leta sig till en inställningssida hon ändå inte kan läsa.
+
+Avstängt betyder **helt** tyst: både talet och ljudeffekterna. En bock som
+fortfarande piper är inte avstängt ljud. Kontrollen ligger i de två ingångar
+allt passerar – `play()` i `lib/audio.ts` och `tone()` i `lib/sfx.ts` – så
+ingen anropare kan glömma den.
+
+Öronen dämpas när ljudet är av. En knapp som inte svarar ska synas vara
+avstängd, annars tror eleven att appen är trasig.
+
+Läget är **enhetsglobalt**, inte per elev: knappen syns på varje skärm och tar
+ett tryck, så den som vill ha ljud slår på det direkt. Per elev hade krävt ett
+värde även på inloggningssidan, där ingen är inloggad än.
+
 Ansiktet och namnet är **två knappar**, inte en, eftersom de leder olika
 vägar. Båda behåller full tryckyta; två mål i samma knapp vore fel för en elev
 med motoriska svårigheter.

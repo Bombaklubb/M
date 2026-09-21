@@ -1,6 +1,8 @@
 import { ArrowRight, Home, Volume2 } from 'lucide-react';
 import type { SpeechToken } from '@/types';
 import { useSpeak } from '@/hooks/useSpeak';
+import { useLjud } from '@/hooks/useLjud';
+import { LjudKnapp } from '@/components/LjudKnapp';
 import { cn } from '@/lib/utils';
 
 interface Props {
@@ -26,6 +28,7 @@ interface Props {
  */
 export function ListenAgainBar({ replay, onHome, onNext }: Props) {
   const { speaking, speak } = useSpeak();
+  const { av } = useLjud();
 
   return (
     <div className="sticky bottom-0 z-30 flex shrink-0 items-center justify-center gap-3
@@ -42,14 +45,17 @@ export function ListenAgainBar({ replay, onHome, onNext }: Props) {
         <Home className="h-6 w-6" strokeWidth={2.5} aria-hidden />
       </button>
 
+      <LjudKnapp />
+
       <button
         type="button"
-        aria-label="Lyssna igen"
+        aria-label={av ? 'Lyssna igen. Ljudet är avstängt.' : 'Lyssna igen'}
         onClick={() => void speak(replay)}
         className={cn(
           'btn-pop grid h-14 w-24 min-h-0 place-items-center rounded-tile border-aqua-700',
           'bg-aqua-500 text-white [@media(min-height:760px)]:h-16 [@media(min-height:760px)]:w-28',
-          speaking && 'animate-ear-pulse'
+          speaking && 'animate-ear-pulse',
+          av && 'opacity-40'
         )}
       >
         <Volume2 className="h-8 w-8" strokeWidth={2.5} aria-hidden />

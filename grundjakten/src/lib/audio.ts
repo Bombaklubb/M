@@ -1,6 +1,7 @@
 import type { Letter, SpeechToken } from '@/types';
 import { pickVoice, speechSupported } from './speech';
 import { AUDIO_MANIFEST, audioPathFor } from '@/data/audioManifest';
+import { ljudetArAv } from './ljud';
 
 /**
  * Enda vägen in till ljud i hela appen.
@@ -44,7 +45,7 @@ export function setRateScale(scale: number): void {
  * tryckningen på inloggningsskärmen.
  */
 export function unlock(): void {
-  if (unlocked) return;
+  if (unlocked || ljudetArAv()) return;
   unlocked = true;
   try {
     if (speechSupported) {
@@ -160,12 +161,16 @@ function playTts(token: SpeechToken): Promise<void> {
 
 export async function play(token: SpeechToken): Promise<void> {
   stop();
+  // Avstängt ljud ska vara helt tyst. Kontrollen ligger HÄR, i den enda
+  // ingången till talet, så ingen anropare kan glömma den.
+  if (ljudetArAv()) return;
   if (AUDIO_MANIFEST[token.id]) return playRecording(token.id);
   return playTts(token);
 }
 
 /** Spelar en följd av token med paus emellan – används vid ljudning. */
 export async function playSequence(tokens: SpeechToken[], gapMs = 320): Promise<void> {
+  if (ljudetArAv()) return;
   for (const token of tokens) {
     await play(token);
     await new Promise((r) => window.setTimeout(r, gapMs));

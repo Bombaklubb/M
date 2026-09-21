@@ -5,6 +5,7 @@ import { utmarkelseById } from '@/data/belohningar';
 import { EarButton } from '@/components/EarButton';
 import { KistBild } from '@/components/KistBild';
 import { AppMarke } from '@/components/AppMarke';
+import { LjudKnapp } from '@/components/LjudKnapp';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { playFanfare } from '@/lib/sfx';
 import { play } from '@/lib/audio';
@@ -61,6 +62,7 @@ export function KistorView({
         <div className="mx-auto flex max-w-3xl flex-col gap-3">
           <div className="flex items-center gap-2">
             <AppMarke onHome={onBack} paFarg />
+            <LjudKnapp paFarg />
             <button
               type="button"
               onClick={onBack}
