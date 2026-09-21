@@ -1,4 +1,4 @@
-import { ArrowRight, Home, Volume2 } from 'lucide-react';
+import { ArrowRight, Home } from 'lucide-react';
 import type { SpeechToken } from '@/types';
 import { useSpeak } from '@/hooks/useSpeak';
 import { useLjud } from '@/hooks/useLjud';
@@ -47,18 +47,33 @@ export function ListenAgainBar({ replay, onHome, onNext }: Props) {
 
       <LjudKnapp />
 
+      {/* Avdelare. Vänster om den ligger appens knappar – hem och ljud på/av.
+          Höger om den ligger uppgiftens – lyssna igen och vidare. */}
+      <span className="h-10 w-px shrink-0 bg-ink-200 dark:bg-ink-700" aria-hidden />
+
+      {/* Lyssna igen är ett ÖRA, inte en högtalare.
+          Den såg förut likadan ut som ljud på/av: samma turkosa platta, samma
+          högtalarikon, bara olika bred. Läraren rapporterade att de blandas
+          ihop, och det värsta utfallet är tydligt – en elev som vill höra om
+          instruktionen stänger av allt ljud i stället, och sedan svarar
+          ingenting.
+          Örat är appens tecken för "lyssna" på varenda annan knapp, och
+          cirkeln skiljer den från de fyrkantiga app-knapparna. Form, ikon och
+          färg skiljer alltså nu åt – inte bara färgen. */}
       <button
         type="button"
         aria-label={av ? 'Lyssna igen. Ljudet är avstängt.' : 'Lyssna igen'}
         onClick={() => void speak(replay)}
         className={cn(
-          'btn-pop grid h-14 w-24 min-h-0 place-items-center rounded-tile border-aqua-700',
-          'bg-aqua-500 text-white [@media(min-height:760px)]:h-16 [@media(min-height:760px)]:w-28',
+          'btn-pop grid h-16 w-16 min-h-0 place-items-center rounded-full border-aqua-700',
+          'bg-aqua-500 text-4xl text-white',
+          '[@media(min-height:760px)]:h-[4.5rem] [@media(min-height:760px)]:w-[4.5rem]',
+          '[@media(min-height:760px)]:text-5xl',
           speaking && 'animate-ear-pulse',
           av && 'opacity-40'
         )}
       >
-        <Volume2 className="h-8 w-8" strokeWidth={2.5} aria-hidden />
+        <span aria-hidden>👂</span>
       </button>
 
       {onNext && (

@@ -4,7 +4,7 @@ import { MAX_STEP, PROGRESSION_STEPS } from '@/data/progression';
 import { LETTERS } from '@/data/letters';
 import { WORDS, newWordsAtStep } from '@/data/words';
 import {
-  ADJEKTIV, DJUR, FARGER, KORTA_ORD, KORTA_VOKALER,
+  ADJEKTIV, DJUR, FARGER, GATOR, KORTA_ORD, KORTA_VOKALER,
   LANGA_VOKALER, LJUDSTRIDIGA, SUBSTANTIV, VERB,
 } from '@/data/banks';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
@@ -156,13 +156,24 @@ export function kollaBildord(): Fel[] {
   const fel: Fel[] = [];
   const perEmoji = new Map<string, Set<string>>();
 
+  const lagg = (emoji: string | null, ord: string, varifran: string) => {
+    if (!emoji) return;
+    if (!perEmoji.has(emoji)) perEmoji.set(emoji, new Set());
+    perEmoji.get(emoji)!.add(`${ord} (${varifran})`);
+  };
+
   for (const [listnamn, lista] of Object.entries(BILDORDSLISTOR)) {
-    for (const o of lista) {
-      if (!o.emoji) continue;
-      if (!perEmoji.has(o.emoji)) perEmoji.set(o.emoji, new Set());
-      perEmoji.get(o.emoji)!.add(`${o.ord} (${listnamn})`);
-    }
+    for (const o of lista) lagg(o.emoji ?? null, o.ord, listnamn);
   }
+
+  // Bokstavsresans egen ordbank. Den glömdes först, och just där satt fyra av
+  // dubbletterna: ☀️ för både sol och dag, 👩 för både mor och dam, 👨 för
+  // både far och man, 🏠 för både hus och tak.
+  for (const w of WORDS) lagg(w.emoji, w.text, 'WORDS');
+
+  // Gåtorna. Bilden ÄR svaret där, så den räknas som ett bildord: gåtan om
+  // fyra ben som inte kan gå visade en stol men hade svaret "bord".
+  for (const g of GATOR) lagg(g.emoji, g.svar, 'GATOR');
 
   for (const [emoji, ord] of perEmoji) {
     // Samma ORD i flera listor är i sin ordning – hus finns både bland korta

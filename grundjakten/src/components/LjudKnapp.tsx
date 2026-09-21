@@ -31,9 +31,13 @@ export function LjudKnapp({
       title={av ? 'Ljud av' : 'Ljud på'}
       className={cn(
         'btn-pop grid h-11 w-11 min-h-0 shrink-0 place-items-center rounded-tile sm:h-14 sm:w-14',
+        // Neutral, aldrig turkos. Turkos är appens färg för LYSSNA – öronen,
+        // och den stora lyssna-igen-knappen. Den här knappen lyssnar inte,
+        // den stänger av. Delade den färgen blandades de ihop, och en elev
+        // som ville höra om instruktionen stängde av ljudet i stället.
         av
-          ? 'border-ink-400 bg-ink-200 text-ink-600 dark:bg-ink-700 dark:text-ink-300'
-          : 'border-aqua-700 bg-aqua-500 text-white',
+          ? 'border-amberx-600 bg-amberx-100 text-amberx-700 dark:bg-amberx-600/30 dark:text-amberx-300'
+          : 'border-ink-300 bg-white text-ink-700 dark:border-ink-600 dark:bg-ink-800 dark:text-ink-200',
         paFarg && 'border-white/40',
         className
       )}

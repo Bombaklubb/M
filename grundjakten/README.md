@@ -240,13 +240,26 @@ för bildorden i `data/banks.ts`:
    ordet.** Räcker det inte till byts ordet ut, inte bilden – det finns ingen
    emoji för "ficka" eller "tak", och en närliggande bild är värre än inget.
 2. **Samma bild får aldrig betyda två olika ord.** `kollaBildord()` i
-   `dev/checkTasks.ts` går igenom alla nio ordlistor samtidigt och fäller
-   bygget om det sker. Felet uppstår mellan listorna lika ofta som inom en.
+   `dev/checkTasks.ts` går igenom **alla** bildkällor samtidigt – de nio
+   ordlistorna, Bokstavsresans `WORDS` och gåtorna – och fäller bygget om det
+   sker. Felet uppstår mellan källorna lika ofta som inom en; första
+   versionen av kontrollen tittade bara i `banks.ts` och missade därför fyra
+   dubbletter som satt i `words.ts`.
+
+Saknar ett ord en egen bild sätts `emoji: null`. Ordet blir kvar, och
+generatorn hoppar över de övningar som kräver bild. Det är bättre än en
+lånad bild: `tak` hade 🏠, som redan var `hus`.
 
 Båda reglerna kommer ur riktiga fel: 👖 användes för både `ficka` och `jeans`,
 🪑 för både `bord` och `stol`, 🏠 för både `hus` och `tak`, 🚗 för både `bil`
-och `garage`, och 🍽️ för `mat`, `äta` och `restaurang`. Läraren hittade det
-första när en elev satt med byxorna på skärmen och ordet `ficka` i örat.
+och `garage`, 🍽️ för `mat`, `äta` och `restaurang`, ☀️ för både `sol` och
+`dag`, 👩 för både `mor` och `dam`, och 👨 för både `far` och `man`. Läraren
+hittade det första när en elev satt med byxorna på skärmen och ordet `ficka`
+i örat.
+
+Gåtan *"Jag har fyra ben men kan inte gå"* hörde till samma familj: bilden var
+en stol, svaret var `bord`. Där fick bilden styra och svaret blev `stol` –
+gåtan stämmer lika bra.
 
 Samma **ord** i flera listor är däremot i sin ordning – `hus` finns både bland
 korta ord och bland långa vokaler, med samma bild. Det är olika ord bakom
@@ -262,6 +275,44 @@ Nu: **96 px** som grundläge, **128 px** från 700 px fönsterhöjd och **160 px
 från 760. Stegen är mätta mot alla tolv skrivuppgifter på 600, 620, 700 och
 768 px höjd; även den största lämnar över 100 px luft, och ingenting hamnar
 under skärmkanten.
+
+### Stor bokstav på fristående ord
+
+Ordbankerna är skrivna med gemener, men ett ord som står ensamt på ett kort
+visas med **versal** – `stortOrd()` i `lib/utils.ts`. Ordkorten sa "bok" och
+"boll"; eleven ska inte lära sig fel av det hon ser mest.
+
+Det sker bara på **visningen**. Jämförelserna kör vidare på bankernas egna
+värden, så en versal kan inte göra ett rätt svar fel. Enstaka tecken lämnas
+orörda: i bokstavsövningarna ÄR gemenen innehållet, och ett skiljetecken har
+ingen versal.
+
+*Bygg meningen* var redan rätt – meningarna står med stor bokstav i datan, och
+uppgiften säger själv "Stor bokstav först och punkt sist".
+
+Veckodagar och månader får också versal på sina kort. Svensk ortografi skriver
+dem med liten bokstav i löpande text, så säg till om du hellre vill undanta
+dem – de ligger i samma kod och är enkla att skilja ut.
+
+### De två ljudknapparna
+
+Listen längst ned hade två knappar som såg likadana ut: samma turkosa platta,
+samma högtalarikon, bara olika breda. Den ena stänger av allt ljud, den andra
+upprepar instruktionen. Läraren rapporterade att de blandas ihop, och värsta
+utfallet är tydligt – en elev som vill höra om instruktionen stänger av ljudet
+i stället, och sedan svarar ingenting.
+
+De skiljs nu åt på **tre** sätt, inte bara färg:
+
+| | Form | Färg | Tecken |
+|---|---|---|---|
+| **Lyssna igen** | cirkel | turkos | 👂 |
+| **Ljud på/av** | rundad fyrkant | vit (gul när avstängt) | högtalare |
+
+Örat är appens tecken för "lyssna" på varenda annan knapp, så den stora
+lyssna-knappen bär det nu också. Turkos är reserverat för att lyssna; ljud
+på/av lyssnar inte, den stänger av, och är därför neutral. En lodrät avdelare
+skiljer appens knappar (hem, ljud) från uppgiftens (lyssna, vidare).
 
 Varje klarad uppgift får en bock och sitt bästa resultat (`7/8`) direkt på
 kortet, och rubriken visar hur många av nivåns uppgifter som är klara.

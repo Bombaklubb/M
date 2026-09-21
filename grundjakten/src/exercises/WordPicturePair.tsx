@@ -3,7 +3,7 @@ import type { WordPicturePairEx } from '@/types';
 import { play } from '@/lib/audio';
 import { EarButton } from '@/components/EarButton';
 import { playMiss, playPlace } from '@/lib/sfx';
-import { cn } from '@/lib/utils';
+import { cn, stortOrd } from '@/lib/utils';
 import { mulberry32, shuffle } from '@/lib/rng';
 
 /**
@@ -92,7 +92,7 @@ export function WordPicturePair({
                     : 'bg-white text-ink-800 dark:bg-ink-800 dark:text-ink-100'
               )}
             >
-              {pair.word}
+              {stortOrd(pair.word)}
             </button>
             <EarButton size="sm" token={pair.say} label={pair.word}
               className="absolute -right-2 -top-2" />

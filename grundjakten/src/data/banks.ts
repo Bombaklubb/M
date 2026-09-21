@@ -131,7 +131,9 @@ export const LIKNELSER_DJUR: { text: string; svar: string; emoji: string }[] = [
 export const GATOR: { fraga: string; svar: string; emoji: string; fel: [string, string][] }[] = [
   { fraga: 'Jag lyser på dagen och är varm. Vad är jag?', svar: 'sol', emoji: '☀️',
     fel: [['måne', '🌙'], ['moln', '☁️']] },
-  { fraga: 'Jag har fyra ben men kan inte gå. Vad är jag?', svar: 'bord', emoji: '🪑',
+  // Bilden är en stol, och gåtan stämmer lika bra på en stol. Svaret var
+  // "bord" – en elev som inte kan läsa såg alltså rätt bild till fel ord.
+  { fraga: 'Jag har fyra ben men kan inte gå. Vad är jag?', svar: 'stol', emoji: '🪑',
     fel: [['häst', '🐎'], ['hund', '🐕']] },
   { fraga: 'Jag är vit och kall och faller på vintern. Vad är jag?', svar: 'snö', emoji: '❄️',
     fel: [['regn', '🌧️'], ['sand', '🏖️']] },
