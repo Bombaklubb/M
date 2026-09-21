@@ -5,22 +5,32 @@ import { KIST_META } from '@/data/belohningar';
 /**
  * Kistan som bild.
  *
- * Träkistan har riktiga bilder – en stängd och en öppen – i stället för
- * emojin 📦, som renderades som en kartong och inte såg ut som en skatt alls.
- * Silver och guld har ingen egen bild än och faller tillbaka på sin emoji.
+ * ALLA tre typerna har nu egen bild i båda lägena – stängd och öppen.
+ * Tidigare hade bara träkistan bilder, och silver och guld föll tillbaka på
+ * emojierna 🪙 och 🏆: ett mynt och en pokal, alltså inte kistor alls.
+ * Läraren såg fel bilder, och det stämde.
  *
- * Filnamnen är på svenska med mellanslag, precis som de laddades upp. De
- * URL-kodas här; en rå sträng med mellanslag och å/ä/ö är inte en giltig
- * webbadress och bilden hade tyst uteblivit på servern.
+ * Bilderna kommer från Mattejaktens uppsättning (`matematik/public`), som
+ * läraren uttryckligen bad om. De är KOPIERADE hit, inte länkade: apparna
+ * delar repo men inte filer, och en relativ väg till en annan apps mapp
+ * finns inte på Grundjaktens egen domän.
  *
- * Laddas bilden ändå inte (fel väg, rensad cache) visas emojin i stället.
+ * De öppna originalen var 1024×1024 med en inbakad glödande bakgrund och
+ * 2 MB styck – en fyrkantig platta bakom kistan när den ritas liten, och
+ * tung att ladda på en skol-Chromebook. De är därför avbakgrundade,
+ * beskurna till kistan och skalade till 256×256 (~120 kB).
+ *
+ * Filnamnen är avsiktligt ASCII. De gamla hette "öppen träkista.png" med
+ * mellanslag och ä – det fungerade bara så länge varje anropsställe kom
+ * ihåg att URL-koda.
+ *
+ * Laddas en bild ändå inte (fel väg, rensad cache) visas emojin i stället.
  * Kistan ska aldrig bli en tom ruta – hela poängen är att se vad man fått.
  */
-const BILDER: Partial<Record<KistTyp, { stangd: string; oppen: string }>> = {
-  tra: {
-    stangd: encodeURI('/stängd träkista.png'),
-    oppen: encodeURI('/öppen träkista.png'),
-  },
+const BILDER: Record<KistTyp, { stangd: string; oppen: string }> = {
+  tra: { stangd: '/kista-tra-stangd.png', oppen: '/kista-tra-oppen.png' },
+  silver: { stangd: '/kista-silver-stangd.png', oppen: '/kista-silver-oppen.png' },
+  guld: { stangd: '/kista-guld-stangd.png', oppen: '/kista-guld-oppen.png' },
 };
 
 export function KistBild({

@@ -1,5 +1,5 @@
 import type { Choice } from '@/types';
-import { cn } from '@/lib/utils';
+import { cn, stortOrd } from '@/lib/utils';
 import { EarButton } from './EarButton';
 
 interface Props {
@@ -74,7 +74,7 @@ export function ChoiceGrid({ choices, onPick, disabled, guideTo, wrongId, compac
                     compact ? 'text-4xl' : 'text-6xl'
                   )}
                 >
-                  {choice.word}
+                  {stortOrd(choice.word)}
                 </span>
               )}
             </button>

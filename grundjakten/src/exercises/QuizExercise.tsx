@@ -1,5 +1,6 @@
 import type { Choice, QuizEx } from '@/types';
 import { ChoiceGrid } from '@/components/ChoiceGrid';
+import { stortOrd } from '@/lib/utils';
 
 /**
  * Generell flervalsövning.
@@ -41,7 +42,7 @@ export function QuizExercise({
       {shown?.word && (
         <span className="reading rounded-card border-4 border-brand-200 bg-white px-10 py-5
                          text-6xl font-bold text-ink-900 dark:bg-ink-800 dark:text-ink-50">
-          {shown.word}
+          {stortOrd(shown.word)}
         </span>
       )}
 

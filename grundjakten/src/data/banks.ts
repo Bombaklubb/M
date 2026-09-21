@@ -39,7 +39,7 @@ export const VERB: Ord[] = [
 ];
 
 export const SUBSTANTIV: Ord[] = [
-  { ord: 'bord', emoji: '🪑' }, { ord: 'stol', emoji: '🪑' }, { ord: 'hus', emoji: '🏠' },
+  { ord: 'nyckel', emoji: '🔑' }, { ord: 'stol', emoji: '🪑' }, { ord: 'hus', emoji: '🏠' },
   { ord: 'bil', emoji: '🚗' }, { ord: 'bok', emoji: '📕' }, { ord: 'boll', emoji: '⚽' },
   { ord: 'lampa', emoji: '💡' }, { ord: 'dörr', emoji: '🚪' }, { ord: 'sked', emoji: '🥄' },
   { ord: 'skog', emoji: '🌲' },
@@ -55,7 +55,7 @@ export const ADJEKTIV: Ord[] = [
 export const KORTA_ORD: Ord[] = [
   { ord: 'sol', emoji: '☀️' }, { ord: 'bil', emoji: '🚗' }, { ord: 'bok', emoji: '📕' },
   { ord: 'mus', emoji: '🐭' }, { ord: 'ros', emoji: '🌹' }, { ord: 'hus', emoji: '🏠' },
-  { ord: 'tak', emoji: '🏠' }, { ord: 'fot', emoji: '🦶' }, { ord: 'hand', emoji: '✋' },
+  { ord: 'sko', emoji: '👟' }, { ord: 'fot', emoji: '🦶' }, { ord: 'hand', emoji: '✋' },
   { ord: 'ko', emoji: '🐄' }, { ord: 'ris', emoji: '🍚' }, { ord: 'nos', emoji: '👃' },
   { ord: 'ben', emoji: '🦵' }, { ord: 'sax', emoji: '✂️' }, { ord: 'gul', emoji: '💛' },
   { ord: 'is', emoji: '🧊' }, { ord: 'ost', emoji: '🧀' }, { ord: 'apa', emoji: '🐒' },
@@ -131,7 +131,9 @@ export const LIKNELSER_DJUR: { text: string; svar: string; emoji: string }[] = [
 export const GATOR: { fraga: string; svar: string; emoji: string; fel: [string, string][] }[] = [
   { fraga: 'Jag lyser på dagen och är varm. Vad är jag?', svar: 'sol', emoji: '☀️',
     fel: [['måne', '🌙'], ['moln', '☁️']] },
-  { fraga: 'Jag har fyra ben men kan inte gå. Vad är jag?', svar: 'bord', emoji: '🪑',
+  // Bilden är en stol, och gåtan stämmer lika bra på en stol. Svaret var
+  // "bord" – en elev som inte kan läsa såg alltså rätt bild till fel ord.
+  { fraga: 'Jag har fyra ben men kan inte gå. Vad är jag?', svar: 'stol', emoji: '🪑',
     fel: [['häst', '🐎'], ['hund', '🐕']] },
   { fraga: 'Jag är vit och kall och faller på vintern. Vad är jag?', svar: 'snö', emoji: '❄️',
     fel: [['regn', '🌧️'], ['sand', '🏖️']] },
@@ -378,22 +380,22 @@ export const VOKALPAR: { lang: string; kort: string; langEmoji?: string; kortEmo
 ];
 
 export const LANGA_VOKALER: Ord[] = [
-  { ord: 'mat', emoji: '🍽️' }, { ord: 'sol', emoji: '☀️' }, { ord: 'bok', emoji: '📕' },
-  { ord: 'ris', emoji: '🍚' }, { ord: 'tak', emoji: '🏠' }, { ord: 'ben', emoji: '🦵' },
+  { ord: 'fot', emoji: '🦶' }, { ord: 'sol', emoji: '☀️' }, { ord: 'bok', emoji: '📕' },
+  { ord: 'ris', emoji: '🍚' }, { ord: 'sko', emoji: '👟' }, { ord: 'ben', emoji: '🦵' },
   { ord: 'hus', emoji: '🏠' }, { ord: 'nos', emoji: '👃' },
 ];
 
 export const KORTA_VOKALER: Ord[] = [
   { ord: 'katt', emoji: '🐈' }, { ord: 'hatt', emoji: '🎩' }, { ord: 'boll', emoji: '⚽' },
-  { ord: 'kopp', emoji: '☕' }, { ord: 'matt', emoji: '🪶' }, { ord: 'kall', emoji: '🥶' },
-  { ord: 'mygg', emoji: '🦟' }, { ord: 'ficka', emoji: '👖' },
+  { ord: 'kopp', emoji: '☕' }, { ord: 'äpple', emoji: '🍎' }, { ord: 'kall', emoji: '🥶' },
+  { ord: 'mygg', emoji: '🦟' }, { ord: 'klocka', emoji: '⏰' },
 ];
 
 /** Låneord som inte går att ljuda sig till. */
 export const LJUDSTRIDIGA: Ord[] = [
   { ord: 'jeans', emoji: '👖' }, { ord: 'juice', emoji: '🧃' }, { ord: 'dusch', emoji: '🚿' },
-  { ord: 'paraply', emoji: '☂️' }, { ord: 'restaurang', emoji: '🍽️' }, { ord: 'garage', emoji: '🚗' },
-  { ord: 'schack', emoji: '♟️' }, { ord: 'chips', emoji: '🥔' },
+  { ord: 'paraply', emoji: '☂️' }, { ord: 'pizza', emoji: '🍕' }, { ord: 'choklad', emoji: '🍫' },
+  { ord: 'schack', emoji: '♟️' }, { ord: 'gitarr', emoji: '🎸' },
 ];
 
 // ── Alfabetet ───────────────────────────────────────────────────────────────

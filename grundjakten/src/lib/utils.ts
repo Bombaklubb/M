@@ -42,3 +42,25 @@ export function getLevelTitle(level: number): string {
 export function todayStamp(): string {
   return new Date().toLocaleDateString('sv-SE');
 }
+
+/**
+ * Stor begynnelsebokstav på ett ord som står för sig själv.
+ *
+ * Ordbankerna är skrivna med gemener, så ordkorten visade "bok" och "boll".
+ * Ett ord som står ensamt på ett kort ska börja med versal, precis som ett
+ * ord först i en mening – annars lär sig eleven fel av det hon ser mest.
+ *
+ * Gäller BARA på visningen. Jämförelserna i övningarna kör vidare på
+ * ordbankernas egna värden, så en stor bokstav kan inte göra ett rätt svar
+ * fel.
+ *
+ * Enstaka tecken lämnas orörda. I bokstavsövningarna ÄR gemenen innehållet –
+ * "a" mot "A" är hela frågan – och ett skiljetecken har ingen versal.
+ */
+export function stortOrd(text: string): string {
+  if (text.length < 2) return text;
+  const forsta = text.slice(0, 1);
+  const versal = forsta.toLocaleUpperCase('sv-SE');
+  // Lika betyder redan versal, eller ett tecken utan versalform (siffra).
+  return versal === forsta ? text : versal + text.slice(1);
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { OrderItemsEx } from '@/types';
-import { cn } from '@/lib/utils';
+import { cn, stortOrd } from '@/lib/utils';
 import { playMiss, playPlace } from '@/lib/sfx';
 import { play } from '@/lib/audio';
 import { EarButton } from '@/components/EarButton';
@@ -74,7 +74,7 @@ export function OrderItems({
             >
               {i + 1}
             </span>
-            {placerade[i] ?? ''}
+            {placerade[i] ? stortOrd(placerade[i]) : ''}
           </div>
         ))}
       </div>
@@ -93,7 +93,7 @@ export function OrderItems({
                 studsar === i && 'animate-nudge'
               )}
             >
-              {item}
+              {stortOrd(item)}
             </button>
             <EarButton
               size="sm"

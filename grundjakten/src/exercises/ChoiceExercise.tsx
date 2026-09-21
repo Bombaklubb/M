@@ -3,6 +3,7 @@ import type { Choice, Exercise } from '@/types';
 import { ChoiceGrid } from '@/components/ChoiceGrid';
 import { LETTER_BY_ID } from '@/data/letters';
 import { useSpeak } from '@/hooks/useSpeak';
+import { stortOrd } from '@/lib/utils';
 
 type ChoiceKind = Extract<
   Exercise,
@@ -59,7 +60,7 @@ export function ChoiceExercise({
       return (
         <div className="reading rounded-card border-4 border-brand-200 bg-white px-10 py-6
                         text-7xl font-bold text-ink-900 dark:bg-ink-800 dark:text-ink-50">
-          {exercise.shownWord}
+          {stortOrd(exercise.shownWord)}
         </div>
       );
     }

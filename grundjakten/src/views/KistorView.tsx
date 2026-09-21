@@ -189,12 +189,25 @@ export function KistorView({
             Så får man kistor
           </h2>
           <ul className="flex flex-col gap-1 text-ink-700 dark:text-ink-200">
+            {/* Alla tre visar sin egen STÄNGDA kista. Förklaringen handlar om
+                vad man kan få, inte om något man redan öppnat – och silver
+                och guld stod förut som 🪙 och 🏆, ett mynt och en pokal, så
+                eleven kunde inte känna igen dem bland sina kistor. */}
             <li className="flex items-center gap-2">
               <KistBild typ="tra" oppnad={false} size={28} />
               <span><strong>Träkista</strong> – varje avklarat pass.</span>
             </li>
-            <li>🪙 <strong>Silverkista</strong> – vid 5, 10 och 25 pass, och vid 250 poäng.</li>
-            <li>🏆 <strong>Guldkista</strong> – vid 15, 40, 60 och 100 pass, och vid 700, 1350 och 2700 poäng.</li>
+            <li className="flex items-center gap-2">
+              <KistBild typ="silver" oppnad={false} size={28} />
+              <span><strong>Silverkista</strong> – vid 5, 10 och 25 pass, och vid 250 poäng.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <KistBild typ="guld" oppnad={false} size={28} />
+              <span>
+                <strong>Guldkista</strong> – vid 15, 40, 60 och 100 pass, och vid
+                700, 1350 och 2700 poäng.
+              </span>
+            </li>
           </ul>
           <p className="mt-3 text-sm text-ink-500">
             Silver- och guldkistor kan innehålla en utmärkelse. Den syns sedan på

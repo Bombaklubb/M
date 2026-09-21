@@ -3,6 +3,10 @@ import { TASKS } from '@/data/tasks';
 import { MAX_STEP, PROGRESSION_STEPS } from '@/data/progression';
 import { LETTERS } from '@/data/letters';
 import { WORDS, newWordsAtStep } from '@/data/words';
+import {
+  ADJEKTIV, DJUR, FARGER, GATOR, KORTA_ORD, KORTA_VOKALER,
+  LANGA_VOKALER, LJUDSTRIDIGA, SUBSTANTIV, VERB,
+} from '@/data/banks';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import type { LevelBand } from '@/types';
 
@@ -127,6 +131,60 @@ export function kollaKatalog(): Fel[] {
     if (!t.namn.trim()) fel.push({ task: t.id, seed: 0, meddelande: 'uppgift utan namn' });
     if (![1, 2, 3, 4].includes(t.niva)) {
       fel.push({ task: t.id, seed: 0, meddelande: `ogiltig nivå ${t.niva}` });
+    }
+  }
+  return fel;
+}
+
+/**
+ * Varje bild får betyda EXAKT ett ord.
+ *
+ * Det här fanns på riktigt: 👖 användes både för `ficka` och för `jeans`, och
+ * 🪑 både för `bord` och för `stol`. En elev som inte kan läsa har bara
+ * bilden att gå på – två ord bakom samma bild är en fråga utan svar, och
+ * läraren hittade det först när en elev satt fast på byxorna.
+ *
+ * Kontrollen tittar på alla bildord-listor samtidigt, för felet uppstår
+ * mellan listorna lika ofta som inom en.
+ */
+const BILDORDSLISTOR = {
+  FARGER, DJUR, VERB, SUBSTANTIV, ADJEKTIV, KORTA_ORD,
+  LANGA_VOKALER, KORTA_VOKALER, LJUDSTRIDIGA,
+};
+
+export function kollaBildord(): Fel[] {
+  const fel: Fel[] = [];
+  const perEmoji = new Map<string, Set<string>>();
+
+  const lagg = (emoji: string | null, ord: string, varifran: string) => {
+    if (!emoji) return;
+    if (!perEmoji.has(emoji)) perEmoji.set(emoji, new Set());
+    perEmoji.get(emoji)!.add(`${ord} (${varifran})`);
+  };
+
+  for (const [listnamn, lista] of Object.entries(BILDORDSLISTOR)) {
+    for (const o of lista) lagg(o.emoji ?? null, o.ord, listnamn);
+  }
+
+  // Bokstavsresans egen ordbank. Den glömdes först, och just där satt fyra av
+  // dubbletterna: ☀️ för både sol och dag, 👩 för både mor och dam, 👨 för
+  // både far och man, 🏠 för både hus och tak.
+  for (const w of WORDS) lagg(w.emoji, w.text, 'WORDS');
+
+  // Gåtorna. Bilden ÄR svaret där, så den räknas som ett bildord: gåtan om
+  // fyra ben som inte kan gå visade en stol men hade svaret "bord".
+  for (const g of GATOR) lagg(g.emoji, g.svar, 'GATOR');
+
+  for (const [emoji, ord] of perEmoji) {
+    // Samma ORD i flera listor är i sin ordning – hus finns både bland korta
+    // ord och bland långa vokaler. Det är olika ord som är felet.
+    const unika = new Set([...ord].map((o) => o.split(' (')[0]));
+    if (unika.size > 1) {
+      fel.push({
+        task: 'bildord',
+        seed: 0,
+        meddelande: `bilden ${emoji} betyder flera ord: ${[...unika].join(', ')}`,
+      });
     }
   }
   return fel;
