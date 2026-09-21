@@ -88,12 +88,17 @@ export function HomeView({
             type="button"
             onClick={onOm}
             aria-label="Om Grundjakten"
-            className="grid h-14 w-12 min-h-0 shrink-0 place-items-center rounded-tile font-bold
+            className="grid h-11 w-10 min-h-0 shrink-0 place-items-center rounded-tile font-bold
                        text-ink-500 hover:bg-white/70 dark:text-ink-300 dark:hover:bg-ink-800/70
+                       sm:h-14 sm:w-12
                        lg:flex lg:w-auto lg:items-center lg:gap-2 lg:px-3"
           >
-            <span className="text-xl" aria-hidden>❓</span>
-            <span className="hidden lg:block">Om Grundjakten</span>
+            <span className="text-lg sm:text-xl" aria-hidden>❓</span>
+            {/* Bara "Om" i skrift, inte "Om Grundjakten": märket står redan
+                till vänster i samma rad, och den längre etiketten sköt ut
+                hela huvudet på tre rader på en Chromebook. Uppläsningen får
+                fortfarande hela namnet via aria-label. */}
+            <span className="hidden lg:block">Om</span>
           </button>
 
           {/* Kistorna. Siffran är det enda som lockar en elev som inte kan
@@ -106,19 +111,21 @@ export function HomeView({
                 ? `Kistor, ${oOppnade} att öppna`
                 : 'Kistor, inga att öppna just nu'
             }
-            className="btn-pop relative grid h-14 w-14 min-h-0 shrink-0 place-items-center
-                       rounded-tile border-amberx-700 bg-amberx-500 text-3xl"
+            className="btn-pop relative grid h-11 w-11 min-h-0 shrink-0 place-items-center
+                       rounded-tile border-amberx-700 bg-amberx-500 text-2xl
+                       sm:h-14 sm:w-14 sm:text-3xl"
           >
             <KistBild
               typ="tra"
               oppnad={oOppnade === 0}
-              size={36}
+              size={28}
               className={cn(oOppnade > 0 && 'animate-chest-shake')}
             />
             {oOppnade > 0 && (
               <span
-                className="absolute -right-1 -top-1 grid h-6 min-w-[1.5rem] place-items-center
-                           rounded-full bg-red-500 px-1 text-sm font-extrabold text-white"
+                className="absolute -right-1 -top-1 grid h-5 min-w-[1.25rem] place-items-center
+                           rounded-full bg-red-500 px-1 text-xs font-extrabold text-white
+                           sm:h-6 sm:min-w-[1.5rem] sm:text-sm"
                 aria-hidden
               >
                 {oOppnade > 9 ? '9+' : oOppnade}
@@ -132,8 +139,9 @@ export function HomeView({
             onClick={onToggleFigur}
             aria-label="Byt figur"
             aria-expanded={figurOppen}
-            className="btn-pop grid h-14 w-14 min-h-0 shrink-0 place-items-center rounded-tile
-                       border-ink-200 bg-white text-3xl dark:border-ink-700 dark:bg-ink-800"
+            className="btn-pop grid h-11 w-11 min-h-0 shrink-0 place-items-center rounded-tile
+                       border-ink-200 bg-white text-2xl dark:border-ink-700 dark:bg-ink-800
+                       sm:h-14 sm:w-14 sm:text-3xl"
           >
             <span aria-hidden>{profile.avatar}</span>
           </button>
@@ -143,16 +151,17 @@ export function HomeView({
             type="button"
             onClick={onProfile}
             aria-label={`${profile.name}, nivå ${progress.level}, ${getLevelTitle(progress.level)}. Se dina framsteg.`}
-            className="btn-pop flex h-14 min-w-0 shrink items-center rounded-tile border-ink-200
-                       bg-white px-2 dark:border-ink-700 dark:bg-ink-800 sm:px-4"
+            className="btn-pop flex h-11 min-h-0 min-w-0 shrink items-center rounded-tile
+                       border-ink-200 bg-white px-2 dark:border-ink-700 dark:bg-ink-800
+                       sm:h-14 sm:px-4"
           >
             <span className="flex min-w-0 flex-col items-start">
-              <span className="reading max-w-[4.5rem] truncate text-lg font-extrabold leading-tight
-                               sm:max-w-[9rem]">
+              <span className="reading max-w-[5rem] truncate text-base font-extrabold leading-tight
+                               sm:max-w-[9rem] sm:text-lg">
                 {profile.name}
               </span>
-              <span className="mt-1 h-2 w-full min-w-[4rem] overflow-hidden rounded-full
-                               bg-ink-200 dark:bg-ink-700">
+              <span className="mt-0.5 h-1.5 w-full min-w-[3rem] overflow-hidden rounded-full
+                               bg-ink-200 dark:bg-ink-700 sm:mt-1 sm:h-2 sm:min-w-[4rem]">
                 <span className="block h-full bg-lime-500" style={{ width: `${xp.pct}%` }} />
               </span>
             </span>
@@ -162,8 +171,9 @@ export function HomeView({
             type="button"
             onClick={onLogout}
             aria-label="Logga ut"
-            className="grid h-14 w-12 min-h-0 shrink-0 place-items-center rounded-tile font-bold
+            className="hidden h-11 w-10 min-h-0 shrink-0 place-items-center rounded-tile font-bold
                        text-ink-500 hover:bg-amberx-100 hover:text-amberx-700 dark:text-ink-300
+                       sm:grid sm:h-14 sm:w-12
                        lg:flex lg:w-auto lg:items-center lg:gap-2 lg:px-3"
           >
             <span className="text-xl" aria-hidden>🚪</span>
@@ -183,7 +193,10 @@ export function HomeView({
           /* Örat ligger bredvid kortet, inte i det: en knapp får inte ligga i
              en annan knapp, och eleven ska kunna höra vad kortet heter utan
              att skickas vidare. Samma lösning som i övningsbanken. */
-          <div key={card.id} className="flex items-center gap-2 sm:gap-3">
+          /* min-w-0 på raden: den är ett grid-barn, och grid-barn har
+             min-width: auto. Utan det vägrar raden bli smalare än kortets
+             innehåll och örat trycktes ut utanför skärmkanten på telefon. */
+          <div key={card.id} className="flex min-w-0 items-center gap-2 sm:gap-3">
             {/* min-w-0 och smalare luft på telefon: utan det vägrar kortet
                 krympa under sitt innehåll och trycker ut örat ur skärmen. */}
             <button

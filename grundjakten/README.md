@@ -50,6 +50,12 @@ Appen återupptar senast inloggad elev vid start. **Logga ut** uppe till höger
 efter första gången, och en Chromebook som delas av två–tre elever kunde inte
 byta mellan dem. Placeringen är hämtad från Svenskajakten.
 
+Knappen döljs på **telefonbredd** (under 640 px). Skolans enhet är
+Chromebooken, och där syns den alltid; det är på telefonen sidhuvudet blir
+trångt, och utloggning är det enda i raden som bara läraren behöver. Den är
+dold med CSS och inte borttagen – samma bygge, samma knapp, bara inte på den
+skärm där den kostar mest plats.
+
 Eleven kan **byta figur** när som helst, genom att trycka på sitt eget
 ansikte: antingen det lilla uppe till höger eller det stora på
 framstegssidan. Samma tolv figurer som vid inloggningen, och valet sparas
@@ -61,6 +67,26 @@ Tre kort i den ordning läraren vill ha dem: **Övningar**, **Bokstäver**,
 **Skriva**. Headern följer Svenskajakten – märket och appens namn till
 vänster, och till höger *Om Grundjakten*, kistorna, elevens ansikte, elevens
 namn och *Logga ut*.
+
+### Sidhuvudet på telefon
+
+Sju saker i en rad blir rörigt på 360 px. Ikonerna krymper därför från 56 px
+till 44 px under `sm` (640 px), texten *Grundjakten* och etiketterna döljs,
+och *Logga ut* försvinner helt. Kvar blir en enda jämn rad på 44 px i stället
+för tre staplade rader på 118 px.
+
+44 px är ett medvetet undantag från husregeln om 56 px tryckytor. Det är
+fortfarande WCAG:s miniminivå, och det gäller **bara** sidhuvudets ikoner –
+det eleven trycker på i en uppgift (svarsknappar, bokstavsbrickor, öron) är
+oförändrat 56 px eller större. Att låta alla sju behålla 56 px var det som
+tvingade fram tre rader, och tre rader var det läraren rapporterade som
+rörigt.
+
+På Chromebooken (1366 px) gäller inget av detta: full storlek, alla
+etiketter, en rad. Den skrivna etiketten är dock *Om* och inte *Om
+Grundjakten* – märket står redan till vänster i samma rad, och det längre
+ordet sköt ut hela huvudet på tre rader även där. Uppläsningen säger
+fortfarande hela namnet.
 
 Märket är en egen SVG (`components/GrundjaktenLogo.tsx`): ett A som står på
 tre block. Namnet betyder just det – grunderna, det allt annat vilar på. Ritad
