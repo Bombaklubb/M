@@ -226,12 +226,22 @@ hur nära nästa kista eleven är.
 ## Mina framsteg
 
 Elevens namn står uppe till höger på startskärmen, och ett tryck där öppnar
-hennes egen översikt: nivå, bokstäver hon kan, klarade övningar med bästa
-resultat, kistor och dagar i rad.
+hennes egen översikt: poäng, bokstäver hon kan, utmärkelser och klarade
+övningar med bästa resultat.
 
 Sidan visar bara vad hon **klarat**, aldrig hur många fel hon haft — samma
 regel som belöningsskärmen. Varje avsnitt har ett öra som säger vad det visar,
 och varje siffra läses upp.
+
+Sidan hade tidigare fyra färgade statistikrutor överst – bokstäver, övningar,
+kistor och dagar i rad. De är **borttagna**; läraren rapporterade att sidan
+blev rörig. Tre av dem sa dessutom om det som stod strax nedanför ändå:
+bokstavsrutnätet räknar bokstäverna, listan räknar övningarna, och kistorna
+har en egen ikon med röd siffra i sidhuvudet.
+
+**Dagar i rad syns därmed inte längre någonstans.** Siffran räknas fortfarande
+och driver utmärkelserna, men eleven ser den inte. Det är en medveten följd av
+borttagningen, inte ett förbiseende.
 
 ## Övningsbanken
 
