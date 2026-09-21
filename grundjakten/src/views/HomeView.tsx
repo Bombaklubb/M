@@ -1,7 +1,7 @@
 import type { Progress, StudentProfile } from '@/types';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { FigurValjare } from '@/components/FigurValjare';
-import { GrundjaktenLogo } from '@/components/GrundjaktenLogo';
+import { AppMarke } from '@/components/AppMarke';
 import { EarButton } from '@/components/EarButton';
 import { KistBild } from '@/components/KistBild';
 import { cn, getLevelTitle, xpForNextLevel } from '@/lib/utils';
@@ -35,6 +35,7 @@ export function HomeView({
   profile,
   progress,
   onGo,
+  onHem,
   onProfile,
   onOm,
   onKistor,
@@ -46,6 +47,7 @@ export function HomeView({
   profile: StudentProfile;
   progress: Progress;
   onGo: (dest: Destination) => void;
+  onHem: () => void;
   onProfile: () => void;
   onOm: () => void;
   onKistor: () => void;
@@ -67,15 +69,10 @@ export function HomeView({
                     [@media(min-height:760px)]:py-5">
       <header className="mb-3 flex items-center justify-between gap-1.5
                          [@media(min-height:760px)]:mb-6 sm:gap-2">
-        {/* Märket och namnet. Ingen knapp och ingenting dolt bakom långtryck
-            – den G-rutan är borttagen med flit. */}
-        <span className="hidden items-center gap-2 sm:flex">
-          <GrundjaktenLogo size={36} />
-          <span className="hidden text-xl font-extrabold tracking-tight text-brand-700
-                           dark:text-brand-300 sm:block">
-            Grundjakten
-          </span>
-        </span>
+        {/* Samma märke på samma plats som på alla andra sidor. Här är det
+            redan hemma, men klicket ska finnas överallt – annars måste eleven
+            hålla reda på var det fungerar. */}
+        <AppMarke onHome={onHem} />
 
         {/* min-w-0 på både nav och namnknappen: utan det vägrar namnet krympa
             och trycker i stället ut "Logga ut" ur skärmen på en telefon. */}

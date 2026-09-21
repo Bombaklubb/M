@@ -5,6 +5,7 @@ import { newWordsAtStep } from '@/data/words';
 import { EarButton } from '@/components/EarButton';
 import { play } from '@/lib/audio';
 import { cn } from '@/lib/utils';
+import { AppMarke } from '@/components/AppMarke';
 
 /** Så många ordbilder får plats utan att kortet växer ur skärmen. */
 const MAX_ORD = 6;
@@ -39,6 +40,7 @@ export function LetterMapView({
     <div className="mx-auto flex min-h-[100dvh] max-w-3xl flex-col px-4 py-4
                     [@media(min-height:760px)]:py-5">
       <header className="mb-4 flex items-center gap-4 [@media(min-height:760px)]:mb-6">
+        <AppMarke onHome={onBack} />
         <button
           type="button"
           aria-label="Tillbaka"
@@ -48,7 +50,7 @@ export function LetterMapView({
         >
           <span aria-hidden>←</span>
         </button>
-        <h1 className="text-3xl font-extrabold">Bokstavsresan</h1>
+        <h1 className="truncate text-2xl font-extrabold sm:text-3xl">Bokstavsresan</h1>
       </header>
 
       <div className="grid gap-3 pb-6 [@media(min-height:760px)]:gap-4">

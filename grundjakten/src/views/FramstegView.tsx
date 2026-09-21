@@ -17,6 +17,7 @@ import { FigurValjare } from '@/components/FigurValjare';
 import { UTMARKELSER } from '@/data/belohningar';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { cn, getLevelTitle, xpForNextLevel } from '@/lib/utils';
+import { AppMarke } from '@/components/AppMarke';
 
 const NIVAER: { niva: Niva; namn: string }[] = [
   { niva: 1, namn: 'Svenska 1' },
@@ -74,6 +75,7 @@ export function FramstegView({
   return (
     <div className="mx-auto flex min-h-[100dvh] max-w-3xl flex-col gap-6 px-4 py-5">
       <header className="flex items-center gap-4">
+        <AppMarke onHome={onBack} />
         <button
           type="button"
           aria-label="Tillbaka"
