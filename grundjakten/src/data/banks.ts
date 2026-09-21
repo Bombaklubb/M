@@ -99,12 +99,15 @@ export const HOR_INTE_IHOP: { kategori: string; hor: string[]; avvikare: string 
 
 /** Sammansatta ord: [förled, efterled, hela ordet, emoji] */
 export const SAMMANSATTA: [string, string, string, string][] = [
-  ['fot', 'boll', 'fotboll', '⚽'],
+  // Inte fotboll: ⚽ är redan bilden för ordet `boll`, och en elev som
+  // inte kan läsa har bara bilden att gå på.
+  ['fot', 'spår', 'fotspår', '👣'],
   ['brand', 'bil', 'brandbil', '🚒'],
   ['hand', 'duk', 'handduk', '🧻'],
   ['sol', 'ros', 'solros', '🌻'],
   ['jord', 'gubbe', 'jordgubbe', '🍓'],
-  ['snö', 'boll', 'snöboll', '❄️'],
+  // Inte snöboll: ❄️ är redan svaret på gåtan om det vita och kalla.
+  ['snö', 'gubbe', 'snögubbe', '⛄'],
   ['barn', 'vagn', 'barnvagn', '🍼'],
   ['is', 'björn', 'isbjörn', '🐻‍❄️'],
   ['sjö', 'häst', 'sjöhäst', '🐴'],
@@ -197,6 +200,10 @@ export const MANADER = [
 /** en-ord och ett-ord, för "En eller ett". */
 export const EN_ORD = ['bok', 'bil', 'stol', 'katt', 'hund', 'boll', 'penna', 'lampa', 'blomma', 'sked'];
 export const ETT_ORD = ['hus', 'bord', 'äpple', 'tåg', 'öga', 'brev', 'glas', 'träd', 'barn', 'ljus'];
+/* Plural, för adjektivets flertalsform. Fanns inte förut: "flera"-frågan
+   hade substantivet hårdkodat till "bilar", så varje sådan fråga såg
+   likadan ut och kunde komma upp fyra gånger i samma pass. */
+export const FLERTAL_ORD = ['bilar', 'böcker', 'katter', 'stolar', 'blommor', 'äpplen', 'hundar', 'bollar'];
 
 /**
  * Bestämd form, för "Den eller det".

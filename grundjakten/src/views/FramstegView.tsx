@@ -16,8 +16,9 @@ import { EarButton } from '@/components/EarButton';
 import { FigurValjare } from '@/components/FigurValjare';
 import { UTMARKELSER } from '@/data/belohningar';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
-import { cn, getLevelTitle, xpForNextLevel } from '@/lib/utils';
+import { cn, getLevelTitle } from '@/lib/utils';
 import { AppMarke } from '@/components/AppMarke';
+import { PoangRuta } from '@/components/PoangRuta';
 import { LjudKnapp } from '@/components/LjudKnapp';
 
 const NIVAER: { niva: Niva; namn: string }[] = [
@@ -50,7 +51,6 @@ export function FramstegView({
   onValjFigur: (avatar: string) => void;
 }) {
   const [byterFigur, setByterFigur] = useState(false);
-  const xp = xpForNextLevel(progress.xp);
 
   const bemastrade = LETTERS.filter((l) => progress.letters[l.id]?.mastered).length;
   const klaradeTotalt = Object.keys(progress.tasks).length;
@@ -114,29 +114,11 @@ export function FramstegView({
 
       {byterFigur && <FigurValjare vald={profile.avatar} onValj={onValjFigur} />}
 
-      {/* XP-mätaren. Aldrig procent, aldrig antal fel – bara hur långt kvar
-          det är till nästa nivå. */}
-      <section className="flex items-center gap-3 rounded-card bg-white/85 p-4 dark:bg-ink-800/85">
-        <span className="text-3xl" aria-hidden>⭐</span>
-        <div className="flex-1">
-          <div className="h-5 overflow-hidden rounded-full bg-ink-200 dark:bg-ink-700">
-            <div
-              role="img"
-              aria-label={`${xp.current} av ${xp.next} till nästa nivå`}
-              className="h-full bg-lime-500 transition-[width] duration-500"
-              style={{ width: `${xp.pct}%` }}
-            />
-          </div>
-        </div>
-        <EarButton
-          token={{
-            id: 'fr-xp',
-            text: `Du är på nivå ${progress.level}, ${getLevelTitle(progress.level)}.`,
-            lang: 'sv-SE',
-          }}
-          label={`Nivå ${progress.level}`}
-        />
-      </section>
+      {/* Poängrutan. Ersätter den gamla mätaren, som var samma stapel utan
+          siffra: "hur långt kvar" gick att se, men inte "hur mycket jag
+          samlat". Två stjärnrutor ovanpå varandra vore bara rörigt, så den
+          här bär båda. Samma komponent som på kistsidan. */}
+      <PoangRuta xp={progress.xp} level={progress.level} visaNiva={false} />
 
       <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {rutor.map((r) => (

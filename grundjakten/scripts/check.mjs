@@ -28,10 +28,11 @@ const mod = await import(
 
 const katalogfel = mod.kollaKatalog();
 const bildordfel = mod.kollaBildord();
+const upprepfel = mod.kollaUpprepningar();
 const progfel = mod.kollaProgression();
 const { antal, fel } = mod.kollaAllaTasks();
 const pass = mod.kollaBokstavspass();
-const alla = [...katalogfel, ...bildordfel, ...progfel, ...fel, ...pass.fel];
+const alla = [...katalogfel, ...bildordfel, ...upprepfel, ...progfel, ...fel, ...pass.fel];
 
 console.log(`Byggde ${antal} pass ur övningsbanken och ${pass.antal} pass ur Bokstavsresan.`);
 
