@@ -8,7 +8,13 @@
  * system och det här är appens enda fasta identitet. Formerna är grova med
  * flit: märket ska läsas på 32 px på en Chromebook, inte i en logotypmanual.
  */
-export function GrundjaktenLogo({ size = 36 }: { size?: number }) {
+export function GrundjaktenLogo({
+  size = 36,
+  className,
+}: {
+  size?: number;
+  className?: string;
+}) {
   return (
     <svg
       width={size}
@@ -16,7 +22,9 @@ export function GrundjaktenLogo({ size = 36 }: { size?: number }) {
       viewBox="0 0 48 48"
       role="img"
       aria-label="Grundjakten"
-      className="shrink-0"
+      /* className vinner över width/height-attributen, så storleken kan
+         göras responsiv utan att attributen behöver räknas om. */
+      className={['shrink-0', className].filter(Boolean).join(' ')}
     >
       <rect x="1" y="1" width="46" height="46" rx="12" fill="#6d28d9" />
       {/* A:et – bokstaven eleven möter först. */}

@@ -30,7 +30,7 @@ export function LjudKnapp({
       aria-pressed={av}
       title={av ? 'Ljud av' : 'Ljud på'}
       className={cn(
-        'btn-pop grid h-14 w-14 min-h-0 shrink-0 place-items-center rounded-tile',
+        'btn-pop grid h-11 w-11 min-h-0 shrink-0 place-items-center rounded-tile sm:h-14 sm:w-14',
         av
           ? 'border-ink-400 bg-ink-200 text-ink-600 dark:bg-ink-700 dark:text-ink-300'
           : 'border-aqua-700 bg-aqua-500 text-white',
@@ -39,9 +39,9 @@ export function LjudKnapp({
       )}
     >
       {av ? (
-        <VolumeX className="h-7 w-7" strokeWidth={2.5} aria-hidden />
+        <VolumeX className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.5} aria-hidden />
       ) : (
-        <Volume2 className="h-7 w-7" strokeWidth={2.5} aria-hidden />
+        <Volume2 className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.5} aria-hidden />
       )}
     </button>
   );

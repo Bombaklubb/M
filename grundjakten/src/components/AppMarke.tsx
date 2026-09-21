@@ -31,17 +31,18 @@ export function AppMarke({
       onClick={onHome}
       aria-label="Grundjakten, gå till startsidan"
       className={cn(
-        'flex h-14 min-h-0 shrink-0 items-center gap-2 rounded-tile px-2',
+        'flex h-11 min-h-0 shrink-0 items-center gap-1.5 rounded-tile px-1.5',
+        'sm:h-14 sm:gap-2 sm:px-2',
         paFarg ? 'text-white hover:bg-white/15' : 'hover:bg-white/70 dark:hover:bg-ink-800/70',
         className
       )}
     >
       <span className={cn(paFarg && 'rounded-xl bg-white/90 p-0.5')}>
-        <GrundjaktenLogo size={36} />
+        <GrundjaktenLogo size={36} className="h-8 w-8 sm:h-9 sm:w-9" />
       </span>
       <span
         className={cn(
-          'hidden text-xl font-extrabold tracking-tight sm:block',
+          'hidden font-extrabold tracking-tight sm:block sm:text-xl',
           paFarg ? 'text-white' : 'text-brand-700 dark:text-brand-300'
         )}
       >
