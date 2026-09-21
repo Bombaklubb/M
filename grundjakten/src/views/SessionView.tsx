@@ -12,7 +12,7 @@ import { ExerciseRenderer } from '@/exercises/ExerciseRenderer';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import {
   createQueue, currentExercise, isDone, markCorrect, markMissed,
-  elapsedSeconds, type QueueState,
+  elapsedSeconds, MISSAR_TILL_FACIT, type QueueState,
 } from '@/lib/queue';
 import { playCorrect, playFanfare, playMiss } from '@/lib/sfx';
 import { play } from '@/lib/audio';
@@ -33,15 +33,46 @@ export interface SessionResult {
  *  - Rätt: grön blixt, stigande ton, +XP – och sedan VÄNTAR passet. Eleven
  *    trycker själv på den gröna pilen för att gå vidare.
  *  - Första missen: mjuk duns, valet bleknar, instruktionen spelas om
- *    långsammare. Rätt svar avslöjas INTE.
+ *    långsammare. Rätt svar avslöjas INTE – eleven får försöka själv igen.
  *  - Andra missen: rätt alternativ pulserar och eleven lotsas dit. Det
  *    räknas sedan som rätt-med-hjälp, vilket ger 3 XP i stället för 5.
+ *  - TREDJE missen: rätt svar visas och sägs, och pilen tänds. Utan den
+ *    utgången satt eleven fast i de övningar som saknar alternativ att
+ *    peka på – i "Skriv ordet" kunde hon skriva fel hur många gånger som
+ *    helst utan att något hände. Att fastna är misslyckandet, inte facit.
  *
  * Att passet inte byter uppgift av sig självt är avsiktligt. En elev som
  * behöver tio sekunder på sig att se att hon svarade rätt hann inte med när
  * skärmen bytte efter 900 ms – och hon kan inte läsa sig till vad som hände.
  * Nu står bilden kvar tills hon själv säger att hon är klar.
  */
+/**
+ * Rätt svar som text, att visa efter tredje missen.
+ *
+ * `null` för de övningar där svaret redan står på skärmen eller inte går att
+ * sammanfatta i en rad – para ihop, forma bokstäver. Där löser eleven i
+ * stället uppgiften med de utpekade valen.
+ */
+function svaretPa(ex: Exercise): string | null {
+  switch (ex.kind) {
+    case 'type-the-word':
+      return ex.answer;
+    case 'build-word-tiles':
+      return ex.target.join('');
+    case 'build-sentence-cards':
+      return ex.target.join(' ');
+    case 'order-items':
+      return ex.target.join(' ');
+    default: {
+      if ('choices' in ex && Array.isArray(ex.choices)) {
+        const ratt = ex.choices.find((c) => c.correct);
+        return ratt?.word ?? ratt?.letter ?? null;
+      }
+      return null;
+    }
+  }
+}
+
 export function SessionView({
   exercises,
   profile,
@@ -58,6 +89,8 @@ export function SessionView({
   const [locked, setLocked] = useState(false);
   const [wrongId, setWrongId] = useState<string | null>(null);
   const [guideTo, setGuideTo] = useState<string | null>(null);
+  /** Rätt svar, visat efter tredje missen. */
+  const [facit, setFacit] = useState<string | null>(null);
   const [results, setResults] = useState<SessionResult['perItem']>([]);
   /** Satt när uppgiften är klarad och eleven ska trycka sig vidare själv. */
   const [vantarPaNasta, setVantarPaNasta] = useState(false);
@@ -68,6 +101,7 @@ export function SessionView({
   useEffect(() => {
     setWrongId(null);
     setGuideTo(null);
+    setFacit(null);
     setLocked(false);
     setVantarPaNasta(false);
   }, [exercise?.id]);
@@ -114,18 +148,44 @@ export function SessionView({
     setWrongId(choice?.id ?? null);
     window.setTimeout(() => setFeedback('none'), BLIXT_MS);
 
-    // Lotsningen kommer nu direkt, inte först efter andra missen. Rätt
-    // alternativ pulserar, eleven trycker på det och passet går vidare.
-    //
-    // Förut lades uppgiften i stället tillbaka längre fram i kön, och
-    // eleven fick den igen senare. Det var tänkt som en ny chans men lästes
-    // som att ingenting hänt: mätaren stod still och samma fråga kom
-    // tillbaka. Varje fråga besvaras nu exakt en gång och riktningen är
-    // alltid framåt.
-    setQueue(markMissed(queue));
-    const right = 'choices' in exercise ? exercise.choices.find((c) => c.correct) : null;
-    setGuideTo(right?.id ?? null);
-    // Instruktionen spelas om långsammare medan rätt svar pekas ut.
+    // Uppgiften står KVAR på skärmen och läggs inte tillbaka i kön. Det är
+    // det som gör att riktningen alltid är framåt: eleven blir klar med den
+    // här frågan nu, i stället för att få den igen längre fram medan mätaren
+    // står still.
+    const nasteQ = markMissed(queue);
+    setQueue(nasteQ);
+    const missar = nasteQ.missed.get(exercise.id) ?? 1;
+
+    if (missar >= MISSAR_TILL_FACIT) {
+      // Tredje missen: visa rätt svar och öppna vägen vidare.
+      //
+      // Utan den här utgången satt eleven fast. Lotsningen pekar ut ett
+      // alternativ, men i "Skriv ordet" finns inga alternativ att peka på –
+      // där kunde hon skriva fel hur många gånger som helst utan att något
+      // hände. Facit är inte ett misslyckande; att fastna är det.
+      setLocked(true);
+      setFacit(svaretPa(exercise));
+      const ratt = 'choices' in exercise ? exercise.choices.find((c) => c.correct) : null;
+      setGuideTo(ratt?.id ?? null);
+      const perItem = [...results, { exercise, firstTry: false }];
+      setResults(perItem);
+      // Säg svaret. Eleven kan inte läsa det som står på skärmen.
+      window.setTimeout(() => void play(exercise.replay), 700);
+      window.setTimeout(() => setVantarPaNasta(true), BLIXT_MS);
+      return;
+    }
+
+    if (missar >= 2) {
+      // Andra missen: peka ut rätt svar för den som har alternativ att välja
+      // mellan. Eleven trycker själv – hon ska göra det sista steget.
+      const ratt = 'choices' in exercise ? exercise.choices.find((c) => c.correct) : null;
+      setGuideTo(ratt?.id ?? null);
+      return;
+    }
+
+    // Första missen: eleven får försöka själv en gång till. Att lotsa redan
+    // här tar ifrån henne chansen att komma på det, och ett svar hon hittat
+    // själv är värt mer än ett hon blivit ledd till.
     window.setTimeout(() => void play(exercise.prompt), 800);
   };
 
@@ -161,6 +221,7 @@ export function SessionView({
           locked={locked}
           guideTo={guideTo}
           wrongId={wrongId}
+          facit={facit}
         />
       </main>
 

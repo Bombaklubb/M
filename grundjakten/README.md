@@ -20,17 +20,29 @@ klassen läser och skriver texter?"**
    som ser deras skärm. Inga pastellfärger, inga rundade "småbarnstypsnitt",
    ingen maskot. Nivåer heter **Steg 1–8**, aldrig "årskurs 1".
 3. **Ett pass slutar alltid i framgång, och går alltid framåt.** Ett missat
-   svar ger inget avdrag. Rätt alternativ pekas ut direkt, eleven trycker på
-   det, och passet går vidare. Belöningsskärmen visar aldrig hur många fel
-   hon hade. Resultatet per övning syns däremot i övningsbanken efteråt, som
-   ett bästa-resultat hon kan slå.
+   svar ger inget avdrag. Uppgiften står kvar på skärmen och eleven får
+   försöka själv en gång till; efter andra missen pekas rätt svar ut och hon
+   trycker på det. Belöningsskärmen visar aldrig hur många fel hon hade.
+   Resultatet per övning syns däremot i övningsbanken efteråt, som ett
+   bästa-resultat hon kan slå.
 
-   Uppgiften lades förut tillbaka tre platser fram i kön i stället, och
-   lotsningen kom först efter andra missen. Det var tänkt som en ny chans men
-   lästes som motsatsen: läraren såg att prickarna stod still när eleven
-   svarade fel, och samma fråga kom tillbaka längre fram. Nu besvaras varje
-   fråga exakt en gång, passet är lika långt som antalet prickar, och
+   Uppgiften lades förut tillbaka tre platser fram i kön, och prickarna
+   räknade bara rätt svar. Det var tänkt som en ny chans men lästes som
+   motsatsen: läraren såg att mätaren stod still när eleven svarade fel, och
+   samma fråga kom tillbaka längre fram. Kön rörs inte längre – varje fråga
+   besvaras exakt en gång, passet är lika långt som antalet prickar, och
    riktningen är alltid framåt.
+
+   Det egna andraförsöket är kvar med flit. Att lotsa redan på första missen
+   tar ifrån eleven chansen att komma på det själv, och ett svar hon hittat
+   själv är värt mer än ett hon blivit ledd till.
+
+   Efter **tredje** missen visas och sägs rätt svar, och pilen tänds. Utan
+   den utgången satt eleven fast: lotsningen pekar ut ett alternativ, men
+   *Skriv ordet* har inga alternativ att peka på, så där kunde hon skriva
+   fel hur många gånger som helst utan att något hände. Att fastna är
+   misslyckandet, inte facit. Tröskeln står i `MISSAR_TILL_FACIT`
+   (`lib/queue.ts`).
 
    Prickarna är **orange**, inte gröna. Grönt betyder "rätt" överallt annars
    i appen, och prickarna säger inte det – de säger *besvarad*. En fråga
@@ -281,6 +293,18 @@ Passet blir hellre kortare än upprepande. "Veckodagar före/efter" har sju
 dagar att fråga om, och då är sju frågor rätt antal, inte åtta med en
 dubblett. `kollaUpprepningar()` bygger varje uppgift med fem frön och varje
 bokstavspass med tre, och fäller bygget om något ord kommer igen.
+
+I *Sätt ihop ord bild* blandas bildraden så att **ingen bild hamnar mitt
+emot sitt eget ord**. Blandningen fanns redan men seedades ur
+`exercise.id.length` – hur många tecken id:t har, alltså i praktiken samma
+tal för varje uppgift. Alla uppgifter fick därför samma permutation, och med
+tre par blev den ofta identiteten: rätt ord stod rakt ovanför sin egen bild.
+Mätt på fyra uppgifter i rad låg 3 av 4 så. Då är övningen ett positionstest
+och inte en läsövning.
+
+Fröet tas nu ur id:ts innehåll, och resultatet kontrolleras – ingen bild får
+ligga kvar på sin plats. Går det inte på tjugo försök roteras listan ett
+steg, vilket alltid uppfyller villkoret.
 
 Varje uppgift har ett **öra** bredvid sig som läser upp namnet. Det sitter
 utanför kortet, inte i det: en knapp får inte ligga i en annan knapp, och örat

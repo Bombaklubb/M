@@ -21,12 +21,15 @@ export function ExerciseRenderer({
   locked,
   guideTo,
   wrongId,
+  facit,
 }: {
   exercise: Exercise;
   onAnswer: (correct: boolean, choice?: Choice) => void;
   locked: boolean;
   guideTo: string | null;
   wrongId: string | null;
+  /** Rätt svar, satt efter tredje missen. Visas i stället för elevens. */
+  facit?: string | null;
 }) {
   switch (exercise.kind) {
     case 'letter-sound-match':
@@ -65,7 +68,9 @@ export function ExerciseRenderer({
       );
 
     case 'type-the-word':
-      return <TypeTheWord exercise={exercise} onAnswer={onAnswer} locked={locked} />;
+      return (
+        <TypeTheWord exercise={exercise} onAnswer={onAnswer} locked={locked} facit={facit} />
+      );
 
     case 'order-items':
       return <OrderItems exercise={exercise} onAnswer={onAnswer} locked={locked} />;

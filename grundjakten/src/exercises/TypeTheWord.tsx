@@ -24,10 +24,19 @@ export function TypeTheWord({
   exercise,
   onAnswer,
   locked,
+  facit,
 }: {
   exercise: TypeTheWordEx;
   onAnswer: (correct: boolean) => void;
   locked: boolean;
+  /**
+   * Rätt svar, satt efter tredje missen.
+   *
+   * Den här övningen har inga alternativ att peka på, så lotsningen som
+   * räddar flervalsfrågorna finns inte här. Utan facit kunde eleven skriva
+   * fel hur många gånger som helst utan att något hände – hon satt fast.
+   */
+  facit?: string | null;
 }) {
   const [text, setText] = useState('');
   const alive = useRef(true);
@@ -63,7 +72,7 @@ export function TypeTheWord({
   }, [exercise.id, locked, text]);
 
   const submit = () => {
-    if (locked || !text.trim()) return;
+    if (locked || facit || !text.trim()) return;
     onAnswer(exercise.accept.includes(text.trim().toLowerCase()));
   };
 
@@ -101,12 +110,17 @@ export function TypeTheWord({
                    border-4 border-dashed border-brand-300 bg-white px-6 dark:bg-ink-800
                    [@media(min-height:760px)]:min-h-[6rem]"
         role="textbox"
-        aria-label={`Ditt svar: ${text || 'tomt'}`}
+        aria-label={facit ? `Rätt svar: ${facit}` : `Ditt svar: ${text || 'tomt'}`}
         aria-live="polite"
       >
-        <span className="text-4xl font-bold tracking-wide text-brand-700 dark:text-brand-300
-                         [@media(min-height:760px)]:text-6xl">
-          {text || ' '}
+        <span
+          className={cn(
+            'text-4xl font-bold tracking-wide [@media(min-height:760px)]:text-6xl',
+            // Facit står i grönt: det är rätt svar, inte elevens försök.
+            facit ? 'text-lime-600 dark:text-lime-400' : 'text-brand-700 dark:text-brand-300'
+          )}
+        >
+          {facit ?? (text || ' ')}
         </span>
       </div>
 

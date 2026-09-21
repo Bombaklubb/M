@@ -18,8 +18,15 @@ export interface QueueState {
   /** Unika uppgifter som klarats. */
   cleared: number;
   firstTryCorrect: number;
-  /** Uppgifts-id som redan missats en gång i det här passet. */
-  missed: Set<string>;
+  /**
+   * Hur många gånger varje uppgift missats i det här passet.
+   *
+   * Var förut en Set, alltså bara "missad eller inte". Det räckte så länge
+   * lotsningen var enda utvägen, men en elev som skriver fel ord om och om
+   * igen har ingen lotsning att lotsas av – hon satt fast. Antalet behövs
+   * för att kunna visa facit efter tredje missen.
+   */
+  missed: Map<string, number>;
   startedAt: number;
   xpEarned: number;
 }
@@ -34,7 +41,7 @@ export function createQueue(exercises: Exercise[]): QueueState {
     total: exercises.length,
     cleared: 0,
     firstTryCorrect: 0,
-    missed: new Set(),
+    missed: new Map(),
     startedAt: Date.now(),
     xpEarned: 0,
   };
@@ -47,8 +54,11 @@ export function currentExercise(q: QueueState): Exercise | null {
 /** Hur många gånger den aktuella uppgiften har missats i det här passet. */
 export function missCount(q: QueueState): number {
   const current = currentExercise(q);
-  return current && q.missed.has(current.id) ? 1 : 0;
+  return current ? (q.missed.get(current.id) ?? 0) : 0;
 }
+
+/** Efter så här många missar visas rätt svar och eleven kan gå vidare. */
+export const MISSAR_TILL_FACIT = 3;
 
 export function markCorrect(q: QueueState): QueueState {
   const current = currentExercise(q);
@@ -79,8 +89,8 @@ export function markCorrect(q: QueueState): QueueState {
 export function markMissed(q: QueueState): QueueState {
   const current = currentExercise(q);
   if (!current) return q;
-  const missed = new Set(q.missed);
-  missed.add(current.id);
+  const missed = new Map(q.missed);
+  missed.set(current.id, (missed.get(current.id) ?? 0) + 1);
   return { ...q, missed };
 }
 

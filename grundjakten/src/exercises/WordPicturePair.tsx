@@ -28,11 +28,35 @@ export function WordPicturePair({
   const [matched, setMatched] = useState<string[]>([]);
   const [wrong, setWrong] = useState<string | null>(null);
 
-  // Bilderna blandas så att raderna inte ligger parvis mitt emot varandra.
-  const pictures = useMemo(
-    () => shuffle(exercise.pairs, mulberry32(exercise.id.length * 7919)),
-    [exercise.id, exercise.pairs]
-  );
+  /**
+   * Bilderna blandas så att raderna inte ligger parvis mitt emot varandra.
+   *
+   * Fröet togs förut ur `exercise.id.LENGTH`, alltså hur många tecken id:t
+   * har – i praktiken samma tal för varje uppgift. Alla uppgifter fick
+   * därmed samma permutation, och med tre par blev den ofta identiteten:
+   * rätt ord stod rakt ovanför sin egen bild. Läraren såg det direkt, och
+   * då är övningen ett positionstest och inte en läsövning.
+   *
+   * Nu seedas den ur id:ts INNEHÅLL, och resultatet kontrolleras: ingen bild
+   * får hamna på sin egen plats. Går det inte på tjugo försök roteras
+   * listan ett steg, vilket alltid uppfyller villkoret.
+   */
+  const pictures = useMemo(() => {
+    const par = exercise.pairs;
+    if (par.length < 2) return par;
+
+    let fro = 2166136261;
+    for (const tecken of exercise.id) {
+      fro = Math.imul(fro ^ tecken.charCodeAt(0), 16777619);
+    }
+    const rng = mulberry32(fro >>> 0);
+
+    for (let i = 0; i < 20; i++) {
+      const kandidat = shuffle(par, rng);
+      if (kandidat.every((p, j) => p.id !== par[j].id)) return kandidat;
+    }
+    return [...par.slice(1), par[0]];
+  }, [exercise.id, exercise.pairs]);
 
   useEffect(() => {
     setPicked(null);
