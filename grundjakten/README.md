@@ -19,11 +19,22 @@ klassen läser och skriver texter?"**
 2. **Åldersadekvat, inte barnsligt.** Tioåringar sitter bredvid klasskamrater
    som ser deras skärm. Inga pastellfärger, inga rundade "småbarnstypsnitt",
    ingen maskot. Nivåer heter **Steg 1–8**, aldrig "årskurs 1".
-3. **Ett pass slutar alltid i framgång.** Ett missat svar ger inget avdrag –
-   uppgiften kommer tillbaka senare i passet, och efter andra missen lotsas
-   eleven till rätt svar. Belöningsskärmen visar aldrig hur många fel hon
-   hade. Resultatet per övning syns däremot i övningsbanken efteråt, som ett
-   bästa-resultat hon kan slå.
+3. **Ett pass slutar alltid i framgång, och går alltid framåt.** Ett missat
+   svar ger inget avdrag. Rätt alternativ pekas ut direkt, eleven trycker på
+   det, och passet går vidare. Belöningsskärmen visar aldrig hur många fel
+   hon hade. Resultatet per övning syns däremot i övningsbanken efteråt, som
+   ett bästa-resultat hon kan slå.
+
+   Uppgiften lades förut tillbaka tre platser fram i kön i stället, och
+   lotsningen kom först efter andra missen. Det var tänkt som en ny chans men
+   lästes som motsatsen: läraren såg att prickarna stod still när eleven
+   svarade fel, och samma fråga kom tillbaka längre fram. Nu besvaras varje
+   fråga exakt en gång, passet är lika långt som antalet prickar, och
+   riktningen är alltid framåt.
+
+   Prickarna är **orange**, inte gröna. Grönt betyder "rätt" överallt annars
+   i appen, och prickarna säger inte det – de säger *besvarad*. En fråga
+   eleven behövde hjälp med räknas lika mycket som en hon tog direkt.
 4. **Eleven bestämmer takten, och allt syns utan att scrolla.** Passet byter
    aldrig uppgift av sig självt: när svaret är rätt tänds en grön pil i
    listen längst ned, och den ska tryckas. En elev som behöver tio sekunder
