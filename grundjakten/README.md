@@ -102,6 +102,26 @@ Undantaget är **övningsskärmen**. Där finns redan en hus-knapp längst ned, 
 en andra väg ut mitt i en uppgift är något en elev kan trycka på av misstag
 och tappa passet på.
 
+### Flikikon och länkbild
+
+Samma märke sitter i webbläsarfliken (`public/favicon.svg`). A:et är ritat
+som en **path**, inte som `<text>`: en favicon renderas isolerat från sidan,
+så Google-fonten finns inte att tillgå där. Den gamla ikonen bad om *Outfit*
+och fick ett systemtypsnitt i stället – och var dessutom ett **G**, bokstaven
+som togs bort ur appen i övrigt.
+
+Vid sidan av SVG:n ligger `ikon-16`, `ikon-32` och `ikon-180` som PNG. Alla
+lägen läser inte SVG-favicons: Teams, Outlook och en del äldre webbläsare
+visar en grå platshållare i stället. PNG-raderna är för dem.
+
+`lankbild.png` (1200×630) är det som syns när adressen klistras in i en chatt,
+tillsammans med `og:`-taggarna i `index.html`. Appen delas mellan kollegor
+via länk, och en länk utan bild ser ut som skräppost.
+
+Ikonerna genereras ur SVG:n och är incheckade som filer – appen har inget
+byggsteg för bilder, och ett sådant vore mer att underhålla än det är värt
+för fyra ikoner som ändras sällan.
+
 ## Ljud på och av
 
 En knapp på **varje** skärm, även mitt i ett pass och på inloggningssidan.

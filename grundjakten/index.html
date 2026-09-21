@@ -7,7 +7,32 @@
     <title>Grundjakten</title>
     <meta name="description" content="Grundjakten – träna bokstäver, ljud och ord med ljudstöd." />
 
+    <!--
+      SVG först för de webbläsare som kan skala den skarpt, PNG efter för
+      dem som inte läser SVG-favicons alls. Utan PNG-raden får appen en grå
+      platshållare i Teams, Outlook och andra ställen där länken klistras in.
+    -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/ikon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/ikon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/ikon-180.png" />
+
+    <!-- Länkförhandsvisning: det som syns när läraren delar adressen. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Grundjakten" />
+    <meta property="og:title" content="Grundjakten" />
+    <meta
+      property="og:description"
+      content="Träna bokstäver, ljud och ord med ljudstöd. Gratis, inget konto."
+    />
+    <meta property="og:url" content="https://grundjakten.vercel.app/" />
+    <meta property="og:image" content="https://grundjakten.vercel.app/lankbild.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Grundjakten – ett A som står på tre block" />
+    <meta property="og:locale" content="sv_SE" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
