@@ -116,11 +116,49 @@ export function orderItems(prompt: string, target: string[], rng: Rng, lang: Lan
 }
 
 /**
- * Kör en fabrik tills passet är fullt.
+ * Vad eleven faktiskt blir tillfrågad om.
  *
- * Fabriken får returnera null när den inte kan bygga något meningsfullt av
- * den post den råkade få – samma regel som i de andra generatorerna: hellre
- * ett kortare pass än en halvfylld uppgift.
+ * Används för att en och samma fråga inte ska ställas två gånger i samma
+ * pass. Nyckeln är det eleven SER eller ska svara – inte uppgiftens id, som
+ * är slumpat och alltid unikt.
+ *
+ * `null` betyder "går inte att jämföra" och då sker ingen sållning; hellre
+ * en möjlig upprepning än ett pass som tystnar för att nyckeln var fel.
+ */
+export function fraganI(ex: Exercise): string | null {
+  if (ex.kind === 'type-the-word') return `svar:${ex.answer}`;
+  if (ex.kind === 'build-word-tiles') return `bygg:${ex.target.join('')}`;
+  if (ex.kind === 'build-sentence-cards') return `mening:${ex.target.join(' ')}`;
+  if (ex.kind === 'order-items') return `ordning:${ex.target.join(',')}`;
+  // wordId täcker Bokstavsresans ordövningar. Att ljuda "sol" och sedan läsa
+  // "sol" är två olika uppgifter för den som byggt appen, men samma ord för
+  // eleven – och det är eleven regeln gäller.
+  if ('wordId' in ex && ex.wordId) return `ord:${ex.wordId}`;
+  if ('shownWord' in ex && ex.shownWord) return `ord:${ex.shownWord}`;
+  if ('shown' in ex && ex.shown) {
+    const s = ex.shown as {
+      word?: string; letter?: string; sentence?: string; emoji?: string;
+    };
+    if (s.word) return `ord:${s.word}`;
+    if (s.sentence) return `mening:${s.sentence}`;
+    if (s.emoji) return `bild:${s.emoji}`;
+    if (s.letter) return `bokstav:${s.letter}`;
+  }
+  return null;
+}
+
+/**
+ * Kör en fabrik tills passet är fullt – utan att ställa samma fråga två gånger.
+ *
+ * Sållningen är hela poängen. Fabriken slumpar fram en fråga i taget och
+ * mindes ingenting, så samma ord kunde komma upp flera gånger i samma pass.
+ * Läraren såg "fotboll" två gånger, och mätningen gav 46 sådana upprepningar
+ * fördelade på elva uppgifter. En elev som redan svarat rätt på ett ord och
+ * får det igen tror att hon svarade fel.
+ *
+ * Passet blir hellre KORTARE än upprepande: "Veckodagar före/efter" har bara
+ * sju dagar att fråga om, och då är sju frågor rätt antal, inte åtta med en
+ * dubblett. Vakten på `size * 20` försök finns för banker som tar slut.
  */
 export function buildPass(
   seed: number,
@@ -129,10 +167,17 @@ export function buildPass(
 ): Exercise[] {
   const rng = mulberry32(seed);
   const out: Exercise[] = [];
+  const stallda = new Set<string>();
   let guard = 0;
   while (out.length < size && guard++ < size * 20) {
     const made = factory(rng, out.length);
-    if (made) out.push(made);
+    if (!made) continue;
+    const nyckel = fraganI(made);
+    if (nyckel !== null) {
+      if (stallda.has(nyckel)) continue;
+      stallda.add(nyckel);
+    }
+    out.push(made);
   }
   return out;
 }
@@ -147,14 +192,27 @@ export function buildFromBank<T>(
   seed: number,
   bank: T[],
   size: number,
-  make: (item: T, rng: Rng, bank: T[]) => Exercise | null
+  make: (item: T, rng: Rng, bank: T[], index: number) => Exercise | null
 ): Exercise[] {
   const rng = mulberry32(seed);
   const urval = pickN(bank, Math.min(size, bank.length), rng);
   const out: Exercise[] = [];
-  for (const item of urval) {
-    const made = make(item, rng, bank);
-    if (made) out.push(made);
+  const stallda = new Set<string>();
+
+  for (const [index, item] of urval.entries()) {
+    const made = make(item, rng, bank, index);
+    if (!made) continue;
+    // Olika bankposter kan ändå ge SAMMA fråga på skärmen, och det är frågan
+    // eleven ser. Två fall fanns på riktigt: [...KORTA_ORD, ...DJUR] har
+    // "apa" i båda listorna, och "Adjektiv välj rätt form" hämtade åtta
+    // olika adjektiv men slumpade meningsramen separat, så "flera ___ bilar"
+    // kunde komma upp fyra gånger.
+    const nyckel = fraganI(made);
+    if (nyckel !== null) {
+      if (stallda.has(nyckel)) continue;
+      stallda.add(nyckel);
+    }
+    out.push(made);
   }
   return out;
 }

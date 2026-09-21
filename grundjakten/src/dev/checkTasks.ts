@@ -5,9 +5,10 @@ import { LETTERS } from '@/data/letters';
 import { WORDS, newWordsAtStep } from '@/data/words';
 import {
   ADJEKTIV, DJUR, FARGER, GATOR, KORTA_ORD, KORTA_VOKALER,
-  LANGA_VOKALER, LJUDSTRIDIGA, SUBSTANTIV, VERB,
+  LANGA_VOKALER, LIKNELSER_DJUR, LJUDSTRIDIGA, SAMMANSATTA, SUBSTANTIV, VERB,
 } from '@/data/banks';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
+import { fraganI } from '@/lib/generators/taskBuilders';
 import type { LevelBand } from '@/types';
 
 /**
@@ -175,6 +176,10 @@ export function kollaBildord(): Fel[] {
   // fyra ben som inte kan gå visade en stol men hade svaret "bord".
   for (const g of GATOR) lagg(g.emoji, g.svar, 'GATOR');
 
+  // Sammansatta ord och liknelser visar också en bild till ett svar.
+  for (const [, , helt, emoji] of SAMMANSATTA) lagg(emoji, helt, 'SAMMANSATTA');
+  for (const l of LIKNELSER_DJUR) lagg(l.emoji, l.svar, 'LIKNELSER');
+
   for (const [emoji, ord] of perEmoji) {
     // Samma ORD i flera listor är i sin ordning – hus finns både bland korta
     // ord och bland långa vokaler. Det är olika ord som är felet.
@@ -185,6 +190,55 @@ export function kollaBildord(): Fel[] {
         seed: 0,
         meddelande: `bilden ${emoji} betyder flera ord: ${[...unika].join(', ')}`,
       });
+    }
+  }
+  return fel;
+}
+
+/**
+ * Samma fråga får inte ställas två gånger i samma pass.
+ *
+ * Läraren såg "fotboll" komma upp igen efter att eleven svarat rätt. En elev
+ * som redan klarat ett ord och får det igen tror att hon svarade fel, och
+ * passets prickar stämmer inte med vad hon minns.
+ *
+ * Felet satt i byggarna, inte i kön: `buildPass` anropade sin fabrik om och
+ * om igen utan minne, och både den och `buildFromBank` sållade bara på
+ * uppgiftens id – som sätts av en räknare och alltid är unikt. Mätningen gav
+ * 46 upprepningar fördelade på elva uppgifter. Den här kontrollen finns för
+ * att de inte ska kunna komma tillbaka.
+ */
+export function kollaUpprepningar(seeds = [1, 7, 42, 12345, 987654]): Fel[] {
+  const fel: Fel[] = [];
+
+  const rakna = (pass: Exercise[], namn: string, seed: number) => {
+    const sedda = new Map<string, number>();
+    for (const ex of pass) {
+      const k = fraganI(ex);
+      if (!k) continue;
+      sedda.set(k, (sedda.get(k) ?? 0) + 1);
+    }
+    for (const [k, n] of sedda) {
+      if (n > 1) fel.push({ task: namn, seed, meddelande: `${k} förekommer ${n} gånger i samma pass` });
+    }
+  };
+
+  for (const t of TASKS) {
+    for (const seed of seeds) {
+      try {
+        rakna(t.build(seed), `${t.grupp} – ${t.namn}`, seed);
+      } catch {
+        /* kollaAllaTasks rapporterar redan kastade fel */
+      }
+    }
+  }
+
+  // Bokstavsresan har en egen generator och samma sorts fel fanns där.
+  for (let steg = 1; steg <= MAX_STEP; steg++) {
+    for (const band of [1, 2, 3] as LevelBand[]) {
+      for (const seed of seeds) {
+        rakna(generateLetterPass(steg, band, seed), `Bokstavsresan steg ${steg} band ${band}`, seed);
+      }
     }
   }
   return fel;

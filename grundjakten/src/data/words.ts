@@ -76,7 +76,7 @@ const RA_ORD: Omit<WordEntry, 'step'>[] = [
   { id: 'w-bil', text: 'bil', emoji: '🚗', graphemes: ['b', 'i', 'l'], kind: 'decodable', lang: 'sv-SE', say: { id: 'word-bil', text: 'bil', lang: 'sv-SE' } },
   { id: 'w-bok', text: 'bok', emoji: '📕', graphemes: ['b', 'o', 'k'], kind: 'decodable', lang: 'sv-SE', say: { id: 'word-bok', text: 'bok', lang: 'sv-SE' } },
   { id: 'w-bord', text: 'bord', emoji: null, graphemes: ['b', 'o', 'rd'], kind: 'decodable', lang: 'sv-SE', say: { id: 'word-bord', text: 'bord', lang: 'sv-SE' } },
-  { id: 'w-bär', text: 'bär', emoji: '🍓', graphemes: ['b', 'ä', 'r'], kind: 'decodable', lang: 'sv-SE', say: { id: 'word-bär', text: 'bär', lang: 'sv-SE' } },
+  { id: 'w-bär', text: 'bär', emoji: null, graphemes: ['b', 'ä', 'r'], kind: 'decodable', lang: 'sv-SE', say: { id: 'word-bär', text: 'bär', lang: 'sv-SE' } },
   { id: 'w-dag', text: 'dag', emoji: null, graphemes: ['d', 'a', 'g'], kind: 'decodable', lang: 'sv-SE', say: { id: 'word-dag', text: 'dag', lang: 'sv-SE' } },
   { id: 'w-dam', text: 'dam', emoji: null, graphemes: ['d', 'a', 'm'], kind: 'decodable', lang: 'sv-SE', say: { id: 'word-dam', text: 'dam', lang: 'sv-SE' } },
   { id: 'w-hand', text: 'hand', emoji: '✋', graphemes: ['h', 'a', 'n', 'd'], kind: 'decodable', lang: 'sv-SE', say: { id: 'word-hand', text: 'hand', lang: 'sv-SE' } },

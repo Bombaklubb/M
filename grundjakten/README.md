@@ -207,6 +207,22 @@ glida isär, och eleven skulle se ett krav hon redan uppfyllt stå kvarlåst.
 En utmärkelse tas aldrig ifrån eleven, inte ens om villkoret skulle sluta
 gälla. Samma princip som bästa resultat per uppgift.
 
+## Poängrutan
+
+Elevens samlade poäng står i en egen ruta på **båda** sidorna hon kan nå på
+egen hand: framstegen och kistorna (`components/PoangRuta.tsx`). Samma
+komponent på båda – samma siffra på två ställen som ser olika ut läses som
+två olika siffror.
+
+Mätaren fanns förut bara som en stapel utan siffra: "hur långt kvar" gick att
+se, men inte "hur mycket jag samlat". Det är det senare eleven räknar upp för
+sig själv och för sin kompis.
+
+Siffran skrivs med tusentalsavstånd enligt svensk skrivregel (1 240) och med
+`tabular-nums`, så den inte hoppar i sidled när poängen växer. På kistsidan
+är den extra befogad: kistor delas ut vid poängmilstolpar, så siffran säger
+hur nära nästa kista eleven är.
+
 ## Mina framsteg
 
 Elevens namn står uppe till höger på startskärmen, och ett tryck där öppnar
@@ -226,6 +242,24 @@ Alfabetet – Första bokstaven 2" och eleven hittar exakt den.
 
 Innehållet varierar ändå mellan gångerna — varje uppgift byggs om ur sin
 ordbank vid start, så samma namn ger inte samma ord två dagar i rad.
+
+Samma fråga ställs **aldrig två gånger i samma pass**. Regeln låter
+självklar men satt inte i koden: `buildPass` anropade sin fabrik om och om
+igen utan minne, och både den och `buildFromBank` sållade bara på uppgiftens
+id – som sätts av en räknare och alltid är unikt. Läraren såg "fotboll" komma
+upp igen efter att eleven svarat rätt, och mätningen gav 46 upprepningar
+fördelade på elva uppgifter.
+
+Sållningen sker nu på `fraganI()` i `lib/generators/taskBuilders.ts`: det
+eleven SER eller ska svara, inte uppgiftens id. Bokstavsresans egen generator
+har samma sållning, och där räknas ordet som samma fråga oavsett om det ska
+ljudas eller läsas – två olika uppgifter för den som byggt appen, samma ord
+för eleven.
+
+Passet blir hellre kortare än upprepande. "Veckodagar före/efter" har sju
+dagar att fråga om, och då är sju frågor rätt antal, inte åtta med en
+dubblett. `kollaUpprepningar()` bygger varje uppgift med fem frön och varje
+bokstavspass med tre, och fäller bygget om något ord kommer igen.
 
 Varje uppgift har ett **öra** bredvid sig som läser upp namnet. Det sitter
 utanför kortet, inte i det: en knapp får inte ligga i en annan knapp, och örat

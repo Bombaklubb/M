@@ -4,6 +4,7 @@ import { KIST_META } from '@/data/belohningar';
 import { utmarkelseById } from '@/data/belohningar';
 import { EarButton } from '@/components/EarButton';
 import { KistBild } from '@/components/KistBild';
+import { PoangRuta } from '@/components/PoangRuta';
 import { AppMarke } from '@/components/AppMarke';
 import { LjudKnapp } from '@/components/LjudKnapp';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
@@ -88,6 +89,11 @@ export function KistorView({
       </header>
 
       <main className="mx-auto flex max-w-3xl flex-col gap-6 px-4 py-6">
+        {/* Samma poängruta som på framstegssidan. Kistorna delas ut vid
+            poängmilstolpar ("vid 250 poäng"), så här är siffran inte bara
+            trevlig att se – den säger hur nära nästa kista eleven är. */}
+        <PoangRuta xp={progress.xp} level={progress.level} paFarg />
+
         {/* Belöningen från den kista som just öppnades. */}
         {nyssOppnad?.oppnad && (
           <section

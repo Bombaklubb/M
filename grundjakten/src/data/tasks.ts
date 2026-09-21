@@ -2,7 +2,7 @@ import type { Exercise, GruppMeta, TaskDef } from '@/types';
 import {
   ADJEKTIV, ADJEKTIVFORMER, ALFABETET, CK_LJUDET, DEN_ORD, DET_ORD, DJUR, DUBBELTECKNING,
   EGENNAMN, EN_FLERA,
-  EN_ORD, ETT_ORD, FARGER, GATOR, HOR_INTE_IHOP, J_LJUDET_G, J_LJUDET_J,
+  EN_ORD, ETT_ORD, FARGER, FLERTAL_ORD, GATOR, HOR_INTE_IHOP, J_LJUDET_G, J_LJUDET_J,
   J_LJUDET_OVRIGA, KONSONANTER, KORTA_ORD, KORTA_VOKALER, LAGESORD, LANGA_VOKALER,
   LIKNELSER_DJUR, LJUDSTRIDIGA, MANADER, MOTSATSORD, M_LJUDET, NG_LJUDET_N,
   NG_LJUDET_NG, NG_MENINGAR, N_MENINGAR, RAKNEORD, RIM, RIMGRUPPER, SAMMANSATTA, SJ_LJUDET_OVRIGA,
@@ -364,10 +364,15 @@ const SVENSKA_2: TaskDef[] = [
       }) },
   { id: 'gram-adjektiv-form', grupp: 'Grammatik', namn: 'Adjektiv välj rätt form', niva: 2,
     build: (seed) =>
-      buildFromBank(seed, ADJEKTIVFORMER, 8, (item, rng) => {
-        const variant = pick(['en', 'ett', 'flera'] as const, rng);
+      buildFromBank(seed, ADJEKTIVFORMER, 8, (item, rng, _bank, index) => {
+        // Varianten cyklar på index i stället för att slumpas. Slumpen kunde
+        // ge "flera" fyra gånger i rad, och eftersom substantivet i plural
+        // dessutom var hårdkodat blev det fyra likadana frågor.
+        const variant = (['en', 'ett', 'flera'] as const)[index % 3];
         const substantiv =
-          variant === 'en' ? pick(EN_ORD, rng) : variant === 'ett' ? pick(ETT_ORD, rng) : 'bilar';
+          variant === 'en' ? pick(EN_ORD, rng)
+            : variant === 'ett' ? pick(ETT_ORD, rng)
+              : pick(FLERTAL_ORD, rng);
         const mening =
           variant === 'en' ? `en ___ ${substantiv}`
             : variant === 'ett' ? `ett ___ ${substantiv}`

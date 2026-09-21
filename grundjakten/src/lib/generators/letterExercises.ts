@@ -5,6 +5,7 @@ import { wordsUpToStep, picturableWords } from '@/data/words';
 import { SIGHT_WORDS } from '@/data/sightWords';
 import { hasIsolatedSound, soundTokenFor } from '@/lib/audio';
 import { mulberry32, pick, pickN, shuffle, type Rng } from '@/lib/rng';
+import { fraganI } from '@/lib/generators/taskBuilders';
 
 const PASS_SIZE = 8;
 
@@ -191,6 +192,7 @@ export function generateLetterPass(step: number, level: LevelBand, seed = Date.n
   const focus = LETTERS.filter((l) => l.step === step).map((l) => l.id);
   const letterPool = shuffle([...focus, ...focus, ...unlocked], rng);
 
+  const stallda = new Set<string>();
   let guard = 0;
   while (out.length < PASS_SIZE && guard++ < 200) {
     const roll = rng();
@@ -213,7 +215,17 @@ export function generateLetterPass(step: number, level: LevelBand, seed = Date.n
 
     // Generatorn skickar aldrig ut en övning den inte kunnat fylla helt.
     // Den returnerar hellre färre uppgifter än en med tomma rutor.
-    if (made && !out.some((e) => e.id === made!.id)) out.push(made);
+    //
+    // Sållningen på id var verkningslös: id sätts av en räknare och är alltid
+    // unikt. Det som ska vara unikt är FRÅGAN – samma ord kunde annars komma
+    // upp två gånger i samma pass, en gång att ljuda och en gång att läsa.
+    if (!made) continue;
+    const nyckel = fraganI(made);
+    if (nyckel !== null) {
+      if (stallda.has(nyckel)) continue;
+      stallda.add(nyckel);
+    }
+    out.push(made);
   }
 
   return out;
