@@ -67,6 +67,15 @@ tre block. Namnet betyder just det – grunderna, det allt annat vilar på. Rita
 som SVG och inte som emoji, eftersom emoji renderas olika på olika system och
 det här är appens enda fasta identitet.
 
+Märket sitter längst till vänster i sidhuvudet på **varje** sida
+(`components/AppMarke.tsx`) och går alltid hem. Det ger en fast punkt: var
+eleven än hamnat finns samma bild på samma plats, och den leder tillbaka till
+de tre korten.
+
+Undantaget är **övningsskärmen**. Där finns redan en hus-knapp längst ned, och
+en andra väg ut mitt i en uppgift är något en elev kan trycka på av misstag
+och tappa passet på.
+
 Ansiktet och namnet är **två knappar**, inte en, eftersom de leder olika
 vägar. Båda behåller full tryckyta; två mål i samma knapp vore fel för en elev
 med motoriska svårigheter.

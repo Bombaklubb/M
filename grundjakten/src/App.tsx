@@ -249,6 +249,7 @@ export default function App() {
           profile={profile}
           progress={progress}
           onGo={go}
+          onHem={goHome}
           onProfile={() => setView({ name: 'framsteg' })}
           onOm={() => setView({ name: 'om' })}
           onKistor={() => setView({ name: 'kistor' })}

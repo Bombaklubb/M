@@ -4,6 +4,7 @@ import { findOrCreateProfile, getProfile, getUsers } from '@/lib/storage';
 import { play, unlock } from '@/lib/audio';
 import { EarButton } from '@/components/EarButton';
 import { AVATARER, STANDARD_AVATAR } from '@/data/avatars';
+import { GrundjaktenLogo } from '@/components/GrundjaktenLogo';
 import { cn } from '@/lib/utils';
 
 /**
@@ -48,13 +49,9 @@ export function LoginView({ onLogin }: { onLogin: (profile: StudentProfile) => v
   return (
     <div className="mx-auto flex min-h-[100dvh] w-full max-w-lg flex-col justify-center gap-6 px-4 py-6">
       <header className="flex flex-col items-center gap-2">
-        <span
-          className="grid h-20 w-20 place-items-center rounded-card bg-brand-700 text-4xl
-                     font-extrabold text-lime-300"
-          aria-hidden
-        >
-          G
-        </span>
+        {/* Samma märke som i huvudet på alla andra sidor. Den gamla G-rutan
+            låg kvar här och sa fel bokstav. */}
+        <GrundjaktenLogo size={80} />
         <h1 className="text-4xl font-extrabold tracking-tight text-brand-700 dark:text-brand-300">
           Grundjakten
         </h1>

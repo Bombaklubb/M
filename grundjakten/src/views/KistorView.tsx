@@ -4,6 +4,7 @@ import { KIST_META } from '@/data/belohningar';
 import { utmarkelseById } from '@/data/belohningar';
 import { EarButton } from '@/components/EarButton';
 import { KistBild } from '@/components/KistBild';
+import { AppMarke } from '@/components/AppMarke';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { playFanfare } from '@/lib/sfx';
 import { play } from '@/lib/audio';
@@ -58,15 +59,18 @@ export function KistorView({
     <div className="min-h-[100dvh]">
       <header className="bg-amberx-600 px-4 py-5 text-white">
         <div className="mx-auto flex max-w-3xl flex-col gap-3">
-          <button
-            type="button"
-            onClick={onBack}
-            aria-label="Tillbaka"
-            className="flex h-11 w-fit min-h-0 items-center gap-2 rounded-tile px-3
-                       font-bold text-amberx-100 hover:bg-white/10"
-          >
-            <span aria-hidden>←</span> Tillbaka
-          </button>
+          <div className="flex items-center gap-2">
+            <AppMarke onHome={onBack} paFarg />
+            <button
+              type="button"
+              onClick={onBack}
+              aria-label="Tillbaka"
+              className="flex h-11 w-fit min-h-0 items-center gap-2 rounded-tile px-3
+                         font-bold text-amberx-100 hover:bg-white/10"
+            >
+              <span aria-hidden>←</span> Tillbaka
+            </button>
+          </div>
           <div className="flex items-center gap-4">
             <KistBild typ="tra" oppnad size={56} />
             <div className="flex flex-col">

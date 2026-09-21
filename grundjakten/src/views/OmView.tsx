@@ -10,6 +10,8 @@
  * löpande text, och den enda utan öronknappar.
  */
 
+import { AppMarke } from '@/components/AppMarke';
+
 interface Kort {
   ikon: string;
   rubrik: string;
@@ -100,15 +102,18 @@ export function OmView({ onBack }: { onBack: () => void }) {
     <div className="min-h-[100dvh]">
       <header className="bg-brand-700 px-4 py-5 text-white">
         <div className="mx-auto flex max-w-3xl flex-col gap-3">
-          <button
-            type="button"
-            onClick={onBack}
-            aria-label="Tillbaka"
-            className="flex h-11 w-fit min-h-0 items-center gap-2 rounded-tile px-3
-                       font-bold text-brand-100 hover:bg-white/10"
-          >
-            <span aria-hidden>←</span> Tillbaka
-          </button>
+          <div className="flex items-center gap-2">
+            <AppMarke onHome={onBack} paFarg />
+            <button
+              type="button"
+              onClick={onBack}
+              aria-label="Tillbaka"
+              className="flex h-11 w-fit min-h-0 items-center gap-2 rounded-tile px-3
+                         font-bold text-brand-100 hover:bg-white/10"
+            >
+              <span aria-hidden>←</span> Tillbaka
+            </button>
+          </div>
           <div className="flex items-center gap-4">
             <span className="text-5xl leading-none" aria-hidden>🔤</span>
             <div className="flex flex-col">

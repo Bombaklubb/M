@@ -3,6 +3,7 @@ import type { Niva, Progress, StudentProfile, TaskDef } from '@/types';
 import { grupperadeTasks, tasksForNiva } from '@/data/tasks';
 import { EarButton } from '@/components/EarButton';
 import { cn } from '@/lib/utils';
+import { AppMarke } from '@/components/AppMarke';
 
 const NIVAER: { niva: Niva; namn: string }[] = [
   { niva: 1, namn: 'Svenska 1' },
@@ -41,6 +42,7 @@ export function OvningsbankView({
   return (
     <div className="mx-auto flex min-h-[100dvh] max-w-3xl flex-col px-4 py-5">
       <header className="mb-5 flex items-center gap-4">
+        <AppMarke onHome={onBack} />
         <button
           type="button"
           aria-label="Tillbaka"
@@ -51,7 +53,7 @@ export function OvningsbankView({
           <span aria-hidden>←</span>
         </button>
         <div className="flex flex-col">
-          <h1 className="text-3xl font-extrabold">Övningar</h1>
+          <h1 className="truncate text-2xl font-extrabold sm:text-3xl">Övningar</h1>
           <span className="text-sm font-bold text-ink-500">
             {klara} av {antal} klara
           </span>
@@ -66,7 +68,8 @@ export function OvningsbankView({
             onClick={() => setNiva(n.niva)}
             aria-pressed={niva === n.niva}
             className={cn(
-              'flex-1 rounded-tile border-2 px-2 py-3 text-sm font-extrabold transition-colors',
+              'min-w-0 flex-1 rounded-tile border-2 px-1 py-3 text-xs font-extrabold',
+              'transition-colors sm:px-2 sm:text-sm',
               niva === n.niva
                 ? 'border-brand-600 bg-brand-500 text-white'
                 : 'border-ink-200 bg-white text-ink-600 dark:border-ink-700 dark:bg-ink-800 dark:text-ink-300'
