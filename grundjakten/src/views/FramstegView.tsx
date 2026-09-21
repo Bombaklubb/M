@@ -54,7 +54,6 @@ export function FramstegView({
 
   const bemastrade = LETTERS.filter((l) => progress.letters[l.id]?.mastered).length;
   const klaradeTotalt = Object.keys(progress.tasks).length;
-  const oOppnade = progress.kistor.filter((k) => !k.oppnad).length;
   const vunna = UTMARKELSER.filter((u) => progress.badges.includes(u.id));
 
   useAutoSpeak(
@@ -65,13 +64,6 @@ export function FramstegView({
     },
     profile.settings.autoSpeakPrompts
   );
-
-  const rutor = [
-    { icon: '🔤', tal: bemastrade, av: LETTERS.length, say: `Du kan ${bemastrade} bokstäver.`, tint: 'bg-brand-500' },
-    { icon: '📚', tal: klaradeTotalt, av: null, say: `Du har klarat ${klaradeTotalt} övningar.`, tint: 'bg-amberx-500' },
-    { icon: '🎁', tal: oOppnade, av: null, say: oOppnade === 1 ? 'Du har en kista att öppna.' : `Du har ${oOppnade} kistor att öppna.`, tint: 'bg-aqua-500' },
-    { icon: '🔥', tal: progress.streak, av: null, say: `Du har spelat ${progress.streak} dagar i rad.`, tint: 'bg-lime-500' },
-  ];
 
   return (
     <div className="mx-auto flex min-h-[100dvh] max-w-3xl flex-col gap-6 px-4 py-5">
@@ -119,21 +111,6 @@ export function FramstegView({
           samlat". Två stjärnrutor ovanpå varandra vore bara rörigt, så den
           här bär båda. Samma komponent som på kistsidan. */}
       <PoangRuta xp={progress.xp} level={progress.level} visaNiva={false} />
-
-      <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        {rutor.map((r) => (
-          <div
-            key={r.icon}
-            className={`tile-pop flex flex-col items-center gap-1 px-2 py-4 text-white ${r.tint}`}
-          >
-            <span className="text-4xl leading-none" aria-hidden>{r.icon}</span>
-            <span className="text-3xl font-extrabold tabular-nums" aria-hidden>
-              {r.tal}{r.av !== null && <span className="text-xl opacity-80">/{r.av}</span>}
-            </span>
-            <EarButton size="sm" token={{ id: `fr-${r.icon}`, text: r.say, lang: 'sv-SE' }} label={r.say} />
-          </div>
-        ))}
-      </section>
 
       <section className="space-y-3">
         <div className="flex items-center gap-2">

@@ -63,17 +63,25 @@ export function markCorrect(q: QueueState): QueueState {
   };
 }
 
+/**
+ * Noterar att uppgiften missades. Kön rörs INTE.
+ *
+ * Uppgiften lades förut tillbaka tre platser fram, och prickarna räknade
+ * bara rätt svar. Följden blev den läraren såg: eleven svarade, skärmen
+ * bytte fråga – men mätaren stod still, och frågan kom tillbaka längre fram.
+ * Det läser en elev som "jag kom ingenstans".
+ *
+ * Nu stannar uppgiften kvar på skärmen med rätt svar utpekat. Eleven trycker
+ * på det, och först då går passet vidare. Varje fråga besvaras alltså exakt
+ * en gång, passet är lika långt som antalet prickar, och riktningen är
+ * alltid framåt.
+ */
 export function markMissed(q: QueueState): QueueState {
   const current = currentExercise(q);
   if (!current) return q;
-  const rest = q.pending.slice(1);
-  // Tillbaka tre platser fram – tillräckligt långt för att inte kännas som
-  // en tillrättavisning, tillräckligt nära för att fortfarande vara färskt.
-  const insertAt = Math.min(3, rest.length);
-  const pending = [...rest.slice(0, insertAt), current, ...rest.slice(insertAt)];
   const missed = new Set(q.missed);
   missed.add(current.id);
-  return { ...q, pending, missed };
+  return { ...q, missed };
 }
 
 export function isDone(q: QueueState): boolean {

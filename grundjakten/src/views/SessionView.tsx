@@ -114,16 +114,19 @@ export function SessionView({
     setWrongId(choice?.id ?? null);
     window.setTimeout(() => setFeedback('none'), BLIXT_MS);
 
-    const alreadyMissed = queue.missed.has(exercise.id);
-    if (alreadyMissed) {
-      // Andra missen: lotsa eleven till rätt svar i stället för att låta
-      // henne fastna. Ett pass ska aldrig gå att köra fast i.
-      const right = 'choices' in exercise ? exercise.choices.find((c) => c.correct) : null;
-      setGuideTo(right?.id ?? null);
-    } else {
-      setQueue(markMissed(queue));
-      window.setTimeout(() => void play(exercise.prompt), 800);
-    }
+    // Lotsningen kommer nu direkt, inte först efter andra missen. Rätt
+    // alternativ pulserar, eleven trycker på det och passet går vidare.
+    //
+    // Förut lades uppgiften i stället tillbaka längre fram i kön, och
+    // eleven fick den igen senare. Det var tänkt som en ny chans men lästes
+    // som att ingenting hänt: mätaren stod still och samma fråga kom
+    // tillbaka. Varje fråga besvaras nu exakt en gång och riktningen är
+    // alltid framåt.
+    setQueue(markMissed(queue));
+    const right = 'choices' in exercise ? exercise.choices.find((c) => c.correct) : null;
+    setGuideTo(right?.id ?? null);
+    // Instruktionen spelas om långsammare medan rätt svar pekas ut.
+    window.setTimeout(() => void play(exercise.prompt), 800);
   };
 
   /** Eleven trycker sig vidare. Enda vägen till nästa uppgift. */
