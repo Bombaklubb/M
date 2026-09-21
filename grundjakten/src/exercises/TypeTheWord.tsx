@@ -73,8 +73,17 @@ export function TypeTheWord({
 
   return (
     <div className="flex w-full flex-col items-center gap-3 [@media(min-height:760px)]:gap-6">
+      {/* Bilden ÄR frågan för en elev som inte kan läsa, så den ska vara
+          skärmens största sak. Den låg förut på 3.5rem (56 px) och växte
+          till 6rem först vid 760 px fönsterhöjd – ett vanligt Chrome-fönster
+          på en bärbar är lägre än så, så läraren fick den minsta varianten
+          med 284 px oanvänd yta under. Stegen nedan är mätta: även den
+          största lämnar över 100 px luft utan att något hamnar under
+          skärmkanten. */}
       {exercise.emoji && (
-        <span className="text-[3.5rem] leading-none [@media(min-height:760px)]:text-[6rem]"
+        <span className="text-[6rem] leading-none
+                         [@media(min-height:700px)]:text-[8rem]
+                         [@media(min-height:760px)]:text-[10rem]"
               aria-hidden>{exercise.emoji}</span>
       )}
 

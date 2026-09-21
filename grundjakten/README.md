@@ -231,6 +231,38 @@ Varje uppgift har ett **öra** bredvid sig som läser upp namnet. Det sitter
 utanför kortet, inte i det: en knapp får inte ligga i en annan knapp, och örat
 ska gå att trycka utan att uppgiften startar.
 
+### Bilden är frågan
+
+En elev som inte kan läsa har bara bilden att gå på. Därför gäller två regler
+för bildorden i `data/banks.ts`:
+
+1. **Bilden måste ha ett enda självklart namn, och det namnet ska vara
+   ordet.** Räcker det inte till byts ordet ut, inte bilden – det finns ingen
+   emoji för "ficka" eller "tak", och en närliggande bild är värre än inget.
+2. **Samma bild får aldrig betyda två olika ord.** `kollaBildord()` i
+   `dev/checkTasks.ts` går igenom alla nio ordlistor samtidigt och fäller
+   bygget om det sker. Felet uppstår mellan listorna lika ofta som inom en.
+
+Båda reglerna kommer ur riktiga fel: 👖 användes för både `ficka` och `jeans`,
+🪑 för både `bord` och `stol`, 🏠 för både `hus` och `tak`, 🚗 för både `bil`
+och `garage`, och 🍽️ för `mat`, `äta` och `restaurang`. Läraren hittade det
+första när en elev satt med byxorna på skärmen och ordet `ficka` i örat.
+
+Samma **ord** i flera listor är däremot i sin ordning – `hus` finns både bland
+korta ord och bland långa vokaler, med samma bild. Det är olika ord bakom
+samma bild som är felet.
+
+### Bildstorlek
+
+Bilden ska vara skärmens största sak. I *Skriv ordet* låg den på 56 px och
+växte först vid 760 px fönsterhöjd – lägre än ett vanligt Chrome-fönster på en
+bärbar, så läraren fick den minsta varianten med 284 px oanvänd yta under.
+
+Nu: **96 px** som grundläge, **128 px** från 700 px fönsterhöjd och **160 px**
+från 760. Stegen är mätta mot alla tolv skrivuppgifter på 600, 620, 700 och
+768 px höjd; även den största lämnar över 100 px luft, och ingenting hamnar
+under skärmkanten.
+
 Varje klarad uppgift får en bock och sitt bästa resultat (`7/8`) direkt på
 kortet, och rubriken visar hur många av nivåns uppgifter som är klara.
 Bästa resultat räknas på första försöket och sänks aldrig – en elev som haft
