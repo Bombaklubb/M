@@ -60,17 +60,33 @@ export function missCount(q: QueueState): number {
 /** Efter så här många missar visas rätt svar och eleven kan gå vidare. */
 export const MISSAR_TILL_FACIT = 3;
 
-export function markCorrect(q: QueueState): QueueState {
+/**
+ * Uppgiften är klarad: prick och poäng NU, i samma stund som eleven svarar.
+ *
+ * Det här var förut samma funktion som bytet av uppgift, så pricken tändes
+ * först när eleven tryckte på pilen. Belöningen kom alltså efter att hon
+ * lämnat frågan, och kopplingen mellan "jag svarade rätt" och "det hände
+ * något" bröts. För en elev som behöver se sambandet är det just kopplingen
+ * som är hela poängen.
+ *
+ * Kön rörs inte här – uppgiften står kvar på skärmen tills eleven själv
+ * trycker sig vidare.
+ */
+export function markKlarad(q: QueueState): QueueState {
   const current = currentExercise(q);
   if (!current) return q;
   const wasFirstTry = !q.missed.has(current.id);
   return {
     ...q,
-    pending: q.pending.slice(1),
     cleared: q.cleared + 1,
     firstTryCorrect: q.firstTryCorrect + (wasFirstTry ? 1 : 0),
     xpEarned: q.xpEarned + (wasFirstTry ? XP_FIRST_TRY : XP_WITH_HELP),
   };
+}
+
+/** Eleven trycker sig vidare. Enda stället där uppgiften byts. */
+export function nastaUppgift(q: QueueState): QueueState {
+  return { ...q, pending: q.pending.slice(1) };
 }
 
 /**
