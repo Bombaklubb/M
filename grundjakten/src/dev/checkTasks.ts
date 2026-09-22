@@ -4,6 +4,7 @@ import { traKistaEfterPass } from '@/data/belohningar';
 import { MAX_STEP, PROGRESSION_STEPS } from '@/data/progression';
 import { LETTERS } from '@/data/letters';
 import { WORDS, newWordsAtStep } from '@/data/words';
+import { SIGHT_WORDS } from '@/data/sightWords';
 import {
   ADJEKTIV, DJUR, FARGER, GATOR, KORTA_ORD, KORTA_VOKALER,
   LANGA_VOKALER, LIKNELSER_DJUR, LJUDSTRIDIGA, SAMMANSATTA, SUBSTANTIV, VERB,
@@ -288,6 +289,33 @@ export function kollaTrakistor(): Fel[] {
   if (max > 7) fel.push({ task: 'trakista', seed: 0, meddelande: `kommer så sällan som vart ${max}:e pass` });
   if (new Set(gap).size < 2) {
     fel.push({ task: 'trakista', seed: 0, meddelande: 'jämna mellanrum – går att räkna ut' });
+  }
+  return fel;
+}
+
+/**
+ * Ordbilderna: inga dubbletter, inga tomma poster.
+ *
+ * Banken växte från 30 till 100 ord i ett svep, och en handskriven lista av
+ * den storleken får dubbletter om ingen tittar. Ett upprepat ord skulle
+ * dessutom kunna hamna som både rätt svar och distraktor i samma fråga.
+ */
+export function kollaOrdbilder(): Fel[] {
+  const fel: Fel[] = [];
+  const sedda = new Set<string>();
+  for (const w of SIGHT_WORDS) {
+    const t = w.text.trim().toLowerCase();
+    if (!t) fel.push({ task: 'ordbilder', seed: 0, meddelande: `${w.id} har tom text` });
+    if (sedda.has(t)) fel.push({ task: 'ordbilder', seed: 0, meddelande: `"${t}" finns två gånger` });
+    sedda.add(t);
+    if (w.graphemes.join('') !== t) {
+      fel.push({ task: 'ordbilder', seed: 0, meddelande: `"${t}": grafemen bildar "${w.graphemes.join('')}"` });
+    }
+    if (w.emoji) fel.push({ task: 'ordbilder', seed: 0, meddelande: `"${t}" har en bild; ordbilder ska sakna bild` });
+  }
+  // Tre alternativ per fråga kräver minst tre ord att välja mellan.
+  if (SIGHT_WORDS.length < 3) {
+    fel.push({ task: 'ordbilder', seed: 0, meddelande: 'för få ordbilder för att bygga en fråga' });
   }
   return fel;
 }
