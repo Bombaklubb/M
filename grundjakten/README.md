@@ -451,6 +451,47 @@ någon kontroll, bara som en skärm som kändes tom.
 korsande ord och är en egen sak att bygga — resten av banken är samma
 mekanik med olika ord, korsordet är det inte.
 
+## Orden eleven möter
+
+**325 distinkta ord**, ur tre källor:
+
+| Källa | Ord | Roll |
+|---|---|---|
+| `data/words.ts` | 76 | Ljudbara ord i Bokstavsresan, stegstyrda |
+| `data/sightWords.ts` | **100** | Ordbilder – de vanligaste orden i svenskan |
+| `data/banks.ts` | 203 | Övningsbankens innehåll |
+
+Ordbildsbanken var 30 ord. Mätt mot svenskans vanligaste ord täckte appen då
+92 % av de 25 vanligaste men bara **44 % av de 100** – och det som fattades
+var nästan uteslutande funktionsord: *sig, från, också, efter, eller, alla,
+ska, bara, då, kommer, hade, mycket, dem, vara, skulle, hur, vill*. Alltså
+precis vad den filen finns till för.
+
+Efter utökningen till 100:
+
+| | Före | Efter |
+|---|---|---|
+| Topp 25 | 92 % | **100 %** |
+| Topp 50 | 70 % | **98 %** |
+| Topp 100 | 44 % | **92 %** |
+
+De som fortfarande saknas är abstrakta substantiv – *människor, arbete,
+värld, samhälle*. De är vanliga i tidningstext men inte i det en elev på
+årskurs 1-nivå läser, så de är medvetet bortprioriterade.
+
+Frekvensordningen kommer ur allmän kunskap om svenska frekvenslistor, inte
+ur en korpusfil i repot. Den som vill ha exakta siffror bör stämma av mot
+Språkbanken.
+
+Storleken märks också i övningen: `makeSightWord` tar ett målord plus två
+distraktorer ur samma bank. Med 30 ord mötte eleven samma lilla krets om och
+om igen. Mätt över 29 steg × 3 nivåband × 40 frön byggs 709 ordbildsfrågor,
+och **alla 100 orden används**.
+
+`kollaOrdbilder()` i `dev/checkTasks.ts` håller banken ren: inga dubbletter,
+inga tomma poster, inga bilder (ordbilder ska sakna bild) och grafem som
+faktiskt stavar ordet.
+
 ## Bokstavsresan
 
 Åtta stationer. Varje station låser upp några bokstäver, och kortet visar

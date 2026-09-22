@@ -30,10 +30,11 @@ const katalogfel = mod.kollaKatalog();
 const bildordfel = mod.kollaBildord();
 const upprepfel = mod.kollaUpprepningar();
 const trafel = mod.kollaTrakistor();
+const ordbildfel = mod.kollaOrdbilder();
 const progfel = mod.kollaProgression();
 const { antal, fel } = mod.kollaAllaTasks();
 const pass = mod.kollaBokstavspass();
-const alla = [...katalogfel, ...bildordfel, ...upprepfel, ...trafel, ...progfel, ...fel, ...pass.fel];
+const alla = [...katalogfel, ...bildordfel, ...upprepfel, ...trafel, ...ordbildfel, ...progfel, ...fel, ...pass.fel];
 
 console.log(`Byggde ${antal} pass ur övningsbanken och ${pass.antal} pass ur Bokstavsresan.`);
 
