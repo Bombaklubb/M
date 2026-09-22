@@ -11,7 +11,7 @@ import {
 import { ExerciseRenderer } from '@/exercises/ExerciseRenderer';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import {
-  createQueue, currentExercise, isDone, markCorrect, markMissed,
+  createQueue, currentExercise, isDone, markKlarad, markMissed, nastaUppgift,
   elapsedSeconds, MISSAR_TILL_FACIT, type QueueState,
 } from '@/lib/queue';
 import { playCorrect, playFanfare, playMiss } from '@/lib/sfx';
@@ -26,26 +26,6 @@ export interface SessionResult {
   perItem: { exercise: Exercise; firstTry: boolean }[];
 }
 
-/**
- * Kör ett pass.
- *
- * Feedbackreglerna, som är hela poängen med appen:
- *  - Rätt: grön blixt, stigande ton, +XP – och sedan VÄNTAR passet. Eleven
- *    trycker själv på den gröna pilen för att gå vidare.
- *  - Första missen: mjuk duns, valet bleknar, instruktionen spelas om
- *    långsammare. Rätt svar avslöjas INTE – eleven får försöka själv igen.
- *  - Andra missen: rätt alternativ pulserar och eleven lotsas dit. Det
- *    räknas sedan som rätt-med-hjälp, vilket ger 3 XP i stället för 5.
- *  - TREDJE missen: rätt svar visas och sägs, och pilen tänds. Utan den
- *    utgången satt eleven fast i de övningar som saknar alternativ att
- *    peka på – i "Skriv ordet" kunde hon skriva fel hur många gånger som
- *    helst utan att något hände. Att fastna är misslyckandet, inte facit.
- *
- * Att passet inte byter uppgift av sig självt är avsiktligt. En elev som
- * behöver tio sekunder på sig att se att hon svarade rätt hann inte med när
- * skärmen bytte efter 900 ms – och hon kan inte läsa sig till vad som hände.
- * Nu står bilden kvar tills hon själv säger att hon är klar.
- */
 /**
  * Rätt svar som text, att visa efter tredje missen.
  *
@@ -73,6 +53,30 @@ function svaretPa(ex: Exercise): string | null {
   }
 }
 
+/**
+ * Kör ett pass.
+ *
+ * Feedbackreglerna, som är hela poängen med appen:
+ *  - Rätt: grön blixt, stigande ton, +XP – och sedan VÄNTAR passet. Eleven
+ *    trycker själv på den gröna pilen för att gå vidare.
+ *
+ *    Pricken tänds och poängen räknas i SAMMA stund som svaret ges, inte när
+ *    pilen trycks. Belöningen kom förut efter att eleven redan lämnat frågan,
+ *    och kopplingen mellan "jag svarade rätt" och "det hände något" bröts.
+ *  - Första missen: mjuk duns, valet bleknar, instruktionen spelas om
+ *    långsammare. Rätt svar avslöjas INTE – eleven får försöka själv igen.
+ *  - Andra missen: rätt alternativ pulserar och eleven lotsas dit. Det
+ *    räknas sedan som rätt-med-hjälp, vilket ger 3 XP i stället för 5.
+ *  - TREDJE missen: rätt svar visas och sägs, och pilen tänds. Utan den
+ *    utgången satt eleven fast i de övningar som saknar alternativ att
+ *    peka på – i "Skriv ordet" kunde hon skriva fel hur många gånger som
+ *    helst utan att något hände. Att fastna är misslyckandet, inte facit.
+ *
+ * Att passet inte byter uppgift av sig självt är avsiktligt. En elev som
+ * behöver tio sekunder på sig att se att hon svarade rätt hann inte med när
+ * skärmen bytte efter 900 ms – och hon kan inte läsa sig till vad som hände.
+ * Nu står bilden kvar tills hon själv säger att hon är klar.
+ */
 export function SessionView({
   exercises,
   profile,
@@ -130,6 +134,9 @@ export function SessionView({
       const firstTry = !queue.missed.has(exercise.id);
       const perItem = [...results, { exercise, firstTry }];
       setResults(perItem);
+      // Pricken tänds och poängen räknas NU, samtidigt som blixten – inte
+      // när eleven trycker sig vidare. Belöningen ska höra ihop med svaret.
+      setQueue(markKlarad(queue));
 
       // Pilen tänds när blixten slocknat – den ska inte dröja bara för att
       // berömmet står kvar längre. Uppgiften byts ändå aldrig av sig själv.
@@ -169,6 +176,7 @@ export function SessionView({
       setGuideTo(ratt?.id ?? null);
       const perItem = [...results, { exercise, firstTry: false }];
       setResults(perItem);
+      setQueue(markKlarad(nasteQ));
       // Säg svaret. Eleven kan inte läsa det som står på skärmen.
       window.setTimeout(() => void play(exercise.replay), 700);
       window.setTimeout(() => setVantarPaNasta(true), BLIXT_MS);
@@ -193,7 +201,7 @@ export function SessionView({
   const gaVidare = () => {
     if (!vantarPaNasta) return;
     setVantarPaNasta(false);
-    const next = markCorrect(queue);
+    const next = nastaUppgift(queue);
     setQueue(next);
     if (isDone(next)) finish(next, results);
   };

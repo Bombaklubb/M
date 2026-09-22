@@ -68,7 +68,14 @@ export interface TaskResult {
   senast: string;
 }
 
-export type KistTyp = 'tra' | 'silver' | 'guld';
+export type KistTyp =
+  | 'tra'
+  | 'silver'
+  | 'guld'
+  | 'smaragd'
+  | 'rubin'
+  | 'diamant'
+  | 'hemlig';
 
 /**
  * En kista eleven tjänat men kanske inte öppnat än.

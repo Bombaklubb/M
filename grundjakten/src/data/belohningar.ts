@@ -39,7 +39,66 @@ export const KIST_META: Record<
     xpMin: 80,
     xpMax: 150,
   },
+  // De fyra sällsynta. En elev som gör ett pass om dagen ser smaragden
+  // efter ett halvår och den hemliga kistan knappast alls – och det är
+  // meningen. En belöning som kommer ofta slutar vara en belöning.
+  smaragd: {
+    namn: 'Smaragdkista',
+    emoji: '💚',
+    tint: 'bg-lime-600 border-lime-700',
+    xpMin: 200,
+    xpMax: 350,
+  },
+  rubin: {
+    namn: 'Rubinkista',
+    emoji: '❤️',
+    tint: 'bg-red-500 border-red-700',
+    xpMin: 350,
+    xpMax: 550,
+  },
+  diamant: {
+    namn: 'Diamantkista',
+    emoji: '💎',
+    tint: 'bg-aqua-500 border-aqua-700',
+    xpMin: 550,
+    xpMax: 800,
+  },
+  hemlig: {
+    namn: 'Hemliga kistan',
+    emoji: '✨',
+    tint: 'bg-brand-600 border-brand-800',
+    xpMin: 900,
+    xpMax: 1400,
+  },
 };
+
+/**
+ * Hur ofta en träkista dyker upp.
+ *
+ * Varje pass gav förut en kista. Läraren rapporterade att det blev för många
+ * och för enkelt – en belöning som kommer varje gång slutar vara en
+ * belöning, den blir en kvittens.
+ *
+ * Mellanrummen är ojämna med flit: 3, 6, 4, 7, 5 pass och sedan om igen.
+ * Jämna mellanrum går att räkna ut, och då är överraskningen borta. Aldrig
+ * tätare än vart tredje pass, aldrig glesare än vart sjunde.
+ *
+ * Följden är deterministisk, inte slumpad. En elev som laddar om sidan ska
+ * inte kunna få en kista till på samma pass.
+ */
+const TRA_MELLANRUM = [3, 6, 4, 7, 5];
+const TRA_CYKEL = TRA_MELLANRUM.reduce((a, b) => a + b, 0);
+const TRA_TRAFFAR = TRA_MELLANRUM.reduce<number[]>(
+  (acc, gap) => [...acc, (acc[acc.length - 1] ?? 0) + gap],
+  []
+);
+
+/** Ger pass nummer `n` (1-baserat) en träkista? */
+export function traKistaEfterPass(n: number): boolean {
+  if (n <= 0) return false;
+  const iCykeln = ((n - 1) % TRA_CYKEL) + 1;
+  return TRA_TRAFFAR.includes(iCykeln);
+}
 
 /**
  * Milstolpar utöver kistan varje pass ger.
@@ -56,6 +115,10 @@ export const PASS_MILSTOLPAR: { pass: number; typ: KistTyp }[] = [
   { pass: 40, typ: 'guld' },
   { pass: 60, typ: 'guld' },
   { pass: 100, typ: 'guld' },
+  { pass: 150, typ: 'smaragd' },
+  { pass: 200, typ: 'rubin' },
+  { pass: 300, typ: 'diamant' },
+  { pass: 500, typ: 'hemlig' },
 ];
 
 export const XP_MILSTOLPAR: { xp: number; typ: KistTyp }[] = [
@@ -63,6 +126,10 @@ export const XP_MILSTOLPAR: { xp: number; typ: KistTyp }[] = [
   { xp: 700, typ: 'guld' },
   { xp: 1350, typ: 'guld' },
   { xp: 2700, typ: 'guld' },
+  { xp: 4500, typ: 'smaragd' },
+  { xp: 7000, typ: 'rubin' },
+  { xp: 10000, typ: 'diamant' },
+  { xp: 15000, typ: 'hemlig' },
 ];
 
 export interface Utmarkelse {

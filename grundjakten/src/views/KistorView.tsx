@@ -45,7 +45,7 @@ export function KistorView({
       id: 'kistor-greet',
       text: stangda.length
         ? `Du har ${stangda.length} kistor att öppna!`
-        : 'Inga kistor just nu. Gör ett pass så får du en.',
+        : 'Inga kistor just nu. De dyker upp då och då när du jobbat en stund.',
       lang: 'sv-SE',
     },
     profile.settings.autoSpeakPrompts
@@ -81,7 +81,7 @@ export function KistorView({
               <span className="font-bold text-amberx-100">
                 {stangda.length > 0
                   ? `${stangda.length} att öppna`
-                  : 'Gör ett pass så får du en'}
+                  : 'Dyker upp då och då'}
               </span>
             </div>
           </div>
@@ -162,7 +162,7 @@ export function KistorView({
 
         {stangda.length === 0 && (
           <p className="rounded-card bg-white/85 p-5 text-ink-500 dark:bg-ink-800/85">
-            Inga kistor att öppna just nu. Varje avklarat pass ger en ny.
+            Inga kistor att öppna just nu. De dyker upp då och då när du jobbat en stund.
           </p>
         )}
 
@@ -195,25 +195,26 @@ export function KistorView({
             Så får man kistor
           </h2>
           <ul className="flex flex-col gap-1 text-ink-700 dark:text-ink-200">
-            {/* Alla tre visar sin egen STÄNGDA kista. Förklaringen handlar om
-                vad man kan få, inte om något man redan öppnat – och silver
-                och guld stod förut som 🪙 och 🏆, ett mynt och en pokal, så
-                eleven kunde inte känna igen dem bland sina kistor. */}
-            <li className="flex items-center gap-2">
-              <KistBild typ="tra" oppnad={false} size={28} />
-              <span><strong>Träkista</strong> – varje avklarat pass.</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <KistBild typ="silver" oppnad={false} size={28} />
-              <span><strong>Silverkista</strong> – vid 5, 10 och 25 pass, och vid 250 poäng.</span>
-            </li>
-            <li className="flex items-center gap-2">
-              <KistBild typ="guld" oppnad={false} size={28} />
-              <span>
-                <strong>Guldkista</strong> – vid 15, 40, 60 och 100 pass, och vid
-                700, 1350 och 2700 poäng.
-              </span>
-            </li>
+            {/* Varje kista visar sin egen STÄNGDA bild. Förklaringen
+                handlar om vad man kan få, inte om något man redan öppnat –
+                och silver och guld stod förut som 🪙 och 🏆, ett mynt och en
+                pokal, så eleven kunde inte känna igen dem bland sina kistor. */}
+            {[
+              { typ: 'tra' as const, text: 'då och då när du klarat några pass.' },
+              { typ: 'silver' as const, text: 'vid 5, 10 och 25 pass, och vid 250 poäng.' },
+              { typ: 'guld' as const, text: 'vid 15, 40, 60 och 100 pass, och vid 700, 1350 och 2700 poäng.' },
+              { typ: 'smaragd' as const, text: 'vid 150 pass, och vid 4500 poäng.' },
+              { typ: 'rubin' as const, text: 'vid 200 pass, och vid 7000 poäng.' },
+              { typ: 'diamant' as const, text: 'vid 300 pass, och vid 10 000 poäng.' },
+              { typ: 'hemlig' as const, text: 'vid 500 pass, och vid 15 000 poäng.' },
+            ].map((rad) => (
+              <li key={rad.typ} className="flex items-center gap-2">
+                <KistBild typ={rad.typ} oppnad={false} size={28} />
+                <span>
+                  <strong>{KIST_META[rad.typ].namn}</strong> – {rad.text}
+                </span>
+              </li>
+            ))}
           </ul>
           <p className="mt-3 text-sm text-ink-500">
             Silver- och guldkistor kan innehålla en utmärkelse. Den syns sedan på

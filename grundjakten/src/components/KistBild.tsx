@@ -31,6 +31,13 @@ const BILDER: Record<KistTyp, { stangd: string; oppen: string }> = {
   tra: { stangd: '/kista-tra-stangd.png', oppen: '/kista-tra-oppen.png' },
   silver: { stangd: '/kista-silver-stangd.png', oppen: '/kista-silver-oppen.png' },
   guld: { stangd: '/kista-guld-stangd.png', oppen: '/kista-guld-oppen.png' },
+  smaragd: { stangd: '/kista-smaragd-stangd.png', oppen: '/kista-smaragd-oppen.png' },
+  rubin: { stangd: '/kista-rubin-stangd.png', oppen: '/kista-rubin-oppen.png' },
+  diamant: { stangd: '/kista-diamant-stangd.png', oppen: '/kista-diamant-oppen.png' },
+  // Den hemliga kistan saknar öppen variant i uppsättningen. Den SUDDIGA
+  // bilden får vara den stängda – man ska inte se vad det är förrän den är
+  // öppnad, och det är hela poängen med den.
+  hemlig: { stangd: '/kista-hemlig-stangd.png', oppen: '/kista-hemlig-oppen.png' },
 };
 
 export function KistBild({
