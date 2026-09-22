@@ -39,8 +39,11 @@ export async function POST(req: NextRequest) {
         // återkommande elever) – den här ger verkligt unika enheter.
         await redis.sadd(`${KEY_PREFIX}visitors:all`, event.deviceId);
         await redis.incr(`${KEY_PREFIX}pageviews:${today}`);
-        // TTL 5 minuter för "aktiva nu"
-        await redis.set(`${KEY_PREFIX}active:${event.deviceId}`, '1', { ex: 300 });
+        // "Aktiva nu" som en sorterad mängd med tidsstämpel i stället för en
+        // nyckel per enhet med TTL. Nycklarna gick bara att räkna med KEYS,
+        // ett svep över hela nyckelrymden vid varje hämtning i lärarvyn.
+        // Samma kostnad här, men räkningen blir ett enda zcard.
+        await redis.zadd(`${KEY_PREFIX}active`, { score: Date.now(), member: event.deviceId });
         break;
 
       case 'task_complete':

@@ -3,12 +3,88 @@
  *
  * Returnerar aggregerad, anonym statistik.
  * Kräver lösenord för åtkomst.
+ *
+ * Kostnaden är räknad i Redis-kommandon, för databasen ligger på en fri nivå
+ * med 500 000 kommandon i månaden. Den här rutten kostade 78 kommandon per
+ * hämtning — två KEYS-svep över hela nyckelrymden, ett sunionstore och två
+ * slingor över fjorton dagar — och lärarvyn hämtade var trettionde sekund.
+ * Det blev 9 360 kommandon i timmen från en flik som stod öppen.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
 import { redis, KEY_PREFIX, getTodayKey, getDateKey } from '@/lib/redis';
 
 const TEACHER_PASSWORD = process.env.TEACHER_PASSWORD || 'Engelskajakten';
+
+const HISTORY_DAYS = 14;
+/** Hur länge en enhet räknas som "aktiv nu" efter sitt senaste besök. */
+const ACTIVE_WINDOW_MS = 5 * 60 * 1000;
+
+interface DayStats {
+  visitors: number;
+  tasks: number;
+  time: number;
+  errors: number;
+  errorsByType: Record<string, number>;
+}
+
+/**
+ * Färdiga dygn ändras aldrig, så de hämtas en gång per instans och sedan inte
+ * mer. Bara dagens siffror läses om vid varje hämtning. Dagens nyckel sparas
+ * aldrig här, så en instans som lever över midnatt hämtar gårdagen på nytt
+ * när den väl blivit gårdag.
+ */
+const finishedDays = new Map<string, DayStats>();
+
+async function readDay(dateKey: string): Promise<DayStats> {
+  const [visitors, tasks, time, errors, errorsByType] = await Promise.all([
+    redis.scard(`${KEY_PREFIX}visitors:${dateKey}`),
+    redis.get<number>(`${KEY_PREFIX}tasks:${dateKey}`),
+    redis.get<number>(`${KEY_PREFIX}time:${dateKey}`),
+    redis.get<number>(`${KEY_PREFIX}total_errors:${dateKey}`),
+    redis.hgetall<Record<string, number>>(`${KEY_PREFIX}errors:${dateKey}`),
+  ]);
+  return {
+    visitors: visitors || 0,
+    tasks: tasks || 0,
+    time: time || 0,
+    errors: errors || 0,
+    errorsByType: errorsByType || {},
+  };
+}
+
+async function getDay(dateKey: string, today: string): Promise<DayStats> {
+  if (dateKey !== today) {
+    const cached = finishedDays.get(dateKey);
+    if (cached) return cached;
+  }
+  const stats = await readDay(dateKey);
+  if (dateKey !== today) finishedDays.set(dateKey, stats);
+  return stats;
+}
+
+/**
+ * Verkligt unika enheter. Mängden visitors:all fylls på vid varje besök, men
+ * data som samlades in innan den fanns ligger bara i dagsmängderna. Den
+ * hopslagningen behöver göras en enda gång — förut gjordes den om vid varje
+ * hämtning, med ett KEYS-svep och ett sunionstore som växer med historiken.
+ * Är mängden tom är den antingen ny eller aldrig ifylld; då, och bara då,
+ * byggs den upp från dagsmängderna.
+ */
+async function countUniqueDevices(): Promise<number> {
+  const allKey = `${KEY_PREFIX}visitors:all`;
+  try {
+    const known = await redis.scard(allKey);
+    if (known > 0) return known;
+
+    const dayKeys = (await redis.keys(`${KEY_PREFIX}visitors:*`)).filter((k) => k !== allKey);
+    if (dayKeys.length === 0) return 0;
+    await redis.sunionstore(allKey, allKey, ...dayKeys);
+    return await redis.scard(allKey);
+  } catch {
+    return 0;
+  }
+}
 
 function formatTime(seconds: number): string {
   const hours = Math.floor(seconds / 3600);
@@ -27,77 +103,51 @@ export async function POST(req: NextRequest) {
 
     const today = getTodayKey();
 
-    // Aktiva nu (keys med TTL)
-    const activeKeys = await redis.keys(`${KEY_PREFIX}active:*`);
-    const activeNow = activeKeys.length;
+    // Aktiva nu. Låg förut som en nyckel per enhet med TTL, vilket bara gick
+    // att räkna med KEYS — ett svep över hela nyckelrymden. Nu är det en
+    // sorterad mängd med tidsstämplar: en städning och en räkning.
+    const activeKey = `${KEY_PREFIX}active`;
+    await redis.zremrangebyscore(activeKey, 0, Date.now() - ACTIVE_WINDOW_MS);
+    const activeNow = await redis.zcard(activeKey);
 
-    // Idag
-    const visitorsToday = await redis.scard(`${KEY_PREFIX}visitors:${today}`);
-    const tasksToday = (await redis.get<number>(`${KEY_PREFIX}tasks:${today}`)) || 0;
-    const totalTimeToday = (await redis.get<number>(`${KEY_PREFIX}time:${today}`)) || 0;
-    const totalErrorsToday = (await redis.get<number>(`${KEY_PREFIX}total_errors:${today}`)) || 0;
+    const uniqueDevices = await countUniqueDevices();
 
-    // ── Verkligt unika enheter (hela historiken) ────────────────────────────
-    // Dagsmängderna får inte summeras – en elev som varit inne 10 dagar skulle
-    // då räknas som 10 enheter. Vi håller därför en permanent mängd
-    // "visitors:all". Den fylls på vid varje besök, men för data som samlats in
-    // innan den fanns bygger vi upp den här från samtliga dagsmängder.
-    const allKey = `${KEY_PREFIX}visitors:all`;
-    let uniqueDevices = 0;
-    try {
-      const dayKeys = (await redis.keys(`${KEY_PREFIX}visitors:*`)).filter((k) => k !== allKey);
-      if (dayKeys.length > 0) {
-        // Slå ihop alla dagar + den permanenta mängden till en sanning.
-        await redis.sunionstore(allKey, allKey, ...dayKeys);
-      }
-      uniqueDevices = await redis.scard(allKey);
-    } catch {
-      uniqueDevices = 0;
+    // Dygnen, nyaste först. Bara dagens läses om; de färdiga ligger kvar.
+    const days: { date: string; stats: DayStats }[] = [];
+    for (let i = 0; i < HISTORY_DAYS; i++) {
+      const dateKey = getDateKey(i);
+      days.push({ date: dateKey, stats: await getDay(dateKey, today) });
     }
 
-    // Senaste 14 dagarna
-    const dailyStats: { date: string; visitors: number; tasks: number }[] = [];
+    const todayStats = days[0].stats;
+
     let totalVisitors = 0;
     let totalTasks = 0;
     let totalTime = 0;
     let totalErrors = 0;
-
-    for (let i = 0; i < 14; i++) {
-      const dateKey = getDateKey(i);
-      const visitors = await redis.scard(`${KEY_PREFIX}visitors:${dateKey}`);
-      const tasks = (await redis.get<number>(`${KEY_PREFIX}tasks:${dateKey}`)) || 0;
-      const time = (await redis.get<number>(`${KEY_PREFIX}time:${dateKey}`)) || 0;
-      const errors = (await redis.get<number>(`${KEY_PREFIX}total_errors:${dateKey}`)) || 0;
-
-      dailyStats.push({ date: dateKey, visitors, tasks });
-      totalVisitors += visitors;
-      totalTasks += tasks;
-      totalTime += time;
-      totalErrors += errors;
-    }
-
-    // Vanligaste fel (aggregerat 14 dagar)
     const allErrors: Record<string, number> = {};
-    for (let i = 0; i < 14; i++) {
-      const dateKey = getDateKey(i);
-      const dayErrors = await redis.hgetall<Record<string, number>>(`${KEY_PREFIX}errors:${dateKey}`) || {};
-      for (const [type, count] of Object.entries(dayErrors)) {
-        allErrors[type] = (allErrors[type] || 0) + (count as number);
+    for (const { stats } of days) {
+      totalVisitors += stats.visitors;
+      totalTasks += stats.tasks;
+      totalTime += stats.time;
+      totalErrors += stats.errors;
+      for (const [type, count] of Object.entries(stats.errorsByType)) {
+        allErrors[type] = (allErrors[type] || 0) + Number(count);
       }
     }
 
     const topErrors = Object.entries(allErrors)
-      .sort(([, a], [, b]) => (b as number) - (a as number))
+      .sort(([, a], [, b]) => b - a)
       .slice(0, 5)
-      .map(([type, count]) => ({ type, count: count as number }));
+      .map(([type, count]) => ({ type, count }));
 
     return NextResponse.json({
       activeNow,
-      visitorsToday,
-      tasksToday,
-      totalTimeToday: formatTime(totalTimeToday),
-      totalTimeTodaySeconds: totalTimeToday,
-      totalErrorsToday,
+      visitorsToday: todayStats.visitors,
+      tasksToday: todayStats.tasks,
+      totalTimeToday: formatTime(todayStats.time),
+      totalTimeTodaySeconds: todayStats.time,
+      totalErrorsToday: todayStats.errors,
       uniqueDevices,          // verkligt unika enheter, hela historiken
       totalVisitors,          // summa av dagliga besök senaste 14 dagarna (dubbelräknar återbesök)
       totalTasks,
@@ -105,7 +155,11 @@ export async function POST(req: NextRequest) {
       totalTimeSeconds: totalTime,
       totalErrors,
       topErrors,
-      dailyStats: dailyStats.reverse(),
+      dailyStats: days.map(({ date, stats }) => ({
+        date,
+        visitors: stats.visitors,
+        tasks: stats.tasks,
+      })).reverse(),
       gdprNote: 'Anonymiserad aggregerad statistik – ingen personlig data lagras',
     });
   } catch (error) {
