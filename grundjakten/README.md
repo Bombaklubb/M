@@ -197,38 +197,28 @@ Det är därför också appens enda skärm med löpande text.
 
 ## Kistor och utmärkelser
 
-Motivationsdelen, byggd som Svenskajaktens.
+Sju sorters kistor: **trä, silver, guld, smaragd, rubin, diamant** och
+**Hemliga kistan**. Bilderna kommer ur Mattejaktens uppsättning, kopierade
+till `public/` och avbakgrundade (se *Startskärmen*). Den hemliga kistan har
+ingen öppen variant i uppsättningen – där är den **suddiga** bilden den
+stängda, vilket passar: man ska inte se vad det är förrän den är öppnad.
 
-**Kistor** nås via kist-ikonen i headern, som bär en röd siffra när något är
-oöppnat – siffran är det enda som lockar en elev som inte kan läsa. En oöppnad
-kista är stor, skakar, och det finns inget annat att göra med den än att
-trycka. Öppningen ger poäng, och silver och guld kan dessutom ge en utmärkelse.
+Träkistan kommer **inte** varje pass. Den gjorde det förut, och läraren
+rapporterade att det blev för många och för enkelt – en belöning som kommer
+varje gång slutar vara en belöning och blir en kvittens. Mellanrummen är nu
+ojämna med flit: **3, 6, 4, 7, 5** pass och sedan om igen. Aldrig tätare än
+vart tredje, aldrig glesare än vart sjunde. Jämna mellanrum går att räkna ut,
+och då är överraskningen borta.
 
-| Kista | Ges vid |
-|---|---|
-| 📦 Träkista | varje avklarat pass |
-| 🪙 Silverkista | 5, 10 och 25 pass, samt 250 poäng |
-| 🏆 Guldkista | 15, 40, 60 och 100 pass, samt 700, 1350 och 2700 poäng |
+Följden är **deterministisk**, inte slumpad: en elev som laddar om sidan ska
+inte kunna få en kista till på samma pass. `kollaTrakistor()` i
+`dev/checkTasks.ts` håller gränserna och fäller bygget om mellanrummen blir
+jämna.
 
-Varje pass ger en kista *och* milstolparna ger silver och guld ovanpå: täta
-små framgångar för en elev som behöver dem, och något att jobba mot.
+De övriga sex är milstolpar på antal pass och på poäng, och blir alltmer
+sällsynta: silver vid 5 pass, hemliga kistan vid 500. Trösklarna står i
+`PASS_MILSTOLPAR` och `XP_MILSTOLPAR` i `data/belohningar.ts`.
 
-Varje milstolpe bokförs i `progress.utdelade` och kan bara betalas en gång.
-Det är vad som hindrar en kedjereaktion – en öppnad kista ger poäng, som kan
-passera nästa poängmilstolpe, som ger en ny kista.
-
-**Utmärkelserna** ligger på framstegssidan, tolv stycken. Kraven räknas på
-sådant appen faktiskt mäter: avklarade pass, bemästrade bokstäver, klarade
-uppgifter, dagar i rad. Låsta visas som hänglås med sitt krav – att se vad som
-finns kvar är halva motivationen – och varje utmärkelse har ett öra som säger
-antingen vad som krävs eller att den är klar.
-
-Regeln ligger som en funktion bredvid sin egen beskrivning i
-`data/belohningar.ts`. Skrevs de på två ställen kunde texten och villkoret
-glida isär, och eleven skulle se ett krav hon redan uppfyllt stå kvarlåst.
-
-En utmärkelse tas aldrig ifrån eleven, inte ens om villkoret skulle sluta
-gälla. Samma princip som bästa resultat per uppgift.
 
 ## Poängrutan
 
@@ -284,15 +274,23 @@ upp igen efter att eleven svarat rätt, och mätningen gav 46 upprepningar
 fördelade på elva uppgifter.
 
 Sållningen sker nu på `fraganI()` i `lib/generators/taskBuilders.ts`: det
-eleven SER eller ska svara, inte uppgiftens id. Bokstavsresans egen generator
-har samma sållning, och där räknas ordet som samma fråga oavsett om det ska
-ljudas eller läsas – två olika uppgifter för den som byggt appen, samma ord
-för eleven.
+eleven SER eller ska svara, inte uppgiftens id. Nyckeln normaliseras till
+**ordet** – samma ord är samma fråga vare sig det ska byggas av brickor,
+ljudas eller läsas. Det är två olika uppgifter för den som byggt appen, men
+ett och samma ord för eleven.
+
+Det tog två försök att få rätt. Första gången hette nyckeln `bygg:mor`,
+`ord:w-mor` eller `svar:mor` beroende på övningstyp, så "mor" kunde komma
+igen trots sållningen. Och appen har **tre** passgeneratorer, inte två –
+övningsbanken, Bokstavsresan och Skriva. Den tredje saknades både i fixen och
+i kontrollen, och det var just där felet syntes: 70 upprepningar i
+Skriva-modulen ensam.
 
 Passet blir hellre kortare än upprepande. "Veckodagar före/efter" har sju
 dagar att fråga om, och då är sju frågor rätt antal, inte åtta med en
-dubblett. `kollaUpprepningar()` bygger varje uppgift med fem frön och varje
-bokstavspass med tre, och fäller bygget om något ord kommer igen.
+dubblett. `kollaUpprepningar()` bygger varje uppgift i katalogen och varje pass ur
+**alla tre** generatorerna med fem frön, och fäller bygget om något ord
+kommer igen.
 
 I *Sätt ihop ord bild* blandas bildraden så att **ingen bild hamnar mitt
 emot sitt eget ord**. Blandningen fanns redan men seedades ur

@@ -1,5 +1,6 @@
 import type { Choice, Exercise, Lang, QuizEx, SpeechToken } from '@/types';
 import { mulberry32, pickN, shuffle, type Rng } from '@/lib/rng';
+import { WORDS } from '@/data/words';
 
 /**
  * Hjälpare som gör om ordbankerna till övningar.
@@ -115,6 +116,13 @@ export function orderItems(prompt: string, target: string[], rng: Rng, lang: Lan
   };
 }
 
+const ORD_TEXT = new Map(WORDS.map((w) => [w.id, w.text]));
+
+/** Alla ordfrågor får samma nyckel, oavsett hur de är förpackade. */
+function ordNyckel(ord: string): string {
+  return `ord:${ord.trim().toLowerCase()}`;
+}
+
 /**
  * Vad eleven faktiskt blir tillfrågad om.
  *
@@ -126,20 +134,26 @@ export function orderItems(prompt: string, target: string[], rng: Rng, lang: Lan
  * en möjlig upprepning än ett pass som tystnar för att nyckeln var fel.
  */
 export function fraganI(ex: Exercise): string | null {
-  if (ex.kind === 'type-the-word') return `svar:${ex.answer}`;
-  if (ex.kind === 'build-word-tiles') return `bygg:${ex.target.join('')}`;
+  // ORDET först, före övningstypen. Samma ord är samma fråga för eleven,
+  // vare sig hon ska bygga det av brickor, ljuda det eller läsa det.
+  //
+  // Det här var felet läraren såg: "mor" kom två gånger i samma pass trots
+  // att hon svarat rätt. Nycklarna hette `bygg:mor`, `ord:w-mor` och
+  // `svar:mor` beroende på övningstyp, så sållningen såg tre olika frågor
+  // där eleven såg ett och samma ord.
+  if ('wordId' in ex && ex.wordId) {
+    return ordNyckel(ORD_TEXT.get(ex.wordId) ?? ex.wordId);
+  }
+  if (ex.kind === 'type-the-word') return ordNyckel(ex.answer);
+  if (ex.kind === 'build-word-tiles') return ordNyckel(ex.target.join(''));
   if (ex.kind === 'build-sentence-cards') return `mening:${ex.target.join(' ')}`;
   if (ex.kind === 'order-items') return `ordning:${ex.target.join(',')}`;
-  // wordId täcker Bokstavsresans ordövningar. Att ljuda "sol" och sedan läsa
-  // "sol" är två olika uppgifter för den som byggt appen, men samma ord för
-  // eleven – och det är eleven regeln gäller.
-  if ('wordId' in ex && ex.wordId) return `ord:${ex.wordId}`;
-  if ('shownWord' in ex && ex.shownWord) return `ord:${ex.shownWord}`;
+  if ('shownWord' in ex && ex.shownWord) return ordNyckel(ex.shownWord);
   if ('shown' in ex && ex.shown) {
     const s = ex.shown as {
       word?: string; letter?: string; sentence?: string; emoji?: string;
     };
-    if (s.word) return `ord:${s.word}`;
+    if (s.word) return ordNyckel(s.word);
     if (s.sentence) return `mening:${s.sentence}`;
     if (s.emoji) return `bild:${s.emoji}`;
     if (s.letter) return `bokstav:${s.letter}`;
@@ -195,11 +209,15 @@ export function buildFromBank<T>(
   make: (item: T, rng: Rng, bank: T[], index: number) => Exercise | null
 ): Exercise[] {
   const rng = mulberry32(seed);
-  const urval = pickN(bank, Math.min(size, bank.length), rng);
+  // Hela banken blandas, inte bara `size` poster. Sållas en fråga bort tas
+  // nästa kandidat i stället – uppgiften ERSÄTTS, passet blir inte kortare.
+  // Plockade vi exakt `size` i förväg fanns inget att ersätta med.
+  const urval = shuffle(bank, rng);
   const out: Exercise[] = [];
   const stallda = new Set<string>();
 
   for (const [index, item] of urval.entries()) {
+    if (out.length >= size) break;
     const made = make(item, rng, bank, index);
     if (!made) continue;
     // Olika bankposter kan ändå ge SAMMA fråga på skärmen, och det är frågan

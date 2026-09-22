@@ -1,5 +1,6 @@
 import type { Exercise } from '@/types';
 import { TASKS } from '@/data/tasks';
+import { traKistaEfterPass } from '@/data/belohningar';
 import { MAX_STEP, PROGRESSION_STEPS } from '@/data/progression';
 import { LETTERS } from '@/data/letters';
 import { WORDS, newWordsAtStep } from '@/data/words';
@@ -8,6 +9,7 @@ import {
   LANGA_VOKALER, LIKNELSER_DJUR, LJUDSTRIDIGA, SAMMANSATTA, SUBSTANTIV, VERB,
 } from '@/data/banks';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
+import { generateWritePass } from '@/lib/generators/writingExercises';
 import { fraganI } from '@/lib/generators/taskBuilders';
 import type { LevelBand } from '@/types';
 
@@ -240,6 +242,52 @@ export function kollaUpprepningar(seeds = [1, 7, 42, 12345, 987654]): Fel[] {
         rakna(generateLetterPass(steg, band, seed), `Bokstavsresan steg ${steg} band ${band}`, seed);
       }
     }
+  }
+
+  // Skriva har en TREDJE generator. Den saknades i kontrollen, och det var
+  // just där läraren fick "mor" två gånger – felet gick därför oupptäckt
+  // genom två omgångar av den här kontrollen.
+  for (const mode of ['type', 'build', 'form'] as const) {
+    for (let steg = 1; steg <= MAX_STEP; steg++) {
+      for (const band of [1, 2, 3] as LevelBand[]) {
+        for (const seed of seeds) {
+          rakna(generateWritePass(mode, steg, band, seed),
+                `Skriva ${mode} steg ${steg} band ${band}`, seed);
+        }
+      }
+    }
+  }
+  return fel;
+}
+
+/**
+ * Träkistan ska komma oregelbundet, men inom rimliga gränser.
+ *
+ * Varje pass gav förut en kista och det blev en kvittens i stället för en
+ * belöning. Den här kontrollen håller intervallet på plats: aldrig tätare än
+ * vart tredje pass, aldrig glesare än vart sjunde, och mellanrummen får inte
+ * vara lika stora – då går de att räkna ut och överraskningen är borta.
+ */
+export function kollaTrakistor(): Fel[] {
+  const fel: Fel[] = [];
+  const traffar: number[] = [];
+  for (let n = 1; n <= 200; n++) if (traKistaEfterPass(n)) traffar.push(n);
+
+  if (traffar.length === 0) {
+    fel.push({ task: 'trakista', seed: 0, meddelande: 'ingen träkista delas ut alls' });
+    return fel;
+  }
+
+  const gap: number[] = [];
+  let forra = 0;
+  for (const t of traffar) { gap.push(t - forra); forra = t; }
+
+  const min = Math.min(...gap);
+  const max = Math.max(...gap);
+  if (min < 3) fel.push({ task: 'trakista', seed: 0, meddelande: `kommer så tätt som vart ${min}:e pass` });
+  if (max > 7) fel.push({ task: 'trakista', seed: 0, meddelande: `kommer så sällan som vart ${max}:e pass` });
+  if (new Set(gap).size < 2) {
+    fel.push({ task: 'trakista', seed: 0, meddelande: 'jämna mellanrum – går att räkna ut' });
   }
   return fel;
 }

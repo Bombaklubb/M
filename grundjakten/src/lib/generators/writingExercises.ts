@@ -4,6 +4,7 @@ import { unlockedLetters } from '@/data/progression';
 import { wordsUpToStep } from '@/data/words';
 import { soundTokenFor } from '@/lib/audio';
 import { mulberry32, pick, pickN, shuffle, type Rng } from '@/lib/rng';
+import { fraganI } from '@/lib/generators/taskBuilders';
 
 const PASS_SIZE = 8;
 
@@ -83,6 +84,7 @@ export function generateWritePass(
   const focus = unlockedLetters(step).filter((id) => LETTER_BY_ID[id]?.step === step);
   const pool = shuffle([...focus, ...focus, ...unlocked], rng);
   const out: Exercise[] = [];
+  const stallda = new Set<string>();
 
   let guard = 0;
   while (out.length < PASS_SIZE && guard++ < 200) {
@@ -91,7 +93,17 @@ export function generateWritePass(
     else if (mode === 'build') made = makeBuildWord(step, level, rng);
     else made = makeFormation(pick(pool, rng), rng);
 
-    if (made && !out.some((e) => e.id === made!.id)) out.push(made);
+    // Sållningen satt förut på `made.id`, som sätts av en räknare och alltid
+    // är unikt – den släppte alltså igenom allt. Läraren fick "mor" två
+    // gånger i samma pass i just den här modulen. Nu sållas det på FRÅGAN,
+    // och slumpen får ta fram en ersättare i stället.
+    if (!made) continue;
+    const nyckel = fraganI(made);
+    if (nyckel !== null) {
+      if (stallda.has(nyckel)) continue;
+      stallda.add(nyckel);
+    }
+    out.push(made);
   }
   return out;
 }

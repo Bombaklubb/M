@@ -16,6 +16,7 @@ import { generateWritePass, type WriteMode } from '@/lib/generators/writingExerc
 import { getCurrentUser, getProfile, getProgress, saveProfile, saveProgress, setCurrentUser } from '@/lib/storage';
 import { addXp, recordAnswer, shouldAdvanceLevel, shouldAdvanceStep, touchDailyStreak } from '@/lib/progress';
 import { nyaKistor, oppnaKista, passKista, utvarderaUtmarkelser } from '@/lib/belohningar';
+import { traKistaEfterPass } from '@/data/belohningar';
 import { setRateScale } from '@/lib/audio';
 import { todayStamp } from '@/lib/utils';
 
@@ -109,11 +110,13 @@ export default function App() {
     next = touchDailyStreak(next);
 
     const module = result.perItem[0]?.exercise.module ?? 'bokstaver';
+    // Träkistan kommer INTE varje pass. Den gav förut en kista varje gång,
+    // och då blev den en kvittens i stället för en belöning. Mellanrummen är
+    // ojämna – 3, 6, 4, 7, 5 pass – så den ska kännas oväntad.
+    const passNr = next.sessions.length + 1;
     next = {
       ...next,
-      // Varje avklarat pass ger en träkista. Milstolparna nedan lägger till
-      // silver och guld ovanpå.
-      kistor: [...next.kistor, passKista()],
+      kistor: traKistaEfterPass(passNr) ? [...next.kistor, passKista()] : next.kistor,
       sessions: [
         ...next.sessions,
         {
