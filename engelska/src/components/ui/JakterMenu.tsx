@@ -11,7 +11,8 @@ const SwedishFlag = () => (
   </svg>
 );
 
-const APPS = [
+// Exporteras så att Om-sidan beskriver exakt samma länkar som menyn visar.
+export const JAKT_APPS = [
   { label: "Läsjakten",    url: "https://lasjakten.vercel.app",    icon: <span className="text-base leading-none">📚</span> },
   { label: "Mattejakten",  url: "https://mattejakten.vercel.app",  icon: <span className="text-base leading-none">🔢</span> },
   { label: "Svenskajakten",url: "https://svenskajakten.vercel.app",icon: <SwedishFlag /> },
@@ -36,7 +37,7 @@ export default function JakterMenu() {
     <div ref={ref} className="relative pointer-events-auto">
       {open && (
         <div className="absolute bottom-7 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-xl border border-white/20 overflow-hidden min-w-[190px]">
-          {APPS.map((app) => (
+          {JAKT_APPS.map((app) => (
             <a
               key={app.url}
               href={app.url}

@@ -7,6 +7,15 @@ import { loadStudent } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { CHEST_META } from "@/lib/gamification";
 import type { StudentData, ChestType } from "@/lib/types";
+import { JAKT_APPS } from "@/components/ui/JakterMenu";
+
+/** Vad varje app i Jaktlänkar tränar. Länkarna själva kommer från menyn. */
+const JAKT_BESKRIVNING: Record<string, string> = {
+  Läsjakten: "läsförståelse på svenska.",
+  Mattejakten: "matematik.",
+  Svenskajakten: "svenska.",
+  Readhunt: "läsförståelse på engelska.",
+};
 
 // ─── Om Engelskajakten ────────────────────────────────────────────────────────
 // Förklarar appen för elever, vårdnadshavare och kollegor. Siffrorna här speglar
@@ -115,7 +124,16 @@ export default function OmPage() {
             surfplatta och mobil.
           </p>
           <p className="text-sm">
-            Läsförståelse på engelska tränas i en separat app, <strong>Readhunt</strong>.
+            Läsförståelse på engelska tränas i en separat app,{" "}
+            <a
+              href="https://readhunt.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-en-600 dark:text-en-300 underline underline-offset-2 hover:text-en-700"
+            >
+              Readhunt
+            </a>
+            .
           </p>
         </Section>
 
@@ -199,8 +217,9 @@ export default function OmPage() {
             ))}
           </ul>
           <p className="text-sm">
-            Ett spel ger som mest 150 poäng per omgång, och efter tre omgångar samma dag ger det mindre
-            och mindre. Spelen är alltså ett komplement till kapitlen, inte en genväg.
+            Spelen öppnas när du klarat ett kapitel under dagen och är sedan öppna till midnatt. Ett spel
+            ger som mest 150 poäng per omgång och 400 poäng per dag, och efter tre omgångar samma dag ger
+            det mindre och mindre. Spelen är alltså en belöning för kapitlen, inte en genväg förbi dem.
           </p>
         </Section>
 
@@ -280,9 +299,10 @@ export default function OmPage() {
 
         <Section emoji="⚔️" title="Bossen">
           <p>
-            Efter fem avklarade kapitel låses <strong>bossutmaningen</strong> upp. Den är en snabb
-            frågeomgång som ger extrapoäng och märket Bossbesegrare. De två första segrarna ger också en
-            kista.
+            Varje värld har en egen <strong>boss</strong>. När du klarat tio kapitel i en värld får du
+            möta den världens boss, och varje ny strid kostar tio kapitel till. Kapitel i andra världar
+            räknas inte. Vinner du får du upp till 200 bonuspoäng och en kista, och första gången också
+            ett märke. Bosskortet under fliken Spel visar hur många kapitel som är kvar.
           </p>
         </Section>
 
@@ -293,6 +313,37 @@ export default function OmPage() {
             stegen, för grammatik, stavning, spel, för att vara flitig, och några som är svårare att lista
             ut.
           </p>
+        </Section>
+
+        <Section emoji="🧭" title="Jaktlänkar">
+          <p>
+            Längst ned till höger på varje sida finns knappen <strong>Jaktlänkar ▴</strong>. Den
+            öppnar en meny med länkar till de andra apparna i samma familj. De öppnas i en ny flik, så
+            Engelskajakten ligger kvar där du var.
+          </p>
+          <ul className="space-y-2.5">
+            {JAKT_APPS.map((app) => (
+              <li key={app.url} className="flex gap-3 items-start">
+                <span className="flex-none w-8 h-8 rounded-xl bg-en-50 dark:bg-gray-700 flex items-center justify-center" aria-hidden="true">
+                  {app.icon}
+                </span>
+                <span>
+                  <a
+                    href={app.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-en-600 dark:text-en-300 underline underline-offset-2 hover:text-en-700"
+                  >
+                    {app.label}
+                  </a>{" "}
+                  – {JAKT_BESKRIVNING[app.label] ?? ""}{" "}
+                  <span className="text-xs text-gray-500 dark:text-gray-400">
+                    ({app.url.replace("https://", "")})
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ul>
         </Section>
 
         <Section emoji="💡" title="Bra att veta">
