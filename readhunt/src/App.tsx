@@ -27,7 +27,7 @@ import {
 import {
   trackPageView,
   startSession,
-  trackTaskComplete,
+  trackExerciseComplete,
 } from './services/analyticsService';
 import { getRandomText } from './services/libraryService';
 import {
@@ -202,10 +202,12 @@ function App() {
       const userAnswer = answers[index];
       const isCorrect = userAnswer !== undefined && Number(userAnswer) === q.correct;
       questionResults.push({ questionType: q.type, correct: isCorrect });
-      // Spåra anonym statistik (GDPR-säkrad) - skicka grade för att spåra stadiestatistik
-      trackTaskComplete(isCorrect, q.type, currentText.grade);
       return count + (isCorrect ? 1 : 0);
     }, 0);
+
+    // Spåra anonym statistik (GDPR-säkrad) - ett anrop för hela texten,
+    // inte ett per fråga, med facit för alla sex frågorna i samma anrop.
+    trackExerciseComplete(currentText.grade, questionResults);
 
     // Beräkna lästid
     const readingTimeSeconds = quizStartTime.current

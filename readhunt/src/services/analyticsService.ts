@@ -32,6 +32,7 @@ async function trackEvent(
     timeSeconds?: number;
     correct?: boolean;
     grade?: number;
+    results?: { questionType: string; correct: boolean }[];
   }
 ): Promise<void> {
   try {
@@ -57,9 +58,14 @@ export function trackPageView(): void {
   trackEvent('pageview');
 }
 
-// Spåra avslutad uppgift (med årskurs/stadie)
-export function trackTaskComplete(correct: boolean, questionType?: string, grade?: number): void {
-  trackEvent('task_complete', { correct, questionType, grade });
+// Spåra en avslutad text (ett anrop per text, inte ett per fråga).
+// Skickar facit för samtliga frågor i texten så att felstatistiken per
+// frågetyp fortfarande går att räkna ut på servern.
+export function trackExerciseComplete(
+  grade: number,
+  results: { questionType: string; correct: boolean }[]
+): void {
+  trackEvent('task_complete', { grade, results });
 }
 
 // Spåra sessionstid (kallas vid avslut eller regelbundet)
@@ -80,32 +86,37 @@ let sessionStartTime: number | null = null;
 export function startSession(): void {
   sessionStartTime = Date.now();
 
-  // Skicka tid när användaren lämnar sidan
+  // beforeunload och pagehide kan båda hinna trigga för samma avslut (t.ex.
+  // i Safari, eller vid vissa navigeringar), vilket tidigare skickade samma
+  // sessionstid två gånger. En flagga garanterar att den bara skickas en gång.
+  let unloadSent = false;
   const handleUnload = () => {
-    if (sessionStartTime) {
-      const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
-      // Använd sendBeacon för att garantera att data skickas
-      if (navigator.sendBeacon) {
-        const data = JSON.stringify({
-          type: 'session_time',
-          deviceId: getAnonymousDeviceId(),
-          data: { timeSeconds: Math.min(seconds, 3600) }, // Max 1 timme
-        });
-        navigator.sendBeacon('/api/stats/track', data);
-      }
+    if (unloadSent || !sessionStartTime) return;
+    unloadSent = true;
+    const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
+    // Använd sendBeacon för att garantera att data skickas
+    if (seconds > 0 && navigator.sendBeacon) {
+      const data = JSON.stringify({
+        type: 'session_time',
+        deviceId: getAnonymousDeviceId(),
+        data: { timeSeconds: Math.min(seconds, 3600) }, // Max 1 timme
+      });
+      navigator.sendBeacon('/api/stats/track', data);
     }
   };
 
   window.addEventListener('beforeunload', handleUnload);
   window.addEventListener('pagehide', handleUnload);
 
-  // Skicka tid var 5:e minut (för långa sessioner)
+  // Skicka tid var 5:e minut (för långa sessioner) - men bara medan fliken
+  // faktiskt syns. En elev som lämnar fliken öppen i bakgrunden (eller
+  // datorn i viloläge) ska inte generera anrop. Tiden ackumuleras och
+  // skickas nästa gång fliken är synlig, så ingen tid går förlorad.
   setInterval(() => {
-    if (sessionStartTime) {
-      const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
-      trackSessionTime(seconds);
-      sessionStartTime = Date.now(); // Återställ för nästa intervall
-    }
+    if (document.hidden || !sessionStartTime) return;
+    const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
+    trackSessionTime(seconds);
+    sessionStartTime = Date.now(); // Återställ för nästa intervall
   }, 5 * 60 * 1000);
 }
 
