@@ -421,7 +421,7 @@ export default function KistorPage() {
 
       {/* Page header */}
       <div className="max-w-3xl mx-auto px-4 pt-5 pb-2">
-        <Link href="/" className="inline-flex items-center gap-1.5 text-white/75 hover:text-white/80 text-xs mb-4 transition-colors py-3.5 -my-2">
+        <Link prefetch={false} href="/" className="inline-flex items-center gap-1.5 text-white/75 hover:text-white/80 text-xs mb-4 transition-colors py-3.5 -my-2">
           ← Tillbaka
         </Link>
         <div className="flex items-center gap-3 mb-6">
@@ -474,7 +474,7 @@ export default function KistorPage() {
                         </p>
                       </div>
                     </div>
-                    <Link
+                    <Link prefetch={false}
                       href={gate.unlocked ? `/boss?stage=${s.id}` : `/world/${s.id}?tab=grammar`}
                       className="px-4 py-2 rounded-xl font-bold text-xs cursor-pointer transition-all active:scale-95 flex-shrink-0"
                       style={{

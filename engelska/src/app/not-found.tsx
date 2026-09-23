@@ -9,7 +9,7 @@ export default function NotFound() {
         <p className="text-gray-500 dark:text-gray-400 mb-6">
           Det verkar som att du har hittat en okänd del av kartan!
         </p>
-        <Link
+        <Link prefetch={false}
           href="/"
           className="btn-primary bg-blue-600 hover:bg-blue-700 inline-flex"
         >

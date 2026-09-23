@@ -127,7 +127,7 @@ export default function ModuleCard({
   // ── Final Test ────────────────────────────────────────────────────────────────
   if (isFinalTest) {
     return (
-      <Link href={href} className="block group h-full">
+      <Link prefetch={false} href={href} className="block group h-full">
         <div
           className="h-full rounded-3xl p-[3px] transition-all duration-200 group-hover:-translate-y-1 cursor-pointer"
           style={{
@@ -213,7 +213,7 @@ export default function ModuleCard({
 
   // ── Standard card ─────────────────────────────────────────────────────────────
   return (
-    <Link href={href} className="block group h-full">
+    <Link prefetch={false} href={href} className="block group h-full">
       <MagicCard
         gradientColor={`${beamColors[0]}18`}
         className="h-full rounded-3xl border-3 px-5 py-4 transition-all duration-200 group-hover:-translate-y-1 cursor-pointer relative overflow-hidden bg-white dark:bg-gray-800 border-indigo-100 dark:border-gray-700 group-hover:border-indigo-200"

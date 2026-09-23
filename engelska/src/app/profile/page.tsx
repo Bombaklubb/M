@@ -51,7 +51,7 @@ export default function ProfilePage() {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <p className="text-gray-500 dark:text-gray-400 mb-4">Du är inte inloggad.</p>
-          <Link href="/" className="btn-primary bg-blue-600 hover:bg-blue-700">
+          <Link prefetch={false} href="/" className="btn-primary bg-blue-600 hover:bg-blue-700">
             Gå till startsidan
           </Link>
         </div>
@@ -139,7 +139,7 @@ export default function ProfilePage() {
                     </div>
                   ) : null;
                 })()}
-                <Link
+                <Link prefetch={false}
                   href="/butik"
                   className="mt-4 flex items-center justify-between gap-2 rounded-2xl px-4 py-3 bg-white/10 hover:bg-white/15 border border-white/20 transition-colors"
                 >
@@ -164,7 +164,7 @@ export default function ProfilePage() {
               const pct = total > 0 ? (completed / total) * 100 : 0;
 
               return (
-                <Link key={stage.id} href={`/world/${stage.id}`} className="block group">
+                <Link prefetch={false} key={stage.id} href={`/world/${stage.id}`} className="block group">
                   <div className="card hover:shadow-md transition-shadow group-hover:-translate-y-0.5 transition-transform">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-2xl">{stage.emoji}</span>

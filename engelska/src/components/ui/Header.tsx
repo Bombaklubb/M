@@ -113,7 +113,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-2 lg:gap-4">
 
         {/* Logo */}
-        <Link
+        <Link prefetch={false}
           href="/"
           className="flex items-center gap-2.5 hover:scale-105 transition-transform min-w-0 flex-shrink-0"
         >
@@ -139,7 +139,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
           <nav className="flex items-center gap-2 sm:gap-2.5 flex-shrink-0">
 
             {/* Kistor */}
-            <Link
+            <Link prefetch={false}
               href="/kistor"
               title="Hemliga kistor"
               className="relative flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-b from-amber-100 to-amber-50 dark:from-amber-900/40 dark:to-amber-800/20 border-2 border-amber-300 dark:border-amber-600 hover:border-amber-400 hover:scale-110 transition-all touch-manipulation cursor-pointer text-amber-600 dark:text-amber-400"
@@ -154,7 +154,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             </Link>
 
             {/* Affären (plånbokssaldo) */}
-            <Link
+            <Link prefetch={false}
               href="/butik"
               title="Affären – poäng att spendera"
               className="hidden sm:flex items-center gap-1.5 bg-gradient-to-b from-emerald-50 to-emerald-100 dark:bg-emerald-900/30 border-2 border-emerald-300 dark:border-emerald-700 px-3 py-1.5 rounded-xl hover:border-emerald-400 hover:scale-105 transition-all cursor-pointer touch-manipulation"
@@ -177,7 +177,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             {(() => {
               const av = getAvatar(student.avatar ?? "ninja");
               return (
-                <Link
+                <Link prefetch={false}
                   href="/profile"
                   className="relative flex items-center gap-2 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-en-50 dark:hover:bg-gray-800 transition-all cursor-pointer border-2 border-transparent hover:border-en-200 touch-manipulation overflow-hidden"
                 >
@@ -198,7 +198,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
             </button>
 
             {/* Om Engelskajakten */}
-            <Link
+            <Link prefetch={false}
               href="/om"
               title="Om Engelskajakten – så fungerar appen"
               aria-label="Om Engelskajakten"
@@ -233,7 +233,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
 
         {!student && (
           <div className="flex items-center gap-1.5">
-            <Link
+            <Link prefetch={false}
               href="/om"
               title="Om Engelskajakten – så fungerar appen"
               aria-label="Om Engelskajakten"

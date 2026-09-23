@@ -264,7 +264,7 @@ export default function HomePage() {
                   fasta kontaktlisten på iPad och helt utanför fönstret på en
                   skärm som är 768 px hög. */}
               <div className="text-center mt-4 pt-4 border-t border-en-100">
-                <Link
+                <Link prefetch={false}
                   href="/om"
                   className="inline-flex items-center gap-1.5 text-sm font-bold text-en-600 hover:text-en-700 hover:underline underline-offset-4 transition-colors"
                 >
@@ -324,7 +324,7 @@ export default function HomePage() {
 
             return (
               <BlurFade key={stage.id} delay={0.05 + i * 0.07} duration={0.4} inView>
-                <Link href={`/world/${stage.id}`} className="block group h-full">
+                <Link prefetch={false} href={`/world/${stage.id}`} className="block group h-full">
                   <div
                     className={`relative rounded-3xl overflow-hidden border-3 transition-all duration-200 group-hover:-translate-y-1.5 group-hover:scale-[1.01] cursor-pointer h-full flex flex-col ${stage.borderClass}`}
                     style={{
