@@ -35,7 +35,14 @@ const ReadhuntIcon = () => (
   </svg>
 );
 
-const JAKT_APPS = [
+/**
+ * Apparna i menyn.
+ *
+ * Exporterad för att Om-sidan ska kunna räkna upp samma lista. Låg den i två
+ * kopior skulle en ny app kunna dyka upp i menyn men inte i beskrivningen,
+ * eller tvärtom.
+ */
+export const JAKT_APPS = [
   { name: 'Svenskajakten', icon: <SwedishFlag />, url: 'https://svenskajakten.vercel.app' },
   { name: 'Mattejakten', icon: <MathIcon />, url: 'https://mattejakten.vercel.app' },
   { name: 'Engelskajakten', icon: <UKFlag />, url: 'https://engelskajakten.vercel.app' },
