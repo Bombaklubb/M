@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-type JaktApp =
+// Exporteras så att Om-sidan kan lista exakt samma appar som menyn.
+// Annars glider de isär så fort en app läggs till eller byter adress.
+export type JaktApp =
   | { name: string; type: 'flag'; flagCode: string; url: string }
   | { name: string; type: 'emoji'; icon: string; url: string };
 
-const JAKT_APPS: JaktApp[] = [
+export const JAKT_APPS: JaktApp[] = [
   { name: 'Svenskajakten', type: 'flag', flagCode: 'se', url: 'https://svenskajakten.vercel.app' },
   { name: 'Mattejakten',   type: 'emoji', icon: '🔢',   url: 'https://mattejakten.vercel.app' },
   { name: 'Engelskajakten',type: 'flag', flagCode: 'gb', url: 'https://engelskajakten.vercel.app' },

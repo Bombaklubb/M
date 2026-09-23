@@ -1,12 +1,29 @@
 import React from 'react';
+import { JAKT_APPS } from './JaktLinks';
 
 interface AboutViewProps {
   onClose: () => void;
 }
 
+/** Vad varje app i Jaktlänkar tränar. Själva länkarna kommer från menyn. */
+const JAKT_BESKRIVNING: Record<string, string> = {
+  Svenskajakten: 'svenska.',
+  Mattejakten: 'matematik.',
+  Engelskajakten: 'engelsk grammatik och stavning.',
+  Läsjakten: 'läsförståelse på svenska.',
+};
+
+/** Liten ikon per app, samma som i menyn. */
+const JAKT_IKON: Record<string, string> = {
+  Svenskajakten: '🇸🇪',
+  Mattejakten: '🔢',
+  Engelskajakten: '🇬🇧',
+  Läsjakten: '📖',
+};
+
 // Nivåtabellen speglar readhunt/TEXT-SPEC.md och det faktiska biblioteket.
 const LEVELS = [
-  { range: '1–3', tier: 'Nybörjare', words: '20–80 ord', desc: 'Mycket korta berättelser med vardagsord. Svåra ord förklaras på svenska.' },
+  { range: '1–3', tier: 'Nybörjare', words: '15–80 ord', desc: 'Nivå 1 är bara några meningar på ett par ord var. Sedan växer texterna steg för steg. Svåra ord förklaras på svenska.' },
   { range: '4–6', tier: 'Mellan', words: '150–415 ord', desc: 'Längre texter, både berättelser och faktatexter. Ordförklaringar på engelska.' },
   { range: '7–9', tier: 'Avancerad', words: '500–590 ord', desc: 'Resonerande faktatexter där svaret sällan står ordagrant i texten.' },
   { range: '10', tier: 'Expert', words: '590–625 ord', desc: 'Texter som väger argument mot varandra och kräver att man drar egna slutsatser.' },
@@ -153,7 +170,24 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
             </div>
           </div>
           <p className="text-sm">
-            Efter inlämning visas facit med förklaring till varje fråga, så att fel svar också blir något att lära av.
+            Efter inlämning visas alla frågor igen. Rätt svar är grönmarkerat, och har man svarat fel
+            syns även det egna svaret i rött. Då går det att se vad man missade och varför.
+          </p>
+        </Section>
+
+        {/* Efter texten */}
+        <Section emoji="🎯" title="Efter varje text">
+          <p>
+            När texten är rättad kommer tre knappar, och de är värda att känna till:
+          </p>
+          <ul className="space-y-1.5 list-disc pl-5 marker:text-indigo-500">
+            <li><strong>↓ New text, lower level</strong> — om texten kändes för svår.</li>
+            <li><strong>New text, same level →</strong> — fortsätt på samma nivå.</li>
+            <li><strong>↑ New text, higher level</strong> — om det gick lätt.</li>
+          </ul>
+          <p className="text-sm">
+            Eleven kan alltså byta nivå direkt när det behövs, utan att gå tillbaka till startsidan.
+            Startsidan har också en ruta som tar en tillbaka till den nivå man höll på med senast.
           </p>
         </Section>
 
@@ -239,6 +273,45 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
           </p>
         </Section>
 
+        {/* Jaktlänkar */}
+        <Section emoji="🧭" title="Jaktlänkar">
+          <p>
+            Längst ned till höger på varje sida finns knappen <strong>🔗 Jaktlänkar ▼</strong>. Den
+            öppnar en meny med länkar till de andra apparna i samma familj. De öppnas i en ny flik, så
+            Readhunt ligger kvar där du var.
+          </p>
+          <ul className="space-y-2.5">
+            {JAKT_APPS.map((app) => (
+              <li key={app.url} className="flex gap-3 items-start">
+                <span
+                  className="flex-none w-8 h-8 rounded-xl bg-indigo-50 dark:bg-slate-700 flex items-center justify-center text-lg"
+                  aria-hidden="true"
+                >
+                  {JAKT_IKON[app.name] ?? '🔗'}
+                </span>
+                <span>
+                  <a
+                    href={app.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-bold text-indigo-700 dark:text-indigo-300 underline underline-offset-2 hover:text-indigo-900 dark:hover:text-indigo-200"
+                  >
+                    {app.name}
+                  </a>{' '}
+                  – {JAKT_BESKRIVNING[app.name] ?? ''}{' '}
+                  <span className="text-xs text-slate-500 dark:text-slate-400">
+                    ({app.url.replace('https://', '')})
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-sm">
+            Apparna är byggda på samma sätt, men delar inga poäng. Var och en har sina egna poäng,
+            kistor och köp.
+          </p>
+        </Section>
+
         {/* Bra att veta */}
         <Section emoji="💡" title="Bra att veta">
           <ul className="space-y-1.5 list-disc pl-5 marker:text-slate-400">
@@ -266,7 +339,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
               href="mailto:martin.akdogan@enkoping.se"
               className="font-bold text-indigo-700 dark:text-indigo-300 hover:underline"
             >
-              martin.akdogan@enkoping.se
+              Kontakta Martin
             </a>
           </p>
         </section>
