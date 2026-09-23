@@ -1,5 +1,5 @@
 import React from 'react';
-import { JAKT_APPS } from './JaktLinks';
+import { JAKT_APPS, AppIcon } from './JaktLinks';
 
 interface AboutViewProps {
   onClose: () => void;
@@ -11,14 +11,6 @@ const JAKT_BESKRIVNING: Record<string, string> = {
   Mattejakten: 'matematik.',
   Engelskajakten: 'engelsk grammatik och stavning.',
   Läsjakten: 'läsförståelse på svenska.',
-};
-
-/** Liten ikon per app, samma som i menyn. */
-const JAKT_IKON: Record<string, string> = {
-  Svenskajakten: '🇸🇪',
-  Mattejakten: '🔢',
-  Engelskajakten: '🇬🇧',
-  Läsjakten: '📖',
 };
 
 // Nivåtabellen speglar readhunt/TEXT-SPEC.md och det faktiska biblioteket.
@@ -283,11 +275,8 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
           <ul className="space-y-2.5">
             {JAKT_APPS.map((app) => (
               <li key={app.url} className="flex gap-3 items-start">
-                <span
-                  className="flex-none w-8 h-8 rounded-xl bg-indigo-50 dark:bg-slate-700 flex items-center justify-center text-lg"
-                  aria-hidden="true"
-                >
-                  {JAKT_IKON[app.name] ?? '🔗'}
+                <span className="flex-none w-9 h-9 rounded-xl bg-indigo-50 dark:bg-slate-700 flex items-center justify-center">
+                  <AppIcon app={app} />
                 </span>
                 <span>
                   <a

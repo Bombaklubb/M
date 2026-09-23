@@ -13,7 +13,12 @@ export const JAKT_APPS: JaktApp[] = [
   { name: 'Läsjakten',     type: 'emoji', icon: '📖',   url: 'https://lasjakten.vercel.app' },
 ];
 
-function AppIcon({ app }: { app: JaktApp }) {
+/**
+ * Ikonen för en app. Flaggorna är bilder, inte emoji: flaggemoji faller
+ * tillbaka till landskoden ("SE", "GB") på Windows, som saknar dem.
+ * Exporteras så att Om-sidan visar samma ikoner som menyn.
+ */
+export function AppIcon({ app }: { app: JaktApp }) {
   if (app.type === 'flag') {
     return (
       <img
