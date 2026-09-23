@@ -493,7 +493,6 @@ function App() {
             onSelectGrade={handleSelectGrade}
             completedByGrade={getCompletedByGrade()}
             lastCompletedText={user ? getLastCompletedText(user) : null}
-            onAboutClick={() => setShowAbout(true)}
           />
         )}
 
