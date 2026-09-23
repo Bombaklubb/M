@@ -207,7 +207,7 @@ export default function ButikPage() {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <p className="text-gray-500 dark:text-gray-400 mb-4">Du är inte inloggad.</p>
-          <Link href="/" className="btn-primary bg-blue-600 hover:bg-blue-700">
+          <Link prefetch={false} href="/" className="btn-primary bg-blue-600 hover:bg-blue-700">
             Gå till startsidan
           </Link>
         </div>

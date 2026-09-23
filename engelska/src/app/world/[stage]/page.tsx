@@ -148,7 +148,7 @@ export default function WorldPage({ params }: Props) {
       {/* Hero */}
       <div className={`relative overflow-hidden ${stage.bgClass}`}>
         <div className="max-w-5xl mx-auto px-4 py-8">
-          <Link
+          <Link prefetch={false}
             href="/"
             className="inline-flex items-center gap-1.5 text-white/80 hover:text-white text-sm bg-black/20 hover:bg-black/30 px-4 py-3 rounded-full transition-colors mb-4"
           >
@@ -393,7 +393,7 @@ export default function WorldPage({ params }: Props) {
               return (
                 <div className="mb-4">
                   {gate.unlocked ? (
-                    <Link href={`/boss?stage=${stage.id}`} className="block cursor-pointer hover:scale-[1.01] transition-transform">
+                    <Link prefetch={false} href={`/boss?stage=${stage.id}`} className="block cursor-pointer hover:scale-[1.01] transition-transform">
                       {card}
                     </Link>
                   ) : (
@@ -425,7 +425,7 @@ export default function WorldPage({ params }: Props) {
                 { href: "tidsattack", emoji: "⏱️", title: "Tidsattack",    sub: "60 sekunder – hur många hinner du?",   desc: "Ord & fraser på engelska. Svara snabbt – snabb som blixten!", gradient: "from-cyan-500 via-blue-500 to-indigo-500" },
                 { href: "samlamynt",  emoji: "🪙", title: "Samla mynt",    sub: "Rätt svar = samla, fel = hinder!",     desc: "Spring och samla mynt genom att välja rätt engelsk översättning.", gradient: "from-yellow-500 via-amber-500 to-orange-500" },
               ].map((game) => (
-                <Link
+                <Link prefetch={false}
                   key={game.href}
                   href={`/world/${stage.id}/spel/${game.href}`}
                   className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${game.gradient} p-[2px] cursor-pointer group`}

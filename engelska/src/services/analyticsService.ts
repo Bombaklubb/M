@@ -60,10 +60,14 @@ let sessionStartTime: number | null = null;
 export function startSession(): void {
   sessionStartTime = Date.now();
 
+  // beforeunload och pagehide avfyras båda när fliken stängs. Förut skickade
+  // båda samma tid, så varje avslutad session räknades dubbelt och kostade två
+  // anrop. Nu nollställs starttiden när den skickats, och den andra hoppar över.
   const handleUnload = () => {
     if (sessionStartTime) {
       const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
-      if (navigator.sendBeacon) {
+      sessionStartTime = null;
+      if (seconds > 0 && navigator.sendBeacon) {
         const deviceId = getAnonymousDeviceId();
         const data = JSON.stringify({
           type: 'session_time',
@@ -77,9 +81,18 @@ export function startSession(): void {
 
   window.addEventListener('beforeunload', handleUnload);
   window.addEventListener('pagehide', handleUnload);
+  // Kommer eleven tillbaka till en flik som redan lämnat ifrån sig sin tid
+  // (pagehide utan att sidan stängdes) börjar räkningen om därifrån.
+  window.addEventListener('pageshow', () => {
+    if (!sessionStartTime) sessionStartTime = Date.now();
+  });
 
-  // Skicka tid var 5:e minut för långa sessioner
+  // Skicka tid var 5:e minut för långa sessioner — men bara medan fliken
+  // syns. En flik som står öppen i bakgrunden hela dagen skickade annars
+  // tolv anrop i timmen. Tiden går inte förlorad: den skickas vid nästa
+  // tillfälle fliken syns, eller när den stängs.
   setInterval(() => {
+    if (document.hidden) return;
     if (sessionStartTime) {
       const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
       trackSessionTime(seconds);

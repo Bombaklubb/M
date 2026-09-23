@@ -460,7 +460,7 @@ function BossPageInner() {
         <Header student={student} />
         <div className="text-white" style={{ background: boss.gradient }}>
           <div className="max-w-3xl mx-auto px-4 py-6">
-            <Link href="/kistor" className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1">
+            <Link prefetch={false} href="/kistor" className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1">
               ← Hemliga kistor
             </Link>
             <div className="flex items-center gap-3">
@@ -644,7 +644,7 @@ function BossPageInner() {
             </div>
 
             <div className="flex gap-3">
-              <Link
+              <Link prefetch={false}
                 href="/kistor"
                 className="flex-1 py-3 rounded-2xl font-bold text-white text-center cursor-pointer transition-all active:scale-95"
                 style={{ background: "linear-gradient(135deg, #16a34a, #15803d)", border: "3px solid #15803d" }}
@@ -692,7 +692,7 @@ function BossPageInner() {
             >
               Försök igen ↺
             </button>
-            <Link
+            <Link prefetch={false}
               href="/"
               className="flex-1 py-3 rounded-2xl font-bold text-red-700 border-2 border-red-300 bg-white cursor-pointer text-center transition-all hover:bg-red-50 active:scale-95"
             >

@@ -92,7 +92,7 @@ function HangmanGame({ stageId, stageName, stageEmoji, student }: {
 
         {/* Top bar */}
         <div className="flex items-center justify-between mb-4">
-          <Link href={`/world/${stageId}?tab=spel`} className="text-pink-400 text-sm font-semibold hover:text-white transition">
+          <Link prefetch={false} href={`/world/${stageId}?tab=spel`} className="text-pink-400 text-sm font-semibold hover:text-white transition">
             ← Spel
           </Link>
           <div className="text-center">
@@ -197,7 +197,7 @@ function HangmanGame({ stageId, stageName, stageEmoji, student }: {
         </div>
 
         <div className="text-center mt-6">
-          <Link href={`/world/${stageId}?tab=spel`} className="text-pink-400 text-sm font-semibold hover:text-white transition">
+          <Link prefetch={false} href={`/world/${stageId}?tab=spel`} className="text-pink-400 text-sm font-semibold hover:text-white transition">
             ← Tillbaka till Spel
           </Link>
         </div>

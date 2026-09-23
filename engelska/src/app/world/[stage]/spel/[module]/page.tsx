@@ -229,7 +229,7 @@ export default function SpelModulePage({ params }: Props) {
 
         <div className={`${stage.bgClass} text-white`}>
           <div className="max-w-3xl mx-auto px-4 py-6">
-            <Link
+            <Link prefetch={false}
               href={`/world/${stageId}?tab=spel`}
               className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1"
             >
@@ -290,7 +290,7 @@ export default function SpelModulePage({ params }: Props) {
 
       <div className={`${stage.bgClass} text-white`}>
         <div className="max-w-3xl mx-auto px-4 py-4">
-          <Link
+          <Link prefetch={false}
             href={`/world/${stageId}?tab=spel`}
             className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm transition-colors"
           >
