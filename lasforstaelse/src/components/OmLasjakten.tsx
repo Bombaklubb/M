@@ -1,4 +1,13 @@
 import React from 'react';
+import { JAKT_APPS } from './JaktLinks';
+
+/** Vad varje app i Jaktlänkar tränar. Länkarna själva kommer från menyn. */
+const JAKT_BESKRIVNING: Record<string, string> = {
+  Svenskajakten: 'svensk grammatik, stavning och ordkunskap.',
+  Mattejakten: 'matematik.',
+  Engelskajakten: 'engelsk grammatik, stavning och ordförråd.',
+  Readhunt: 'läsförståelse på engelska.',
+};
 
 /**
  * Sidan "Om Läsjakten".
@@ -70,7 +79,7 @@ export const OmLasjakten: React.FC<OmLasjaktenProps> = ({ onClose }) => (
           vilka du hade rätt på och varför.
         </p>
         <p>
-          Biblioteket har 532 texter och drygt 3 000 frågor, från fyra korta meningar upp till
+          Biblioteket har 542 texter och drygt 3 200 frågor, från fyra korta meningar upp till
           resonerande texter på sexhundra ord.
         </p>
         <p>
@@ -177,6 +186,11 @@ export const OmLasjakten: React.FC<OmLasjaktenProps> = ({ onClose }) => (
             högt. Bra när ett ord är svårt att avkoda men lätt att förstå.
           </li>
           <li>
+            <strong className="text-slate-800 dark:text-white">Lyssna på frågan och på svaren.</strong>{' '}
+            Två knappar under varje fråga. De är skilda åt, så att du kan höra om alternativen utan
+            att lyssna på hela frågan igen.
+          </li>
+          <li>
             <strong className="text-slate-800 dark:text-white">Textstorlek.</strong> Tre storlekar,
             uppe vid texten.
           </li>
@@ -189,6 +203,44 @@ export const OmLasjakten: React.FC<OmLasjaktenProps> = ({ onClose }) => (
             ett understruket ord så förklaras det.
           </li>
         </ul>
+      </Avsnitt>
+
+      <Avsnitt emoji="🧭" titel="Jaktlänkar">
+        <p>
+          Längst ned till höger på varje sida finns knappen <strong>Jaktlänkar ▾</strong>. Den öppnar
+          en meny med de andra apparna i samma familj. De öppnas i en ny flik, så Läsjakten ligger
+          kvar där du var.
+        </p>
+        <ul className="space-y-2.5">
+          {JAKT_APPS.map((app) => (
+            <li key={app.url} className="flex gap-3 items-start">
+              <span
+                className="flex-none w-8 h-8 rounded-xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center"
+                aria-hidden="true"
+              >
+                {app.icon}
+              </span>
+              <span>
+                <a
+                  href={app.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-emerald-700 dark:text-emerald-400 underline underline-offset-2 hover:text-emerald-800 dark:hover:text-emerald-300"
+                >
+                  {app.name}
+                </a>{' '}
+                – {JAKT_BESKRIVNING[app.name] ?? ''}{' '}
+                <span className="text-xs text-slate-500 dark:text-slate-400">
+                  ({app.url.replace('https://', '')})
+                </span>
+              </span>
+            </li>
+          ))}
+        </ul>
+        <p className="text-sm">
+          Läsjakten och Readhunt tränar samma sak på två språk. Går en text för lätt på svenska kan
+          engelskan vara nästa steg.
+        </p>
       </Avsnitt>
 
       <Avsnitt emoji="🔒" titel="Bra att veta">
