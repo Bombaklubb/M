@@ -11,7 +11,6 @@ interface SetupViewProps {
   onSelectGrade: (grade: number) => void;
   completedByGrade: Record<number, number>;
   lastCompletedText?: CompletedText | null;
-  onAboutClick?: () => void;
 }
 
 const GRADE_LABELS = [
@@ -31,7 +30,6 @@ export const SetupView: React.FC<SetupViewProps> = ({
   onSelectGrade,
   completedByGrade: _completedByGrade,
   lastCompletedText,
-  onAboutClick,
 }) => {
   const [textCounts, setTextCounts] = useState<Record<number, number>>({});
   const [loading, setLoading] = useState(true);
@@ -50,13 +48,6 @@ export const SetupView: React.FC<SetupViewProps> = ({
 
   const getGradeLabel = (grade: number): string => {
     return `Level ${grade}`;
-  };
-
-  const getDifficultyTier = (grade: number): string => {
-    if (grade <= 3) return 'Beginner';
-    if (grade <= 6) return 'Intermediate';
-    if (grade <= 9) return 'Advanced';
-    return 'Expert';
   };
 
   const getGradeColor = (grade: number): { bg: string; text: string; gradient: string } => {
@@ -181,12 +172,6 @@ export const SetupView: React.FC<SetupViewProps> = ({
                 <span className={cn("text-sm font-semibold", colors.text)}>
                   {getGradeLabel(selectedGrade)}
                 </span>
-                <span className={cn(
-                  "text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full text-white bg-gradient-to-r",
-                  colors.gradient
-                )}>
-                  {getDifficultyTier(selectedGrade)}
-                </span>
               </motion.div>
             </motion.div>
 
@@ -257,15 +242,6 @@ export const SetupView: React.FC<SetupViewProps> = ({
               >
                 Start reading!
               </Button>
-              {onAboutClick && (
-                <button
-                  type="button"
-                  onClick={onAboutClick}
-                  className="mt-3 w-full text-center text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
-                >
-                  ❓ Om Readhunt – så fungerar appen
-                </button>
-              )}
             </motion.div>
           </CardContent>
         </Card>

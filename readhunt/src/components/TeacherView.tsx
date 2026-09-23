@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchTeacherStats, type TeacherStats } from '../services/analyticsService';
+import { loadLibrary } from '../services/libraryService';
+import type { LibraryText } from '../types';
 import { RefreshCw, LogOut, Monitor, Calendar, BookOpen, ChevronDown, ChevronRight } from 'lucide-react';
 import { JaktLinks } from './JaktLinks';
 
@@ -8,16 +10,6 @@ interface TeacherViewProps {
 }
 
 type Tab = 'stats' | 'library';
-
-interface LibraryText {
-  id: string;
-  grade: number;
-  title: string;
-  genre?: string;
-  theme?: string;
-  meta?: { wordCount?: number; readingTime?: number };
-  questions?: unknown[];
-}
 
 export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -72,8 +64,10 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
 
   const loadLibraryStats = async () => {
     try {
-      const response = await fetch('/data/library.json');
-      const texts: LibraryText[] = await response.json();
+      // Delar libraryService:s cache i stället för att hämta filen på nytt -
+      // den är redan laddad av appen (1,1 MB) så en egen fetch här dubblade
+      // nedladdningen varje gång en lärare öppnade den här vyn.
+      const texts = await loadLibrary();
 
       const counts: Record<number, number> = {};
       texts.forEach((t) => {

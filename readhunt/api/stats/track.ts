@@ -21,15 +21,22 @@ interface TrackEvent {
   type: 'pageview' | 'task_complete' | 'error' | 'session_time';
   deviceId: string; // Anonymt slumpmässigt ID
   data?: {
-    questionType?: string; // För vanligaste fel
+    questionType?: string; // För vanligaste fel (används av 'error')
     timeSeconds?: number; // För total tid
-    correct?: boolean; // För att räkna fel
+    correct?: boolean; // Legacy - används inte längre av 'task_complete'
     grade?: number; // Årskurs/stadie (1-10)
+    results?: { questionType: string; correct: boolean }[]; // Facit för alla frågor i en avklarad text
   };
 }
 
+// Max antal frågeresultat som accepteras i en 'task_complete' - alla texter
+// har sex frågor, men en generös gräns tål framtida ändringar utan att
+// öppna för ett anrop som gör tusentals Redis-skrivningar.
+const MAX_RESULTS_PER_EXERCISE = 20;
+
 // Rate limits. Generösa per IP eftersom en hel klass delar skolans utgående IP:
-// en elev som gör klart en text skickar ca 8 anrop, 30 elever samtidigt ≈ 240/min.
+// en elev som gör klart en text skickar ett fåtal anrop, 30 elever samtidigt
+// ≈ några hundra/min.
 const PER_DEVICE_PER_MIN = 60;
 const PER_IP_PER_MIN = 900;
 
@@ -95,17 +102,36 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       case 'task_complete': {
-        // Öka räknaren för uppgifter gjorda
+        // Öka räknaren för avklarade texter - en gång per text, inte en per
+        // fråga (klienten skickar ett samlat anrop med facit för alla frågor).
         await redis.incr(`${KEY_PREFIX}tasks:${today}`);
         // Spåra användning per årskurs/stadie
         const grade = Number(event.data?.grade);
         if (Number.isInteger(grade) && grade >= 1 && grade <= 10) {
           await redis.hincrby(`${KEY_PREFIX}grades`, `grade_${grade}`, 1);
         }
-        // Om det var fel, öka felräknaren
-        if (event.data?.correct === false && ALLOWED_QUESTION_TYPES.has(event.data?.questionType || '')) {
-          await redis.hincrby(`${KEY_PREFIX}errors:${today}`, event.data!.questionType!, 1);
-          await redis.incr(`${KEY_PREFIX}total_errors:${today}`);
+        // Räkna felaktiga svar per frågetyp. Grupperas här så att en text
+        // med t.ex. tre fel av typen "inference" bara gör ett hincrby-anrop
+        // för den typen, inte tre.
+        const results = Array.isArray(event.data?.results)
+          ? event.data!.results!.slice(0, MAX_RESULTS_PER_EXERCISE)
+          : [];
+        const wrongByType: Record<string, number> = {};
+        for (const r of results) {
+          if (r && r.correct === false && ALLOWED_QUESTION_TYPES.has(r.questionType)) {
+            wrongByType[r.questionType] = (wrongByType[r.questionType] || 0) + 1;
+          }
+        }
+        const wrongEntries = Object.entries(wrongByType);
+        if (wrongEntries.length > 0) {
+          let totalWrong = 0;
+          await Promise.all(
+            wrongEntries.map(([qType, count]) => {
+              totalWrong += count;
+              return redis.hincrby(`${KEY_PREFIX}errors:${today}`, qType, count);
+            })
+          );
+          await redis.incrby(`${KEY_PREFIX}total_errors:${today}`, totalWrong);
         }
         break;
       }
