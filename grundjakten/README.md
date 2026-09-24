@@ -197,9 +197,13 @@ Det är därför också appens enda skärm med löpande text.
 
 ## Affären
 
-Eleven handlar för sina poäng. Byggd efter Svenskajaktens affär: färgad
-hjälte med saldot i en egen ruta, flikar per kategori, och kort med bild,
-namn, sällsynthet och pris.
+Eleven handlar för sina poäng. Byggd efter **Engelskajaktens** affär
+(`engelska/src/app/butik/page.tsx` och `engelska/src/lib/shop.ts`, lästa med
+lärarens uttryckliga tillåtelse – aldrig ändrade): färgad hjälte med saldot i
+en egen ruta, flikar per kategori plus *Mina köp*, figurerna i rubricerade
+grupper, kort med bild, namn, sällsynthet och pris, en köpruta som visar vad
+som blir kvar efteråt, och ett gratis standardkort som tar bort ram
+respektive tema.
 
 **Poängen sjunker aldrig av ett köp.** `progress.xp` är elevens
 livstidssumma och styr både nivåbandet och kistmilstolparna, och husregeln är
@@ -210,27 +214,46 @@ spenderat` (`attSpendera()` i `lib/affar.ts`).
 
 Tre kategorier, alla med synlig verkan:
 
-| | Vad som händer |
-|---|---|
-| **Figurer** | 12 extra figurer utöver de tolv gratis |
-| **Ramar** | En ring runt figuren, i sidhuvudet och på framstegssidan |
-| **Teman** | Appens bakgrundstoning byts |
+| | Antal | Vad som händer |
+|---|---|---|
+| **Figurer** | 31 | Extra figurer utöver de tolv gratis, i grupperna Djur, Fantasi och Roligt |
+| **Ramar** | 8 | En ring runt figuren, i sidhuvudet och på framstegssidan |
+| **Teman** | 7 | Appens bakgrundstoning byts |
 
-Svenskajakten har en fjärde flik, *Effekter*. Den är medvetet utelämnad: en
-effekt som rör sig drar blicken från uppgiften, och den här målgruppen har
-svårt nog att hålla kvar den.
+Fliken **Mina köp** samlar det eleven äger, och i Ramar och Teman ligger ett
+gratis standardkort först (*Ingen ram*, *Vanlig*) som tar bort påslaget utan
+att köpet försvinner. Utan det kortet fastnade den som köpt ett tema i det för
+alltid – det gick att välja ett annat, men aldrig att stänga av.
 
-Skillnaderna mot förlagan följer av att eleven inte kan läsa:
+Skillnaderna mot Engelskajakten följer av målgruppen:
 
+- **Ingen Effekter-flik.** Engelskajakten har elva partikeleffekter som faller
+  över profilen. Här ligger utseendet bakom *själva uppgiften*, och något som
+  rör sig drar blicken från den.
+- **Tre sällsynthetsgrader, inte fem.** Graden finns för att göra ett köp
+  märkvärdigt, och fem steg som eleven inte kan läsa skillnad på blir bara fem
+  färger.
+- **Mjuka toningar som teman, aldrig mönster.** Engelskajaktens randiga och
+  prickiga teman ligger bara på ett kort på profilsidan; här skulle samma
+  mönster göra bokstäverna svårare att urskilja.
 - **Varje vara har ett öra.** Ett kort utan öra är en gissning, och det gäller
   lika mycket i affären som i en övning. Örat ligger utanför kortknappen, så
   hon kan höra vad varan är utan att råka köpa den.
+- **Köprutan talar, och knapparna är ✅ och ❌.** Engelskajakten visar
+  "Kvar efter köp" i text och kvitterar med en toast. Ingetdera går att läsa
+  här, så rutan läses upp och kvittot kommer som tal.
 - **Det köpta väljs direkt.** Att köpa och sedan leta upp en "använd"-knapp är
   ett steg för mycket.
 - **En vara hon inte har råd med är inte tyst.** Trycket ger ett ljud och en
   uppläsning: vad den kostar, vad hon har, och att fler pass ger mer.
 
-Priserna är satta mot vad eleven tjänar. Ett pass ger ungefär 30–40 poäng, så
+Köpet går genom en **köpruta** som visar varan stor, priset och vad som blir
+kvar efteråt. Poängen är svårtjänade, och ett feltryck som kostar femhundra av
+dem är ett svek mot en elev som inte kan läsa vad knappen gjorde. *Nej* ligger
+till vänster och är lika stor som *Ja*.
+
+Priserna är satta mot vad eleven tjänar här, inte mot Engelskajaktens
+(100–5000, mot en helt annan poängtakt). Ett pass ger ungefär 30–40 poäng, så
 en vanlig vara är ungefär två pass, en sällsynt fem och en legendarisk ett
 femtontal. Det ska gå att köpa något redan första veckan, och ändå finnas kvar
 att längta efter.
@@ -238,6 +261,11 @@ att längta efter.
 Temana är alla ljusa nog att svart text håller kontrasten – även *Rymden*, som
 är en ljus natthimmel och inte svart. Den som köpt ett tema ska inte straffas
 med sämre läsbarhet.
+
+`kollaAffar()` i `dev/checkTasks.ts` vaktar katalogen: dubblerade id:n (köpen
+sparas på id), två figurer med samma emoji eller en figur som redan finns
+gratis (affären avgör "används" genom att jämföra emojin), ram eller tema utan
+`stil` (går att köpa, syns aldrig), tom flik eller tom grupp.
 
 Kundvagnen ligger i sidhuvudet bredvid kistorna; båda handlar om poängen. Den
 knappen kostade plats: med sju saker på 360 px bröts raden till tre. Därför

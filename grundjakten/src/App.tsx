@@ -18,7 +18,7 @@ import { getCurrentUser, getProfile, getProgress, saveProfile, saveProgress, set
 import { addXp, recordAnswer, shouldAdvanceLevel, shouldAdvanceStep, touchDailyStreak } from '@/lib/progress';
 import { nyaKistor, oppnaKista, passKista, utvarderaUtmarkelser } from '@/lib/belohningar';
 import { traKistaEfterPass } from '@/data/belohningar';
-import { kop as kopVara, temaKlass, valj as valjVara } from '@/lib/affar';
+import { kop as kopVara, temaKlass, valj as valjVara, valjBort as valjBortVara } from '@/lib/affar';
 import { varaById } from '@/data/affar';
 import { setRateScale } from '@/lib/audio';
 import { todayStamp } from '@/lib/utils';
@@ -253,6 +253,22 @@ export default function App() {
     setProgress(next);
   };
 
+  /**
+   * Tillbaka till standardutseendet.
+   *
+   * Utan det här fastnar den som köpt ett tema i det för alltid – det gick
+   * att välja ett annat, men aldrig att stänga av. Engelskajakten löser det
+   * med ett gratis "Standard"-kort i varje flik, och samma kort finns nu i
+   * affären här. Köpet ligger kvar; det är bara påslaget som stängs av.
+   */
+  const valjBortVaran = (typ: 'ram' | 'tema') => {
+    if (!profile || !progress) return;
+    const next = valjBortVara(progress, typ);
+    if (next === progress) return;
+    saveProgress(profile.name, next);
+    setProgress(next);
+  };
+
   const goHome = () => setView({ name: 'home' });
 
   /**
@@ -321,6 +337,7 @@ export default function App() {
           progress={progress}
           onKop={kop}
           onValj={valjVaran}
+          onValjBort={valjBortVaran}
           onBack={goHome}
         />
       )}
