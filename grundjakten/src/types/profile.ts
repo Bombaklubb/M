@@ -108,6 +108,24 @@ export interface Progress {
   sessions: SessionLog[];
   /** Resultat per uppgift i övningsbanken, nyckel = uppgiftens id. */
   tasks: Record<string, TaskResult>;
+
+  /**
+   * Affären.
+   *
+   * `xp` rörs ALDRIG av ett köp. Den är elevens livstidssumma och styr både
+   * nivåbandet och kistmilstolparna, och husregeln är att nivån aldrig sänks.
+   * Drog ett köp från xp skulle eleven kunna tappa en nivå genom att handla,
+   * och en redan utdelad kista skulle kunna delas ut igen.
+   *
+   * Det som går att spendera är därför xp MINUS `spenderat`. Se
+   * `attSpendera()` i lib/affar.ts.
+   */
+  spenderat: number;
+  /** Id:n ur data/affar.ts som eleven köpt. */
+  kopta: string[];
+  /** Vald ram respektive tema, eller null för appens standardutseende. */
+  valdRam: string | null;
+  valdTema: string | null;
 }
 
 export const DEFAULT_SETTINGS: ProfileSettings = {
@@ -121,6 +139,10 @@ export function emptyProgress(): Progress {
   return {
     xp: 0,
     level: 1,
+    spenderat: 0,
+    kopta: [],
+    valdRam: null,
+    valdTema: null,
     kistor: [],
     utdelade: [],
     badges: [],

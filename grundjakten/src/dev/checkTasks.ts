@@ -5,6 +5,8 @@ import { MAX_STEP, PROGRESSION_STEPS } from '@/data/progression';
 import { LETTERS } from '@/data/letters';
 import { WORDS, newWordsAtStep } from '@/data/words';
 import { SIGHT_WORDS } from '@/data/sightWords';
+import { AVATARER } from '@/data/avatars';
+import { FIGURGRUPPER, KATEGORIER, VAROR } from '@/data/affar';
 import {
   ADJEKTIV, DJUR, FARGER, GATOR, KORTA_ORD, KORTA_VOKALER,
   LANGA_VOKALER, LIKNELSER_DJUR, LJUDSTRIDIGA, SAMMANSATTA, SUBSTANTIV, VERB,
@@ -317,6 +319,63 @@ export function kollaOrdbilder(): Fel[] {
   if (SIGHT_WORDS.length < 3) {
     fel.push({ task: 'ordbilder', seed: 0, meddelande: 'för få ordbilder för att bygga en fråga' });
   }
+  return fel;
+}
+
+/**
+ * Affärens katalog.
+ *
+ * Tre fällor, alla tysta i gränssnittet:
+ *
+ *  - Ett id som finns två gånger. Köpen sparas på id, så eleven skulle betala
+ *    för en vara och få en annan påslagen.
+ *  - En figur med samma emoji som en annan figur eller som en av de tolv
+ *    gratisfigurerna. Affären avgör vad som "används" genom att jämföra
+ *    profile.avatar med varans emoji, så två varor med samma emoji skulle
+ *    lysa gröna samtidigt – och en gratisfigur skulle få ett köpt kort att se
+ *    valt ut utan att vara köpt.
+ *  - En ram eller ett tema utan `stil`. Den går att köpa, och syns aldrig.
+ */
+export function kollaAffar(): Fel[] {
+  const fel: Fel[] = [];
+  const sagt = (meddelande: string) => fel.push({ task: 'affar', seed: 0, meddelande });
+
+  const idn = new Set<string>();
+  const emojis = new Map<string, string>();
+  const gratis = new Set(AVATARER);
+
+  for (const v of VAROR) {
+    if (idn.has(v.id)) sagt(`id "${v.id}" finns två gånger`);
+    idn.add(v.id);
+
+    if (!v.namn.trim()) sagt(`${v.id} saknar namn`);
+    if (v.pris <= 0) sagt(`${v.id} kostar ${v.pris}`);
+
+    if (v.typ === 'figur') {
+      if (!v.grupp) sagt(`${v.id} saknar grupp`);
+      if (gratis.has(v.ikon)) sagt(`${v.id} (${v.ikon}) finns redan som gratisfigur`);
+      const forra = emojis.get(v.ikon);
+      if (forra) sagt(`${v.id} och ${forra} har samma figur ${v.ikon}`);
+      emojis.set(v.ikon, v.id);
+    } else if (!v.stil) {
+      sagt(`${v.id} saknar stil och skulle inte synas`);
+    }
+  }
+
+  // Varje flik måste ha något i sig, och figurgrupperna måste alla användas –
+  // en tom rubrik är en rubrik eleven scrollar förbi utan att förstå varför.
+  for (const k of KATEGORIER) {
+    if (!VAROR.some((v) => v.typ === k.typ)) sagt(`fliken ${k.namn} är tom`);
+  }
+  for (const g of FIGURGRUPPER) {
+    if (!VAROR.some((v) => v.typ === 'figur' && v.grupp === g)) sagt(`gruppen ${g} är tom`);
+  }
+
+  // Billigaste varan ska gå att nå på rimlig tid. Ett pass ger ungefär 30–40
+  // poäng; är ingenting under ett par hundra är affären bara en skyltfönster.
+  const billigast = Math.min(...VAROR.map((v) => v.pris));
+  if (billigast > 100) sagt(`billigaste varan kostar ${billigast} – för långt till första köpet`);
+
   return fel;
 }
 

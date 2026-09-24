@@ -11,12 +11,15 @@ import { OvningsbankView } from '@/views/OvningsbankView';
 import { FramstegView } from '@/views/FramstegView';
 import { OmView } from '@/views/OmView';
 import { KistorView } from '@/views/KistorView';
+import { AffarView } from '@/views/AffarView';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import { generateWritePass, type WriteMode } from '@/lib/generators/writingExercises';
 import { getCurrentUser, getProfile, getProgress, saveProfile, saveProgress, setCurrentUser } from '@/lib/storage';
 import { addXp, recordAnswer, shouldAdvanceLevel, shouldAdvanceStep, touchDailyStreak } from '@/lib/progress';
 import { nyaKistor, oppnaKista, passKista, utvarderaUtmarkelser } from '@/lib/belohningar';
 import { traKistaEfterPass } from '@/data/belohningar';
+import { kop as kopVara, temaKlass, valj as valjVara, valjBort as valjBortVara } from '@/lib/affar';
+import { varaById } from '@/data/affar';
 import { setRateScale } from '@/lib/audio';
 import { todayStamp } from '@/lib/utils';
 
@@ -30,7 +33,8 @@ type View =
   | { name: 'reward'; result: SessionResult; repeat: () => Exercise[]; taskId?: string }
   | { name: 'framsteg' }
   | { name: 'om' }
-  | { name: 'kistor' };
+  | { name: 'kistor' }
+  | { name: 'affar' };
 
 /**
  * Ingen router med flit.
@@ -61,6 +65,20 @@ export default function App() {
     setRateScale(profile.settings.speechRate);
     document.documentElement.classList.toggle('font-dyslexic', profile.settings.dyslexicFont);
   }, [profile?.settings.speechRate, profile?.settings.dyslexicFont]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  /**
+   * Temat ur affären.
+   *
+   * Klassen sätts på <body>, som redan bär standardtoningen – ett tema
+   * ersätter den i stället för att läggas ovanpå. Alla teman tas bort först,
+   * annars blir två kvar om eleven byter.
+   */
+  useEffect(() => {
+    const klass = progress ? temaKlass(progress) : '';
+    const alla = ['tema-skog', 'tema-hav', 'tema-solnedgang', 'tema-rymden'];
+    document.body.classList.remove(...alla);
+    if (klass) document.body.classList.add(klass);
+  }, [progress?.valdTema]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /**
    * Varje ny skärm börjar överst.
@@ -198,6 +216,59 @@ export default function App() {
     setProgress(next);
   };
 
+  /**
+   * Köper en vara.
+   *
+   * Figurer bor på PROFILEN och inte i progress, så den sätts här. Resten
+   * (ram, tema) sköter lib/affar.ts, som också bokför poängen.
+   */
+  const kop = (id: string) => {
+    if (!profile || !progress) return;
+    const next = kopVara(progress, id);
+    if (next === progress) return;            // hade inte råd, eller redan köpt
+    saveProgress(profile.name, next);
+    setProgress(next);
+
+    const vara = varaById(id);
+    if (vara?.typ === 'figur') {
+      const uppdaterad = { ...profile, avatar: vara.ikon };
+      saveProfile(uppdaterad);
+      setProfile(uppdaterad);
+    }
+  };
+
+  /** Väljer något eleven redan äger. */
+  const valjVaran = (id: string) => {
+    if (!profile || !progress) return;
+    const vara = varaById(id);
+    if (vara?.typ === 'figur') {
+      const uppdaterad = { ...profile, avatar: vara.ikon };
+      saveProfile(uppdaterad);
+      setProfile(uppdaterad);
+      return;
+    }
+    const next = valjVara(progress, id);
+    if (next === progress) return;
+    saveProgress(profile.name, next);
+    setProgress(next);
+  };
+
+  /**
+   * Tillbaka till standardutseendet.
+   *
+   * Utan det här fastnar den som köpt ett tema i det för alltid – det gick
+   * att välja ett annat, men aldrig att stänga av. Engelskajakten löser det
+   * med ett gratis "Standard"-kort i varje flik, och samma kort finns nu i
+   * affären här. Köpet ligger kvar; det är bara påslaget som stängs av.
+   */
+  const valjBortVaran = (typ: 'ram' | 'tema') => {
+    if (!profile || !progress) return;
+    const next = valjBortVara(progress, typ);
+    if (next === progress) return;
+    saveProgress(profile.name, next);
+    setProgress(next);
+  };
+
   const goHome = () => setView({ name: 'home' });
 
   /**
@@ -253,11 +324,23 @@ export default function App() {
           onProfile={() => setView({ name: 'framsteg' })}
           onOm={() => setView({ name: 'om' })}
           onKistor={() => setView({ name: 'kistor' })}
+          onAffar={() => setView({ name: 'affar' })}
           onLogout={logout}
         />
       )}
 
       {view.name === 'om' && <OmView onBack={goHome} />}
+
+      {view.name === 'affar' && (
+        <AffarView
+          profile={profile}
+          progress={progress}
+          onKop={kop}
+          onValj={valjVaran}
+          onValjBort={valjBortVaran}
+          onBack={goHome}
+        />
+      )}
 
       {view.name === 'kistor' && (
         <KistorView

@@ -5,6 +5,7 @@ import { LjudKnapp } from '@/components/LjudKnapp';
 import { EarButton } from '@/components/EarButton';
 import { KistBild } from '@/components/KistBild';
 import { cn, getLevelTitle, xpForNextLevel } from '@/lib/utils';
+import { attSpendera, ramStil } from '@/lib/affar';
 
 export type Destination = 'bokstaver' | 'skriva' | 'ovningar';
 
@@ -39,6 +40,7 @@ export function HomeView({
   onProfile,
   onOm,
   onKistor,
+  onAffar,
   onLogout,
 }: {
   profile: StudentProfile;
@@ -48,6 +50,7 @@ export function HomeView({
   onProfile: () => void;
   onOm: () => void;
   onKistor: () => void;
+  onAffar: () => void;
   onLogout: () => void;
 }) {
   const xp = xpForNextLevel(progress.xp);
@@ -65,7 +68,7 @@ export function HomeView({
           brytningen lade de sig ovanpå varandra – "Om Grundjakten" hamnade
           under ljudknappen och gick inte att trycka på, och namnet klämdes
           ihop till 20 px. Hellre två rader än en oåtkomlig knapp. */}
-      <header className="mb-3 flex flex-wrap items-center justify-between gap-1.5
+      <header className="mb-3 flex flex-wrap items-center justify-between gap-1
                          [@media(min-height:760px)]:mb-6 sm:gap-2">
         {/* Samma märke på samma plats som på alla andra sidor. Här är det
             redan hemma, men klicket ska finnas överallt – annars måste eleven
@@ -74,7 +77,7 @@ export function HomeView({
 
         {/* min-w-0 på både nav och namnknappen: utan det vägrar namnet krympa
             och trycker i stället ut "Logga ut" ur skärmen på en telefon. */}
-        <nav className="flex min-w-0 flex-1 flex-wrap items-center justify-end gap-1.5 sm:gap-2">
+        <nav className="flex min-w-0 flex-1 flex-wrap items-center justify-end gap-1 sm:gap-2">
           <LjudKnapp />
 
           <button
@@ -126,27 +129,55 @@ export function HomeView({
             )}
           </button>
 
+          {/* Affären. Ligger bredvid kistorna – båda handlar om poängen,
+              och eleven ska hitta dem på samma ställe. Siffran syns inte
+              här; den står stort på affärens egen sida, och ett tal till i
+              sidhuvudet gör raden rörig på telefon. */}
+          <button
+            type="button"
+            onClick={onAffar}
+            aria-label={`Affären, du har ${attSpendera(progress)} poäng att handla för`}
+            className="btn-pop grid h-11 w-11 min-h-0 shrink-0 place-items-center rounded-tile
+                       border-amberx-700 bg-amberx-500 text-2xl sm:h-14 sm:w-14 sm:text-3xl"
+          >
+            <span aria-hidden>🛒</span>
+          </button>
+
           {/* Ansiktet OCH namnet i EN knapp, som leder till framstegen.
               Figurbytet ligger kvar på framstegssidan, där ansiktet är stort
-              – ett tryck här landar eleven på just den sidan. */}
+              – ett tryck här landar eleven på just den sidan.
+
+              På TELEFON visas bara figuren. Sidhuvudet bär sju saker sedan
+              affären tillkom, och namnet plus XP-mätaren är 104 px av 360 –
+              raden bröts till tre. Figuren räcker för att känna igen sin egen
+              knapp, och namnet står stort på sidan hon landar på. Samma grepp
+              som för "Logga ut" och etiketten "Om". */}
           <button
             type="button"
             onClick={onProfile}
             aria-label={`${profile.name}, nivå ${progress.level}, ${getLevelTitle(progress.level)}. Se dina framsteg och byt figur.`}
-            className="btn-pop flex h-11 min-h-0 min-w-0 shrink items-center gap-1.5 rounded-tile
-                       border-ink-200 bg-white pl-1.5 pr-2 dark:border-ink-700 dark:bg-ink-800
-                       sm:h-14 sm:gap-2 sm:pl-2 sm:pr-4"
+            className="btn-pop flex h-11 min-h-0 min-w-0 shrink items-center justify-center gap-1.5
+                       rounded-tile border-ink-200 bg-white px-1.5 dark:border-ink-700
+                       dark:bg-ink-800 sm:h-14 sm:gap-2 sm:pl-2 sm:pr-4"
           >
-            <span className="shrink-0 text-2xl leading-none sm:text-3xl" aria-hidden>
+            {/* Ramen ur affären ritas runt figuren. Utan den syns ett köp
+                av en ram ingenstans, och då är den inte värd poängen. */}
+            <span
+              className={cn(
+                'grid h-8 w-8 shrink-0 place-items-center rounded-full text-2xl leading-none',
+                'sm:h-10 sm:w-10 sm:text-3xl',
+                ramStil(progress)
+              )}
+              aria-hidden
+            >
               {profile.avatar}
             </span>
-            <span className="flex min-w-0 flex-col items-start">
-              <span className="reading max-w-[5rem] truncate text-base font-extrabold leading-tight
-                               sm:max-w-[9rem] sm:text-lg">
+            <span className="hidden min-w-0 flex-col items-start sm:flex">
+              <span className="reading max-w-[9rem] truncate text-lg font-extrabold leading-tight">
                 {profile.name}
               </span>
-              <span className="mt-0.5 h-1.5 w-full min-w-[3rem] overflow-hidden rounded-full
-                               bg-ink-200 dark:bg-ink-700 sm:mt-1 sm:h-2 sm:min-w-[4rem]">
+              <span className="mt-1 h-2 w-full min-w-[4rem] overflow-hidden rounded-full
+                               bg-ink-200 dark:bg-ink-700">
                 <span className="block h-full bg-lime-500" style={{ width: `${xp.pct}%` }} />
               </span>
             </span>

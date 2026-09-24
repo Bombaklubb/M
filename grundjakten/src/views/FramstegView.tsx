@@ -17,6 +17,7 @@ import { FigurValjare } from '@/components/FigurValjare';
 import { UTMARKELSER } from '@/data/belohningar';
 import { useAutoSpeak } from '@/hooks/useAutoSpeak';
 import { cn, getLevelTitle } from '@/lib/utils';
+import { ramStil } from '@/lib/affar';
 import { AppMarke } from '@/components/AppMarke';
 import { PoangRuta } from '@/components/PoangRuta';
 import { LjudKnapp } from '@/components/LjudKnapp';
@@ -85,9 +86,12 @@ export function FramstegView({
           onClick={() => setByterFigur((v) => !v)}
           aria-label="Byt figur"
           aria-expanded={byterFigur}
-          className="btn-pop grid h-14 w-14 min-h-0 shrink-0 place-items-center rounded-tile
-                     border-ink-200 bg-white text-3xl dark:border-ink-700 dark:bg-ink-800
-                     sm:h-16 sm:w-16 sm:text-4xl"
+          className={cn(
+            'btn-pop grid h-14 w-14 min-h-0 shrink-0 place-items-center rounded-tile',
+            'border-ink-200 bg-white text-3xl dark:border-ink-700 dark:bg-ink-800',
+            'sm:h-16 sm:w-16 sm:text-4xl',
+            ramStil(progress)
+          )}
         >
           <span aria-hidden>{profile.avatar}</span>
         </button>
