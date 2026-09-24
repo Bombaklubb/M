@@ -40,6 +40,41 @@
       radial-gradient(54rem 44rem at 0% 96%, rgb(132 204 22 / 0.22), transparent 62%);
   }
 
+  /* ── Teman ur affären ────────────────────────────────────────────────
+     Klassen sätts på <html> av App.tsx och ersätter standardtoningen.
+     Alla fyra är valda så att svart text håller kontrasten: bakgrunden får
+     aldrig göra uppgiften svårare att läsa, och den som köpt ett tema ska
+     inte straffas med sämre läsbarhet. Därför är även "Rymden" en ljus
+     natthimmel och inte svart. */
+  body.tema-skog {
+    background-image:
+      radial-gradient(58rem 42rem at 6% -8%, rgb(132 204 22 / 0.30), transparent 62%),
+      radial-gradient(52rem 38rem at 98% 4%, rgb(22 163 74 / 0.22), transparent 62%),
+      radial-gradient(48rem 40rem at 92% 100%, rgb(163 230 53 / 0.26), transparent 62%),
+      radial-gradient(54rem 44rem at 0% 96%, rgb(13 148 136 / 0.18), transparent 62%);
+  }
+  body.tema-hav {
+    background-image:
+      radial-gradient(58rem 42rem at 6% -8%, rgb(6 182 212 / 0.32), transparent 62%),
+      radial-gradient(52rem 38rem at 98% 4%, rgb(59 130 246 / 0.24), transparent 62%),
+      radial-gradient(48rem 40rem at 92% 100%, rgb(103 232 249 / 0.28), transparent 62%),
+      radial-gradient(54rem 44rem at 0% 96%, rgb(14 116 144 / 0.18), transparent 62%);
+  }
+  body.tema-solnedgang {
+    background-image:
+      radial-gradient(58rem 42rem at 6% -8%, rgb(249 115 22 / 0.30), transparent 62%),
+      radial-gradient(52rem 38rem at 98% 4%, rgb(236 72 153 / 0.24), transparent 62%),
+      radial-gradient(48rem 40rem at 92% 100%, rgb(253 224 71 / 0.30), transparent 62%),
+      radial-gradient(54rem 44rem at 0% 96%, rgb(217 70 239 / 0.18), transparent 62%);
+  }
+  body.tema-rymden {
+    background-image:
+      radial-gradient(58rem 42rem at 6% -8%, rgb(99 102 241 / 0.32), transparent 62%),
+      radial-gradient(52rem 38rem at 98% 4%, rgb(168 85 247 / 0.26), transparent 62%),
+      radial-gradient(48rem 40rem at 92% 100%, rgb(56 189 248 / 0.24), transparent 62%),
+      radial-gradient(54rem 44rem at 0% 96%, rgb(236 72 153 / 0.20), transparent 62%);
+  }
+
   * {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;

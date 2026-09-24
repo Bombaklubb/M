@@ -195,6 +195,56 @@ därefter kort med emoji, rubrik och text. Eleven kan inte läsa den, och
 behöver inte – allt hon behöver går att höra eller se som bild inne i appen.
 Det är därför också appens enda skärm med löpande text.
 
+## Affären
+
+Eleven handlar för sina poäng. Byggd efter Svenskajaktens affär: färgad
+hjälte med saldot i en egen ruta, flikar per kategori, och kort med bild,
+namn, sällsynthet och pris.
+
+**Poängen sjunker aldrig av ett köp.** `progress.xp` är elevens
+livstidssumma och styr både nivåbandet och kistmilstolparna, och husregeln är
+att nivån aldrig sänks. Drog ett köp från `xp` skulle eleven kunna tappa en
+nivå genom att handla, och en redan utdelad kista kunna delas ut igen. Ett köp
+ökar i stället `spenderat`, och det som går att handla för är `xp -
+spenderat` (`attSpendera()` i `lib/affar.ts`).
+
+Tre kategorier, alla med synlig verkan:
+
+| | Vad som händer |
+|---|---|
+| **Figurer** | 12 extra figurer utöver de tolv gratis |
+| **Ramar** | En ring runt figuren, i sidhuvudet och på framstegssidan |
+| **Teman** | Appens bakgrundstoning byts |
+
+Svenskajakten har en fjärde flik, *Effekter*. Den är medvetet utelämnad: en
+effekt som rör sig drar blicken från uppgiften, och den här målgruppen har
+svårt nog att hålla kvar den.
+
+Skillnaderna mot förlagan följer av att eleven inte kan läsa:
+
+- **Varje vara har ett öra.** Ett kort utan öra är en gissning, och det gäller
+  lika mycket i affären som i en övning. Örat ligger utanför kortknappen, så
+  hon kan höra vad varan är utan att råka köpa den.
+- **Det köpta väljs direkt.** Att köpa och sedan leta upp en "använd"-knapp är
+  ett steg för mycket.
+- **En vara hon inte har råd med är inte tyst.** Trycket ger ett ljud och en
+  uppläsning: vad den kostar, vad hon har, och att fler pass ger mer.
+
+Priserna är satta mot vad eleven tjänar. Ett pass ger ungefär 30–40 poäng, så
+en vanlig vara är ungefär två pass, en sällsynt fem och en legendarisk ett
+femtontal. Det ska gå att köpa något redan första veckan, och ändå finnas kvar
+att längta efter.
+
+Temana är alla ljusa nog att svart text håller kontrasten – även *Rymden*, som
+är en ljus natthimmel och inte svart. Den som köpt ett tema ska inte straffas
+med sämre läsbarhet.
+
+Kundvagnen ligger i sidhuvudet bredvid kistorna; båda handlar om poängen. Den
+knappen kostade plats: med sju saker på 360 px bröts raden till tre. Därför
+visar namnknappen **bara figuren på telefon** – namnet och XP-mätaren kommer
+tillbaka från `sm`. Figuren räcker för att känna igen sin egen knapp, och
+namnet står stort på sidan hon landar på.
+
 ## Kistor och utmärkelser
 
 Sju sorters kistor: **trä, silver, guld, smaragd, rubin, diamant** och
