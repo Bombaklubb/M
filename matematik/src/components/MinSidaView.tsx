@@ -12,6 +12,8 @@ import { getPoints, initPoints } from '../utils/storage';
 import { loadShop } from '../utils/shopStorage';
 import { TITLE_MAP, BACKGROUND_MAP } from '../data/shop';
 import FramedAvatar from './FramedAvatar';
+import ThemeBackdrop from './ThemeBackdrop';
+import { useThemeArt } from '../utils/useThemeArt';
 
 type Tab = 'achievements' | 'results' | 'collection';
 
@@ -25,6 +27,8 @@ export default function MinSidaView() {
   const { currentStudent, setView } = useApp();
   const [activeTab, setActiveTab] = useState<Tab>('achievements');
   const [showAvatarPicker, setShowAvatarPicker] = useState(false);
+  // Hooken måste anropas före den tidiga returen nedan
+  const themeArt = useThemeArt(currentStudent ? loadShop(currentStudent.id).equippedBackground : null);
 
   if (!currentStudent) return null;
 
@@ -37,8 +41,9 @@ export default function MinSidaView() {
   const equippedTitle = shop.equippedTitle ? TITLE_MAP[shop.equippedTitle] : null;
   const equippedBg = shop.equippedBackground ? BACKGROUND_MAP[shop.equippedBackground] : null;
 
+  // Med ett tema ritas bilden i ThemeBackdrop; sidan själv har då ingen bakgrund.
   const bgStyle: React.CSSProperties = equippedBg
-    ? { background: equippedBg.css, backgroundAttachment: 'fixed' }
+    ? {}
     : {
         backgroundImage: "url('/Matematisk bakgrund med glödande symboler.png')",
         backgroundSize: 'cover',
@@ -48,7 +53,9 @@ export default function MinSidaView() {
       };
 
   return (
-    <div className={`min-h-screen${equippedBg?.animated ? ' shop-theme-animated' : ''}`} style={bgStyle}>
+    <div className="min-h-screen isolate" style={bgStyle}>
+      {/* Profilsidan har vit text, så slöjan är mörkare här än på startsidan */}
+      {themeArt && <ThemeBackdrop art={themeArt} veil="bg-slate-900/50" />}
       <AppHeader />
 
       {/* Stars */}

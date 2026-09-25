@@ -8,6 +8,8 @@ import { BACKGROUND_MAP } from '../data/shop';
 import { ALL_AVATARS } from '../data/avatars';
 import { BorderBeam } from './magicui/border-beam';
 import FramedAvatar from './FramedAvatar';
+import ThemeBackdrop from './ThemeBackdrop';
+import { useThemeArt } from '../utils/useThemeArt';
 
 export default function WorldSelect() {
   const { currentStudent, logout, setView, dailyBonus, clearDailyBonus } = useApp();
@@ -28,8 +30,10 @@ export default function WorldSelect() {
   // Valt tema (bakgrund) – annars startsidans standardbild.
   const equippedBgId = currentStudent ? getEquippedBackground(currentStudent.id) : null;
   const equippedBg = equippedBgId ? BACKGROUND_MAP[equippedBgId] : null;
+  const themeArt = useThemeArt(equippedBg?.id);
+  // Med ett tema ritas bilden i ThemeBackdrop; sidan själv har då ingen bakgrund.
   const bgStyle = equippedBg
-    ? { background: equippedBg.css }
+    ? {}
     : {
         backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')",
         backgroundSize: 'cover',
@@ -39,9 +43,11 @@ export default function WorldSelect() {
 
   return (
     <div
-      className={`min-h-screen relative overflow-x-hidden${equippedBg?.animated ? ' shop-theme-animated' : ''}`}
+      className="min-h-screen relative overflow-x-hidden isolate"
       style={bgStyle}
     >
+      {themeArt && <ThemeBackdrop art={themeArt} />}
+
       {/* Top bar – real clickable buttons */}
       <div className="relative z-10 flex flex-wrap items-center justify-end gap-2 px-4 pt-4 pb-2">
 
@@ -168,7 +174,13 @@ export default function WorldSelect() {
       {/* Välj din värld */}
       <div className="relative z-10 flex items-center justify-center gap-3 mt-3 mb-4 px-8">
         <div className="h-px flex-1" style={{ background: 'rgba(180,130,40,0.35)' }} />
-        <span className="font-bold text-[11px] tracking-widest uppercase" style={{ color: 'rgba(120,60,10,0.80)' }}>
+        <span
+          className={`font-bold text-[11px] tracking-widest uppercase${equippedBg ? ' px-3 py-1 rounded-full' : ''}`}
+          // På ett tema får rubriken en ljus platta, annars syns den inte på mörka scener
+          style={equippedBg
+            ? { color: '#78350f', background: 'rgba(255, 248, 220, 0.88)', border: '1px solid rgba(180, 130, 40, 0.45)' }
+            : { color: 'rgba(120,60,10,0.80)' }}
+        >
           ✦ Välj din värld ✦
         </span>
         <div className="h-px flex-1" style={{ background: 'rgba(180,130,40,0.35)' }} />
