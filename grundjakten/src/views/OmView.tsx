@@ -12,6 +12,7 @@
 
 import { AppMarke } from '@/components/AppMarke';
 import { LjudKnapp } from '@/components/LjudKnapp';
+import { JAKT_APPAR, KONTAKT_EPOST } from '@/components/Sidfot';
 
 interface Kort {
   ikon: string;
@@ -32,8 +33,9 @@ const KORT: Kort[] = [
         'texter.',
       'Appen är gratis, kräver inget konto och fungerar i webbläsaren på ' +
         'Chromebook, dator, surfplatta och mobil.',
-      'Det finns systerappar för andra ämnen: Svenskajakten, Läsjakten, ' +
-        'Mattejakten, Engelskajakten och Readhunt.',
+      'Det finns systerappar för andra ämnen: ' +
+        JAKT_APPAR.map((a) => a.namn).join(', ').replace(/, ([^,]*)$/, ' och $1') +
+        '. De nås från Jaktlänkar nere till höger.',
     ],
   },
   {
@@ -51,27 +53,87 @@ const KORT: Kort[] = [
     ],
   },
   {
+    ikon: '📚',
+    rubrik: 'Vad eleven övar',
+    stycken: [
+      'Bokstäver är Bokstavsresan: åtta stationer genom alfabetets 29 ' +
+        'bokstäver, i ljudordning och inte i bokstavsordning. Första ' +
+        'stationen är S O L A R M, så att eleven kan läsa riktiga ord redan ' +
+        'efter den.',
+      'Övningar är 93 namngivna uppgifter i fyra nivåer, Svenska 1–4: ' +
+        'alfabetet, svåra ljud (sj, tj, ng, j, ck), kort vokal, rimord, ' +
+        'ljudenlig stavning, ordförståelse, grammatik, räkneord, dagar och ' +
+        'månader. Du kan peka ut en viss uppgift för en viss elev.',
+      'Ordbilderna är de 100 vanligaste orden i svenska texter – och, att, ' +
+        'det, som, på … Eleven hör ordet och väljer rätt skriven form. ' +
+        'Orden ska kännas igen direkt, inte ljudas.',
+      'Ord som står först i en mening eller ensamma visas med stor bokstav. ' +
+        'Bilderna är stora, och ingen bild används för två olika ord – det ' +
+        'kontrolleras automatiskt innan en ändring läggs ut.',
+    ],
+  },
+  {
     ikon: '👂',
     rubrik: 'Ingenting kräver läsning',
     stycken: [
       'Varje sak eleven kan välja mellan har ett eget litet öra – ' +
-        'svarsalternativ, bokstavsbrickor, ordkort, bilder. Ett alternativ ' +
-        'utan öra är en gissning för någon som inte kan läsa, inte ett val.',
+        'svarsalternativ, bokstavsbrickor, ordkort, bilder, varor i affären. ' +
+        'Ett alternativ utan öra är en gissning för någon som inte kan läsa, ' +
+        'inte ett val.',
       'Längst ned på varje övningsskärm finns dessutom en stor öronknapp som ' +
         'spelar upp instruktionen igen. Den är skärmens största tryckyta med ' +
         'flit: det är elevens väg tillbaka in i uppgiften om hon tappat tråden.',
+      'Ljudknappen uppe i hörnet stänger av allt ljud. Knapparna som säger ' +
+        'ett ljud och knapparna som säger ett ord ser olika ut, så att eleven ' +
+        'inte blandar ihop dem.',
     ],
   },
   {
     ikon: '➡️',
     rubrik: 'Eleven bestämmer takten',
     stycken: [
-      'Passet byter aldrig uppgift av sig självt. När svaret är rätt tänds en ' +
-        'grön pil längst ned, och den ska tryckas. En elev som behöver tio ' +
-        'sekunder på sig att se att hon svarade rätt ska hinna med.',
-      'Ett missat svar ger inget avdrag. Uppgiften kommer tillbaka senare i ' +
-        'passet, och efter andra missen lotsas eleven till rätt svar. Ett ' +
-        'pass ska aldrig gå att köra fast i, och det slutar alltid i framgång.',
+      'Passet byter aldrig uppgift av sig självt. När en fråga är besvarad ' +
+        'tänds en grön pil längst ned, och den ska tryckas. En elev som ' +
+        'behöver tio sekunder på sig att se att hon svarade rätt ska hinna med.',
+      'Ett fel ger inget avdrag, och eleven kommer alltid framåt. Första ' +
+        'missen får hon försöka igen själv. Andra missen lyser det rätta ' +
+        'svaret upp. Tredje missen visas och läses rätt svar, och sedan kommer ' +
+        'nästa fråga. Ett pass går aldrig att köra fast i.',
+      'Prickarna uppe till vänster blir orange för varje besvarad fråga – ' +
+        'direkt när svaret ges, inte först när pilen trycks. Samma fråga kommer ' +
+        'aldrig två gånger i samma pass.',
+    ],
+  },
+  {
+    ikon: '⭐',
+    rubrik: 'Poäng, kistor och utmärkelser',
+    stycken: [
+      'Rätt svar på första försöket ger 5 poäng, rätt med hjälp ger 3. ' +
+        'Poängen står under elevens namn på startsidan och i poängrutan på ' +
+        'framstegs- och kistsidan.',
+      'Träkistor delas ut oregelbundet, efter vart tredje till sjunde pass, ' +
+        'så att de förblir en överraskning. Silver, guld, smaragd, rubin, ' +
+        'diamant och den hemliga kistan kommer vid milstolpar i antal pass och ' +
+        'poäng. Kistorna öppnas under kistknappen i sidhuvudet.',
+      'Eleven kan samla 30 utmärkelser. Hennes egen sida, som öppnas med ' +
+        'ett tryck på namnet, visar bara vad hon klarat – aldrig hur många fel ' +
+        'hon haft.',
+    ],
+  },
+  {
+    ikon: '🛒',
+    rubrik: 'Affären',
+    stycken: [
+      'I affären, under kundvagnen, handlar eleven för sina poäng: figurer, ' +
+        'ramar runt figuren, teman som byter hela bakgrunden och effekter som ' +
+        'snö, hjärtan och glitter.',
+      'Ett köp sänker aldrig nivån och tar aldrig tillbaka en kista. ' +
+        'Poängen hon samlat står kvar; affären räknar bara hur mycket av dem ' +
+        'hon redan gjort av med. Innan ett köp frågar appen, med ✅ och ❌, så ' +
+        'att ett feltryck inte kostar något.',
+      'Tema och effekt syns överallt utom under själva övningen. Bakom en ' +
+        'uppgift ska ingenting röra sig. Har datorn "minska rörelse" påslaget ' +
+        'står effekterna stilla.',
     ],
   },
   {
@@ -93,7 +155,18 @@ const KORT: Kort[] = [
         'eller rensar skolan webbläsardata, försvinner framstegen – och det ' +
         'finns ingen backupfunktion. Det är den kända risken med appen.',
       'Flera elever kan dela samma Chromebook. Tryck Logga ut uppe till höger ' +
-        'så kommer nästa elev åt sitt eget ansikte på inloggningssidan.',
+        'så kommer nästa elev åt sitt eget ansikte på inloggningssidan. På en ' +
+        'mobil göms Logga ut för att sidhuvudet ska få plats.',
+    ],
+  },
+  {
+    ikon: '✉️',
+    rubrik: 'Frågor och förslag',
+    stycken: [
+      `Kontakta Martin nere till vänster öppnar ett mejl till ${KONTAKT_EPOST}. ` +
+        'Jaktlänkar nere till höger öppnar systerapparna i en ny flik. ' +
+        'Ingen av dem syns under en övning – där ska det inte finnas någon ' +
+        'väg ut ur uppgiften.',
     ],
   },
 ];
@@ -126,7 +199,9 @@ export function OmView({ onBack }: { onBack: () => void }) {
         </div>
       </header>
 
-      <main className="mx-auto flex max-w-3xl flex-col gap-4 px-4 py-6">
+      {/* pb-20: sidfoten med Kontakta Martin och Jaktlänkar ligger fast
+          längst ned och får inte täcka sista kortet. */}
+      <main className="mx-auto flex max-w-3xl flex-col gap-4 px-4 pb-20 pt-6">
         {KORT.map((k) => (
           <section
             key={k.rubrik}

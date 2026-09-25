@@ -155,16 +155,16 @@ export function HomeView({
           <button
             type="button"
             onClick={onProfile}
-            aria-label={`${profile.name}, nivå ${progress.level}, ${getLevelTitle(progress.level)}. Se dina framsteg och byt figur.`}
-            className="btn-pop flex h-11 min-h-0 min-w-0 shrink items-center justify-center gap-1.5
-                       rounded-tile border-ink-200 bg-white px-1.5 dark:border-ink-700
-                       dark:bg-ink-800 sm:h-14 sm:gap-2 sm:pl-2 sm:pr-4"
+            aria-label={`${profile.name}, ${progress.xp} poäng, nivå ${progress.level}, ${getLevelTitle(progress.level)}. Se dina framsteg och byt figur.`}
+            className="btn-pop flex h-11 min-h-0 min-w-0 shrink flex-col items-center justify-center
+                       gap-0 rounded-tile border-ink-200 bg-white px-1.5 dark:border-ink-700
+                       dark:bg-ink-800 sm:h-14 sm:flex-row sm:gap-2 sm:pl-2 sm:pr-4"
           >
             {/* Ramen ur affären ritas runt figuren. Utan den syns ett köp
                 av en ram ingenstans, och då är den inte värd poängen. */}
             <span
               className={cn(
-                'grid h-8 w-8 shrink-0 place-items-center rounded-full text-2xl leading-none',
+                'grid h-6 w-6 shrink-0 place-items-center rounded-full text-xl leading-none',
                 'sm:h-10 sm:w-10 sm:text-3xl',
                 ramStil(progress)
               )}
@@ -172,14 +172,34 @@ export function HomeView({
             >
               {profile.avatar}
             </span>
+            {/* Poängen står under namnet, som i Svenskajakten. Siffran och
+                nivåmätaren delar en rad – knappen är 56 px hög och rymmer inte
+                tre rader. Samma tal (xp) som i poängrutan på framstegs- och
+                kistsidan, så eleven möter ett och samma tal överallt. */}
             <span className="hidden min-w-0 flex-col items-start sm:flex">
               <span className="reading max-w-[9rem] truncate text-lg font-extrabold leading-tight">
                 {profile.name}
               </span>
-              <span className="mt-1 h-2 w-full min-w-[4rem] overflow-hidden rounded-full
-                               bg-ink-200 dark:bg-ink-700">
-                <span className="block h-full bg-lime-500" style={{ width: `${xp.pct}%` }} />
+              <span className="flex w-full items-center gap-2">
+                <span className="flex shrink-0 items-center gap-1 text-sm font-extrabold
+                                 tabular-nums leading-tight text-amberx-700 dark:text-amberx-300">
+                  <span aria-hidden>⭐</span>
+                  {progress.xp.toLocaleString('sv-SE')}
+                </span>
+                <span className="h-2 w-full min-w-[3rem] overflow-hidden rounded-full
+                                 bg-ink-200 dark:bg-ink-700" aria-hidden>
+                  <span className="block h-full bg-lime-500" style={{ width: `${xp.pct}%` }} />
+                </span>
               </span>
+            </span>
+            {/* På telefon syns figuren med poängen UNDER sig – namnet får
+                inte plats (se ovan), men poängen ska synas även där. Under och
+                inte bredvid: bredvid gjorde knappen 60 px bredare och bröt
+                sidhuvudet på två rader vid 360 px. */}
+            <span className="flex items-center text-[11px] font-extrabold leading-none
+                             tabular-nums text-amberx-700 dark:text-amberx-300 sm:hidden">
+              <span aria-hidden>⭐</span>
+              {progress.xp.toLocaleString('sv-SE')}
             </span>
           </button>
 
