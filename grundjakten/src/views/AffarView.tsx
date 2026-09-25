@@ -8,7 +8,8 @@ import {
   type Vara,
   type VaruTyp,
 } from '@/data/affar';
-import { arKopt, attSpendera, harRad } from '@/lib/affar';
+import { arKopt, attSpendera, harRad, type Avstangbar } from '@/lib/affar';
+import { EffektLager } from '@/components/EffektLager';
 import { AppMarke } from '@/components/AppMarke';
 import { LjudKnapp } from '@/components/LjudKnapp';
 import { EarButton } from '@/components/EarButton';
@@ -55,7 +56,7 @@ export function AffarView({
   progress: Progress;
   onKop: (id: string) => void;
   onValj: (id: string) => void;
-  onValjBort: (typ: 'ram' | 'tema') => void;
+  onValjBort: (typ: Avstangbar) => void;
   onBack: () => void;
 }) {
   const [flik, setFlik] = useState<Flik>('figur');
@@ -72,7 +73,8 @@ export function AffarView({
   const anvands = (v: Vara): boolean =>
     v.typ === 'figur' ? profile.avatar === v.ikon
       : v.typ === 'ram' ? progress.valdRam === v.id
-        : progress.valdTema === v.id;
+        : v.typ === 'tema' ? progress.valdTema === v.id
+          : progress.valdEffekt === v.id;
 
   const tryck = (v: Vara) => {
     if (arKopt(progress, v.id)) {
@@ -121,9 +123,20 @@ export function AffarView({
     sagEfterat(`angra-${v.id}`, 'Inget köp. Dina poäng är kvar.');
   };
 
-  /** Varans bild. Ramar visar sin ring runt elevens egen figur. */
+  /**
+   * Varans bild.
+   *
+   * Ramar visar sin ring runt elevens egen figur. Teman och effekter visas
+   * som en provbit med den RIKTIGA bakgrunden respektive de riktiga
+   * partiklarna – inte en emoji. En liten solnedgångsbild lovade mer än
+   * temat höll, och eleven ska se exakt vad hon får innan hon betalar.
+   */
   const bild = (v: Vara, stor = false): ReactNode =>
-    v.typ === 'ram' ? (
+    v.typ === 'tema' ? (
+      <TemaProv tema={v} stor={stor} />
+    ) : v.typ === 'effekt' ? (
+      <EffektProv effekt={v} stor={stor} />
+    ) : v.typ === 'ram' ? (
       <span
         className={cn(
           'grid place-items-center rounded-full bg-white dark:bg-ink-900',
@@ -163,21 +176,28 @@ export function AffarView({
               ? 'border-lime-500 bg-lime-100 dark:bg-lime-900/40'
               : kopt
                 ? 'border-ink-300 bg-white dark:border-ink-600 dark:bg-ink-800'
-                : rad
-                  ? 'bg-white dark:bg-ink-800'
-                  : 'bg-white opacity-60 dark:bg-ink-800'
+                : 'bg-white dark:bg-ink-800'
           )}
         >
+          {/* Bilden bleks ALDRIG, inte ens när eleven inte har råd. Det är
+              den hon ska längta efter, och ett blekt tema ser ut som ett
+              annat tema. "För dyrt" syns i stället på texten och låset. */}
           {bild(v)}
 
-          <span className="reading w-full truncate text-center text-base font-extrabold">
+          <span
+            className={cn(
+              'reading w-full truncate text-center text-base font-extrabold',
+              !kopt && !rad && 'opacity-60'
+            )}
+          >
             {v.namn}
           </span>
 
           <span
             className={cn(
               'rounded-full px-2 py-0.5 text-xs font-extrabold uppercase tracking-wide',
-              SALLSYNTHET[v.sallsynthet].klass
+              SALLSYNTHET[v.sallsynthet].klass,
+              !kopt && !rad && 'opacity-60'
             )}
           >
             {SALLSYNTHET[v.sallsynthet].namn}
@@ -224,11 +244,16 @@ export function AffarView({
    * Utan det fastnar den som köpt ett tema i det för alltid. Kortet kostar
    * ingenting och tar bara bort påslaget – köpet ligger kvar.
    */
-  const standardKort = (typ: 'ram' | 'tema') => {
-    const aktiv = typ === 'ram' ? !progress.valdRam : !progress.valdTema;
+  const standardKort = (typ: Avstangbar) => {
+    const aktiv = typ === 'ram' ? !progress.valdRam
+      : typ === 'tema' ? !progress.valdTema
+        : !progress.valdEffekt;
     const etikett = typ === 'ram'
       ? aktiv ? 'Ingen ram, används nu' : 'Ingen ram. Tryck för att ta bort ramen.'
-      : aktiv ? 'Vanliga bakgrunden, används nu' : 'Vanliga bakgrunden. Tryck för att gå tillbaka.';
+      : typ === 'tema'
+        ? aktiv ? 'Vanliga bakgrunden, används nu' : 'Vanliga bakgrunden. Tryck för att gå tillbaka.'
+        : aktiv ? 'Ingen effekt, används nu' : 'Ingen effekt. Tryck för att stänga av effekten.';
+    const namn = typ === 'ram' ? 'Ingen ram' : typ === 'tema' ? 'Vanlig' : 'Ingen effekt';
 
     return (
       <div className="relative min-w-0">
@@ -251,12 +276,15 @@ export function AffarView({
             <span className="grid h-16 w-16 place-items-center rounded-full bg-white text-4xl dark:bg-ink-900" aria-hidden>
               {profile.avatar}
             </span>
+          ) : typ === 'tema' ? (
+            // Appens egen standardbakgrund, så eleven ser vad hon går tillbaka till.
+            <span className="block h-16 w-full rounded-tile border border-ink-200 bg-ink-50" aria-hidden />
           ) : (
-            <span className="text-5xl leading-none" aria-hidden>🏠</span>
+            <span className="block h-16 w-full rounded-tile bg-ink-700" aria-hidden />
           )}
 
           <span className="reading w-full truncate text-center text-base font-extrabold">
-            {typ === 'ram' ? 'Ingen ram' : 'Vanlig'}
+            {namn}
           </span>
 
           <span className="rounded-full bg-ink-200 px-2 py-0.5 text-xs font-extrabold uppercase
@@ -279,7 +307,7 @@ export function AffarView({
           size="sm"
           className="absolute -right-2 -top-2"
           token={{ id: `ora-standard-${typ}`, text: etikett, lang: 'sv-SE' }}
-          label={typ === 'ram' ? 'Ingen ram' : 'Vanlig bakgrund'}
+          label={namn}
         />
       </div>
     );
@@ -373,7 +401,10 @@ export function AffarView({
 
       <main className="mx-auto flex max-w-3xl flex-col gap-5 px-4 py-6">
         {/* Flikarna. Bild + text, aldrig bara text. */}
-        <div className="flex flex-wrap gap-2" role="tablist" aria-label="Kategorier">
+        {/* Fem flikar sedan Effekter kom till. På en bredare skärm står de i
+            en rad med samma bredd, som i systerapparna; i en vanlig flex-rad
+            bröts "Mina köp" ensam ned på en egen rad även på Chromebooken. */}
+        <div className="flex flex-wrap gap-2 sm:grid sm:grid-cols-5" role="tablist" aria-label="Kategorier">
           {[
             ...KATEGORIER,
             { typ: 'kopt' as const, namn: 'Mina köp', ikon: '🎁' },
@@ -388,7 +419,8 @@ export function AffarView({
                 void play({ id: `flik-${k.typ}`, text: k.namn, lang: 'sv-SE' });
               }}
               className={cn(
-                'btn-pop flex min-h-0 items-center gap-2 rounded-tile px-4 py-3 text-lg font-extrabold',
+                'btn-pop flex min-h-0 items-center justify-center gap-2 rounded-tile px-4 py-3',
+                'text-lg font-extrabold sm:px-2 sm:text-base',
                 flik === k.typ
                   ? 'border-amberx-700 bg-amberx-500 text-white'
                   : 'border-ink-200 bg-white text-ink-700 dark:border-ink-700 dark:bg-ink-800 dark:text-ink-200'
@@ -432,9 +464,13 @@ export function AffarView({
           </p>
           <p className="leading-relaxed text-ink-700 dark:text-ink-200">
             Det hon köper börjar gälla direkt. Ett tryck på något hon redan
-            äger byter tillbaka till det, och kortet <strong>Ingen ram</strong>{' '}
-            respektive <strong>Vanlig</strong> tar bort påslaget utan att köpet
-            försvinner.
+            äger byter tillbaka till det, och korten <strong>Ingen ram</strong>,{' '}
+            <strong>Vanlig</strong> och <strong>Ingen effekt</strong> tar bort
+            påslaget utan att köpet försvinner.
+          </p>
+          <p className="mt-2 leading-relaxed text-ink-700 dark:text-ink-200">
+            Tema och effekt syns på alla sidor <strong>utom under själva
+            övningen</strong>. Där ska ingenting röra sig bakom uppgiften.
           </p>
         </section>
       </main>
@@ -532,5 +568,38 @@ function KopRuta({
         </div>
       </div>
     </div>
+  );
+}
+
+/** Provbit för ett tema: exakt samma bakgrund som sidan får. */
+function TemaProv({ tema, stor }: { tema: Vara; stor: boolean }) {
+  return (
+    <span
+      className={cn(
+        'block rounded-tile border border-black/10',
+        stor ? 'h-36 w-72 max-w-full' : 'h-20 w-full',
+        tema.animerad && 'tema-glid'
+      )}
+      style={{ background: tema.css }}
+      aria-hidden
+    />
+  );
+}
+
+/**
+ * Provbit för en effekt: de riktiga partiklarna över en mörk ruta, som i
+ * Engelskajakten. Mörkt för att vitt snöfall och glitter ska synas.
+ */
+function EffektProv({ effekt, stor }: { effekt: Vara; stor: boolean }) {
+  return (
+    <span
+      className={cn(
+        'relative block overflow-hidden rounded-tile bg-gradient-to-br from-ink-600 to-ink-900',
+        stor ? 'h-36 w-72 max-w-full' : 'h-20 w-full'
+      )}
+      aria-hidden
+    >
+      <EffektLager effekt={effekt} />
+    </span>
   );
 }

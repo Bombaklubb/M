@@ -322,6 +322,37 @@ export function kollaOrdbilder(): Fel[] {
   return fel;
 }
 
+/** WCAG:s relativa luminans för en färg #rrggbb. */
+function luminans(hex: string): number {
+  const kanal = (i: number) => {
+    const c = parseInt(hex.slice(i, i + 2), 16) / 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  };
+  return 0.2126 * kanal(1) + 0.7152 * kanal(3) + 0.0722 * kanal(5);
+}
+
+/**
+ * Hittar färger i ett tema som appens mörka text inte går att läsa mot.
+ *
+ * Temat ligger bakom rubriker och hjälptext, och texten är mörk. Varje färg
+ * i temat måste därför hålla 4,5:1 mot den LJUSASTE mörka text som kan
+ * hamna ovanpå: ink-700 (#334155). ink-500 mörkas till ink-700 så länge ett
+ * tema är på, se index.css. Genomskinliga lager får bara vara vita.
+ */
+function temaFel(css: string): string[] {
+  const fel: string[] = [];
+  const text = luminans('#334155');
+  for (const hex of css.match(/#[0-9a-fA-F]{6}\b/g) ?? []) {
+    const kontrast = (luminans(hex) + 0.05) / (text + 0.05);
+    if (kontrast < 4.5) fel.push(`${hex} ger bara ${kontrast.toFixed(1)}:1 mot texten`);
+  }
+  if (/#[0-9a-fA-F]{3}\b/.test(css)) fel.push('kort hexkod – skriv ut alla sex tecken så att den kontrolleras');
+  for (const rgba of css.match(/rgba?\([^)]*\)/g) ?? []) {
+    if (!/^rgba?\(\s*255\s*,\s*255\s*,\s*255/.test(rgba)) fel.push(`${rgba} är inte vitt`);
+  }
+  return fel;
+}
+
 /**
  * Affärens katalog.
  *
@@ -334,7 +365,9 @@ export function kollaOrdbilder(): Fel[] {
  *    profile.avatar med varans emoji, så två varor med samma emoji skulle
  *    lysa gröna samtidigt – och en gratisfigur skulle få ett köpt kort att se
  *    valt ut utan att vara köpt.
- *  - En ram eller ett tema utan `stil`. Den går att köpa, och syns aldrig.
+ *  - En ram utan `stil`, ett tema utan `css` eller en effekt utan rörelse.
+ *    Den går att köpa, och syns aldrig.
+ *  - Ett tema med en färg som den mörka texten inte går att läsa mot.
  */
 export function kollaAffar(): Fel[] {
   const fel: Fel[] = [];
@@ -357,8 +390,13 @@ export function kollaAffar(): Fel[] {
       const forra = emojis.get(v.ikon);
       if (forra) sagt(`${v.id} och ${forra} har samma figur ${v.ikon}`);
       emojis.set(v.ikon, v.id);
-    } else if (!v.stil) {
-      sagt(`${v.id} saknar stil och skulle inte synas`);
+    } else if (v.typ === 'ram') {
+      if (!v.stil) sagt(`${v.id} saknar stil och skulle inte synas`);
+    } else if (v.typ === 'tema') {
+      if (!v.css) sagt(`${v.id} saknar css och skulle inte synas`);
+      else for (const f of temaFel(v.css)) sagt(`${v.id}: ${f}`);
+    } else if (v.typ === 'effekt') {
+      if (!v.rorelse || !v.antal) sagt(`${v.id} saknar rörelse eller antal`);
     }
   }
 

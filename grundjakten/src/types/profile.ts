@@ -123,9 +123,10 @@ export interface Progress {
   spenderat: number;
   /** Id:n ur data/affar.ts som eleven köpt. */
   kopta: string[];
-  /** Vald ram respektive tema, eller null för appens standardutseende. */
+  /** Vald ram, tema respektive effekt, eller null för appens standardutseende. */
   valdRam: string | null;
   valdTema: string | null;
+  valdEffekt: string | null;
 }
 
 export const DEFAULT_SETTINGS: ProfileSettings = {
@@ -143,6 +144,7 @@ export function emptyProgress(): Progress {
     kopta: [],
     valdRam: null,
     valdTema: null,
+    valdEffekt: null,
     kistor: [],
     utdelade: [],
     badges: [],

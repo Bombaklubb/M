@@ -18,7 +18,11 @@ import { getCurrentUser, getProfile, getProgress, saveProfile, saveProgress, set
 import { addXp, recordAnswer, shouldAdvanceLevel, shouldAdvanceStep, touchDailyStreak } from '@/lib/progress';
 import { nyaKistor, oppnaKista, passKista, utvarderaUtmarkelser } from '@/lib/belohningar';
 import { traKistaEfterPass } from '@/data/belohningar';
-import { kop as kopVara, temaKlass, valj as valjVara, valjBort as valjBortVara } from '@/lib/affar';
+import {
+  kop as kopVara, valdEffekt, valj as valjVara, valjBort as valjBortVara, valtTema,
+  type Avstangbar,
+} from '@/lib/affar';
+import { Bakgrund } from '@/components/Bakgrund';
 import { varaById } from '@/data/affar';
 import { setRateScale } from '@/lib/audio';
 import { todayStamp } from '@/lib/utils';
@@ -65,20 +69,6 @@ export default function App() {
     setRateScale(profile.settings.speechRate);
     document.documentElement.classList.toggle('font-dyslexic', profile.settings.dyslexicFont);
   }, [profile?.settings.speechRate, profile?.settings.dyslexicFont]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  /**
-   * Temat ur affären.
-   *
-   * Klassen sätts på <body>, som redan bär standardtoningen – ett tema
-   * ersätter den i stället för att läggas ovanpå. Alla teman tas bort först,
-   * annars blir två kvar om eleven byter.
-   */
-  useEffect(() => {
-    const klass = progress ? temaKlass(progress) : '';
-    const alla = ['tema-skog', 'tema-hav', 'tema-solnedgang', 'tema-rymden'];
-    document.body.classList.remove(...alla);
-    if (klass) document.body.classList.add(klass);
-  }, [progress?.valdTema]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /**
    * Varje ny skärm börjar överst.
@@ -261,7 +251,7 @@ export default function App() {
    * med ett gratis "Standard"-kort i varje flik, och samma kort finns nu i
    * affären här. Köpet ligger kvar; det är bara påslaget som stängs av.
    */
-  const valjBortVaran = (typ: 'ram' | 'tema') => {
+  const valjBortVaran = (typ: Avstangbar) => {
     if (!profile || !progress) return;
     const next = valjBortVara(progress, typ);
     if (next === progress) return;
@@ -315,6 +305,12 @@ export default function App() {
 
   return (
     <ErrorBoundary>
+      {/* Tema och effekt ur affären. Inte under ett övningspass – där ska
+          ingenting röra sig och ingenting konkurrera med uppgiften. */}
+      {view.name !== 'session' && (
+        <Bakgrund tema={valtTema(progress)} effekt={valdEffekt(progress)} />
+      )}
+
       {view.name === 'home' && (
         <HomeView
           profile={profile}

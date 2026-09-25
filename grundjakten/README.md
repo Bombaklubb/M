@@ -197,13 +197,15 @@ Det är därför också appens enda skärm med löpande text.
 
 ## Affären
 
-Eleven handlar för sina poäng. Byggd efter **Engelskajaktens** affär
-(`engelska/src/app/butik/page.tsx` och `engelska/src/lib/shop.ts`, lästa med
-lärarens uttryckliga tillåtelse – aldrig ändrade): färgad hjälte med saldot i
-en egen ruta, flikar per kategori plus *Mina köp*, figurerna i rubricerade
-grupper, kort med bild, namn, sällsynthet och pris, en köpruta som visar vad
-som blir kvar efteråt, och ett gratis standardkort som tar bort ram
-respektive tema.
+Eleven handlar för sina poäng. Byggd efter **Engelskajaktens och
+Mattejaktens** affärer (`engelska/src/app/butik/page.tsx`,
+`engelska/src/lib/shop.ts`, `engelska/src/components/ui/ThemedBackdrop.tsx`,
+`EffectOverlay.tsx`, `matematik/src/data/shop.ts` – lästa med lärarens
+uttryckliga tillåtelse, aldrig ändrade): färgad hjälte med saldot i en egen
+ruta, flikar per kategori plus *Mina köp*, figurerna i rubricerade grupper,
+kort med bild, namn, sällsynthet och pris, en köpruta som visar vad som blir
+kvar efteråt, och ett gratis standardkort som tar bort ram, tema respektive
+effekt.
 
 **Poängen sjunker aldrig av ett köp.** `progress.xp` är elevens
 livstidssumma och styr både nivåbandet och kistmilstolparna, och husregeln är
@@ -212,30 +214,48 @@ nivå genom att handla, och en redan utdelad kista kunna delas ut igen. Ett köp
 ökar i stället `spenderat`, och det som går att handla för är `xp -
 spenderat` (`attSpendera()` i `lib/affar.ts`).
 
-Tre kategorier, alla med synlig verkan:
+Fyra kategorier, samma som i systerapparna, alla med synlig verkan:
 
 | | Antal | Vad som händer |
 |---|---|---|
 | **Figurer** | 31 | Extra figurer utöver de tolv gratis, i grupperna Djur, Fantasi och Roligt |
 | **Ramar** | 8 | En ring runt figuren, i sidhuvudet och på framstegssidan |
-| **Teman** | 7 | Appens bakgrundstoning byts |
+| **Teman** | 16 | Hela sidans bakgrund: färger, mönster, sol, planet, rutor, ränder |
+| **Effekter** | 11 | Snö, regn, hjärtan, glitter … som rör sig över bakgrunden |
 
-Fliken **Mina köp** samlar det eleven äger, och i Ramar och Teman ligger ett
-gratis standardkort först (*Ingen ram*, *Vanlig*) som tar bort påslaget utan
-att köpet försvinner. Utan det kortet fastnade den som köpt ett tema i det för
-alltid – det gick att välja ett annat, men aldrig att stänga av.
+Effekterna är samma elva som i Engelskajakten och Mattejakten, med samma id:n
+och samma rörelser (faller, stiger, glittrar). En skillnad: partiklarna
+startar mitt i sin bana i stället för att vänta osynliga, så att provbiten i
+affären är full från första stund.
 
-Skillnaderna mot Engelskajakten följer av målgruppen:
+**Tema och effekt syns på alla sidor utom under själva övningspasset.** Samma
+regel som i Engelskajakten, där övningssidorna har egen bakgrund som täcker
+temat. Här ritas lagret (`components/Bakgrund.tsx`) helt enkelt inte under ett
+pass: bakom en uppgift ska ingenting röra sig och ingenting konkurrera med
+bokstäverna. Med systeminställningen *minska rörelse* ritas inga partiklar
+alls och de animerade temana står stilla.
 
-- **Ingen Effekter-flik.** Engelskajakten har elva partikeleffekter som faller
-  över profilen. Här ligger utseendet bakom *själva uppgiften*, och något som
-  rör sig drar blicken från den.
+**Temana är starka men aldrig mörka.** Systerapparna har vit text och lägger
+en svart slöja över temat. Här är texten mörk, så i stället får ingen färg i
+ett tema vara mörkare än att texten läses mot den. `kollaAffar()` räknar
+kontrasten (minst 4,5:1 mot `ink-700`) för varje färg i varje tema, och den
+ljusgrå hjälptexten mörkas ett snäpp så länge ett tema är på. Därför finns
+inga zebra- eller komönster – svart går inte.
+
+**Provbiten är det riktiga temat.** Temakorten visar samma CSS som sidan
+får, inte en emoji. Former som sol och planet är satta i procent så att de
+syns även i den lilla rutan. De första temana var 25 % tvätt på vitt och
+såg mer spektakulära ut som emoji än som bakgrund.
+
+Fliken **Mina köp** samlar det eleven äger, och i Ramar, Teman och Effekter
+ligger ett gratis standardkort först (*Ingen ram*, *Vanlig*, *Ingen effekt*)
+som tar bort påslaget utan att köpet försvinner.
+
+Skillnaderna mot systerapparna följer av målgruppen:
+
 - **Tre sällsynthetsgrader, inte fem.** Graden finns för att göra ett köp
   märkvärdigt, och fem steg som eleven inte kan läsa skillnad på blir bara fem
   färger.
-- **Mjuka toningar som teman, aldrig mönster.** Engelskajaktens randiga och
-  prickiga teman ligger bara på ett kort på profilsidan; här skulle samma
-  mönster göra bokstäverna svårare att urskilja.
 - **Varje vara har ett öra.** Ett kort utan öra är en gissning, och det gäller
   lika mycket i affären som i en övning. Örat ligger utanför kortknappen, så
   hon kan höra vad varan är utan att råka köpa den.
@@ -264,8 +284,9 @@ med sämre läsbarhet.
 
 `kollaAffar()` i `dev/checkTasks.ts` vaktar katalogen: dubblerade id:n (köpen
 sparas på id), två figurer med samma emoji eller en figur som redan finns
-gratis (affären avgör "används" genom att jämföra emojin), ram eller tema utan
-`stil` (går att köpa, syns aldrig), tom flik eller tom grupp.
+gratis (affären avgör "används" genom att jämföra emojin), en ram utan `stil`,
+ett tema utan `css` eller en effekt utan rörelse (går att köpa, syns aldrig),
+temafärger som texten inte går att läsa mot, tom flik eller tom grupp.
 
 Kundvagnen ligger i sidhuvudet bredvid kistorna; båda handlar om poängen. Den
 knappen kostade plats: med sju saker på 360 px bröts raden till tre. Därför
