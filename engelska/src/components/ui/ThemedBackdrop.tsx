@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { loadStudent } from "@/lib/storage";
 import { getEquippedTheme, getEquippedEffect } from "@/lib/shopStorage";
-import { THEME_MAP } from "@/lib/shop";
+import { useThemeArt } from "@/lib/useThemeArt";
 import EffectOverlay from "@/components/ui/EffectOverlay";
 
 /**
@@ -36,19 +36,22 @@ export default function ThemedBackdrop() {
     };
   }, []);
 
-  const theme = themeId ? THEME_MAP[themeId] : null;
-  if (!theme && !effectId) return null;
+  const art = useThemeArt(themeId);
+  if (!art && !effectId) return null;
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
-      {theme && (
-        <div
-          className={`absolute inset-0 ${theme.animated ? "shop-theme-animated" : ""}`}
-          style={{ background: theme.css }}
-        />
+      {art && (
+        <>
+          {/* Fast lager bakom sidan, så en ritad scen står hel på skärmen hur
+              lång sidan än är, i stället för att sträckas med innehållet. */}
+          <div className="absolute inset-0" style={{ background: art.bg }} />
+          {/* En lätt slöja räcker: texten som ligger direkt på temat har egen
+              skugga (.on-theme). Förut låg 40 % svart över allt, så varje tema
+              såg grumligt ut jämfört med provbiten i affären. */}
+          <div className="absolute inset-0 bg-black/10 dark:bg-gray-950/45" />
+        </>
       )}
-      {/* Mörk scrim så vit text alltid syns ovanpå mönstret */}
-      {theme && <div className="absolute inset-0 bg-black/40" />}
       <EffectOverlay effectId={effectId} />
     </div>
   );

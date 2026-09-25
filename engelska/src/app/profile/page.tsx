@@ -11,7 +11,7 @@ import { ACHIEVEMENTS, ACHIEVEMENT_ICONS, isUnlocked } from "@/lib/achievements"
 import { getAvatar } from "@/lib/avatars";
 import { getLevel } from "@/lib/levels";
 import { getEquippedFrame, getEquippedTheme, getEquippedEffect, getWalletBalance } from "@/lib/shopStorage";
-import { THEME_MAP } from "@/lib/shop";
+import { useThemeArt } from "@/lib/useThemeArt";
 import EffectOverlay from "@/components/ui/EffectOverlay";
 import type { StudentData, StageId } from "@/lib/types";
 
@@ -22,6 +22,7 @@ export default function ProfilePage() {
   const [equippedTheme, setEquippedTheme] = useState<string | null>(null);
   const [equippedEffect, setEquippedEffect] = useState<string | null>(null);
   const [walletBalance, setWalletBalance] = useState(0);
+  const heroArt = useThemeArt(equippedTheme);
 
   useEffect(() => {
     const s = loadStudent();
@@ -83,18 +84,16 @@ export default function ProfilePage() {
       <main className="max-w-3xl mx-auto px-4 py-8 space-y-6">
         {/* Profile hero */}
         {(() => {
-          const theme = equippedTheme ? THEME_MAP[equippedTheme] : null;
           return (
             <div
               className={`card relative overflow-hidden text-white border-none ${
-                theme
-                  ? theme.animated ? "shop-theme-animated" : ""
-                  : "bg-gradient-to-br from-gray-800 to-gray-900 dark:from-gray-700 dark:to-gray-800"
+                heroArt ? "" : "bg-gradient-to-br from-gray-800 to-gray-900 dark:from-gray-700 dark:to-gray-800"
               }`}
-              style={theme ? { background: theme.css } : undefined}
+              style={heroArt ? { background: heroArt.preview } : undefined}
             >
-              {/* Scrim så vit text alltid syns ovanpå mönstret */}
-              {theme && <div className="absolute inset-0 bg-black/40" aria-hidden="true" />}
+              {/* Text står över hela kortet, även poängen till höger, så slöjan
+                  ligger jämnt – bara något mörkare där namnet står. */}
+              {heroArt && <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/50 to-black/50" aria-hidden="true" />}
               {/* Animerad partikeleffekt */}
               <EffectOverlay effectId={equippedEffect} />
 

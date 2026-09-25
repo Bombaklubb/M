@@ -288,7 +288,7 @@ export default function OmPage() {
           <ul className="space-y-1.5 list-disc pl-5 marker:text-emerald-500">
             <li><strong>Figurer</strong> – din avatar (100–2 500 poäng).</li>
             <li><strong>Ramar</strong> – en ram runt figuren (250–3 500 poäng).</li>
-            <li><strong>Teman</strong> – bakgrunden i hela appen (100–3 500 poäng).</li>
+            <li><strong>Teman</strong> – en tecknad bakgrund bakom startsidan och världarna: 52 scener och mönster i åtta kategorier, bland annat natur, djur, spel, fantasy, riddare och anime &amp; manga (350–3 500 poäng).</li>
             <li><strong>Effekter</strong> – rörelse och glitter runt figuren (100–3 000 poäng).</li>
           </ul>
           <p className="text-sm">

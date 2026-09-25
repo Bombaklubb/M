@@ -9,13 +9,14 @@ import { loadStudent, setAvatar } from "@/lib/storage";
 import { getAvatar } from "@/lib/avatars";
 import {
   SHOP_AVATARS, SHOP_FRAMES, SHOP_THEMES, SHOP_EFFECTS, THEME_MAP,
-  RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER,
+  RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER, THEME_CATEGORY_ORDER, THEME_CATEGORY_LABELS,
   type Rarity, type ShopAvatar, type ShopFrame, type ShopTheme, type ShopEffect,
 } from "@/lib/shop";
 import {
   loadShop, buyItem, equipFrame, equipTheme, equipEffect, getWalletBalance, type ShopData, type ShopKind,
 } from "@/lib/shopStorage";
 import type { StudentData } from "@/lib/types";
+import { getThemeArt } from "@/lib/themeArt";
 
 type Tab = "avatar" | "frame" | "theme" | "effect" | "owned";
 
@@ -28,13 +29,22 @@ const TABS: { id: Tab; label: string; icon: string }[] = [
 ];
 
 // ─── Förhandsvisningar för tema/effekt ──────────────────────────────────────
-function ThemeSwatch({ theme, className = "w-full h-16" }: { theme: ShopTheme; className?: string }) {
+function ThemeSwatch({ theme, className = "w-full h-24" }: { theme: ShopTheme; className?: string }) {
+  // Samma bild som hamnar bakom sidan, så det eleven köper är det eleven får.
+  const art = getThemeArt(theme.art, prefersStill());
   return (
     <div
-      className={`${className} rounded-xl border border-black/10 ${theme.animated ? "shop-theme-animated" : ""}`}
-      style={{ background: theme.css }}
+      className={`${className} rounded-xl border border-black/10 overflow-hidden`}
+      style={{ background: art?.preview }}
+      role="img"
+      aria-label={`Förhandsvisning av temat ${theme.name}`}
     />
   );
+}
+
+/** Elever som valt minskad rörelse får stillastående bilder även här. */
+function prefersStill(): boolean {
+  return typeof window !== "undefined" && !!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
 }
 
 function EffectSwatch({ effectId, className = "w-full h-16" }: { effectId: string; className?: string }) {
@@ -387,14 +397,14 @@ export default function ButikPage() {
       {/* Hero med plånbok – visar aktivt tema + effekt */}
       {(() => {
       const heroTheme = shop.equippedTheme ? THEME_MAP[shop.equippedTheme] : null;
+      const heroArt = heroTheme ? getThemeArt(heroTheme.art, prefersStill()) : undefined;
       return (
       <div
-        className={`relative overflow-hidden text-white ${
-          heroTheme ? (heroTheme.animated ? "shop-theme-animated" : "") : "bg-gradient-to-br from-en-600 to-en-800"
-        }`}
-        style={heroTheme ? { background: heroTheme.css } : undefined}
+        className={`relative overflow-hidden text-white ${heroArt ? "" : "bg-gradient-to-br from-en-600 to-en-800"}`}
+        style={heroArt ? { background: heroArt.preview } : undefined}
       >
-        {heroTheme && <div className="absolute inset-0 bg-black/40" aria-hidden="true" />}
+        {/* Mörkast till vänster där rubriken står, så bilden syns till höger. */}
+        {heroArt && <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/35" aria-hidden="true" />}
         <EffectOverlay effectId={shop.equippedEffect} />
         <div className="relative z-10 max-w-4xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between flex-wrap gap-3">
@@ -443,18 +453,33 @@ export default function ButikPage() {
             {SHOP_FRAMES.map(frameCard)}
           </div>
         ) : tab === "theme" ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
-            <DefaultCard
-              label="Standard"
-              active={!shop.equippedTheme}
-              preview={<div className="w-full h-16 rounded-xl border border-black/10" style={{ background: DEFAULT_BG }} />}
-              onUse={() => {
-                const updated = equipTheme(student.name, null);
-                setShop(updated);
-                showToast("Standardbakgrunden återställd");
-              }}
-            />
-            {SHOP_THEMES.map(themeCard)}
+          <div className="space-y-6 pb-12">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+              <DefaultCard
+                label="Standard"
+                active={!shop.equippedTheme}
+                preview={<div className="w-full h-24 rounded-xl border border-black/10" style={{ background: DEFAULT_BG }} />}
+                onUse={() => {
+                  const updated = equipTheme(student.name, null);
+                  setShop(updated);
+                  showToast("Standardbakgrunden återställd");
+                }}
+              />
+            </div>
+            {THEME_CATEGORY_ORDER.map((cat) => {
+              const items = SHOP_THEMES.filter((t) => t.category === cat);
+              if (items.length === 0) return null;
+              return (
+                <section key={cat}>
+                  <h2 className="text-sm font-black uppercase tracking-wide text-en-700/80 dark:text-en-400/80 mb-2 px-0.5">
+                    {THEME_CATEGORY_LABELS[cat]}
+                  </h2>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                    {items.map(themeCard)}
+                  </div>
+                </section>
+              );
+            })}
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">

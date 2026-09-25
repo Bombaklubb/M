@@ -176,6 +176,12 @@
 }
 
 @layer utilities {
+  /* Vit text som ligger direkt på elevens tema. Temat kan vara en ljus
+     himmel eller ett mörkt rymdlandskap, så skuggan ska bära läsbarheten
+     på båda. */
+  .on-theme {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 0 12px rgba(0, 0, 0, 0.55);
+  }
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }

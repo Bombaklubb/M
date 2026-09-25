@@ -167,67 +167,106 @@ export const FRAME_MAP: Record<string, ShopFrame> = Object.fromEntries(
   SHOP_FRAMES.map((f) => [f.id, f])
 );
 
-// ─── Teman (profilbakgrunder med mönster) ───────────────────────────────────
-// `css` är ett komplett CSS background-värde som läggs på profilens topp-kort.
-// En mörk scrim läggs alltid ovanpå så vit text alltid syns.
-// animated === true ⇒ bakgrunden glider långsamt (kräver background-size 200%).
+// ─── Teman (ritade scener och mönster bakom sidan) ─────────────────────────
+// Själva bilderna ritas i themeArt.ts, som SVG i koden. Här står bara vad som
+// kan köpas. `art` är namnet på ritfunktionen.
+//
+// id:t är det eleverna har köpt, så ett befintligt id får aldrig ändras. De
+// nitton teman som fanns före omritningen behåller både id och pris.
+
+export type ThemeCategory = "natur" | "djur" | "spel" | "fantasy" | "riddare" | "anime" | "fest" | "monster";
+
+export const THEME_CATEGORY_LABELS: Record<ThemeCategory, string> = {
+  natur: "🌲 Natur & rymd",
+  djur: "🐼 Djur",
+  spel: "🎮 Spel",
+  fantasy: "🐉 Fantasy",
+  riddare: "🏰 Riddare",
+  anime: "🌸 Anime & manga",
+  fest: "🪩 Fest & sport",
+  monster: "🎨 Mönster",
+};
+
+export const THEME_CATEGORY_ORDER: ThemeCategory[] = ["natur", "djur", "spel", "fantasy", "riddare", "anime", "fest", "monster"];
+
 export interface ShopTheme {
   id: string;
   name: string;
   rarity: Rarity;
   price: number;
-  css: string;
-  animated?: boolean;
+  category: ThemeCategory;
+  /** Ritfunktionen i themeArt.ts. */
+  art: string;
 }
 
 export const SHOP_THEMES: ShopTheme[] = [
+  // ── Natur & rymd ──────────────────────────────────────────────────────────
+  { id: "th-skog",         name: "Skogen",           rarity: "common",    price: 350,  category: "natur",   art: "skog" },
+  { id: "th-hav",          name: "Havet",            rarity: "common",    price: 350,  category: "natur",   art: "hav" },
+  { id: "th-vinter",       name: "Vintern",          rarity: "common",    price: 350,  category: "natur",   art: "vinter" },
+  { id: "th-bubbles",      name: "Bubbelhav",        rarity: "rare",      price: 700,  category: "natur",   art: "bubbelhav" },
+  { id: "th-solnedgang",   name: "Solnedgången",     rarity: "rare",      price: 700,  category: "natur",   art: "solnedgang" },
+  { id: "th-rymd",         name: "Rymden",           rarity: "rare",      price: 700,  category: "natur",   art: "rymd" },
+  { id: "th-rainbow",      name: "Regnbåge",         rarity: "epic",      price: 1600, category: "natur",   art: "regnbage" },
+  { id: "th-vulkan",       name: "Vulkanen",         rarity: "epic",      price: 1400, category: "natur",   art: "lava" },
+  { id: "th-galaxy",       name: "Galax",            rarity: "epic",      price: 1600, category: "natur",   art: "galax" },
+  { id: "th-stjarnhimmel", name: "Stjärnhimmel",     rarity: "legendary", price: 3500, category: "natur",   art: "stjarnhimmel" },
+  { id: "th-aurora",       name: "Norrsken",         rarity: "legendary", price: 3500, category: "natur",   art: "norrsken" },
+
+  // ── Djur ──────────────────────────────────────────────────────────────────
+  { id: "th-tassar",       name: "Tassavtryck",      rarity: "common",    price: 350,  category: "djur",    art: "tassar" },
+  { id: "th-pingviner",    name: "Pingvinisen",      rarity: "rare",      price: 600,  category: "djur",    art: "pingviner" },
+  { id: "th-fjarilar",     name: "Fjärilsängen",     rarity: "rare",      price: 600,  category: "djur",    art: "fjarilar" },
+  { id: "th-zebra",        name: "Zebra",            rarity: "rare",      price: 600,  category: "djur",    art: "zebra" },
+  { id: "th-tiger",        name: "Tiger",            rarity: "rare",      price: 600,  category: "djur",    art: "tiger" },
+  { id: "th-cow",          name: "Ko-fläckar",       rarity: "rare",      price: 600,  category: "djur",    art: "ko" },
+  { id: "th-hastar",       name: "Hästhage",         rarity: "rare",      price: 600,  category: "djur",    art: "hastar" },
+  { id: "th-pandaskog",    name: "Pandaskogen",      rarity: "rare",      price: 700,  category: "djur",    art: "pandaskog" },
+  { id: "th-savann",       name: "Savannen",         rarity: "rare",      price: 700,  category: "djur",    art: "savann" },
+  { id: "th-leopard",      name: "Leopard",          rarity: "epic",      price: 1400, category: "djur",    art: "leopard" },
+  { id: "th-giraffe",      name: "Giraff",           rarity: "epic",      price: 1400, category: "djur",    art: "giraff" },
+  { id: "th-korallrev",    name: "Korallrevet",      rarity: "epic",      price: 1400, category: "djur",    art: "korallrev" },
+
+  // ── Spel ──────────────────────────────────────────────────────────────────
+  { id: "th-plattform",    name: "Plattformsspelet", rarity: "rare",      price: 600,  category: "spel",    art: "plattform" },
+  { id: "th-tvspel",       name: "TV-spel",          rarity: "rare",      price: 700,  category: "spel",    art: "tvspel" },
+  { id: "th-dataspel",     name: "Dataspel",         rarity: "rare",      price: 700,  category: "spel",    art: "dataspel" },
+  { id: "th-arkad",        name: "Arkadhallen",      rarity: "rare",      price: 700,  category: "spel",    art: "arkad" },
+  { id: "th-blockvarld",   name: "Blockvärlden",     rarity: "epic",      price: 1400, category: "spel",    art: "blockvarld" },
+
+  // ── Fantasy ───────────────────────────────────────────────────────────────
+  { id: "th-kristallgrotta", name: "Kristallgrottan", rarity: "rare",     price: 700,  category: "fantasy", art: "kristallgrotta" },
+  { id: "th-trollskog",    name: "Trollskogen",      rarity: "epic",      price: 1400, category: "fantasy", art: "trollskog" },
+  { id: "th-trollkarl",    name: "Trollkarlens torn", rarity: "epic",     price: 1400, category: "fantasy", art: "trollkarl" },
+  { id: "th-enhorning",    name: "Enhörningsriket",  rarity: "legendary", price: 3500, category: "fantasy", art: "enhorning" },
+  { id: "th-drakberget",   name: "Drakberget",       rarity: "legendary", price: 3500, category: "fantasy", art: "drakberget" },
+  { id: "th-rainbow-flow", name: "Regnbågsvirvel",   rarity: "legendary", price: 3500, category: "fantasy", art: "regnbagsvirvel" },
+
+  // ── Riddare ───────────────────────────────────────────────────────────────
+  { id: "th-tornerspel",   name: "Tornerspelet",     rarity: "rare",      price: 600,  category: "riddare", art: "tornerspel" },
+  { id: "th-vapenskold",   name: "Vapensköldar",     rarity: "rare",      price: 700,  category: "riddare", art: "vapenskold" },
+  { id: "th-riddarborg",   name: "Riddarborgen",     rarity: "epic",      price: 1400, category: "riddare", art: "riddarborg" },
+  { id: "th-kungasal",     name: "Kungasalen",       rarity: "legendary", price: 3500, category: "riddare", art: "kungasal" },
+
+  // ── Anime & manga ─────────────────────────────────────────────────────────
+  { id: "th-actionlinjer", name: "Actionlinjer",     rarity: "rare",      price: 600,  category: "anime",   art: "actionlinjer" },
+  { id: "th-mangasida",    name: "Mangasidan",       rarity: "rare",      price: 600,  category: "anime",   art: "mangaraster" },
+  { id: "th-kawaii",       name: "Kawaii",           rarity: "rare",      price: 700,  category: "anime",   art: "kawaii" },
+  { id: "th-serierutor",   name: "Serierutor",       rarity: "rare",      price: 700,  category: "anime",   art: "serierutor" },
+  { id: "th-animehimmel",  name: "Animehimmel",      rarity: "rare",      price: 700,  category: "anime",   art: "animehimmel" },
+  { id: "th-sakura",       name: "Körsbärsblom",     rarity: "epic",      price: 1400, category: "anime",   art: "sakura" },
+  { id: "th-neonstad",     name: "Neonstaden",       rarity: "epic",      price: 1400, category: "anime",   art: "neonstad" },
+
+  // ── Fest & sport ──────────────────────────────────────────────────────────
+  { id: "th-fotboll",      name: "Fotbollsplan",     rarity: "rare",      price: 600,  category: "fest",    art: "fotboll" },
+  { id: "th-dans",         name: "Dansgolv",         rarity: "epic",      price: 1400, category: "fest",    art: "dans" },
+  { id: "th-disco",        name: "Disco",            rarity: "epic",      price: 1400, category: "fest",    art: "disco" },
+
   // ── Mönster ───────────────────────────────────────────────────────────────
-  { id: "th-zebra",   name: "Zebra",        rarity: "rare", price: 600,
-    css: "repeating-linear-gradient(48deg,#111827 0 20px,#f9fafb 20px 40px)" },
-  { id: "th-tiger",   name: "Tiger",        rarity: "rare", price: 600,
-    css: "repeating-linear-gradient(75deg,#1c1917 0 9px,#ea580c 9px 42px)" },
-  { id: "th-cow",     name: "Ko-fläckar",   rarity: "rare", price: 600,
-    css: "radial-gradient(circle,#111827 32%,transparent 34%) 0 0/90px 90px,radial-gradient(circle,#111827 32%,transparent 34%) 45px 45px/90px 90px,#f9fafb" },
-  { id: "th-leopard", name: "Leopard",      rarity: "epic", price: 1400,
-    css: "radial-gradient(circle,#78350f 20%,transparent 22%) 0 0/52px 52px,radial-gradient(circle,#78350f 20%,transparent 22%) 26px 26px/52px 52px,linear-gradient(160deg,#f59e0b,#d97706)" },
-  { id: "th-giraffe", name: "Giraff",       rarity: "epic", price: 1400,
-    css: "radial-gradient(circle,#92400e 38%,transparent 40%) 0 0/70px 70px,radial-gradient(circle,#92400e 38%,transparent 40%) 35px 35px/70px 70px,#fcd34d" },
-
-  // ── Färg & form ─────────────────────────────────────────────────────────────
-  { id: "th-dots",    name: "Prickar",      rarity: "common", price: 350,
-    css: "radial-gradient(circle,#ffffff 22%,transparent 24%) 0 0/30px 30px,linear-gradient(160deg,#2563eb,#1e40af)" },
-  { id: "th-checker", name: "Schackrutor",  rarity: "common", price: 350,
-    css: "conic-gradient(#1f2937 90deg,#374151 90deg 180deg,#1f2937 180deg 270deg,#374151 270deg) 0 0/54px 54px" },
-  { id: "th-camo",    name: "Kamouflage",   rarity: "rare", price: 700,
-    css: "radial-gradient(circle at 20% 30%,#3f6212 0 34px,transparent 36px),radial-gradient(circle at 72% 62%,#1a2e05 0 42px,transparent 44px),radial-gradient(circle at 50% 92%,#4d7c0f 0 32px,transparent 34px),#65a30d" },
-  { id: "th-disco",   name: "Disco",        rarity: "epic", price: 1400,
-    css: "repeating-linear-gradient(45deg,#ec4899 0 22px,#8b5cf6 22px 44px,#3b82f6 44px 66px,#22c55e 66px 88px)" },
-  { id: "th-bubbles", name: "Bubbelhav",    rarity: "rare", price: 700,
-    css: "radial-gradient(circle at 28% 82%,rgba(255,255,255,0.35) 0 12px,transparent 14px),radial-gradient(circle at 68% 40%,rgba(255,255,255,0.28) 0 20px,transparent 22px),radial-gradient(circle at 85% 78%,rgba(255,255,255,0.3) 0 9px,transparent 11px),linear-gradient(160deg,#0369a1,#0891b2)" },
-
-  // ── Intressen ───────────────────────────────────────────────────────────────
-  { id: "th-tvspel",   name: "TV-spel",      rarity: "rare", price: 700,
-    css: "radial-gradient(circle,#fde047 16%,transparent 18%) 0 0/46px 46px,radial-gradient(circle,#22d3ee 12%,transparent 14%) 23px 23px/46px 46px,#1e1b4b" },
-  { id: "th-dataspel", name: "Dataspel",     rarity: "rare", price: 700,
-    css: "repeating-linear-gradient(0deg,transparent 0 38px,rgba(34,211,238,0.45) 38px 40px),repeating-linear-gradient(90deg,transparent 0 38px,rgba(34,211,238,0.45) 38px 40px),linear-gradient(160deg,#0f172a,#312e81)" },
-  { id: "th-fotboll",  name: "Fotbollsplan", rarity: "rare", price: 600,
-    css: "repeating-linear-gradient(90deg,#15803d 0 44px,#16a34a 44px 88px)" },
-  { id: "th-dans",     name: "Dansgolv",     rarity: "epic", price: 1400,
-    css: "conic-gradient(#ec4899 90deg,#8b5cf6 90deg 180deg,#06b6d4 180deg 270deg,#facc15 270deg) 0 0/58px 58px" },
-  { id: "th-hastar",   name: "Hästhage",     rarity: "rare", price: 600,
-    css: "radial-gradient(circle,#fef3c7 24%,transparent 26%) 0 0/52px 52px,radial-gradient(circle,#fde68a 18%,transparent 20%) 26px 26px/52px 52px,linear-gradient(160deg,#92400e,#b45309)" },
-
-  // ── Regnbåge & galax ────────────────────────────────────────────────────────
-  { id: "th-rainbow", name: "Regnbåge",     rarity: "epic", price: 1600,
-    css: "linear-gradient(135deg,#ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6)" },
-  { id: "th-galaxy",  name: "Galax",        rarity: "epic", price: 1600,
-    css: "radial-gradient(circle,#ffffff 1px,transparent 2px) 0 0/42px 42px,radial-gradient(circle,#ffffff 1px,transparent 2px) 21px 21px/64px 64px,linear-gradient(160deg,#1e1b4b,#4c1d95,#312e81)" },
-
-  // ── Animerade (legendariska) ──────────────────────────────────────────────
-  { id: "th-rainbow-flow", name: "Regnbågsvirvel", rarity: "legendary", price: 3500, animated: true,
-    css: "linear-gradient(60deg,#ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6,#ef4444)" },
-  { id: "th-aurora", name: "Norrsken",      rarity: "legendary", price: 3500, animated: true,
-    css: "linear-gradient(120deg,#042f2e,#065f46,#1e3a8a,#4c1d95,#065f46)" },
+  { id: "th-dots",         name: "Prickar",          rarity: "common",    price: 350,  category: "monster", art: "prickigt" },
+  { id: "th-checker",      name: "Schackrutor",      rarity: "common",    price: 350,  category: "monster", art: "rutmonster" },
+  { id: "th-godis",        name: "Godis",            rarity: "rare",      price: 600,  category: "monster", art: "godis" },
+  { id: "th-camo",         name: "Kamouflage",       rarity: "rare",      price: 700,  category: "monster", art: "kamouflage" },
 ];
 
 export const THEME_MAP: Record<string, ShopTheme> = Object.fromEntries(

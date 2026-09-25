@@ -36,7 +36,7 @@ export default function JakterMenu() {
   return (
     <div ref={ref} className="relative pointer-events-auto">
       {open && (
-        <div className="absolute bottom-7 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-xl border border-white/20 overflow-hidden min-w-[190px]">
+        <div className="absolute bottom-11 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-xl border border-white/20 overflow-hidden min-w-[190px]">
           {JAKT_APPS.map((app) => (
             <a
               key={app.url}
@@ -55,8 +55,10 @@ export default function JakterMenu() {
       )}
       <button
         onClick={() => setOpen((v) => !v)}
-        className="text-[11px] font-bold text-white/80 dark:text-white/70 hover:text-white transition-colors cursor-pointer py-3.5 -my-1.5 px-2 -mx-1 inline-flex items-center"
+        className="inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold text-slate-700 bg-white/85 backdrop-blur-sm shadow-md border border-black/5 hover:text-slate-900 hover:bg-white transition-colors cursor-pointer dark:bg-gray-900/80 dark:text-slate-200 dark:border-white/10 dark:hover:text-white"
+        aria-expanded={open}
       >
+        <span aria-hidden="true">🔗</span>
         Jaktlänkar ▴
       </button>
     </div>

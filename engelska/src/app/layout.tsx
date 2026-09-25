@@ -40,13 +40,15 @@ export default function RootLayout({
         <ThemedBackdrop />
         <AnalyticsInit />
         {children}
-        {/* Credits strip – full-width frosted bar at the bottom */}
-        <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center justify-between px-3.5 py-1.5 select-none pointer-events-none"
-          style={{ background: "rgba(0,0,0,0.05)", backdropFilter: "blur(4px)" }}>
+        {/* Hörnen längst ned. Ljusa knappar i stället för vit text direkt på
+            sidan: den vita texten försvann på ljusa sidor som Om och Affären,
+            och på ljusa teman. */}
+        <div className="fixed bottom-0 left-0 right-0 z-40 flex items-center justify-between px-3 pb-2 select-none pointer-events-none">
           <a
             href="mailto:martin.akdogan@enkoping.se"
-            className="text-[11px] font-bold text-white/80 dark:text-white/70 pointer-events-auto hover:text-white transition-colors py-3.5 -my-1.5 inline-flex items-center"
+            className="pointer-events-auto inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold text-slate-700 bg-white/85 backdrop-blur-sm shadow-md border border-black/5 hover:text-slate-900 hover:bg-white transition-colors dark:bg-gray-900/80 dark:text-slate-200 dark:border-white/10 dark:hover:text-white"
           >
+            <span aria-hidden="true">✉️</span>
             Kontakta Martin
           </a>
           <JakterMenu />

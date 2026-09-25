@@ -307,9 +307,11 @@ export default function HomePage() {
           </BlurFade>
         )}
         <BlurFade delay={0} duration={0.4} inView>
-          <div className="mb-4">
-            <h2 className="text-2xl font-black text-white drop-shadow">Välj din värld</h2>
-            <p className="text-white/70 font-medium text-sm mt-0.5">
+          {/* Glasplatta bakom rubriken: elevens tema kan vara allt från en ljus
+              himmel till ett brokigt mangaraster, och skugga räcker inte på alla. */}
+          <div className="mb-4 on-theme inline-block rounded-2xl bg-black/50 backdrop-blur-sm px-4 py-2.5">
+            <h2 className="text-2xl font-black text-white">Välj din värld</h2>
+            <p className="text-white/90 font-medium text-sm mt-0.5">
               Välkommen tillbaka, <span className="text-white font-black">{student.name}</span>! Vilket stadie vill du träna på?
             </p>
           </div>
