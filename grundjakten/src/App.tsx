@@ -23,6 +23,7 @@ import {
   type Avstangbar,
 } from '@/lib/affar';
 import { Bakgrund } from '@/components/Bakgrund';
+import { Sidfot } from '@/components/Sidfot';
 import { varaById } from '@/data/affar';
 import { setRateScale } from '@/lib/audio';
 import { todayStamp } from '@/lib/utils';
@@ -293,6 +294,7 @@ export default function App() {
     return (
       <ErrorBoundary>
         <LoginView onLogin={login} />
+        <Sidfot />
       </ErrorBoundary>
     );
   }
@@ -310,6 +312,11 @@ export default function App() {
       {view.name !== 'session' && (
         <Bakgrund tema={valtTema(progress)} effekt={valdEffekt(progress)} />
       )}
+
+      {/* Kontakta Martin och Jaktlänkar, som i systerapparna. Inte under ett
+          pass: där sitter passets knapprad längst ned, och en länk ut ur
+          appen mitt i en uppgift är en väg bort från den. */}
+      {view.name !== 'session' && <Sidfot />}
 
       {view.name === 'home' && (
         <HomeView

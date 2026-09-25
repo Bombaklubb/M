@@ -195,6 +195,35 @@ därefter kort med emoji, rubrik och text. Eleven kan inte läsa den, och
 behöver inte – allt hon behöver går att höra eller se som bild inne i appen.
 Det är därför också appens enda skärm med löpande text.
 
+Sidan beskriver allt som finns i appen i dag: vad eleven övar (Bokstavsresan,
+93 namngivna uppgifter, de 100 vanligaste orden som ordbilder), hur ett pass
+går framåt (försök igen, lotsning, rätt svar visas efter tredje missen,
+orange prickar), poäng, kistor och utmärkelser, affären, hur nivån sköter sig
+själv, var framstegen sparas och hur man når Martin. **Håll den i takt med
+appen** – en Om-sida som beskriver en äldre version är värre än ingen.
+Systerapparna räknas upp ur samma lista som Jaktlänkar-menyn (`JAKT_APPAR` i
+`components/Sidfot.tsx`), så de två kan inte glida isär.
+
+## Kontakta Martin och Jaktlänkar
+
+Som i Svenskajakten och Engelskajakten (`engelska/src/app/layout.tsx`,
+`engelska/src/components/ui/JakterMenu.tsx`, `matematik/src/components/
+JaktlankarMenu.tsx` – lästa med lärarens uttryckliga tillåtelse, aldrig
+ändrade): en fast rad längst ned med **Kontakta Martin** till vänster (ett
+mejl till martin.akdogan@enkoping.se) och **Jaktlänkar** till höger (en meny
+med Svenskajakten, Läsjakten, Mattejakten, Engelskajakten och Readhunt, som
+öppnas i en ny flik).
+
+Skillnader mot förlagan: mörk text på en ljus bricka, eftersom Grundjaktens
+bakgrund är ljus och systerappernas vita text inte skulle synas; och 44 px
+höga tryckytor i stället för 11 px-text. Menyn stängs med ett tryck utanför
+eller med Esc.
+
+Raden syns på alla sidor, inloggningen inräknad, **utom under ett
+övningspass**. Där sitter passets egen knapprad längst ned, och en länk ut ur
+appen mitt i en uppgift är en väg bort från den. Om-sidan har extra luft
+längst ned så att sista kortet inte hamnar bakom raden.
+
 ## Affären
 
 Eleven handlar för sina poäng. Byggd efter **Engelskajaktens och
@@ -325,6 +354,13 @@ Elevens samlade poäng står i en egen ruta på **båda** sidorna hon kan nå p�
 egen hand: framstegen och kistorna (`components/PoangRuta.tsx`). Samma
 komponent på båda – samma siffra på två ställen som ser olika ut läses som
 två olika siffror.
+
+Poängen står också **under elevens namn på startsidan**, som i
+Svenskajakten: ⭐ och siffran bredvid nivåmätaren. Det är samma tal (`xp`,
+allt hon samlat) som i poängrutan – inte det hon har kvar att handla för,
+som bara visas i affären. På telefon, där namnet inte får plats, står
+poängen under figuren; bredvid den bröt den sidhuvudet på två rader vid
+360 px.
 
 Mätaren fanns förut bara som en stapel utan siffra: "hur långt kvar" gick att
 se, men inte "hur mycket jag samlat". Det är det senare eleven räknar upp för

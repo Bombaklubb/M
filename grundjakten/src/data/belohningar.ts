@@ -101,11 +101,11 @@ export function traKistaEfterPass(n: number): boolean {
 }
 
 /**
- * Milstolpar utöver kistan varje pass ger.
+ * Milstolpar utöver den oregelbundna träkistan.
  *
- * Varje pass ger en träkista – täta små framgångar för en elev som behöver
- * dem. Silver och guld är det hon jobbar mot, och de kommer sällan nog att
- * vara en händelse.
+ * Träkistan kommer oregelbundet, efter vart 3:e till 7:e pass (se
+ * traKistaEfterPass ovan). Silver och guld är det hon jobbar mot, och de
+ * kommer sällan nog att vara en händelse.
  */
 export const PASS_MILSTOLPAR: { pass: number; typ: KistTyp }[] = [
   { pass: 5, typ: 'silver' },
