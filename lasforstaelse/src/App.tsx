@@ -33,7 +33,7 @@ import {
 import { getRandomText } from './services/libraryService';
 import { useDarkMode } from './contexts/DarkModeContext';
 import { getEquippedTheme } from './utils/shopStorage';
-import { THEME_MAP } from './data/shop';
+import { useTemaBild } from './utils/temaBild';
 import {
   loadGamification,
   saveGamification,
@@ -68,8 +68,18 @@ function App() {
 
   // Valt tema från affären – appliceras bara i ljust läge så mörkt läge förblir oförändrat.
   const equippedThemeId = getEquippedTheme();
-  const themeBg = !darkMode && equippedThemeId ? THEME_MAP[equippedThemeId]?.background : undefined;
-  const themeStyle = themeBg ? { background: themeBg } : undefined;
+  const temaBild = useTemaBild(!darkMode ? equippedThemeId : null);
+
+  // Temat ligger i ett fast lager bakom sidan i stället för som bakgrund på
+  // den skrollande behållaren. En ritad scen sträcktes annars ut över hela
+  // sidans höjd, och på en lång sida syntes bara en suddig bit av himlen.
+  // -z-10 håller lagret bakom innehållet; behållaren får `isolate` så att
+  // lagret stannar ovanför behållarens egen bakgrundsfärg.
+  const temaLager = temaBild ? (
+    <div className="fixed inset-0 -z-10 pointer-events-none" aria-hidden="true">
+      <div className="absolute inset-0" style={{ background: temaBild.bg }} />
+    </div>
+  ) : null;
 
   // Ladda användare vid start
   useEffect(() => {
@@ -459,7 +469,8 @@ function App() {
   // Profile view
   if (showProfile) {
     return (
-      <div className="min-h-screen bg-sky-50 dark:bg-slate-900" style={themeStyle}>
+      <div className="min-h-screen bg-sky-50 dark:bg-slate-900 relative isolate">
+        {temaLager}
         <Header
           user={user}
           onLogout={handleLogout}
@@ -532,7 +543,8 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-sky-50 dark:bg-slate-900 relative overflow-hidden" style={themeStyle}>
+    <div className="min-h-screen bg-sky-50 dark:bg-slate-900 relative overflow-hidden isolate">
+      {temaLager}
       {/* Animated floating background elements - only show on setup page */}
       {appState === AppState.SETUP && !minskaRorelse && (
         <>
@@ -601,8 +613,12 @@ function App() {
 
       {/* Kontaktinfo - visas endast på Setup-sidan */}
       {appState === AppState.SETUP && (
-        <div className="fixed bottom-4 left-4 text-sm text-slate-600 dark:text-slate-400 z-40">
-          <a href="mailto:martin.akdogan@enkoping.se" className="font-semibold hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Kontakta Martin</a>
+        // Egen platta, eftersom länken står direkt på bakgrunden. På ett mörkt
+        // tema som Galax eller Neonstaden försvann grå text helt.
+        <div className="fixed bottom-4 left-4 text-sm text-slate-700 dark:text-slate-300 z-40">
+          <a href="mailto:martin.akdogan@enkoping.se" className="inline-flex items-center gap-1.5 font-semibold px-3 py-1.5 rounded-full bg-white/90 dark:bg-slate-800/90 backdrop-blur shadow-md border border-slate-200/80 dark:border-slate-700 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <span aria-hidden="true">✉️</span> Kontakta Martin
+          </a>
         </div>
       )}
 

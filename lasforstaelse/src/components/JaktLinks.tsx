@@ -81,7 +81,9 @@ export const JaktLinks: React.FC = () => {
         onClick={() => setIsOpen((prev) => !prev)}
         aria-expanded={isOpen}
         aria-haspopup="menu"
-        className="flex items-center gap-1 text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer pointer-events-auto select-none"
+        // Samma platta som Kontakta Martin i andra hörnet, så att knappen syns
+        // även när eleven valt ett mörkt tema.
+        className="flex items-center gap-1 text-slate-600 dark:text-slate-300 px-3 py-1.5 rounded-full bg-white/90 dark:bg-slate-800/90 backdrop-blur shadow-md border border-slate-200/80 dark:border-slate-700 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer pointer-events-auto select-none"
       >
         <span>🔗</span>
         <span>Jaktlänkar</span>

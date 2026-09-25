@@ -260,99 +260,123 @@ export const EFFECT_MAP: Record<string, ShopEffect> = Object.fromEntries(
 );
 
 // Teman (themes) – byter appens bakgrund (ljust läge)
+// ─── Teman ────────────────────────────────────────────────────────────────────
+//
+// Temana var tidigare CSS-gradienter och enkla ränder. Bredvid Grundjaktens och
+// Engelskajaktens ritade scener såg de platta ut. Bilderna ritas nu som SVG i
+// src/utils/themeArt.ts, samma ritmodul som Engelskajakten använder, och `art`
+// är namnet på ritfunktionen.
+//
+// id:t är det eleverna har köpt, så ett befintligt id får aldrig ändras. De 25
+// teman som fanns före omritningen behåller id, namn, sällsynthet och pris –
+// bara bilden är ny. Ett enda undantag i namnet: Humla heter nu Fjärilsängen,
+// eftersom den ritade bilden är en blomsteräng med fjärilar och inte randig.
+
+export type ThemeCategory =
+  | 'natur' | 'djur' | 'spel' | 'fantasy' | 'riddare' | 'anime' | 'fest' | 'monster';
+
+export const THEME_CATEGORY_LABELS: Record<ThemeCategory, string> = {
+  natur: '🌲 Natur & rymd',
+  djur: '🐼 Djur',
+  spel: '🎮 Spel',
+  fantasy: '🐉 Fantasy',
+  riddare: '🏰 Riddare',
+  anime: '🌸 Anime & manga',
+  fest: '🪩 Fest & sport',
+  monster: '🎨 Mönster',
+};
+
+export const THEME_CATEGORY_ORDER: ThemeCategory[] = [
+  'natur', 'djur', 'spel', 'fantasy', 'riddare', 'anime', 'fest', 'monster',
+];
+
 export interface ShopTheme {
   id: string;
   name: string;
   rarity: Rarity;
   price: number;
-  background: string;  // CSS-bakgrund för hela appen (ljust läge)
-  swatch: string;      // liten förhandsvisning i butiken
+  category: ThemeCategory;
+  /** Ritfunktionen i themeArt.ts. */
+  art?: string;
+  /**
+   * Äldre CSS-bakgrund, för det enda tema som saknar en ritad motsvarighet.
+   * Används bara när `art` saknas.
+   */
+  background?: string;
 }
 
 export const SHOP_THEMES: ShopTheme[] = [
-  { id: 'ocean',   name: 'Havsdjup',    rarity: 'common',    price: 300,
-    background: 'linear-gradient(160deg,#e0f2fe 0%,#bae6fd 55%,#7dd3fc 100%)',
-    swatch: 'linear-gradient(135deg,#bae6fd,#38bdf8)' },
-  { id: 'sunset',  name: 'Solnedgång',  rarity: 'common',    price: 300,
-    background: 'linear-gradient(160deg,#fff7ed 0%,#fed7aa 50%,#fdba74 100%)',
-    swatch: 'linear-gradient(135deg,#fdba74,#fb7185)' },
-  { id: 'forest',  name: 'Trollskog',   rarity: 'rare',      price: 700,
-    background: 'linear-gradient(160deg,#ecfdf5 0%,#bbf7d0 55%,#86efac 100%)',
-    swatch: 'linear-gradient(135deg,#86efac,#059669)' },
-  { id: 'candy',   name: 'Godislandet', rarity: 'rare',      price: 700,
-    background: 'linear-gradient(160deg,#fdf2f8 0%,#fbcfe8 50%,#f9a8d4 100%)',
-    swatch: 'linear-gradient(135deg,#f9a8d4,#ec4899)' },
-  { id: 'lavender',name: 'Lavendeldröm',rarity: 'epic',      price: 1500,
-    background: 'linear-gradient(160deg,#f5f3ff 0%,#ddd6fe 50%,#c4b5fd 100%)',
-    swatch: 'linear-gradient(135deg,#c4b5fd,#7c3aed)' },
-  { id: 'galaxy',  name: 'Rymden',      rarity: 'legendary', price: 3200,
-    background: 'linear-gradient(160deg,#312e81 0%,#1e1b4b 50%,#0f172a 100%)',
-    swatch: 'linear-gradient(135deg,#6366f1,#0f172a)' },
+  // ── Natur & rymd ──────────────────────────────────────────────────────────
+  { id: 'skog',        name: 'Skogen',          rarity: 'common',    price: 400,  category: 'natur',   art: 'skog' },
+  { id: 'vinter',      name: 'Vintern',         rarity: 'common',    price: 400,  category: 'natur',   art: 'vinter' },
+  { id: 'waves',       name: 'Vågor',           rarity: 'rare',      price: 800,  category: 'natur',   art: 'hav' },
+  { id: 'ocean',       name: 'Havsdjup',        rarity: 'common',    price: 300,  category: 'natur',   art: 'bubbelhav' },
+  { id: 'sunset',      name: 'Solnedgång',      rarity: 'common',    price: 300,  category: 'natur',   art: 'solnedgang' },
+  { id: 'rainbow',     name: 'Regnbåge',        rarity: 'epic',      price: 1600, category: 'natur',   art: 'regnbage' },
+  { id: 'vulkan',      name: 'Vulkanen',        rarity: 'epic',      price: 1600, category: 'natur',   art: 'lava' },
+  { id: 'galax',       name: 'Galax',           rarity: 'epic',      price: 1600, category: 'natur',   art: 'galax' },
+  { id: 'starry',      name: 'Stjärnhimmel',    rarity: 'epic',      price: 1600, category: 'natur',   art: 'stjarnhimmel' },
+  { id: 'galaxy',      name: 'Rymden',          rarity: 'legendary', price: 3200, category: 'natur',   art: 'rymd' },
+  { id: 'norrsken',    name: 'Norrsken',        rarity: 'legendary', price: 3500, category: 'natur',   art: 'norrsken' },
 
-  // --- Djurmönster ---
-  { id: 'zebra', name: 'Zebra', rarity: 'rare', price: 800,
-    background: 'repeating-linear-gradient(60deg,#1f2937 0 22px,#f8fafc 22px 44px)',
-    swatch: 'repeating-linear-gradient(60deg,#1f2937 0 8px,#f8fafc 8px 16px)' },
-  { id: 'tiger', name: 'Tiger', rarity: 'rare', price: 800,
-    background: 'repeating-linear-gradient(75deg,#1c1917 0 8px,transparent 8px 34px),linear-gradient(160deg,#fb923c,#f97316)',
-    swatch: 'repeating-linear-gradient(75deg,#1c1917 0 4px,transparent 4px 14px),linear-gradient(160deg,#fb923c,#f97316)' },
-  { id: 'leopard', name: 'Leopard', rarity: 'epic', price: 1600,
-    background: 'radial-gradient(circle,transparent 26%,#7c2d12 28% 42%,transparent 44%) 0 0 / 46px 46px,radial-gradient(circle,transparent 26%,#92400e 28% 42%,transparent 44%) 23px 23px / 46px 46px,#f3e3bf',
-    swatch: 'radial-gradient(circle,transparent 26%,#7c2d12 28% 42%,transparent 44%) 0 0 / 22px 22px,radial-gradient(circle,transparent 26%,#92400e 28% 42%,transparent 44%) 11px 11px / 22px 22px,#f3e3bf' },
-  { id: 'cow', name: 'Ko', rarity: 'rare', price: 800,
-    background: 'radial-gradient(ellipse 42px 30px at 25% 30%,#1f2937 60%,transparent 62%) 0 0 / 120px 120px,radial-gradient(ellipse 52px 36px at 78% 72%,#1f2937 60%,transparent 62%) 0 0 / 120px 120px,#ffffff',
-    swatch: 'radial-gradient(ellipse 16px 12px at 28% 32%,#1f2937 60%,transparent 62%) 0 0 / 40px 40px,radial-gradient(ellipse 18px 12px at 76% 70%,#1f2937 60%,transparent 62%) 0 0 / 40px 40px,#ffffff' },
-  { id: 'bee', name: 'Humla', rarity: 'rare', price: 800,
-    background: 'repeating-linear-gradient(45deg,#facc15 0 24px,#1f2937 24px 48px)',
-    swatch: 'repeating-linear-gradient(45deg,#facc15 0 9px,#1f2937 9px 18px)' },
+  // ── Djur ──────────────────────────────────────────────────────────────────
+  { id: 'tassar',      name: 'Tassavtryck',     rarity: 'common',    price: 400,  category: 'djur',    art: 'tassar' },
+  { id: 'zebra',       name: 'Zebra',           rarity: 'rare',      price: 800,  category: 'djur',    art: 'zebra' },
+  { id: 'tiger',       name: 'Tiger',           rarity: 'rare',      price: 800,  category: 'djur',    art: 'tiger' },
+  { id: 'cow',         name: 'Ko',              rarity: 'rare',      price: 800,  category: 'djur',    art: 'ko' },
+  { id: 'bee',         name: 'Fjärilsängen',    rarity: 'rare',      price: 800,  category: 'djur',    art: 'fjarilar' },
+  { id: 'hastar',      name: 'Hästar',          rarity: 'rare',      price: 800,  category: 'djur',    art: 'hastar' },
+  { id: 'pingviner',   name: 'Pingvinisen',     rarity: 'rare',      price: 800,  category: 'djur',    art: 'pingviner' },
+  { id: 'pandaskog',   name: 'Pandaskogen',     rarity: 'rare',      price: 800,  category: 'djur',    art: 'pandaskog' },
+  { id: 'savann',      name: 'Savannen',        rarity: 'rare',      price: 800,  category: 'djur',    art: 'savann' },
+  { id: 'leopard',     name: 'Leopard',         rarity: 'epic',      price: 1600, category: 'djur',    art: 'leopard' },
+  { id: 'giraff',      name: 'Giraff',          rarity: 'epic',      price: 1600, category: 'djur',    art: 'giraff' },
+  { id: 'korallrev',   name: 'Korallrevet',     rarity: 'epic',      price: 1600, category: 'djur',    art: 'korallrev' },
 
-  // --- Regnbåge & drömskt ---
-  { id: 'rainbow', name: 'Regnbåge', rarity: 'epic', price: 1600,
-    background: 'linear-gradient(135deg,#fecaca,#fed7aa,#fef08a,#bbf7d0,#bae6fd,#ddd6fe)',
-    swatch: 'linear-gradient(135deg,#fecaca,#fef08a,#bbf7d0,#bae6fd,#ddd6fe)' },
-  { id: 'unicorn', name: 'Enhörning', rarity: 'legendary', price: 3500,
-    background: 'linear-gradient(160deg,#fbcfe8 0%,#ddd6fe 35%,#bae6fd 70%,#bbf7d0 100%)',
-    swatch: 'linear-gradient(160deg,#fbcfe8,#ddd6fe,#bae6fd,#bbf7d0)' },
-  { id: 'candystripe', name: 'Godisränder', rarity: 'rare', price: 800,
-    background: 'repeating-linear-gradient(45deg,#f9a8d4 0 20px,#fff1f2 20px 40px)',
-    swatch: 'repeating-linear-gradient(45deg,#f9a8d4 0 8px,#fff1f2 8px 16px)' },
+  // ── Spel ──────────────────────────────────────────────────────────────────
+  { id: 'plattform',   name: 'Plattformsspelet',rarity: 'rare',      price: 800,  category: 'spel',    art: 'plattform' },
+  { id: 'arkad',       name: 'Arkadhallen',     rarity: 'rare',      price: 800,  category: 'spel',    art: 'arkad' },
+  { id: 'pixel',       name: 'Pixel',           rarity: 'rare',      price: 800,  category: 'spel',    art: 'blockvarld' },
+  { id: 'tvspel',      name: 'Tv-spel',         rarity: 'epic',      price: 1600, category: 'spel',    art: 'tvspel' },
+  { id: 'dataspel',    name: 'Dataspel',        rarity: 'epic',      price: 1600, category: 'spel',    art: 'dataspel' },
 
-  // --- Mönster & former ---
-  { id: 'dots', name: 'Prickigt', rarity: 'common', price: 400,
-    background: 'radial-gradient(#f472b6 20%,transparent 22%) 0 0 / 36px 36px,radial-gradient(#60a5fa 20%,transparent 22%) 18px 18px / 36px 36px,#fef9ff',
-    swatch: 'radial-gradient(#f472b6 20%,transparent 22%) 0 0 / 16px 16px,radial-gradient(#60a5fa 20%,transparent 22%) 8px 8px / 16px 16px,#fef9ff' },
-  { id: 'checker', name: 'Rutigt', rarity: 'common', price: 400,
-    background: 'repeating-conic-gradient(#e0e7ff 0% 25%,#c7d2fe 0% 50%) 0 0 / 48px 48px',
-    swatch: 'repeating-conic-gradient(#e0e7ff 0% 25%,#c7d2fe 0% 50%) 0 0 / 20px 20px' },
-  { id: 'waves', name: 'Vågor', rarity: 'rare', price: 800,
-    background: 'radial-gradient(circle at 50% 0,#7dd3fc 25%,transparent 26%) 0 0 / 30px 15px,radial-gradient(circle at 50% 100%,#bae6fd 25%,transparent 26%) 15px 8px / 30px 15px,#e0f2fe',
-    swatch: 'radial-gradient(circle at 50% 0,#7dd3fc 25%,transparent 26%) 0 0 / 16px 8px,radial-gradient(circle at 50% 100%,#bae6fd 25%,transparent 26%) 8px 4px / 16px 8px,#e0f2fe' },
-  { id: 'hearts', name: 'Hjärtan', rarity: 'rare', price: 800,
-    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%3E%3Cpath%20d='M20,32C20,32,6,23,6,14C6,9,10,7,13,7C16,7,19,10,20,12C21,10,24,7,27,7C30,7,34,9,34,14C34,23,20,32,20,32Z'%20fill='%23fb7185'/%3E%3C/svg%3E\") 0 0 / 40px 40px,#fff1f2",
-    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%3E%3Cpath%20d='M20,32C20,32,6,23,6,14C6,9,10,7,13,7C16,7,19,10,20,12C21,10,24,7,27,7C30,7,34,9,34,14C34,23,20,32,20,32Z'%20fill='%23fb7185'/%3E%3C/svg%3E\") 0 0 / 28px 28px,#fff1f2" },
-  { id: 'starry', name: 'Stjärnhimmel', rarity: 'epic', price: 1600,
-    background: 'radial-gradient(1.6px 1.6px at 18px 24px,#fff,transparent) 0 0 / 90px 90px,radial-gradient(1.4px 1.4px at 55px 60px,#fff,transparent) 0 0 / 90px 90px,radial-gradient(1px 1px at 78px 30px,#e0e7ff,transparent) 0 0 / 90px 90px,radial-gradient(1.6px 1.6px at 35px 80px,#fff,transparent) 0 0 / 90px 90px,radial-gradient(1px 1px at 5px 55px,#c7d2fe,transparent) 0 0 / 90px 90px,linear-gradient(160deg,#1e1b4b,#0f172a)',
-    swatch: 'radial-gradient(1px 1px at 6px 8px,#fff,transparent) 0 0 / 18px 18px,radial-gradient(1px 1px at 13px 14px,#fff,transparent) 0 0 / 18px 18px,linear-gradient(160deg,#1e1b4b,#0f172a)' },
-  { id: 'pixel', name: 'Pixel', rarity: 'rare', price: 800,
-    background: 'linear-gradient(rgba(79,70,229,0.18) 1px,transparent 1px) 0 0 / 18px 18px,linear-gradient(90deg,rgba(79,70,229,0.18) 1px,transparent 1px) 0 0 / 18px 18px,#eef2ff',
-    swatch: 'linear-gradient(rgba(79,70,229,0.30) 1px,transparent 1px) 0 0 / 9px 9px,linear-gradient(90deg,rgba(79,70,229,0.30) 1px,transparent 1px) 0 0 / 9px 9px,#eef2ff' },
+  // ── Fantasy ───────────────────────────────────────────────────────────────
+  { id: 'forest',      name: 'Trollskog',       rarity: 'rare',      price: 700,  category: 'fantasy', art: 'trollskog' },
+  { id: 'lavender',    name: 'Lavendeldröm',    rarity: 'epic',      price: 1500, category: 'fantasy', art: 'kristallgrotta' },
+  { id: 'trollkarl',   name: 'Trollkarlens torn', rarity: 'epic',    price: 1600, category: 'fantasy', art: 'trollkarl' },
+  { id: 'unicorn',     name: 'Enhörning',       rarity: 'legendary', price: 3500, category: 'fantasy', art: 'enhorning' },
+  { id: 'drakberget',  name: 'Drakberget',      rarity: 'legendary', price: 3500, category: 'fantasy', art: 'drakberget' },
+  { id: 'virvel',      name: 'Regnbågsvirvel',  rarity: 'legendary', price: 3500, category: 'fantasy', art: 'regnbagsvirvel' },
 
-  // --- Intressen (emoji-mönster via SVG-tiles, som Hjärtan) ---
-  { id: 'fotboll', name: 'Fotboll', rarity: 'rare', price: 800,
-    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='96'%20height='96'%3E%3Ctext%20x='14'%20y='44'%20font-size='26'%20opacity='0.55'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E\") 0 0 / 96px 96px,repeating-linear-gradient(90deg,#bbf7d0 0 48px,#a7f3d0 48px 96px)",
-    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Ctext%20x='6'%20y='26'%20font-size='16'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E\") 0 0 / 40px 40px,repeating-linear-gradient(90deg,#bbf7d0 0 20px,#a7f3d0 20px 40px)" },
-  { id: 'hastar', name: 'Hästar', rarity: 'rare', price: 800,
-    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100'%20height='100'%3E%3Ctext%20x='12'%20y='46'%20font-size='28'%20opacity='0.55'%3E%F0%9F%90%B4%3C/text%3E%3C/svg%3E\") 0 0 / 100px 100px,linear-gradient(160deg,#fef3c7 0%,#fde68a 60%,#fcd34d 100%)",
-    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Ctext%20x='6'%20y='27'%20font-size='17'%3E%F0%9F%90%B4%3C/text%3E%3C/svg%3E\") 0 0 / 40px 40px,linear-gradient(160deg,#fef3c7,#fcd34d)" },
-  { id: 'dans', name: 'Dans', rarity: 'rare', price: 800,
-    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='110'%20height='110'%3E%3Ctext%20x='12'%20y='46'%20font-size='28'%20opacity='0.55'%3E%F0%9F%92%83%3C/text%3E%3Ctext%20x='66'%20y='96'%20font-size='20'%20opacity='0.45'%3E%F0%9F%8E%B5%3C/text%3E%3C/svg%3E\") 0 0 / 110px 110px,linear-gradient(160deg,#fdf2f8 0%,#fbcfe8 55%,#e9d5ff 100%)",
-    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Ctext%20x='7'%20y='27'%20font-size='17'%3E%F0%9F%92%83%3C/text%3E%3C/svg%3E\") 0 0 / 40px 40px,linear-gradient(160deg,#fdf2f8,#e9d5ff)" },
-  { id: 'tvspel', name: 'Tv-spel', rarity: 'epic', price: 1600,
-    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='104'%20height='104'%3E%3Ctext%20x='14'%20y='46'%20font-size='27'%20opacity='0.50'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E\") 0 0 / 104px 104px,linear-gradient(160deg,#e0e7ff 0%,#c7d2fe 60%,#a5b4fc 100%)",
-    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Ctext%20x='6'%20y='27'%20font-size='17'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E\") 0 0 / 40px 40px,linear-gradient(160deg,#e0e7ff,#a5b4fc)" },
-  { id: 'dataspel', name: 'Dataspel', rarity: 'epic', price: 1600,
-    background: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='100'%20height='100'%3E%3Ctext%20x='14'%20y='46'%20font-size='26'%20opacity='0.75'%3E%F0%9F%91%BE%3C/text%3E%3C/svg%3E\") 0 0 / 100px 100px,linear-gradient(rgba(74,222,128,0.10) 1px,transparent 1px) 0 0 / 20px 20px,linear-gradient(90deg,rgba(74,222,128,0.10) 1px,transparent 1px) 0 0 / 20px 20px,linear-gradient(160deg,#1e1b4b,#0f172a)",
-    swatch: "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3E%3Ctext%20x='7'%20y='27'%20font-size='17'%3E%F0%9F%91%BE%3C/text%3E%3C/svg%3E\") 0 0 / 40px 40px,linear-gradient(160deg,#1e1b4b,#0f172a)" },
+  // ── Riddare ───────────────────────────────────────────────────────────────
+  { id: 'tornerspel',  name: 'Tornerspelet',    rarity: 'rare',      price: 800,  category: 'riddare', art: 'tornerspel' },
+  { id: 'vapenskold',  name: 'Vapensköldar',    rarity: 'rare',      price: 800,  category: 'riddare', art: 'vapenskold' },
+  { id: 'riddarborg',  name: 'Riddarborgen',    rarity: 'epic',      price: 1600, category: 'riddare', art: 'riddarborg' },
+  { id: 'kungasal',    name: 'Kungasalen',      rarity: 'legendary', price: 3500, category: 'riddare', art: 'kungasal' },
+
+  // ── Anime & manga ─────────────────────────────────────────────────────────
+  { id: 'actionlinjer',name: 'Actionlinjer',    rarity: 'rare',      price: 800,  category: 'anime',   art: 'actionlinjer' },
+  { id: 'mangasida',   name: 'Mangasidan',      rarity: 'rare',      price: 800,  category: 'anime',   art: 'mangaraster' },
+  { id: 'serierutor',  name: 'Serierutor',      rarity: 'rare',      price: 800,  category: 'anime',   art: 'serierutor' },
+  { id: 'animehimmel', name: 'Animehimmel',     rarity: 'rare',      price: 800,  category: 'anime',   art: 'animehimmel' },
+  { id: 'hearts',      name: 'Hjärtan',         rarity: 'rare',      price: 800,  category: 'anime',   art: 'kawaii' },
+  { id: 'sakura',      name: 'Körsbärsblom',    rarity: 'epic',      price: 1600, category: 'anime',   art: 'sakura' },
+  { id: 'neonstad',    name: 'Neonstaden',      rarity: 'epic',      price: 1600, category: 'anime',   art: 'neonstad' },
+
+  // ── Fest & sport ──────────────────────────────────────────────────────────
+  { id: 'fotboll',     name: 'Fotboll',         rarity: 'rare',      price: 800,  category: 'fest',    art: 'fotboll' },
+  { id: 'dans',        name: 'Dans',            rarity: 'rare',      price: 800,  category: 'fest',    art: 'dans' },
+  { id: 'disco',       name: 'Disco',           rarity: 'epic',      price: 1600, category: 'fest',    art: 'disco' },
+
+  // ── Mönster ───────────────────────────────────────────────────────────────
+  { id: 'dots',        name: 'Prickigt',        rarity: 'common',    price: 400,  category: 'monster', art: 'prickigt' },
+  { id: 'checker',     name: 'Rutigt',          rarity: 'common',    price: 400,  category: 'monster', art: 'rutmonster' },
+  { id: 'candy',       name: 'Godislandet',     rarity: 'rare',      price: 700,  category: 'monster', art: 'godis' },
+  { id: 'kamouflage',  name: 'Kamouflage',      rarity: 'rare',      price: 800,  category: 'monster', art: 'kamouflage' },
+  // Godisränder har ingen ritad motsvarighet som inte redan används. Den får
+  // behålla sitt randmönster hellre än att två teman visar samma bild.
+  { id: 'candystripe', name: 'Godisränder',     rarity: 'rare',      price: 800,  category: 'monster',
+    background: 'repeating-linear-gradient(45deg,#f9a8d4 0 20px,#fff1f2 20px 40px)' },
 ];
 
 export const THEME_MAP: Record<string, ShopTheme> = Object.fromEntries(

@@ -5,8 +5,10 @@ import { AVATAR_OPTIONS, User } from '../types';
 import FramedAvatar from './FramedAvatar';
 import {
   SHOP_AVATARS, SHOP_FRAMES, SHOP_EFFECTS, SHOP_THEMES, AVATAR_GROUP_ORDER,
+  THEME_CATEGORY_ORDER, THEME_CATEGORY_LABELS,
   RARITY_LABELS, RARITY_RING, RARITY_STYLE, type Rarity,
 } from '../data/shop';
+import { useAllaTemabilder } from '../utils/temaBild';
 import {
   loadShop, buyItem, equipFrame, equipEffect, equipTheme, getWalletBalance,
   type ShopData, type ShopKind,
@@ -231,6 +233,7 @@ interface ShopViewProps {
 export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
   const [user, setUser] = useState<User | null>(null);
   const [tab, setTab] = useState<Tab>('avatar');
+  const temabilder = useAllaTemabilder();
   const [shop, setShop] = useState<ShopData>(loadShop());
   const [confirm, setConfirm] = useState<{
     kind: ShopKind; key: string; price: number; name: string; preview: React.ReactNode;
@@ -381,16 +384,18 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
   }
 
   // Tema-swatch (förhandsvisning)
-  function themeSwatch(swatch: string, size?: number) {
+  function themeSwatch(swatch: string | undefined, size?: number) {
     // Utan storlek fyller provet hela plattan i kortet. Med storlek används det
-    // som liten ikon, till exempel i köp-rutan.
+    // som liten ikon, till exempel i köp-rutan. Tills ritkoden laddats visas en
+    // neutral platta, så att rutnätet inte hoppar när bilderna kommer.
+    const bakgrund = swatch ?? '#e2e8f0';
     if (size === undefined) {
-      return <div className="w-full h-full" style={{ background: swatch }} />;
+      return <div className="w-full h-full" style={{ background: bakgrund }} />;
     }
     return (
       <div
         className="rounded-2xl"
-        style={{ width: size, height: size, background: swatch, border: '2px solid rgba(255,255,255,0.7)', boxShadow: '0 2px 10px rgba(0,0,0,0.15)' }}
+        style={{ width: size, height: size, background: bakgrund, border: '2px solid rgba(255,255,255,0.7)', boxShadow: '0 2px 10px rgba(0,0,0,0.15)' }}
       />
     );
   }
@@ -402,19 +407,34 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
     return (
       <ItemCard
         key={`th-${t.id}`}
-        preview={themeSwatch(t.background)}
+        preview={themeSwatch(temabilder[t.id])}
         fyllPlatta
         name={t.name} rarity={t.rarity} price={t.price}
         owned={owned} equipped={equipped} balance={balance}
         onBuy={() => setConfirm({ kind: 'theme', key: t.id, price: t.price, name: t.name,
-          preview: themeSwatch(t.swatch, 72) })}
+          preview: themeSwatch(temabilder[t.id], 72) })}
         onEquip={() => { equipTheme(equipped ? null : t.id); refresh(); showToast(equipped ? 'Tema borttaget' : `${t.name} på!`); }}
       />
     );
   }
 
+  // Teman grupperade per kategori, som i Engelskajakten. Med 53 teman i ett
+  // enda rutnät gick det inte att hitta riddarna eller animen.
   function renderThemes() {
-    return SHOP_THEMES.map(themeCard);
+    return THEME_CATEGORY_ORDER.map(kategori => {
+      const items = SHOP_THEMES.filter(t => t.category === kategori).sort((x, y) => x.price - y.price);
+      if (items.length === 0) return null;
+      return (
+        <section key={kategori}>
+          <h2 className="text-sm font-black uppercase tracking-wide text-indigo-700/80 dark:text-indigo-300 mb-2 px-0.5">
+            {THEME_CATEGORY_LABELS[kategori]}
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {items.map(themeCard)}
+          </div>
+        </section>
+      );
+    });
   }
 
   // "Mina köp"
@@ -569,7 +589,7 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
             {renderEffects()}
           </div>
         ) : tab === 'theme' ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
+          <div className="space-y-6 pb-12">
             {renderThemes()}
           </div>
         ) : (
