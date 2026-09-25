@@ -154,7 +154,7 @@ function AppInner() {
         <a href="mailto:martin.akdogan@enkoping.se"
           className="text-white/90 text-xs font-semibold hover:underline"
           style={{ textShadow: '0 1px 4px rgba(0,0,0,0.9), 0 0 8px rgba(0,0,0,0.7)' }}>
-          Kontakt – martin.akdogan@enkoping.se
+          ✉️ Kontakta Martin
         </a>
       </div>
     </>

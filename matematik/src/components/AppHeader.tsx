@@ -101,18 +101,16 @@ export default function AppHeader() {
               <span className="font-bold text-sm" style={{ color: '#ea580c' }}>{points.total}</span>
             </div>
 
-            {/* Om Mattejakten */}
+            {/* Om Mattejakten – text i stället för ikon, som i Svenskajakten.
+                Döljs på de smalaste skärmarna (finns kvar på startsidan). */}
             <button
               onClick={() => setView('about')}
-              className="flex items-center justify-center w-9 h-9 rounded-full hover:scale-105 transition-all cursor-pointer"
-              style={{
-                background: 'rgba(251, 146, 60, 0.12)',
-                border: '1px solid rgba(251, 146, 60, 0.40)',
-              }}
+              className="hidden sm:flex items-center gap-1.5 font-bold text-sm px-2 py-1.5 rounded-full hover:opacity-75 transition-opacity cursor-pointer whitespace-nowrap"
+              style={{ color: '#ea580c' }}
               title="Om Mattejakten – så fungerar appen"
-              aria-label="Om Mattejakten"
             >
-              <span className="text-base leading-none">ℹ️</span>
+              <span aria-hidden="true">❓</span>
+              <span>Om Mattejakten</span>
             </button>
 
             {/* Avatar + namn */}

@@ -8,7 +8,9 @@ import { Confetti } from './magicui/confetti';
 import {
   SHOP_AVATARS, SHOP_FRAMES, SHOP_TITLES, SHOP_BACKGROUNDS, SHOP_EFFECTS,
   RARITY_LABELS, RARITY_RING, AVATAR_GROUP_ORDER, type Rarity, type ShopBackground,
+  THEME_CATEGORY_LABELS, THEME_CATEGORY_ORDER,
 } from '../data/shop';
+import { useThemeArt } from '../utils/useThemeArt';
 import {
   loadShop, buyItem, equipItem, getWalletBalance,
   type ShopData, type ShopKind,
@@ -25,11 +27,13 @@ const TABS: { id: Tab; label: string; icon: string }[] = [
 ];
 
 // ─── Förhandsvisningar för tema/effekt ──────────────────────────────────────────
-function ThemeSwatch({ theme, className = 'w-full h-16' }: { theme: ShopBackground; className?: string }) {
+// Provbiten ritas med samma bild som hamnar bakom sidan när temat används.
+function ThemeSwatch({ theme, className = 'w-full h-20' }: { theme: ShopBackground; className?: string }) {
+  const art = useThemeArt(theme.id);
   return (
     <div
-      className={`${className} rounded-xl border border-black/10 ${theme.animated ? 'shop-theme-animated' : ''}`}
-      style={{ background: theme.css }}
+      className={`${className} rounded-xl border border-black/10 bg-slate-200`}
+      style={art ? { background: art.preview } : undefined}
     />
   );
 }
@@ -308,15 +312,31 @@ export default function ShopView() {
     return SHOP_FRAMES.map(frameCard);
   }
 
-  function renderThemes() {
-    return SHOP_BACKGROUNDS.map(backgroundCard);
+  // Teman grupperade per kategori, billigast först inom varje grupp
+  function renderThemeGroups() {
+    return THEME_CATEGORY_ORDER.map(cat => {
+      const items = SHOP_BACKGROUNDS
+        .filter(b => b.category === cat)
+        .sort((a, b) => a.price - b.price);
+      if (items.length === 0) return null;
+      return (
+        <section key={cat}>
+          <h2 className="text-sm font-black uppercase tracking-wide text-orange-700/80 mb-2 px-0.5">
+            {THEME_CATEGORY_LABELS[cat]}
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {items.map(backgroundCard)}
+          </div>
+        </section>
+      );
+    });
   }
 
   // "Standardtema" – återställer startsidans/profilen ursprungsbild (inget tema).
   function standardThemeCard() {
     const equipped = shop!.equippedBackground === null;
     const preview = (
-      <div className="w-full h-16 rounded-xl border border-black/10"
+      <div className="w-full h-20 rounded-xl border border-black/10"
         style={{ backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
     );
     return (
@@ -429,13 +449,17 @@ export default function ShopView() {
           <div className="space-y-6 pb-12">
             {renderAvatarGroups()}
           </div>
+        ) : tab === 'theme' ? (
+          <div className="space-y-6 pb-12">
+            {renderThemeGroups()}
+          </div>
         ) : tab === 'owned' ? (
           <div className="pb-12">
             {renderOwned()}
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">
-            {tab === 'frame' ? renderFrames() : tab === 'theme' ? renderThemes() : renderEffects()}
+            {tab === 'frame' ? renderFrames() : renderEffects()}
           </div>
         )}
       </main>
