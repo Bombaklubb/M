@@ -103,7 +103,8 @@ export default function AboutPage({ onBack }: Props) {
         </p>
         <p>
           NP-jakten är gratis, kräver inget konto och fungerar i webbläsaren på
-          Chromebook, dator, surfplatta och mobil.
+          Chromebook, dator, surfplatta och mobil. Första gången skriver du ett
+          gemensamt lösenord som du får av läraren – sedan kommer enheten ihåg det.
         </p>
       </Section>
 
