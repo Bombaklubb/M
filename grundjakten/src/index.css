@@ -41,65 +41,14 @@
   }
 
   /* ── Teman ur affären ────────────────────────────────────────────────
-     Klassen sätts på <html> av App.tsx och ersätter standardtoningen.
-     Alla är valda så att svart text håller kontrasten: bakgrunden får
-     aldrig göra uppgiften svårare att läsa, och den som köpt ett tema ska
-     inte straffas med sämre läsbarhet. Därför är även "Rymden" en ljus
-     natthimmel och inte svart.
-
-     Mjuka toningar, aldrig mönster. Engelskajakten har randiga och prickiga
-     teman, men där ligger de bara på ett kort på profilsidan. Här ligger
-     temat bakom själva uppgiften, och ett randigt underlag gör bokstäverna
-     svårare att urskilja. */
-  body.tema-skog {
-    background-image:
-      radial-gradient(58rem 42rem at 6% -8%, rgb(132 204 22 / 0.30), transparent 62%),
-      radial-gradient(52rem 38rem at 98% 4%, rgb(22 163 74 / 0.22), transparent 62%),
-      radial-gradient(48rem 40rem at 92% 100%, rgb(163 230 53 / 0.26), transparent 62%),
-      radial-gradient(54rem 44rem at 0% 96%, rgb(13 148 136 / 0.18), transparent 62%);
-  }
-  body.tema-hav {
-    background-image:
-      radial-gradient(58rem 42rem at 6% -8%, rgb(6 182 212 / 0.32), transparent 62%),
-      radial-gradient(52rem 38rem at 98% 4%, rgb(59 130 246 / 0.24), transparent 62%),
-      radial-gradient(48rem 40rem at 92% 100%, rgb(103 232 249 / 0.28), transparent 62%),
-      radial-gradient(54rem 44rem at 0% 96%, rgb(14 116 144 / 0.18), transparent 62%);
-  }
-  body.tema-solnedgang {
-    background-image:
-      radial-gradient(58rem 42rem at 6% -8%, rgb(249 115 22 / 0.30), transparent 62%),
-      radial-gradient(52rem 38rem at 98% 4%, rgb(236 72 153 / 0.24), transparent 62%),
-      radial-gradient(48rem 40rem at 92% 100%, rgb(253 224 71 / 0.30), transparent 62%),
-      radial-gradient(54rem 44rem at 0% 96%, rgb(217 70 239 / 0.18), transparent 62%);
-  }
-  body.tema-rymden {
-    background-image:
-      radial-gradient(58rem 42rem at 6% -8%, rgb(99 102 241 / 0.32), transparent 62%),
-      radial-gradient(52rem 38rem at 98% 4%, rgb(168 85 247 / 0.26), transparent 62%),
-      radial-gradient(48rem 40rem at 92% 100%, rgb(56 189 248 / 0.24), transparent 62%),
-      radial-gradient(54rem 44rem at 0% 96%, rgb(236 72 153 / 0.20), transparent 62%);
-  }
-  body.tema-vinter {
-    background-image:
-      radial-gradient(58rem 42rem at 6% -8%, rgb(186 230 253 / 0.55), transparent 62%),
-      radial-gradient(52rem 38rem at 98% 4%, rgb(224 242 254 / 0.60), transparent 62%),
-      radial-gradient(48rem 40rem at 92% 100%, rgb(125 211 252 / 0.32), transparent 62%),
-      radial-gradient(54rem 44rem at 0% 96%, rgb(165 180 252 / 0.24), transparent 62%);
-  }
-  body.tema-djungel {
-    background-image:
-      radial-gradient(58rem 42rem at 6% -8%, rgb(21 128 61 / 0.26), transparent 62%),
-      radial-gradient(52rem 38rem at 98% 4%, rgb(250 204 21 / 0.24), transparent 62%),
-      radial-gradient(48rem 40rem at 92% 100%, rgb(5 150 105 / 0.26), transparent 62%),
-      radial-gradient(54rem 44rem at 0% 96%, rgb(132 204 22 / 0.24), transparent 62%);
-  }
-  body.tema-regnbage {
-    background-image:
-      radial-gradient(52rem 40rem at 2% -6%, rgb(239 68 68 / 0.24), transparent 60%),
-      radial-gradient(48rem 38rem at 34% 0%, rgb(245 158 11 / 0.24), transparent 60%),
-      radial-gradient(48rem 38rem at 68% 4%, rgb(132 204 22 / 0.26), transparent 60%),
-      radial-gradient(50rem 40rem at 100% 40%, rgb(56 189 248 / 0.26), transparent 60%),
-      radial-gradient(54rem 44rem at 20% 100%, rgb(139 92 246 / 0.24), transparent 60%);
+     Själva temana ritas av components/Bakgrund.tsx med värdet i
+     data/affar.ts. Här ligger bara det som gäller medan ett tema är på:
+     den ljusgrå hjälptexten är skriven för vitt och blir för blek mot en
+     färgad bakgrund, så den mörkas ett snäpp. Inne i vita kort gör det
+     ingen skillnad åt något håll. */
+  body.har-tema .text-ink-400,
+  body.har-tema .text-ink-500 {
+    color: rgb(51 65 85);
   }
 
   * {
@@ -201,4 +150,35 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ── Affärens rörelser ────────────────────────────────────────────────
+   Samma tre partikelrörelser och samma glidande bakgrund som i
+   Engelskajakten och Mattejakten. */
+@keyframes effekt-fall {
+  0%   { top: -8%;  opacity: 0; transform: rotate(0deg); }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { top: 106%; opacity: 0; transform: rotate(220deg); }
+}
+@keyframes effekt-stig {
+  0%   { top: 106%; opacity: 0; transform: scale(0.8); }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { top: -10%; opacity: 0; transform: scale(1.1); }
+}
+@keyframes effekt-glittra {
+  0%, 100% { transform: scale(0.6);  opacity: 0; }
+  50%      { transform: scale(1.15); opacity: 1; }
+}
+@keyframes tema-glid {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.tema-glid {
+  background-size: 220% 220% !important;
+  animation: tema-glid 12s ease infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tema-glid { animation: none; }
 }
