@@ -38,7 +38,14 @@ export default function LoginGate({ children }: { children: ReactNode }) {
             Välkommen till NP-jakten
           </h1>
           <p className="mt-3 text-stone-600">
-            Skriv lösenordet för att komma in. Du får det av din lärare.
+            Skriv lösenordet för att komma in. Kontakta din lärare eller{" "}
+            <a
+              href="mailto:martin.akdogan@enkoping.se"
+              className="font-semibold text-np hover:underline"
+            >
+              Martin
+            </a>{" "}
+            för att få lösenordet.
           </p>
 
           <form onSubmit={submit} className="mt-6">
