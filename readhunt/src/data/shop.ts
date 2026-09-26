@@ -21,6 +21,16 @@ export const RARITY_RING: Record<Rarity, string> = {
   mythic: 'from-fuchsia-500 via-purple-600 to-amber-400',
 };
 
+// Plattan som varan står på i affären: bakgrund (pedestal) och strålkastaren
+// bakom varan (spot), båda i sällsynthetens färg.
+export const RARITY_STAGE: Record<Rarity, { pedestal: string; spot: string }> = {
+  common:    { pedestal: 'linear-gradient(150deg,#f8fafc,#e2e8f0)', spot: 'rgba(255,255,255,0.95)' },
+  rare:      { pedestal: 'linear-gradient(150deg,#eff6ff,#bfdbfe)', spot: 'rgba(96,165,250,0.50)' },
+  epic:      { pedestal: 'linear-gradient(150deg,#faf5ff,#e9d5ff)', spot: 'rgba(192,132,252,0.55)' },
+  legendary: { pedestal: 'linear-gradient(150deg,#fffbeb,#fde68a)', spot: 'rgba(251,191,36,0.60)' },
+  mythic:    { pedestal: 'linear-gradient(150deg,#fdf4ff,#fbcfe8 45%,#fde68a)', spot: 'rgba(232,121,249,0.55)' },
+};
+
 // Avatarer
 export type AvatarGroup =
   | 'Utvalda' | 'Djur' | 'Skoltema' | 'Fordon' | 'Fantasi' | 'Roligt' | 'Säsong';
