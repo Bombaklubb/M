@@ -145,6 +145,16 @@ function ActionButton({
 }
 
 // Generiskt kort
+// Små fyruddiga glimtar som upprepas över plattan på episka och bättre varor.
+const GLITTER = `url("data:image/svg+xml,${encodeURIComponent(
+  "<svg xmlns='http://www.w3.org/2000/svg' width='70' height='60'>" +
+  "<path d='M12 8l1.4 3.6L17 13l-3.6 1.4L12 18l-1.4-3.6L7 13l3.6-1.4z' fill='white' opacity='0.9'/>" +
+  "<path d='M52 34l1 2.6 2.6 1-2.6 1L52 41.2l-1-2.6-2.6-1 2.6-1z' fill='white' opacity='0.8'/>" +
+  "<circle cx='36' cy='12' r='1.2' fill='white' opacity='0.8'/>" +
+  "<circle cx='22' cy='46' r='1' fill='white' opacity='0.7'/>" +
+  "</svg>"
+)}") 0 0 / 70px 60px repeat`;
+
 function ItemCard({
   preview, name, rarity, price, owned, equipped, balance, fyllPlatta, onBuy, onEquip,
 }: {
@@ -180,13 +190,31 @@ function ItemCard({
           För teman är mönstret självt varan, och då fick det bara en liten
           bricka mitt på plattan. Där låter vi förhandsvisningen fylla ytan
           i stället, så att eleven ser vad hen faktiskt köper. */}
+      {/* Plattan var 80 pixlar hög och varan tog en femtedel av kortet.
+          Den är nu högre och har en strålkastare i sällsynthetens färg, ett
+          golv som varan står på och glitter för de ovanligare varorna. */}
       <div
-        className={`flex items-center justify-center h-20 mb-2 rounded-xl ${fyllPlatta ? 'overflow-hidden' : ''}`}
+        className="relative flex items-center justify-center h-32 mb-2 rounded-xl overflow-hidden"
         style={fyllPlatta
           ? { border: '1px solid rgba(255,255,255,0.65)' }
           : { background: stil.pedestal, border: '1px solid rgba(255,255,255,0.65)' }}
       >
-        {preview}
+        {!fyllPlatta && (
+          <>
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: `radial-gradient(circle at 50% 42%, ${stil.spot} 0%, transparent 62%)` }}
+            />
+            {(rarity === 'epic' || rarity === 'legendary' || rarity === 'mythic') && (
+              <div className="absolute inset-0 pointer-events-none" style={{ background: GLITTER, opacity: 0.7 }} />
+            )}
+            <div
+              className="absolute left-1/2 -translate-x-1/2 bottom-2.5 w-24 h-3.5 rounded-[50%] pointer-events-none"
+              style={{ background: 'radial-gradient(ellipse at center, rgba(15,23,42,0.22) 0%, transparent 70%)' }}
+            />
+          </>
+        )}
+        <div className={fyllPlatta ? 'w-full h-full' : 'relative'}>{preview}</div>
       </div>
 
       {/* Namnet får hela kortets bredd. Låg chipet bredvid blev det för trångt
@@ -313,7 +341,16 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
         // cirkel, och då blev valpen, kattungen och kaninen omöjliga att skilja
         // åt i rutnätet – just det man ska göra på den här fliken. Hur den ser
         // ut tillsammans med utrustningen syns i köp-rutan och i headern.
-        preview={<FramedAvatar emoji={a.emoji} size={56} />}
+        // Emojin står fritt på plattan i stället för på den lila skivan. Med
+        // skivan såg alla fyrtio kort likadana ut på håll.
+        preview={
+          <span
+            className="block leading-none select-none"
+            style={{ fontSize: 60, filter: 'drop-shadow(0 6px 6px rgba(15,23,42,0.22))' }}
+          >
+            {a.emoji}
+          </span>
+        }
         name={a.name} rarity={a.rarity} price={a.price}
         owned={owned} equipped={equipped} balance={balance}
         onBuy={() => setConfirm({ kind: 'avatar', key: a.id, price: a.price, name: a.name,
@@ -348,7 +385,7 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
     return (
       <ItemCard
         key={`fr-${f.id}`}
-        preview={<FramedAvatar emoji={currentEmoji} frameId={f.id} size={64} />}
+        preview={<FramedAvatar emoji={currentEmoji} frameId={f.id} size={84} />}
         name={f.name} rarity={f.rarity} price={f.price}
         owned={owned} equipped={equipped} balance={balance}
         onBuy={() => setConfirm({ kind: 'frame', key: f.id, price: f.price, name: f.name,
@@ -369,7 +406,7 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
     return (
       <ItemCard
         key={`fx-${e.id}`}
-        preview={<FramedAvatar emoji={currentEmoji} frameId={shop.equippedFrame} effectId={e.id} size={56} />}
+        preview={<FramedAvatar emoji={currentEmoji} frameId={shop.equippedFrame} effectId={e.id} size={72} />}
         name={e.name} rarity={e.rarity} price={e.price}
         owned={owned} equipped={equipped} balance={balance}
         onBuy={() => setConfirm({ kind: 'effect', key: e.id, price: e.price, name: e.name,
@@ -390,7 +427,7 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
     // neutral platta, så att rutnätet inte hoppar när bilderna kommer.
     const bakgrund = swatch ?? '#e2e8f0';
     if (size === undefined) {
-      return <div className="w-full h-full" style={{ background: bakgrund }} />;
+      return <div className="w-full h-full min-h-[8rem]" style={{ background: bakgrund }} />;
     }
     return (
       <div

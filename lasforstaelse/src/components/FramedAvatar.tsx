@@ -29,7 +29,7 @@ const FX_POSITIONS: Record<EffectKind, { left: number; top: number }[]> = {
 };
 
 function AvatarCore({ emoji, frame, size }: { emoji: string; frame?: ShopFrame; size: number }) {
-  const ringWidth = Math.max(3, Math.round(size / 14));
+  const ringWidth = Math.max(3, Math.round(size / 10));
   const innerSize = size - ringWidth * 2;
 
   if (!frame) {
@@ -53,9 +53,24 @@ function AvatarCore({ emoji, frame, size }: { emoji: string; frame?: ShopFrame; 
         boxShadow: `0 0 ${size / 4}px ${frame.glow}`,
       }}
     >
+      {/* Glansig ljusreflex på ringen, så att den ser ut som metall/glas i stället för platt färg */}
       <div
-        className={`flex items-center justify-center rounded-full bg-gradient-to-br from-slate-800 to-slate-900 ${frame.animated ? 'animate-[spin_8s_linear_infinite_reverse]' : ''}`}
-        style={{ width: innerSize, height: innerSize, fontSize: innerSize * 0.55 }}
+        className="absolute inset-0 rounded-full pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(circle at 30% 22%, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 38%), linear-gradient(160deg, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.25) 100%)',
+        }}
+      />
+      {/* relative: målas ovanpå glansen, så att den bara syns på ringen */}
+      <div
+        className={`relative flex items-center justify-center rounded-full ${frame.animated ? 'animate-[spin_8s_linear_infinite_reverse]' : ''}`}
+        style={{
+          width: innerSize,
+          height: innerSize,
+          fontSize: innerSize * 0.55,
+          background: 'radial-gradient(circle at 50% 35%, #334155 0%, #1e293b 55%, #0f172a 100%)',
+          boxShadow: 'inset 0 3px 8px rgba(0,0,0,0.6)',
+        }}
       >
         {emoji}
       </div>

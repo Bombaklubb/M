@@ -48,6 +48,8 @@ export const RARITY_STYLE: Record<Rarity, {
    * dark:-klasser. Utan den blev priset nästan osynligt på ett mörkt kort.
    */
   accentDark: string;
+  /** Strålkastaren bakom varan på plattan. */
+  spot: string;
 }> = {
   common: {
     pedestal: 'linear-gradient(150deg,#f8fafc,#e2e8f0)',
@@ -55,6 +57,7 @@ export const RARITY_STYLE: Record<Rarity, {
     glow: 'rgba(100,116,139,0.14)',
     accent: '#475569',
     accentDark: '#cbd5e1',
+    spot: 'rgba(255,255,255,0.95)',
   },
   rare: {
     pedestal: 'linear-gradient(150deg,#eff6ff,#bfdbfe)',
@@ -62,6 +65,7 @@ export const RARITY_STYLE: Record<Rarity, {
     glow: 'rgba(59,130,246,0.20)',
     accent: '#1d4ed8',
     accentDark: '#93c5fd',
+    spot: 'rgba(96,165,250,0.50)',
   },
   epic: {
     pedestal: 'linear-gradient(150deg,#faf5ff,#e9d5ff)',
@@ -69,6 +73,7 @@ export const RARITY_STYLE: Record<Rarity, {
     glow: 'rgba(168,85,247,0.22)',
     accent: '#7e22ce',
     accentDark: '#d8b4fe',
+    spot: 'rgba(192,132,252,0.55)',
   },
   legendary: {
     pedestal: 'linear-gradient(150deg,#fffbeb,#fde68a)',
@@ -76,6 +81,7 @@ export const RARITY_STYLE: Record<Rarity, {
     glow: 'rgba(245,158,11,0.28)',
     accent: '#b45309',
     accentDark: '#fcd34d',
+    spot: 'rgba(251,191,36,0.60)',
   },
   mythic: {
     pedestal: 'linear-gradient(150deg,#fdf4ff,#fbcfe8 45%,#fde68a)',
@@ -83,6 +89,7 @@ export const RARITY_STYLE: Record<Rarity, {
     glow: 'rgba(217,70,239,0.30)',
     accent: '#a21caf',
     accentDark: '#f0abfc',
+    spot: 'rgba(232,121,249,0.55)',
   },
 };
 
