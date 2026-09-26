@@ -3,6 +3,7 @@ import AppHeader from './AppHeader';
 import FramedAvatar from './FramedAvatar';
 import { useApp } from '../contexts/AppContext';
 import { ALL_AVATARS, shopAvatarGlobalIndex } from '../data/avatars';
+import { dicebearUriFromMarker } from '../utils/dicebear';
 import EffectOverlay from './EffectOverlay';
 import { Confetti } from './magicui/confetti';
 import {
@@ -26,9 +27,55 @@ const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: 'owned',  label: 'Mina köp', icon: '🎁' },
 ];
 
+// ─── Scen för provbilderna ──────────────────────────────────────────────────────
+// Varje sak står på en liten scen: bakgrund i sällsynthetens färg, en spotlight
+// uppifrån och en skugga på golvet. Episka och dyrare saker glittrar.
+const STAGE: Record<Rarity, { bg: string; floor: string; glitter: string | null }> = {
+  common:    { bg: 'linear-gradient(180deg,#f8fafc 0%,#e2e8f0 100%)', floor: 'rgba(71,85,105,0.35)',  glitter: null },
+  rare:      { bg: 'linear-gradient(180deg,#f0f9ff 0%,#bae6fd 100%)', floor: 'rgba(3,105,161,0.35)',  glitter: null },
+  epic:      { bg: 'linear-gradient(180deg,#faf5ff 0%,#d8b4fe 100%)', floor: 'rgba(109,40,217,0.35)', glitter: '#9333ea' },
+  legendary: { bg: 'linear-gradient(180deg,#fffbeb 0%,#fcd34d 100%)', floor: 'rgba(180,83,9,0.40)',   glitter: '#d97706' },
+  mythic:    { bg: 'linear-gradient(180deg,#fdf4ff 0%,#f0abfc 100%)', floor: 'rgba(162,28,175,0.40)', glitter: '#c026d3' },
+};
+
+// Glittrets platser i procent av scenen, och hur det är förskjutet i tid
+const GLITTER: [number, number, number, number][] = [
+  [14, 22, 10, 0], [82, 18, 12, -0.6], [22, 70, 8, -1.2], [86, 64, 9, -1.8], [50, 12, 7, -0.9],
+];
+
+function Stage({ rarity, children, className = 'w-full h-24' }: {
+  rarity: Rarity; children: React.ReactNode; className?: string;
+}) {
+  const s = STAGE[rarity];
+  return (
+    <div className={`relative ${className} rounded-xl overflow-hidden flex items-center justify-center`}
+      style={{ background: s.bg, boxShadow: 'inset 0 -6px 12px rgba(0,0,0,0.06)' }}>
+      <div className="absolute inset-0"
+        style={{ background: 'radial-gradient(ellipse 55% 75% at 50% 0%, rgba(255,255,255,0.9), rgba(255,255,255,0) 72%)' }} />
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-20 h-4"
+        style={{ background: `radial-gradient(ellipse at center, ${s.floor} 0%, transparent 70%)` }} />
+      {s.glitter && GLITTER.map(([x, y, px, delay], i) => (
+        <span key={i} className="shop-particle absolute leading-none select-none" aria-hidden="true"
+          style={{ left: `${x}%`, top: `${y}%`, fontSize: px, color: s.glitter!,
+            animation: `shop-twinkle 2.4s ease-in-out ${delay}s infinite` }}>
+          ✦
+        </span>
+      ))}
+      {/* Lite nedflyttad så att sällsynthetsbrickan uppe till vänster inte täcker figuren */}
+      <div className="relative mt-3">{children}</div>
+    </div>
+  );
+}
+
+// DiceBear-figurerna har luft runt sig i bilden och ser mindre ut än emojis
+// i samma storlek, så de ritas lite större.
+function avatarSize(emoji: string, base: number): number {
+  return dicebearUriFromMarker(emoji) ? Math.round(base * 1.25) : base;
+}
+
 // ─── Förhandsvisningar för tema/effekt ──────────────────────────────────────────
 // Provbiten ritas med samma bild som hamnar bakom sidan när temat används.
-function ThemeSwatch({ theme, className = 'w-full h-20' }: { theme: ShopBackground; className?: string }) {
+function ThemeSwatch({ theme, className = 'w-full h-24' }: { theme: ShopBackground; className?: string }) {
   const art = useThemeArt(theme.id);
   return (
     <div
@@ -38,9 +85,16 @@ function ThemeSwatch({ theme, className = 'w-full h-20' }: { theme: ShopBackgrou
   );
 }
 
-function EffectSwatch({ effectId, className = 'w-full h-16' }: { effectId: string; className?: string }) {
+// Effekten visas runt elevens egen avatar, så man ser hur den blir på profilen.
+function EffectSwatch({ effectId, emoji, className = 'w-full h-24' }: {
+  effectId: string; emoji: string; className?: string;
+}) {
   return (
-    <div className={`relative ${className} rounded-xl overflow-hidden bg-gradient-to-br from-gray-700 to-gray-900`}>
+    <div className={`relative ${className} rounded-xl overflow-hidden flex items-center justify-center`}
+      style={{ background: 'radial-gradient(ellipse 70% 90% at 50% 20%, #475569 0%, #1e293b 60%, #0f172a 100%)' }}>
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-1.5 w-20 h-4"
+        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, transparent 70%)' }} />
+      <div className="relative opacity-90"><FramedAvatar emoji={emoji} size={avatarSize(emoji, 40)} /></div>
       <EffectOverlay effectId={effectId} />
     </div>
   );
@@ -140,7 +194,7 @@ function ItemCard({
 }) {
   return (
     <div
-      className="flex flex-col rounded-2xl p-3 transition-all"
+      className="flex flex-col rounded-2xl p-2.5 transition-all hover:-translate-y-0.5"
       style={{
         background: 'rgba(255,255,255,0.90)',
         backdropFilter: 'blur(12px)',
@@ -148,15 +202,18 @@ function ItemCard({
         boxShadow: '0 4px 18px rgba(120,80,20,0.12), inset 0 1px 0 rgba(255,255,255,0.9)',
       }}
     >
-      <div className="flex items-center justify-center h-20 mb-2">{preview}</div>
-      <div className="flex items-center justify-between gap-1 mb-1">
-        <span className="text-sm font-black text-gray-800 truncate">{name}</span>
-        <RarityChip rarity={rarity} />
+      {/* Sällsyntheten ligger på provbilden, så att namnet får hela bredden */}
+      <div className="relative mb-2">
+        {preview}
+        <div className="absolute top-1.5 left-1.5"><RarityChip rarity={rarity} /></div>
       </div>
-      <div className="text-xs font-bold mb-2.5" style={{ color: '#b45309' }}>
+      <div className="text-sm font-black text-gray-800 leading-tight line-clamp-2 mb-1 px-0.5" title={name}>{name}</div>
+      <div className="text-xs font-bold mb-2.5 px-0.5" style={{ color: '#b45309' }}>
         {owned ? <span className="text-emerald-600">Köpt</span> : <>⭐ {price}</>}
       </div>
-      <ActionButton owned={owned} equipped={equipped} affordable={affordable} onBuy={onBuy} onEquip={onEquip} />
+      <div className="mt-auto">
+        <ActionButton owned={owned} equipped={equipped} affordable={affordable} onBuy={onBuy} onEquip={onEquip} />
+      </div>
     </div>
   );
 }
@@ -210,11 +267,11 @@ export default function ShopView() {
     return (
       <ItemCard
         key={`av-${i}`}
-        preview={<FramedAvatar emoji={a.emoji} size={56} />}
+        preview={<Stage rarity={a.rarity}><FramedAvatar emoji={a.emoji} size={avatarSize(a.emoji, 56)} /></Stage>}
         name={a.name} rarity={a.rarity} price={a.price}
         owned={owned} equipped={equipped} affordable={balance >= a.price}
         onBuy={() => setConfirm({ kind: 'avatar', key: i, price: a.price, name: a.name,
-          preview: <FramedAvatar emoji={a.emoji} size={64} /> })}
+          preview: <Stage rarity={a.rarity} className="w-44 h-28"><FramedAvatar emoji={a.emoji} size={avatarSize(a.emoji, 72)} /></Stage> })}
         onEquip={() => { updateAvatar(globalIdx); showToast(`${a.name} vald!`); }}
       />
     );
@@ -246,11 +303,11 @@ export default function ShopView() {
     return (
       <ItemCard
         key={`fr-${f.id}`}
-        preview={<FramedAvatar emoji={currentEmoji} frameId={f.id} size={64} />}
+        preview={<Stage rarity={f.rarity}><FramedAvatar emoji={currentEmoji} frameId={f.id} size={62} /></Stage>}
         name={f.name} rarity={f.rarity} price={f.price}
         owned={owned} equipped={equipped} affordable={balance >= f.price}
         onBuy={() => setConfirm({ kind: 'frame', key: f.id, price: f.price, name: f.name,
-          preview: <FramedAvatar emoji={currentEmoji} frameId={f.id} size={72} /> })}
+          preview: <Stage rarity={f.rarity} className="w-44 h-28"><FramedAvatar emoji={currentEmoji} frameId={f.id} size={80} /></Stage> })}
         onEquip={() => { equipItem(sid, 'frame', equipped ? null : f.id); refresh(); showToast(equipped ? 'Ram borttagen' : `${f.name} på!`); }}
       />
     );
@@ -267,7 +324,7 @@ export default function ShopView() {
     return (
       <ItemCard
         key={`ti-${t.id}`}
-        preview={chip}
+        preview={<Stage rarity={t.rarity}>{chip}</Stage>}
         name={t.label} rarity={t.rarity} price={t.price}
         owned equipped={equipped} affordable={false}
         onBuy={() => {}}
@@ -286,7 +343,7 @@ export default function ShopView() {
         name={b.name} rarity={b.rarity} price={b.price}
         owned={owned} equipped={equipped} affordable={balance >= b.price}
         onBuy={() => setConfirm({ kind: 'background', key: b.id, price: b.price, name: b.name,
-          preview: <ThemeSwatch theme={b} className="w-44 h-24" /> })}
+          preview: <ThemeSwatch theme={b} className="w-52 h-28" /> })}
         onEquip={() => { equipItem(sid, 'background', equipped ? null : b.id); refresh(); showToast(equipped ? 'Tema borttaget' : `Tema: ${b.name}`); }}
       />
     );
@@ -298,11 +355,11 @@ export default function ShopView() {
     return (
       <ItemCard
         key={`fx-${e.id}`}
-        preview={<EffectSwatch effectId={e.id} />}
+        preview={<EffectSwatch effectId={e.id} emoji={currentEmoji} />}
         name={e.name} rarity={e.rarity} price={e.price}
         owned={owned} equipped={equipped} affordable={balance >= e.price}
         onBuy={() => setConfirm({ kind: 'effect', key: e.id, price: e.price, name: e.name,
-          preview: <EffectSwatch effectId={e.id} className="w-44 h-24" /> })}
+          preview: <EffectSwatch effectId={e.id} emoji={currentEmoji} className="w-52 h-28" /> })}
         onEquip={() => { equipItem(sid, 'effect', equipped ? null : e.id); refresh(); showToast(equipped ? 'Effekt borttagen' : `Effekt: ${e.name}`); }}
       />
     );
@@ -336,7 +393,7 @@ export default function ShopView() {
   function standardThemeCard() {
     const equipped = shop!.equippedBackground === null;
     const preview = (
-      <div className="w-full h-20 rounded-xl border border-black/10"
+      <div className="w-full h-24 rounded-xl border border-black/10"
         style={{ backgroundImage: "url('/Drömmig lärandemiljö med kontorstillbehör.png')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
     );
     return (

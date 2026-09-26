@@ -122,7 +122,7 @@ export default function AppHeader() {
                 border: '1px solid rgba(251, 146, 60, 0.35)',
               }}
             >
-              <EffectOverlay effectId={equippedEffect} />
+              <EffectOverlay effectId={equippedEffect} size="sm" />
               <span className="relative z-10 flex items-center gap-2 px-3 py-1.5">
                 <FramedAvatar emoji={avatarEmoji ?? ''} frameId={equippedFrame} size={equippedFrame ? 26 : 20} />
                 <span className="text-gray-800 font-bold text-sm hidden sm:inline">{currentStudent.name}</span>
