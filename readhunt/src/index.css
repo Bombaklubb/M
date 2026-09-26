@@ -169,9 +169,10 @@ html {
 
 /* Blixtar – snabba blink */
 @keyframes fx-flash {
-  0%, 100%   { opacity: 0; transform: scale(0.6); }
-  8%, 16%    { opacity: 1; transform: scale(1.1); }
-  24%        { opacity: 0; transform: scale(0.8); }
+  /* Grundnivå över noll så att blixtarna syns även mellan blixtarna. */
+  0%, 100%   { opacity: 0.45; transform: scale(0.85); }
+  8%, 16%    { opacity: 1; transform: scale(1.15); }
+  24%        { opacity: 0.45; transform: scale(0.85); }
 }
 
 /* Konfetti – studsar och snurrar */
@@ -185,6 +186,11 @@ html {
 @keyframes fx-pulse {
   0%, 100% { opacity: 0.45; transform: scale(0.95); }
   50%      { opacity: 1; transform: scale(1.05); }
+}
+
+/* Med minskad rörelse står partiklarna stilla och synliga i stället för att blinka */
+@media (prefers-reduced-motion: reduce) {
+  .fx-particle { animation: none !important; }
 }
 
 /* ============================================================

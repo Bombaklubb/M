@@ -4,7 +4,7 @@ import { AVATAR_OPTIONS, User } from '../types';
 import FramedAvatar from './FramedAvatar';
 import {
   SHOP_AVATARS, SHOP_FRAMES, SHOP_EFFECTS, AVATAR_GROUP_ORDER,
-  RARITY_LABELS, RARITY_RING, type Rarity,
+  RARITY_LABELS, RARITY_RING, RARITY_STAGE, type Rarity,
 } from '../data/shop';
 import {
   loadShop, buyItem, equipFrame, equipEffect, getWalletBalance,
@@ -104,6 +104,57 @@ function ActionButton({
   );
 }
 
+// Små fyruddiga glimtar som upprepas över plattan på episka och bättre varor.
+const GLITTER = `url("data:image/svg+xml,${encodeURIComponent(
+  "<svg xmlns='http://www.w3.org/2000/svg' width='70' height='60'>" +
+  "<path d='M12 8l1.4 3.6L17 13l-3.6 1.4L12 18l-1.4-3.6L7 13l3.6-1.4z' fill='white' opacity='0.9'/>" +
+  "<path d='M52 34l1 2.6 2.6 1-2.6 1L52 41.2l-1-2.6-2.6-1 2.6-1z' fill='white' opacity='0.8'/>" +
+  "<circle cx='36' cy='12' r='1.2' fill='white' opacity='0.8'/>" +
+  "<circle cx='22' cy='46' r='1' fill='white' opacity='0.7'/>" +
+  "</svg>"
+)}") 0 0 / 70px 60px repeat`;
+
+// Plattan varan står på: bakgrund och strålkastare i sällsynthetens färg,
+// en skugga på golvet och glitter för de ovanligare varorna.
+function Stage({ rarity, className = 'w-full h-32', children }: {
+  rarity: Rarity; className?: string; children: React.ReactNode;
+}) {
+  const stage = RARITY_STAGE[rarity];
+  return (
+    <div
+      className={`relative flex items-center justify-center rounded-xl overflow-hidden ${className}`}
+      style={{ background: stage.pedestal, border: '1px solid rgba(255,255,255,0.65)' }}
+    >
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: `radial-gradient(circle at 50% 42%, ${stage.spot} 0%, transparent 62%)` }}
+      />
+      {(rarity === 'epic' || rarity === 'legendary' || rarity === 'mythic') && (
+        <div className="shop-glitter absolute inset-0 pointer-events-none" style={{ background: GLITTER, opacity: 0.7 }} />
+      )}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 bottom-2.5 w-24 h-3.5 rounded-[50%] pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse at center, rgba(15,23,42,0.22) 0%, transparent 70%)' }}
+      />
+      {/* Lite nedflyttad så att sällsynthetsbrickan uppe till vänster inte täcker varan */}
+      <div className="relative mt-3">{children}</div>
+    </div>
+  );
+}
+
+// Avatarens emoji står fritt på plattan. Med den lila skivan (eller elevens
+// ram) runt varje figur såg alla kort likadana ut på håll.
+function FreeEmoji({ emoji, size = 60 }: { emoji: string; size?: number }) {
+  return (
+    <span
+      className="block leading-none select-none"
+      style={{ fontSize: size, filter: 'drop-shadow(0 6px 6px rgba(15,23,42,0.22))' }}
+    >
+      {emoji}
+    </span>
+  );
+}
+
 // Generiskt kort
 function ItemCard({
   preview, name, rarity, price, owned, equipped, affordable, onBuy, onEquip,
@@ -114,7 +165,7 @@ function ItemCard({
 }) {
   return (
     <div
-      className="flex flex-col rounded-2xl p-3 transition-all"
+      className="flex flex-col rounded-2xl p-2.5 transition-all hover:-translate-y-0.5"
       style={{
         background: 'rgba(255,255,255,0.90)',
         backdropFilter: 'blur(12px)',
@@ -122,15 +173,20 @@ function ItemCard({
         boxShadow: '0 4px 18px rgba(99,102,241,0.12), inset 0 1px 0 rgba(255,255,255,0.9)',
       }}
     >
-      <div className="flex items-center justify-center h-20 mb-2">{preview}</div>
-      <div className="flex items-center justify-between gap-1 mb-1">
-        <span className="text-sm font-black text-gray-800 truncate">{name}</span>
-        <RarityChip rarity={rarity} />
+      {/* Sällsyntheten ligger på plattan, så att namnet får hela bredden
+          och inte klipps av */}
+      <div className="relative mb-2">
+        <Stage rarity={rarity}>{preview}</Stage>
+        <div className="absolute top-1.5 left-1.5"><RarityChip rarity={rarity} /></div>
       </div>
-      <div className="text-xs font-bold mb-2.5" style={{ color: '#4f46e5' }}>
+      <div className="text-sm font-black text-gray-800 leading-tight line-clamp-2 mb-1 px-0.5" title={name}>{name}</div>
+      <div className="text-xs font-bold mb-2.5 px-0.5" style={{ color: '#4f46e5' }}>
         {owned ? <span className="text-emerald-600">Köpt</span> : <>⭐ {price}</>}
       </div>
-      <ActionButton owned={owned} equipped={equipped} affordable={affordable} onBuy={onBuy} onEquip={onEquip} />
+      {/* Knappen längst ner, så att knapparna hamnar i jämnhöjd i varje rad */}
+      <div className="mt-auto">
+        <ActionButton owned={owned} equipped={equipped} affordable={affordable} onBuy={onBuy} onEquip={onEquip} />
+      </div>
     </div>
   );
 }
@@ -194,11 +250,11 @@ export default function ShopView({ onBack }: ShopViewProps) {
     return (
       <ItemCard
         key={`av-${i}`}
-        preview={<FramedAvatar emoji={a.emoji} size={56} frameId={shop.equippedFrame} effectId={shop.equippedEffect} />}
+        preview={<FreeEmoji emoji={a.emoji} />}
         name={a.name} rarity={a.rarity} price={a.price}
         owned={owned} equipped={equipped} affordable={balance >= a.price}
         onBuy={() => setConfirm({ kind: 'avatar', key: i, price: a.price, name: a.name,
-          preview: <FramedAvatar emoji={a.emoji} size={64} frameId={shop.equippedFrame} effectId={shop.equippedEffect} /> })}
+          preview: <Stage rarity={a.rarity} className="w-48 h-32"><FramedAvatar emoji={a.emoji} size={72} frameId={shop.equippedFrame} effectId={shop.equippedEffect} /></Stage> })}
         onEquip={() => { updateUserAvatar(a.emoji); showToast(`${a.name} vald!`); }}
       />
     );
@@ -231,11 +287,11 @@ export default function ShopView({ onBack }: ShopViewProps) {
     return (
       <ItemCard
         key={`fr-${f.id}`}
-        preview={<FramedAvatar emoji={currentEmoji} frameId={f.id} size={64} />}
+        preview={<FramedAvatar emoji={currentEmoji} frameId={f.id} size={84} />}
         name={f.name} rarity={f.rarity} price={f.price}
         owned={owned} equipped={equipped} affordable={balance >= f.price}
         onBuy={() => setConfirm({ kind: 'frame', key: f.id, price: f.price, name: f.name,
-          preview: <FramedAvatar emoji={currentEmoji} frameId={f.id} size={72} /> })}
+          preview: <Stage rarity={f.rarity} className="w-48 h-32"><FramedAvatar emoji={currentEmoji} frameId={f.id} size={88} /></Stage> })}
         onEquip={() => { equipFrame(equipped ? null : f.id); refresh(); showToast(equipped ? 'Ram borttagen' : `${f.name} på!`); }}
       />
     );
@@ -252,11 +308,11 @@ export default function ShopView({ onBack }: ShopViewProps) {
     return (
       <ItemCard
         key={`fx-${e.id}`}
-        preview={<FramedAvatar emoji={currentEmoji} frameId={shop.equippedFrame} effectId={e.id} size={56} />}
+        preview={<FramedAvatar emoji={currentEmoji} frameId={shop.equippedFrame} effectId={e.id} size={72} />}
         name={e.name} rarity={e.rarity} price={e.price}
         owned={owned} equipped={equipped} affordable={balance >= e.price}
         onBuy={() => setConfirm({ kind: 'effect', key: e.id, price: e.price, name: e.name,
-          preview: <FramedAvatar emoji={currentEmoji} frameId={shop.equippedFrame} effectId={e.id} size={72} /> })}
+          preview: <Stage rarity={e.rarity} className="w-48 h-32"><FramedAvatar emoji={currentEmoji} frameId={shop.equippedFrame} effectId={e.id} size={80} /></Stage> })}
         onEquip={() => { equipEffect(equipped ? null : e.id); refresh(); showToast(equipped ? 'Effekt borttagen' : `${e.name} på!`); }}
       />
     );
