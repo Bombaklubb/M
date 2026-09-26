@@ -205,6 +205,23 @@ input[type=number]::-webkit-outer-spin-button {
   85%  { opacity: 1; }
   100% { transform: translateY(-360%) scale(1.1); opacity: 0; }
 }
+/* Partiklarnas färd: omslaget (lika högt som ytan) flyttas 0–112 % av höjden */
+@keyframes shop-drop {
+  0%   { transform: translateY(0);    opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { transform: translateY(112%); opacity: 0; }
+}
+@keyframes shop-float {
+  0%   { transform: translateY(100%); opacity: 0; }
+  12%  { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { transform: translateY(-8%);  opacity: 0; }
+}
+@keyframes shop-sway {
+  from { transform: translate(-6px, -100%) rotate(-14deg); }
+  to   { transform: translate(6px, -100%)  rotate(14deg); }
+}
 @keyframes shop-twinkle {
   0%, 100% { transform: scale(0.6); opacity: 0; }
   50%       { transform: scale(1.15); opacity: 1; }
@@ -220,4 +237,6 @@ input[type=number]::-webkit-outer-spin-button {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+  /* Effekterna står stilla och utspridda i stället för att försvinna */
+  .shop-particle { animation: none !important; }
 }

@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { FRAME_MAP } from '../data/shop';
 import { dicebearUriFromMarker } from '../utils/dicebear';
 
@@ -41,39 +42,56 @@ export default function FramedAvatar({ emoji, frameId, size = 40, className }: P
     );
   }
 
-  const pad = Math.max(2, Math.round(size * 0.1));
+  // Ringen är ~12 % av diametern: tjock nog att synas även i sidhuvudet.
+  const pad = Math.max(3, Math.round(size * 0.12));
   const inner = size - pad * 2;
 
+  // Tre lager i en fast behållare: ringen (som snurrar om ramen är animerad),
+  // en blank glansyta och avataren i mitten. Bara ringen roterar, så varken
+  // glansen eller figuren snurrar med.
+  const layer: CSSProperties = { position: 'absolute', inset: 0, borderRadius: '50%' };
   return (
     <span
       className={className}
       style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        position: 'relative',
+        display: 'inline-block',
         width: size,
         height: size,
         borderRadius: '50%',
-        background: frame.ring,
-        boxShadow: `0 0 ${Math.round(size * 0.3)}px ${frame.glow}`,
-        padding: pad,
+        boxShadow: `0 0 ${Math.round(size * 0.3)}px ${frame.glow}, 0 ${Math.max(1, Math.round(size * 0.04))}px ${Math.max(2, Math.round(size * 0.08))}px rgba(0,0,0,0.25)`,
         flexShrink: 0,
-        ...(frame.animated ? { animation: 'shop-frame-spin 6s linear infinite' } : {}),
       }}
     >
       <span
         style={{
-          display: 'inline-flex',
+          ...layer,
+          background: frame.ring,
+          ...(frame.animated ? { animation: 'shop-frame-spin 6s linear infinite' } : {}),
+        }}
+      />
+      {/* Glans: ljus kant upptill, mörkare nertill, som en polerad metallring */}
+      <span
+        style={{
+          ...layer,
+          background: 'linear-gradient(170deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.12) 38%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.22) 100%)',
+        }}
+      />
+      <span
+        style={{
+          position: 'absolute',
+          top: pad,
+          left: pad,
+          display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           width: inner,
           height: inner,
           borderRadius: '50%',
-          background: 'rgba(255,255,255,0.92)',
+          background: 'radial-gradient(circle at 50% 35%, #ffffff 0%, #f1f5f9 100%)',
+          boxShadow: `inset 0 ${Math.max(1, Math.round(size * 0.03))}px ${Math.max(2, Math.round(size * 0.07))}px rgba(0,0,0,0.25)`,
           lineHeight: 1,
           overflow: 'hidden',
-          // motverka att den roterande ringen snurrar glyfen
-          ...(frame.animated ? { animation: 'shop-frame-spin 6s linear infinite reverse' } : {}),
         }}
       >
         <Glyph emoji={emoji} size={isImage ? inner : inner * 0.66} />
