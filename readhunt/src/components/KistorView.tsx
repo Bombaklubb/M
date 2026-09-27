@@ -298,6 +298,10 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
   const opened = gam.chests.filter((c) => c.opened);
 
   function handleOpenChest(chestId: string) {
+    // Läs alltid färskt från lagringen. Kistan öppnas efter en halvsekunds
+    // animation, och öppnas två kistor snabbt efter varandra hade den andra
+    // annars sparat en gammal lista där den första var oöppnad igen.
+    const gam = loadGamification();
     const chest = gam.chests.find((c) => c.id === chestId);
     if (!chest || chest.opened) return;
 
@@ -317,6 +321,8 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
 
     // Update user points
     onPointsUpdate(result.points);
+    // Poängen kan ha gett nya milstolpskistor – visa dem direkt
+    setGam(loadGamification());
 
     setRewardResult({ description: result.description, points: result.points });
   }
@@ -417,7 +423,7 @@ export const KistorView: React.FC<KistorViewProps> = ({ user, onClose, onPointsU
           <ul className="space-y-1.5 text-sm text-sky-900 dark:text-sky-100 mb-4">
             <li className="flex items-center gap-2"><img src="/content/bronskista.png" alt="Bronze Chest" className="w-6 h-6 object-contain" /><span><strong>Bronze Chest:</strong> 10 – 200 points</span></li>
             <li className="flex items-center gap-2"><img src="/content/silverkista.png" alt="Silver Chest" className="w-6 h-6 object-contain" /><span><strong>Silver Chest:</strong> 300 – 4 000 points</span></li>
-            <li className="flex items-center gap-2"><img src="/content/guldkista.png" alt="Gold Chest" className="w-6 h-6 object-contain" /><span><strong>Gold Chest:</strong> 1 000 – 7 000 points</span></li>
+            <li className="flex items-center gap-2"><img src="/content/guldkista.png" alt="Gold Chest" className="w-6 h-6 object-contain" /><span><strong>Gold Chest:</strong> 1 200 – 7 000 points</span></li>
             <li className="flex items-center gap-2"><img src="/content/smaragdkista.png" alt="Emerald Chest" className="w-6 h-6 object-contain" /><span><strong>Emerald Chest:</strong> 8 000 – 12 000 points</span></li>
             <li className="flex items-center gap-2"><img src="/content/rubinkista.png" alt="Ruby Chest" className="w-6 h-6 object-contain" /><span><strong>Ruby Chest:</strong> 15 000 – 20 000 points</span></li>
             <li className="flex items-center gap-2"><img src="/content/diamantkista.png" alt="Diamond Chest" className="w-6 h-6 object-contain" /><span><strong>Diamond Chest:</strong> 25 000 – 40 000 points</span></li>

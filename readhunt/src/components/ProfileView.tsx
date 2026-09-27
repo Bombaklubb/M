@@ -44,7 +44,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
     // Genre-statistik
     const genreStats: Record<string, { correct: number; total: number; count: number }> = {};
     texts.forEach(t => {
-      const genre = t.genre || 'Övriga';
+      const genre = t.genre || 'Other';
       if (!genreStats[genre]) {
         genreStats[genre] = { correct: 0, total: 0, count: 0 };
       }
@@ -99,7 +99,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
           <button
             onClick={() => setShowAvatarPicker(true)}
             className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-2 hover:ring-4 hover:ring-purple-300 dark:hover:ring-purple-600 transition-all group relative"
-            title="Klicka för att byta avatar"
+            title="Click to change your avatar"
           >
             <FramedAvatar
               emoji={user.avatar || '👤'}
@@ -108,7 +108,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
               effectId={getEquippedEffect()}
             />
             <div className="absolute inset-0 bg-black/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <span className="text-white text-sm font-medium">Byt</span>
+              <span className="text-white text-sm font-medium">Change</span>
             </div>
           </button>
           <h2 className="text-xl font-bold text-slate-800 dark:text-white">{user.name}</h2>
@@ -130,7 +130,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
           <div className="bg-yellow-50 dark:bg-yellow-900/30 border-2 border-yellow-200 dark:border-yellow-700 rounded-xl p-3 text-center">
             <span className="text-2xl">⭐</span>
             <div className="text-xl font-bold text-yellow-700 dark:text-yellow-300">{user.totalPoints}</div>
-            <div className="text-xs text-yellow-600 dark:text-yellow-400">Poäng</div>
+            <div className="text-xs text-yellow-600 dark:text-yellow-400">Points</div>
           </div>
           <div className="bg-indigo-50 dark:bg-indigo-900/30 border-2 border-indigo-200 dark:border-indigo-700 rounded-xl p-3 text-center">
             <span className="text-2xl">📖</span>
@@ -153,18 +153,18 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
             <div className="grid grid-cols-2 gap-3 mb-3">
               <div className="bg-green-50 dark:bg-green-900/30 border-2 border-green-200 dark:border-green-700 rounded-xl p-3 text-center">
                 <div className="text-2xl font-bold text-green-700 dark:text-green-300">{stats.totalPercent}%</div>
-                <div className="text-sm text-green-600 dark:text-green-400">Rätt totalt</div>
-                <div className="text-xs text-green-500 dark:text-green-500 mt-1">{stats.totalCorrect}/{stats.totalQuestions} frågor</div>
+                <div className="text-sm text-green-600 dark:text-green-400">Correct overall</div>
+                <div className="text-xs text-green-500 dark:text-green-500 mt-1">{stats.totalCorrect}/{stats.totalQuestions} questions</div>
               </div>
               <div className="bg-sky-50 dark:bg-sky-900/30 border-2 border-sky-200 dark:border-sky-700 rounded-xl p-3 text-center">
                 <div className="text-2xl font-bold text-sky-700 dark:text-sky-300">
                   {stats.totalMinutes > 0 ? stats.totalMinutes : '<1'}
                 </div>
-                <div className="text-sm text-sky-600 dark:text-sky-400">Minuter läst</div>
+                <div className="text-sm text-sky-600 dark:text-sky-400">Minutes read</div>
                 <div className="text-xs text-sky-500 dark:text-sky-500 mt-1">
                   {stats.totalMinutes > 0
                     ? `${Math.floor(stats.totalMinutes / 60)}h ${stats.totalMinutes % 60}m`
-                    : 'Nyligen börjat'}
+                    : 'Just started'}
                 </div>
               </div>
             </div>
@@ -176,19 +176,19 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
                 <div className="space-y-2">
                   {Object.entries(stats.genreStats)
                     .sort(([a], [b]) => {
-                      if (a === 'Övriga') return 1;
-                      if (b === 'Övriga') return -1;
+                      if (a === 'Other') return 1;
+                      if (b === 'Other') return -1;
                       return a.localeCompare(b, 'sv');
                     })
                     .map(([genre, data]) => {
                     const percent = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
-                    const genreEmoji = genre === 'berättelse' ? '📖' : genre === 'faktatext' ? '📰' : '📚';
+                    const genreEmoji = genre === 'fiction' || genre === 'berättelse' ? '📖' : genre === 'non-fiction' || genre === 'faktatext' ? '📰' : '📚';
                     const genreCapitalized = genre.charAt(0).toUpperCase() + genre.slice(1);
                     return (
                       <div key={genre} className="bg-slate-50 dark:bg-slate-700/50 rounded-lg p-3">
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-sm font-medium text-slate-700 dark:text-slate-200">{genreEmoji} {genreCapitalized}</span>
-                          <span className="text-sm font-bold text-slate-800 dark:text-white">{percent}% rätt</span>
+                          <span className="text-sm font-bold text-slate-800 dark:text-white">{percent}% correct</span>
                         </div>
                         <div className="h-2 bg-slate-200 dark:bg-slate-600 rounded-full overflow-hidden">
                           <div
@@ -196,7 +196,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
                             style={{ width: `${percent}%` }}
                           />
                         </div>
-                        <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{data.count} texter, {data.correct}/{data.total} frågor rätt</div>
+                        <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{data.count} texts, {data.correct}/{data.total} questions correct</div>
                       </div>
                     );
                   })}
@@ -207,7 +207,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
             {/* Frågetyp-statistik */}
             {Object.keys(stats.questionTypeStats).length > 0 && (
               <div>
-                <h4 className="text-sm font-bold text-slate-600 dark:text-slate-300 mb-2">Per frågetyp</h4>
+                <h4 className="text-sm font-bold text-slate-600 dark:text-slate-300 mb-2">Per question type</h4>
                 <div className="space-y-2">
                   {Object.entries(stats.questionTypeStats).map(([type, data]) => {
                     const percent = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
@@ -216,7 +216,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
                       <div key={type} className="bg-slate-50 dark:bg-slate-700/50 rounded-lg p-3">
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-sm font-medium text-slate-700 dark:text-slate-200">{typeInfo.emoji} {typeInfo.label}</span>
-                          <span className="text-sm font-bold text-slate-800 dark:text-white">{percent}% rätt</span>
+                          <span className="text-sm font-bold text-slate-800 dark:text-white">{percent}% correct</span>
                         </div>
                         <div className="h-2 bg-slate-200 dark:bg-slate-600 rounded-full overflow-hidden">
                           <div
@@ -226,7 +226,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
                             style={{ width: `${percent}%` }}
                           />
                         </div>
-                        <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{data.correct}/{data.total} frågor rätt</div>
+                        <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{data.correct}/{data.total} questions correct</div>
                       </div>
                     );
                   })}

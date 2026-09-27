@@ -25,9 +25,10 @@ export interface LibraryText {
   glossary?: Record<string, string>; // Word definitions specific to this text
   meta?: {
     wordCount: number;
-    fingerprint: string;
-    generatedAt: string;
-    model: string;
+    readingTime?: number;
+    fingerprint?: string;
+    generatedAt?: string;
+    model?: string;
   };
 }
 
@@ -119,11 +120,15 @@ export interface CompletedText {
 }
 
 // Available avatars
+// Gratis avatarer. Får inte överlappa affärens avatarer (src/data/shop.ts) –
+// tidigare fanns 14 av dem här också, så elever kunde betala för något som
+// var gratis. De borttagna ersattes med nya så att urvalet är lika stort.
+// Elever som redan har en av de gamla som avatar behåller den.
 export const AVATAR_OPTIONS = [
-  '🦊', '🐼', '🦁', '🐯', '🐻', '🐨', '🐸', '🦉',
-  '🦋', '🐙', '🦈', '🐬', '🦄', '🐲', '🤖', '👾',
-  '🧙', '🧚', '🦸', '🥷', '🎨', '🚀', '⭐', '🌈',
-  '🐶', '🐱', '🐰', '🦝', '🦜', '🐧', '🦩', '🐢', '🦀', '🎪'
+  '🦊', '🐼', '🦁', '🐯', '🐻', '🐸', '🦋', '🐙',
+  '🦈', '🦄', '🧙', '🦸', '🥷', '🚀', '⭐', '🦝',
+  '🦜', '🐢', '🦀', '🎪', '🐹', '🐭', '🐺', '🦘',
+  '🐞', '🐝', '🦖', '🐳', '🍀', '🌻', '🎈', '⚽', '🎸', '🐵'
 ];
 
 // User profile (stored in localStorage)

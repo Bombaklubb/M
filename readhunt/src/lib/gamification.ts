@@ -420,7 +420,7 @@ export function openChest(type: ChestType, badges: string[], currentChests: Ches
 
   const desc = [
     `+${pts} points`,
-    badge ? `Märke: ${badge.label} ${badge.emoji}` : null,
+    badge ? `Badge: ${badge.label} ${badge.emoji}` : null,
     bonusChest ? `Bonus: ${CHEST_META[bonusChest.type].label}!` : null,
     itemDrop,
   ]

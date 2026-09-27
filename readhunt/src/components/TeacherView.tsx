@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchTeacherStats, type TeacherStats } from '../services/analyticsService';
+import { fetchTeacherStats, TeacherStatsError, type TeacherStats } from '../services/analyticsService';
 import { loadLibrary } from '../services/libraryService';
 import type { LibraryText } from '../types';
 import { RefreshCw, LogOut, Monitor, Calendar, BookOpen, ChevronDown, ChevronRight } from 'lucide-react';
@@ -38,13 +38,18 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
       setStats(teacherStats);
       setAuthenticated(true);
       loadLibraryStats();
-    } catch {
-      if (password === 'Korsängen') {
-        setAuthenticated(true);
-        loadLibraryStats();
-        setStatsError('No analytics server connected — showing library data only.');
-      } else {
+    } catch (err) {
+      // Lösenordet kontrolleras bara på servern. Tidigare fanns det även
+      // här i appen, där vem som helst kunde läsa det.
+      const status = err instanceof TeacherStatsError ? err.status : 0;
+      if (status === 401) {
         setError('Wrong password');
+      } else if (status === 429) {
+        setError('Too many attempts. Wait 15 minutes and try again.');
+      } else if (status === 503) {
+        setError('The teacher password is not set up on the server yet.');
+      } else {
+        setError('Could not reach the statistics server. Try again later.');
       }
     }
     setLoading(false);
@@ -79,7 +84,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
           .map(([g, c]) => ({ grade: parseInt(g), count: c }))
           .sort((a, b) => a.grade - b.grade)
       );
-      setAllTexts(texts.sort((a, b) => a.grade - b.grade || a.title.localeCompare(b.title)));
+      setAllTexts([...texts].sort((a, b) => a.grade - b.grade || a.title.localeCompare(b.title)));
     } catch (err) {
       console.error('Could not load library:', err);
     }
@@ -371,7 +376,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
           href="mailto:martin.akdogan@enkoping.se"
           className="hover:text-indigo-500 dark:hover:text-indigo-400 transition"
         >
-          martin.akdogan@enkoping.se
+          Kontakta Martin
         </a>
         <span>·</span>
         <JaktLinks />

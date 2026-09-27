@@ -33,7 +33,8 @@ export const SetupView: React.FC<SetupViewProps> = ({
 }) => {
   const [textCounts, setTextCounts] = useState<Record<number, number>>({});
   const [loading, setLoading] = useState(true);
-  const [selectedGrade, setSelectedGrade] = useState<number>(4);
+  // Börja på elevens senaste nivå i stället för alltid nivå 4
+  const [selectedGrade, setSelectedGrade] = useState<number>(lastCompletedText?.grade ?? 4);
 
   useEffect(() => {
     getTextCountByGrade().then((counts) => {
@@ -125,14 +126,17 @@ export const SetupView: React.FC<SetupViewProps> = ({
                       ▶️
                     </div>
                     <div className="flex-1 text-left">
+                      {/* Knappen startar en ny text på samma nivå – inte samma
+                          text igen – så den ska inte lova att man fortsätter
+                          den texten. Den förra texten visas som information. */}
                       <div className="text-xs font-medium text-emerald-600 dark:text-emerald-400">
                         Continue where you left off
                       </div>
                       <div className="text-slate-700 dark:text-slate-200 font-semibold text-sm truncate">
-                        Level {lastCompletedText.grade} • {lastCompletedText.title}
+                        New text at Level {lastCompletedText.grade}
                       </div>
-                      <div className="text-xs text-slate-500 dark:text-slate-400">
-                        Last time: {lastCompletedText.score}/{lastCompletedText.totalQuestions} correct
+                      <div className="text-xs text-slate-500 dark:text-slate-400 truncate">
+                        Last text: {lastCompletedText.title} • {lastCompletedText.score}/{lastCompletedText.totalQuestions} correct
                       </div>
                     </div>
                     <div className="text-emerald-500 dark:text-emerald-400 group-hover:translate-x-1 transition-transform">

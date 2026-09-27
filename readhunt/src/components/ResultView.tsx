@@ -124,7 +124,7 @@ export const ResultView: React.FC<ResultViewProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 py-8">
+    <div className="rh-page min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 py-8">
       <div className="max-w-3xl mx-auto px-4">
         {/* Result card */}
         <motion.div

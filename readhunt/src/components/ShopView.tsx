@@ -3,21 +3,22 @@ import { loadUser, saveUser } from '../services/userService';
 import { AVATAR_OPTIONS, User } from '../types';
 import FramedAvatar from './FramedAvatar';
 import {
-  SHOP_AVATARS, SHOP_FRAMES, SHOP_EFFECTS, AVATAR_GROUP_ORDER,
+  SHOP_AVATARS, SHOP_FRAMES, SHOP_EFFECTS, SHOP_THEMES, AVATAR_GROUP_ORDER,
   RARITY_LABELS, RARITY_RING, RARITY_STAGE, type Rarity,
 } from '../data/shop';
 import {
-  loadShop, buyItem, equipFrame, equipEffect, getWalletBalance,
+  loadShop, buyItem, equipFrame, equipEffect, equipTheme, getWalletBalance,
   type ShopData, type ShopKind,
 } from '../utils/shopStorage';
 
-type Tab = 'avatar' | 'frame' | 'effect' | 'owned';
+type Tab = 'avatar' | 'frame' | 'effect' | 'theme' | 'owned';
 
 const TABS: { id: Tab; label: string; icon: string }[] = [
-  { id: 'avatar', label: 'Avatarer', icon: '🦊' },
-  { id: 'frame', label: 'Ramar', icon: '⭕' },
-  { id: 'effect', label: 'Effekter', icon: '✨' },
-  { id: 'owned', label: 'Mina köp', icon: '🎁' },
+  { id: 'avatar', label: 'Avatars', icon: '🦊' },
+  { id: 'frame', label: 'Frames', icon: '⭕' },
+  { id: 'effect', label: 'Effects', icon: '✨' },
+  { id: 'theme', label: 'Themes', icon: '🎨' },
+  { id: 'owned', label: 'My items', icon: '🎁' },
 ];
 
 // Sällsynthetschip
@@ -42,7 +43,7 @@ function ConfirmBuy({
   const after = balance - price;
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[70] p-4"
-      role="dialog" aria-modal="true" aria-label={`Köp ${name}`}>
+      role="dialog" aria-modal="true" aria-label={`Buy ${name}`}>
       <div className="rounded-3xl p-7 max-w-xs w-full text-center"
         style={{
           background: 'linear-gradient(160deg,#eef2ff 0%,#e0e7ff 50%,#c7d2fe 100%)',
@@ -50,19 +51,19 @@ function ConfirmBuy({
           boxShadow: '0 8px 40px rgba(99,102,241,0.30)',
         }}>
         <div className="flex justify-center mb-3">{preview}</div>
-        <h2 className="text-xl font-black text-gray-800 mb-1">Köp {name}?</h2>
-        <p className="text-sm text-gray-600 mb-1">Pris: <strong className="text-indigo-600">⭐ {price}</strong></p>
-        <p className="text-xs text-gray-500 mb-5">Kvar efter köp: ⭐ {after}</p>
+        <h2 className="text-xl font-black text-gray-800 mb-1">Buy {name}?</h2>
+        <p className="text-sm text-gray-600 mb-1">Price: <strong className="text-indigo-600">⭐ {price}</strong></p>
+        <p className="text-xs text-gray-500 mb-5">Left after buying: ⭐ {after}</p>
         <div className="flex gap-2">
           <button onClick={onCancel}
             className="flex-1 py-3 rounded-2xl font-bold text-gray-600 transition-all active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-300"
             style={{ background: 'rgba(0,0,0,0.06)', border: '1px solid rgba(0,0,0,0.10)' }}>
-            Avbryt
+            Cancel
           </button>
           <button onClick={onConfirm}
             className="flex-1 py-3 rounded-2xl font-bold text-white transition-all active:scale-95 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-300"
             style={{ background: 'linear-gradient(135deg,#6366f1,#4f46e5)', border: '2px solid #4f46e5' }}>
-            Köp
+            Buy
           </button>
         </div>
       </div>
@@ -87,7 +88,7 @@ function ActionButton({
           ? { background: 'linear-gradient(135deg,#6366f1,#4f46e5)', border: '2px solid #4f46e5', boxShadow: '0 3px 10px rgba(79,70,229,0.35)' }
           : { background: 'rgba(0,0,0,0.10)', border: '1px solid rgba(0,0,0,0.10)', color: 'rgba(0,0,0,0.40)' }}
       >
-        Köp
+        Buy
       </button>
     );
   }
@@ -99,7 +100,7 @@ function ActionButton({
         ? { background: 'linear-gradient(135deg,#10b981,#047857)', border: '2px solid #047857', color: 'white' }
         : { background: 'rgba(16,185,129,0.12)', border: '1px solid rgba(16,185,129,0.45)', color: '#047857' }}
     >
-      {equipped ? '✓ Vald' : 'Använd'}
+      {equipped ? '✓ Equipped' : 'Use'}
     </button>
   );
 }
@@ -157,11 +158,13 @@ function FreeEmoji({ emoji, size = 60 }: { emoji: string; size?: number }) {
 
 // Generiskt kort
 function ItemCard({
-  preview, name, rarity, price, owned, equipped, affordable, onBuy, onEquip,
+  preview, name, rarity, price, owned, equipped, affordable, onBuy, onEquip, fill = false,
 }: {
   preview: React.ReactNode; name: string; rarity: Rarity; price: number;
   owned: boolean; equipped: boolean; affordable: boolean;
   onBuy: () => void; onEquip: () => void;
+  /** Teman: mönstret självt är varan och fyller hela plattan */
+  fill?: boolean;
 }) {
   return (
     <div
@@ -176,12 +179,14 @@ function ItemCard({
       {/* Sällsyntheten ligger på plattan, så att namnet får hela bredden
           och inte klipps av */}
       <div className="relative mb-2">
-        <Stage rarity={rarity}>{preview}</Stage>
+        {fill
+          ? <div className="h-32 rounded-xl overflow-hidden" style={{ border: '1px solid rgba(0,0,0,0.08)' }}>{preview}</div>
+          : <Stage rarity={rarity}>{preview}</Stage>}
         <div className="absolute top-1.5 left-1.5"><RarityChip rarity={rarity} /></div>
       </div>
       <div className="text-sm font-black text-gray-800 leading-tight line-clamp-2 mb-1 px-0.5" title={name}>{name}</div>
       <div className="text-xs font-bold mb-2.5 px-0.5" style={{ color: '#4f46e5' }}>
-        {owned ? <span className="text-emerald-600">Köpt</span> : <>⭐ {price}</>}
+        {owned ? <span className="text-emerald-600">Owned</span> : <>⭐ {price}</>}
       </div>
       {/* Knappen längst ner, så att knapparna hamnar i jämnhöjd i varje rad */}
       <div className="mt-auto">
@@ -235,10 +240,10 @@ export default function ShopView({ onBack }: ShopViewProps) {
     if (!confirm) return;
     const res = buyItem(confirm.kind, confirm.key, confirm.price);
     if (res.ok) {
-      showToast(`Du köpte ${confirm.name}! 🎉`);
+      showToast(`You bought ${confirm.name}! 🎉`);
       refresh();
     } else if (res.reason === 'insufficient') {
-      showToast('Du har inte råd ännu.');
+      showToast('You cannot afford it yet.');
     }
     setConfirm(null);
   }
@@ -255,7 +260,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
         owned={owned} equipped={equipped} affordable={balance >= a.price}
         onBuy={() => setConfirm({ kind: 'avatar', key: i, price: a.price, name: a.name,
           preview: <Stage rarity={a.rarity} className="w-48 h-32"><FramedAvatar emoji={a.emoji} size={72} frameId={shop.equippedFrame} effectId={shop.equippedEffect} /></Stage> })}
-        onEquip={() => { updateUserAvatar(a.emoji); showToast(`${a.name} vald!`); }}
+        onEquip={() => { updateUserAvatar(a.emoji); showToast(`${a.name} equipped!`); }}
       />
     );
   }
@@ -269,7 +274,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
       if (items.length === 0) return null;
       return (
         <section key={group}>
-          <h2 className="text-sm font-black uppercase tracking-wide text-indigo-700/80 mb-2 px-0.5">
+          <h2 className="text-sm font-black uppercase tracking-wide text-indigo-700/80 dark:text-indigo-300 mb-2 px-0.5">
             {group}
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -292,7 +297,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
         owned={owned} equipped={equipped} affordable={balance >= f.price}
         onBuy={() => setConfirm({ kind: 'frame', key: f.id, price: f.price, name: f.name,
           preview: <Stage rarity={f.rarity} className="w-48 h-32"><FramedAvatar emoji={currentEmoji} frameId={f.id} size={88} /></Stage> })}
-        onEquip={() => { equipFrame(equipped ? null : f.id); refresh(); showToast(equipped ? 'Ram borttagen' : `${f.name} på!`); }}
+        onEquip={() => { equipFrame(equipped ? null : f.id); refresh(); showToast(equipped ? 'Frame removed' : `${f.name} equipped!`); }}
       />
     );
   }
@@ -313,7 +318,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
         owned={owned} equipped={equipped} affordable={balance >= e.price}
         onBuy={() => setConfirm({ kind: 'effect', key: e.id, price: e.price, name: e.name,
           preview: <Stage rarity={e.rarity} className="w-48 h-32"><FramedAvatar emoji={currentEmoji} frameId={shop.equippedFrame} effectId={e.id} size={80} /></Stage> })}
-        onEquip={() => { equipEffect(equipped ? null : e.id); refresh(); showToast(equipped ? 'Effekt borttagen' : `${e.name} på!`); }}
+        onEquip={() => { equipEffect(equipped ? null : e.id); refresh(); showToast(equipped ? 'Effect removed' : `${e.name} equipped!`); }}
       />
     );
   }
@@ -322,35 +327,59 @@ export default function ShopView({ onBack }: ShopViewProps) {
     return SHOP_EFFECTS.map(effectCard);
   }
 
+  // Tema-kort: mönstret fyller plattan. Temat syns bakom appen i ljust läge.
+  function themeCard(t: typeof SHOP_THEMES[number]) {
+    const owned = shop.ownedThemes.includes(t.id);
+    const equipped = shop.equippedTheme === t.id;
+    return (
+      <ItemCard
+        key={`th-${t.id}`}
+        fill
+        preview={<div className="w-full h-full" style={{ background: t.background }} />}
+        name={t.name} rarity={t.rarity} price={t.price}
+        owned={owned} equipped={equipped} affordable={balance >= t.price}
+        onBuy={() => setConfirm({ kind: 'theme', key: t.id, price: t.price, name: t.name,
+          preview: <div className="w-48 h-32 rounded-xl" style={{ background: t.background, border: '1px solid rgba(0,0,0,0.08)' }} /> })}
+        onEquip={() => { equipTheme(equipped ? null : t.id); refresh(); showToast(equipped ? 'Theme removed' : `${t.name} equipped!`); }}
+      />
+    );
+  }
+
+  function renderThemes() {
+    return SHOP_THEMES.map(themeCard);
+  }
+
   // "Mina köp"
   function renderOwned() {
     const ownedAvatars = SHOP_AVATARS.map((a, i) => ({ a, i })).filter(({ i }) => shop.ownedAvatars.includes(i));
     const ownedFrames = SHOP_FRAMES.filter(f => shop.ownedFrames.includes(f.id));
     const ownedEffects = SHOP_EFFECTS.filter(e => shop.ownedEffects.includes(e.id));
-    const total = ownedAvatars.length + ownedFrames.length + ownedEffects.length;
+    const ownedThemes = SHOP_THEMES.filter(t => shop.ownedThemes.includes(t.id));
+    const total = ownedAvatars.length + ownedFrames.length + ownedEffects.length + ownedThemes.length;
 
     if (total === 0) {
       return (
-        <div className="text-center py-16 text-indigo-700/60">
+        <div className="text-center py-16 text-indigo-700/60 dark:text-indigo-300/80">
           <p className="text-4xl mb-3">📦</p>
-          <p className="font-bold">Inga köp ännu</p>
-          <p className="text-sm mt-1">Köp något i butiken för att se det här!</p>
+          <p className="font-bold">No items yet</p>
+          <p className="text-sm mt-1">Buy something in the shop to see it here!</p>
         </div>
       );
     }
 
     const section = (title: string, items: React.ReactNode[]) => items.length === 0 ? null : (
       <section key={title}>
-        <h2 className="text-sm font-black uppercase tracking-wide text-indigo-700/80 mb-2 px-0.5">{title}</h2>
+        <h2 className="text-sm font-black uppercase tracking-wide text-indigo-700/80 dark:text-indigo-300 mb-2 px-0.5">{title}</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">{items}</div>
       </section>
     );
 
     return (
       <div className="space-y-6">
-        {section('Avatarer', ownedAvatars.map(({ a, i }) => avatarCard(a, i)))}
-        {section('Ramar', ownedFrames.map(frameCard))}
-        {section('Effekter', ownedEffects.map(effectCard))}
+        {section('Avatars', ownedAvatars.map(({ a, i }) => avatarCard(a, i)))}
+        {section('Frames', ownedFrames.map(frameCard))}
+        {section('Effects', ownedEffects.map(effectCard))}
+        {section('Themes', ownedThemes.map(themeCard))}
       </div>
     );
   }
@@ -364,19 +393,19 @@ export default function ShopView({ onBack }: ShopViewProps) {
             onClick={onBack}
             className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/40 rounded"
           >
-            ← Tillbaka
+            ← Back
           </button>
           <div className="flex items-center justify-between flex-wrap gap-3">
             <div className="flex items-center gap-3">
               <span className="text-4xl">🛒</span>
               <div>
-                <h1 className="text-2xl font-black">Affären</h1>
-                <p className="text-white/70 text-sm">Spendera dina poäng på coola saker!</p>
+                <h1 className="text-2xl font-black">Shop</h1>
+                <p className="text-white/70 text-sm">Spend your points on cool stuff!</p>
               </div>
             </div>
             <div className="rounded-2xl px-4 py-2 text-right"
               style={{ background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.30)' }}>
-              <p className="text-[11px] uppercase tracking-wide text-white/70 font-bold">Att spendera</p>
+              <p className="text-[11px] uppercase tracking-wide text-white/70 font-bold">To spend</p>
               <p className="text-2xl font-black tabular-nums">⭐ {balance.toLocaleString('sv-SE')}</p>
             </div>
           </div>
@@ -391,7 +420,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
-              className={`flex-1 flex items-center justify-center gap-1.5 py-3 text-xs sm:text-sm font-bold transition-colors cursor-pointer focus:outline-none ${
+              className={`flex-1 flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1.5 py-2 sm:py-3 text-[11px] sm:text-sm leading-tight font-bold transition-colors cursor-pointer focus:outline-none ${
                 tab === t.id ? 'text-white' : 'text-indigo-700/70 hover:text-indigo-700'
               }`}
               style={tab === t.id ? { background: 'linear-gradient(135deg,#6366f1,#4f46e5)' } : undefined}
@@ -411,6 +440,15 @@ export default function ShopView({ onBack }: ShopViewProps) {
         ) : tab === 'owned' ? (
           <div className="pb-12">
             {renderOwned()}
+          </div>
+        ) : tab === 'theme' ? (
+          <div className="pb-12">
+            <p className="text-sm text-indigo-700/80 dark:text-indigo-300 mb-3 px-0.5">
+              A theme changes the app background. It shows in light mode.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+              {renderThemes()}
+            </div>
           </div>
         ) : tab === 'effect' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 pb-12">

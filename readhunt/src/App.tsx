@@ -3,13 +3,16 @@ import { AppState, User, LibraryText, UserAnswers, Badge, QuestionResult, Chest 
 import { LoginView } from './components/LoginView';
 import { Header } from './components/Header';
 import { SetupView } from './components/SetupView';
-import { QuizView } from './components/QuizView';
+import { QuizView, clearQuizProgress } from './components/QuizView';
 import { ResultView } from './components/ResultView';
 import { ProfileView } from './components/ProfileView';
 import { TeacherView } from './components/TeacherView';
 import { KistorView } from './components/KistorView';
 import ShopView from './components/ShopView';
 import { AboutView } from './components/AboutView';
+import { useDarkMode } from './contexts/DarkModeContext';
+import { getEquippedTheme } from './utils/shopStorage';
+import { THEME_MAP } from './data/shop';
 import { BookLogo } from './components/BookLogo';
 import { JaktLinks } from './components/JaktLinks';
 import {
@@ -29,7 +32,7 @@ import {
   startSession,
   trackExerciseComplete,
 } from './services/analyticsService';
-import { getRandomText } from './services/libraryService';
+import { getRandomText, withShuffledOptions } from './services/libraryService';
 import {
   loadGamification,
   saveGamification,
@@ -40,6 +43,7 @@ import {
 } from './lib/gamification';
 
 function App() {
+  const { darkMode } = useDarkMode();
   const [user, setUser] = useState<User | null>(null);
   const [appState, setAppState] = useState<AppState>(AppState.LOGIN);
   const [currentText, setCurrentText] = useState<LibraryText | null>(null);
@@ -155,8 +159,11 @@ function App() {
 
   // Handle points update from chests
   const handleChestPointsUpdate = (points: number) => {
-    if (!user) return;
-    const updatedUser = { ...user, totalPoints: user.totalPoints + points };
+    // Läs färskt: två kistor öppnade tätt inpå varandra ska inte skriva över
+    // varandras poäng med ett gammalt värde.
+    const current = loadUser() ?? user;
+    if (!current) return;
+    const updatedUser = { ...current, totalPoints: current.totalPoints + points };
     saveUser(updatedUser);
     setUser(updatedUser);
     syncChestMilestones(updatedUser.totalPoints, countUniqueTexts(updatedUser));
@@ -180,7 +187,8 @@ function App() {
     const text = await getRandomText(grade, completedIds, recentTexts);
 
     if (text) {
-      setCurrentText(text);
+      setCurrentText(withShuffledOptions(text));
+      clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ); // Gå direkt till quiz med side-by-side layout
     } else {
@@ -309,7 +317,8 @@ function App() {
     const text = await getRandomText(currentGrade, completedIds, recentTexts);
 
     if (text) {
-      setCurrentText(text);
+      setCurrentText(withShuffledOptions(text));
+      clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
     } else {
@@ -338,7 +347,8 @@ function App() {
     const text = await getRandomText(newGrade, completedIds, recentTexts);
 
     if (text) {
-      setCurrentText(text);
+      setCurrentText(withShuffledOptions(text));
+      clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
     } else {
@@ -367,7 +377,8 @@ function App() {
     const text = await getRandomText(newGrade, completedIds, recentTexts);
 
     if (text) {
-      setCurrentText(text);
+      setCurrentText(withShuffledOptions(text));
+      clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
     } else {
@@ -456,13 +467,20 @@ function App() {
 
   // Shop view
   if (showShop) {
-    return <ShopView onBack={() => setShowShop(false)} />;
+    // Affären sparar vald avatar direkt i lagringen. Läs om eleven när man
+    // går tillbaka, annars visar headern den gamla avataren och nästa
+    // avslutade text skriver tillbaka den.
+    return <ShopView onBack={() => { setUser(loadUser()); setShowShop(false); }} />;
   }
+
+  // Tema köpt i affären: ersätter bakgrunden på alla sidor i ljust läge.
+  // I mörkt läge gäller den vanliga mörka bakgrunden.
+  const theme = !darkMode ? THEME_MAP[getEquippedTheme() ?? ''] : undefined;
 
   return (
     <div
-      className="min-h-screen relative overflow-hidden"
-      style={appState === AppState.SETUP ? {
+      className={`min-h-screen relative overflow-x-clip ${theme ? 'rh-themed' : ''}`}
+      style={theme ? { background: theme.background, backgroundAttachment: 'fixed' } : appState === AppState.SETUP ? {
         backgroundImage: 'url(/senaste%20readhunt.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -470,11 +488,11 @@ function App() {
       } : undefined}
     >
       {/* Light overlay on setup page */}
-      {appState === AppState.SETUP && (
+      {appState === AppState.SETUP && !theme && (
         <div className="absolute inset-0 bg-black/20 -z-10" />
       )}
       {/* Fallback bg for other states */}
-      {appState !== AppState.SETUP && (
+      {appState !== AppState.SETUP && !theme && (
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 -z-10" />
       )}
 

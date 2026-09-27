@@ -213,3 +213,9 @@ html {
 .font-dyslexic {
   font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
 }
+
+/* Tema från affären: sidornas egna bakgrunder blir genomskinliga så att
+   temat (som ligger på appens rot) syns bakom korten. */
+.rh-themed .rh-page {
+  background: none !important;
+}

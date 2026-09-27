@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { redis, KEY_PREFIX, getTodayKey } from '../lib/redis';
+import { redis, KEY_PREFIX, getTodayKey, DAILY_KEY_TTL_SECONDS } from '../lib/redis';
 import { applyCors, getClientIp, rateLimit, tooManyRequests } from '../lib/security';
 
 /**
@@ -62,7 +62,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const event: TrackEvent = req.body;
+    // sendBeacon (sessionstid när sidan stängs) skickar text/plain, och då
+    // kommer kroppen hit som en sträng. Utan tolkning avvisades de anropen
+    // och tiden för korta besök räknades aldrig.
+    let event: TrackEvent;
+    try {
+      event = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+    } catch {
+      return res.status(400).json({ error: 'Invalid JSON' });
+    }
     const today = getTodayKey();
 
     if (!event || !event.type || !event.deviceId) {
@@ -87,10 +95,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     switch (event.type) {
       case 'pageview': {
         const now = Date.now();
-        // Lägg till deviceId i dagens unika besökare (Set = unika värden)
-        await redis.sadd(`${KEY_PREFIX}visitors:${today}`, event.deviceId);
-        // Räkna totalt antal sidvisningar
-        await redis.incr(`${KEY_PREFIX}pageviews:${today}`);
+        // Lägg till deviceId i dagens unika besökare (Set = unika värden).
+        // Utgångstiden sätts bara när en ny enhet läggs till, så det blir
+        // inget extra anrop per sidvisning. (Räknaren för sidvisningar är
+        // borttagen – den lästes aldrig.)
+        const visitorsKey = `${KEY_PREFIX}visitors:${today}`;
+        if ((await redis.sadd(visitorsKey, event.deviceId)) === 1) {
+          await redis.expire(visitorsKey, DAILY_KEY_TTL_SECONDS);
+        }
         // Aktiva just nu: sorterad mängd med tidsstämpel som score.
         // Ger O(log N)-uppslag i stället för ett blockerande KEYS-anrop.
         await redis.zadd(`${KEY_PREFIX}active`, { score: now, member: event.deviceId });
@@ -104,7 +116,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       case 'task_complete': {
         // Öka räknaren för avklarade texter - en gång per text, inte en per
         // fråga (klienten skickar ett samlat anrop med facit för alla frågor).
-        await redis.incr(`${KEY_PREFIX}tasks:${today}`);
+        const tasksKey = `${KEY_PREFIX}tasks:${today}`;
+        if ((await redis.incr(tasksKey)) === 1) {
+          await redis.expire(tasksKey, DAILY_KEY_TTL_SECONDS);
+        }
         // Spåra användning per årskurs/stadie
         const grade = Number(event.data?.grade);
         if (Number.isInteger(grade) && grade >= 1 && grade <= 10) {
@@ -125,13 +140,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         const wrongEntries = Object.entries(wrongByType);
         if (wrongEntries.length > 0) {
           let totalWrong = 0;
-          await Promise.all(
+          const errorsKey = `${KEY_PREFIX}errors:${today}`;
+          const newFields = await Promise.all(
             wrongEntries.map(([qType, count]) => {
               totalWrong += count;
-              return redis.hincrby(`${KEY_PREFIX}errors:${today}`, qType, count);
+              return redis.hincrby(errorsKey, qType, count).then((v) => v === count);
             })
           );
-          await redis.incrby(`${KEY_PREFIX}total_errors:${today}`, totalWrong);
+          const totalKey = `${KEY_PREFIX}total_errors:${today}`;
+          const newTotal = (await redis.incrby(totalKey, totalWrong)) === totalWrong;
+          // Sätt utgångstid bara när nyckeln just skapats
+          if (newFields.some(Boolean)) await redis.expire(errorsKey, DAILY_KEY_TTL_SECONDS);
+          if (newTotal) await redis.expire(totalKey, DAILY_KEY_TTL_SECONDS);
         }
         break;
       }
@@ -140,10 +160,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         // Lägg till tid till total tid
         const seconds = Number(event.data?.timeSeconds);
         if (Number.isFinite(seconds) && seconds > 0) {
-          await redis.incrby(
-            `${KEY_PREFIX}time:${today}`,
-            Math.min(Math.floor(seconds), 3600) // Max 1 timme per session
-          );
+          const add = Math.min(Math.floor(seconds), 3600); // Max 1 timme per session
+          const timeKey = `${KEY_PREFIX}time:${today}`;
+          if ((await redis.incrby(timeKey, add)) === add) {
+            await redis.expire(timeKey, DAILY_KEY_TTL_SECONDS);
+          }
         }
         break;
       }
@@ -151,7 +172,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       case 'error': {
         // Spåra feltyper för "vanligaste fel"
         if (ALLOWED_QUESTION_TYPES.has(event.data?.questionType || '')) {
-          await redis.hincrby(`${KEY_PREFIX}errors:${today}`, event.data!.questionType!, 1);
+          const errorsKey = `${KEY_PREFIX}errors:${today}`;
+          if ((await redis.hincrby(errorsKey, event.data!.questionType!, 1)) === 1) {
+            await redis.expire(errorsKey, DAILY_KEY_TTL_SECONDS);
+          }
         }
         break;
       }

@@ -172,3 +172,25 @@ export async function getAvailableGrades(): Promise<number[]> {
     .map(([grade]) => Number(grade))
     .sort((a, b) => a - b);
 }
+
+/**
+ * Returnerar en kopia av texten där varje frågas svarsalternativ ligger i
+ * slumpad ordning, med `correct` flyttat till rätt ny plats.
+ *
+ * I biblioteket är rätt svar ofta det längsta alternativet och ligger oftare
+ * på A eller B, så en elev kunde gissa rätt utan att förstå texten. Ingen
+ * fråga har alternativ som "Both A and B", så ordningen kan blandas fritt.
+ */
+export function withShuffledOptions(text: LibraryText): LibraryText {
+  return {
+    ...text,
+    questions: text.questions.map((q) => {
+      const order = shuffleArray(q.options.map((_, i) => i));
+      return {
+        ...q,
+        options: order.map((i) => q.options[i]),
+        correct: order.indexOf(q.correct),
+      };
+    }),
+  };
+}
