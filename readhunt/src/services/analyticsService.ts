@@ -139,6 +139,12 @@ export interface TeacherStats {
   gdprNote: string;
 }
 
+export class TeacherStatsError extends Error {
+  constructor(public status: number) {
+    super(`Teacher stats request failed (${status})`);
+  }
+}
+
 export async function fetchTeacherStats(password: string): Promise<TeacherStats | null> {
   try {
     const response = await fetch('/api/stats/get', {
@@ -148,10 +154,8 @@ export async function fetchTeacherStats(password: string): Promise<TeacherStats 
     });
 
     if (!response.ok) {
-      if (response.status === 401) {
-        throw new Error('Fel lösenord');
-      }
-      throw new Error('Kunde inte hämta statistik');
+      // Statuskoden följer med så att lärarvyn kan visa rätt meddelande
+      throw new TeacherStatsError(response.status);
     }
 
     return await response.json();

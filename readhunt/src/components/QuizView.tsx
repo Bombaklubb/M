@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LibraryText, UserAnswers } from '../types';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
-import { cn } from '@/lib/utils';
+import { cn, publishHeightAsCssVar } from '@/lib/utils';
 import { TextWithGlossary } from './TextWithGlossary';
 import { TextToSpeech } from './TextToSpeech';
 import { QuestionSpeech } from './QuestionSpeech';
@@ -78,6 +78,10 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
   const [answers, setAnswers] = useState<UserAnswers>(() => restored?.answers ?? {});
   const [currentQuestion, setCurrentQuestion] = useState(() => restored?.currentQuestion ?? 0);
 
+  // Textkortet klistras under rubrikraden (--quizbar-h) på större skärmar
+  const quizBarRef = useRef<HTMLDivElement>(null);
+  useEffect(() => publishHeightAsCssVar(quizBarRef.current, '--quizbar-h'), []);
+
   useEffect(() => {
     savedProgress = { textId: text.id, answers, currentQuestion };
   }, [text.id, answers, currentQuestion]);
@@ -141,11 +145,14 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
-      {/* Header */}
+      {/* Header. Klistras under appens header på större skärmar. På mobil
+          skulle header + rubrikrad ta en fjärdedel av skärmen, så där
+          skrollar rubrikraden undan. */}
       <motion.div
+        ref={quizBarRef}
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-white/85 dark:bg-slate-900/85 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-700/60 shadow-sm px-4 py-3 sticky top-16 z-20"
+        className="bg-white/85 dark:bg-slate-900/85 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-700/60 shadow-sm px-4 py-3 lg:sticky lg:top-[var(--header-h,69px)] z-20"
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-xl font-bold text-slate-800 dark:text-white">{text.title}</h2>
@@ -175,7 +182,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg border-white/20 shadow-xl h-fit lg:sticky lg:top-24 overflow-hidden">
+            <Card className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-lg border-white/20 shadow-xl h-fit lg:sticky lg:top-[calc(var(--header-h,69px)+var(--quizbar-h,77px)+1rem)] lg:max-h-[calc(100vh-var(--header-h,69px)-var(--quizbar-h,77px)-2rem)] lg:overflow-y-auto overflow-hidden">
               <CardContent className="p-6 lg:p-8">
                 <div className="flex flex-wrap items-center justify-between gap-y-3 mb-4 pb-4 border-b border-slate-100 dark:border-slate-700">
                   <h3 className="font-bold text-slate-700 dark:text-slate-200">{text.title}</h3>

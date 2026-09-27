@@ -18,8 +18,10 @@ import {
  * Kräver lösenord för åtkomst.
  */
 
-// Lösenord för lärarvy (sätt TEACHER_PASSWORD i Vercel)
-const TEACHER_PASSWORD = process.env.TEACHER_PASSWORD || 'Korsängen';
+// Lösenord för lärarvy. Sätts ENBART som miljövariabel TEACHER_PASSWORD i
+// Vercel. Det fanns tidigare ett standardlösenord här och i appen, vilket
+// gjorde att vem som helst som läste källkoden kunde öppna statistiken.
+const TEACHER_PASSWORD = process.env.TEACHER_PASSWORD || '';
 
 // Skydd mot brute force
 const MAX_FAILED_LOGINS = 10; // per IP
@@ -57,6 +59,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const flood = await rateLimit(`get:ip:${ip}`, REQUESTS_PER_MIN, 60);
   if (!flood.allowed) {
     return tooManyRequests(res, 60);
+  }
+
+  // Utan konfigurerat lösenord är lärarvyn stängd
+  if (!TEACHER_PASSWORD) {
+    return res.status(503).json({ error: 'Teacher password not configured' });
   }
 
   // Utelåsning efter för många felaktiga lösenord
@@ -110,7 +117,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       tasks: d.tasks,
     }));
 
-    const totalVisitors = perDay.reduce((s, d) => s + d.visitors, 0);
+    // Unika enheter under perioden: unionen av dagarnas mängder. Förut
+    // summerades dagarnas antal, så en dator som användes fem dagar
+    // räknades fem gånger.
+    const uniqueDevices = await redis.sunion(
+      ...(dateKeys.map((d) => `${KEY_PREFIX}visitors:${d}`) as [string, ...string[]])
+    );
+    const totalVisitors = Array.isArray(uniqueDevices) ? uniqueDevices.length : 0;
     const totalTasks = perDay.reduce((s, d) => s + d.tasks, 0);
     const totalTime = perDay.reduce((s, d) => s + d.time, 0);
     const totalErrors = perDay.reduce((s, d) => s + d.errors, 0);

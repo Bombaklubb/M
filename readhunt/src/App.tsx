@@ -29,7 +29,7 @@ import {
   startSession,
   trackExerciseComplete,
 } from './services/analyticsService';
-import { getRandomText } from './services/libraryService';
+import { getRandomText, withShuffledOptions } from './services/libraryService';
 import {
   loadGamification,
   saveGamification,
@@ -183,7 +183,7 @@ function App() {
     const text = await getRandomText(grade, completedIds, recentTexts);
 
     if (text) {
-      setCurrentText(text);
+      setCurrentText(withShuffledOptions(text));
       clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ); // Gå direkt till quiz med side-by-side layout
@@ -313,7 +313,7 @@ function App() {
     const text = await getRandomText(currentGrade, completedIds, recentTexts);
 
     if (text) {
-      setCurrentText(text);
+      setCurrentText(withShuffledOptions(text));
       clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
@@ -343,7 +343,7 @@ function App() {
     const text = await getRandomText(newGrade, completedIds, recentTexts);
 
     if (text) {
-      setCurrentText(text);
+      setCurrentText(withShuffledOptions(text));
       clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
@@ -373,7 +373,7 @@ function App() {
     const text = await getRandomText(newGrade, completedIds, recentTexts);
 
     if (text) {
-      setCurrentText(text);
+      setCurrentText(withShuffledOptions(text));
       clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
@@ -471,7 +471,7 @@ function App() {
 
   return (
     <div
-      className="min-h-screen relative overflow-hidden"
+      className="min-h-screen relative overflow-x-clip"
       style={appState === AppState.SETUP ? {
         backgroundImage: 'url(/senaste%20readhunt.png)',
         backgroundSize: 'cover',

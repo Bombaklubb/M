@@ -75,7 +75,7 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   // Skoltema
   { emoji: '🐛', name: 'Bokmasken', rarity: 'common', price: 150, group: 'Skoltema' },
   { emoji: '🔢', name: 'Mattesnillet', rarity: 'common', price: 150, group: 'Skoltema' },
-  { emoji: '🎨', name: 'Konstnären', rarity: 'common', price: 150, group: 'Skoltema' },
+  { emoji: '🖌️', name: 'Konstnären', rarity: 'common', price: 150, group: 'Skoltema' }, // var 🎨, samma som Konstnärssjälen
   { emoji: '🎵', name: 'Musikstjärnan', rarity: 'common', price: 150, group: 'Skoltema' },
   { emoji: '🔬', name: 'Vetenskapsgeniet', rarity: 'rare', price: 400, group: 'Skoltema' },
   { emoji: '📚', name: 'Språkmästaren', rarity: 'rare', price: 400, group: 'Skoltema' },

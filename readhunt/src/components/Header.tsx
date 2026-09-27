@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { publishHeightAsCssVar } from '@/lib/utils';
 import { User } from '../types';
 import { useDarkMode } from '../contexts/DarkModeContext';
 import { getWalletBalance, getEquippedFrame, getEquippedEffect } from '../utils/shopStorage';
@@ -17,12 +18,15 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onProfileClick, onKistorClick, onShopClick, onAboutClick, unopenedChests = 0 }) => {
   const { darkMode, toggleDarkMode } = useDarkMode();
+  const headerRef = useRef<HTMLElement>(null);
+  // Quizets rubrikrad klistras precis under headern (--header-h)
+  useEffect(() => publishHeightAsCssVar(headerRef.current, '--header-h'), []);
 
   // Plånbokssaldo = livstidspoäng − spenderat i butiken
   const walletBalance = getWalletBalance();
 
   return (
-    <header className="sticky top-0 z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-700/60 shadow-sm">
+    <header ref={headerRef} className="sticky top-0 z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-700/60 shadow-sm">
       {/* Subtle gradient accent line at top */}
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-500 via-indigo-500 to-cyan-500" />
 

@@ -177,7 +177,7 @@ export function checkForNewBadges(user: User): Badge[] {
   const readingByDay: Record<string, number> = {};
   for (const t of user.completedTexts) {
     if (t.readingTimeSeconds) {
-      const day = t.completedAt.slice(0, 10);
+      const day = localDayKey(t.completedAt);
       readingByDay[day] = (readingByDay[day] || 0) + t.readingTimeSeconds;
     }
   }
@@ -185,7 +185,7 @@ export function checkForNewBadges(user: User): Badge[] {
 
   const pointsByDay: Record<string, number> = {};
   for (const t of user.completedTexts) {
-    const day = t.completedAt.slice(0, 10);
+    const day = localDayKey(t.completedAt);
     pointsByDay[day] = (pointsByDay[day] || 0) + t.pointsEarned;
   }
   if (Object.values(pointsByDay).some(p => p >= 500)) addBadge(BadgeType.BIG_SCORER);
@@ -193,7 +193,7 @@ export function checkForNewBadges(user: User): Badge[] {
   const genreByDay: Record<string, Set<string>> = {};
   for (const t of user.completedTexts) {
     if (t.genre) {
-      const day = t.completedAt.slice(0, 10);
+      const day = localDayKey(t.completedAt);
       if (!genreByDay[day]) genreByDay[day] = new Set();
       genreByDay[day].add(t.genre);
     }
@@ -304,15 +304,28 @@ export function getAllUsers(): User[] {
   return [];
 }
 
+/**
+ * Dagens datum (eller ett givet datum) som YYYY-MM-DD i elevens lokala tid.
+ * Tidigare användes toISOString(), som ger UTC – då bytte "dagen" klockan
+ * 01/02 svensk tid, och en text läst strax efter midnatt räknades till
+ * föregående dag i streak och dagsmärken.
+ */
+function localDayKey(date: Date | string = new Date()): string {
+  const d = typeof date === 'string' ? new Date(date) : date;
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${d.getFullYear()}-${mm}-${dd}`;
+}
+
 function getTodayKey(): string {
-  return new Date().toISOString().split('T')[0];
+  return localDayKey();
 }
 
 export function calculateReadingStreak(completedTexts: CompletedText[]): number {
   if (completedTexts.length === 0) return 0;
 
   const uniqueDates = new Set<string>();
-  completedTexts.forEach(text => uniqueDates.add(text.completedAt.split('T')[0]));
+  completedTexts.forEach(text => uniqueDates.add(localDayKey(text.completedAt)));
 
   const sortedDates = Array.from(uniqueDates).sort((a, b) => b.localeCompare(a));
   if (sortedDates.length === 0) return 0;
@@ -320,17 +333,18 @@ export function calculateReadingStreak(completedTexts: CompletedText[]): number 
   const today = getTodayKey();
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
-  const yesterdayKey = yesterday.toISOString().split('T')[0];
+  const yesterdayKey = localDayKey(yesterday);
 
   const mostRecentDate = sortedDates[0];
   if (mostRecentDate !== today && mostRecentDate !== yesterdayKey) return 0;
 
   let streak = 1;
-  let currentDate = new Date(mostRecentDate);
+  const [y, m, d] = mostRecentDate.split('-').map(Number);
+  const currentDate = new Date(y, m - 1, d);
 
   for (let i = 1; i < sortedDates.length; i++) {
     currentDate.setDate(currentDate.getDate() - 1);
-    const expectedDate = currentDate.toISOString().split('T')[0];
+    const expectedDate = localDayKey(currentDate);
     if (sortedDates.includes(expectedDate)) streak++;
     else break;
   }
@@ -394,7 +408,7 @@ export function getTeacherStats(): {
   for (let i = 6; i >= 0; i--) {
     const date = new Date();
     date.setDate(date.getDate() - i);
-    const dateKey = date.toISOString().split('T')[0];
+    const dateKey = localDayKey(date);
     const stats = getDailyStats(dateKey);
     last7Days.push({ date: dateKey, count: stats?.textsRead || 0 });
 
