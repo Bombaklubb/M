@@ -3201,35 +3201,35 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "What did Lina eat?",
+        "type": "inference",
+        "q": "How did Lina probably feel at the lake?",
         "options": [
-          "A banana",
-          "A red apple",
-          "A cookie",
-          "A sandwich"
+          "Happy",
+          "Scared",
+          "Angry",
+          "Sad"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
-        "type": "literal",
-        "q": "What did Lina throw?",
+        "type": "inference",
+        "q": "What time of day was it probably?",
         "options": [
-          "Flowers",
-          "Balls",
-          "Small stones",
-          "Leaves"
+          "The afternoon",
+          "Early morning",
+          "Midnight",
+          "Before breakfast"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
-        "type": "literal",
-        "q": "When did they go to the lake?",
+        "type": "inference",
+        "q": "Was the lake far from Lina's school?",
         "options": [
-          "After school",
-          "Before dinner",
-          "At night",
-          "In the morning"
+          "No, they could walk there",
+          "Yes, they needed a plane",
+          "Yes, it took many days",
+          "No, it was inside the school"
         ],
         "correct": 0
       }
@@ -4416,37 +4416,37 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "How can days be in winter?",
+        "type": "inference",
+        "q": "Why might people in Sweden use lamps a lot in winter?",
         "options": [
-          "Very long",
-          "Very hot",
-          "Always rainy",
-          "Short"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "literal",
-        "q": "What do many children enjoy?",
-        "options": [
-          "Outdoor activities",
-          "Flying airplanes",
-          "Building ships",
-          "Driving cars"
+          "The days are short",
+          "It is very hot",
+          "The sun never sets",
+          "The forests are gone"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "When do many families spend time near nature?",
+        "type": "inference",
+        "q": "What can we guess about many families in Sweden?",
         "options": [
-          "Every night",
-          "On weekends",
-          "Only in winter",
-          "Only in school"
+          "They like being outdoors",
+          "They never leave the city",
+          "They are afraid of forests",
+          "They always stay at home"
         ],
-        "correct": 1
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why is it easy to find a lake in Sweden?",
+        "options": [
+          "There are lakes in many places",
+          "Lakes are only in Stockholm",
+          "People build lakes in shops",
+          "Sweden has no forests"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
@@ -4578,37 +4578,37 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Why do birdwatchers visit lakes and wetlands?",
+        "type": "inference",
+        "q": "Why do birdwatchers go to wetlands and not to busy streets?",
         "options": [
-          "To swim",
-          "To fish",
-          "To build houses",
-          "To see different species"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "literal",
-        "q": "What helps animals stay healthy and safe?",
-        "options": [
-          "Protecting habitats",
-          "More traffic",
-          "Louder cities",
-          "Fewer trees"
+          "More birds live there",
+          "The streets are closed",
+          "Birds are afraid of water",
+          "Wetlands have big shops"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "What do birdwatchers like to observe?",
+        "type": "inference",
+        "q": "What would happen if the forests were cut down?",
         "options": [
-          "Cars",
-          "Birds",
-          "Roads",
-          "Buildings"
+          "Animals would lose their homes",
+          "More moose would live there",
+          "Bears would be safer",
+          "Nothing would change"
         ],
-        "correct": 1
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What does the writer think about protecting habitats?",
+        "options": [
+          "It is important",
+          "It is a waste of time",
+          "It is bad for animals",
+          "It is only for cities"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
@@ -4659,37 +4659,37 @@
         "correct": 2
       },
       {
-        "type": "literal",
-        "q": "Who often travels together?",
+        "type": "inference",
+        "q": "Why do Lina and Max travel during school breaks?",
         "options": [
-          "Only Lina",
-          "Lina and a teacher",
-          "Max and a neighbor",
-          "Lina, Max, and their grandparent"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "literal",
-        "q": "What places do they visit?",
-        "options": [
-          "Museums and parks",
-          "Volcanoes",
-          "Space stations",
-          "Castles only"
+          "They have no school then",
+          "Trains only run in breaks",
+          "Their school is on a train",
+          "Their teacher tells them to"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "When do they often travel?",
+        "type": "inference",
+        "q": "Why might the family choose to go by train?",
         "options": [
-          "Every morning",
-          "During school breaks",
-          "Only at night",
-          "Only in winter"
+          "It is easy and comfortable",
+          "It is the only way to travel",
+          "It goes to space",
+          "It never stops in towns"
         ],
-        "correct": 1
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Where do some of their relatives probably live?",
+        "options": [
+          "In another town or city",
+          "On the train",
+          "In the same house as Lina",
+          "Inside a museum"
+        ],
+        "correct": 0
       }
     ],
     "meta": {
@@ -4783,7 +4783,7 @@
     "grade": 2,
     "genre": "fiction",
     "theme": "friendship",
-    "title": "The Lost Hat",
+    "title": "Sam's Red Hat",
     "text": "Ella went to the park with her brother Sam. It was windy outside. Sam lost his red hat near the swings, but a kind woman found it and gave it back to him. Sam thanked her and put the hat back on.",
     "imageUrl": "https://images.unsplash.com/photo-1695561846769-fe3d04b547f4?w=700&h=420&fit=crop",
     "questions": [
@@ -5188,7 +5188,7 @@
     "grade": 3,
     "genre": "fiction",
     "theme": "dance",
-    "title": "Dancing in the Rain",
+    "title": "Dancing at the School Disco",
     "text": "Maja loved to dance everywhere. But at the school disco she stood still by the wall, afraid people would laugh at her. Her little brother Ville ran onto the floor and danced like a happy robot. Some kids giggled, but Ville did not care. He was having fun. Maja watched him and then walked out too. Soon she forgot that anyone was watching.",
     "imageUrl": "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80",
     "questions": [
@@ -5917,7 +5917,7 @@
     "grade": 3,
     "genre": "fiction",
     "theme": "nature",
-    "title": "The Tiny Garden",
+    "title": "Leo and Mina's Garden",
     "text": "Leo and his older sister Mina built a small garden. Their grandfather gave them tomato seeds and carrot seeds. Every morning they watered the soil. At first nothing was growing yet, and Leo became impatient. After two weeks, green leaves appeared. One afternoon a strong wind bent the tomato plants. Mina used sticks and string to help them stand again. In the end the family made soup from the vegetables.",
     "questions": [
       {
@@ -6592,15 +6592,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Why did players spread out across the field?",
+        "type": "inference",
+        "q": "Why did Noor like having more forwards?",
         "options": [
-          "To rest",
-          "To celebrate",
-          "To create space",
-          "To waste time"
+          "She wanted more goals",
+          "She wanted to rest more",
+          "She did not like goals",
+          "She wanted fewer players"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -6614,26 +6614,26 @@
         "correct": 3
       },
       {
-        "type": "literal",
-        "q": "What did the discussion help them do?",
+        "type": "inference",
+        "q": "What do Amir and Noor both enjoy?",
         "options": [
-          "Understand the game better",
-          "Buy tickets",
-          "Meet players",
-          "Change schools"
+          "Thinking about football",
+          "Playing tennis together",
+          "Going to the stadium",
+          "Watching cooking shows"
         ],
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "When did they try some ideas from the match?",
+        "type": "inference",
+        "q": "Why did they try the ideas with their friends?",
         "options": [
-          "The same evening",
-          "The next weekend",
-          "A month later",
-          "During winter"
+          "To see if the ideas worked",
+          "Because the coach told them",
+          "Because they were bored",
+          "To win a big trophy"
         ],
-        "correct": 1
+        "correct": 0
       }
     ],
     "meta": {
@@ -8702,15 +8702,15 @@
         "correct": 1
       },
       {
-        "type": "literal",
-        "q": "Who wanted to investigate carefully?",
+        "type": "inference",
+        "q": "Why was the camera recording important?",
         "options": [
-          "Raphael",
-          "Michelangelo",
-          "Leonardo",
-          "Splinter"
+          "It proved no stranger came in",
+          "It showed Splinter eating",
+          "It showed the pizzas burning",
+          "It showed Raphael training"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "type": "literal",
@@ -8735,26 +8735,26 @@
         "correct": 0
       },
       {
-        "type": "literal",
-        "q": "Where did the turtles find the birds?",
+        "type": "inference",
+        "q": "Why did the brothers laugh instead of getting angry?",
         "options": [
-          "In a museum",
-          "On a rooftop",
-          "In a classroom",
-          "At a station"
+          "The thieves were hungry birds",
+          "They did not like pizza",
+          "Splinter told them a joke",
+          "The pizzas were old and bad"
         ],
-        "correct": 1
+        "correct": 0
       },
       {
-        "type": "literal",
-        "q": "What did the turtles do at the end?",
+        "type": "inference",
+        "q": "What does leaving crumbs for the birds show about the turtles?",
         "options": [
-          "Moved home",
-          "Started training",
-          "Made new pizzas",
-          "Sold the camera"
+          "They are kind to animals",
+          "They are angry at birds",
+          "They want the birds to leave",
+          "They are bad at cleaning"
         ],
-        "correct": 2
+        "correct": 0
       }
     ],
     "meta": {
@@ -11683,7 +11683,7 @@
     "grade": 6,
     "genre": "fiction",
     "theme": "art",
-    "title": "The Lost Painting",
+    "title": "The Painting in the Storage Room",
     "text": "For decades, an old painting hung quietly in the storage room of the Ashton City Museum. Most visitors never noticed it because it was rarely displayed. Museum workers believed the artwork had little historical value, and some even thought it was only a copy of a more famous painting.\n\nEverything changed when a new museum curator named Dr. Helena Morris began reviewing the museum's collection. While examining the painting closely, she noticed unusual details in the brushstrokes and the signature in one corner. Curious about its origin, she contacted art historians and conservation experts.\n\nThe investigation lasted several months. Experts used special cameras and scientific methods to study the layers of paint hidden beneath the surface. They discovered that earlier restoration work had covered important details and changed some of the original colors. Gradually, researchers became convinced that the painting might actually belong to a well-known nineteenth-century artist.\n\nNews of the discovery quickly spread through newspapers and social media. Some people were excited by the possibility of finding a forgotten masterpiece, while others remained skeptical and demanded stronger evidence. Dr. Morris carefully explained that scientific research often required time and patience before reaching final conclusions.\n\nEventually, international experts confirmed that the painting was authentic. The museum organized a special exhibition where visitors could learn about the artwork's history and the restoration process. Thousands of people traveled to Ashton City to see the painting for themselves.\n\nNot everyone was pleased by the announcement. A rival museum in another city had claimed for years that it owned the only surviving version of the same scene, and its director wrote a long article questioning the tests. He argued that the pigments could have been added by a student of the artist rather than the artist himself.\n\nDr. Morris did not dismiss the objection. She published the full laboratory data instead, including the results that were inconclusive, and invited the rival museum to send its own specialist. The specialist came, spent three days with the painting, and eventually agreed with the findings.\n\nSeveral art historians later described that exchange as more valuable than the discovery itself, because it showed how disagreement can be settled with evidence.\n\nThe discovery transformed the museum's reputation and increased interest in local history and art. Dr. Morris later said the experience reminded her that valuable treasures are sometimes hidden in places people least expect. She also encouraged young students to remain curious and question assumptions instead of accepting easy answers without investigation.",
     "questions": [
       {
@@ -14113,7 +14113,7 @@
     "grade": 7,
     "genre": "non-fiction",
     "theme": "environment",
-    "title": "The Future of Urban Farming",
+    "title": "Growing Food in the City",
     "text": "As cities continue to grow, many scientists and environmental planners have become concerned about how future populations will access fresh food. Traditional farming requires large areas of land and significant amounts of water, resources that are becoming increasingly limited in some regions. In response to these challenges, urban farming has developed into a possible solution for producing food closer to where people live.\n\nUrban farming can take many forms. Some cities have rooftop gardens where vegetables are grown on top of apartment buildings and offices. Others use vertical farming systems, where crops are planted indoors in stacked layers under artificial lighting. Supporters argue that these methods reduce transportation costs, lower pollution, and provide communities with fresher food.\n\nOne example can be found in Singapore, where limited land has encouraged investment in advanced farming technology. Several companies there now grow lettuce, herbs, and strawberries inside climate-controlled buildings. Computers monitor temperature, humidity, and water levels to ensure that plants receive exactly what they need. Similar projects have also appeared in cities across Europe and North America.\n\nHowever, urban farming also faces criticism. Building and maintaining indoor farms can be expensive, especially because artificial lighting requires large amounts of electricity. Some experts question whether these systems can produce enough food to support entire populations. Others worry that only wealthy communities may benefit from the technology at first.\n\nDespite these concerns, researchers continue exploring new methods to improve efficiency and reduce costs. Some scientists are experimenting with renewable energy sources such as solar panels to power indoor farms. Others are developing systems that recycle water and nutrients more effectively.\n\nFor many environmental experts, urban farming represents more than simply growing vegetables inside cities. It also reflects changing ideas about sustainability, technology, and how societies may adapt to environmental pressures in the future. The obstacles are often practical rather than technological. A flat roof strong enough to hold soil, water, and people is unusual in older buildings, and reinforcing one is expensive. City rules written decades ago rarely mention farming at all, so projects can spend a year establishing whether what they intend to do is even permitted.\n\nGround-level sites bring a different problem. Land that has stood empty in a city is frequently contaminated by whatever stood there before — a workshop, a petrol station, a print works. Growers usually build raised beds and import clean soil rather than attempt to clean what is already there.\n\nLabour is the quiet difficulty. Indoor farms are often described as automated, yet harvesting leafy greens still largely happens by hand, and the wages of a city are far higher than those of the countryside where most salad is currently grown. Several well-funded vertical farming companies have closed for precisely this reason, having produced excellent lettuce at a price nobody wanted to pay. Their equipment was later sold off at auction for a small fraction of its cost.\n\nAlthough urban farming alone will not solve global food shortages, many believe it could become an important part of a broader solution.",
     "questions": [
       {
