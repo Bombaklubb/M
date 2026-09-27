@@ -34,13 +34,16 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
         {/* Logo */}
         <button
           onClick={onHomeClick}
-          className="flex items-center gap-2 hover:opacity-75 transition-opacity cursor-pointer"
+          className="shrink-0 flex items-center gap-2 hover:opacity-75 transition-opacity cursor-pointer"
         >
-          <img src="/readhunt.png" alt="Readhunt" className="w-12 h-12 object-contain" />
+          <img src="/readhunt.png" alt="Readhunt" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
         </button>
 
         {/* Right side */}
-        <div className="flex items-center gap-1.5 md:gap-2">
+        {/* På mobil fick allt inte plats: loggan trycktes bort och "Log out"
+            klipptes. Knapparna är därför smalare där, och livstidspoängen
+            visas bara från sm och uppåt (de finns också i profilen). */}
+        <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2">
 
           {/* Om Readhunt */}
           {onAboutClick && (
@@ -86,7 +89,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
           {onShopClick && (
             <button
               onClick={onShopClick}
-              className="flex items-center gap-1.5 bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20 px-3 py-1.5 rounded-xl border border-indigo-200/80 dark:border-indigo-700/50 hover:from-indigo-100 hover:to-violet-100 dark:hover:from-indigo-900/40 dark:hover:to-violet-900/40 transition-all"
+              className="flex items-center gap-1 sm:gap-1.5 bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20 px-2 sm:px-3 py-1.5 rounded-xl border border-indigo-200/80 dark:border-indigo-700/50 hover:from-indigo-100 hover:to-violet-100 dark:hover:from-indigo-900/40 dark:hover:to-violet-900/40 transition-all"
               title="Shop – points to spend"
               aria-label="Open the shop"
             >
@@ -97,7 +100,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
 
           {/* Points (lifetime total) */}
           <div
-            className="flex items-center gap-1.5 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 px-3 py-1.5 rounded-xl border border-amber-200/80 dark:border-amber-700/50"
+            className="hidden sm:flex items-center gap-1.5 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 px-3 py-1.5 rounded-xl border border-amber-200/80 dark:border-amber-700/50"
             title="Lifetime points (total earned)"
           >
             <span className="text-base">⭐</span>
@@ -107,7 +110,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
           {/* Profile */}
           <button
             onClick={onProfileClick}
-            className="flex items-center gap-1.5 bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20 px-3 py-1.5 rounded-xl border border-indigo-200/80 dark:border-indigo-700/50 hover:from-indigo-100 hover:to-violet-100 dark:hover:from-indigo-900/40 dark:hover:to-violet-900/40 transition-all"
+            className="flex items-center gap-1.5 bg-gradient-to-br from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20 px-2 sm:px-3 py-1.5 rounded-xl border border-indigo-200/80 dark:border-indigo-700/50 hover:from-indigo-100 hover:to-violet-100 dark:hover:from-indigo-900/40 dark:hover:to-violet-900/40 transition-all"
             aria-label={`Profile for ${user.name}`}
           >
             <FramedAvatar
@@ -122,7 +125,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout, onHomeClick, onP
           {/* Logout */}
           <button
             onClick={onLogout}
-            className="px-3 py-1.5 rounded-xl text-slate-500 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-900/20 transition-all text-sm font-medium border border-transparent hover:border-rose-200/60 dark:hover:border-rose-700/40"
+            className="whitespace-nowrap px-2 sm:px-3 py-1.5 rounded-xl text-slate-500 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-900/20 transition-all text-sm font-medium border border-transparent hover:border-rose-200/60 dark:hover:border-rose-700/40"
           >
             Log out
           </button>

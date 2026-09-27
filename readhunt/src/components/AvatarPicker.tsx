@@ -19,7 +19,7 @@ export const AvatarPicker: React.FC<AvatarPickerProps> = ({
       {isModal && (
         <div className="flex items-center justify-between mb-5">
           <h3 className="text-xl font-bold text-indigo-900 dark:text-white">
-            Välj din avatar
+            Choose your avatar
           </h3>
           <button
             onClick={onClose}
@@ -70,7 +70,7 @@ export const AvatarPicker: React.FC<AvatarPickerProps> = ({
           onClick={onClose}
           className="w-full mt-5 py-3.5 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold rounded-2xl shadow-[0_4px_14px_rgba(249,115,22,0.4),inset_0_-2px_4px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(249,115,22,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 border-2 border-orange-400 cursor-pointer"
         >
-          Klar
+          Done
         </button>
       )}
     </div>

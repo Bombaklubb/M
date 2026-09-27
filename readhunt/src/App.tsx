@@ -10,6 +10,9 @@ import { TeacherView } from './components/TeacherView';
 import { KistorView } from './components/KistorView';
 import ShopView from './components/ShopView';
 import { AboutView } from './components/AboutView';
+import { useDarkMode } from './contexts/DarkModeContext';
+import { getEquippedTheme } from './utils/shopStorage';
+import { THEME_MAP } from './data/shop';
 import { BookLogo } from './components/BookLogo';
 import { JaktLinks } from './components/JaktLinks';
 import {
@@ -40,6 +43,7 @@ import {
 } from './lib/gamification';
 
 function App() {
+  const { darkMode } = useDarkMode();
   const [user, setUser] = useState<User | null>(null);
   const [appState, setAppState] = useState<AppState>(AppState.LOGIN);
   const [currentText, setCurrentText] = useState<LibraryText | null>(null);
@@ -469,10 +473,14 @@ function App() {
     return <ShopView onBack={() => { setUser(loadUser()); setShowShop(false); }} />;
   }
 
+  // Tema köpt i affären: ersätter bakgrunden på alla sidor i ljust läge.
+  // I mörkt läge gäller den vanliga mörka bakgrunden.
+  const theme = !darkMode ? THEME_MAP[getEquippedTheme() ?? ''] : undefined;
+
   return (
     <div
-      className="min-h-screen relative overflow-x-clip"
-      style={appState === AppState.SETUP ? {
+      className={`min-h-screen relative overflow-x-clip ${theme ? 'rh-themed' : ''}`}
+      style={theme ? { background: theme.background, backgroundAttachment: 'fixed' } : appState === AppState.SETUP ? {
         backgroundImage: 'url(/senaste%20readhunt.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -480,11 +488,11 @@ function App() {
       } : undefined}
     >
       {/* Light overlay on setup page */}
-      {appState === AppState.SETUP && (
+      {appState === AppState.SETUP && !theme && (
         <div className="absolute inset-0 bg-black/20 -z-10" />
       )}
       {/* Fallback bg for other states */}
-      {appState !== AppState.SETUP && (
+      {appState !== AppState.SETUP && !theme && (
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 -z-10" />
       )}
 

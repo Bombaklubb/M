@@ -144,7 +144,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
   const inferenceQuestions = questions.filter(q => q.type === 'inference');
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
+    <div className="rh-page min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-50 via-white to-sky-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
       {/* Header. Klistras under appens header på större skärmar. På mobil
           skulle header + rubrikrad ta en fjärdedel av skärmen, så där
           skrollar rubrikraden undan. */}
