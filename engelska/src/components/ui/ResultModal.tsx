@@ -168,10 +168,10 @@ export default function ResultModal({
             <span className="text-3xl">⚔️</span>
             <div className="text-left">
               <p className="text-sm font-bold text-red-800 dark:text-red-300">
-                Boss Challenge upplåst!
+                Bossen är upplåst!
               </p>
               <p className="text-xs text-red-600 dark:text-red-400">
-                Gå till Hemliga kistor för att utmana bossen.
+                Du har klarat tio nya kapitel i den här världen. Striden väntar under fliken Spel.
               </p>
             </div>
           </div>

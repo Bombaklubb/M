@@ -13,10 +13,11 @@ import BuildSentence from "@/components/exercises/BuildSentence";
 import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier, addBonusPoints } from "@/lib/storage";
 import { rollLuckyBonus, type LuckyBonus } from "@/lib/luckyBonus";
 import { recordError } from "@/lib/errorBank";
-import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, checkAchievementBadges, BOSS_UNLOCK_THRESHOLD } from "@/lib/gamification";
+import { chestsEarnedFromPoints, chestsEarnedFromExercises, rollMysteryBox, checkAchievementBadges, BOSS_UNLOCK_THRESHOLD, getBossGate, completedModulesInStage, bossWinsInStage } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
 import { getStage } from "@/lib/stages";
 import type { StudentData, StageContent, SpellingModule, GrammarExercise, ChestType, MysteryBoxReward } from "@/lib/types";
+import type { StageId } from "@/lib/types";
 
 const POINTS_PER_CORRECT = 15;
 
@@ -114,6 +115,18 @@ export default function SpellingModulePage({ params }: Props) {
         setModalBonus(adjustedBonus);
         setAttemptNum(priorAttempts + 1);
 
+        // Världens bosslås före det här kapitlet – för att se om just det här
+
+        // kapitlet öppnade en strid (vid 10, 20, 30 … klarade kapitel).
+
+        const bossGateBefore = getBossGate(
+
+          completedModulesInStage(student, stage!.id as StageId),
+
+          bossWinsInStage(loadGamification(), stage!.id as StageId)
+
+        ).unlocked;
+
         const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
         const updated = saveModuleProgress(student, stage!.id, "spelling", mod!.id, totalWithLuck, passed);
         setStudent(updated);
@@ -152,7 +165,13 @@ export default function SpellingModulePage({ params }: Props) {
         saveGamification(newGamSp);
         if (mysteryPoints > 0) setStudent(addBonusPoints(updated, mysteryPoints));
         if (firstChest) setChestEarned(firstChest.type as ChestType);
-        if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);
+        // Förut: fem övningar var som helst → "bossen upplåst", vilket inte
+        // stämt sedan låset flyttades till världen.
+        const bossGateAfter = getBossGate(
+          completedModulesInStage(updated, stage!.id as StageId),
+          bossWinsInStage(loadGamification(), stage!.id as StageId)
+        ).unlocked;
+        if (bossGateAfter && !bossGateBefore) setBossJustUnlocked(true);
         if (mystery) setMysteryBox(mystery);
       }
       setShowResult(true);
@@ -172,13 +191,13 @@ export default function SpellingModulePage({ params }: Props) {
     if (mysteryBox) {
       setShowResult(false);
     } else {
-      router.push(`/world/${stageId}`);
+      router.push(`/world/${stageId}?tab=spelling`);
     }
   }
 
   function handleMysteryClose() {
     setMysteryBox(null);
-    router.push(`/world/${stageId}`);
+    router.push(`/world/${stageId}?tab=spelling`);
   }
 
   const totalCorrect = results.filter(Boolean).length;

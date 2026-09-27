@@ -4,7 +4,8 @@ import { useState, useCallback, use, useEffect } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
-import { loadStudent, addGamePoints } from "@/lib/storage";
+import GameDayLock from "@/components/ui/GameDayLock";
+import { loadStudent, addGamePoints, hasDoneModuleToday } from "@/lib/storage";
 import type { LuckyBonus } from "@/lib/luckyBonus";
 import { getStage } from "@/lib/stages";
 import type { StudentData } from "@/lib/types";
@@ -35,6 +36,8 @@ export default function SamlaMyntPage({ params }: Props) {
   const [student, setStudent] = useState<StudentData | null>(null);
   useEffect(() => { setStudent(loadStudent()); }, []);
   if (!stage) return notFound();
+  // Spärr för direktadresser: se GameDayLock.
+  if (student && !hasDoneModuleToday(student)) return <GameDayLock stageId={stageId} student={student} />;
   return <SamlaMyntGame stageId={stageId} stageName={stage.name} student={student} />;
 }
 

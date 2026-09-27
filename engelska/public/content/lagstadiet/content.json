@@ -841,9 +841,6 @@
           "type": "fill-in-blank",
           "sentence": "A: Good morning! ___ are you? B: I am great, thanks!",
           "answer": "How",
-          "alternativeAnswers": [
-            "how"
-          ],
           "hint": "Frågeord för att fråga om hur någon mår.",
           "explanation": "'How are you?' = Hur mår du? 'How' = hur."
         }
@@ -6248,9 +6245,6 @@
           "type": "fill-in-blank",
           "sentence": "A: ___ do you come from? B: I come from Sweden.",
           "answer": "Where",
-          "alternativeAnswers": [
-            "where"
-          ],
           "hint": "Frågeord för plats.",
           "explanation": "'Where do you come from?' = Var kommer du ifrån?"
         },

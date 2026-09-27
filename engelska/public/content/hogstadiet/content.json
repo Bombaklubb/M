@@ -621,8 +621,7 @@
           "sentence": "A: The results ___ been announced yet. B: I know, I'm so nervous!",
           "answer": "haven't",
           "alternativeAnswers": [
-            "have not",
-            "haven't"
+            "have not"
           ],
           "hint": "Negation av present perfect – resultaten har INTE tillkännagivits.",
           "explanation": "'Haven't been announced yet' = Har ännu inte tillkännagivits. Negation: have not/haven't."
@@ -5915,9 +5914,6 @@
           "type": "fill-in-blank",
           "sentence": "A: ___ you ever worked abroad? B: Yes, I worked in France for two years.",
           "answer": "Have",
-          "alternativeAnswers": [
-            "have"
-          ],
           "hint": "Present perfect för livserfarenheter.",
           "explanation": "'Have you ever...?' – present perfect används för erfarenheter utan specifik tidpunkt."
         },

@@ -4,7 +4,8 @@ import { useState, useEffect, useCallback, useRef, use } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
-import { loadStudent, addGamePoints } from "@/lib/storage";
+import GameDayLock from "@/components/ui/GameDayLock";
+import { loadStudent, addGamePoints, hasDoneModuleToday } from "@/lib/storage";
 import type { LuckyBonus } from "@/lib/luckyBonus";
 import { getStage } from "@/lib/stages";
 import { WORD_PAIRS, shuffle } from "@/lib/gameVocab";
@@ -54,6 +55,8 @@ export default function MemoryGamePage({ params }: Props) {
   useEffect(() => { setStudent(loadStudent()); }, []);
 
   if (!stage) return notFound();
+  // Spärr för direktadresser: se GameDayLock.
+  if (student && !hasDoneModuleToday(student)) return <GameDayLock stageId={stageId} student={student} />;
 
   return <MemoryGame stageId={stageId} stage={stage} student={student} />;
 }

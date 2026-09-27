@@ -18,10 +18,10 @@ import {
   chestsEarnedFromExercises,
   rollMysteryBox,
   checkAchievementBadges,
-  BOSS_UNLOCK_THRESHOLD,
-} from "@/lib/gamification";
+  BOSS_UNLOCK_THRESHOLD, getBossGate, completedModulesInStage, bossWinsInStage } from "@/lib/gamification";
 import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
 import type { ChestType, MysteryBoxReward } from "@/lib/types";
+import type { StageId } from "@/lib/types";
 import { getStage } from "@/lib/stages";
 import type {
   StudentData,
@@ -139,6 +139,18 @@ export default function GrammarModulePage({ params }: Props) {
         setModalBonus(adjustedBonus);
         setAttemptNum(priorAttempts + 1);
 
+        // Världens bosslås före det här kapitlet – för att se om just det här
+
+        // kapitlet öppnade en strid (vid 10, 20, 30 … klarade kapitel).
+
+        const bossGateBefore = getBossGate(
+
+          completedModulesInStage(student, stage!.id as StageId),
+
+          bossWinsInStage(loadGamification(), stage!.id as StageId)
+
+        ).unlocked;
+
         const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
         const updated = saveModuleProgress(
           student,
@@ -214,7 +226,13 @@ export default function GrammarModulePage({ params }: Props) {
         if (mysteryPoints > 0) setStudent(addBonusPoints(updated, mysteryPoints));
 
         if (firstChest) setChestEarned(firstChest.type as ChestType);
-        if (nowBossUnlocked && !wasBossUnlocked) setBossJustUnlocked(true);
+        // Förut: fem övningar var som helst → "bossen upplåst", vilket inte
+        // stämt sedan låset flyttades till världen.
+        const bossGateAfter = getBossGate(
+          completedModulesInStage(updated, stage!.id as StageId),
+          bossWinsInStage(loadGamification(), stage!.id as StageId)
+        ).unlocked;
+        if (bossGateAfter && !bossGateBefore) setBossJustUnlocked(true);
         if (mystery) setMysteryBox(mystery);
         if (adjustedTotal > prevBestPoints && adjustedTotal > 0) setIsNewRecord(true);
       }
@@ -240,13 +258,13 @@ export default function GrammarModulePage({ params }: Props) {
       setShowResult(false);
       // mysteryBox popup will show, then navigate on close
     } else {
-      router.push(`/world/${stageId}`);
+      router.push(`/world/${stageId}?tab=grammar`);
     }
   }
 
   function handleMysteryClose() {
     setMysteryBox(null);
-    router.push(`/world/${stageId}`);
+    router.push(`/world/${stageId}?tab=grammar`);
   }
 
   const totalCorrect = results.filter(Boolean).length;

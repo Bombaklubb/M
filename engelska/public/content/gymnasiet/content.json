@@ -592,9 +592,6 @@
           "type": "fill-in-blank",
           "sentence": "A: ___ I been informed earlier, I could have prevented this. B: I sincerely apologise.",
           "answer": "Had",
-          "alternativeAnswers": [
-            "had"
-          ],
           "hint": "Inverterad 3rd conditional – Had + subject + past participle.",
           "explanation": "'Had I been informed' = Om jag hade blivit informerad. Inverterad konditionalis (formell) utan 'if': Had + subject."
         },
@@ -1411,7 +1408,7 @@
         {
           "id": "gym-g4-6",
           "type": "fill-in-blank",
-          "sentence": "Prices have risen. ___ ___, consumer spending has fallen.",
+          "sentence": "Prices have risen. ___, consumer spending has fallen.",
           "answer": "As a result",
           "hint": "Meningen kräver en fras som visar orsak och verkan.",
           "explanation": "'As a result' shows the consequence of rising prices."
@@ -3240,9 +3237,6 @@
           "sentence": "Scientists will carry ___ the experiment tomorrow.",
           "answer": "out",
           "explanation": "'carry out' = perform/utföra.",
-          "alternativeAnswers": [
-            "out"
-          ],
           "hint": "Utföra."
         },
         {
@@ -3309,9 +3303,6 @@
           "sentence": "Sales have fallen ___ sharply this year. (minska kraftigt)",
           "answer": "off",
           "explanation": "'fall off' = decline/minska.",
-          "alternativeAnswers": [
-            "off"
-          ],
           "hint": "Minska."
         },
         {

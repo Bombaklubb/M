@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, Fragment } from "react";
 import type { FillInBlankExercise } from "@/lib/types";
 import { getPositiveFeedback } from "@/lib/feedback";
 import { answerVariants } from "@/lib/answerVariants";
@@ -19,6 +19,12 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const parts = exercise.sentence.split("___");
+  // Några övningar har två luckor, t.ex. "___ you ever ___ (eat) sushi?" med
+  // facit "Have ... eaten". Förut ritades bara texten runt den första luckan,
+  // resten av meningen försvann, och "have eaten" räknades som fel eftersom
+  // facit innehöll de tre punkterna.
+  const blankCount = parts.length - 1;
+  const answerSegments = exercise.answer.split(/\s*(?:\.\.\.|…)\s*/);
 
   function normalizeAnswer(s: string) {
     return s
@@ -40,19 +46,32 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
    * kunskapsfel – ta bort omgivande ord och pröva svaret igen.
    */
   function stripSurroundingWords(given: string): string {
-    const before = normalizeAnswer(parts[0] ?? "").split(/\s+/).filter(Boolean);
-    const after = normalizeAnswer(parts[1] ?? "").split(/\s+/).filter(Boolean);
-    const filler = new Set([...before, ...after, "a", "an", "the"]);
+    const filler = new Set([...sentenceWords, "a", "an", "the"]);
     let words = given.split(/\s+/).filter(Boolean);
     while (words.length > 1 && filler.has(words[0])) words = words.slice(1);
     while (words.length > 1 && filler.has(words[words.length - 1])) words = words.slice(0, -1);
     return words.join(" ");
   }
 
+  /** Orden i meningen utanför luckorna, t.ex. "you" och "ever". */
+  const sentenceWords = new Set(
+    parts.flatMap((p) => p.toLowerCase().replace(/[\u2018\u2019]/g, "'").match(/[a-z']+/g) ?? [])
+  );
+
+  /**
+   * Med flera luckor skriver eleven ofta hela stycket, "have you ever eaten"
+   * eller "has just finished". Ord som redan står i meningen tas då bort.
+   */
+  function withoutSentenceWords(given: string): string {
+    const kept = given.split(/\s+/).filter((w) => w && !sentenceWords.has(w));
+    return kept.length > 0 ? kept.join(" ") : given;
+  }
+
   function handleSubmit() {
     if (state !== "idle" || !input.trim()) return;
     const given = normalizeAnswer(input);
-    const expected = normalizeAnswer(exercise.answer);
+    // "Have ... eaten" → "have eaten": orden till luckorna i ordning.
+    const expected = normalizeAnswer(answerSegments.join(" "));
     const alternatives = (exercise.alternativeAnswers ?? []).map(normalizeAnswer);
     // Godkänn även likvärdiga former (bunny/rabbit, color/colour, are not/aren't)
     const godtagbara = new Set([
@@ -60,7 +79,10 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
       ...alternatives.flatMap(answerVariants),
     ]);
     const accepts = (v: string) => godtagbara.has(v);
-    const correct = accepts(given) || accepts(stripSurroundingWords(given));
+    const correct =
+      accepts(given) ||
+      accepts(stripSurroundingWords(given)) ||
+      (blankCount > 1 && accepts(withoutSentenceWords(given)));
     if (correct) setFeedbackMsg(getPositiveFeedback());
     setState(correct ? "correct" : "wrong");
   }
@@ -68,6 +90,16 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
   function handleKeyDown(e: React.KeyboardEvent) {
     if (e.key === "Enter") handleSubmit();
   }
+
+  // Efter svaret: rätt → facits delar, en per lucka. Fel → elevens ord, fördelade
+  // på luckorna om antalet stämmer, annars hela svaret i den första.
+  const filledBlanks: string[] = (() => {
+    if (blankCount <= 1) return [input];
+    if (state === "correct" && answerSegments.length === blankCount) return answerSegments;
+    const words = withoutSentenceWords(normalizeAnswer(input)).split(" ");
+    if (words.length === blankCount) return words;
+    return [input, ...Array(blankCount - 1).fill("…")];
+  })();
 
   const borderColor =
     state === "correct"
@@ -80,27 +112,32 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
     <div className="space-y-5 animate-fade-in">
       {/* Sentence with blank */}
       <div className="text-base sm:text-xl font-medium text-gray-800 dark:text-gray-100 leading-relaxed flex flex-wrap items-center gap-x-2 gap-y-2">
-        <span>{parts[0]}</span>
-        <span
-          className={`inline-flex items-center border-b-4 px-1 min-w-[80px] transition-colors duration-300 ${
-            state === "correct"
-              ? "border-green-400 text-green-700"
-              : state === "wrong"
-              ? "border-red-400 text-red-700"
-              : "border-blue-400 text-blue-700"
-          }`}
-        >
-          {state !== "idle" ? (
-            // Vid fel visas elevens EGET svar (överstruket). Tidigare visades
-            // facit här, vilket fick det att se ut som att rätt svar gav fel.
-            <span className={`font-bold ${state === "wrong" ? "line-through decoration-2 opacity-80" : ""}`}>
-              {input}
-            </span>
-          ) : (
-            <span className="text-gray-400 text-sm italic">svar</span>
-          )}
-        </span>
-        {parts[1] && <span>{parts[1]}</span>}
+        {parts.map((part, i) => (
+          <Fragment key={i}>
+            {part.trim() && <span>{part}</span>}
+            {i < blankCount && (
+              <span
+                className={`inline-flex items-center border-b-4 px-1 min-w-[80px] transition-colors duration-300 ${
+                  state === "correct"
+                    ? "border-green-400 text-green-700"
+                    : state === "wrong"
+                    ? "border-red-400 text-red-700"
+                    : "border-blue-400 text-blue-700"
+                }`}
+              >
+                {state !== "idle" ? (
+                  // Vid fel visas elevens EGET svar (överstruket). Tidigare visades
+                  // facit här, vilket fick det att se ut som att rätt svar gav fel.
+                  <span className={`font-bold ${state === "wrong" ? "line-through decoration-2 opacity-80" : ""}`}>
+                    {filledBlanks[i]}
+                  </span>
+                ) : (
+                  <span className="text-gray-400 text-sm italic">{blankCount > 1 ? `lucka ${i + 1}` : "svar"}</span>
+                )}
+              </span>
+            )}
+          </Fragment>
+        ))}
       </div>
 
       {/* Tips – always visible if hint exists */}
@@ -133,7 +170,7 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Skriv ditt svar här..."
+            placeholder={blankCount > 1 ? `Skriv orden till alla ${blankCount} luckor, i ordning` : "Skriv ditt svar här..."}
             className="flex-1 px-4 py-3 text-lg bg-transparent outline-none text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500"
             autoFocus
             autoComplete="off"
@@ -163,7 +200,7 @@ export default function FillInBlank({ exercise, onAnswer, isLast }: Props) {
           }`}
         >
           <p className="font-semibold">
-            {state === "correct" ? `✓ ${feedbackMsg}` : `✗ Fel. Rätt svar: "${exercise.answer}"`}
+            {state === "correct" ? `✓ ${feedbackMsg}` : `✗ Fel. Rätt svar: "${answerSegments.join(" … ")}"`}
           </p>
           {exercise.explanation && (
             <p className="text-sm mt-1 opacity-80">💡 {exercise.explanation}</p>

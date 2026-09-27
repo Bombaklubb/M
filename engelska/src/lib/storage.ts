@@ -96,6 +96,16 @@ export function saveStudent(data: StudentData): void {
  * - If a student with this name already exists on this device → restores their data.
  * - Otherwise → creates a fresh student.
  */
+/**
+ * Säger till bakgrunden (ThemedBackdrop) att eleven bytts. Temat och effekten
+ * lästes förut bara om vid köp, fönsterfokus och lagringshändelser från andra
+ * flikar, så på en delad Chromebook följde förra elevens tema med till
+ * inloggningssidan och vidare till nästa elev.
+ */
+function notifyStudentChanged(): void {
+  window.dispatchEvent(new Event("engelskajakten:cosmetics"));
+}
+
 export function createStudent(name: string, avatar?: string): StudentData {
   if (typeof window === "undefined") return defaultStudentData(name);
 
@@ -111,6 +121,7 @@ export function createStudent(name: string, avatar?: string): StudentData {
       // Update avatar only if the student explicitly chose a new one
       if (avatar) existing.avatar = avatar;
       saveStudent(existing);
+      notifyStudentChanged();
       return existing;
     } catch {
       // Corrupt data – fall through to create fresh
@@ -121,6 +132,7 @@ export function createStudent(name: string, avatar?: string): StudentData {
   const data = defaultStudentData(trimmed);
   if (avatar) data.avatar = avatar;
   saveStudent(data);
+  notifyStudentChanged();
   return data;
 }
 
@@ -160,6 +172,7 @@ export function clearStudent(): void {
   if (typeof window === "undefined") return;
   localStorage.removeItem(ACTIVE_KEY);
   localStorage.removeItem(SESSION_START_KEY);
+  notifyStudentChanged();
 }
 
 // ─── Module progress helpers ──────────────────────────────────────────────────

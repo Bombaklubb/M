@@ -938,9 +938,6 @@
           "type": "fill-in-blank",
           "sentence": "A: ___ you ever been to London? B: No, but I want to go!",
           "answer": "Have",
-          "alternativeAnswers": [
-            "have"
-          ],
           "hint": "Present perfect – hjälpverb med you.",
           "explanation": "'Have you ever been...?' = Har du någonsin varit...? Present perfect med 'have'."
         },
@@ -973,9 +970,6 @@
           "type": "fill-in-blank",
           "sentence": "A: ___ did you go on holiday last summer? B: We went to Spain!",
           "answer": "Where",
-          "alternativeAnswers": [
-            "where"
-          ],
           "hint": "Frågar om plats.",
           "explanation": "'Where did you go?' = Vart åkte du? 'Where' = var/vart."
         },
@@ -1012,9 +1006,7 @@
           "sentence": "A: ___ you speak any other languages? B: Yes, I speak Swedish and a little Spanish.",
           "answer": "Can",
           "alternativeAnswers": [
-            "can",
-            "Do",
-            "do"
+            "Do"
           ],
           "hint": "Frågar om förmåga.",
           "explanation": "'Can you speak...?' = Kan du tala...? 'Can' frågar om förmåga."
@@ -6654,9 +6646,6 @@
           "type": "fill-in-blank",
           "sentence": "A: ___ you ever been to Paris? B: No, never.",
           "answer": "Have",
-          "alternativeAnswers": [
-            "have"
-          ],
           "hint": "Present perfect frågeform.",
           "explanation": "'Have you ever been...?' – present perfect för upplevelser."
         },

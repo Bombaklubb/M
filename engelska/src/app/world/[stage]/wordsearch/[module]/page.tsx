@@ -84,7 +84,7 @@ export default function WordSearchModulePage({ params }: Props) {
   }
 
   function handleContinue() {
-    router.push(`/world/${stageId}`);
+    router.push(`/world/${stageId}?tab=wordsearch`);
   }
 
   return (

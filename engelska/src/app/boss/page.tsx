@@ -18,6 +18,7 @@ import {
 import type { StudentData, GamificationData, Chest, ChestType, StageId } from "@/lib/types";
 import type { BossId, BossQuestion, BossConfig } from "@/lib/gamification";
 import { getPositiveFeedback } from "@/lib/feedback";
+import { getStage } from "@/lib/stages";
 
 /** Fisher–Yates. Frågorna kom tidigare i fast ordning med fast rätt alternativ,
  *  så en andra match tog tjugo sekunder ur minnet. */
@@ -384,8 +385,22 @@ function BossPageInner() {
     if (currentIndex + 1 >= questions.length) {
       const totalCorrect = newResults.filter(Boolean).length;
       const passed = totalCorrect / questions.length >= boss.passThreshold;
-      const currentGam = gam!;
-      const currentStudent = student!;
+      // Läs om från lagringen i stället för att lita på sidans tillstånd: en
+      // annan flik kan ha vunnit samma strid under tiden.
+      const currentGam = loadGamification();
+      const currentStudent = loadStudent() ?? student!;
+
+      // Striden måste fortfarande vara förtjänad när den avgörs. Förut kollades
+      // låset bara när sidan öppnades, så "Spela igen" på vinstskärmen gav en
+      // ny vinst – med poäng och kista – om och om igen på samma tio kapitel.
+      const gateNow = getBossGate(
+        completedModulesInStage(currentStudent, stageId),
+        bossWinsInStage(currentGam, stageId)
+      );
+      if (passed && !gateNow.unlocked) {
+        router.push(`/world/${stageId}?tab=spel`);
+        return;
+      }
 
       if (passed) {
         const winCounts = currentGam.bossWinCounts ?? {};
@@ -447,11 +462,16 @@ function BossPageInner() {
     }
   }
 
+  /** Nytt försök efter en förlust. En förlust kostar ingen strid, men
+   *  frågorna blandas om så att ordningen inte kan läras in. */
   function handleRetry() {
+    setRunQuestions(shuffled(boss.questions).map(shuffleQuestion));
     setCurrentIndex(0);
     setResults([]);
     setPhase("battle");
   }
+
+  const stageName = getStage(stageId)?.name ?? "världen";
 
   // ─── Intro ───────────────────────────────────────────────────────────────
   if (phase === "intro") {
@@ -460,8 +480,8 @@ function BossPageInner() {
         <Header student={student} />
         <div className="text-white" style={{ background: boss.gradient }}>
           <div className="max-w-3xl mx-auto px-4 py-6">
-            <Link prefetch={false} href="/kistor" className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1">
-              ← Hemliga kistor
+            <Link prefetch={false} href={`/world/${stageId}?tab=spel`} className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1">
+              ← Tillbaka till {stageName}
             </Link>
             <div className="flex items-center gap-3">
               <span className="text-4xl">⚔️</span>
@@ -651,13 +671,16 @@ function BossPageInner() {
               >
                 Öppna kistor →
               </Link>
-              <button
-                onClick={handleRetry}
-                className="flex-1 py-3 rounded-2xl font-bold text-green-700 border-2 border-green-300 bg-white cursor-pointer transition-all hover:bg-green-50 active:scale-95"
+              <Link prefetch={false}
+                href={`/world/${stageId}?tab=grammar`}
+                className="flex-1 py-3 rounded-2xl font-bold text-green-700 border-2 border-green-300 bg-white text-center cursor-pointer transition-all hover:bg-green-50 active:scale-95"
               >
-                Spela igen
-              </button>
+                Till {stageName} →
+              </Link>
             </div>
+            <p className="text-green-700 text-sm mt-4">
+              Nästa strid låses upp när du klarat tio nya kapitel i {stageName}.
+            </p>
           </div>
         </main>
       </div>
@@ -693,7 +716,7 @@ function BossPageInner() {
               Försök igen ↺
             </button>
             <Link prefetch={false}
-              href="/"
+              href={`/world/${stageId}?tab=grammar`}
               className="flex-1 py-3 rounded-2xl font-bold text-red-700 border-2 border-red-300 bg-white cursor-pointer text-center transition-all hover:bg-red-50 active:scale-95"
             >
               Öva mer
