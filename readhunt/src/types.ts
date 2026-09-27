@@ -25,9 +25,10 @@ export interface LibraryText {
   glossary?: Record<string, string>; // Word definitions specific to this text
   meta?: {
     wordCount: number;
-    fingerprint: string;
-    generatedAt: string;
-    model: string;
+    readingTime?: number;
+    fingerprint?: string;
+    generatedAt?: string;
+    model?: string;
   };
 }
 

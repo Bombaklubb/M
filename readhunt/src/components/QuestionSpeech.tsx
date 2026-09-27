@@ -42,6 +42,10 @@ export const QuestionSpeech: React.FC<QuestionSpeechProps> = ({
 }) => {
   const [speaking, setSpeaking] = useState<What | null>(null);
   const voiceRef = useRef<SpeechSynthesisVoice | null>(null);
+  // Den uppläsning den här komponenten själv har startat. Används så att vi
+  // bara tystar vår egen röst – inte textens uppläsning – och så att en
+  // avbruten uppläsning inte nollställer knappen för den som just startade.
+  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
   useEffect(() => {
     if (!speechSupported) return;
@@ -54,6 +58,19 @@ export const QuestionSpeech: React.FC<QuestionSpeechProps> = ({
   const stop = useCallback(() => {
     if (!speechSupported) return;
     window.speechSynthesis.cancel();
+    utteranceRef.current = null;
+    setSpeaking(null);
+  }, []);
+
+  // Vid byte av fråga: tysta bara om det är vår egen uppläsning som hörs.
+  // Förut stoppades all tal, så textens uppläsning dog när eleven gick
+  // vidare och dess knapp fastnade på "Pause".
+  const stopOwn = useCallback(() => {
+    if (!speechSupported) return;
+    if (utteranceRef.current) {
+      window.speechSynthesis.cancel();
+      utteranceRef.current = null;
+    }
     setSpeaking(null);
   }, []);
 
@@ -85,10 +102,17 @@ export const QuestionSpeech: React.FC<QuestionSpeechProps> = ({
       utterance.rate = 0.95;
       if (voiceRef.current) utterance.voice = voiceRef.current;
 
-      const done = () => setSpeaking(null);
+      // En avbruten uppläsning får inte nollställa knappen om eleven redan
+      // har startat nästa (t.ex. bytt direkt från frågan till svaren).
+      const done = () => {
+        if (utteranceRef.current !== utterance) return;
+        utteranceRef.current = null;
+        setSpeaking(null);
+      };
       utterance.onend = done;
       utterance.onerror = done;
 
+      utteranceRef.current = utterance;
       setSpeaking(what);
       window.speechSynthesis.speak(utterance);
     },
@@ -96,7 +120,7 @@ export const QuestionSpeech: React.FC<QuestionSpeechProps> = ({
   );
 
   // Fall silent when the student moves on, and when the view goes away.
-  useEffect(() => stop, [questionKey, stop]);
+  useEffect(() => stopOwn, [questionKey, stopOwn]);
 
   if (!speechSupported) return null;
 

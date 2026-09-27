@@ -62,7 +62,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const event: TrackEvent = req.body;
+    // sendBeacon (sessionstid när sidan stängs) skickar text/plain, och då
+    // kommer kroppen hit som en sträng. Utan tolkning avvisades de anropen
+    // och tiden för korta besök räknades aldrig.
+    let event: TrackEvent;
+    try {
+      event = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+    } catch {
+      return res.status(400).json({ error: 'Invalid JSON' });
+    }
     const today = getTodayKey();
 
     if (!event || !event.type || !event.deviceId) {

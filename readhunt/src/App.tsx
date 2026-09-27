@@ -3,7 +3,7 @@ import { AppState, User, LibraryText, UserAnswers, Badge, QuestionResult, Chest 
 import { LoginView } from './components/LoginView';
 import { Header } from './components/Header';
 import { SetupView } from './components/SetupView';
-import { QuizView } from './components/QuizView';
+import { QuizView, clearQuizProgress } from './components/QuizView';
 import { ResultView } from './components/ResultView';
 import { ProfileView } from './components/ProfileView';
 import { TeacherView } from './components/TeacherView';
@@ -155,8 +155,11 @@ function App() {
 
   // Handle points update from chests
   const handleChestPointsUpdate = (points: number) => {
-    if (!user) return;
-    const updatedUser = { ...user, totalPoints: user.totalPoints + points };
+    // Läs färskt: två kistor öppnade tätt inpå varandra ska inte skriva över
+    // varandras poäng med ett gammalt värde.
+    const current = loadUser() ?? user;
+    if (!current) return;
+    const updatedUser = { ...current, totalPoints: current.totalPoints + points };
     saveUser(updatedUser);
     setUser(updatedUser);
     syncChestMilestones(updatedUser.totalPoints, countUniqueTexts(updatedUser));
@@ -181,6 +184,7 @@ function App() {
 
     if (text) {
       setCurrentText(text);
+      clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ); // Gå direkt till quiz med side-by-side layout
     } else {
@@ -310,6 +314,7 @@ function App() {
 
     if (text) {
       setCurrentText(text);
+      clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
     } else {
@@ -339,6 +344,7 @@ function App() {
 
     if (text) {
       setCurrentText(text);
+      clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
     } else {
@@ -368,6 +374,7 @@ function App() {
 
     if (text) {
       setCurrentText(text);
+      clearQuizProgress();
       quizStartTime.current = Date.now();
       setAppState(AppState.QUIZ);
     } else {
@@ -456,7 +463,10 @@ function App() {
 
   // Shop view
   if (showShop) {
-    return <ShopView onBack={() => setShowShop(false)} />;
+    // Affären sparar vald avatar direkt i lagringen. Läs om eleven när man
+    // går tillbaka, annars visar headern den gamla avataren och nästa
+    // avslutade text skriver tillbaka den.
+    return <ShopView onBack={() => { setUser(loadUser()); setShowShop(false); }} />;
   }
 
   return (

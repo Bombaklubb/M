@@ -63,9 +63,24 @@ function loadSavedTextSize(): TextSize {
   return 'medium';
 }
 
+// Pågående quiz sparas här så att det överlever att eleven tittar in i
+// profilen, kistorna, affären eller om-sidan mitt i. De vyerna ersätter
+// quizet på skärmen, och förut försvann alla svar när man kom tillbaka.
+let savedProgress: { textId: string; answers: UserAnswers; currentQuestion: number } | null = null;
+
+/** Glöm pågående quiz. Anropas när en ny text startas. */
+export function clearQuizProgress(): void {
+  savedProgress = null;
+}
+
 export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
-  const [answers, setAnswers] = useState<UserAnswers>({});
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const restored = savedProgress?.textId === text.id ? savedProgress : null;
+  const [answers, setAnswers] = useState<UserAnswers>(() => restored?.answers ?? {});
+  const [currentQuestion, setCurrentQuestion] = useState(() => restored?.currentQuestion ?? 0);
+
+  useEffect(() => {
+    savedProgress = { textId: text.id, answers, currentQuestion };
+  }, [text.id, answers, currentQuestion]);
   const [showText, setShowText] = useState(true);
   const [textSize, setTextSize] = useState<TextSize>(loadSavedTextSize);
   const [bionicReading, setBionicReading] = useState(false);
@@ -107,7 +122,10 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
     if (currentQuestion > 0) setCurrentQuestion((prev) => prev - 1);
   };
 
-  const handleSubmit = () => onComplete(answers);
+  const handleSubmit = () => {
+    clearQuizProgress();
+    onComplete(answers);
+  };
 
   const isLastQuestion = currentQuestion === totalQuestions - 1;
   const allAnswered = questions.every((_, i) => answers[i] !== undefined);
@@ -131,7 +149,7 @@ export const QuizView: React.FC<QuizViewProps> = ({ text, onComplete }) => {
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-xl font-bold text-slate-800 dark:text-white">{text.title}</h2>
-          <div className="flex items-center gap-3 mt-1">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1">
             <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-violet-100 dark:bg-violet-900/50 text-violet-700 dark:text-violet-300">
               {`Level ${text.grade}`}
             </span>

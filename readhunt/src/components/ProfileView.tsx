@@ -182,7 +182,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({ user, onClose, onAvata
                     })
                     .map(([genre, data]) => {
                     const percent = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
-                    const genreEmoji = genre === 'berättelse' ? '📖' : genre === 'faktatext' ? '📰' : '📚';
+                    const genreEmoji = genre === 'fiction' || genre === 'berättelse' ? '📖' : genre === 'non-fiction' || genre === 'faktatext' ? '📰' : '📚';
                     const genreCapitalized = genre.charAt(0).toUpperCase() + genre.slice(1);
                     return (
                       <div key={genre} className="bg-slate-50 dark:bg-slate-700/50 rounded-lg p-3">

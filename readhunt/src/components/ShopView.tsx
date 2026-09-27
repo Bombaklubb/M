@@ -269,7 +269,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
       if (items.length === 0) return null;
       return (
         <section key={group}>
-          <h2 className="text-sm font-black uppercase tracking-wide text-indigo-700/80 mb-2 px-0.5">
+          <h2 className="text-sm font-black uppercase tracking-wide text-indigo-700/80 dark:text-indigo-300 mb-2 px-0.5">
             {group}
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -331,7 +331,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
 
     if (total === 0) {
       return (
-        <div className="text-center py-16 text-indigo-700/60">
+        <div className="text-center py-16 text-indigo-700/60 dark:text-indigo-300/80">
           <p className="text-4xl mb-3">📦</p>
           <p className="font-bold">Inga köp ännu</p>
           <p className="text-sm mt-1">Köp något i butiken för att se det här!</p>
@@ -341,7 +341,7 @@ export default function ShopView({ onBack }: ShopViewProps) {
 
     const section = (title: string, items: React.ReactNode[]) => items.length === 0 ? null : (
       <section key={title}>
-        <h2 className="text-sm font-black uppercase tracking-wide text-indigo-700/80 mb-2 px-0.5">{title}</h2>
+        <h2 className="text-sm font-black uppercase tracking-wide text-indigo-700/80 dark:text-indigo-300 mb-2 px-0.5">{title}</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">{items}</div>
       </section>
     );

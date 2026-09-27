@@ -79,7 +79,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
           .map(([g, c]) => ({ grade: parseInt(g), count: c }))
           .sort((a, b) => a.grade - b.grade)
       );
-      setAllTexts(texts.sort((a, b) => a.grade - b.grade || a.title.localeCompare(b.title)));
+      setAllTexts([...texts].sort((a, b) => a.grade - b.grade || a.title.localeCompare(b.title)));
     } catch (err) {
       console.error('Could not load library:', err);
     }
@@ -371,7 +371,7 @@ export const TeacherView: React.FC<TeacherViewProps> = ({ onClose }) => {
           href="mailto:martin.akdogan@enkoping.se"
           className="hover:text-indigo-500 dark:hover:text-indigo-400 transition"
         >
-          martin.akdogan@enkoping.se
+          Kontakta Martin
         </a>
         <span>·</span>
         <JaktLinks />

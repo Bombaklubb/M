@@ -54,10 +54,17 @@ export function useSpeech(text: string, lang = 'en-GB'): UseSpeech {
       const voice = pickVoice(lang);
       if (voice) utterance.voice = voice;
 
-      utterance.onend = reset;
-      utterance.onerror = (e) => {
-        if (e.error !== 'interrupted') reset();
+      // Nollställ bara om det är den aktuella uppläsningen som tar slut.
+      // En gammal uppläsning som avbryts när hastigheten byts ska inte
+      // nollställa knappen, men om något annat avbryter texten (t.ex.
+      // frågans uppläsning) ska knappen inte fastna på "Pause".
+      const done = () => {
+        if (utteranceRef.current !== utterance) return;
+        utteranceRef.current = null;
+        reset();
       };
+      utterance.onend = done;
+      utterance.onerror = done;
 
       utteranceRef.current = utterance;
       window.speechSynthesis.speak(utterance);
