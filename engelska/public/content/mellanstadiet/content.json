@@ -2246,7 +2246,7 @@
           ],
           "correctIndex": 0,
           "explanation": "Questions in past simple use 'did' + base verb.",
-          "hint": "Frågor i datid: Did + subject + grundform?"
+          "hint": "Frågan handlar om i går kväll, alltså dåtid. Vilket hjälpverb inleder frågor i past simple?"
         },
         {
           "id": "mel-g2-9",
@@ -2689,7 +2689,7 @@
           ],
           "correctIndex": 0,
           "explanation": "'From … to' shows duration: from September to June.",
-          "hint": "'From … to' = från … till."
+          "hint": "Du anger en period med en startmånad och en slutmånad. Vilket par betyder 'från … till'?"
         },
         {
           "id": "mel-g4-9",
@@ -2724,7 +2724,7 @@
         {
           "id": "mel-g4-12",
           "type": "multiple-choice",
-          "question": "'The pharmacy is ___ the bank.' (next to it)",
+          "question": "'The pharmacy is ___ the bank.' (bredvid den)",
           "options": [
             "next to",
             "in front of",
@@ -2733,7 +2733,7 @@
           ],
           "correctIndex": 0,
           "explanation": "'Next to' means directly beside something.",
-          "hint": "'Next to' = bredvid."
+          "hint": "Apoteket ligger precis vid sidan av banken."
         },
         {
           "id": "mel-g4-13",
@@ -3722,7 +3722,7 @@
             "were having"
           ],
           "correctIndex": 2,
-          "hint": "Pågående handling i dåtid: was/were + verb-ing. T.ex. 'were having dinner'."
+          "hint": "Något pågick när något annat hände. Använd was/were + verb-ing."
         },
         {
           "id": "mel-g-tenses5-6",
@@ -3836,7 +3836,7 @@
             "were having"
           ],
           "correctIndex": 2,
-          "hint": "Pågående handling i dåtid: was/were + verb-ing. T.ex. 'were having dinner'."
+          "hint": "Något pågick när något annat hände. Använd was/were + verb-ing."
         },
         {
           "id": "mel-g-tenses5-18",
@@ -3888,7 +3888,7 @@
             "walks"
           ],
           "correctIndex": 1,
-          "hint": "'Usually' visar en vana → presens (present simple). Med he/she/it: lägg till -s. 'She walks.'"
+          "hint": "'Usually' visar en vana → present simple. Vad händer med verbet efter 'she'?"
         },
         {
           "id": "mel-g-mixed-2",
@@ -3899,7 +3899,7 @@
             "is walking"
           ],
           "correctIndex": 1,
-          "hint": "'Now' visar pågående handling just nu → presens kontinuerlig: am/is/are + verb-ing. 'She is walking.'"
+          "hint": "'Now' visar att det pågår just nu → am/is/are + verb-ing."
         },
         {
           "id": "mel-g-mixed-3",
@@ -3921,7 +3921,7 @@
             "a little"
           ],
           "correctIndex": 1,
-          "hint": "'Water' är oräkningbart (uncountable) – det kan inte räknas med siffror. Oräkningbara → 'a little'."
+          "hint": "'Water' går inte att räkna. Välj uttrycket som används med oräkneliga substantiv."
         },
         {
           "id": "mel-g-mixed-5",
@@ -3943,7 +3943,7 @@
             "mine"
           ],
           "correctIndex": 1,
-          "hint": "Inga substantiv efter → 'mine'. 'This book is mine' = Det här är min bok."
+          "hint": "Inget substantiv kommer efter luckan, så du behöver den självständiga formen av 'my'."
         },
         {
           "id": "mel-g-mixed-7",
@@ -3976,7 +3976,7 @@
             "is going to"
           ],
           "correctIndex": 0,
-          "hint": "'Will' används för spontana beslut och förutsägelser utan bevis. 'I think' antyder en spontan tanke → 'will'."
+          "hint": "'I think' visar en gissning utan tydliga bevis. Vilken framtidsform används då?"
         },
         {
           "id": "mel-g-mixed-10",
@@ -3987,7 +3987,7 @@
             "is going to"
           ],
           "correctIndex": 1,
-          "hint": "'Is going to' används när det finns bevis för framtiden (molnen = bevis). 'Look!' visar att vi ser ett tecken."
+          "hint": "Du ser molnen – ett tydligt tecken. Vilken framtidsform används när det finns bevis?"
         },
         {
           "id": "mel-g-mixed-11",
@@ -4070,7 +4070,7 @@
             "much"
           ],
           "correctIndex": 1,
-          "hint": "'Sugar' är oräkningbart (uncountable) – det kan inte räknas med siffror. Oräkningbara → 'much'."
+          "hint": "'Sugar' går inte att räkna. Vilket ord används med oräkneliga substantiv i nekade meningar och frågor?"
         },
         {
           "id": "mel-g-mixed-20",
@@ -5037,7 +5037,7 @@
           "type": "fill-in-blank",
           "sentence": "___ old are you? – I am thirteen years old.",
           "answer": "How",
-          "hint": "How + adjektiv frågar om egenskaper. How old = Hur gammal.",
+          "hint": "Frågeordet som tillsammans med 'old' frågar om ålder.",
           "explanation": "How old = Hur gammal. Samma mönster: How tall? (Hur lång?), How far? (Hur långt?)"
         },
         {
@@ -5058,7 +5058,7 @@
           "type": "fill-in-blank",
           "sentence": "___ subject do you prefer, English or Maths?",
           "answer": "Which",
-          "hint": "Val mellan ett begränsat antal alternativ → Which (Vilken/vilket).",
+          "hint": "Du väljer mellan ett fåtal givna alternativ. Vilket frågeord används då, i stället för 'what'?",
           "explanation": "Which används när vi väljer mellan specifika alternativ. Which subject? = Vilket ämne?"
         },
         {
@@ -5066,7 +5066,7 @@
           "type": "fill-in-blank",
           "sentence": "___ far is it from here to Stockholm? – About 100 kilometres.",
           "answer": "How",
-          "hint": "How + far frågar om avstånd (Hur långt).",
+          "hint": "Frågeordet som tillsammans med 'far' frågar om avstånd.",
           "explanation": "How far = Hur långt. How far is it to Stockholm? = Hur långt är det till Stockholm?"
         },
         {
@@ -5109,7 +5109,7 @@
           "type": "fill-in-blank",
           "sentence": "___ languages can you speak? – I can speak two.",
           "answer": "How many",
-          "hint": "Räkningsbara enheter (languages) → How many.",
+          "hint": "Du frågar om ett antal saker som går att räkna, till exempel språk.",
           "explanation": "How many languages = Hur många språk. Languages är räkningsbara."
         },
         {
@@ -5130,7 +5130,7 @@
           "type": "fill-in-blank",
           "sentence": "___ long is the summer holiday? – About ten weeks.",
           "answer": "How",
-          "hint": "How + long frågar om längd eller varaktighet.",
+          "hint": "Frågeordet som tillsammans med 'long' frågar hur länge något varar.",
           "explanation": "How long = Hur länge/lång. How long is the holiday? = Hur länge varar lovet?"
         },
         {
@@ -5171,7 +5171,7 @@
           "type": "fill-in-blank",
           "sentence": "___ tall is the Statue of Liberty? – About 93 metres.",
           "answer": "How",
-          "hint": "How + tall frågar om höjd (Hur hög/lång).",
+          "hint": "Frågeordet som tillsammans med 'tall' frågar om höjd.",
           "explanation": "How tall = Hur hög/lång. How tall is it? = Hur hög är den?"
         },
         {

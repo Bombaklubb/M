@@ -592,7 +592,7 @@
           "type": "fill-in-blank",
           "sentence": "A: ___ I been informed earlier, I could have prevented this. B: I sincerely apologise.",
           "answer": "Had",
-          "hint": "Inverterad 3rd conditional – Had + subject + past participle.",
+          "hint": "Inverterad 3rd conditional: satsen börjar med hjälpverbet i stället för 'if'. Vilket hjälpverb bildar past perfect?",
           "explanation": "'Had I been informed' = Om jag hade blivit informerad. Inverterad konditionalis (formell) utan 'if': Had + subject."
         },
         {
@@ -615,7 +615,7 @@
           "alternativeAnswers": [
             "if"
           ],
-          "hint": "'As though/as if' = som om.",
+          "hint": "Ett fast uttryck med 'as' som betyder 'som om'.",
           "explanation": "'As though' och 'as if' = som om. Används för att beskriva ett beteende som inte stämmer med verkligheten."
         },
         {
@@ -644,7 +644,7 @@
           "type": "fill-in-blank",
           "sentence": "A: The report is ___ to be submitted by Thursday at the latest. B: I'll make sure it's done on time.",
           "answer": "due",
-          "hint": "'Be due to' = ska/är planerad att.",
+          "hint": "Ett adjektiv som används om planerade datum och sista dagar, till exempel när en räkning ska vara betald.",
           "explanation": "'Is due to be submitted' = Ska lämnas in / förfaller till inlämning. 'Due' indikerar ett planerat datum eller förfallodatum."
         },
         {
@@ -652,7 +652,7 @@
           "type": "fill-in-blank",
           "sentence": "A: I'd ___ you didn't mention this to the others just yet. B: Understood. Mum's the word.",
           "answer": "rather",
-          "hint": "I'd rather + subject + past simple = Jag skulle helst vilja att.",
+          "hint": "I'd ___ + subjekt + past simple uttrycker vad du helst vill att någon annan gör.",
           "explanation": "'I'd rather you didn't' = Jag skulle helst se att du inte. 'Would rather + subject + past simple' för önskemål om andras beteende."
         },
         {
@@ -660,7 +660,7 @@
           "type": "fill-in-blank",
           "sentence": "A: Hardly ___ she walked in when the argument started. B: Talk about bad timing!",
           "answer": "had",
-          "hint": "Inverterad konstruktion med Hardly – Hardly had + subject + past participle.",
+          "hint": "Efter 'Hardly' först i satsen kommer omvänd ordföljd, med hjälpverbet för past perfect före subjektet.",
           "explanation": "'Hardly had she walked in' = Knappt hade hon kommit in. Inverterad konstruktion med Hardly/No sooner: Hardly + had + subject + past participle."
         },
         {
@@ -672,7 +672,7 @@
             "considered",
             "seen"
           ],
-          "hint": "Passiv: widely regarded/considered as = allmänt ansedd som.",
+          "hint": "Passiv form av ett verb som betyder 'anse' eller 'betrakta', följt av 'as'.",
           "explanation": "'Widely regarded as' = allmänt ansedd/betraktad som. Passiv konstruktion vanlig i formell engelska."
         }
       ]
@@ -917,7 +917,7 @@
           ],
           "correctIndex": 0,
           "explanation": "'Should have + past participle' expresses criticism or regret about a past action.",
-          "hint": "'should have' = borde ha (kritik eller ånger om förflutet)."
+          "hint": "Något hade varit rätt att göra, men det blev inte gjort. Vilket modalverb + have uttrycker det?"
         },
         {
           "id": "gym-g2-2",
@@ -939,14 +939,14 @@
           ],
           "correctIndex": 2,
           "explanation": "'Might have + past participle' expresses possibility about the past.",
-          "hint": "'might have' = möjligen hände något i det förflutna."
+          "hint": "Du är inte säker. Vilket modalverb uttrycker en möjlighet i det förflutna?"
         },
         {
           "id": "gym-g2-4",
           "type": "fill-in-blank",
           "sentence": "You ___ have worried so much — everything is fine!",
           "answer": "needn't",
-          "hint": "Tänk: 'needn't have' vs 'didn't need to' – vilket antyder att du faktiskt gjorde det?",
+          "hint": "Det var onödigt att oroa sig – men du gjorde det ändå. Vilken nekad form av 'need' används med have + particip?",
           "explanation": "'Needn't have + past participle' = it wasn't necessary (but you did it)."
         },
         {
@@ -1007,7 +1007,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'Mustn't' expresses prohibition (it is not allowed).",
-          "hint": "'mustn't' = förbjudet. Skilj från 'needn't' (onödigt)."
+          "hint": "Det handlar om ett förbud. Vilket nekat modalverb säger att något inte är tillåtet?"
         },
         {
           "id": "gym-g2-9",
@@ -1079,14 +1079,14 @@
           ],
           "correctIndex": 0,
           "explanation": "'Must have' shows confident logical deduction about a completed action.",
-          "hint": "Säker logisk slutledning om förflutet: must have."
+          "hint": "Du drar en säker slutsats om något som redan har hänt. Vilket modalverb + have uttrycker det?"
         },
         {
           "id": "gym-g2-14",
           "type": "fill-in-blank",
           "sentence": "You ___ (have to) wear a suit — it's a casual event.",
           "answer": "don't have to",
-          "hint": "Tänk: 'don't have to' = inte nödvändigt, 'must not' = förbjudet. Vilket passar?",
+          "hint": "Det är inte förbjudet att bära kostym – det behövs bara inte. Använd nekad form av 'have to'.",
           "explanation": "'Don't have to' = not necessary (different from 'mustn't' which is prohibition)."
         },
         {
@@ -1101,7 +1101,7 @@
           ],
           "correctIndex": 0,
           "explanation": "'Must' for strong deduction based on evidence: lights are on → she must be home.",
-          "hint": "Stark slutledning baserad på bevis: must."
+          "hint": "Lamporna är tända, så du drar en stark slutsats utifrån ett bevis. Vilket modalverb passar?"
         }
       ],
       "helpText": [
@@ -1161,7 +1161,7 @@
           "type": "fill-in-blank",
           "sentence": "If I ___ (be) you, I would reconsider. (Subjunctive/formal)",
           "answer": "were",
-          "hint": "Konjunktiv med 'If I were you': subjunktiv används för hypotetiska situationer. Vilket pronomen + form?",
+          "hint": "Konjunktiv: i hypotetiska om-satser används en särskild dåtidsform av 'be' för alla personer, även 'I'.",
           "explanation": "Subjunctive: 'were' for all persons in formal/literary conditional: If I were you."
         },
         {
@@ -1176,7 +1176,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'Dear Sir or Madam,' is the formal salutation used when the recipient is unknown.",
-          "hint": "Formell brevhälsning: Dear Sir or Madam,"
+          "hint": "Du vet inte vem som ska läsa brevet och vill vara formell."
         },
         {
           "id": "gym-g3-6",
@@ -1359,7 +1359,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'However' introduces a contrast or counterargument.",
-          "hint": "'However' = kontrast/motargument."
+          "hint": "Leta efter ordet som betyder 'däremot' eller 'men'."
         },
         {
           "id": "gym-g4-2",
@@ -1403,7 +1403,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'Despite' + noun phrase shows contrast without a full clause.",
-          "hint": "'Despite' + substantivfras = trots (utan fullständig sats)."
+          "hint": "Efter luckan kommer en substantivfras, inte en hel sats. Vilket ord betyder 'trots' och fungerar så?"
         },
         {
           "id": "gym-g4-6",
@@ -1455,7 +1455,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'For instance' (= 'for example') introduces an illustrative example.",
-          "hint": "'For instance' / 'For example' / 'Such as' = ger exempel."
+          "hint": "Vilket uttryck betyder 'till exempel'?"
         },
         {
           "id": "gym-g4-9",
@@ -1499,7 +1499,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'In conclusion' signals the final summary of an essay or argument.",
-          "hint": "'In conclusion' / 'To summarise' = sammanfattning."
+          "hint": "Vilket uttryck betyder 'sammanfattningsvis'?"
         },
         {
           "id": "gym-g4-13",
@@ -1553,7 +1553,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'Subsequently' means 'after that' – it shows temporal sequence.",
-          "hint": "'Subsequently' / 'Then' / 'Afterwards' = sedan, därefter (tidssekvens)."
+          "hint": "Vilket ord betyder 'därefter' och visar att något hände efteråt?"
         }
       ],
       "helpText": [
@@ -1892,7 +1892,7 @@
             "is"
           ],
           "correctIndex": 0,
-          "hint": "'Neither of' + plural substantiv tar ändå singular verb (is/was) i formellt skriftspråk."
+          "hint": "Med 'neither … nor' rättar sig verbet efter det substantiv som står närmast verbet. Här är det 'the teacher' – singular – och meningen står i dåtid."
         },
         {
           "id": "gym-g-advanced2-13",
@@ -2099,7 +2099,7 @@
             "is"
           ],
           "correctIndex": 0,
-          "hint": "'Neither of' + plural substantiv tar ändå singular verb (is/was) i formellt skriftspråk."
+          "hint": "Med 'neither … nor' rättar sig verbet efter det substantiv som står närmast verbet. Här är det 'the teacher' – singular – och meningen står i dåtid."
         },
         {
           "id": "gym-g-advanced3-13",
@@ -2613,7 +2613,7 @@
           "type": "fill-in-blank",
           "sentence": "The data appears ___ (be) inaccurate.",
           "answer": "to be",
-          "hint": "Infinitiv: verbet 'appear/seem' följs av 'to be'. T.ex. 'The data appears to be inaccurate.'"
+          "hint": "Efter 'appear' och 'seem' följer verbet i infinitiv med 'to'."
         },
         {
           "id": "gym-g-advanced5-19",
@@ -2625,7 +2625,7 @@
             "knows"
           ],
           "correctIndex": 1,
-          "hint": "'As if' + konjunktiv: 'knew' visar att situationen är osann/hypotetisk."
+          "hint": "Efter 'as if' används dåtid för att visa att något inte är sant på riktigt."
         },
         {
           "id": "gym-g-advanced5-20",
@@ -2669,7 +2669,7 @@
           "type": "fill-in-blank",
           "sentence": "The company is ___ to be successful.",
           "answer": "said",
-          "hint": "Passiv rapportering: 'They say that...' → 'It is said that...' / 'The company is said to...'"
+          "hint": "Passiv rapportering: 'Folk säger att företaget …' blir 'The company is ___ to …'. Använd perfektparticip av 'say'."
         },
         {
           "id": "gym-g-mixed-4",
@@ -2765,7 +2765,7 @@
             "of"
           ],
           "correctIndex": 0,
-          "hint": "Fast prepositionsfras: 'responsible for' (ansvarig för). 'Capable of', 'aware of', 'responsible for' – lär dig vilken preposition som hör till vilket adjektiv."
+          "hint": "Adjektiv har ofta en fast preposition. Vilken preposition hör ihop med 'responsible' när det betyder 'ansvarig för'?"
         },
         {
           "id": "gym-g-mixed-16",
@@ -2922,7 +2922,7 @@
           "alternativeAnswers": [
             "that"
           ],
-          "hint": "Anledning → why."
+          "hint": "Efter 'the reason' kommer ett frågeord som handlar om orsak."
         },
         {
           "id": "gym-g5-9",
@@ -2991,7 +2991,7 @@
           "sentence": "Not only ___ he apologise, but he also paid for the damage.",
           "answer": "did",
           "explanation": "'Not only' at the start forces inversion with 'did'.",
-          "hint": "Inversion med did."
+          "hint": "'Not only' först i satsen kräver omvänd ordföljd med ett hjälpverb i dåtid."
         },
         {
           "id": "gym-g6-4",
@@ -3035,7 +3035,7 @@
           "sentence": "Hardly ___ I arrived when the phone rang.",
           "answer": "had",
           "explanation": "'Hardly had I arrived when...' – past perfect inversion.",
-          "hint": "Hardly + had + subjekt."
+          "hint": "Efter 'Hardly' först i satsen kommer omvänd ordföljd, med hjälpverbet för past perfect före subjektet."
         },
         {
           "id": "gym-g6-8",
@@ -3057,7 +3057,7 @@
           "sentence": "So loud was the music ___ we couldn't talk.",
           "answer": "that",
           "explanation": "'So + adjective + inversion + that' shows degree and result.",
-          "hint": "So...that-konstruktion."
+          "hint": "'So + adjektiv …' följs av en bisats som visar följden. Vilket litet ord inleder den?"
         },
         {
           "id": "gym-g6-10",
@@ -3132,7 +3132,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'Should you need help' = formal/inverted 'If you should need help'.",
-          "hint": "Inverterad villkorssats med should."
+          "hint": "En formell villkorssats utan 'if': meningen börjar med ett modalverb följt av subjektet."
         },
         {
           "id": "gym-g7-5",
@@ -3176,7 +3176,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'as long as' expresses a condition (provided that).",
-          "hint": "Villkor: as long as."
+          "hint": "Du lånar ut boken på ett villkor. Vilket uttryck betyder 'så länge som' eller 'förutsatt att'?"
         },
         {
           "id": "gym-g7-9",
@@ -3535,7 +3535,7 @@
           ],
           "correctIndex": 1,
           "explanation": "'misunderstand' – 'mis-' means wrongly/badly.",
-          "hint": "Felaktigt → mis-."
+          "hint": "Ett förled som betyder 'felaktigt' eller 'dåligt'."
         },
         {
           "id": "gym-g10-7",

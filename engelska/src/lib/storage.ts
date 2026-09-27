@@ -1,4 +1,5 @@
 import type { StudentData, StageId, ModuleProgress, StageProgress, GamificationData } from "./types";
+import { localDayKey, localYesterdayKey } from "./dates";
 import { defaultGamificationData } from "./gamification";
 import { rollLuckyBonus, type LuckyBonus } from "./luckyBonus";
 
@@ -421,7 +422,7 @@ function streakKey(name: string) {
 }
 
 function todayStr() {
-  return new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+  return localDayKey(); // ÅÅÅÅ-MM-DD i elevens tidszon, inte UTC
 }
 
 export function getStreak(studentName: string): number {
@@ -437,7 +438,7 @@ export function updateStreak(studentName: string): number {
   if (typeof window === "undefined") return 0;
   const key = streakKey(studentName);
   const today = todayStr();
-  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const yesterday = localYesterdayKey();
   try {
     const raw = localStorage.getItem(key);
     const prev: StreakData = raw ? JSON.parse(raw) : { days: 0, lastDate: "" };

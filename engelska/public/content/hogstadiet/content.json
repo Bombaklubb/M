@@ -596,7 +596,7 @@
           "type": "fill-in-blank",
           "sentence": "A: If I ___ you, I would apologise immediately. B: You're probably right.",
           "answer": "were",
-          "hint": "Hypotetiskt konditionalis – 'if I were you' är en fast fras.",
+          "hint": "Hypotetisk om-sats: här används en särskild dåtidsform av 'be', även med 'I'.",
           "explanation": "'If I were you' = Om jag vore du. Hypotetiskt konditionalis (2nd conditional) – vi använder 'were' även med I."
         },
         {
@@ -842,7 +842,7 @@
           ],
           "correctIndex": 2,
           "explanation": "'Already' signals completed actions relevant to now – used with present perfect.",
-          "hint": "Typiska adverb: already, yet, just, ever, never, since, for."
+          "hint": "Present perfect handlar om något som hänt fram till nu. Vilket av orden anger inte en avslutad tidpunkt i det förflutna?"
         },
         {
           "id": "hog-g1-13",
@@ -1577,7 +1577,7 @@
             "done"
           ],
           "correctIndex": 2,
-          "hint": "Perfektparticip av verbet används här: 'done'. Kontrollera den oregelbundna formen."
+          "hint": "Efter 'has' kommer perfektparticip. 'Do' är oregelbundet: do – did – …?"
         },
         {
           "id": "hog-g-advanced-3",
@@ -1784,7 +1784,7 @@
             "can"
           ],
           "correctIndex": 1,
-          "hint": "Typ 2-konditionalis resultat: 'would' + grundform. Hypotetisk situation i nutid."
+          "hint": "Typ 2-konditionalis: en hypotetisk situation i nutid. Vilket modalverb används i huvudsatsen?"
         },
         {
           "id": "hog-g-advanced2-3",
@@ -1917,7 +1917,7 @@
             "has"
           ],
           "correctIndex": 1,
-          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+          "hint": "Typ 3-konditionalis: något som inte hände i det förflutna. Huvudsatsen byggs med modalverb + have + particip."
         },
         {
           "id": "hog-g-advanced2-17",
@@ -1990,7 +1990,7 @@
             "finishing"
           ],
           "correctIndex": 1,
-          "hint": "Perfektparticip av verbet används här: 'finished'. Kontrollera den oregelbundna formen."
+          "hint": "Efter 'has' kommer perfektparticip. 'Finish' är regelbundet – lägg till rätt ändelse."
         },
         {
           "id": "hog-g-advanced3-3",
@@ -2104,7 +2104,7 @@
             "has"
           ],
           "correctIndex": 0,
-          "hint": "Typ 3-konditionalis: If + had + particip → would have + particip. Omöjlig situation i dåtid."
+          "hint": "Typ 3-konditionalis: något som inte hände i det förflutna. Huvudsatsen byggs med modalverb + have + particip."
         },
         {
           "id": "hog-g-advanced3-15",
@@ -2592,7 +2592,7 @@
             "would have"
           ],
           "correctIndex": 0,
-          "hint": "Typ 1-konditionalis: If + presens → will + grundform. Verklig möjlighet."
+          "hint": "Typ 1-konditionalis: en verklig möjlighet i framtiden. Vilket hjälpverb för framtid används i huvudsatsen?"
         },
         {
           "id": "hog-g-advanced5-18",
@@ -2692,7 +2692,7 @@
             "carefully"
           ],
           "correctIndex": 1,
-          "hint": "Adverb beskriver verb: 'She drives carefully'. Adjektiv beskriver substantiv. Här beskrivs 'drives' (verb) → adverb (-ly)."
+          "hint": "Ordet beskriver hur hon kör – alltså ett verb. Då behövs ett adverb, som ofta slutar på -ly."
         },
         {
           "id": "hog-g-mixed-7",
@@ -2738,7 +2738,7 @@
             "to be"
           ],
           "correctIndex": 0,
-          "hint": "'Despite' följs alltid av gerund (-ing): 'despite being tired'. 'Although' däremot följs av en fullständig sats."
+          "hint": "Efter 'despite' kommer verbet i -ing-form."
         },
         {
           "id": "hog-g-mixed-13",
@@ -2806,7 +2806,7 @@
             "seeing"
           ],
           "correctIndex": 1,
-          "hint": "'Look forward to' + gerund (-ing). 'To' är här en preposition (inte infinitivmarkör) → -ing-form. 'Look forward to seeing you.'"
+          "hint": "'To' i 'look forward to' är en preposition, inte ett infinitivmärke. Vilken verbform kommer efter en preposition?"
         }
       ],
       "helpText": [
@@ -4578,7 +4578,7 @@
           "type": "fill-in-blank",
           "sentence": "___ long have you been studying English?",
           "answer": "How",
-          "hint": "How + long frågar om varaktighet (Hur länge).",
+          "hint": "Frågeordet som tillsammans med 'long' frågar hur länge något har pågått.",
           "explanation": "How long have you been studying English? = Hur länge har du studerat engelska? (Nuvarande perfekt kontinuerlig)"
         },
         {
@@ -4631,7 +4631,7 @@
           "type": "fill-in-blank",
           "sentence": "___ many times have you visited a foreign country?",
           "answer": "How",
-          "hint": "How many + räkningsbara substantiv = Hur många.",
+          "hint": "Frågeordet som tillsammans med 'many' frågar om ett antal.",
           "explanation": "How many times = Hur många gånger. Frågar om antal tillfällen."
         },
         {

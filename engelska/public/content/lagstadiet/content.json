@@ -3442,7 +3442,7 @@
           "type": "fill-in-blank",
           "sentence": "___ you speak English? (fråga)",
           "answer": "Can",
-          "hint": "I en fråga: vilket hjälpverb använder man med 'can'?",
+          "hint": "Frågor om vad någon kan börjar med samma ord som i påståendet 'I ___ swim'.",
           "explanation": "Frågor med can: Can you speak English?"
         }
       ],
@@ -3534,7 +3534,7 @@
           "type": "fill-in-blank",
           "sentence": "The school is ___ to the park. (bredvid)",
           "answer": "next",
-          "hint": "Tänk: bredvid = next ___ (fraser med to hör ihop)",
+          "hint": "'Bredvid' blir två ord på engelska, och det andra ordet står redan efter luckan.",
           "explanation": "'Next to' = bredvid. The school is next to the park."
         },
         {

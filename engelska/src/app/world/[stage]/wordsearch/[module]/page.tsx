@@ -7,11 +7,13 @@ import { notFound } from "next/navigation";
 import Header from "@/components/ui/Header";
 import ResultModal from "@/components/ui/ResultModal";
 import WordSearch from "@/components/exercises/WordSearch";
-import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier } from "@/lib/storage";
+import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
+import { loadStudent, saveModuleProgress, loadGamification, getModuleProgress, getRepeatMultiplier } from "@/lib/storage";
 import { rollLuckyBonus, type LuckyBonus } from "@/lib/luckyBonus";
-import { checkAchievementBadges } from "@/lib/gamification";
+import { getBossGate, completedModulesInStage, bossWinsInStage } from "@/lib/gamification";
+import { applyChapterRewards } from "@/lib/chapterRewards";
 import { getStage } from "@/lib/stages";
-import type { StudentData, StageContent, WordSearchModule } from "@/lib/types";
+import type { StudentData, StageContent, WordSearchModule, ChestType, StageId, MysteryBoxReward } from "@/lib/types";
 
 interface Props {
   params: Promise<{ stage: string; module: string }>;
@@ -28,6 +30,9 @@ export default function WordSearchModulePage({ params }: Props) {
   const [showResult, setShowResult] = useState(false);
   const [modalPoints, setModalPoints] = useState(0);
   const [modalLucky, setModalLucky] = useState<LuckyBonus | null>(null);
+  const [chestEarned, setChestEarned] = useState<ChestType | undefined>();
+  const [bossJustUnlocked, setBossJustUnlocked] = useState(false);
+  const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
   const [attemptNum, setAttemptNum] = useState(1);
 
   useEffect(() => {
@@ -68,15 +73,27 @@ export default function WordSearchModulePage({ params }: Props) {
       setModalPoints(adjustedPts);
       setAttemptNum(priorAttempts + 1);
 
+      // Läget före sparningen: saveModuleProgress ändrar eleven.
+      const stageKey = stage!.id as StageId;
+      const before = {
+        totalPoints: student.totalPoints,
+        bossGateOpen: getBossGate(completedModulesInStage(student, stageKey), bossWinsInStage(loadGamification(), stageKey)).unlocked,
+      };
+      const wasAlreadyCompleted = existingProgress?.completed ?? false;
       const updated = saveModuleProgress(student, stage!.id, "wordsearch", mod!.id, totalWithLuck, true);
-      setStudent(updated);
-      const gam = loadGamification();
-      const achievementBadges = checkAchievementBadges(updated, gam);
-      if (achievementBadges.length > 0) {
-        saveGamification({ ...gam, badges: [...gam.badges, ...achievementBadges] });
-      }
+      // Kistor, mysterielåda och bossmeddelande – samma regler som övriga kapitel.
+      const rewards = applyChapterRewards({ before, updated, stageId: stageKey, wasAlreadyCompleted });
+      setStudent(rewards.student);
+      setChestEarned(rewards.chest);
+      setBossJustUnlocked(rewards.bossJustUnlocked);
+      if (rewards.mystery) setMysteryBox(rewards.mystery);
     }
     setShowResult(true);
+  }
+
+  function handleMysteryClose() {
+    setMysteryBox(null);
+    router.push(`/world/${stageId}?tab=wordsearch`);
   }
 
   function handleRetry() {
@@ -84,7 +101,9 @@ export default function WordSearchModulePage({ params }: Props) {
   }
 
   function handleContinue() {
-    router.push(`/world/${stageId}?tab=wordsearch`);
+    // Har eleven fått en mysterielåda visas den först; den leder sedan vidare.
+    if (mysteryBox) setShowResult(false);
+    else router.push(`/world/${stageId}?tab=wordsearch`);
   }
 
   return (
@@ -123,9 +142,15 @@ export default function WordSearchModulePage({ params }: Props) {
           totalQuestions={mod.words.length}
           repeatAttemptNumber={attemptNum}
           lucky={modalLucky}
+          chestEarned={chestEarned}
+          bossUnlocked={bossJustUnlocked}
           onContinue={handleContinue}
           onRetry={handleRetry}
         />
+      )}
+
+      {!showResult && mysteryBox && (
+        <MysteryBoxPopup reward={mysteryBox} onClose={handleMysteryClose} />
       )}
     </div>
   );

@@ -1,3 +1,4 @@
+import { localDayKey } from "./dates";
 // ─── Turbonus ─────────────────────────────────────────────────────────────────
 // Slumpmässig, sällsynt poängbonus (×2 eller ×3) som ibland dyker upp när en
 // övning/uppgift avslutas. Helt slumpstyrd (ingen mönsterkoppling till tid,
@@ -21,7 +22,7 @@ function key(studentName: string) {
 }
 
 function todayStr(): string {
-  return new Date().toISOString().slice(0, 10);
+  return localDayKey();
 }
 
 /**
