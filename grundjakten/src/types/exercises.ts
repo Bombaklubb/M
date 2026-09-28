@@ -129,6 +129,8 @@ export interface QuizEx extends Base {
     word?: string;
     sentence?: string;
     emoji?: string;
+    /** En ritad bild av ett läge – boken PÅ bordet. Se components/LagesBild.tsx. */
+    scen?: LagesScen;
   };
   choices: Choice[];
   /** Två alternativ läggs bredvid varandra, tre eller fler i rutnät. */
@@ -188,3 +190,16 @@ export type Exercise =
   | OrderItemsEx;
 
 export type ExerciseKind = Exercise['kind'];
+
+/** De lägen components/LagesBild.tsx kan rita. */
+export type Lage = 'på' | 'under' | 'i' | 'framför' | 'bakom' | 'över' | 'mellan' | 'bredvid';
+
+export interface LagesScen {
+  lage: Lage;
+  /** Det som placeras. Emoji. */
+  sak: string;
+  /** Det saken placeras i förhållande till: emoji, eller 'bord', 'lada', 'vagg'. */
+  plats: string;
+  /** Bara 'mellan': den andra saken. */
+  plats2?: string;
+}

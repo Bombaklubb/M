@@ -196,7 +196,7 @@ behöver inte – allt hon behöver går att höra eller se som bild inne i appe
 Det är därför också appens enda skärm med löpande text.
 
 Sidan beskriver allt som finns i appen i dag: vad eleven övar (Bokstavsresan,
-93 namngivna uppgifter, de 100 vanligaste orden som ordbilder), hur ett pass
+94 namngivna uppgifter, de 100 vanligaste orden som ordbilder), hur ett pass
 går framåt (försök igen, lotsning, rätt svar visas efter tredje missen,
 orange prickar), poäng, kistor och utmärkelser, affären, hur nivån sköter sig
 själv, var framstegen sparas och hur man når Martin. **Håll den i takt med
@@ -488,23 +488,56 @@ från 760. Stegen är mätta mot alla tolv skrivuppgifter på 600, 620, 700 och
 768 px höjd; även den största lämnar över 100 px luft, och ingenting hamnar
 under skärmkanten.
 
-### Stor bokstav på fristående ord
+### Versaler som i vanlig text
 
-Ordbankerna är skrivna med gemener, men ett ord som står ensamt på ett kort
-visas med **versal** – `stortOrd()` i `lib/utils.ts`. Ordkorten sa "bok" och
-"boll"; eleven ska inte lära sig fel av det hon ser mest.
+Orden visas **precis som de står i datan**: versal först i en mening och i
+namn på personer, länder och städer (`EGENNAMN` i `data/banks.ts`), annars
+gemener – även ett ord som står ensamt på ett kort. Veckodagar och månader
+står med gemen, som i svensk ortografi.
 
-Det sker bara på **visningen**. Jämförelserna kör vidare på bankernas egna
-värden, så en versal kan inte göra ett rätt svar fel. Enstaka tecken lämnas
-orörda: i bokstavsövningarna ÄR gemenen innehållet, och ett skiljetecken har
-ingen versal.
+Så var det inte först. En tidigare version gjorde stor bokstav på varje ord
+som stod ensamt på ett kort (`stortOrd()`), och läraren såg "Det", "Den",
+"Framför" och "Bordet" – eleven lär sig fel av det hon ser mest. Funktionen är
+borttagen. Den hade dessutom förstört *Stor/liten bokstav*: där är ett av
+alternativen med flit skrivet med gemen ("katt" mot "Katt"), och båda
+alternativen visades som "Katt".
 
-*Bygg meningen* var redan rätt – meningarna står med stor bokstav i datan, och
-uppgiften säger själv "Stor bokstav först och punkt sist".
+`kollaVersaler()` i `dev/checkTasks.ts` bygger alla uppgifter och tittar på
+varje ord som visas ensamt: ett ord med versal måste vara ett namn, och ett
+namn får inte stå med gemen. *Stor/liten bokstav* är undantaget.
 
-Veckodagar och månader får också versal på sina kort. Svensk ortografi skriver
-dem med liten bokstav i löpande text, så säg till om du hellre vill undanta
-dem – de ligger i samma kod och är enkla att skilja ut.
+### Bilder till lägesord och grammatik
+
+**Lägesorden** har en ritad bild till varje mening (`components/LagesBild.tsx`):
+boken PÅ bordet, katten UNDER det, lampan hänger ÖVER det, bollen I lådan,
+hunden FRAMFÖR dörren, barnet BAKOM trädet, stolen MELLAN väggen och bordet,
+väskan BREDVID stolen. En emoji av en bok säger ingenting om "på" – det är
+förhållandet mellan två saker som är ordet, så det är det som ritas, som en
+liten SVG där ritordningen är djupet. Bord, låda och vägg finns inte som emoji
+man kan lägga något på eller i, och ritas som figurer. Katten sov förut under
+"sängen"; den sover nu under bordet, av samma skäl. Bilden står bredvid
+meningen – ovanför den klipptes allt på en Chromebook. `kollaLagesord()`
+vaktar att varje mening har en scen som går att rita.
+
+**En/ett, den/det, en/flera och adjektivformerna** visar en bild av ordet
+(`SUBSTANTIV_BILDER` och `bildTill()` i `data/banks.ts`). "Bord" byttes mot
+"ägg" i ett-orden: det finns ingen bordsbild. `kollaSubstantivbilder()`
+kräver en bild till varje ord.
+
+*En eller ett* finns både i Svenska 1, bredvid *Den eller det*, och i
+Svenska 2.
+
+### Långsammare uppläsning av grammatikfrågor
+
+"Säger man den eller det bordet?" lästes i vanlig takt, och "den eller det"
+flöt ihop till ett ljud – just de två orden eleven skulle välja mellan.
+Frågor där eleven väljer mellan små ord läses nu i takt **0,7** i stället för
+0,9 (`LANGSAMT` i `lib/generators/taskBuilders.ts`), multiplicerat med
+elevens egen hastighet. Den/det och en/ett har dessutom kommatecken runt
+orden – "Säger man den, eller det, bordet?" – som ger talsyntesen en paus.
+Gäller den/det, en/ett, stor/liten bokstav, adjektivform, en/flera,
+ordklass, lägesord, motsatsord, veckodagar, lång/kort vokal och "skriv ordet
+som saknas".
 
 ### De två ljudknapparna
 

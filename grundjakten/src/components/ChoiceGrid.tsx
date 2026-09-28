@@ -1,5 +1,5 @@
 import type { Choice } from '@/types';
-import { cn, stortOrd } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 import { EarButton } from './EarButton';
 
 interface Props {
@@ -69,12 +69,14 @@ export function ChoiceGrid({ choices, onPick, disabled, guideTo, wrongId, compac
               )}
               {choice.word && (
                 <span
+                  // text-5xl under lg: på en iPad på höjden är korten 230 px
+                  // breda, och "framför" i 60 px gick rakt ut i kanten.
                   className={cn(
-                    'reading font-medium leading-none',
-                    compact ? 'text-4xl' : 'text-6xl'
+                    'reading max-w-full break-words font-medium leading-none',
+                    compact ? 'text-4xl' : 'text-5xl lg:text-6xl'
                   )}
                 >
-                  {stortOrd(choice.word)}
+                  {choice.word}
                 </span>
               )}
             </button>

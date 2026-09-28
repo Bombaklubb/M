@@ -60,16 +60,20 @@ const KORT: Kort[] = [
         'bokstäver, i ljudordning och inte i bokstavsordning. Första ' +
         'stationen är S O L A R M, så att eleven kan läsa riktiga ord redan ' +
         'efter den.',
-      'Övningar är 93 namngivna uppgifter i fyra nivåer, Svenska 1–4: ' +
+      'Övningar är 94 namngivna uppgifter i fyra nivåer, Svenska 1–4: ' +
         'alfabetet, svåra ljud (sj, tj, ng, j, ck), kort vokal, rimord, ' +
         'ljudenlig stavning, ordförståelse, grammatik, räkneord, dagar och ' +
         'månader. Du kan peka ut en viss uppgift för en viss elev.',
       'Ordbilderna är de 100 vanligaste orden i svenska texter – och, att, ' +
         'det, som, på … Eleven hör ordet och väljer rätt skriven form. ' +
         'Orden ska kännas igen direkt, inte ljudas.',
-      'Ord som står först i en mening eller ensamma visas med stor bokstav. ' +
-        'Bilderna är stora, och ingen bild används för två olika ord – det ' +
-        'kontrolleras automatiskt innan en ändring läggs ut.',
+      'Versaler används som i vanlig text: först i en mening och i namn på ' +
+        'personer, länder och städer. Annars står orden med gemener – även ' +
+        'ett ord som står ensamt på ett kort.',
+      'Bilderna är stora, och ingen bild används för två olika ord – det ' +
+        'kontrolleras automatiskt innan en ändring läggs ut. Lägesorden har ' +
+        'en ritad bild som visar läget, och en/ett, den/det och en/flera visar ' +
+        'en bild av ordet.',
     ],
   },
   {
@@ -83,6 +87,9 @@ const KORT: Kort[] = [
       'Längst ned på varje övningsskärm finns dessutom en stor öronknapp som ' +
         'spelar upp instruktionen igen. Den är skärmens största tryckyta med ' +
         'flit: det är elevens väg tillbaka in i uppgiften om hon tappat tråden.',
+      'Frågor där eleven väljer mellan små ord – "säger man den, eller det, ' +
+        'bordet?" – läses långsammare och med paus runt orden, så att de inte ' +
+        'flyter ihop.',
       'Ljudknappen uppe i hörnet stänger av allt ljud. Knapparna som säger ' +
         'ett ljud och knapparna som säger ett ord ser olika ut, så att eleven ' +
         'inte blandar ihop dem.',

@@ -8,8 +8,9 @@ import { SIGHT_WORDS } from '@/data/sightWords';
 import { AVATARER } from '@/data/avatars';
 import { FIGURGRUPPER, KATEGORIER, VAROR } from '@/data/affar';
 import {
-  ADJEKTIV, DJUR, FARGER, GATOR, KORTA_ORD, KORTA_VOKALER,
-  LANGA_VOKALER, LIKNELSER_DJUR, LJUDSTRIDIGA, SAMMANSATTA, SUBSTANTIV, VERB,
+  ADJEKTIV, DEN_ORD, DET_ORD, DJUR, EGENNAMN, EN_FLERA, EN_ORD, ETT_ORD, FARGER, GATOR,
+  KORTA_ORD, KORTA_VOKALER, LAGESORD, LANGA_VOKALER, LIKNELSER_DJUR, LJUDSTRIDIGA, RIM,
+  SAMMANSATTA, SUBSTANTIV, SUBSTANTIV_BILDER, VERB, bildTill,
 } from '@/data/banks';
 import { generateLetterPass } from '@/lib/generators/letterExercises';
 import { generateWritePass } from '@/lib/generators/writingExercises';
@@ -184,6 +185,15 @@ export function kollaBildord(): Fel[] {
   // Sammansatta ord och liknelser visar också en bild till ett svar.
   for (const [, , helt, emoji] of SAMMANSATTA) lagg(emoji, helt, 'SAMMANSATTA');
   for (const l of LIKNELSER_DJUR) lagg(l.emoji, l.svar, 'LIKNELSER');
+
+  // Rimorden och substantivbilderna i en/ett, den/det och en/flera. Rimorden
+  // saknades här, och där stod "tak" med en husbild – samma fel som ficka.
+  for (const r of RIM) {
+    lagg(r.emoji, r.ord, 'RIM');
+    lagg(r.rimEmoji, r.rim, 'RIM');
+    for (const [ord, emoji] of r.fel) lagg(emoji, ord, 'RIM');
+  }
+  for (const [ord, emoji] of Object.entries(SUBSTANTIV_BILDER)) lagg(emoji, ord, 'SUBSTANTIV_BILDER');
 
   for (const [emoji, ord] of perEmoji) {
     // Samma ORD i flera listor är i sin ordning – hus finns både bland korta
@@ -414,6 +424,97 @@ export function kollaAffar(): Fel[] {
   const billigast = Math.min(...VAROR.map((v) => v.pris));
   if (billigast > 100) sagt(`billigaste varan kostar ${billigast} – för långt till första köpet`);
 
+  return fel;
+}
+
+/**
+ * Bilder till grammatikfrågorna.
+ *
+ * Varje substantiv i en/ett, den/det och en/flera ska ha en bild – läraren
+ * bad om det för att bilden hjälper eleven förstå vad ordet är. Ett nytt ord
+ * utan bild skulle tyst ge en fråga utan.
+ */
+export function kollaSubstantivbilder(): Fel[] {
+  const fel: Fel[] = [];
+  const alla = [...EN_ORD, ...ETT_ORD, ...DEN_ORD, ...DET_ORD, ...EN_FLERA.map(([en]) => en)];
+  for (const ord of alla) {
+    if (!bildTill(ord)) fel.push({ task: 'substantivbilder', seed: 0, meddelande: `"${ord}" saknar bild` });
+  }
+  if (DEN_ORD.length !== EN_ORD.length || DET_ORD.length !== ETT_ORD.length) {
+    fel.push({ task: 'substantivbilder', seed: 0,
+      meddelande: 'DEN_ORD/DET_ORD står inte parvis med EN_ORD/ETT_ORD – bilderna slås upp via plats i listan' });
+  }
+  return fel;
+}
+
+/**
+ * Lägesorden: varje mening ska ha en bild som LagesBild kan rita.
+ *
+ * På, under och över ritas vid ett bord; i ritas i en låda; mellan behöver
+ * två saker. Andra kombinationer ritar LagesBild inte, och då visar bilden
+ * något annat än meningen säger.
+ */
+export function kollaLagesord(): Fel[] {
+  const fel: Fel[] = [];
+  const sagt = (m: string) => fel.push({ task: 'lägesord', seed: 0, meddelande: m });
+  const ritade = ['bord', 'lada', 'vagg'];
+  for (const l of LAGESORD) {
+    const namn = `"${l.mening}"`;
+    if (!l.mening.includes('___')) sagt(`${namn} saknar lucka`);
+    if (l.fel.includes(l.svar)) sagt(`${namn}: rätt svar står bland felen`);
+    if (['på', 'under', 'över'].includes(l.svar) && l.plats !== 'bord') sagt(`${namn}: "${l.svar}" ritas bara vid ett bord`);
+    if (l.svar === 'i' && l.plats !== 'lada') sagt(`${namn}: "i" ritas bara i en låda`);
+    if (l.svar === 'mellan' && !l.plats2) sagt(`${namn}: "mellan" behöver två saker`);
+    if (['framför', 'bakom', 'bredvid'].includes(l.svar) && ritade.includes(l.plats)) {
+      sagt(`${namn}: "${l.svar}" ritar platsen som emoji, inte "${l.plats}"`);
+    }
+    if (ritade.includes(l.sak)) sagt(`${namn}: saken måste vara en emoji`);
+  }
+  return fel;
+}
+
+/**
+ * Versaler som i vanlig text.
+ *
+ * Läraren: versal först i en mening och i namn på personer, länder och
+ * städer – annars gemener. Appen gjorde förut stor bokstav på varje ord som
+ * stod ensamt på ett kort ("Det", "Den", "Framför"), och då lär sig eleven
+ * fel av det hon ser mest. Kontrollen bygger alla uppgifter och tittar på
+ * varje ord som visas ensamt: ett ord med versal måste vara ett namn, och
+ * ett namn får inte stå med gemen.
+ *
+ * "Stor/liten bokstav" är undantaget – där ÄR fel skrivsätt ett av
+ * alternativen, med flit.
+ */
+export function kollaVersaler(seeds = [1, 12345]): Fel[] {
+  const fel: Fel[] = [];
+  const namn = new Set(EGENNAMN.map((n) => n.toLocaleLowerCase('sv-SE')));
+  const undantag = new Set(['gram-stor-liten']);
+
+  const ensamma = (ex: Exercise): string[] => {
+    const ut: string[] = [];
+    if ('choices' in ex) for (const c of ex.choices) if (c.word) ut.push(c.word);
+    if (ex.kind === 'quiz' && ex.shown?.word) ut.push(ex.shown.word);
+    if (ex.kind === 'read-word-pick-picture') ut.push(ex.shownWord);
+    if (ex.kind === 'word-picture-pair') for (const p of ex.pairs) ut.push(p.word);
+    if (ex.kind === 'order-items') ut.push(...ex.items);
+    return ut.filter((o) => o.length > 1 && /^\p{L}/u.test(o));
+  };
+
+  for (const task of TASKS) {
+    if (undantag.has(task.id)) continue;
+    for (const seed of seeds) {
+      for (const ex of task.build(seed)) {
+        for (const ord of ensamma(ex)) {
+          const forsta = ord[0];
+          const arVersal = forsta !== forsta.toLocaleLowerCase('sv-SE');
+          const arNamn = namn.has(ord.toLocaleLowerCase('sv-SE'));
+          if (arVersal && !arNamn) fel.push({ task: task.id, seed, meddelande: `"${ord}" står med versal men är inget namn` });
+          if (!arVersal && arNamn) fel.push({ task: task.id, seed, meddelande: `"${ord}" är ett namn men står med gemen` });
+        }
+      }
+    }
+  }
   return fel;
 }
 
