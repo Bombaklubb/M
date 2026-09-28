@@ -12,9 +12,20 @@ import { WORDS } from '@/data/words';
 
 export const PASS = 8;
 
-export function sv(id: string, text: string, lang: Lang = 'sv-SE'): SpeechToken {
-  return { id, text, lang };
+export function sv(id: string, text: string, lang: Lang = 'sv-SE', rate?: number): SpeechToken {
+  return rate === undefined ? { id, text, lang } : { id, text, lang, rate };
 }
+
+/**
+ * Talhastighet för frågor där själva orden som prövas står i frågan.
+ *
+ * "Säger man den eller det bordet?" lästes i vanlig takt (0,9), och då flöt
+ * "den eller det" ihop till ett enda ljud – just de två orden eleven skulle
+ * välja mellan. Läraren hörde det på en iPad. Grammatik- och lägesfrågorna
+ * läses därför långsammare. Multipliceras med elevens egen hastighet, så en
+ * elev med långsam uppläsning får den ännu långsammare.
+ */
+export const LANGSAMT = 0.7;
 
 let counter = 0;
 /** Unikt id per övning. Kön kräver att två uppgifter aldrig delar id. */
@@ -52,9 +63,12 @@ export interface QuizInput {
   fel: ChoiceInput[];
   lang?: Lang;
   compact?: boolean;
+  /** Läs frågan och uppläsningen i LANGSAMT tempo. */
+  langsam?: boolean;
 }
 
 export function quiz(input: QuizInput, rng: Rng): Exercise {
+  const rate = input.langsam ? LANGSAMT : undefined;
   const lang = input.lang ?? 'sv-SE';
   const choices = shuffle(
     [toChoice(input.ratt, true, lang), ...input.fel.map((f) => toChoice(f, false, lang))],
@@ -67,8 +81,8 @@ export function quiz(input: QuizInput, rng: Rng): Exercise {
     shown: input.shown,
     choices,
     compact: input.compact ?? choices.length <= 2,
-    prompt: sv(`p-${input.prompt}`, input.prompt, lang),
-    replay: sv(`r-${input.replay ?? input.prompt}`, input.replay ?? input.prompt, lang),
+    prompt: sv(`p-${input.prompt}`, input.prompt, lang, rate),
+    replay: sv(`r-${input.replay ?? input.prompt}`, input.replay ?? input.prompt, lang, rate),
     xp: 5,
   };
 }
@@ -84,6 +98,8 @@ export interface TypeWordInput {
   lang?: Lang;
   /** Det öronknappen upprepar. Standard är svaret – eleven ska höra ordet. */
   replay?: string;
+  /** Läs i LANGSAMT tempo – för hela meningar. */
+  langsam?: boolean;
 }
 
 export function typeWord(input: TypeWordInput): Exercise {
@@ -97,8 +113,9 @@ export function typeWord(input: TypeWordInput): Exercise {
     emoji: input.emoji,
     sentence: input.sentence,
     digits: input.digits,
-    prompt: sv(`p-${input.prompt}`, input.prompt, lang),
-    replay: sv(`r-${input.replay ?? input.answer}`, input.replay ?? input.answer, lang),
+    prompt: sv(`p-${input.prompt}`, input.prompt, lang, input.langsam ? LANGSAMT : undefined),
+    replay: sv(`r-${input.replay ?? input.answer}`, input.replay ?? input.answer, lang,
+      input.langsam ? LANGSAMT : undefined),
     xp: 5,
   };
 }
@@ -157,6 +174,16 @@ export function fraganI(ex: Exercise): string | null {
     if (s.sentence) return `mening:${s.sentence}`;
     if (s.emoji) return `bild:${s.emoji}`;
     if (s.letter) return `bokstav:${s.letter}`;
+  }
+  // En fråga utan något visat ("Hur ska ordet skrivas?", "Vilket ord är ett
+  // substantiv?") känns igen på sitt rätta svar. Utan det kom "bil" två
+  // gånger i samma pass av Stor/liten bokstav – en gång som "bil" och en
+  // gång som "Bil", och nyckeln bortser med flit från stor och liten bokstav.
+  if (ex.kind === 'quiz') {
+    const ratt = ex.choices.find((c) => c.correct);
+    if (ratt?.word) return ordNyckel(ratt.word);
+    if (ratt?.letter) return `bokstav:${ratt.letter}`;
+    if (ratt?.emoji) return `bild:${ratt.emoji}`;
   }
   return null;
 }

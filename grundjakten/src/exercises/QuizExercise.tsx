@@ -1,6 +1,6 @@
 import type { Choice, QuizEx } from '@/types';
 import { ChoiceGrid } from '@/components/ChoiceGrid';
-import { stortOrd } from '@/lib/utils';
+import { LagesBild } from '@/components/LagesBild';
 
 /**
  * Generell flervalsövning.
@@ -28,9 +28,19 @@ export function QuizExercise({
   const shown = exercise.shown;
 
   return (
-    <div className="flex w-full flex-col items-center gap-8">
+    <div className="flex w-full flex-col items-center gap-6 [@media(min-height:760px)]:gap-8">
+
+      {/* Bilden krymper när ett ord står under den, så att bild, ord och
+          svar ryms på en Chromebook utan att eleven behöver scrolla. */}
       {shown?.emoji && (
-        <span className="text-[7rem] leading-none" aria-hidden>{shown.emoji}</span>
+        <span
+          className={shown.word
+            ? 'text-[5rem] leading-none [@media(min-height:760px)]:text-[6.5rem]'
+            : 'text-[7rem] leading-none'}
+          aria-hidden
+        >
+          {shown.emoji}
+        </span>
       )}
 
       {shown?.letter && (
@@ -42,15 +52,24 @@ export function QuizExercise({
       {shown?.word && (
         <span className="reading rounded-card border-4 border-brand-200 bg-white px-10 py-5
                          text-6xl font-bold text-ink-900 dark:bg-ink-800 dark:text-ink-50">
-          {stortOrd(shown.word)}
+          {shown.word}
         </span>
       )}
 
-      {shown?.sentence && (
-        <span className="reading max-w-3xl rounded-card border-4 border-aqua-200 bg-white px-8 py-5
-                         text-center text-4xl font-medium text-ink-900 dark:bg-ink-800 dark:text-ink-50">
-          {shown.sentence}
-        </span>
+      {/* Bilden till ett lägesord står BREDVID meningen, inte ovanför: på en
+          Chromebook är skärmen bara runt 650 px hög när webbläsaren tagit
+          sitt, och bild, mening och tre svar på höjden klipptes. På en smal
+          skärm hamnar bilden ovanför igen. */}
+      {(shown?.sentence || shown?.scen) && (
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+          {shown.scen && <LagesBild scen={shown.scen} />}
+          {shown.sentence && (
+            <span className="reading max-w-3xl rounded-card border-4 border-aqua-200 bg-white px-8 py-5
+                             text-center text-4xl font-medium text-ink-900 dark:bg-ink-800 dark:text-ink-50">
+              {shown.sentence}
+            </span>
+          )}
+        </div>
       )}
 
       <ChoiceGrid

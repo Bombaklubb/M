@@ -7,6 +7,8 @@
  * en ny övningstyp.
  */
 
+import type { Lage } from '@/types';
+
 export interface Ord {
   ord: string;
   emoji?: string;
@@ -150,15 +152,36 @@ export const GATOR: { fraga: string; svar: string; emoji: string; fel: [string, 
 
 // ── Lägesord ────────────────────────────────────────────────────────────────
 
-export const LAGESORD: { mening: string; svar: string; fel: [string, string] }[] = [
-  { mening: 'Boken ligger ___ bordet.', svar: 'på', fel: ['under', 'bakom'] },
-  { mening: 'Katten sover ___ sängen.', svar: 'under', fel: ['på', 'framför'] },
-  { mening: 'Hunden står ___ dörren.', svar: 'framför', fel: ['i', 'mellan'] },
-  { mening: 'Bollen är ___ lådan.', svar: 'i', fel: ['på', 'bredvid'] },
-  { mening: 'Lampan hänger ___ bordet.', svar: 'över', fel: ['under', 'i'] },
-  { mening: 'Stolen står ___ bordet och väggen.', svar: 'mellan', fel: ['på', 'under'] },
-  { mening: 'Väskan står ___ stolen.', svar: 'bredvid', fel: ['i', 'över'] },
-  { mening: 'Barnet gömmer sig ___ trädet.', svar: 'bakom', fel: ['på', 'mellan'] },
+/**
+ * Lägesord, med en bild till varje mening.
+ *
+ * Bilden VISAR läget: boken ligger på ett bord, katten sover under det,
+ * lampan hänger över det. En emoji av en bok säger ingenting om "på" – det
+ * är förhållandet mellan två saker som är ordet, så det är det som ritas.
+ * `sak` är det som placeras, `plats` det den placeras i förhållande till.
+ * 'bord', 'lada' och 'vagg' ritas som figurer; resten är emoji.
+ *
+ * Katten sov förut under "sängen". Det finns ingen säng-emoji man kan lägga
+ * något under, så den sover under bordet – samma bord som boken ligger på
+ * och lampan hänger över, vilket gör skillnaden mellan orden tydligare.
+ */
+export const LAGESORD: {
+  mening: string;
+  svar: Lage;
+  fel: [string, string];
+  sak: string;
+  plats: string;
+  plats2?: string;
+}[] = [
+  { mening: 'Boken ligger ___ bordet.', svar: 'på', fel: ['under', 'bakom'], sak: '📕', plats: 'bord' },
+  { mening: 'Katten sover ___ bordet.', svar: 'under', fel: ['på', 'framför'], sak: '🐈', plats: 'bord' },
+  { mening: 'Hunden står ___ dörren.', svar: 'framför', fel: ['i', 'mellan'], sak: '🐕', plats: '🚪' },
+  { mening: 'Bollen är ___ lådan.', svar: 'i', fel: ['på', 'bredvid'], sak: '⚽', plats: 'lada' },
+  { mening: 'Lampan hänger ___ bordet.', svar: 'över', fel: ['under', 'i'], sak: '💡', plats: 'bord' },
+  { mening: 'Stolen står ___ bordet och väggen.', svar: 'mellan', fel: ['på', 'under'],
+    sak: '🪑', plats: 'vagg', plats2: 'bord' },
+  { mening: 'Väskan står ___ stolen.', svar: 'bredvid', fel: ['i', 'över'], sak: '🎒', plats: '🪑' },
+  { mening: 'Barnet gömmer sig ___ trädet.', svar: 'bakom', fel: ['på', 'mellan'], sak: '🧒', plats: '🌳' },
 ];
 
 // ── Rim ─────────────────────────────────────────────────────────────────────
@@ -167,7 +190,7 @@ export const RIM: { ord: string; rim: string; emoji: string; rimEmoji: string; f
   { ord: 'sol', rim: 'stol', emoji: '☀️', rimEmoji: '🪑', fel: [['bil', '🚗'], ['hus', '🏠']] },
   { ord: 'katt', rim: 'hatt', emoji: '🐈', rimEmoji: '🎩', fel: [['bok', '📕'], ['sko', '👟']] },
   { ord: 'mus', rim: 'hus', emoji: '🐭', rimEmoji: '🏠', fel: [['bil', '🚗'], ['boll', '⚽']] },
-  { ord: 'bil', rim: 'pil', emoji: '🚗', rimEmoji: '➡️', fel: [['ko', '🐄'], ['tak', '🏠']] },
+  { ord: 'bil', rim: 'pil', emoji: '🚗', rimEmoji: '➡️', fel: [['ko', '🐄'], ['hus', '🏠']] },
   { ord: 'ko', rim: 'sko', emoji: '🐄', rimEmoji: '👟', fel: [['ros', '🌹'], ['sol', '☀️']] },
   { ord: 'boll', rim: 'troll', emoji: '⚽', rimEmoji: '🧌', fel: [['fisk', '🐟'], ['bok', '📕']] },
   { ord: 'hand', rim: 'sand', emoji: '✋', rimEmoji: '🏖️', fel: [['fot', '🦶'], ['öra', '👂']] },
@@ -199,7 +222,24 @@ export const MANADER = [
 
 /** en-ord och ett-ord, för "En eller ett". */
 export const EN_ORD = ['bok', 'bil', 'stol', 'katt', 'hund', 'boll', 'penna', 'lampa', 'blomma', 'sked'];
-export const ETT_ORD = ['hus', 'bord', 'äpple', 'tåg', 'öga', 'brev', 'glas', 'träd', 'barn', 'ljus'];
+/* "bord" byttes mot "ägg": det finns ingen bild av ett bord, och en fråga om
+   ett substantiv ska ha en bild av det. */
+export const ETT_ORD = ['hus', 'ägg', 'äpple', 'tåg', 'öga', 'brev', 'glas', 'träd', 'barn', 'ljus'];
+
+/**
+ * Bilden till substantiven i en/ett, den/det och en/flera.
+ *
+ * Nyckeln är obestämd form. Bilden hjälper eleven att förstå VAD ordet är,
+ * och frågan blir då bara den grammatiska. `bildTill()` hittar även bestämd
+ * form och plural.
+ */
+export const SUBSTANTIV_BILDER: Record<string, string> = {
+  bok: '📕', bil: '🚗', stol: '🪑', katt: '🐈', hund: '🐕', boll: '⚽',
+  penna: '✏️', lampa: '💡', blomma: '🌷', sked: '🥄',
+  hus: '🏠', ägg: '🥚', äpple: '🍎', tåg: '🚆', öga: '👁️', brev: '✉️',
+  glas: '🥛', träd: '🌳', barn: '🧒', ljus: '🕯️',
+  hand: '✋', fot: '🦶',
+};
 /* Plural, för adjektivets flertalsform. Fanns inte förut: "flera"-frågan
    hade substantivet hårdkodat till "bilar", så varje sådan fråga såg
    likadan ut och kunde komma upp fyra gånger i samma pass. */
@@ -218,9 +258,25 @@ export const DEN_ORD = [
   'bollen', 'pennan', 'lampan', 'blomman', 'skeden',
 ];
 export const DET_ORD = [
-  'huset', 'bordet', 'äpplet', 'tåget', 'ögat',
+  'huset', 'ägget', 'äpplet', 'tåget', 'ögat',
   'brevet', 'glaset', 'trädet', 'barnet', 'ljuset',
 ];
+
+/**
+ * Bilden till ett substantiv i vilken form som helst.
+ *
+ * DEN_ORD/DET_ORD står i samma ordning som EN_ORD/ETT_ORD, och EN_FLERA har
+ * formerna parvis, så bestämd form och plural slås upp via obestämd form.
+ */
+export function bildTill(ord: string): string | undefined {
+  if (SUBSTANTIV_BILDER[ord]) return SUBSTANTIV_BILDER[ord];
+  const iDen = DEN_ORD.indexOf(ord);
+  if (iDen >= 0) return SUBSTANTIV_BILDER[EN_ORD[iDen]];
+  const iDet = DET_ORD.indexOf(ord);
+  if (iDet >= 0) return SUBSTANTIV_BILDER[ETT_ORD[iDet]];
+  const par = EN_FLERA.find(([, flera]) => flera === ord);
+  return par ? SUBSTANTIV_BILDER[par[0]] : undefined;
+}
 
 /** [singular, plural] */
 export const EN_FLERA: [string, string][] = [

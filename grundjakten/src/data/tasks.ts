@@ -1,7 +1,7 @@
 import type { Exercise, GruppMeta, TaskDef } from '@/types';
 import {
   ADJEKTIV, ADJEKTIVFORMER, ALFABETET, CK_LJUDET, DEN_ORD, DET_ORD, DJUR, DUBBELTECKNING,
-  EGENNAMN, EN_FLERA,
+  EGENNAMN, EN_FLERA, bildTill,
   EN_ORD, ETT_ORD, FARGER, FLERTAL_ORD, GATOR, HOR_INTE_IHOP, J_LJUDET_G, J_LJUDET_J,
   J_LJUDET_OVRIGA, KONSONANTER, KORTA_ORD, KORTA_VOKALER, LAGESORD, LANGA_VOKALER,
   LIKNELSER_DJUR, LJUDSTRIDIGA, MANADER, MOTSATSORD, M_LJUDET, NG_LJUDET_N,
@@ -111,6 +111,7 @@ function ordparQuiz(par: [string, string][], seed: number, fraga: (ord: string) 
         shown: { word: fraga1 },
         ratt: { word: svar },
         fel: fel.map((o) => ({ word: o })),
+        langsam: true,
       },
       rng
     );
@@ -232,16 +233,25 @@ const SVENSKA_1: TaskDef[] = [
         const ord = pick(denOrd ? DEN_ORD : DET_ORD, rng);
         return quiz(
           {
-            prompt: `Säger man den eller det ${ord}?`,
+            // Kommatecknen ger talsyntesen en paus runt de två orden eleven
+            // väljer mellan. Utan dem flöt "den eller det" ihop.
+            prompt: `Säger man den, eller det, ${ord}?`,
             replay: ord,
-            shown: { word: ord },
+            shown: { word: ord, emoji: bildTill(ord) },
             ratt: { word: denOrd ? 'den' : 'det' },
             fel: [{ word: denOrd ? 'det' : 'den' }],
             compact: true,
+            langsam: true,
           },
           rng
         );
       }) },
+
+  // En eller ett finns också i Svenska 2. Här ligger den bredvid Den eller
+  // det, där den hör hemma: båda handlar om samma sak, om ordet är ett
+  // en-ord eller ett ett-ord.
+  { id: 'gram-en-ett-s1', grupp: 'Grammatik', namn: 'En eller ett', niva: 1,
+    build: (seed) => enEllerEtt(seed + 101) },
 
   { id: 'skriv-bygg-meningen', grupp: 'Skriva blandat', namn: 'Bygg meningen', niva: 1,
     build: (seed) => byggMeningen(seed) },
@@ -259,9 +269,15 @@ const SVENSKA_1: TaskDef[] = [
           {
             prompt: 'Vilket ord passar i meningen?',
             replay: item.mening.replace('___', item.svar),
-            shown: { sentence: item.mening },
+            // Bilden visar läget – boken PÅ bordet – så att eleven kan se
+            // svaret framför sig i stället för att bara gissa på ordet.
+            shown: {
+              sentence: item.mening,
+              scen: { lage: item.svar, sak: item.sak, plats: item.plats, plats2: item.plats2 },
+            },
             ratt: { word: item.svar },
             fel: item.fel.map((f) => ({ word: f })),
+            langsam: true,
           },
           rng
         )
@@ -358,6 +374,7 @@ const SVENSKA_2: TaskDef[] = [
             ratt: { word: egen ? versal : gemen, say: ord },
             fel: [{ word: egen ? gemen : versal, say: ord }],
             compact: true,
+            langsam: true,
           },
           rng
         );
@@ -384,9 +401,10 @@ const SVENSKA_2: TaskDef[] = [
           {
             prompt: 'Vilken form av ordet passar?',
             replay: mening.replace('___', ratt),
-            shown: { sentence: mening },
+            shown: { sentence: mening, emoji: bildTill(substantiv) },
             ratt: { word: ratt },
             fel: fel.map((f) => ({ word: f })),
+            langsam: true,
           },
           rng
         );
@@ -402,9 +420,10 @@ const SVENSKA_2: TaskDef[] = [
             // är inte svenska, och att böja rätt i frågan vore att ge svaret.
             prompt: 'Vad heter det när det är flera?',
             replay: `en ${ental}, flera ${flertal}`,
-            shown: { word: ental },
+            shown: { word: ental, emoji: bildTill(ental) },
             ratt: { word: flertal },
             fel: fel.map((f) => ({ word: f })),
+            langsam: true,
           },
           rng
         );
@@ -467,6 +486,7 @@ const SVENSKA_2: TaskDef[] = [
             shown: { word: VECKODAGAR[i] },
             ratt: { word: VECKODAGAR[svarIndex] },
             fel: fel.map((d) => ({ word: d })),
+            langsam: true,
           },
           rng
         );
@@ -618,6 +638,7 @@ const SVENSKA_4: TaskDef[] = [
             ratt: { word: langVokal ? 'lång' : 'kort' },
             fel: [{ word: langVokal ? 'kort' : 'lång' }],
             compact: true,
+            langsam: true,
           },
           rng
         );
@@ -701,12 +722,14 @@ function enEllerEtt(seed: number): Exercise[] {
     const ord = pick(enOrd ? EN_ORD : ETT_ORD, rng);
     return quiz(
       {
-        prompt: `Säger man en eller ett ${ord}?`,
+        // Kommatecknen ger en paus runt "en" och "ett", se Den eller det.
+        prompt: `Säger man en, eller ett, ${ord}?`,
         replay: `${enOrd ? 'en' : 'ett'} ${ord}`,
-        shown: { word: ord },
+        shown: { word: ord, emoji: bildTill(ord) },
         ratt: { word: enOrd ? 'en' : 'ett' },
         fel: [{ word: enOrd ? 'ett' : 'en' }],
         compact: true,
+        langsam: true,
       },
       rng
     );
@@ -733,6 +756,7 @@ function valjOrdklass(seed: number, klass: 'substantiv' | 'verb' | 'adjektiv'): 
         replay: svar,
         ratt: { word: svar },
         fel: fel.map((o) => ({ word: o })),
+        langsam: true,
       },
       rng
     );
@@ -764,6 +788,7 @@ function saknadeOrdet(seed: number, bank: { mening: string; svar: string }[]): E
       // Hela meningen läses upp med ordet i – då hör eleven det i sitt
       // sammanhang i stället för som ett löst ord.
       replay: item.mening.replace('___', item.svar),
+      langsam: true,
     })
   );
 }
