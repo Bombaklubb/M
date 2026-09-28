@@ -268,7 +268,10 @@ const SVENSKA_1: TaskDef[] = [
         quiz(
           {
             prompt: 'Vilket ord passar i meningen?',
-            replay: item.mening.replace('___', item.svar),
+            // Upprepningen läser meningen med en PAUS där ordet saknas – inte
+            // med svaret i. Förut sa den "Hunden står framför dörren", och då
+            // behövde eleven bara känna igen ordet hon nyss hört.
+            replay: item.mening.replace('___', '…'),
             // Bilden visar läget – boken PÅ bordet – så att eleven kan se
             // svaret framför sig i stället för att bara gissa på ordet.
             shown: {
@@ -400,7 +403,7 @@ const SVENSKA_2: TaskDef[] = [
         return quiz(
           {
             prompt: 'Vilken form av ordet passar?',
-            replay: mening.replace('___', ratt),
+            replay: mening.replace('___', '…'),
             shown: { sentence: mening, emoji: bildTill(substantiv) },
             ratt: { word: ratt },
             fel: fel.map((f) => ({ word: f })),
@@ -419,7 +422,9 @@ const SVENSKA_2: TaskDef[] = [
             // Ordet visas i stället för att stoppas in i frågan: "flera bok"
             // är inte svenska, och att böja rätt i frågan vore att ge svaret.
             prompt: 'Vad heter det när det är flera?',
-            replay: `en ${ental}, flera ${flertal}`,
+            // Bara ordet eleven ser. Förut "en barn, flera barn": svaret, och
+            // dessutom fel svenska för ett-orden.
+            replay: ental,
             shown: { word: ental, emoji: bildTill(ental) },
             ratt: { word: flertal },
             fel: fel.map((f) => ({ word: f })),
@@ -482,7 +487,7 @@ const SVENSKA_2: TaskDef[] = [
         return quiz(
           {
             prompt: `Vilken dag kommer ${efter ? 'efter' : 'före'} ${VECKODAGAR[i]}?`,
-            replay: VECKODAGAR[svarIndex],
+            replay: `Vilken dag kommer ${efter ? 'efter' : 'före'} ${VECKODAGAR[i]}?`,
             shown: { word: VECKODAGAR[i] },
             ratt: { word: VECKODAGAR[svarIndex] },
             fel: fel.map((d) => ({ word: d })),
@@ -591,7 +596,7 @@ const SVENSKA_3: TaskDef[] = [
         return quiz(
           {
             prompt: 'Vilket djur passar i uttrycket?',
-            replay: `${item.text} ${item.svar}`,
+            replay: item.text,
             shown: { sentence: item.text },
             ratt: { emoji: item.emoji, say: item.svar },
             fel: fel.map((f) => ({ emoji: f.emoji, say: f.svar })),
@@ -706,7 +711,7 @@ function nastaBokstav(seed: number, versal: boolean): Exercise[] {
     return quiz(
       {
         prompt: `Vilken bokstav kommer efter ${ALFABETET[i]}?`,
-        replay: svar,
+        replay: `Vilken bokstav kommer efter ${ALFABETET[i]}?`,
         shown: { letter: visa(ALFABETET[i]) },
         ratt: { letter: visa(svar), say: svar },
         fel: fel.map((b) => ({ letter: visa(b), say: b })),
@@ -724,7 +729,9 @@ function enEllerEtt(seed: number): Exercise[] {
       {
         // Kommatecknen ger en paus runt "en" och "ett", se Den eller det.
         prompt: `Säger man en, eller ett, ${ord}?`,
-        replay: `${enOrd ? 'en' : 'ett'} ${ord}`,
+        // Bara ordet. Förut "ett ljus" – det rätta svaret, uppläst av den
+        // stora öronknappen. Läraren hörde det på en iPad.
+        replay: ord,
         shown: { word: ord, emoji: bildTill(ord) },
         ratt: { word: enOrd ? 'en' : 'ett' },
         fel: [{ word: enOrd ? 'ett' : 'en' }],
@@ -753,7 +760,7 @@ function valjOrdklass(seed: number, klass: 'substantiv' | 'verb' | 'adjektiv'): 
     return quiz(
       {
         prompt: `Vilket ord är ett ${klass}?`,
-        replay: svar,
+        replay: `Vilket ord är ett ${klass}?`,
         ratt: { word: svar },
         fel: fel.map((o) => ({ word: o })),
         langsam: true,
@@ -769,7 +776,7 @@ function sammansattaQuiz(seed: number): Exercise[] {
     return quiz(
       {
         prompt: `Vilket ord börjar på ${forled}?`,
-        replay: helt,
+        replay: `Vilket ord börjar på ${forled}?`,
         shown: { emoji },
         ratt: { word: helt },
         fel: fel.map((o) => ({ word: o })),

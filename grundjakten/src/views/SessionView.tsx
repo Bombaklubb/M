@@ -100,7 +100,13 @@ export function SessionView({
   const [vantarPaNasta, setVantarPaNasta] = useState(false);
 
   const exercise = currentExercise(queue);
-  useAutoSpeak(exercise?.prompt ?? null, profile.settings.autoSpeakPrompts);
+  // Ljuda ihop läser sin fråga själv, i samma följd som ljuden (se
+  // ChoiceExercise). Läste den här också, klipptes frågan av när ljuden
+  // startade – varje ny uppläsning tystar den förra.
+  useAutoSpeak(
+    exercise && exercise.kind !== 'blend-word' ? exercise.prompt : null,
+    profile.settings.autoSpeakPrompts
+  );
 
   useEffect(() => {
     setWrongId(null);
@@ -178,7 +184,13 @@ export function SessionView({
       setResults(perItem);
       setQueue(markKlarad(nasteQ));
       // Säg svaret. Eleven kan inte läsa det som står på skärmen.
-      window.setTimeout(() => void play(exercise.replay), 700);
+      //
+      // Det rätta ALTERNATIVETS uppläsning, inte uppgiftens upprepning. De
+      // var förut ofta samma sak – upprepningen sa svaret – och det var
+      // felet läraren hörde: "ett ljus" redan innan eleven svarat. Nu säger
+      // upprepningen frågan, och facit måste hämtas från alternativet.
+      // Uppgifter utan alternativ (skriv ordet) har svaret i upprepningen.
+      window.setTimeout(() => void play(ratt?.say ?? exercise.replay), 700);
       window.setTimeout(() => setVantarPaNasta(true), BLIXT_MS);
       return;
     }
@@ -234,7 +246,7 @@ export function SessionView({
       </main>
 
       <ListenAgainBar
-        replay={exercise.replay}
+        replay={exercise.kind === 'blend-word' ? exercise.parts : exercise.replay}
         onHome={onHome}
         onNext={vantarPaNasta ? gaVidare : undefined}
       />

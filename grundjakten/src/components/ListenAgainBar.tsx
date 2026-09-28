@@ -6,7 +6,11 @@ import { LjudKnapp } from '@/components/LjudKnapp';
 import { cn } from '@/lib/utils';
 
 interface Props {
-  replay: SpeechToken;
+  /**
+   * Det örat spelar upp. En lista spelas i följd – Ljuda ihop upprepar
+   * ljuden ett och ett, aldrig hela ordet, för hela ordet ÄR svaret.
+   */
+  replay: SpeechToken | SpeechToken[];
   onHome: () => void;
   /** Satt först när uppgiften är klarad. Då är pilen enda vägen vidare. */
   onNext?: () => void;
@@ -27,7 +31,7 @@ interface Props {
  * den hon ska trycka på härnäst.
  */
 export function ListenAgainBar({ replay, onHome, onNext }: Props) {
-  const { speaking, speak } = useSpeak();
+  const { speaking, speak, speakAll } = useSpeak();
   const { av } = useLjud();
 
   return (
@@ -63,7 +67,7 @@ export function ListenAgainBar({ replay, onHome, onNext }: Props) {
       <button
         type="button"
         aria-label={av ? 'Lyssna igen. Ljudet är avstängt.' : 'Lyssna igen'}
-        onClick={() => void speak(replay)}
+        onClick={() => void (Array.isArray(replay) ? speakAll(replay, 380) : speak(replay))}
         className={cn(
           'btn-pop grid h-16 w-16 min-h-0 place-items-center rounded-full border-aqua-700',
           'bg-aqua-500 text-4xl text-white',
