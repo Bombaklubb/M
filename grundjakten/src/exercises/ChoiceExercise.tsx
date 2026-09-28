@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import type { Choice, Exercise } from '@/types';
 import { ChoiceGrid } from '@/components/ChoiceGrid';
 import { LETTER_BY_ID } from '@/data/letters';
@@ -29,21 +29,25 @@ export function ChoiceExercise({
   wrongId: string | null;
 }) {
   const { speakAll } = useSpeak();
-  const [blended, setBlended] = useState(false);
+  /** Id på den ljudningsfråga som redan spelats, så att den bara spelas en gång. */
+  const spelad = useRef<string | null>(null);
 
+  // Ljudningsövningen läser frågan och sedan grafemen i följd – och BARA
+  // grafemen. Förut kom hela ordet efteråt ("s… o… l… sol"), och då hade
+  // appen ljudat ihop åt eleven: frågan är ju vilken bild det blir.
+  //
+  // Den spelades dessutom aldrig. Effekten satte ett tillstånd som den själv
+  // berodde på, React städade bort timern vid omritningen, och eleven hörde
+  // bara frågan – inga ljud. Nu markeras frågan som spelad först när timern
+  // faktiskt gått.
   useEffect(() => {
-    setBlended(false);
-  }, [exercise.id]);
-
-  // Ljudningsövningen spelar grafemen i följd innan eleven väljer.
-  useEffect(() => {
-    if (exercise.kind !== 'blend-word' || blended) return;
-    setBlended(true);
+    if (exercise.kind !== 'blend-word' || spelad.current === exercise.id) return;
     const timer = window.setTimeout(() => {
-      void speakAll([...exercise.parts, exercise.replay], 380);
-    }, 600);
+      spelad.current = exercise.id;
+      void speakAll([exercise.prompt, ...exercise.parts], 380);
+    }, 400);
     return () => window.clearTimeout(timer);
-  }, [exercise, blended, speakAll]);
+  }, [exercise, speakAll]);
 
   const header = () => {
     if (exercise.kind === 'letter-picture-match') {

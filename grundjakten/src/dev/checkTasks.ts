@@ -518,6 +518,66 @@ export function kollaVersaler(seeds = [1, 12345]): Fel[] {
   return fel;
 }
 
+/**
+ * Uppläsningen får inte säga svaret.
+ *
+ * Läraren hörde "ett ljus" när eleven skulle välja mellan en och ett – den
+ * stora öronknappen läste upp det rätta svaret. Samma sak fanns i fler
+ * uppgifter. Regeln: frågan och upprepningen får nämna det rätta
+ * alternativet bara om de också nämner minst ett av de felaktiga. "Säger man
+ * den, eller det, ljuset?" nämner båda och är en fråga; "ett ljus" nämner
+ * bara det rätta och är ett facit.
+ *
+ * Gäller flervalsfrågorna. Skrivuppgifterna ska läsa upp ordet – där är
+ * uppgiften att skriva det man hör.
+ */
+export function kollaAvslojandeUppläsning(seeds = [1, 12345, 987654]): Fel[] {
+  const fel: Fel[] = [];
+  const nam = (text: string, ord: string) => {
+    const t = ` ${text.toLocaleLowerCase('sv-SE').replace(/[.,?!:;…]/g, ' ')} `;
+    return t.includes(` ${ord.toLocaleLowerCase('sv-SE').trim()} `);
+  };
+  // Uppgifter där det HÖRDA ordet är själva frågan, så att höra det inte är
+  // att få svaret:
+  //  - välj stavning: "jacka" och "gjacka" låter lika – det är poängen
+  //  - hur stavas ordet: långt eller kort vokalljud ska höras, inte ses
+  //  - vilken siffra betyder åtta: räkneordet är frågan
+  //  - liten bokstav till stor: bokstavens namn är detsamma i båda
+  const horOchValj = [
+    /^Vilken stavning är rätt\?$/, /^Hur stavas ordet /, /^Vilken siffra betyder /,
+    /^Vilken liten bokstav hör ihop med den stora\?$/,
+  ];
+  for (const task of TASKS) {
+    for (const seed of seeds) {
+      const pass = task.build(seed);
+      // En instruktion som är likadan i hela passet ("Vilket ord passar i
+      // meningen?") innehåller ord av en slump – "i" – och är inget svar.
+      const fastInstruktion = new Set(pass.map((e) => e.prompt.text)).size === 1;
+      for (const ex of pass) {
+        if (ex.kind !== 'quiz') continue;
+        if (horOchValj.some((r) => r.test(ex.prompt.text))) continue;
+        const ratt = ex.choices.find((c) => c.correct);
+        if (!ratt) continue;
+        // Svaret står redan på skärmen: "barn" blir "barn" i plural, och
+        // att läsa upp ordet eleven ser avslöjar ingenting.
+        if (ex.shown?.word && nam(ex.shown.word, ratt.say.text)) continue;
+        const felaktiga = ex.choices.filter((c) => !c.correct).map((c) => c.say.text);
+        const tokens = fastInstruktion
+          ? ([['öronknappen', ex.replay]] as const)
+          : ([['frågan', ex.prompt], ['öronknappen', ex.replay]] as const);
+        for (const [vad, token] of tokens) {
+          if (nam(token.text, ratt.say.text) && !felaktiga.some((f) => nam(token.text, f))) {
+            fel.push({ task: task.id, seed, meddelande: `${vad} säger svaret: "${token.text}"` });
+          }
+        }
+      }
+    }
+  }
+  // En rad per uppgift räcker – samma fel på tre frön är samma fel.
+  const sedda = new Set<string>();
+  return fel.filter((f) => (sedda.has(f.task + f.meddelande.split(':')[0]) ? false : (sedda.add(f.task + f.meddelande.split(':')[0]), true)));
+}
+
 /** Hur många bildord en station minst måste låsa upp för att bära ett pass. */
 const MIN_BILDORD = 3;
 

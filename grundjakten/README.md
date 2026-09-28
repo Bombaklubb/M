@@ -527,6 +527,35 @@ kräver en bild till varje ord.
 *En eller ett* finns både i Svenska 1, bredvid *Den eller det*, och i
 Svenska 2.
 
+### Uppläsningen säger aldrig svaret
+
+Läraren hörde "ett ljus" när eleven skulle välja mellan *en* och *ett*: den
+stora öronknappen läste upp det rätta svaret. Samma fel fanns i fler
+uppgifter – lägesorden ("Hunden står framför dörren"), adjektivformen,
+en/flera ("en barn, flera barn", dessutom fel svenska), veckodag före/efter,
+välj ordklass, sammansatta ord, liknelser och nästa bokstav. Upprepningen
+säger nu frågan, ordet eleven ser, eller meningen med en paus där ordet
+saknas ("Boken ligger … bordet").
+
+*Ljuda ihop* hade samma fel på två sätt: efter ljuden kom hela ordet ("s… o…
+l… sol"), och örat sa hela ordet. Då hade appen ljudat ihop åt eleven. Nu
+spelas bara ljuden, både av sig själv och från örat. Den automatiska
+ljudningen hade dessutom aldrig spelats – en React-effekt städade bort sin
+egen timer – så eleven hörde bara frågan tills hon tryckte på örat.
+
+Facit efter tredje missen läser nu upp det rätta **alternativet** i stället
+för upprepningen, som förut råkade vara svaret.
+
+Undantag, där det hörda ordet är själva frågan: *Välj rätt stavning*
+("jacka"/"gjacka" låter lika), *Lång eller kort vokal* (skillnaden ska
+höras), *Vilken siffra betyder åtta* och *Stor/liten bokstav*.
+Skrivuppgifterna läser också ordet – där är uppgiften att skriva det man
+hör.
+
+`kollaAvslojandeUppläsning()` i `dev/checkTasks.ts` bygger alla
+flervalsfrågor och larmar när frågan eller örat nämner det rätta
+alternativet utan att nämna något av de felaktiga.
+
 ### Långsammare uppläsning av grammatikfrågor
 
 "Säger man den eller det bordet?" lästes i vanlig takt, och "den eller det"

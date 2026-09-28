@@ -129,6 +129,8 @@ function makeBlend(word: WordEntry, rng: Rng): Exercise | null {
       rng
     ),
     prompt: sv(`p-blend-${word.id}`, 'Ljuda ihop ordet. Vilken bild blir det?'),
+    // Spelas ALDRIG upp som upprepning: örat spelar `parts`, ljud för ljud
+    // (se SessionView). Hela ordet är svaret och sägs först i facit.
     replay: word.say,
     xp: 5,
   };
