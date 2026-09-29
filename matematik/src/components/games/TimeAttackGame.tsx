@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { checkFillIn } from '../../utils/answerCheck';
 import { motion, AnimatePresence } from 'motion/react';
 import { useApp } from '../../contexts/AppContext';
 import AppHeader from '../AppHeader';
@@ -128,11 +129,7 @@ export default function TimeAttackGame() {
       const correct = currentEx.options[currentEx.correctIndex].toLowerCase();
       isCorrect = trimmed === correct;
     } else if (currentEx.type === 'fill-in') {
-      const correct = String(currentEx.answer).replace(',', '.').toLowerCase();
-      isCorrect = trimmed === correct;
-      if (!isCorrect && currentEx.acceptableAnswers) {
-        isCorrect = currentEx.acceptableAnswers.some(a => String(a).replace(',', '.').toLowerCase() === trimmed);
-      }
+      isCorrect = checkFillIn(input, currentEx as any);
     } else if (currentEx.type === 'true-false') {
       const userTrue = trimmed === 'sant' || trimmed === 's' || trimmed === 'true' || trimmed === '1';
       const userFalse = trimmed === 'falskt' || trimmed === 'f' || trimmed === 'false' || trimmed === '0';

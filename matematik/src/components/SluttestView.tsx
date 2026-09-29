@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { checkFillIn } from '../utils/answerCheck';
 import {
   Exercise, MultipleChoiceExercise, FillInExercise,
   TrueFalseExercise, ClockSetExercise, Topic,
@@ -370,10 +371,7 @@ function Test({
               onChange={setInput}
               onSubmit={() => {
                 const ex = exercise as FillInExercise;
-                const t = input.trim().replace(',', '.');
-                const ca = String(ex.answer).replace(',', '.');
-                const acc = (ex.acceptableAnswers ?? []).map(a => String(a).replace(',', '.').toLowerCase());
-                commit(input, t.toLowerCase() === ca.toLowerCase() || acc.includes(t.toLowerCase()));
+                commit(input, checkFillIn(input, ex));
               }}
             />
           )}

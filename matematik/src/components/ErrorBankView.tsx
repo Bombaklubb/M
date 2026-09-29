@@ -8,6 +8,7 @@ import { addPoints } from '../utils/storage';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
 import { MultipleChoiceExercise, TrueFalseExercise } from '../types';
+import { checkFillIn } from '../utils/answerCheck';
 import { useScrollTop } from '../utils/scroll';
 
 const BG: React.CSSProperties = {
@@ -48,13 +49,7 @@ export default function ErrorBankView({ worldId }: { worldId?: WorldId }) {
       if (!ex || answered) return;
       let isCorrect = false;
       if (ex.type === 'fill-in') {
-        const correctStr = String((ex as any).answer).replace(',', '.');
-        const acceptable = ((ex as any).acceptableAnswers ?? []).map((a: any) =>
-          String(a).replace(',', '.').toLowerCase()
-        );
-        isCorrect =
-          ans.trim().replace(',', '.').toLowerCase() === correctStr.toLowerCase() ||
-          acceptable.includes(ans.trim().replace(',', '.').toLowerCase());
+        isCorrect = checkFillIn(ans, ex as any);
       } else if (ex.type === 'multiple-choice') {
         isCorrect = ans === String((ex as any).correctIndex);
       } else if (ex.type === 'true-false') {

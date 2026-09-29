@@ -8,7 +8,7 @@ import { Confetti } from './magicui/confetti';
 import ProblemFigure from './ProblemFigure';
 import { useScrollTop } from '../utils/scroll';
 import {
-  getProblemsForWorld, LEVEL_META, checkSubTaskAnswer, collectGoal, subTaskCount,
+  getProblemsForWorld, LEVEL_META, checkSubTaskAnswer, collectGoal, subTaskCount, collectKey,
   type RichProblem, type ProblemLevel, type SubTask,
 } from '../data/problemSolving';
 import {
@@ -84,7 +84,9 @@ export default function ProblemSolvingView({ worldId }: { worldId?: WorldId }) {
     if (!val) return;
     const already = getFound(progress, key);
     const ok = checkSubTaskAnswer(st, val);
-    const isNew = ok && !already.some(a => a.toLowerCase() === val.toLowerCase());
+    // Jämför som samma svar oavsett skrivsätt ("3+7" = "3 + 7", "20" = "20 kr")
+    const answerKey = collectKey(st, val);
+    const isNew = ok && !already.some(a => collectKey(st, a) === answerKey);
     setFeedback(f => ({ ...f, [key]: ok ? 'ok' : 'no' }));
     if (isNew) {
       const after = addFound(sid, key, val);

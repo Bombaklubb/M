@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Topic, Exercise, MultipleChoiceExercise, FillInExercise, TrueFalseExercise, ClockSetExercise, OrderExercise, MatchExercise } from '../types';
+import { checkFillIn } from '../utils/answerCheck';
 import { useApp } from '../contexts/AppContext';
 import { updateAdaptive } from '../utils/adaptive';
 import { recordError } from '../utils/errorBank';
@@ -91,12 +92,7 @@ export default function TopicExercise({ topic }: { topic: Topic }) {
   function answerFillIn() {
     if (state.answered) return;
     const ex = exercise as FillInExercise;
-    const trimmed = input.trim().replace(',', '.');
-    const correctStr = String(ex.answer).replace(',', '.');
-    const acceptable = (ex.acceptableAnswers ?? []).map(a => String(a).replace(',', '.').toLowerCase());
-    const correct =
-      trimmed.toLowerCase() === correctStr.toLowerCase() ||
-      acceptable.includes(trimmed.toLowerCase());
+    const correct = checkFillIn(input, ex);
     commitAnswer(input, correct);
   }
 
