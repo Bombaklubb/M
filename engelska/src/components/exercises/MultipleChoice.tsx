@@ -14,6 +14,11 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
   const [revealed, setRevealed] = useState(false);
   const [showHint, setShowHint] = useState(false);
 
+  // Facit plus alternativ som också är korrekt engelska.
+  const isCorrect = (idx: number) =>
+    idx === exercise.correctIndex || (exercise.alsoCorrect ?? []).includes(idx);
+  const chosenCorrect = selected !== null && isCorrect(selected);
+
   function handleSelect(idx: number) {
     if (revealed) return;
     setSelected(idx);
@@ -26,10 +31,10 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
     if (!revealed) {
       return base + "border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 active:scale-98 cursor-pointer";
     }
-    if (idx === exercise.correctIndex) {
+    if (isCorrect(idx)) {
       return base + "border-green-400 bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-300 animate-pop";
     }
-    if (idx === selected && selected !== exercise.correctIndex) {
+    if (idx === selected && !chosenCorrect) {
       return base + "border-red-400 bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-300 animate-shake";
     }
     return base + "border-gray-100 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-400 dark:text-gray-400";
@@ -78,9 +83,9 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
           >
             <span className="inline-flex items-center gap-3">
               <span className="w-7 h-7 rounded-full border-2 border-current flex items-center justify-center text-sm flex-shrink-0">
-                {revealed && idx === exercise.correctIndex
+                {revealed && isCorrect(idx)
                   ? "✓"
-                  : revealed && idx === selected && selected !== exercise.correctIndex
+                  : revealed && idx === selected && !chosenCorrect
                   ? "✗"
                   : String.fromCharCode(65 + idx)}
               </span>
@@ -93,7 +98,7 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
       {/* Annonserar resultatet för skärmläsare (syns inte visuellt – ✓/✗ visas i knappen) */}
       <div role="status" aria-live="polite" className="sr-only">
         {revealed
-          ? selected === exercise.correctIndex
+          ? chosenCorrect
             ? "Rätt svar!"
             : `Fel. Rätt svar är ${exercise.options[exercise.correctIndex]}.`
           : ""}
@@ -109,7 +114,7 @@ export default function MultipleChoice({ exercise, onAnswer, isLast }: Props) {
         <div className="flex justify-end pt-2">
           <button
             onClick={() => onAnswer(
-              selected === exercise.correctIndex,
+              chosenCorrect,
               exercise.options[selected!] ?? "",
               exercise.options[exercise.correctIndex]
             )}

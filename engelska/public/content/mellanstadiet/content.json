@@ -5620,7 +5620,7 @@
         {
           "id": "mel-sa-2",
           "type": "multiple-choice",
-          "question": "I couldn't find ___ information online.",
+          "question": "I couldn't find ___ information online. (någon … alls)",
           "options": [
             "some",
             "any",
@@ -6321,7 +6321,10 @@
             "–"
           ],
           "correctIndex": 1,
-          "explanation": "'An' används före vokalljud. 'Elephant' börjar med e. An elephant."
+          "explanation": "'An' används före vokalljud, och 'elephant' börjar med e: an elephant. 'The elephant' går också – då menar man en bestämd elefant som ni redan pratat om.",
+          "alsoCorrect": [
+            2
+          ]
         },
         {
           "id": "mel-st-14",

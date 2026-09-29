@@ -3266,7 +3266,7 @@
         {
           "id": "hog-g14-6",
           "type": "multiple-choice",
-          "question": "När använder man INGEN artikel? 'She goes to ___ hospital every day (som sjuksköterska).'",
+          "question": "När använder man INGEN artikel? 'I usually go to ___ bed at nine.'",
           "options": [
             "a",
             "an",
@@ -3274,7 +3274,7 @@
             "– (ingen artikel)"
           ],
           "correctIndex": 3,
-          "explanation": "När man talar om institutioner i sin 'funktion' (hospital = för att jobba), utelämnas artikeln i brittisk engelska."
+          "explanation": "Vissa uttryck med platser tar ingen artikel när man menar platsens vanliga funktion: go to bed (gå och lägga sig), go to school (som elev), go to work. 'Go to the bed' skulle betyda att man går fram till själva sängen."
         },
         {
           "id": "hog-g14-7",
@@ -3308,7 +3308,10 @@
             "–"
           ],
           "correctIndex": 0,
-          "explanation": "Generellt påstående om en art → A dog is man's best friend. (alternativt 'Dogs are...')"
+          "explanation": "Ett generellt påstående om en art kan skrivas på flera sätt: 'A dog is man's best friend', 'The dog is man's best friend' (lite formellare) eller 'Dogs are man's best friends'.",
+          "alsoCorrect": [
+            2
+          ]
         },
         {
           "id": "hog-g14-10",

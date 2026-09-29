@@ -2078,7 +2078,10 @@
             "some"
           ],
           "correctIndex": 1,
-          "explanation": "Apple börjar med vokalljudet A, så vi använder 'an'. An apple."
+          "explanation": "Apple börjar med vokalljudet A, så vi använder 'an': an apple. 'The apple' är också rätt – då menar man ett bestämt äpple.",
+          "alsoCorrect": [
+            2
+          ]
         },
         {
           "id": "lag-g3-2",
@@ -2091,7 +2094,10 @@
             "some"
           ],
           "correctIndex": 2,
-          "explanation": "Dog börjar med konsonanten D, så vi använder 'a'. A dog."
+          "explanation": "Dog börjar med konsonanten D, så vi använder 'a': a dog. 'The dog' är också rätt – då menar man en bestämd hund.",
+          "alsoCorrect": [
+            1
+          ]
         },
         {
           "id": "lag-g3-3",
@@ -2120,7 +2126,10 @@
             "an"
           ],
           "correctIndex": 3,
-          "explanation": "Elephant börjar med vokalljudet E, så vi använder 'an'. An elephant."
+          "explanation": "Elephant börjar med vokalljudet E, så vi använder 'an': an elephant. 'The elephant' är också rätt – då menar man en bestämd elefant.",
+          "alsoCorrect": [
+            1
+          ]
         },
         {
           "id": "lag-g3-6",
@@ -2133,7 +2142,10 @@
             "some"
           ],
           "correctIndex": 2,
-          "explanation": "Book börjar med konsonanten B, så vi använder 'a'. A book."
+          "explanation": "Book börjar med konsonanten B, så vi använder 'a': a book. 'The book' är också rätt – då menar man en bestämd bok.",
+          "alsoCorrect": [
+            1
+          ]
         },
         {
           "id": "lag-g3-7",
@@ -2162,7 +2174,10 @@
             "some"
           ],
           "correctIndex": 2,
-          "explanation": "Ice cream börjar med vokalljudet I, så vi använder 'an'. An ice cream."
+          "explanation": "Ice cream börjar med vokalljudet I, så vi använder 'an': an ice cream. 'The ice cream' är också rätt – då menar man en bestämd glass.",
+          "alsoCorrect": [
+            1
+          ]
         },
         {
           "id": "lag-g3-10",
@@ -2175,7 +2190,10 @@
             "some"
           ],
           "correctIndex": 2,
-          "explanation": "Big börjar med konsonanten B, så vi använder 'a'. A big house."
+          "explanation": "Big börjar med konsonanten B, så vi använder 'a': a big house. 'The big house' är också rätt – då menar man ett bestämt hus.",
+          "alsoCorrect": [
+            1
+          ]
         },
         {
           "id": "lag-g3-11",
@@ -2260,7 +2278,10 @@
             "a"
           ],
           "correctIndex": 3,
-          "explanation": "Yellow börjar med konsonantljudet Y, så vi använder 'a'. A yellow bird."
+          "explanation": "Yellow börjar med konsonantljudet Y, så vi använder 'a': a yellow bird. 'The yellow bird' är också rätt – då menar man en bestämd fågel.",
+          "alsoCorrect": [
+            1
+          ]
         }
       ],
       "helpText": [
@@ -5800,7 +5821,10 @@
             "–"
           ],
           "correctIndex": 1,
-          "explanation": "'An' används före ord som börjar med vokalljud (a, e, i, o, u). An orange."
+          "explanation": "'An' används före ord som börjar med vokalljud (a, e, i, o, u): an orange. 'The orange' är också rätt – då menar man en bestämd apelsin.",
+          "alsoCorrect": [
+            2
+          ]
         },
         {
           "id": "lag-st-7",
@@ -5813,7 +5837,10 @@
             "–"
           ],
           "correctIndex": 1,
-          "explanation": "'A' används före ord som börjar med konsonantljud. A big bus."
+          "explanation": "'A' används före ord som börjar med konsonantljud: a big bus. 'The big bus' är också rätt – då menar man en bestämd buss.",
+          "alsoCorrect": [
+            2
+          ]
         },
         {
           "id": "lag-st-8",
