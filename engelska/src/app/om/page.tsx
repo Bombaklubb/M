@@ -286,7 +286,7 @@ export default function OmPage() {
             eller svårighetsgraden.
           </p>
           <ul className="space-y-1.5 list-disc pl-5 marker:text-emerald-500">
-            <li><strong>Figurer</strong> – din avatar (100–2 500 poäng).</li>
+            <li><strong>Figurer</strong> – din avatar: djur, yrken, fordon, roliga figurer och mytiska varelser (100–5 000 poäng).</li>
             <li><strong>Ramar</strong> – en ram runt figuren (250–3 500 poäng).</li>
             <li><strong>Teman</strong> – en tecknad bakgrund bakom startsidan och världarna: 52 scener och mönster i åtta kategorier, bland annat natur, djur, spel, fantasy, riddare och anime &amp; manga (350–3 500 poäng).</li>
             <li><strong>Effekter</strong> – rörelse och glitter runt figuren (100–3 000 poäng).</li>

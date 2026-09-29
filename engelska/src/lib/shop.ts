@@ -23,7 +23,7 @@ export const RARITY_RING: Record<Rarity, string> = {
 
 // ─── Avatarer ─────────────────────────────────────────────────────────────────
 export type AvatarGroup =
-  | "Djur" | "Fordon" | "Yrken" | "Skoltema" | "Roligt" | "Säsong" | "Fantasi" | "Sällsynt";
+  | "Djur" | "Fordon" | "Yrken" | "Skoltema" | "Roligt" | "Säsong" | "Fantasi" | "Mytiska";
 
 export interface ShopAvatar {
   id: string;
@@ -35,7 +35,7 @@ export interface ShopAvatar {
 }
 
 export const AVATAR_GROUP_ORDER: AvatarGroup[] = [
-  "Djur", "Skoltema", "Fordon", "Yrken", "Roligt", "Säsong", "Fantasi", "Sällsynt",
+  "Djur", "Skoltema", "Fordon", "Yrken", "Roligt", "Säsong", "Fantasi", "Mytiska",
 ];
 
 // OBS: id:n är permanenta — ägda avatarer sparas via id, inte array-index.
@@ -50,19 +50,25 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { id: "av-zebra",      emoji: "🦓", name: "Zebran",        rarity: "rare", price: 400, group: "Djur" },
   { id: "av-giraffe",    emoji: "🦒", name: "Giraffen",      rarity: "rare", price: 400, group: "Djur" },
   { id: "av-otter",      emoji: "🦦", name: "Uttern",        rarity: "rare", price: 400, group: "Djur" },
-  { id: "av-owl2",       emoji: "🦉", name: "Snöugglan",     rarity: "rare", price: 400, group: "Djur" },
+  { id: "av-owl2",       emoji: "🦅", name: "Örnen",     rarity: "rare", price: 400, group: "Djur" },
   { id: "av-peacock",    emoji: "🦚", name: "Påfågeln",      rarity: "epic", price: 1000, group: "Djur" },
   { id: "av-flamingo",   emoji: "🦩", name: "Flamingon",     rarity: "epic", price: 1000, group: "Djur" },
   { id: "av-dodo",       emoji: "🦤", name: "Dronten",       rarity: "legendary", price: 2500, group: "Djur" },
+  { id: "av-shark", emoji: "🦈", name: "Hajen", rarity: "rare", price: 400, group: "Djur" },
+  { id: "av-octopus", emoji: "🐙", name: "Bläckfisken", rarity: "rare", price: 400, group: "Djur" },
+  { id: "av-gorilla", emoji: "🦍", name: "Gorillan", rarity: "rare", price: 400, group: "Djur" },
+  { id: "av-wolf", emoji: "🐺", name: "Vargen", rarity: "epic", price: 1000, group: "Djur" },
+  { id: "av-sauropod", emoji: "🦕", name: "Långhalsen", rarity: "epic", price: 1000, group: "Djur" },
+  { id: "av-trex", emoji: "🦖", name: "T-rexen", rarity: "legendary", price: 2500, group: "Djur" },
 
   // ── Skoltema ──────────────────────────────────────────────────────────────
   { id: "av-bookworm",   emoji: "🤓", name: "Bokmasken",     rarity: "common", price: 100, group: "Skoltema" },
-  { id: "av-painter",    emoji: "🎨", name: "Konstnären",    rarity: "common", price: 100, group: "Skoltema" },
-  { id: "av-musician",   emoji: "🎸", name: "Musikstjärnan", rarity: "common", price: 100, group: "Skoltema" },
-  { id: "av-scientist2", emoji: "🧪", name: "Vetenskapsgeniet", rarity: "rare", price: 400, group: "Skoltema" },
-  { id: "av-wordmaster", emoji: "🔤", name: "Språkmästaren", rarity: "rare", price: 400, group: "Skoltema" },
-  { id: "av-librarian",  emoji: "📚", name: "Bibliotekarien",rarity: "rare", price: 400, group: "Skoltema" },
-  { id: "av-inventor",   emoji: "💡", name: "Uppfinnaren",   rarity: "rare", price: 400, group: "Skoltema" },
+  { id: "av-painter",    emoji: "🧑‍🎨", name: "Konstnären",    rarity: "common", price: 100, group: "Skoltema" },
+  { id: "av-musician",   emoji: "🎸", name: "Elgitarren", rarity: "common", price: 100, group: "Skoltema" },
+  { id: "av-scientist2", emoji: "🧑‍🔬", name: "Vetenskapsgeniet", rarity: "rare", price: 400, group: "Skoltema" },
+  { id: "av-wordmaster", emoji: "🔤", name: "Alfabetet", rarity: "rare", price: 400, group: "Skoltema" },
+  { id: "av-librarian",  emoji: "📚", name: "Bokhögen",rarity: "rare", price: 400, group: "Skoltema" },
+  { id: "av-inventor",   emoji: "💡", name: "Snilleblixten",   rarity: "rare", price: 400, group: "Skoltema" },
 
   // ── Fordon ────────────────────────────────────────────────────────────────
   { id: "av-car",        emoji: "🚗", name: "Bilen",         rarity: "common", price: 100, group: "Fordon" },
@@ -80,17 +86,17 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { id: "av-teacher",    emoji: "🧑‍🏫", name: "Läraren",       rarity: "common", price: 100, group: "Yrken" },
   { id: "av-doctor",     emoji: "👨‍⚕️", name: "Doktorn",       rarity: "rare", price: 400, group: "Yrken" },
   { id: "av-firefighter",emoji: "👨‍🚒", name: "Brandmannen",   rarity: "rare", price: 400, group: "Yrken" },
-  { id: "av-detective2", emoji: "🕵️", name: "Detektiven",    rarity: "rare", price: 400, group: "Yrken" },
+  { id: "av-detective2", emoji: "🕵️‍♀️", name: "Mästerdetektiven",    rarity: "rare", price: 400, group: "Yrken" },
   { id: "av-astronaut2", emoji: "👨‍🚀", name: "Astronauten",   rarity: "epic", price: 1000, group: "Yrken" },
   { id: "av-pilot",      emoji: "👨‍✈️", name: "Piloten",       rarity: "epic", price: 1000, group: "Yrken" },
 
   // ── Roligt ────────────────────────────────────────────────────────────────
-  { id: "av-potato",     emoji: "🥔", name: "Potatis med solglasögon", rarity: "rare", price: 400, group: "Roligt" },
-  { id: "av-taco",       emoji: "🌮", name: "Dansande taco",   rarity: "rare", price: 400, group: "Roligt" },
-  { id: "av-banana",     emoji: "🍌", name: "Flygande banan",  rarity: "rare", price: 400, group: "Roligt" },
-  { id: "av-zombie",     emoji: "🧟", name: "Zombie med läsglasögon", rarity: "rare", price: 400, group: "Roligt" },
+  { id: "av-potato",     emoji: "🥔", name: "Soffpotatisen", rarity: "rare", price: 400, group: "Roligt" },
+  { id: "av-taco",       emoji: "🌮", name: "Knapriga tacon",   rarity: "rare", price: 400, group: "Roligt" },
+  { id: "av-banana",     emoji: "🍌", name: "Busiga bananen",  rarity: "rare", price: 400, group: "Roligt" },
+  { id: "av-zombie",     emoji: "🧟", name: "Morgonzombien", rarity: "rare", price: 400, group: "Roligt" },
   { id: "av-pickle",     emoji: "🥒", name: "Sur gurka",       rarity: "rare", price: 400, group: "Roligt" },
-  { id: "av-broccoli",   emoji: "🥦", name: "Broccolisuperhjälte", rarity: "rare", price: 400, group: "Roligt" },
+  { id: "av-broccoli",   emoji: "🥦", name: "Supernyttiga broccolin", rarity: "rare", price: 400, group: "Roligt" },
   { id: "av-poop",       emoji: "💩", name: "Glad bajskorv",    rarity: "common", price: 100, group: "Roligt" },
   { id: "av-clown",      emoji: "🤡", name: "Clownen",          rarity: "common", price: 100, group: "Roligt" },
   { id: "av-pizza",      emoji: "🍕", name: "Pizzaslicen",      rarity: "common", price: 100, group: "Roligt" },
@@ -103,30 +109,39 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { id: "av-cactus",     emoji: "🌵", name: "Taggiga kaktusen", rarity: "rare", price: 400, group: "Roligt" },
   { id: "av-snail",      emoji: "🐌", name: "Snabba snigeln",   rarity: "rare", price: 400, group: "Roligt" },
   { id: "av-sloth",      emoji: "🦥", name: "Lata sengångaren", rarity: "rare", price: 400, group: "Roligt" },
-  { id: "av-skull",      emoji: "💀", name: "Skrattande skallen", rarity: "rare", price: 400, group: "Roligt" },
-  { id: "av-alienmon",   emoji: "👽", name: "Fnissande utomjordingen", rarity: "epic", price: 1000, group: "Roligt" },
+  { id: "av-skull",      emoji: "💀", name: "Benhårda skallen", rarity: "rare", price: 400, group: "Roligt" },
+  { id: "av-alienmon",   emoji: "👽", name: "Utomjordingen", rarity: "epic", price: 1000, group: "Roligt" },
   { id: "av-zany",       emoji: "🤪", name: "Tokiga galningen",  rarity: "epic", price: 1000, group: "Roligt" },
   { id: "av-explode",    emoji: "🤯", name: "Exploderande huvudet", rarity: "epic", price: 1000, group: "Roligt" },
+  { id: "av-upsidedown", emoji: "🙃", name: "Upp-och-ner-ansiktet", rarity: "common", price: 100, group: "Roligt" },
+  { id: "av-hotdog", emoji: "🌭", name: "Varmkorven", rarity: "common", price: 100, group: "Roligt" },
+  { id: "av-avocado", emoji: "🥑", name: "Avokadon", rarity: "common", price: 100, group: "Roligt" },
+  { id: "av-disguise", emoji: "🥸", name: "Förklädnaden", rarity: "rare", price: 400, group: "Roligt" },
+  { id: "av-melting", emoji: "🫠", name: "Smältande ansiktet", rarity: "rare", price: 400, group: "Roligt" },
+  { id: "av-monkey", emoji: "🐒", name: "Busiga apan", rarity: "rare", price: 400, group: "Roligt" },
+  { id: "av-cool", emoji: "😎", name: "Supercoola", rarity: "epic", price: 1000, group: "Roligt" },
 
   // ── Säsong ────────────────────────────────────────────────────────────────
   { id: "av-easter",     emoji: "🐇", name: "Påskhare",        rarity: "rare", price: 400, group: "Säsong" },
-  { id: "av-pirate2",    emoji: "🏴‍☠️", name: "Sommarpirat",    rarity: "rare", price: 400, group: "Säsong" },
-  { id: "av-halloween",  emoji: "👻", name: "Halloween-spöke",  rarity: "rare", price: 400, group: "Säsong" },
+  { id: "av-pirate2",    emoji: "🏴‍☠️", name: "Piratflaggan",    rarity: "rare", price: 400, group: "Säsong" },
+  { id: "av-halloween",  emoji: "🎃", name: "Halloweenpumpan",  rarity: "rare", price: 400, group: "Säsong" },
   { id: "av-santa",      emoji: "🎅", name: "Jultomte",         rarity: "rare", price: 400, group: "Säsong" },
   { id: "av-snowman",    emoji: "⛄", name: "Snögubbe",         rarity: "rare", price: 400, group: "Säsong" },
 
   // ── Fantasi ───────────────────────────────────────────────────────────────
-  { id: "av-icemage",    emoji: "🧊", name: "Ismagiker",        rarity: "epic", price: 1000, group: "Fantasi" },
-  { id: "av-shadow",     emoji: "🗡️", name: "Skuggkrigare",     rarity: "epic", price: 1000, group: "Fantasi" },
+  { id: "av-icemage",    emoji: "🧊", name: "Iskuben",        rarity: "epic", price: 1000, group: "Fantasi" },
+  { id: "av-shadow",     emoji: "🗡️", name: "Skuggsvärdet",     rarity: "epic", price: 1000, group: "Fantasi" },
   { id: "av-alien",      emoji: "👾", name: "Rymdvarelsen",     rarity: "epic", price: 1000, group: "Fantasi" },
-  { id: "av-timetravel", emoji: "⏳", name: "Tidsresenär",      rarity: "legendary", price: 2500, group: "Fantasi" },
-  { id: "av-goldrobot",  emoji: "🦾", name: "Guldrobot",        rarity: "legendary", price: 2500, group: "Fantasi" },
-  { id: "av-rainbow",    emoji: "🌈", name: "Regnbågsväktare",  rarity: "legendary", price: 2500, group: "Fantasi" },
+  { id: "av-timetravel", emoji: "⏳", name: "Magiska timglaset",      rarity: "legendary", price: 2500, group: "Fantasi" },
+  { id: "av-goldrobot",  emoji: "🦾", name: "Robotarmen",        rarity: "legendary", price: 2500, group: "Fantasi" },
+  { id: "av-rainbow",    emoji: "🌈", name: "Regnbågen",  rarity: "legendary", price: 2500, group: "Fantasi" },
+  { id: "av-ufo", emoji: "🛸", name: "Flygande tefatet", rarity: "epic", price: 1000, group: "Fantasi" },
+  { id: "av-troll", emoji: "🧌", name: "Trollet", rarity: "epic", price: 1000, group: "Fantasi" },
 
-  // ── Sällsynt (mytiska) ────────────────────────────────────────────────────
-  { id: "av-diamond",    emoji: "💎", name: "Diamantdrake",          rarity: "mythic", price: 5000, group: "Sällsynt" },
-  { id: "av-galaxy",     emoji: "💫", name: "Galaxhjälte",           rarity: "mythic", price: 5000, group: "Sällsynt" },
-  { id: "av-wizardball", emoji: "🔮", name: "Legendarisk trollkarl", rarity: "mythic", price: 5000, group: "Sällsynt" },
+  // ── Mytiska ───────────────────────────────────────────────────────────────
+  { id: "av-diamond",    emoji: "🐉", name: "Jättedraken",          rarity: "mythic", price: 5000, group: "Mytiska" },
+  { id: "av-galaxy",     emoji: "🌌", name: "Galaxen",           rarity: "mythic", price: 5000, group: "Mytiska" },
+  { id: "av-wizardball", emoji: "🔮", name: "Kristallkulan", rarity: "mythic", price: 5000, group: "Mytiska" },
 ];
 
 export const SHOP_AVATAR_MAP: Record<string, ShopAvatar> = Object.fromEntries(
