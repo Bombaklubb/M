@@ -3,6 +3,7 @@ import { loadUser, saveUser } from '../services/userService';
 import { useDarkMode } from '../contexts/DarkModeContext';
 import { AVATAR_OPTIONS, User } from '../types';
 import FramedAvatar from './FramedAvatar';
+import AvatarFigur from './AvatarFigur';
 import {
   SHOP_AVATARS, SHOP_FRAMES, SHOP_EFFECTS, SHOP_THEMES, AVATAR_GROUP_ORDER,
   THEME_CATEGORY_ORDER, THEME_CATEGORY_LABELS,
@@ -348,7 +349,7 @@ export default function ShopView({ onBack, onAvatarChange }: ShopViewProps) {
             className="block leading-none select-none"
             style={{ fontSize: 60, filter: 'drop-shadow(0 6px 6px rgba(15,23,42,0.22))' }}
           >
-            {a.emoji}
+            <AvatarFigur emoji={a.emoji} fontSize={60} />
           </span>
         }
         name={a.name} rarity={a.rarity} price={a.price}

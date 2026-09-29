@@ -95,7 +95,24 @@ export const RARITY_STYLE: Record<Rarity, {
 
 // Avatarer
 export type AvatarGroup =
-  | 'Utvalda' | 'Djur' | 'Skoltema' | 'Fordon' | 'Fantasi' | 'Roligt' | 'Säsong';
+  | 'Utvalda' | 'Djur' | 'Skoltema' | 'Fordon' | 'Fantasi' | 'Sci-fi' | 'Roligt' | 'Säsong';
+
+/**
+ * Något som ritas ovanpå avatarens emoji: solglasögon på potatisen, krona på
+ * cupcaken. Många av de roliga figurerna hette något som bilden inte visade –
+ * "Potatis med solglasögon" var bara en potatis – och någon emoji för en
+ * potatis med solglasögon finns inte. Två emojier ovanpå varandra löser det.
+ *
+ * x och y är mitten på tillbehöret i procent av figurens ruta, storlek är
+ * andel av figurens storlek och vrid är grader.
+ */
+export interface Tillbehor {
+  emoji: string;
+  x: number;
+  y: number;
+  storlek: number;
+  vrid?: number;
+}
 
 export interface ShopAvatar {
   id: string;
@@ -104,18 +121,28 @@ export interface ShopAvatar {
   rarity: Rarity;
   price: number;
   group: AvatarGroup;
+  tillbehor?: Tillbehor;
 }
 
 export const AVATAR_GROUP_ORDER: AvatarGroup[] = [
-  'Utvalda', 'Djur', 'Skoltema', 'Fordon', 'Fantasi', 'Roligt', 'Säsong',
+  'Utvalda', 'Djur', 'Skoltema', 'Fordon', 'Fantasi', 'Sci-fi', 'Roligt', 'Säsong',
 ];
 
+// Vanliga placeringar, så att samma sorts tillbehör hamnar lika på alla figurer.
+const KRONA = (emoji = '👑'): Tillbehor => ({ emoji, x: 50, y: 6, storlek: 0.5, vrid: -8 });
+const HORN_UPPE = (emoji: string): Tillbehor => ({ emoji, x: 84, y: 16, storlek: 0.46, vrid: 12 });
+const HORN_NERE = (emoji: string): Tillbehor => ({ emoji, x: 84, y: 82, storlek: 0.46 });
+
 // Ägande sparas via stabilt id (inte array-index), så ordningen här kan ändras fritt.
+// Den utrustade avataren sparas som emoji. Två avatarer med tillbehör får därför
+// aldrig ha samma emoji, och ingen av dem får dela emoji med en gratisfigur –
+// annars skulle tillbehöret dyka upp på fel figur. Det kontrolleras i
+// TILLBEHOR_PER_EMOJI nedan.
 export const SHOP_AVATARS: ShopAvatar[] = [
   // Utvalda (featured)
   { id: 'konstnarssjalen', emoji: '🎨', name: 'Konstnärssjälen', rarity: 'rare', price: 400, group: 'Utvalda' },
-  { id: 'cyborgen', emoji: '🤖', name: 'Cyborgen', rarity: 'rare', price: 400, group: 'Utvalda' },
-  { id: 'pixelhjalten', emoji: '🎮', name: 'Pixelhjälten', rarity: 'rare', price: 400, group: 'Utvalda' },
+  { id: 'cyborgen', emoji: '🦾', name: 'Cyborgen', rarity: 'rare', price: 400, group: 'Utvalda' },
+  { id: 'pixelhjalten', emoji: '🎮', name: 'Spelkontrollen', rarity: 'rare', price: 400, group: 'Utvalda' },
   { id: 'retrofiguren', emoji: '👾', name: 'Retrofiguren', rarity: 'rare', price: 400, group: 'Utvalda' },
 
   // Djur
@@ -136,14 +163,17 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { id: 'delfinen', emoji: '🐬', name: 'Delfinen', rarity: 'rare', price: 400, group: 'Djur' },
 
   // Skoltema
-  { id: 'bokmasken', emoji: '🐛', name: 'Bokmasken', rarity: 'common', price: 150, group: 'Skoltema' },
-  { id: 'mattesnillet', emoji: '🔢', name: 'Mattesnillet', rarity: 'common', price: 150, group: 'Skoltema' },
-  { id: 'konstnaren', emoji: '🖌️', name: 'Konstnären', rarity: 'common', price: 150, group: 'Skoltema' },
-  { id: 'musikstjarnan', emoji: '🎵', name: 'Musikstjärnan', rarity: 'common', price: 150, group: 'Skoltema' },
-  { id: 'vetenskapsgeniet', emoji: '🔬', name: 'Vetenskapsgeniet', rarity: 'rare', price: 400, group: 'Skoltema' },
-  { id: 'sprakmastaren', emoji: '📚', name: 'Språkmästaren', rarity: 'rare', price: 400, group: 'Skoltema' },
-  { id: 'bibliotekarien', emoji: '📖', name: 'Bibliotekarien', rarity: 'rare', price: 400, group: 'Skoltema' },
-  { id: 'uppfinnaren', emoji: '💡', name: 'Uppfinnaren', rarity: 'rare', price: 400, group: 'Skoltema' },
+  { id: 'bokmasken', emoji: '🐛', name: 'Bokmasken', rarity: 'common', price: 150, group: 'Skoltema',
+    tillbehor: { emoji: '📖', x: 80, y: 78, storlek: 0.5, vrid: 10 } },
+  { id: 'mattesnillet', emoji: '🤓', name: 'Mattesnillet', rarity: 'common', price: 150, group: 'Skoltema',
+    tillbehor: HORN_NERE('🧮') },
+  { id: 'konstnaren', emoji: '🧑‍🎨', name: 'Konstnären', rarity: 'common', price: 150, group: 'Skoltema' },
+  { id: 'musikstjarnan', emoji: '🧑‍🎤', name: 'Musikstjärnan', rarity: 'common', price: 150, group: 'Skoltema' },
+  { id: 'vetenskapsgeniet', emoji: '🧑‍🔬', name: 'Vetenskapsgeniet', rarity: 'rare', price: 400, group: 'Skoltema' },
+  { id: 'sprakmastaren', emoji: '🗣️', name: 'Språkmästaren', rarity: 'rare', price: 400, group: 'Skoltema' },
+  { id: 'bibliotekarien', emoji: '📚', name: 'Bokhyllan', rarity: 'rare', price: 400, group: 'Skoltema' },
+  { id: 'uppfinnaren', emoji: '🧑‍🔧', name: 'Uppfinnaren', rarity: 'rare', price: 400, group: 'Skoltema',
+    tillbehor: HORN_UPPE('💡') },
 
   // Fordon
   { id: 'bilen', emoji: '🚗', name: 'Bilen', rarity: 'common', price: 150, group: 'Fordon' },
@@ -159,51 +189,121 @@ export const SHOP_AVATARS: ShopAvatar[] = [
   { id: 'racerbilen', emoji: '🏎️', name: 'Racerbilen', rarity: 'legendary', price: 2500, group: 'Fordon' },
 
   // Fantasi
+  { id: 'sjojungfrun', emoji: '🧜', name: 'Sjöjungfrun', rarity: 'rare', price: 400, group: 'Fantasi' },
+  { id: 'trollet', emoji: '🧌', name: 'Trollet', rarity: 'rare', price: 400, group: 'Fantasi' },
   { id: 'drakungen', emoji: '🐲', name: 'Drakungen', rarity: 'epic', price: 1000, group: 'Fantasi' },
+  { id: 'elddrake', emoji: '🐉', name: 'Elddrake', rarity: 'epic', price: 1000, group: 'Fantasi',
+    tillbehor: { emoji: '🔥', x: 14, y: 30, storlek: 0.5, vrid: -20 } },
+  { id: 'ismagiker', emoji: '🧙‍♀️', name: 'Ismagiker', rarity: 'epic', price: 1000, group: 'Fantasi',
+    tillbehor: HORN_UPPE('❄️') },
+  { id: 'alvbagaren', emoji: '🧝', name: 'Alvbågskytten', rarity: 'epic', price: 1000, group: 'Fantasi',
+    tillbehor: { emoji: '🏹', x: 82, y: 78, storlek: 0.5 } },
+  { id: 'varulven', emoji: '🐺', name: 'Varulven', rarity: 'epic', price: 1000, group: 'Fantasi',
+    tillbehor: { emoji: '🌙', x: 84, y: 14, storlek: 0.44, vrid: -15 } },
   { id: 'anden', emoji: '🧞', name: 'Anden', rarity: 'legendary', price: 2500, group: 'Fantasi' },
   { id: 'alvan', emoji: '🧚', name: 'Älvan', rarity: 'legendary', price: 2500, group: 'Fantasi' },
   { id: 'vampyren', emoji: '🧛', name: 'Vampyren', rarity: 'legendary', price: 2500, group: 'Fantasi' },
   { id: 'superskurken', emoji: '🦹', name: 'Superskurken', rarity: 'legendary', price: 2500, group: 'Fantasi' },
   { id: 'fenix', emoji: '🐦‍🔥', name: 'Fenix', rarity: 'legendary', price: 2500, group: 'Fantasi' },
-  { id: 'elddrake', emoji: '🐉', name: 'Elddrake', rarity: 'epic', price: 1000, group: 'Fantasi' },
-  { id: 'ismagiker', emoji: '🧊', name: 'Ismagiker', rarity: 'epic', price: 1000, group: 'Fantasi' },
-  { id: 'tidsresenar', emoji: '⏳', name: 'Tidsresenär', rarity: 'legendary', price: 2500, group: 'Fantasi' },
-  { id: 'regnbagsvaktare', emoji: '🌈', name: 'Regnbågsväktare', rarity: 'legendary', price: 2500, group: 'Fantasi' },
-  { id: 'diamantdrake', emoji: '💎', name: 'Diamantdrake', rarity: 'mythic', price: 5000, group: 'Fantasi' },
-  { id: 'galaxhjalte', emoji: '💫', name: 'Galaxhjälte', rarity: 'mythic', price: 5000, group: 'Fantasi' },
-  { id: 'legendarisk-trollkarl', emoji: '🔮', name: 'Legendarisk trollkarl', rarity: 'mythic', price: 5000, group: 'Fantasi' },
+  { id: 'skelettriddaren', emoji: '💀', name: 'Skelettriddaren', rarity: 'legendary', price: 2500, group: 'Fantasi',
+    tillbehor: { emoji: '⚔️', x: 80, y: 80, storlek: 0.5 } },
+  { id: 'tidsresenar', emoji: '⏳', name: 'Magiska timglaset', rarity: 'legendary', price: 2500, group: 'Fantasi',
+    tillbehor: HORN_UPPE('✨') },
+  { id: 'regnbagsvaktare', emoji: '🛡️', name: 'Regnbågsväktare', rarity: 'legendary', price: 2500, group: 'Fantasi',
+    tillbehor: { emoji: '🌈', x: 50, y: 50, storlek: 0.5 } },
+  { id: 'diamantdrake', emoji: '💎', name: 'Evighetsdiamanten', rarity: 'mythic', price: 5000, group: 'Fantasi',
+    tillbehor: HORN_UPPE('✨') },
+  { id: 'legendarisk-trollkarl', emoji: '🧙‍♂️', name: 'Legendarisk trollkarl', rarity: 'mythic', price: 5000, group: 'Fantasi',
+    tillbehor: HORN_NERE('🔮') },
+
+  // Sci-fi
+  { id: 'utomjordingen', emoji: '👽', name: 'Utomjordingen', rarity: 'rare', price: 400, group: 'Sci-fi' },
+  { id: 'ufot', emoji: '🛸', name: 'Ufot', rarity: 'rare', price: 400, group: 'Sci-fi' },
+  { id: 'satelliten', emoji: '🛰️', name: 'Satelliten', rarity: 'rare', price: 400, group: 'Sci-fi' },
+  { id: 'coola-planeten', emoji: '🪐', name: 'Coola planeten', rarity: 'epic', price: 1000, group: 'Sci-fi',
+    tillbehor: { emoji: '🕶️', x: 50, y: 46, storlek: 0.46 } },
+  { id: 'mutantbakterien', emoji: '🦠', name: 'Mutantbakterien', rarity: 'epic', price: 1000, group: 'Sci-fi',
+    tillbehor: { emoji: '👀', x: 50, y: 44, storlek: 0.42 } },
+  { id: 'rymdkatten', emoji: '😼', name: 'Rymdkatten', rarity: 'legendary', price: 2500, group: 'Sci-fi',
+    tillbehor: { emoji: '🚀', x: 84, y: 18, storlek: 0.44, vrid: 0 } },
+  { id: 'svarta-halet', emoji: '🌌', name: 'Galaxen', rarity: 'legendary', price: 2500, group: 'Sci-fi' },
+  { id: 'galaxhjalte', emoji: '🧑‍🚀', name: 'Galaxhjälte', rarity: 'mythic', price: 5000, group: 'Sci-fi',
+    tillbehor: HORN_UPPE('💫') },
 
   // Roligt
-  { id: 'potatis-med-solglasogon', emoji: '🥔', name: 'Potatis med solglasögon', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'dansande-taco', emoji: '🌮', name: 'Dansande taco', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'flygande-banan', emoji: '🍌', name: 'Flygande banan', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'zombie-med-lasglasogon', emoji: '🧟', name: 'Zombie med läsglasögon', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'sur-gurka', emoji: '🥒', name: 'Sur gurka', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'broccolisuperhjalte', emoji: '🥦', name: 'Broccolisuperhjälte', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'pizzaninja', emoji: '🍕', name: 'Pizzaninja', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'munkmonster', emoji: '🍩', name: 'Munkmonster', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'ost-med-attityd', emoji: '🧀', name: 'Ost med attityd', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'hamburgarbossen', emoji: '🍔', name: 'Hamburgarbossen', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'korvlegenden', emoji: '🌭', name: 'Korvlegenden', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'avokadohipstern', emoji: '🥑', name: 'Avokadohipstern', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'popcornpartyt', emoji: '🍿', name: 'Popcornpartyt', rarity: 'rare', price: 400, group: 'Roligt' },
-  { id: 'cupcakekungen', emoji: '🧁', name: 'Cupcakekungen', rarity: 'epic', price: 1000, group: 'Roligt' },
-  { id: 'kakgansen', emoji: '🍪', name: 'Kakgansen', rarity: 'epic', price: 1000, group: 'Roligt' },
-  { id: 'spagettimonstret', emoji: '🍝', name: 'Spagettimonstret', rarity: 'epic', price: 1000, group: 'Roligt' },
-  { id: 'pannkaksprinsen', emoji: '🥞', name: 'Pannkaksprinsen', rarity: 'legendary', price: 2500, group: 'Roligt' },
-  { id: 'tandfeansen', emoji: '🦷', name: 'Tandfeansen', rarity: 'legendary', price: 2500, group: 'Roligt' },
+  { id: 'potatis-med-solglasogon', emoji: '🥔', name: 'Potatis med solglasögon', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: { emoji: '🕶️', x: 50, y: 38, storlek: 0.48, vrid: -12 } },
+  { id: 'dansande-taco', emoji: '🌮', name: 'Dansande taco', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: HORN_UPPE('🎵') },
+  { id: 'flygande-banan', emoji: '🍌', name: 'Flygande banan', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: { emoji: '💨', x: 12, y: 78, storlek: 0.46 } },
+  { id: 'zombie-med-lasglasogon', emoji: '🧟', name: 'Zombie med läsglasögon', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: { emoji: '👓', x: 50, y: 26, storlek: 0.4 } },
+  { id: 'sur-gurka', emoji: '🥒', name: 'Sur gurka', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: { emoji: '😒', x: 50, y: 50, storlek: 0.38 } },
+  { id: 'broccolisuperhjalte', emoji: '🥦', name: 'Broccolisuperhjälte', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: HORN_NERE('💪') },
+  { id: 'pizzaninja', emoji: '🍕', name: 'Pizzaninja', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: HORN_NERE('🗡️') },
+  { id: 'munkmonster', emoji: '🍩', name: 'Munkmonster', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: { emoji: '👀', x: 50, y: 22, storlek: 0.42 } },
+  { id: 'ost-med-attityd', emoji: '🧀', name: 'Ost med attityd', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: { emoji: '😎', x: 46, y: 56, storlek: 0.38 } },
+  { id: 'hamburgarbossen', emoji: '🍔', name: 'Hamburgarbossen', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: KRONA('🎩') },
+  { id: 'korvlegenden', emoji: '🌭', name: 'Korvlegenden', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: HORN_UPPE('🏆') },
+  { id: 'avokadohipstern', emoji: '🥑', name: 'Avokadohipstern', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: { emoji: '👓', x: 50, y: 44, storlek: 0.42 } },
+  { id: 'popcornpartyt', emoji: '🍿', name: 'Popcornpartyt', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: HORN_UPPE('🎉') },
+  { id: 'turbosnigeln', emoji: '🐌', name: 'Turbosnigeln', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: { emoji: '💨', x: 8, y: 62, storlek: 0.46 } },
+  { id: 'kramkaktusen', emoji: '🌵', name: 'Kramkaktusen', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: HORN_UPPE('💖') },
+  { id: 'tomatsangaren', emoji: '🍅', name: 'Tomatsångaren', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: HORN_NERE('🎤') },
+  { id: 'partyankan', emoji: '🦆', name: 'Partyankan', rarity: 'rare', price: 400, group: 'Roligt',
+    tillbehor: { emoji: '🥳', x: 84, y: 16, storlek: 0.4 } },
+  { id: 'aggprofessorn', emoji: '🥚', name: 'Äggprofessorn', rarity: 'epic', price: 1000, group: 'Roligt',
+    tillbehor: KRONA('🎓') },
+  { id: 'cupcakekungen', emoji: '🧁', name: 'Cupcakekungen', rarity: 'epic', price: 1000, group: 'Roligt',
+    tillbehor: KRONA() },
+  { id: 'kakgansen', emoji: '🍪', name: 'Kakgangstern', rarity: 'epic', price: 1000, group: 'Roligt',
+    tillbehor: { emoji: '🧢', x: 50, y: 8, storlek: 0.5, vrid: 18 } },
+  { id: 'spagettimonstret', emoji: '🍝', name: 'Spagettimonstret', rarity: 'epic', price: 1000, group: 'Roligt',
+    tillbehor: { emoji: '👀', x: 50, y: 26, storlek: 0.44 } },
+  { id: 'herr-fisk', emoji: '🐟', name: 'Herr Fisk', rarity: 'epic', price: 1000, group: 'Roligt',
+    tillbehor: { emoji: '🎩', x: 40, y: 10, storlek: 0.46, vrid: -10 } },
+  { id: 'sockmonstret', emoji: '🧦', name: 'Sockmonstret', rarity: 'epic', price: 1000, group: 'Roligt',
+    tillbehor: { emoji: '👀', x: 56, y: 22, storlek: 0.4 } },
+  { id: 'toarullskungen', emoji: '🧻', name: 'Toarullskungen', rarity: 'legendary', price: 2500, group: 'Roligt',
+    tillbehor: KRONA() },
+  { id: 'pannkaksprinsen', emoji: '🥞', name: 'Pannkaksprinsen', rarity: 'legendary', price: 2500, group: 'Roligt',
+    tillbehor: KRONA() },
+  { id: 'tandfeansen', emoji: '🦷', name: 'Tandfén', rarity: 'legendary', price: 2500, group: 'Roligt',
+    tillbehor: HORN_UPPE('🪄') },
 
   // Säsong
-  { id: 'paskhare', emoji: '🐇', name: 'Påskhare', rarity: 'rare', price: 400, group: 'Säsong' },
-  { id: 'sommarpirat', emoji: '🏴‍☠️', name: 'Sommarpirat', rarity: 'rare', price: 400, group: 'Säsong' },
-  { id: 'halloween-spoke', emoji: '👻', name: 'Halloween-spöke', rarity: 'rare', price: 400, group: 'Säsong' },
-  { id: 'jultomte', emoji: '🎅', name: 'Jultomte', rarity: 'rare', price: 400, group: 'Säsong' },
+  { id: 'paskhare', emoji: '🐇', name: 'Påskhare', rarity: 'rare', price: 400, group: 'Säsong',
+    tillbehor: HORN_NERE('🥚') },
+  { id: 'sommarpirat', emoji: '🏴‍☠️', name: 'Piratflaggan', rarity: 'rare', price: 400, group: 'Säsong' },
+  { id: 'halloween-spoke', emoji: '👻', name: 'Halloween-spöke', rarity: 'rare', price: 400, group: 'Säsong',
+    tillbehor: HORN_NERE('🎃') },
+  { id: 'jultomte', emoji: '🎅', name: 'Jultomte', rarity: 'rare', price: 400, group: 'Säsong',
+    tillbehor: HORN_NERE('🎁') },
   { id: 'snogubbe', emoji: '⛄', name: 'Snögubbe', rarity: 'rare', price: 400, group: 'Säsong' },
-  { id: 'midsommarfigur', emoji: '💐', name: 'Midsommarfigur', rarity: 'rare', price: 400, group: 'Säsong' },
+  { id: 'midsommarfigur', emoji: '💐', name: 'Midsommarbuketten', rarity: 'rare', price: 400, group: 'Säsong',
+    tillbehor: HORN_UPPE('☀️') },
 ];
 
 export const AVATAR_MAP: Record<string, ShopAvatar> = Object.fromEntries(
   SHOP_AVATARS.map(a => [a.id, a])
+);
+
+/** Tillbehöret för en utrustad avatar, uppslaget på den sparade emojin. */
+export const TILLBEHOR_PER_EMOJI: Record<string, Tillbehor> = Object.fromEntries(
+  SHOP_AVATARS.filter(a => a.tillbehor).map(a => [a.emoji, a.tillbehor as Tillbehor])
 );
 
 // Ramar (avatar-frames)

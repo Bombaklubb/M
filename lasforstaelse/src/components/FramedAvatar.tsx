@@ -1,3 +1,4 @@
+import AvatarFigur from './AvatarFigur';
 import { FRAME_MAP, EFFECT_MAP, type ShopFrame, type ShopEffect, type EffectKind } from '../data/shop';
 
 interface FramedAvatarProps {
@@ -38,7 +39,7 @@ function AvatarCore({ emoji, frame, size }: { emoji: string; frame?: ShopFrame; 
         className="flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-100 to-violet-100 dark:from-indigo-900/40 dark:to-violet-900/40"
         style={{ width: size, height: size, fontSize: innerSize * 0.55 }}
       >
-        {emoji}
+        <AvatarFigur emoji={emoji} fontSize={innerSize * 0.55} />
       </div>
     );
   }
@@ -72,7 +73,7 @@ function AvatarCore({ emoji, frame, size }: { emoji: string; frame?: ShopFrame; 
           boxShadow: 'inset 0 3px 8px rgba(0,0,0,0.6)',
         }}
       >
-        {emoji}
+        <AvatarFigur emoji={emoji} fontSize={innerSize * 0.55} />
       </div>
     </div>
   );
