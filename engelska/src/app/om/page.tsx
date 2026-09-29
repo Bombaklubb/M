@@ -41,7 +41,7 @@ const OVNINGSTYPER = [
 ];
 
 const AKTIVITETER = [
-  { emoji: "📘", name: "Grammatik", desc: "Appens kärna. 150 kapitel med omkring 1 900 övningar – från am/is/are till perfekt particip och passiv form." },
+  { emoji: "📘", name: "Grammatik", desc: "Appens kärna. 154 kapitel med nästan 2 000 övningar – från am/is/are till -ing-form, perfekt particip och passiv form." },
   { emoji: "🔤", name: "Stavning", desc: "Ord som ofta blir fel, tränade i samma tre övningstyper." },
   { emoji: "📖", name: "Språkregler", desc: "Uppslagsdelen. Här står reglerna förklarade med exempel – bra att titta i före eller under en övning." },
   { emoji: "🔍", name: "Ordsökning", desc: "Hitta gömda engelska ord i rutnätet. Lugnare träning på ordbilder." },
@@ -286,7 +286,7 @@ export default function OmPage() {
             eller svårighetsgraden.
           </p>
           <ul className="space-y-1.5 list-disc pl-5 marker:text-emerald-500">
-            <li><strong>Figurer</strong> – din avatar (100–2 500 poäng).</li>
+            <li><strong>Figurer</strong> – din avatar: djur, yrken, fordon, roliga figurer och mytiska varelser (100–5 000 poäng).</li>
             <li><strong>Ramar</strong> – en ram runt figuren (250–3 500 poäng).</li>
             <li><strong>Teman</strong> – en tecknad bakgrund bakom startsidan och världarna: 52 scener och mönster i åtta kategorier, bland annat natur, djur, spel, fantasy, riddare och anime &amp; manga (350–3 500 poäng).</li>
             <li><strong>Effekter</strong> – rörelse och glitter runt figuren (100–3 000 poäng).</li>

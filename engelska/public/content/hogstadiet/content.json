@@ -3266,7 +3266,7 @@
         {
           "id": "hog-g14-6",
           "type": "multiple-choice",
-          "question": "När använder man INGEN artikel? 'She goes to ___ hospital every day (som sjuksköterska).'",
+          "question": "När använder man INGEN artikel? 'I usually go to ___ bed at nine.'",
           "options": [
             "a",
             "an",
@@ -3274,7 +3274,7 @@
             "– (ingen artikel)"
           ],
           "correctIndex": 3,
-          "explanation": "När man talar om institutioner i sin 'funktion' (hospital = för att jobba), utelämnas artikeln i brittisk engelska."
+          "explanation": "Vissa uttryck med platser tar ingen artikel när man menar platsens vanliga funktion: go to bed (gå och lägga sig), go to school (som elev), go to work. 'Go to the bed' skulle betyda att man går fram till själva sängen."
         },
         {
           "id": "hog-g14-7",
@@ -3308,7 +3308,10 @@
             "–"
           ],
           "correctIndex": 0,
-          "explanation": "Generellt påstående om en art → A dog is man's best friend. (alternativt 'Dogs are...')"
+          "explanation": "Ett generellt påstående om en art kan skrivas på flera sätt: 'A dog is man's best friend', 'The dog is man's best friend' (lite formellare) eller 'Dogs are man's best friends'.",
+          "alsoCorrect": [
+            2
+          ]
         },
         {
           "id": "hog-g14-10",
@@ -5632,6 +5635,185 @@
           "sentence": "We have ___ (drive) all night.",
           "answer": "driven",
           "explanation": "drive → drove → driven."
+        }
+      ]
+    },
+    {
+      "id": "hog-g22-ing-form",
+      "title": "-ing-form eller to-infinitiv",
+      "description": "Vilka verb följs av -ing och vilka av to? Plus -ing efter prepositioner och pågående dåtid.",
+      "icon": "🏃",
+      "pointsRequired": 0,
+      "bonusPoints": 30,
+      "helpText": [
+        "Vissa verb följs av -ing: enjoy, avoid, finish, mind, keep, can't stand, suggest.",
+        "Andra verb följs av to + grundform: want, decide, hope, plan, refuse, promise.",
+        "Efter prepositioner kommer alltid -ing: interested in learning, before going, instead of watching.",
+        "-ing-formen kan vara subjekt: Eating too much sugar is bad for you.",
+        "Pågående dåtid: was/were + verb-ing. I was walking home when it started to rain."
+      ],
+      "exercises": [
+        {
+          "id": "hog-g22-1",
+          "type": "multiple-choice",
+          "question": "I enjoy ___ to music.",
+          "options": [
+            "listen",
+            "to listen",
+            "listening"
+          ],
+          "correctIndex": 2,
+          "hint": "'Enjoy' hör till gruppen verb som följs av -ing.",
+          "explanation": "enjoy + listening. Enjoy följs alltid av -ing."
+        },
+        {
+          "id": "hog-g22-2",
+          "type": "multiple-choice",
+          "question": "She decided ___ a new phone.",
+          "options": [
+            "buying",
+            "to buy",
+            "buy"
+          ],
+          "correctIndex": 1,
+          "hint": "'Decide' hör till gruppen verb som följs av to + grundform.",
+          "explanation": "decide + to buy. Decide följs av to-infinitiv."
+        },
+        {
+          "id": "hog-g22-3",
+          "type": "fill-in-blank",
+          "sentence": "Would you mind ___ (open) the window?",
+          "answer": "opening",
+          "hint": "'Mind' hör till gruppen verb som följs av -ing.",
+          "explanation": "mind + opening. Would you mind opening the window?"
+        },
+        {
+          "id": "hog-g22-4",
+          "type": "fill-in-blank",
+          "sentence": "He is interested in ___ (learn) Spanish.",
+          "answer": "learning",
+          "hint": "Efter en preposition som 'in' kommer verbet i -ing-form.",
+          "explanation": "interested in + learning. Efter prepositioner: -ing."
+        },
+        {
+          "id": "hog-g22-5",
+          "type": "multiple-choice",
+          "question": "We want ___ to London next summer.",
+          "options": [
+            "going",
+            "to go",
+            "go"
+          ],
+          "correctIndex": 1,
+          "hint": "'Want' följs av to + grundform.",
+          "explanation": "want + to go. We want to go to London."
+        },
+        {
+          "id": "hog-g22-6",
+          "type": "fill-in-blank",
+          "sentence": "They avoided ___ (talk) about the problem.",
+          "answer": "talking",
+          "hint": "'Avoid' hör till gruppen verb som följs av -ing.",
+          "explanation": "avoid + talking. They avoided talking about it."
+        },
+        {
+          "id": "hog-g22-7",
+          "type": "multiple-choice",
+          "question": "Before ___ to bed, I brush my teeth.",
+          "options": [
+            "go",
+            "to go",
+            "going"
+          ],
+          "correctIndex": 2,
+          "hint": "'Before' är här en preposition. Vilken verbform kommer efter en preposition?",
+          "explanation": "Before going to bed. Efter prepositioner: -ing."
+        },
+        {
+          "id": "hog-g22-8",
+          "type": "fill-in-blank",
+          "sentence": "I was ___ (walk) home when it started to rain.",
+          "answer": "walking",
+          "hint": "Något pågick i dåtid när något annat hände: was/were + verb-ing.",
+          "explanation": "I was walking home. was + walking = pågående dåtid."
+        },
+        {
+          "id": "hog-g22-9",
+          "type": "multiple-choice",
+          "question": "Which sentence is correct?",
+          "options": [
+            "I can't stand to waiting.",
+            "I can't stand waiting.",
+            "I can't stand wait."
+          ],
+          "correctIndex": 1,
+          "hint": "'Can't stand' följs av -ing eller to + grundform – men aldrig to + -ing eller bara grundform.",
+          "explanation": "I can't stand waiting. (Även 'I can't stand to wait' är rätt, men det alternativet finns inte här.)"
+        },
+        {
+          "id": "hog-g22-10",
+          "type": "fill-in-blank",
+          "sentence": "She keeps ___ (forget) her keys.",
+          "answer": "forgetting",
+          "hint": "'Keep' i betydelsen 'fortsätter att' följs av -ing. Tänk på stavningen.",
+          "explanation": "keep + forgetting. T:et dubblas: forgetting."
+        },
+        {
+          "id": "hog-g22-11",
+          "type": "multiple-choice",
+          "question": "They refused ___ the rules.",
+          "options": [
+            "following",
+            "to follow",
+            "follow"
+          ],
+          "correctIndex": 1,
+          "hint": "'Refuse' hör till gruppen verb som följs av to + grundform.",
+          "explanation": "refuse + to follow. Refuse följs av to-infinitiv."
+        },
+        {
+          "id": "hog-g22-12",
+          "type": "fill-in-blank",
+          "sentence": "Instead of ___ (watch) TV, let's go outside.",
+          "answer": "watching",
+          "hint": "'Instead of' slutar med en preposition. Vilken verbform kommer efter den?",
+          "explanation": "instead of + watching. Efter prepositioner: -ing."
+        },
+        {
+          "id": "hog-g22-13",
+          "type": "multiple-choice",
+          "question": "'___ too much sugar is bad for you.'",
+          "options": [
+            "Eat",
+            "Eating",
+            "To eating"
+          ],
+          "correctIndex": 1,
+          "hint": "Verbet står som subjekt i meningen, som ett substantiv.",
+          "explanation": "Eating too much sugar is bad for you. -ing-formen som subjekt."
+        },
+        {
+          "id": "hog-g22-14",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Jag gjorde klart mina läxor.",
+          "words": [
+            "I",
+            "finished",
+            "doing",
+            "my",
+            "homework",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "hint": "'Finish' följs av -ing.",
+          "explanation": "I finished doing my homework. finish + doing."
         }
       ]
     },

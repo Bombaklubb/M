@@ -17,7 +17,9 @@ function Glyph({ avatar, size }: { avatar: Avatar; size: number }) {
       />
     );
   }
-  return <span style={{ fontSize: size * 0.78, lineHeight: 1 }}>{avatar.emoji}</span>;
+  // Färg-emojitypsnitt först: annars kan appens textsnitt ta vissa tecken
+  // (t.ex. 🙃 och 😎) och visa dem svartvita eller tomma.
+  return <span style={{ fontSize: size * 0.78, lineHeight: 1, fontFamily: EMOJI_FONT }}>{avatar.emoji}</span>;
 }
 
 interface FramedAvatarProps {
@@ -29,6 +31,8 @@ interface FramedAvatarProps {
 }
 
 /** Visar en avatar med valfri köpt ram (glow + ring) runt om. */
+const EMOJI_FONT = '"Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", sans-serif';
+
 export default function FramedAvatar({ avatar, frameId, size = 40, className }: FramedAvatarProps) {
   const frame = frameId ? FRAME_MAP[frameId] : null;
 

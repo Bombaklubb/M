@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { checkFillIn } from '../utils/answerCheck';
 import { getCorrectFeedback } from '../utils/feedback';
 import { useApp } from '../contexts/AppContext';
 import { WORLDS, WorldId } from '../data/worlds';
@@ -66,10 +67,7 @@ export default function QuestView({ hideHeader }: { hideHeader?: boolean }) {
     const step = selectedQuest.steps[stepIdx];
     let isCorrect = false;
     if (step.type === 'fill-in') {
-      const correct_str = String(step.answer ?? '').replace(',', '.');
-      const acceptable = (step.acceptableAnswers ?? []).map(a => String(a).replace(',', '.').toLowerCase());
-      isCorrect = ans.trim().replace(',', '.').toLowerCase() === correct_str.toLowerCase()
-        || acceptable.includes(ans.trim().replace(',', '.').toLowerCase());
+      isCorrect = checkFillIn(ans, step);
     } else if (step.type === 'multiple-choice') {
       isCorrect = ans === String(step.correctIndex);
     } else if (step.type === 'true-false') {

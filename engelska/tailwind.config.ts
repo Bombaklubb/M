@@ -6,6 +6,8 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    // Klassnamn i lib (t.ex. RARITY_RING i shop.ts) måste också genereras.
+    "./src/lib/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
     // Dynamic stage classes used in stages.ts / world pages

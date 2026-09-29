@@ -29,6 +29,9 @@ export interface MultipleChoiceExercise {
   question: string;
   options: string[];
   correctIndex: number;
+  /** Andra alternativ som också är korrekt engelska, t.ex. "the" i
+   *  "___ big bus" där övningen tränar a/an. De godkänns och visas som rätt. */
+  alsoCorrect?: number[];
   hint?: string;
   explanation?: string;
 }

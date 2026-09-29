@@ -1,3 +1,4 @@
+import { isAnswerCorrect } from '../utils/answerCheck';
 import { WorldId } from './worlds';
 
 // ─── Problemlösning & rika matematiska problem ──────────────────────────────────
@@ -2421,14 +2422,29 @@ export function subTaskCount(p: RichProblem): number {
   return p.levels.reduce((s, l) => s + l.subTasks.length, 0);
 }
 
+/**
+ * Det facitsvar i `targets` som elevens svar motsvarar, eller null. Rättas med
+ * samma tolerans som övningarna, så "20 kr" godtas när facit är "20".
+ */
+export function matchTarget(st: SubTask, answer: string): string | null {
+  if (!st.targets || !answer.trim()) return null;
+  const context = [st.prompt, st.hint, st.discussion].filter(Boolean).join(' ');
+  return st.targets.find(t => isAnswerCorrect(answer, t, [], context)) ?? null;
+}
+
 /** Kollar ett svar mot en deluppgift (open/collect). */
 export function checkSubTaskAnswer(st: SubTask, answer: string): boolean {
   if (!answer.trim()) return false;
-  if (st.targets) {
-    const a = normalizeAnswer(answer);
-    return st.targets.some(t => normalizeAnswer(t) === a);
-  }
+  if (st.targets) return matchTarget(st, answer) !== null;
   return st.validate ? st.validate(answer) : false;
+}
+
+/**
+ * Nyckel för att känna igen samma svar i en samla-uppgift, så att "3+7" och
+ * "3 + 7" (eller "20" och "20 kr") inte räknas som två olika fynd.
+ */
+export function collectKey(st: SubTask, answer: string): string {
+  return matchTarget(st, answer) ?? normalizeAnswer(answer);
 }
 
 /** Hur många korrekta svar som krävs för att en collect-uppgift ska vara klar. */

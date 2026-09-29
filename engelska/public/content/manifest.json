@@ -1,24 +1,24 @@
 {
   "lagstadiet": {
-    "grammar": 39,
+    "grammar": 40,
     "spelling": 5,
     "wordsearch": 4,
     "spel": 2
   },
   "mellanstadiet": {
-    "grammar": 41,
+    "grammar": 42,
     "spelling": 5,
     "wordsearch": 4,
     "spel": 2
   },
   "hogstadiet": {
-    "grammar": 38,
+    "grammar": 39,
     "spelling": 5,
     "wordsearch": 4,
     "spel": 2
   },
   "gymnasiet": {
-    "grammar": 32,
+    "grammar": 33,
     "spelling": 5,
     "wordsearch": 4,
     "spel": 2

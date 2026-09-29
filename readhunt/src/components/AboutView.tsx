@@ -258,10 +258,9 @@ export const AboutView: React.FC<AboutViewProps> = ({ onClose }) => {
         {/* Profil */}
         <Section emoji="👤" title="Profil och märken">
           <p>
-            Klicka på namnet uppe till höger för att se din statistik: antal lästa texter, andel rätt,
-            hur det går på de två frågetyperna och på berättelser respektive faktatexter. Där finns också
-            alla märken man samlat — för antal texter, för många rätt i rad, för att ha läst på morgonen
-            eller kvällen, och en del som är svårare att lista ut.
+            Klicka på namnet uppe till höger för att se din profil. Där finns alla märken man
+            samlat — för antal texter, för många rätt i rad, för att ha läst på morgonen eller
+            kvällen, och en del som är svårare att lista ut.
           </p>
         </Section>
 

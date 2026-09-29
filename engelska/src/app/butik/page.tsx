@@ -150,12 +150,13 @@ function ItemCard({
       }`}
     >
       <div className="flex items-center justify-center h-20 mb-2">{preview}</div>
-      <div className="flex items-center justify-between gap-1 mb-1">
-        <span className="text-sm font-black text-gray-800 dark:text-gray-100 truncate">{name}</span>
+      {/* Namnet får hela bredden och två rader; etiketten ligger på prisraden. */}
+      <div className="text-sm font-black leading-tight text-gray-800 dark:text-gray-100 line-clamp-2 mb-1">{name}</div>
+      <div className="flex items-center justify-between gap-1 mb-2.5 mt-auto">
+        <span className="text-xs font-bold text-amber-600 dark:text-amber-400 whitespace-nowrap">
+          {owned ? <span className="text-emerald-600 dark:text-emerald-400">Köpt</span> : <>⭐ {price}</>}
+        </span>
         <RarityChip rarity={rarity} />
-      </div>
-      <div className="text-xs font-bold mb-2.5 text-amber-600 dark:text-amber-400">
-        {owned ? <span className="text-emerald-600 dark:text-emerald-400">Köpt</span> : <>⭐ {price}</>}
       </div>
       <ActionButton owned={owned} equipped={equipped} affordable={affordable} onBuy={onBuy} onEquip={onEquip} />
     </div>

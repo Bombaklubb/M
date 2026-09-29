@@ -2078,7 +2078,10 @@
             "some"
           ],
           "correctIndex": 1,
-          "explanation": "Apple börjar med vokalljudet A, så vi använder 'an'. An apple."
+          "explanation": "Apple börjar med vokalljudet A, så vi använder 'an': an apple. 'The apple' är också rätt – då menar man ett bestämt äpple.",
+          "alsoCorrect": [
+            2
+          ]
         },
         {
           "id": "lag-g3-2",
@@ -2091,7 +2094,10 @@
             "some"
           ],
           "correctIndex": 2,
-          "explanation": "Dog börjar med konsonanten D, så vi använder 'a'. A dog."
+          "explanation": "Dog börjar med konsonanten D, så vi använder 'a': a dog. 'The dog' är också rätt – då menar man en bestämd hund.",
+          "alsoCorrect": [
+            1
+          ]
         },
         {
           "id": "lag-g3-3",
@@ -2120,7 +2126,10 @@
             "an"
           ],
           "correctIndex": 3,
-          "explanation": "Elephant börjar med vokalljudet E, så vi använder 'an'. An elephant."
+          "explanation": "Elephant börjar med vokalljudet E, så vi använder 'an': an elephant. 'The elephant' är också rätt – då menar man en bestämd elefant.",
+          "alsoCorrect": [
+            1
+          ]
         },
         {
           "id": "lag-g3-6",
@@ -2133,7 +2142,10 @@
             "some"
           ],
           "correctIndex": 2,
-          "explanation": "Book börjar med konsonanten B, så vi använder 'a'. A book."
+          "explanation": "Book börjar med konsonanten B, så vi använder 'a': a book. 'The book' är också rätt – då menar man en bestämd bok.",
+          "alsoCorrect": [
+            1
+          ]
         },
         {
           "id": "lag-g3-7",
@@ -2162,7 +2174,10 @@
             "some"
           ],
           "correctIndex": 2,
-          "explanation": "Ice cream börjar med vokalljudet I, så vi använder 'an'. An ice cream."
+          "explanation": "Ice cream börjar med vokalljudet I, så vi använder 'an': an ice cream. 'The ice cream' är också rätt – då menar man en bestämd glass.",
+          "alsoCorrect": [
+            1
+          ]
         },
         {
           "id": "lag-g3-10",
@@ -2175,7 +2190,10 @@
             "some"
           ],
           "correctIndex": 2,
-          "explanation": "Big börjar med konsonanten B, så vi använder 'a'. A big house."
+          "explanation": "Big börjar med konsonanten B, så vi använder 'a': a big house. 'The big house' är också rätt – då menar man ett bestämt hus.",
+          "alsoCorrect": [
+            1
+          ]
         },
         {
           "id": "lag-g3-11",
@@ -2260,7 +2278,10 @@
             "a"
           ],
           "correctIndex": 3,
-          "explanation": "Yellow börjar med konsonantljudet Y, så vi använder 'a'. A yellow bird."
+          "explanation": "Yellow börjar med konsonantljudet Y, så vi använder 'a': a yellow bird. 'The yellow bird' är också rätt – då menar man en bestämd fågel.",
+          "alsoCorrect": [
+            1
+          ]
         }
       ],
       "helpText": [
@@ -5711,6 +5732,165 @@
       ]
     },
     {
+      "id": "lag-g17-ing-form",
+      "title": "-ing-form – vad händer nu?",
+      "description": "Säg vad som händer just nu: I am running, she is reading.",
+      "icon": "🏃",
+      "pointsRequired": 0,
+      "bonusPoints": 20,
+      "helpText": [
+        "När något händer JUST NU använder vi am/is/are + verbet med -ing.",
+        "I am reading. – Jag läser (just nu).  She is running. – Hon springer (just nu).",
+        "Stavning: oftast lägger du bara till -ing: play → playing, read → reading.",
+        "Slutar verbet på -e tar du bort e:et: dance → dancing, make → making.",
+        "Korta verb som run, swim och sit dubblar sista bokstaven: running, swimming, sitting."
+      ],
+      "exercises": [
+        {
+          "id": "lag-g17-1",
+          "type": "multiple-choice",
+          "question": "Titta, hunden springer! 'The dog is ___.'",
+          "options": [
+            "run",
+            "runs",
+            "running",
+            "ran"
+          ],
+          "correctIndex": 2,
+          "hint": "Efter 'is' och när något händer just nu får verbet en ändelse.",
+          "explanation": "The dog is running. Efter am/is/are kommer verbet med -ing."
+        },
+        {
+          "id": "lag-g17-2",
+          "type": "multiple-choice",
+          "question": "'I am ___ a book.' (Jag läser just nu.)",
+          "options": [
+            "read",
+            "reading",
+            "reads"
+          ],
+          "correctIndex": 1,
+          "hint": "Något händer just nu: am + verbet med -ing.",
+          "explanation": "I am reading a book. am + read + ing."
+        },
+        {
+          "id": "lag-g17-3",
+          "type": "fill-in-blank",
+          "sentence": "She is ___ (dance) with her friend.",
+          "answer": "dancing",
+          "hint": "Verb som slutar på -e tappar e:et innan -ing läggs till.",
+          "explanation": "dance → dancing. E:et försvinner: She is dancing."
+        },
+        {
+          "id": "lag-g17-4",
+          "type": "fill-in-blank",
+          "sentence": "We are ___ (swim) in the lake.",
+          "answer": "swimming",
+          "hint": "Korta verb som slutar på en vokal + en konsonant dubblar sista bokstaven.",
+          "explanation": "swim → swimming. M:et dubblas: We are swimming."
+        },
+        {
+          "id": "lag-g17-5",
+          "type": "multiple-choice",
+          "question": "'They ___ playing football.'",
+          "options": [
+            "is",
+            "am",
+            "are"
+          ],
+          "correctIndex": 2,
+          "hint": "Vilken form av 'be' hör ihop med they?",
+          "explanation": "They are playing football. They → are."
+        },
+        {
+          "id": "lag-g17-6",
+          "type": "multiple-choice",
+          "question": "Hur stavas play + ing?",
+          "options": [
+            "plaing",
+            "playing",
+            "playying"
+          ],
+          "correctIndex": 1,
+          "hint": "Här lägger du bara till -ing utan att ändra något.",
+          "explanation": "play → playing. Inget ändras, bara -ing läggs till."
+        },
+        {
+          "id": "lag-g17-7",
+          "type": "fill-in-blank",
+          "sentence": "He is ___ (sit) on the chair.",
+          "answer": "sitting",
+          "hint": "Kort verb med en vokal + en konsonant i slutet: dubbla sista bokstaven.",
+          "explanation": "sit → sitting. T:et dubblas: He is sitting on the chair."
+        },
+        {
+          "id": "lag-g17-8",
+          "type": "multiple-choice",
+          "question": "'Look! The baby ___.'",
+          "options": [
+            "sleep",
+            "is sleeping",
+            "sleeps"
+          ],
+          "correctIndex": 1,
+          "hint": "'Look!' visar att det händer just nu.",
+          "explanation": "Look! The baby is sleeping. Det händer just nu → is + sleeping."
+        },
+        {
+          "id": "lag-g17-9",
+          "type": "fill-in-blank",
+          "sentence": "I am ___ (make) a cake.",
+          "answer": "making",
+          "hint": "Verb som slutar på -e tappar e:et innan -ing läggs till.",
+          "explanation": "make → making. I am making a cake."
+        },
+        {
+          "id": "lag-g17-10",
+          "type": "multiple-choice",
+          "question": "Vilken mening betyder 'Jag äter just nu'?",
+          "options": [
+            "I eat now.",
+            "I am eating now.",
+            "I ate now."
+          ],
+          "correctIndex": 1,
+          "hint": "Just nu: am/is/are + verbet med -ing.",
+          "explanation": "I am eating now. am + eat + ing."
+        },
+        {
+          "id": "lag-g17-11",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Hon sjunger en sång (just nu).",
+          "words": [
+            "She",
+            "is",
+            "singing",
+            "a",
+            "song",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "hint": "Börja med vem det handlar om, sedan is och verbet med -ing.",
+          "explanation": "She is singing a song. She + is + singing."
+        },
+        {
+          "id": "lag-g17-12",
+          "type": "fill-in-blank",
+          "sentence": "The cat ___ (be) sleeping on the bed.",
+          "answer": "is",
+          "hint": "Vilken form av 'be' hör ihop med the cat (it)?",
+          "explanation": "The cat is sleeping. The cat = it → is."
+        }
+      ]
+    },
+    {
       "id": "lag-sluttest",
       "title": "Sluttest 1 – Grammatik",
       "description": "Testa din grammatik! 23 blandade frågor.",
@@ -5800,7 +5980,10 @@
             "–"
           ],
           "correctIndex": 1,
-          "explanation": "'An' används före ord som börjar med vokalljud (a, e, i, o, u). An orange."
+          "explanation": "'An' används före ord som börjar med vokalljud (a, e, i, o, u): an orange. 'The orange' är också rätt – då menar man en bestämd apelsin.",
+          "alsoCorrect": [
+            2
+          ]
         },
         {
           "id": "lag-st-7",
@@ -5813,7 +5996,10 @@
             "–"
           ],
           "correctIndex": 1,
-          "explanation": "'A' används före ord som börjar med konsonantljud. A big bus."
+          "explanation": "'A' används före ord som börjar med konsonantljud: a big bus. 'The big bus' är också rätt – då menar man en bestämd buss.",
+          "alsoCorrect": [
+            2
+          ]
         },
         {
           "id": "lag-st-8",
