@@ -247,7 +247,7 @@ Fyra kategorier, samma som i systerapparna, alla med synlig verkan:
 
 | | Antal | Vad som händer |
 |---|---|---|
-| **Figurer** | 31 | Extra figurer utöver de tolv gratis, i grupperna Djur, Fantasi och Roligt |
+| **Figurer** | 66 | Extra figurer utöver de tolv gratis, i grupperna Djur, Fantasi, Rymd och robotar samt Roligt – billigast först i varje grupp |
 | **Ramar** | 8 | En ring runt figuren, i sidhuvudet och på framstegssidan |
 | **Teman** | 16 | Hela sidans bakgrund: färger, mönster, sol, planet, rutor, ränder |
 | **Effekter** | 11 | Snö, regn, hjärtan, glitter … som rör sig över bakgrunden |
@@ -275,6 +275,16 @@ inga zebra- eller komönster – svart går inte.
 får, inte en emoji. Former som sol och planet är satta i procent så att de
 syns även i den lilla rutan. De första temana var 25 % tvätt på vitt och
 såg mer spektakulära ut som emoji än som bakgrund.
+
+**Figurens namn ska stämma med bilden** – namnet läses upp av örat, och ett
+namn som inte stämmer lär eleven fel ord. Varje emoji är kontrollerad mot sitt
+officiella Unicode-namn. Fem stämde inte och döptes om (id:n orörda, så inget
+köp försvinner): 🐅 "Vita tigern" → *Tigern* (bilden är orange), 🦑
+"Bläckfisken" → *Kalmaren* (bläckfisken 🐙 finns bland gratisfigurerna), 🐉
+"Elddraken" → *Gröna draken* (ingen eld), 🦕 "Dinosaurien" → *Långhalsen*
+(T-rexen är också en dinosaurie) och 🤪 "Tokiga galningen" → *Knasbollen*.
+De nya figurerna håller sig till emojier från Unicode 14 eller äldre, så att de
+ritas även på en Chromebook eller iPad som inte är helt uppdaterad.
 
 Fliken **Mina köp** samlar det eleven äger, och i Ramar, Teman och Effekter
 ligger ett gratis standardkort först (*Ingen ram*, *Vanlig*, *Ingen effekt*)

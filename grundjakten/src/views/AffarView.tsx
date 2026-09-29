@@ -439,7 +439,10 @@ export function AffarView({
              rutnät med tjugofyra ansikten går inte att hitta tillbaka i. */
           <div className="space-y-6">
             {FIGURGRUPPER.map((g) =>
-              avsnitt(g, VAROR.filter((v) => v.typ === 'figur' && v.grupp === g))
+              // Billigast först i varje grupp: det eleven har råd med ska
+              // ligga överst, inte efter tre legendariska hon inte kan köpa.
+              avsnitt(g, VAROR.filter((v) => v.typ === 'figur' && v.grupp === g)
+                .sort((a, b) => a.pris - b.pris))
             )}
           </div>
         ) : (
