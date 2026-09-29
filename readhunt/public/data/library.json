@@ -21235,5 +21235,567 @@
       "readingTime": 4
     },
     "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&h=420&fit=crop"
+  },
+  {
+    "id": "ak3-tema-006",
+    "grade": 3,
+    "genre": "fiction",
+    "theme": "candy",
+    "title": "Saturday Sweets",
+    "text": "In Sweden, many children eat sweets on Saturdays. Elsa and her grandpa walk to the shop every Saturday morning. Elsa takes a paper bag and fills it with sour snakes, soft chocolate balls and red strawberries. Grandpa chooses black liquorice, because he loves it. At home they share the sweets on the sofa. \"Sweets taste better when you only eat them once a week,\" Grandpa says. Elsa smiles and agrees.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When do Elsa and her grandpa buy sweets?",
+        "options": [
+          "On Saturday mornings",
+          "On Friday evenings",
+          "On Sunday mornings",
+          "After school every day"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "What does Elsa put her sweets in?",
+        "options": [
+          "A plastic box",
+          "A paper bag",
+          "A lunch bag",
+          "A glass jar"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Why does Grandpa choose black liquorice?",
+        "options": [
+          "It is the cheapest",
+          "Elsa told him to",
+          "It is his favourite",
+          "It is good for teeth"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Where do they eat the sweets?",
+        "options": [
+          "In the shop",
+          "In the car",
+          "At the kitchen table",
+          "On the sofa"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What does Grandpa mean about eating sweets once a week?",
+        "options": [
+          "Sweets are bad on Saturdays",
+          "Sweets are a special treat",
+          "Shops close on other days",
+          "Sweets get old very fast"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "How does Elsa probably feel about Saturdays?",
+        "options": [
+          "Bored",
+          "Worried",
+          "Happy",
+          "Angry"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 70,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak4-tema-006",
+    "grade": 4,
+    "genre": "non-fiction",
+    "theme": "rugby",
+    "title": "How Rugby Works",
+    "text": "Rugby is a team sport that is popular in countries such as England, Wales, New Zealand and South Africa. It is named after Rugby School, a school in England where an early form of the game was played about two hundred years ago.\n\nRugby is played with an oval ball, which means it is shaped like an egg. Because of the shape, the ball can bounce in strange directions, so players must always be ready. In the most common kind of rugby, each team has fifteen players on the field.\n\nOne rule surprises many new players: you may only pass the ball backwards or sideways, never forwards. To move the ball forward, a player has to run with it or kick it. Players on the other team try to stop the runner by tackling, which means holding the player and bringing them to the ground.\n\nThe main way to score is a try. A player carries the ball over the other team's line and presses it down on the grass. A try is worth five points. After a try, the team can kick the ball between the tall posts to win two extra points.\n\nRugby can look rough, but it has strict rules to keep players safe. Respect for the referee is also an important part of the game.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where does the name \"rugby\" come from?",
+        "options": [
+          "A town in New Zealand",
+          "A school in England",
+          "A famous player",
+          "A kind of ball"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "Which way may players pass the ball?",
+        "options": [
+          "Only forwards",
+          "Any way they like",
+          "Backwards or sideways",
+          "Only over the posts"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "How many points is a try worth?",
+        "options": [
+          "Two points",
+          "Three points",
+          "Seven points",
+          "Five points"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "Why must players always be ready when the ball bounces?",
+        "options": [
+          "The ball is very heavy",
+          "Its shape makes it bounce unpredictably",
+          "The referee might stop the game",
+          "The grass is often wet"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "If a player wants to move the ball closer to the other team's line, what can they do?",
+        "options": [
+          "Pass it forwards to a friend",
+          "Throw it to the referee",
+          "Run with it or kick it",
+          "Wait for a tackle"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What is the main message of the last paragraph?",
+        "options": [
+          "Rules and respect keep the game safe",
+          "Rugby is too dangerous for children",
+          "Referees decide who wins",
+          "Rugby has no rules about tackling"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 219,
+      "readingTime": 1
+    }
+  },
+  {
+    "id": "ak5-tema-006",
+    "grade": 5,
+    "genre": "non-fiction",
+    "theme": "candy",
+    "title": "How Sweets Are Made",
+    "text": "Almost every sweet in a shop starts with the same ingredient: sugar. What turns plain sugar into a hard lollipop, a chewy toffee or a soft gummy bear is mostly heat, water and a few clever extra ingredients.\n\nCandy makers begin by mixing sugar with water and boiling it. As the mixture boils, water slowly disappears as steam. The less water that is left, the harder the sweet becomes. If the syrup is taken off the heat early, it cools into something soft, like fudge. If it keeps boiling until it is very hot, around 150 degrees Celsius, it turns into hard candy that can break like glass. That is why candy makers use special thermometers and watch the temperature closely.\n\nGummy sweets need something extra to make them bouncy. Many are made with gelatine, which comes from animals. Others use pectin, a natural substance found in fruit such as apples. Sweets made with pectin can be eaten by people who do not eat animal products. The warm mixture is poured into moulds, often made of starch, and left to set for a day or more before the sweets are covered in sugar or oil so they do not stick together.\n\nColours and flavours are added at the end. Some come from plants, like red colour from beetroot, while others are made in factories. Chocolate sweets are made in a different way, because chocolate must be melted and cooled very carefully to stay shiny and snap cleanly.\n\nSweets taste good, but sugar is food for the bacteria in our mouths. The bacteria produce acid that can damage teeth. Dentists say that how often you eat sweets matters more than how much. Eating sweets on one day a week and then brushing your teeth is kinder to your teeth than snacking a little every day.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "What happens to the water when the sugar mixture boils?",
+        "options": [
+          "It mixes into the sugar",
+          "It turns into crystals",
+          "It disappears as steam",
+          "It sinks to the bottom"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why do candy makers watch the temperature so closely?",
+        "options": [
+          "Hot sugar slowly turns bright red",
+          "The thermometer adds extra flavour",
+          "Cold sugar cannot be sold in shops",
+          "It decides how hard the sweet gets"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Where does pectin come from?",
+        "options": [
+          "Animal bones and skin",
+          "Fruit such as apples",
+          "Salt water from the sea",
+          "Special factory machines"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "Who might choose sweets made with pectin instead of gelatine?",
+        "options": [
+          "People who dislike the taste of fruit",
+          "People who want their sweets harder",
+          "People who avoid animal products",
+          "People who want brighter colours"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "literal",
+        "q": "Why are gummy sweets covered in sugar or oil?",
+        "options": [
+          "So they do not stick together",
+          "To give them a sour taste",
+          "To keep them warm inside",
+          "So they set faster in moulds"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What advice about teeth does the text give?",
+        "options": [
+          "Never eat any kind of sweets at all",
+          "Eat a few small sweets every day",
+          "Only eat hard sweets, never soft ones",
+          "Eat sweets less often and brush after"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 304,
+      "readingTime": 2
+    }
+  },
+  {
+    "id": "ak6-tema-006",
+    "grade": 6,
+    "genre": "non-fiction",
+    "theme": "football",
+    "title": "The Sky Blues of Coventry",
+    "imageUrl": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&q=80",
+    "text": "Coventry is a city in the middle of England with a long history of making bicycles and cars. Its football club, Coventry City, has one of the most unusual stories in English football.\n\nThe club was started in 1883 by workers at a bicycle factory owned by a company called Singer. At first the team was called Singers FC. In 1898 it changed its name to Coventry City, and a year later it moved to a ground called Highfield Road, where it played for more than a hundred years.\n\nToday the club is known as the Sky Blues. The nickname comes from the 1960s, when a manager named Jimmy Hill decided that the team should wear sky blue shirts. Hill was full of new ideas. He helped write a club song, arranged special trains to take fans to away matches and made match days feel like a party. Some people called it the Sky Blue Revolution. Under his leadership, Coventry won promotion to the top division of English football in 1967.\n\nThe Sky Blues then stayed in the top division for thirty-four years in a row. Their greatest day came in 1987, when they won the FA Cup, one of the oldest football competitions in the world. In the final at Wembley Stadium, they beat Tottenham Hotspur 3–2 after extra time. One of the goals, a diving header by Keith Houchen, is still shown on television today. Thousands of fans celebrated in the streets of Coventry.\n\nLater years were much harder. The club was relegated in 2001 and slowly fell down the leagues. In 2005 it left Highfield Road for a new stadium on the edge of the city that could hold more than thirty thousand people, but arguments about the new stadium meant that for a few seasons the team had to play its home games in other towns, far away from many of its supporters.\n\nEven so, many fans kept travelling to watch their team. By 2017 Coventry had dropped to the fourth tier of English football, but the club slowly climbed back. In 2018 it won promotion, and in 2020 it became champions of League One. The Sky Blues were back in the Championship, just one step below the Premier League.\n\nThe story of Coventry City shows that a football club is more than its results. It is also its history, its city and the loyal people who support it.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Who started the football club in 1883?",
+        "options": [
+          "Students at a local school",
+          "Players who left Tottenham",
+          "The mayor and his friends",
+          "Workers at a bicycle factory"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why is the club called the Sky Blues?",
+        "options": [
+          "Its old stadium had a sky blue roof",
+          "Its team began wearing sky blue shirts",
+          "Its first owners loved the colour",
+          "It once won a trophy called the Sky Cup"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did Coventry win in 1987?",
+        "options": [
+          "The Premier League",
+          "League One",
+          "The FA Cup",
+          "The World Cup"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What kind of person was Jimmy Hill, according to the text?",
+        "options": [
+          "Creative and full of energy",
+          "Careful and quiet",
+          "Strict and unfriendly",
+          "Shy and nervous"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why was it hard for fans when the team played home games in other towns?",
+        "options": [
+          "Tickets suddenly became more expensive",
+          "The team stopped playing any matches",
+          "Other towns did not allow away fans",
+          "They had to travel far to see the team"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What is the main idea of the last paragraph?",
+        "options": [
+          "A club is also its history and fans",
+          "Only trophies make a club important",
+          "Coventry will soon win the Premier League",
+          "Fans should support several clubs at once"
+        ],
+        "correct": 0
+      }
+    ],
+    "meta": {
+      "wordCount": 403,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak6-tema-007",
+    "grade": 6,
+    "genre": "fiction",
+    "theme": "rugby",
+    "title": "Nadia Joins the Team",
+    "text": "Nadia had never held a rugby ball before she moved to Cardiff with her mum and her little brother. In Wales, it seemed as if everyone talked about rugby. Her new classmates wore red shirts on match days, and the older students practised passing on the school field during every break.\n\nOne afternoon, a teacher named Mr Evans stopped her in the corridor. \"We are starting a mixed rugby club for beginners on Thursdays,\" he said. \"Would you like to try?\"\n\nNadia hesitated. She was small for her age, and she had seen professional players crash into each other on television. \"Isn't it dangerous?\" she asked.\n\n\"We start slowly,\" Mr Evans explained. \"First you learn to pass, catch and fall safely. Nobody tackles anybody until they know how to do it properly.\"\n\nThat evening, Nadia told her mum about the club. Her mum smiled. \"You always say you want to try new things,\" she said. \"Why not go once and see how it feels?\" Nadia's little brother, Sami, promised to come and cheer for her.\n\nAt the first practice, Nadia met Owen, a boy who wore a hearing aid and had played for two years. He showed her how to hold the oval ball with both hands and how to pass it backwards to a teammate running behind her. Her first passes wobbled through the air and landed in the mud. Owen laughed, but not in an unkind way. \"Mine did that too,\" he said. \"Keep your eyes on your target.\"\n\nWeek after week, Nadia improved. She learned that in rugby, being small was not a problem. She was quick and good at finding gaps between bigger players. Mr Evans taught the group how to tackle safely by keeping their heads to the side and wrapping their arms around the runner's legs. They also practised warming up properly, drinking water and telling the coach if something hurt.\n\nIn March, the club played a friendly match against another school. It was raining, and the field was soft and muddy. Near the end, Owen caught the ball, looked up and passed it to Nadia. She sprinted along the side of the field, dodged one defender and dived over the line. She had scored her first try.\n\nHer teammates rushed over to celebrate, and Nadia realised something. She had joined the club to learn a sport, but she had also found new friends in a new country.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Why did Nadia move to Cardiff?",
+        "options": [
+          "She wanted to learn to play rugby",
+          "She moved there with her family",
+          "Her old school had to close down",
+          "Mr Evans invited her to the city"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "literal",
+        "q": "What did beginners learn before tackling?",
+        "options": [
+          "How to kick the ball very far",
+          "How to become the team captain",
+          "How to pass, catch and fall safely",
+          "How to run fast without the ball"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why did Nadia hesitate when Mr Evans asked her to join?",
+        "options": [
+          "She was worried about getting hurt",
+          "She did not like her new teacher",
+          "She already played on a football team",
+          "She had no free time on Thursdays"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "How did Owen help Nadia feel when her passes went wrong?",
+        "options": [
+          "Embarrassed and very alone",
+          "Angry at herself for failing",
+          "Ready to quit the club",
+          "Less worried about mistakes"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "What did Nadia learn about being small?",
+        "options": [
+          "She was quick at finding gaps",
+          "It made tackling others impossible",
+          "It meant she could not play matches",
+          "She always had to stay on the bench"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "What is the most important thing Nadia gained from the club?",
+        "options": [
+          "A shiny trophy for her school",
+          "New friends in a new country",
+          "A place in the Welsh national team",
+          "Much better marks in English"
+        ],
+        "correct": 1
+      }
+    ],
+    "meta": {
+      "wordCount": 404,
+      "readingTime": 3
+    }
+  },
+  {
+    "id": "ak8-tema-011",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "football",
+    "title": "Coventry City: A Club That Refused to Give Up",
+    "imageUrl": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=800&q=80",
+    "text": "Football clubs are often judged by the trophies in their cabinets, but some of the most remarkable stories are about survival rather than success. Coventry City, a club from the English Midlands nicknamed the Sky Blues, is a good example.\n\nFor most of the late twentieth century, Coventry was a steady member of England's top division. The club won the FA Cup in 1987 and remained in the top flight for thirty-four consecutive seasons, a record few clubs of its size could match. After relegation in 2001, however, the club entered a long and painful decline.\n\nThe most serious problems were not on the pitch but off it. Coventry had moved into a new stadium in 2005, but the club did not own it. Disputes between the club's owners and the stadium's owners led to a situation that shocked English football: in 2013, Coventry City had to play its home matches in Northampton, around fifty kilometres away. Thousands of supporters refused to follow the team there, choosing instead to protest against the owners. Attendances collapsed, and for a time some people wondered whether the club would survive at all. Local newspapers, fan groups and former players all joined the debate about the club's future.\n\nThe team eventually returned to Coventry, but results continued to suffer. In 2017 the Sky Blues were relegated to League Two, the fourth tier and the lowest level of professional football in England. Yet in the same season, the club won a cup competition for lower-league teams, the EFL Trophy, at Wembley Stadium, giving fans a rare reason to celebrate.\n\nWhat followed was a gradual recovery led by manager Mark Robins. Robins, a former Manchester United striker, focused on developing young players and building a team spirit that supporters could identify with. Coventry won promotion through the play-offs in 2018 and became League One champions in 2020. Remarkably, much of that title-winning season was played away from home once again, this time at Birmingham City's stadium, after another dispute about the ground in Coventry.\n\nBack in the Championship, the second tier, the Sky Blues kept surprising people. In 2023 they reached the play-off final for a place in the Premier League but lost to Luton Town on penalties. A year later came one of the most dramatic matches in the club's history. In the semi-final of the FA Cup at Wembley, Coventry were losing 3–0 to Manchester United with just over twenty minutes remaining. The team scored three times, the last from a penalty in the final seconds of added time, to force extra time. Coventry even had the ball in the net again, but the goal was ruled out for offside after a video review, and United won the penalty shoot-out. Commentators described it as one of the greatest comebacks in the competition's recent history.\n\nThe defeat was painful, yet many supporters described the day as one of pride rather than disappointment. For fans who had once watched their club play in empty stadiums far from home, seeing tens of thousands of people in sky blue at Wembley showed how far the club had come.\n\nCoventry City's story suggests that loyalty can matter as much as money. Clubs can lose their grounds, their divisions and their confidence, but a community that refuses to let go can help them rebuild.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "Where did Coventry City play home matches in 2013?",
+        "options": [
+          "In Birmingham",
+          "At Wembley Stadium",
+          "In Northampton",
+          "In Luton"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "Why did thousands of supporters refuse to follow the team in 2013?",
+        "options": [
+          "They wanted to protest against the owners",
+          "They had started supporting a rival club",
+          "Tickets in Northampton cost far too much",
+          "The trains to Northampton had been cancelled"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "Which competition did Coventry win in the season they were relegated to League Two?",
+        "options": [
+          "The FA Cup",
+          "The Premier League",
+          "The Championship play-offs",
+          "The EFL Trophy"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "inference",
+        "q": "What makes the 2020 League One title especially remarkable, according to the text?",
+        "options": [
+          "The team played much of it away from Coventry",
+          "The team won it without a permanent manager",
+          "It was the first league title in club history",
+          "The team did not lose a single league match"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How did Coventry score their third goal against Manchester United?",
+        "options": [
+          "With a header early in extra time",
+          "From a penalty in added time",
+          "With a long shot from outside the box",
+          "From a corner kick in the last minute"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What is the writer's main point about Coventry City?",
+        "options": [
+          "Money is the only real way to rebuild a club",
+          "Losing a semi-final ruins a club's reputation",
+          "A loyal community helps a club survive",
+          "Clubs should never leave their old stadium"
+        ],
+        "correct": 2
+      }
+    ],
+    "meta": {
+      "wordCount": 554,
+      "readingTime": 4
+    }
+  },
+  {
+    "id": "ak8-tema-012",
+    "grade": 8,
+    "genre": "non-fiction",
+    "theme": "rugby",
+    "title": "The Legend and the Split: A Short History of Rugby",
+    "text": "According to a famous story, rugby was invented in 1823 at Rugby School in England, when a pupil named William Webb Ellis caught the ball during a game of football and, ignoring the rules, ran forward with it in his hands. Today the trophy of the Rugby World Cup is named the Webb Ellis Cup in his honour. There is only one problem: historians are far from sure that the story is true.\n\nThe legend first appeared in 1876, more than fifty years after the event supposedly took place and four years after Webb Ellis had died. The man who told it, a former pupil called Matthew Bloxam, had not seen the moment himself. No earlier source mentions it. Most historians now believe that rugby developed gradually, as different schools experimented with their own rules for football, some of which allowed players to handle the ball. The Webb Ellis story survives because it is simple and memorable, which says something about how people prefer heroes to slow historical change.\n\nWhat is certain is that by the middle of the nineteenth century, rugby-style football was spreading from English schools to universities and clubs. In 1871 the Rugby Football Union was founded to agree on a single set of rules. The first international match, between Scotland and England, was played in the same year in Edinburgh. The game then travelled across the British Empire, becoming especially popular in New Zealand, Australia and South Africa.\n\nOnly a few decades later, rugby split in two. In 1895, a group of clubs from the north of England broke away from the Rugby Football Union. Many of their players were factory workers who lost wages when they missed work to play or travel to matches. The northern clubs wanted to compensate them for this lost income, but the union, dominated by wealthier southern clubs, insisted that the sport must remain strictly amateur. The meeting that confirmed the split took place at the George Hotel in Huddersfield, which is sometimes called the birthplace of rugby league. The breakaway clubs formed their own organisation, and their game gradually developed different rules. It became known as rugby league, played with thirteen players per team, while the original game, rugby union, kept fifteen. Rugby league later became especially popular in the north of England and in eastern Australia.\n\nThe divide between the two codes lasted for a century. Rugby union stayed officially amateur until 1995, when it finally allowed players to be paid. By then the sport had already launched its first World Cup, held in New Zealand and Australia in 1987 and won by New Zealand, whose national team, the All Blacks, is famous for performing the haka before matches. A Women's Rugby World Cup followed in 1991, and in 2016 a faster, shorter version of the game called rugby sevens became part of the Olympic Games.\n\nRugby's history therefore contains two very different kinds of story. One is a legend about a single rebellious schoolboy, easy to tell and hard to prove. The other is a real conflict about money, class and fairness, which shaped the sport more than any single run with a ball ever did. Understanding both helps explain why rugby today is not one game but several.",
+    "questions": [
+      {
+        "type": "literal",
+        "q": "When did the Webb Ellis story first appear?",
+        "options": [
+          "In 1876",
+          "In 1823",
+          "In 1871",
+          "In 1895"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "inference",
+        "q": "Why do historians doubt the Webb Ellis story?",
+        "options": [
+          "Webb Ellis never attended Rugby School at all",
+          "Rugby School had no playing field in 1823",
+          "Webb Ellis himself wrote that it was a joke",
+          "Someone who did not see it told it much later"
+        ],
+        "correct": 3
+      },
+      {
+        "type": "literal",
+        "q": "Why did the northern clubs break away in 1895?",
+        "options": [
+          "They wanted to pay players for lost wages",
+          "They wanted to play with only thirteen players",
+          "They disliked the Webb Ellis legend strongly",
+          "They wanted rugby to join the Olympic Games"
+        ],
+        "correct": 0
+      },
+      {
+        "type": "literal",
+        "q": "How many players does a rugby union team have?",
+        "options": [
+          "Seven",
+          "Fifteen",
+          "Eleven",
+          "Thirteen"
+        ],
+        "correct": 1
+      },
+      {
+        "type": "inference",
+        "q": "What does the text suggest about the split in 1895?",
+        "options": [
+          "It was mainly about the shape of the ball",
+          "It began with an argument about the World Cup",
+          "It was linked to money and class",
+          "It was caused by a single angry player"
+        ],
+        "correct": 2
+      },
+      {
+        "type": "inference",
+        "q": "What is the writer's main point in the final paragraph?",
+        "options": [
+          "The legend matters more than real history",
+          "Rugby should become one single game again",
+          "Rugby league is a better game than rugby union",
+          "Real conflicts shaped rugby more than the legend"
+        ],
+        "correct": 3
+      }
+    ],
+    "meta": {
+      "wordCount": 542,
+      "readingTime": 4
+    }
   }
 ]
