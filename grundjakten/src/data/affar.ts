@@ -45,9 +45,9 @@ export type EffektRorelse = 'fall' | 'stig' | 'glittra';
  * avsnitt i stället för ett enda långt rutnät. En elev som scrollar förbi
  * trettio ansikten i rad hittar aldrig tillbaka till det hon tyckte om.
  */
-export type FigurGrupp = 'Djur' | 'Fantasi' | 'Roligt';
+export type FigurGrupp = 'Djur' | 'Fantasi' | 'Rymd och robotar' | 'Roligt';
 
-export const FIGURGRUPPER: FigurGrupp[] = ['Djur', 'Fantasi', 'Roligt'];
+export const FIGURGRUPPER: FigurGrupp[] = ['Djur', 'Fantasi', 'Rymd och robotar', 'Roligt'];
 
 export interface Vara {
   id: string;
@@ -97,6 +97,14 @@ export const KATEGORIER: { typ: VaruTyp; namn: string; ikon: string }[] = [
 export const VAROR: Vara[] = [
   // ── Figurer: Djur ─────────────────────────────────────────────────────
   // Samma linje som gratisfigurerna: djur med attityd, inget gulligt.
+  //
+  // NAMNET SKA STÄMMA MED BILDEN. Läraren bad om en genomgång, och fem
+  // stämde inte: 🐅 hette "Vita tigern" (bilden är orange), 🦑 "Bläckfisken"
+  // (det är en kalmar – bläckfisken 🐙 finns bland gratisfigurerna), 🐉
+  // "Elddraken" (ingen eld), 🦕 "Dinosaurien" (T-rexen är också en) och 🤪
+  // "Tokiga galningen" ("galning" kan höras som ett skällsord). Varje emoji
+  // är kontrollerad mot sitt officiella Unicode-namn. Namnet läses upp av
+  // örat, och ett namn som inte stämmer med bilden lär eleven fel ord.
   { id: 'fig-pingvin', typ: 'figur', grupp: 'Djur', namn: 'Pingvinen', pris: 60, sallsynthet: 'vanlig', ikon: '🐧' },
   { id: 'fig-groda', typ: 'figur', grupp: 'Djur', namn: 'Grodan', pris: 60, sallsynthet: 'vanlig', ikon: '🐸' },
   { id: 'fig-koala', typ: 'figur', grupp: 'Djur', namn: 'Koalan', pris: 60, sallsynthet: 'vanlig', ikon: '🐨' },
@@ -104,9 +112,9 @@ export const VAROR: Vara[] = [
   { id: 'fig-zebra', typ: 'figur', grupp: 'Djur', namn: 'Zebran', pris: 60, sallsynthet: 'vanlig', ikon: '🦓' },
   { id: 'fig-giraff', typ: 'figur', grupp: 'Djur', namn: 'Giraffen', pris: 60, sallsynthet: 'vanlig', ikon: '🦒' },
   { id: 'fig-skoldpadda', typ: 'figur', grupp: 'Djur', namn: 'Sköldpaddan', pris: 60, sallsynthet: 'vanlig', ikon: '🐢' },
-  { id: 'fig-tiger', typ: 'figur', grupp: 'Djur', namn: 'Vita tigern', pris: 150, sallsynthet: 'sallsynt', ikon: '🐅' },
+  { id: 'fig-tiger', typ: 'figur', grupp: 'Djur', namn: 'Tigern', pris: 150, sallsynthet: 'sallsynt', ikon: '🐅' },
   { id: 'fig-krokodil', typ: 'figur', grupp: 'Djur', namn: 'Krokodilen', pris: 150, sallsynthet: 'sallsynt', ikon: '🐊' },
-  { id: 'fig-blackfisk', typ: 'figur', grupp: 'Djur', namn: 'Bläckfisken', pris: 150, sallsynthet: 'sallsynt', ikon: '🦑' },
+  { id: 'fig-blackfisk', typ: 'figur', grupp: 'Djur', namn: 'Kalmaren', pris: 150, sallsynthet: 'sallsynt', ikon: '🦑' },
   { id: 'fig-skorpion', typ: 'figur', grupp: 'Djur', namn: 'Skorpionen', pris: 150, sallsynthet: 'sallsynt', ikon: '🦂' },
   { id: 'fig-noshorning', typ: 'figur', grupp: 'Djur', namn: 'Noshörningen', pris: 150, sallsynthet: 'sallsynt', ikon: '🦏' },
   { id: 'fig-flamingo', typ: 'figur', grupp: 'Djur', namn: 'Flamingon', pris: 150, sallsynthet: 'sallsynt', ikon: '🦩' },
@@ -115,13 +123,36 @@ export const VAROR: Vara[] = [
   // ── Figurer: Fantasi ──────────────────────────────────────────────────
   { id: 'fig-enhorning', typ: 'figur', grupp: 'Fantasi', namn: 'Enhörningen', pris: 60, sallsynthet: 'vanlig', ikon: '🦄' },
   { id: 'fig-spoke', typ: 'figur', grupp: 'Fantasi', namn: 'Spöket', pris: 60, sallsynthet: 'vanlig', ikon: '👻' },
-  { id: 'fig-dino', typ: 'figur', grupp: 'Fantasi', namn: 'Dinosaurien', pris: 150, sallsynthet: 'sallsynt', ikon: '🦕' },
+  { id: 'fig-dino', typ: 'figur', grupp: 'Fantasi', namn: 'Långhalsen', pris: 150, sallsynthet: 'sallsynt', ikon: '🦕' },
   { id: 'fig-trex', typ: 'figur', grupp: 'Fantasi', namn: 'T-rexen', pris: 150, sallsynthet: 'sallsynt', ikon: '🦖' },
   { id: 'fig-ninja', typ: 'figur', grupp: 'Fantasi', namn: 'Ninjan', pris: 150, sallsynthet: 'sallsynt', ikon: '🥷' },
-  { id: 'fig-drake', typ: 'figur', grupp: 'Fantasi', namn: 'Elddraken', pris: 500, sallsynthet: 'legendarisk', ikon: '🐉' },
-  { id: 'fig-robot', typ: 'figur', grupp: 'Fantasi', namn: 'Roboten', pris: 500, sallsynthet: 'legendarisk', ikon: '🤖' },
-  { id: 'fig-alien', typ: 'figur', grupp: 'Fantasi', namn: 'Rymdvarelsen', pris: 500, sallsynthet: 'legendarisk', ikon: '👾' },
+  { id: 'fig-drake', typ: 'figur', grupp: 'Fantasi', namn: 'Gröna draken', pris: 500, sallsynthet: 'legendarisk', ikon: '🐉' },
+  { id: 'fig-robot', typ: 'figur', grupp: 'Rymd och robotar', namn: 'Roboten', pris: 500, sallsynthet: 'legendarisk', ikon: '🤖' },
+  { id: 'fig-alien', typ: 'figur', grupp: 'Rymd och robotar', namn: 'Rymdmonstret', pris: 500, sallsynthet: 'legendarisk', ikon: '👾' },
   { id: 'fig-superhjalte', typ: 'figur', grupp: 'Fantasi', namn: 'Superhjälten', pris: 500, sallsynthet: 'legendarisk', ikon: '🦸' },
+  { id: 'fig-pumpa', typ: 'figur', grupp: 'Fantasi', namn: 'Pumpan', pris: 60, sallsynthet: 'vanlig', ikon: '🎃' },
+  { id: 'fig-fe', typ: 'figur', grupp: 'Fantasi', namn: 'Fen', pris: 60, sallsynthet: 'vanlig', ikon: '🧚' },
+  { id: 'fig-alv', typ: 'figur', grupp: 'Fantasi', namn: 'Alven', pris: 60, sallsynthet: 'vanlig', ikon: '🧝' },
+  { id: 'fig-trollkarl', typ: 'figur', grupp: 'Fantasi', namn: 'Trollkarlen', pris: 150, sallsynthet: 'sallsynt', ikon: '🧙' },
+  { id: 'fig-sjojungfru', typ: 'figur', grupp: 'Fantasi', namn: 'Sjöjungfrun', pris: 150, sallsynthet: 'sallsynt', ikon: '🧜‍♀️' },
+  { id: 'fig-vampyr', typ: 'figur', grupp: 'Fantasi', namn: 'Vampyren', pris: 150, sallsynthet: 'sallsynt', ikon: '🧛' },
+  { id: 'fig-zombie', typ: 'figur', grupp: 'Fantasi', namn: 'Zombien', pris: 150, sallsynthet: 'sallsynt', ikon: '🧟' },
+  { id: 'fig-dodskalle', typ: 'figur', grupp: 'Fantasi', namn: 'Dödskallen', pris: 150, sallsynthet: 'sallsynt', ikon: '💀' },
+  { id: 'fig-troll', typ: 'figur', grupp: 'Fantasi', namn: 'Trollet', pris: 150, sallsynthet: 'sallsynt', ikon: '🧌' },
+  { id: 'fig-ande', typ: 'figur', grupp: 'Fantasi', namn: 'Anden i lampan', pris: 500, sallsynthet: 'legendarisk', ikon: '🧞' },
+  { id: 'fig-superskurk', typ: 'figur', grupp: 'Fantasi', namn: 'Superskurken', pris: 500, sallsynthet: 'legendarisk', ikon: '🦹' },
+
+  // ── Figurer: Rymd och robotar ─────────────────────────────────────────
+  // Roboten och rymdmonstret flyttade hit från Fantasi; deras id:n är
+  // desamma, så den som redan köpt dem har dem kvar.
+  { id: 'fig-raket', typ: 'figur', grupp: 'Rymd och robotar', namn: 'Raketen', pris: 60, sallsynthet: 'vanlig', ikon: '🚀' },
+  { id: 'fig-planet', typ: 'figur', grupp: 'Rymd och robotar', namn: 'Planeten', pris: 60, sallsynthet: 'vanlig', ikon: '🪐' },
+  { id: 'fig-komet', typ: 'figur', grupp: 'Rymd och robotar', namn: 'Kometen', pris: 60, sallsynthet: 'vanlig', ikon: '☄️' },
+  { id: 'fig-utomjording', typ: 'figur', grupp: 'Rymd och robotar', namn: 'Utomjordingen', pris: 150, sallsynthet: 'sallsynt', ikon: '👽' },
+  { id: 'fig-tefat', typ: 'figur', grupp: 'Rymd och robotar', namn: 'Flygande tefatet', pris: 150, sallsynthet: 'sallsynt', ikon: '🛸' },
+  { id: 'fig-satellit', typ: 'figur', grupp: 'Rymd och robotar', namn: 'Satelliten', pris: 150, sallsynthet: 'sallsynt', ikon: '🛰️' },
+  { id: 'fig-robotarm', typ: 'figur', grupp: 'Rymd och robotar', namn: 'Robotarmen', pris: 150, sallsynthet: 'sallsynt', ikon: '🦾' },
+  { id: 'fig-astronaut', typ: 'figur', grupp: 'Rymd och robotar', namn: 'Astronauten', pris: 500, sallsynthet: 'legendarisk', ikon: '🧑‍🚀' },
 
   // ── Figurer: Roligt ───────────────────────────────────────────────────
   // Engelskajakten har en hel "Roligt"-grupp, och den är populärast där.
@@ -134,7 +165,23 @@ export const VAROR: Vara[] = [
   { id: 'fig-snigel', typ: 'figur', grupp: 'Roligt', namn: 'Snabba snigeln', pris: 150, sallsynthet: 'sallsynt', ikon: '🐌' },
   { id: 'fig-sengangare', typ: 'figur', grupp: 'Roligt', namn: 'Lata sengångaren', pris: 150, sallsynthet: 'sallsynt', ikon: '🦥' },
   { id: 'fig-bajs', typ: 'figur', grupp: 'Roligt', namn: 'Glada bajskorven', pris: 150, sallsynthet: 'sallsynt', ikon: '💩' },
-  { id: 'fig-galning', typ: 'figur', grupp: 'Roligt', namn: 'Tokiga galningen', pris: 500, sallsynthet: 'legendarisk', ikon: '🤪' },
+  { id: 'fig-galning', typ: 'figur', grupp: 'Roligt', namn: 'Knasbollen', pris: 500, sallsynthet: 'legendarisk', ikon: '🤪' },
+  { id: 'fig-banan', typ: 'figur', grupp: 'Roligt', namn: 'Bananen', pris: 60, sallsynthet: 'vanlig', ikon: '🍌' },
+  { id: 'fig-avokado', typ: 'figur', grupp: 'Roligt', namn: 'Avokadon', pris: 60, sallsynthet: 'vanlig', ikon: '🥑' },
+  { id: 'fig-varmkorv', typ: 'figur', grupp: 'Roligt', namn: 'Varmkorven', pris: 60, sallsynthet: 'vanlig', ikon: '🌭' },
+  { id: 'fig-hamburgare', typ: 'figur', grupp: 'Roligt', namn: 'Hamburgaren', pris: 60, sallsynthet: 'vanlig', ikon: '🍔' },
+  { id: 'fig-potatis', typ: 'figur', grupp: 'Roligt', namn: 'Potatisen', pris: 60, sallsynthet: 'vanlig', ikon: '🥔' },
+  { id: 'fig-ost', typ: 'figur', grupp: 'Roligt', namn: 'Osten', pris: 60, sallsynthet: 'vanlig', ikon: '🧀' },
+  { id: 'fig-svamp', typ: 'figur', grupp: 'Roligt', namn: 'Svampen', pris: 60, sallsynthet: 'vanlig', ikon: '🍄' },
+  { id: 'fig-coolingen', typ: 'figur', grupp: 'Roligt', namn: 'Coolingen', pris: 60, sallsynthet: 'vanlig', ikon: '😎' },
+  { id: 'fig-cowboy', typ: 'figur', grupp: 'Roligt', namn: 'Cowboyen', pris: 60, sallsynthet: 'vanlig', ikon: '🤠' },
+  { id: 'fig-strumpor', typ: 'figur', grupp: 'Roligt', namn: 'Strumporna', pris: 150, sallsynthet: 'sallsynt', ikon: '🧦' },
+  { id: 'fig-toarulle', typ: 'figur', grupp: 'Roligt', namn: 'Toarullen', pris: 150, sallsynthet: 'sallsynt', ikon: '🧻' },
+  { id: 'fig-tand', typ: 'figur', grupp: 'Roligt', namn: 'Tanden', pris: 150, sallsynthet: 'sallsynt', ikon: '🦷' },
+  { id: 'fig-clown', typ: 'figur', grupp: 'Roligt', namn: 'Clownen', pris: 150, sallsynthet: 'sallsynt', ikon: '🤡' },
+  { id: 'fig-yr', typ: 'figur', grupp: 'Roligt', namn: 'Yra ansiktet', pris: 150, sallsynthet: 'sallsynt', ikon: '🥴' },
+  { id: 'fig-forkladnad', typ: 'figur', grupp: 'Roligt', namn: 'Förklädnaden', pris: 500, sallsynthet: 'legendarisk', ikon: '🥸' },
+  { id: 'fig-smalter', typ: 'figur', grupp: 'Roligt', namn: 'Smältande ansiktet', pris: 500, sallsynthet: 'legendarisk', ikon: '🫠' },
 
   // ── Ramar ─────────────────────────────────────────────────────────────
   // Ringen ritas runt figuren. Tjock med flit: en tunn ram syns inte på en
