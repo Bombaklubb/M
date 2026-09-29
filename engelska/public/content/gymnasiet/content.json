@@ -4362,6 +4362,226 @@
       ]
     },
     {
+      "id": "gym-g13-ing-form",
+      "title": "Gerundium och participkonstruktioner",
+      "description": "Verb som byter betydelse med -ing eller to, be used to, having done och participkonstruktioner.",
+      "icon": "🏃",
+      "pointsRequired": 0,
+      "bonusPoints": 35,
+      "helpText": [
+        "Vissa verb byter betydelse: stop doing (sluta med något) mot stop to do (stanna för att göra något).",
+        "Remember doing (minnas något som hänt) mot remember to do (komma ihåg att göra något).",
+        "Be used to + -ing betyder 'vara van vid': She is used to working at night. Used to + grundform betyder 'brukade': I used to swim.",
+        "Having + perfektparticip visar att något hände före: Having finished his homework, he went out.",
+        "Participkonstruktion: -ing-satsen och huvudsatsen ska ha samma subjekt. Walking into the room, she noticed the smell.",
+        "Look forward to, be worth och it's no use följs av -ing."
+      ],
+      "exercises": [
+        {
+          "id": "gym-g13-1",
+          "type": "multiple-choice",
+          "question": "I stopped ___ coffee last year — now I only drink tea.",
+          "options": [
+            "to drink",
+            "drinking",
+            "drink"
+          ],
+          "correctIndex": 1,
+          "hint": "Här har vanan upphört. Vilken form används då efter 'stop'?",
+          "explanation": "stop drinking = sluta med något. Stop to drink = stanna för att dricka."
+        },
+        {
+          "id": "gym-g13-2",
+          "type": "multiple-choice",
+          "question": "On the way home, she stopped ___ some bread.",
+          "options": [
+            "buying",
+            "to buy",
+            "buy"
+          ],
+          "correctIndex": 1,
+          "hint": "Hon avbröt det hon gjorde för att göra något annat. Vilken form uttrycker syfte?",
+          "explanation": "stop to buy = stanna för att köpa. Stop buying = sluta köpa."
+        },
+        {
+          "id": "gym-g13-3",
+          "type": "multiple-choice",
+          "question": "I remember ___ this film as a child — it scared me.",
+          "options": [
+            "to watch",
+            "watching",
+            "watch"
+          ],
+          "correctIndex": 1,
+          "hint": "Du minns något som redan har hänt.",
+          "explanation": "remember watching = minnas att man gjorde något. Remember to watch = komma ihåg att göra något."
+        },
+        {
+          "id": "gym-g13-4",
+          "type": "multiple-choice",
+          "question": "Remember ___ the door when you leave!",
+          "options": [
+            "locking",
+            "to lock",
+            "lock"
+          ],
+          "correctIndex": 1,
+          "hint": "Det handlar om något som ska göras i framtiden.",
+          "explanation": "remember to lock = komma ihåg att göra något. Remember locking = minnas att man gjorde det."
+        },
+        {
+          "id": "gym-g13-5",
+          "type": "fill-in-blank",
+          "sentence": "I'm really looking forward to ___ (meet) you.",
+          "answer": "meeting",
+          "hint": "'To' i 'look forward to' är en preposition, inte ett infinitivmärke.",
+          "explanation": "look forward to + meeting. Efter prepositionen 'to': -ing."
+        },
+        {
+          "id": "gym-g13-6",
+          "type": "fill-in-blank",
+          "sentence": "She is used to ___ (work) night shifts.",
+          "answer": "working",
+          "hint": "'Be used to' betyder 'vara van vid', och 'to' är här en preposition.",
+          "explanation": "be used to + working = vara van vid att arbeta."
+        },
+        {
+          "id": "gym-g13-7",
+          "type": "multiple-choice",
+          "question": "When I was a child, I used ___ in the lake every summer.",
+          "options": [
+            "to swim",
+            "to swimming",
+            "swimming"
+          ],
+          "correctIndex": 0,
+          "hint": "'Used to' utan 'be' betyder 'brukade' och följs av grundform.",
+          "explanation": "used to + swim = brukade simma. Jämför: be used to swimming = vara van vid att simma."
+        },
+        {
+          "id": "gym-g13-8",
+          "type": "fill-in-blank",
+          "sentence": "___ (finish) his homework, he went out to play football.",
+          "answer": "Having finished",
+          "hint": "Visa att läxan blev klar före det andra: having + perfektparticip.",
+          "explanation": "Having finished his homework, he went out. Having + finished visar att det hände först.",
+          "alternativeAnswers": [
+            "After finishing",
+            "After having finished"
+          ]
+        },
+        {
+          "id": "gym-g13-9",
+          "type": "multiple-choice",
+          "question": "It's no use ___ about it now.",
+          "options": [
+            "to complain",
+            "complaining",
+            "complain"
+          ],
+          "correctIndex": 1,
+          "hint": "'It's no use' hör till uttrycken som följs av -ing.",
+          "explanation": "It's no use complaining = det är ingen idé att klaga."
+        },
+        {
+          "id": "gym-g13-10",
+          "type": "multiple-choice",
+          "question": "Which sentence uses a participle clause correctly?",
+          "options": [
+            "Walking into the room, the lights went out.",
+            "Walking into the room, she noticed the smell.",
+            "Walked into the room, she noticed the smell."
+          ],
+          "correctIndex": 1,
+          "hint": "Den som utför handlingen i -ing-satsen måste vara subjekt i huvudsatsen.",
+          "explanation": "Walking into the room, she noticed … – 'she' går in i rummet. Lamporna kan inte gå in i ett rum."
+        },
+        {
+          "id": "gym-g13-11",
+          "type": "fill-in-blank",
+          "sentence": "They regret not ___ (study) harder for the exam.",
+          "answer": "studying",
+          "hint": "'Regret' om något i det förflutna följs av -ing-form.",
+          "explanation": "regret not studying = ångra att man inte pluggade. Även 'not having studied' är rätt.",
+          "alternativeAnswers": [
+            "having studied"
+          ]
+        },
+        {
+          "id": "gym-g13-12",
+          "type": "multiple-choice",
+          "question": "This museum is well worth ___.",
+          "options": [
+            "to visit",
+            "visiting",
+            "visit"
+          ],
+          "correctIndex": 1,
+          "hint": "'Be worth' hör till uttrycken som följs av -ing.",
+          "explanation": "be worth visiting = vara värt ett besök."
+        },
+        {
+          "id": "gym-g13-13",
+          "type": "fill-in-blank",
+          "sentence": "She denied ___ (take) the money.",
+          "answer": "taking",
+          "hint": "'Deny' hör till gruppen verb som följs av -ing.",
+          "explanation": "deny + taking = förneka att man tog. Även 'having taken' är rätt.",
+          "alternativeAnswers": [
+            "having taken"
+          ]
+        },
+        {
+          "id": "gym-g13-14",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Eftersom vi hade tappat nyckeln fick vi vänta ute.",
+          "words": [
+            "Having",
+            "lost",
+            "the",
+            "key",
+            ",",
+            "we",
+            "had",
+            "to",
+            "wait",
+            "outside",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "hint": "Börja med having + perfektparticip, sedan huvudsatsen efter kommatecknet.",
+          "explanation": "Having lost the key, we had to wait outside. Having lost visar att det hände först.",
+          "alternativeOrders": [
+            [
+              5,
+              6,
+              7,
+              8,
+              9,
+              4,
+              0,
+              1,
+              2,
+              3,
+              10
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "id": "gym-sluttest",
       "title": "Sluttest 1 – Grammatik",
       "description": "Testa din avancerade grammatik! 23 blandade frågor.",

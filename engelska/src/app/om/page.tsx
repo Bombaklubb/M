@@ -41,7 +41,7 @@ const OVNINGSTYPER = [
 ];
 
 const AKTIVITETER = [
-  { emoji: "📘", name: "Grammatik", desc: "Appens kärna. 150 kapitel med omkring 1 900 övningar – från am/is/are till perfekt particip och passiv form." },
+  { emoji: "📘", name: "Grammatik", desc: "Appens kärna. 154 kapitel med nästan 2 000 övningar – från am/is/are till -ing-form, perfekt particip och passiv form." },
   { emoji: "🔤", name: "Stavning", desc: "Ord som ofta blir fel, tränade i samma tre övningstyper." },
   { emoji: "📖", name: "Språkregler", desc: "Uppslagsdelen. Här står reglerna förklarade med exempel – bra att titta i före eller under en övning." },
   { emoji: "🔍", name: "Ordsökning", desc: "Hitta gömda engelska ord i rutnätet. Lugnare träning på ordbilder." },

@@ -6141,6 +6141,187 @@
       ]
     },
     {
+      "id": "mel-g14-ing-form",
+      "title": "-ing-form – pågående och gilla att",
+      "description": "Pågående form, frågor och nekande, stavningsregler och verb som följs av -ing.",
+      "icon": "🏃",
+      "pointsRequired": 0,
+      "bonusPoints": 25,
+      "helpText": [
+        "Pågående form: am/is/are + verb-ing. Den visar vad som händer just nu: She is watching TV.",
+        "Fråga: Are you listening? Nekande: He isn't playing today.",
+        "Stavning: dance → dancing (e försvinner), stop → stopping (dubbel konsonant), lie → lying (ie blir y).",
+        "Efter vissa verb kommer alltid -ing: enjoy, finish, stop. I enjoy riding my bike.",
+        "Efter 'good at' och liknande uttryck kommer också -ing: She is good at drawing.",
+        "-ing-formen kan vara subjekt, som ett substantiv: Swimming is fun!"
+      ],
+      "exercises": [
+        {
+          "id": "mel-g14-1",
+          "type": "multiple-choice",
+          "question": "Hur stavas lie + ing?",
+          "options": [
+            "lieing",
+            "lying",
+            "liing"
+          ],
+          "correctIndex": 1,
+          "hint": "Verb som slutar på -ie byter ie mot en annan bokstav före -ing.",
+          "explanation": "lie → lying. ie blir y: lying, die → dying, tie → tying."
+        },
+        {
+          "id": "mel-g14-2",
+          "type": "fill-in-blank",
+          "sentence": "I enjoy ___ (ride) my bike.",
+          "answer": "riding",
+          "hint": "Efter 'enjoy' kommer alltid -ing-form. Tänk också på stavningen när verbet slutar på -e.",
+          "explanation": "enjoy + riding. ride tappar e:et: riding."
+        },
+        {
+          "id": "mel-g14-3",
+          "type": "multiple-choice",
+          "question": "'She ___ TV right now.'",
+          "options": [
+            "watches",
+            "is watching",
+            "watched"
+          ],
+          "correctIndex": 1,
+          "hint": "'Right now' visar att det pågår just nu.",
+          "explanation": "She is watching TV right now. is + watching."
+        },
+        {
+          "id": "mel-g14-4",
+          "type": "fill-in-blank",
+          "sentence": "Are you ___ (listen) to me?",
+          "answer": "listening",
+          "hint": "I frågan står 'are' först, sedan subjektet och verbet med -ing.",
+          "explanation": "Are you listening to me? listen + ing."
+        },
+        {
+          "id": "mel-g14-5",
+          "type": "multiple-choice",
+          "question": "'He ___ playing today. He is sick.'",
+          "options": [
+            "isn't",
+            "don't",
+            "doesn't"
+          ],
+          "correctIndex": 0,
+          "hint": "Pågående form nekas med am/is/are + not, inte med do.",
+          "explanation": "He isn't playing today. is + not = isn't."
+        },
+        {
+          "id": "mel-g14-6",
+          "type": "fill-in-blank",
+          "sentence": "My brother is good at ___ (draw).",
+          "answer": "drawing",
+          "hint": "Efter en preposition som 'at' kommer verbet i -ing-form.",
+          "explanation": "good at + drawing. Efter prepositioner: -ing."
+        },
+        {
+          "id": "mel-g14-7",
+          "type": "multiple-choice",
+          "question": "Hur stavas stop + ing?",
+          "options": [
+            "stoping",
+            "stopping",
+            "stopeing"
+          ],
+          "correctIndex": 1,
+          "hint": "Kort verb med en vokal + en konsonant i slutet: dubbla sista bokstaven.",
+          "explanation": "stop → stopping. P:et dubblas."
+        },
+        {
+          "id": "mel-g14-8",
+          "type": "fill-in-blank",
+          "sentence": "They are ___ (write) a story together.",
+          "answer": "writing",
+          "hint": "Verb som slutar på -e tappar e:et innan -ing läggs till.",
+          "explanation": "write → writing. They are writing a story."
+        },
+        {
+          "id": "mel-g14-9",
+          "type": "multiple-choice",
+          "question": "'What ___ you doing?' – 'I'm doing my homework.'",
+          "options": [
+            "is",
+            "are",
+            "do"
+          ],
+          "correctIndex": 1,
+          "hint": "Vilken form av 'be' hör ihop med you?",
+          "explanation": "What are you doing? you → are."
+        },
+        {
+          "id": "mel-g14-10",
+          "type": "fill-in-blank",
+          "sentence": "We finished ___ (eat) at seven o'clock.",
+          "answer": "eating",
+          "hint": "Efter 'finish' kommer alltid -ing-form.",
+          "explanation": "finish + eating. We finished eating at seven."
+        },
+        {
+          "id": "mel-g14-11",
+          "type": "multiple-choice",
+          "question": "Vilket ord är FELSTAVAT?",
+          "options": [
+            "coming",
+            "runing",
+            "playing",
+            "taking"
+          ],
+          "correctIndex": 1,
+          "hint": "Tänk på vilka korta verb som dubblar sista bokstaven.",
+          "explanation": "run → running med två n. 'Runing' är fel."
+        },
+        {
+          "id": "mel-g14-12",
+          "type": "fill-in-blank",
+          "sentence": "The children are ___ (tie) their shoes.",
+          "answer": "tying",
+          "hint": "Verb som slutar på -ie byter ie mot en annan bokstav före -ing.",
+          "explanation": "tie → tying. ie blir y."
+        },
+        {
+          "id": "mel-g14-13",
+          "type": "build-sentence",
+          "instruction": "Bygg meningen: Jag tittar inte på tv (just nu).",
+          "words": [
+            "I",
+            "am",
+            "not",
+            "watching",
+            "TV",
+            "."
+          ],
+          "correctOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "hint": "Nekande pågående form: subjekt + am/is/are + not + verb-ing.",
+          "explanation": "I am not watching TV. am + not + watching."
+        },
+        {
+          "id": "mel-g14-14",
+          "type": "multiple-choice",
+          "question": "'___ is fun!' (Att simma är kul!)",
+          "options": [
+            "Swim",
+            "Swimming",
+            "Swims"
+          ],
+          "correctIndex": 1,
+          "hint": "När ett verb står som subjekt, som ett substantiv, får det en ändelse.",
+          "explanation": "Swimming is fun! -ing-formen fungerar som ett substantiv."
+        }
+      ]
+    },
+    {
       "id": "mel-sluttest",
       "title": "Sluttest 1 – Grammatik",
       "description": "Testa din grammatik! 23 blandade frågor.",
