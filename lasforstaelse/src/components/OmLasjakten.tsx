@@ -246,7 +246,6 @@ export const OmLasjakten: React.FC<OmLasjaktenProps> = ({ onClose }) => (
       <Avsnitt emoji="🔒" titel="Bra att veta">
         <ul className="space-y-2.5">
           <li>Inga personuppgifter samlas in. Ditt namn och dina poäng sparas bara i din egen webbläsare.</li>
-          <li>Statistiken som läraren ser är anonym och summerad. Den går inte att koppla till en elev.</li>
           <li>Byter du dator börjar du om, eftersom ingenting sparas på någon server.</li>
           <li>Rensar du webbläsarens data försvinner poängen. Det går inte att få tillbaka.</li>
         </ul>
