@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Topic } from '../types';
+import { checkFillIn } from '../utils/answerCheck';
 import { useApp } from '../contexts/AppContext';
 import AppHeader from './AppHeader';
 import InteractiveClock from './InteractiveClock';
@@ -707,10 +708,7 @@ export default function TopicInstruction({ topic }: { topic: Topic }) {
     if (!miniEx) return;
     let ok = false;
     if (miniEx.type === 'fill-in') {
-      const correct_str = String((miniEx as any).answer).replace(',', '.');
-      const acceptable = ((miniEx as any).acceptableAnswers ?? []).map((a: any) => String(a).replace(',', '.').toLowerCase());
-      ok = ans.trim().replace(',', '.').toLowerCase() === correct_str.toLowerCase()
-        || acceptable.includes(ans.trim().replace(',', '.').toLowerCase());
+      ok = checkFillIn(ans, miniEx as any);
     } else if (miniEx.type === 'multiple-choice') {
       ok = ans === String((miniEx as any).correctIndex);
     } else if (miniEx.type === 'true-false') {

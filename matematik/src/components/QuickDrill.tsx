@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useApp } from '../contexts/AppContext';
 import { TOPICS, gradeToNum } from '../data/topics';
 import { FillInExercise, MultipleChoiceExercise, TrueFalseExercise } from '../types';
+import { checkFillIn } from '../utils/answerCheck';
 import { addPoints, recordTopicSession } from '../utils/storage';
 import { rollPointsBonus } from '../utils/pointsBonus';
 import { updateAdaptive } from '../utils/adaptive';
@@ -74,10 +75,7 @@ export default function QuickDrill() {
 
     if (currentEx.type === 'fill-in') {
       const ex = currentEx as FillInExercise & { topicId: string; topicTitle: string };
-      const correct_ans = String(ex.answer).replace(',','.');
-      const acceptable = (ex.acceptableAnswers ?? []).map((a: any) => String(a).replace(',','.').toLowerCase());
-      isCorrect = answer.trim().replace(',','.').toLowerCase() === correct_ans.toLowerCase()
-        || acceptable.includes(answer.trim().replace(',','.').toLowerCase());
+      isCorrect = checkFillIn(answer, ex);
     } else if (currentEx.type === 'multiple-choice') {
       isCorrect = answer === String((currentEx as MultipleChoiceExercise).correctIndex);
     } else if (currentEx.type === 'true-false') {
