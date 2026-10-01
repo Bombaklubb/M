@@ -3,9 +3,14 @@
 import { useState } from "react";
 import { FRAME_MAP } from "@/lib/shop";
 import type { Avatar } from "@/lib/avatars";
+import SpriteImage, { hasSprite } from "./SpriteImage";
 
 function Glyph({ avatar, size }: { avatar: Avatar; size: number }) {
   const [error, setError] = useState(false);
+  // Avatarbilderna ligger i sprite-filen: ingen egen fil att hämta per avatar.
+  if (avatar.image && hasSprite(avatar.image)) {
+    return <SpriteImage src={avatar.image} alt={avatar.name} style={{ width: size, height: size }} />;
+  }
   if (avatar.image && !error) {
     return (
       <img

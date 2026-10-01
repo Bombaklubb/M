@@ -11,6 +11,7 @@ import FramedAvatar from "@/components/ui/FramedAvatar";
 import EffectOverlay from "@/components/ui/EffectOverlay";
 import type { StudentData } from "@/lib/types";
 import { NumberTicker } from "@/components/magicui/number-ticker";
+import UnionJack from "./UnionJack";
 
 interface HeaderProps {
   student: StudentData | null;
@@ -124,7 +125,7 @@ export default function Header({ student, onLogout }: HeaderProps) {
               boxShadow: "0 3px 0 0 rgba(30,64,175,0.4), inset 0 1px 0 rgba(255,255,255,0.2)"
             }}
           >
-            <img src="/union-jack.svg" alt="Union Jack" className="w-full h-full object-cover" />
+            <UnionJack title="Union Jack" className="w-full h-full" />
           </div>
           {/* Namnet visas först när det finns plats. Mellan 640 och 880 px blev
               headern annars bredare än sidan och knapparna längst till höger

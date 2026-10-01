@@ -8,6 +8,8 @@ import { STAGES } from "@/lib/stages";
 import { CHEST_META } from "@/lib/gamification";
 import type { StudentData, ChestType } from "@/lib/types";
 import { JAKT_APPS } from "@/components/ui/JakterMenu";
+import SpriteImage from "@/components/ui/SpriteImage";
+import UnionJack from "@/components/ui/UnionJack";
 
 /** Vad varje app i Jaktlänkar tränar. Länkarna själva kommer från menyn. */
 const JAKT_BESKRIVNING: Record<string, string> = {
@@ -102,7 +104,7 @@ export default function OmPage() {
             ← Tillbaka
           </Link>
           <div className="flex items-center gap-3">
-            <img src="/union-jack.svg" alt="" className="w-11 h-11 rounded-xl object-cover border-2 border-white/30" />
+            <UnionJack className="w-11 h-11 rounded-xl border-2 border-white/30" />
             <div>
               <h1 className="text-2xl font-black">Om Engelskajakten</h1>
               <p className="text-white/80 text-sm">Så fungerar appen</p>
@@ -267,7 +269,7 @@ export default function OmPage() {
               const meta = CHEST_META[c.type];
               return (
                 <div key={c.type} className="rounded-2xl border-2 border-en-100 dark:border-gray-600 bg-en-50/60 dark:bg-gray-900/50 p-3 text-center">
-                  <img src={meta.image} alt="" className="w-10 h-10 mx-auto mb-1.5 object-contain" />
+                  <SpriteImage src={meta.image} alt="" display="flex" className="w-10 h-10 mx-auto mb-1.5" />
                   <p className="text-sm font-bold text-en-800 dark:text-gray-200">{meta.label}</p>
                   <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-tight">{c.points}</p>
                 </div>

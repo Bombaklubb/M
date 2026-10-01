@@ -6,11 +6,14 @@ import Header from "@/components/ui/Header";
 import { loadStudent, createStudent, clearStudent, claimDailyBonus } from "@/lib/storage";
 import { STAGES } from "@/lib/stages";
 import { AVATARS } from "@/lib/avatars";
+import SpriteImage from "@/components/ui/SpriteImage";
+import manifest from "../../public/content/manifest.json";
 import type { StudentData, StageId } from "@/lib/types";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
+import UnionJack from "@/components/ui/UnionJack";
 
 // Alla fyra kapiteltyper räknas. Spelmodulerna saknades tidigare i båda
 // funktionerna, så Ordbyn visade "1/48" fast världen har 50 kapitel, och
@@ -36,6 +39,19 @@ function getStageCompleted(student: StudentData, stageId: string): number {
   for (const m of Object.values(sp.spelModules       ?? {})) if (m.completed) done++;
   return done;
 }
+
+// Modulantal per stadie för progressringarna. manifest.json byggs före varje
+// deploy (scripts/generate-manifest.mjs) och läses nu in i koden vid bygget, i
+// stället för att hämtas från servern vid varje besök på startsidan.
+// Läsförståelse hör till Läsjakten och räknas inte. Spelmodulerna räknas
+// däremot med: de är kapitel som eleven klarar.
+const STAGE_TOTALS: Record<string, number> = Object.fromEntries(
+  STAGES.map((s) => {
+    const c = (manifest as Record<string, Record<string, number>>)[s.id];
+    const total = c ? (c.grammar ?? 0) + (c.spelling ?? 0) + (c.wordsearch ?? 0) + (c.spel ?? 0) : 0;
+    return [s.id, total];
+  })
+);
 
 // Small circular progress ring shown on each stage card
 function ProgressRing({ pct }: { pct: number }) {
@@ -68,7 +84,6 @@ export default function HomePage() {
   const [selectedAvatar, setSelectedAvatar] = useState("ninja");
   const [loading,        setLoading]        = useState(true);
   const [returningName,  setReturningName]  = useState<string | null>(null);
-  const [totals,         setTotals]         = useState<Record<string, number>>({});
   const [dailyBonus,     setDailyBonus]     = useState(0);
 
   useEffect(() => {
@@ -85,26 +100,6 @@ export default function HomePage() {
       setStudent(s);
     }
     setLoading(false);
-    // Modulantal per stadie för progressringarna. Läser en liten manifest-fil
-    // (~0,6 kB) i stället för alla fyra content.json (~916 kB).
-    fetch("/content/manifest.json")
-      .then((r) => r.json())
-      .then((m: Record<string, Record<string, number>>) =>
-        setTotals(
-          Object.fromEntries(
-            STAGES.map((s) => {
-              const c = m[s.id];
-              // Läsförståelse hör till Läsjakten och visas inte här – räknas därför inte.
-              // Spelmodulerna räknas däremot med: de är kapitel som eleven klarar.
-              const total = c
-                ? (c.grammar ?? 0) + (c.spelling ?? 0) + (c.wordsearch ?? 0) + (c.spel ?? 0)
-                : 0;
-              return [s.id, total] as [string, number];
-            })
-          )
-        )
-      )
-      .catch(() => setTotals({}));
   }, []);
 
   function handleNameChange(value: string) {
@@ -154,7 +149,7 @@ export default function HomePage() {
                   boxShadow: "0 8px 0 0 rgba(0,0,0,0.2), 0 12px 24px -4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.4)"
                 }}
               >
-                <img src="/union-jack.svg" alt="Union Jack" className="w-full h-full object-cover" />
+                <UnionJack title="Union Jack" className="w-full h-full" />
               </div>
               {/* text-4xl på smala telefoner: text-5xl gjorde titeln bredare än
                   skärmen, så hela startsidan gick att dra i sidled. */}
@@ -229,7 +224,7 @@ export default function HomePage() {
                         }}
                       >
                         {avatar.image ? (
-                          <img src={avatar.image} alt={avatar.name} className="w-full h-full object-contain p-0.5" />
+                          <SpriteImage src={avatar.image} alt={avatar.name} className="w-full h-full p-0.5" />
                         ) : (
                           avatar.emoji
                         )}
@@ -321,7 +316,7 @@ export default function HomePage() {
           {STAGES.map((stage, i) => {
             const pts  = getStagePoints(student, stage.id);
             const done = getStageCompleted(student, stage.id);
-            const total = totals[stage.id] ?? 0;
+            const total = STAGE_TOTALS[stage.id] ?? 0;
             const pct  = total > 0 ? (done / total) * 100 : 0;
 
             return (

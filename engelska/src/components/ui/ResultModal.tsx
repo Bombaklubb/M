@@ -5,14 +5,11 @@ import type { ChestType } from "@/lib/types";
 import { CHEST_META } from "@/lib/gamification";
 import { getModuleCompleteFeedback } from "@/lib/feedback";
 import type { LuckyBonus } from "@/lib/luckyBonus";
+import SpriteImage from "./SpriteImage";
 
 function ChestImage({ type }: { type: ChestType }) {
   return (
-    <img
-      src={CHEST_META[type].image}
-      alt={CHEST_META[type].label}
-      className="w-10 h-10 flex-shrink-0 object-contain"
-    />
+    <SpriteImage src={CHEST_META[type].image} alt={CHEST_META[type].label} className="w-10 h-10 flex-shrink-0" />
   );
 }
 

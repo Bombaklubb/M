@@ -27,7 +27,7 @@ export default function GameDayLock({ stageId, student }: { stageId: string; stu
           </p>
           <Link
             prefetch={false}
-            href={`/world/${stageId}?tab=grammar`}
+            href={`/world/${stageId}#tab=grammar`}
             className="btn-primary bg-en-600 hover:bg-en-700 mt-6 w-full"
           >
             Till kapitlen →

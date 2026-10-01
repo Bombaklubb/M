@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "node scripts/generate-manifest.mjs",
+    "prebuild": "node scripts/generate-manifest.mjs && node scripts/check-sprites.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sprites": "node scripts/build-sprites.mjs",
+    "test": "node scripts/check-sprites.mjs"
   },
   "dependencies": {
     "@vercel/kv": "^2.0.0",

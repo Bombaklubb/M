@@ -1,0 +1,450 @@
+"use client";
+
+import { useState, useEffect, use } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import Header from "@/components/ui/Header";
+import ProgressBar from "@/components/ui/ProgressBar";
+import ResultModal from "@/components/ui/ResultModal";
+import MultipleChoice from "@/components/exercises/MultipleChoice";
+import FillInBlank from "@/components/exercises/FillInBlank";
+import BuildSentence from "@/components/exercises/BuildSentence";
+import { loadStudent, saveModuleProgress, loadGamification, saveGamification, getModuleProgress, getRepeatMultiplier, addBonusPoints, saveExercisePosition, loadExercisePosition, clearExercisePosition } from "@/lib/storage";
+import { rollLuckyBonus, type LuckyBonus } from "@/lib/luckyBonus";
+import { recordError } from "@/lib/errorBank";
+import {
+  chestsEarnedFromPoints,
+  chestsEarnedFromExercises,
+  rollMysteryBox,
+  checkAchievementBadges,
+  BOSS_UNLOCK_THRESHOLD, getBossGate, completedModulesInStage, bossWinsInStage } from "@/lib/gamification";
+import MysteryBoxPopup from "@/components/ui/MysteryBoxPopup";
+import type { ChestType, MysteryBoxReward } from "@/lib/types";
+import type { StageId } from "@/lib/types";
+import { getStage } from "@/lib/stages";
+import type {
+  StudentData,
+  StageContent,
+  GrammarModule,
+  GrammarExercise,
+} from "@/lib/types";
+import { contentUrl } from "@/lib/contentUrl";
+
+const POINTS_PER_CORRECT = 15;
+
+interface Props {
+  params: Promise<{ stage: string; module: string }>;
+}
+
+export default function GrammarModulePage({ params }: Props) {
+  const { stage: stageId, module: moduleId } = use(params);
+  const stage = getStage(stageId);
+  const router = useRouter();
+
+  const [student, setStudent] = useState<StudentData | null>(null);
+  const [mod, setMod] = useState<GrammarModule | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  // "intro" shows help screen, "exercises" shows questions
+  const [phase, setPhase] = useState<"intro" | "exercises">("intro");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [results, setResults] = useState<boolean[]>([]);
+  const [showResult, setShowResult] = useState(false);
+  const [chestEarned, setChestEarned] = useState<ChestType | undefined>();
+  const [bossJustUnlocked, setBossJustUnlocked] = useState(false);
+  const [mysteryBox, setMysteryBox] = useState<MysteryBoxReward | null>(null);
+  const [modalPoints, setModalPoints] = useState(0);
+  const [modalBonus, setModalBonus] = useState(0);
+  const [modalLucky, setModalLucky] = useState<LuckyBonus | null>(null);
+  const [attemptNum, setAttemptNum] = useState(1);
+  const [isNewRecord, setIsNewRecord] = useState(false);
+
+  useEffect(() => {
+    const s = loadStudent();
+    setStudent(s);
+    fetch(contentUrl(stageId))
+      .then((r) => r.json())
+      .then((data: StageContent) => {
+        const found = data.grammar.find((m) => m.id === moduleId);
+        if (found) {
+          setMod(found);
+          const saved = loadExercisePosition(stageId, moduleId);
+          if (saved !== null && saved.index > 0 && saved.index < found.exercises.length) {
+            setCurrentIndex(saved.index);
+            // Återställ svaren så att slutpoängen räknas på hela kapitlet.
+            setResults(saved.results.slice(0, saved.index));
+            setPhase("exercises");
+          }
+        }
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, [stageId, moduleId]);
+
+  if (!stage) return notFound();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-4xl animate-bounce-slow">{stage.emoji}</div>
+      </div>
+    );
+  }
+
+  if (!mod) return notFound();
+
+  const exercises = mod.exercises;
+  const totalExercises = exercises.length;
+  const currentExercise: GrammarExercise | undefined = exercises[currentIndex];
+  const progress = (currentIndex / totalExercises) * 100;
+
+  function handleAnswer(correct: boolean, userAnswer: string, correctAnswer: string) {
+    // Record wrong answers in error bank
+    if (!correct && student) {
+      const ex = exercises[currentIndex];
+      const question =
+        ex.type === "fill-in-blank" ? ex.sentence :
+        ex.type === "build-sentence" ? ex.instruction :
+        ex.question;
+      recordError(student.name, stageId, "grammar", mod!.id, mod!.title,
+        ex.id, question, correctAnswer, userAnswer, ex);
+    }
+    const newResults = [...results, correct];
+    setResults(newResults);
+
+    if (currentIndex + 1 >= totalExercises) {
+      clearExercisePosition(stageId, moduleId);
+      const totalCorrect = newResults.filter(Boolean).length;
+      const pts = totalCorrect * POINTS_PER_CORRECT;
+      const passed = (totalCorrect / totalExercises) >= 0.6;
+
+      if (student) {
+        const existingProgress = getModuleProgress(student, stage!.id, "grammar", mod!.id);
+        const wasAlreadyCompleted = existingProgress?.completed ?? false;
+        const priorAttempts = existingProgress?.attempts ?? 0;
+        const prevBestPoints = existingProgress?.points ?? 0;
+        const repeatMult = getRepeatMultiplier(priorAttempts);
+        const adjustedBase = Math.round(pts * repeatMult);
+        const adjustedBonus = passed ? Math.round(mod!.bonusPoints * repeatMult) : 0;
+        const adjustedTotal = adjustedBase + adjustedBonus;
+        // Turbonus: sällsynt slumpbonus (×2/×3) på det som tjänades in nu
+        const luck = rollLuckyBonus(student.name, adjustedTotal);
+        setModalLucky(luck);
+        // Turbonus får lyfta en rabatterad omgång, men aldrig över vad ett
+        // förstaförsök hade gett – annars kan en repetition ge mer poäng
+        // än originalet.
+        const fullValue = pts + (passed ? mod!.bonusPoints : 0);
+        const totalWithLuck = Math.min(adjustedTotal + (luck?.extra ?? 0), fullValue);
+        setModalPoints(adjustedBase);
+        setModalBonus(adjustedBonus);
+        setAttemptNum(priorAttempts + 1);
+
+        // Världens bosslås före det här kapitlet – för att se om just det här
+
+        // kapitlet öppnade en strid (vid 10, 20, 30 … klarade kapitel).
+
+        const bossGateBefore = getBossGate(
+
+          completedModulesInStage(student, stage!.id as StageId),
+
+          bossWinsInStage(loadGamification(), stage!.id as StageId)
+
+        ).unlocked;
+
+        const prevPoints = student.totalPoints; // capture BEFORE saveModuleProgress mutates it
+        const updated = saveModuleProgress(
+          student,
+          stage!.id,
+          "grammar",
+          mod!.id,
+          totalWithLuck,
+          passed
+        );
+        setStudent(updated);
+
+        // ── Gamification ──────────────────────────────────────────────
+        const gam = loadGamification();
+        const newPoints = updated.totalPoints;
+        const prevExercises = gam.exercisesCompleted;
+        const newExercises = wasAlreadyCompleted ? prevExercises : prevExercises + 1;
+
+        // Chests from points
+        const pointChests = chestsEarnedFromPoints(
+          prevPoints, newPoints, gam.pointsMilestonesRewarded, gam.chests
+        );
+        // Chests from exercise count (skip if replaying a completed module)
+        const exChests = wasAlreadyCompleted ? [] : chestsEarnedFromExercises(
+          prevExercises, newExercises, gam.exerciseMilestonesRewarded, gam.chests
+        );
+
+        const allNewChests = [
+          ...pointChests.map((c) => c.chest),
+          ...exChests.map((c) => c.chest),
+        ];
+        const firstChest = allNewChests[0];
+
+        // Boss unlock check
+        const wasBossUnlocked = gam.bossUnlocked;
+        const nowBossUnlocked =
+          wasBossUnlocked || newExercises >= BOSS_UNLOCK_THRESHOLD;
+
+        // Mystery box (skip if replaying a completed module)
+        const mystery = wasAlreadyCompleted ? null : rollMysteryBox(gam.badges, newExercises, gam.chests);
+        let extraMysteryChest = mystery?.type === "chest" && mystery.chestType
+          ? [{ id: `chest_m_${Date.now()}`, type: mystery.chestType, earnedAt: new Date().toISOString(), opened: false } as import("@/lib/types").Chest]
+          : [];
+        let mysteryBadge = mystery?.type === "badge" && mystery.badgeId ? mystery.badgeId : null;
+        let mysteryPoints = mystery?.type === "points" && mystery.points ? mystery.points : 0;
+
+        // Award mystery_hunter on first mystery box found
+        const earlyBadges = [...gam.badges];
+        if (mystery && !earlyBadges.includes("mystery_hunter")) earlyBadges.push("mystery_hunter");
+        if (mysteryBadge && !earlyBadges.includes(mysteryBadge)) earlyBadges.push(mysteryBadge);
+        const baseBadges = earlyBadges;
+        const newGam = {
+          ...gam,
+          chests: [...gam.chests, ...allNewChests, ...extraMysteryChest],
+          badges: baseBadges,
+          exercisesCompleted: newExercises,
+          bossUnlocked: nowBossUnlocked,
+          pointsMilestonesRewarded: [
+            ...gam.pointsMilestonesRewarded,
+            ...pointChests.map((c) => c.milestone),
+          ],
+          exerciseMilestonesRewarded: [
+            ...gam.exerciseMilestonesRewarded,
+            ...exChests.map((c) => c.milestone),
+          ],
+        };
+        const achievementBadges = checkAchievementBadges(updated, newGam);
+        if (achievementBadges.length > 0) {
+          newGam.badges = [...newGam.badges, ...achievementBadges];
+        }
+        saveGamification(newGam);
+
+        // Apply mystery box points to student
+        if (mysteryPoints > 0) setStudent(addBonusPoints(updated, mysteryPoints));
+
+        if (firstChest) setChestEarned(firstChest.type as ChestType);
+        // Förut: fem övningar var som helst → "bossen upplåst", vilket inte
+        // stämt sedan låset flyttades till världen.
+        const bossGateAfter = getBossGate(
+          completedModulesInStage(updated, stage!.id as StageId),
+          bossWinsInStage(loadGamification(), stage!.id as StageId)
+        ).unlocked;
+        if (bossGateAfter && !bossGateBefore) setBossJustUnlocked(true);
+        if (mystery) setMysteryBox(mystery);
+        if (adjustedTotal > prevBestPoints && adjustedTotal > 0) setIsNewRecord(true);
+      }
+      setShowResult(true);
+    } else {
+      setCurrentIndex((i) => i + 1);
+      // Spara svaren också, annars tappar eleven sina rätt vid ett avbrott.
+      saveExercisePosition(stageId, moduleId, currentIndex + 1, newResults);
+    }
+  }
+
+  function handleRetry() {
+    clearExercisePosition(stageId, moduleId);
+    setCurrentIndex(0);
+    setResults([]);
+    setShowResult(false);
+    setIsNewRecord(false);
+    setPhase("intro");
+  }
+
+  function handleContinue() {
+    if (mysteryBox) {
+      setShowResult(false);
+      // mysteryBox popup will show, then navigate on close
+    } else {
+      router.push(`/world/${stageId}#tab=grammar`);
+    }
+  }
+
+  function handleMysteryClose() {
+    setMysteryBox(null);
+    router.push(`/world/${stageId}#tab=grammar`);
+  }
+
+  const totalCorrect = results.filter(Boolean).length;
+  const earnedPoints = totalCorrect * POINTS_PER_CORRECT;
+
+  // ─── Intro / help phase ───────────────────────────────────────────────────
+  if (phase === "intro") {
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        <Header student={student} />
+
+        <div className={`${stage.bgClass} text-white`}>
+          <div className="max-w-3xl mx-auto px-4 py-6">
+            <Link prefetch={false}
+              href={`/world/${stageId}#tab=grammar`}
+              className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1"
+            >
+              ← {stage.name}
+            </Link>
+            <div className="flex items-center gap-3">
+              <span className="text-3xl">{mod.icon}</span>
+              <div>
+                <h1 className="text-xl font-black text-shadow">{mod.title}</h1>
+                <p className="text-white/70 text-sm">{mod.description}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
+          <div className="card space-y-4">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">📚</span>
+              <h2 className="text-base sm:text-lg font-bold text-gray-900 dark:text-gray-100">
+                Tänk på det här innan du börjar!
+              </h2>
+            </div>
+
+            {mod.helpText && mod.helpText.length > 0 ? (
+              <ul className="space-y-2.5">
+                {mod.helpText.map((tip, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2.5 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 text-amber-900 dark:text-amber-200 text-sm leading-relaxed"
+                  >
+                    <span className="text-amber-500 mt-0.5 flex-shrink-0">💡</span>
+                    <span>{tip}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div className="bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-xl p-3 sm:p-4 text-blue-800 dark:text-blue-200 text-sm">
+                <p>{mod.description}</p>
+                <p className="mt-2 text-blue-600 dark:text-blue-300 text-xs">
+                  Övningen innehåller {totalExercises} frågor. Läs varje fråga noga innan du svarar!
+                </p>
+              </div>
+            )}
+
+            <div className="flex justify-end border-t border-gray-100 dark:border-gray-700 pt-3 sm:pt-4">
+              <button
+                onClick={() => setPhase("exercises")}
+                className="btn-primary bg-blue-600 hover:bg-blue-700 w-full sm:w-auto justify-center"
+              >
+                Börja övningen →
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+
+  // ─── Exercise phase ───────────────────────────────────────────────────────
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <Header student={student} />
+
+      {/* Progress header */}
+      <div className={`${stage.bgClass} text-white`}>
+        <div className="max-w-3xl mx-auto px-4 py-6">
+          <Link prefetch={false}
+            href={`/world/${stageId}#tab=grammar`}
+            className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1"
+          >
+            ← {stage.name}
+          </Link>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-3xl">{mod.icon}</span>
+            <div>
+              <h1 className="text-xl font-black text-shadow">{mod.title}</h1>
+              <p className="text-white/70 text-sm">{mod.description}</p>
+            </div>
+          </div>
+          <ProgressBar
+            value={progress}
+            colorClass="bg-white/80"
+            label={`Fråga ${Math.min(currentIndex + 1, totalExercises)} av ${totalExercises}`}
+            showPercent={false}
+          />
+        </div>
+      </div>
+
+      {/* Exercise card */}
+      <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
+        <div className="card min-h-[260px] sm:min-h-[300px]">
+          {/* Exercise counter + type badge */}
+          <div className="flex items-center justify-between mb-6">
+            <span className="text-sm text-gray-400 dark:text-gray-400 font-medium">
+              {currentIndex + 1} / {totalExercises}
+            </span>
+            {currentExercise && (
+              <span className="badge bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs">
+                {currentExercise.type === "multiple-choice"
+                  ? "🔘 Flerval"
+                  : currentExercise.type === "fill-in-blank"
+                  ? "✏️ Fyll i"
+                  : "🔤 Bygg mening"}
+              </span>
+            )}
+          </div>
+
+          {/* Render exercise */}
+          {currentExercise && (
+            <div key={`${moduleId}-${currentIndex}`}>
+              {currentExercise.type === "multiple-choice" && (
+                <MultipleChoice
+                  exercise={currentExercise}
+                  onAnswer={handleAnswer}
+                  isLast={currentIndex + 1 === totalExercises}
+                />
+              )}
+              {currentExercise.type === "fill-in-blank" && (
+                <FillInBlank
+                  exercise={currentExercise}
+                  onAnswer={handleAnswer}
+                  isLast={currentIndex + 1 === totalExercises}
+                />
+              )}
+              {currentExercise.type === "build-sentence" && (
+                <BuildSentence
+                  exercise={currentExercise}
+                  onAnswer={handleAnswer}
+                  isLast={currentIndex + 1 === totalExercises}
+                />
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Running score */}
+        <div className="mt-4 flex justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <span>✓ {results.filter(Boolean).length} rätt</span>
+          <span>✗ {results.filter((r) => !r).length} fel</span>
+          <span className="text-amber-600">⭐ {earnedPoints} poäng</span>
+        </div>
+      </main>
+
+      {/* Result modal */}
+      {showResult && (
+        <ResultModal
+          points={modalPoints}
+          bonusPoints={modalBonus}
+          totalCorrect={totalCorrect}
+          totalQuestions={totalExercises}
+          chestEarned={chestEarned}
+          bossUnlocked={bossJustUnlocked}
+          repeatAttemptNumber={attemptNum}
+          isNewRecord={isNewRecord}
+          lucky={modalLucky}
+          onContinue={handleContinue}
+          onRetry={handleRetry}
+        />
+      )}
+
+      {/* Mystery box popup */}
+      {!showResult && mysteryBox && (
+        <MysteryBoxPopup reward={mysteryBox} onClose={handleMysteryClose} />
+      )}
+    </div>
+  );
+}
