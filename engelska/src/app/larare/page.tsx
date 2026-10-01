@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { fetchTeacherStats, type TeacherStats } from "@/services/analyticsService";
 import { RefreshCw, LogOut, Monitor, Users } from "lucide-react";
+import UnionJack from "@/components/ui/UnionJack";
 
 const questionTypeLabels: Record<string, string> = {
   grammar: "Grammatik",
@@ -124,7 +125,7 @@ export default function LararePage() {
       <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900 p-4">
         <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 max-w-sm w-full shadow-xl border border-slate-200 dark:border-slate-700">
           <div className="flex items-center gap-3 mb-2">
-            <img src="/union-jack.svg" alt="" className="w-10 h-10 rounded-xl" />
+            <UnionJack fit="fill" className="w-10 h-10 rounded-xl" />
             <div>
               <h1 className="text-xl font-black text-slate-800 dark:text-white">Lärarvy</h1>
               <p className="text-xs text-slate-500 dark:text-slate-400">Engelskajakten</p>
@@ -163,7 +164,7 @@ export default function LararePage() {
       <header className="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 sticky top-0 z-10">
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/union-jack.svg" alt="" className="w-9 h-9 rounded-lg" />
+            <UnionJack fit="fill" className="w-9 h-9 rounded-lg" />
             <div>
               <h1 className="text-lg font-black text-slate-800 dark:text-white">
                 Lärarvy – Engelskajakten

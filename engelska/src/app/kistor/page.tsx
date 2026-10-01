@@ -30,6 +30,7 @@ import {
 } from "@/lib/gamification";
 import { STAGES } from "@/lib/stages";
 import type { StudentData, GamificationData, Chest, ChestType } from "@/lib/types";
+import SpriteImage from "@/components/ui/SpriteImage";
 
 const BG_LIGHT = "linear-gradient(160deg, #0a1744 0%, #0e2882 30%, #1242a0 55%, #0d246b 80%, #0a1744 100%)";
 const BG_DARK  = "linear-gradient(160deg, #020810 0%, #040d22 30%, #081535 55%, #040b1c 80%, #020810 100%)";
@@ -39,11 +40,7 @@ const BG_DARK  = "linear-gradient(160deg, #020810 0%, #040d22 30%, #081535 55%, 
 function ChestImage({ type, className, open }: { type: ChestType; className?: string; open?: boolean }) {
   const meta = CHEST_META[type];
   return (
-    <img
-      src={open ? meta.openImage : meta.image}
-      alt={meta.label}
-      className={`object-contain ${className ?? ""}`}
-    />
+    <SpriteImage src={open ? meta.openImage : meta.image} alt={meta.label} className={className} />
   );
 }
 
@@ -475,7 +472,7 @@ export default function KistorPage() {
                       </div>
                     </div>
                     <Link prefetch={false}
-                      href={gate.unlocked ? `/boss?stage=${s.id}` : `/world/${s.id}?tab=grammar`}
+                      href={gate.unlocked ? `/boss?stage=${s.id}` : `/world/${s.id}#tab=grammar`}
                       className="px-4 py-2 rounded-xl font-bold text-xs cursor-pointer transition-all active:scale-95 flex-shrink-0"
                       style={{
                         background: "rgba(255,255,255,0.9)",

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import type { MysteryBoxReward, ChestType } from "@/lib/types";
 import { CHEST_META } from "@/lib/gamification";
+import SpriteImage from "./SpriteImage";
 
 interface MysteryBoxPopupProps {
   reward: MysteryBoxReward;
@@ -11,11 +12,7 @@ interface MysteryBoxPopupProps {
 
 function ChestImage({ type }: { type: ChestType }) {
   return (
-    <img
-      src={CHEST_META[type].image}
-      alt={CHEST_META[type].label}
-      className="w-16 h-16 mx-auto object-contain"
-    />
+    <SpriteImage src={CHEST_META[type].image} alt={CHEST_META[type].label} display="flex" className="w-16 h-16 mx-auto" />
   );
 }
 

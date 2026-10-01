@@ -1,0 +1,205 @@
+{
+  "//": "Genererad av scripts/build-sprites.mjs – ändra inte för hand.",
+  "url": "/sprites/icons-2177ed50e2c2.webp",
+  "hash": "2177ed50e2c2",
+  "cols": 8,
+  "rows": 5,
+  "cell": 160,
+  "entries": {
+    "/avatars/ninja.svg": {
+      "col": 0,
+      "row": 0,
+      "source": "8917253d6300353e"
+    },
+    "/avatars/wizard.svg": {
+      "col": 1,
+      "row": 0,
+      "source": "5d90eabe871dcf49"
+    },
+    "/avatars/fox.svg": {
+      "col": 2,
+      "row": 0,
+      "source": "ab7a2047d9c85a04"
+    },
+    "/avatars/lion.svg": {
+      "col": 3,
+      "row": 0,
+      "source": "499f18682b397a59"
+    },
+    "/avatars/dragon.svg": {
+      "col": 4,
+      "row": 0,
+      "source": "f4f730e20d50c15d"
+    },
+    "/avatars/unicorn.svg": {
+      "col": 5,
+      "row": 0,
+      "source": "eccd9df041e9fde7"
+    },
+    "/avatars/robot.svg": {
+      "col": 6,
+      "row": 0,
+      "source": "49201d26b2c3fc54"
+    },
+    "/avatars/astronaut.svg": {
+      "col": 7,
+      "row": 0,
+      "source": "8196b9ef20873470"
+    },
+    "/avatars/owl.svg": {
+      "col": 0,
+      "row": 1,
+      "source": "6b12f1b9b554a89d"
+    },
+    "/avatars/pirate.svg": {
+      "col": 1,
+      "row": 1,
+      "source": "251ae8035a92f1e9"
+    },
+    "/avatars/princess.svg": {
+      "col": 2,
+      "row": 1,
+      "source": "87068b86721cc6c6"
+    },
+    "/avatars/prince.svg": {
+      "col": 3,
+      "row": 1,
+      "source": "1f1432bbcc5c0de5"
+    },
+    "/avatars/elf.svg": {
+      "col": 4,
+      "row": 1,
+      "source": "829efa6ecbf1b4c7"
+    },
+    "/avatars/mermaid.svg": {
+      "col": 5,
+      "row": 1,
+      "source": "2b6a590a150c5e8f"
+    },
+    "/avatars/superhero.svg": {
+      "col": 6,
+      "row": 1,
+      "source": "c836d88e5a0d6315"
+    },
+    "/avatars/villain.svg": {
+      "col": 7,
+      "row": 1,
+      "source": "e50278bc9521a4ec"
+    },
+    "/avatars/vampire.svg": {
+      "col": 0,
+      "row": 2,
+      "source": "7d9832ed0d9c505f"
+    },
+    "/avatars/ghost.svg": {
+      "col": 1,
+      "row": 2,
+      "source": "de46b895158d70e6"
+    },
+    "/avatars/fairy.svg": {
+      "col": 2,
+      "row": 2,
+      "source": "b3372fac43c8e151"
+    },
+    "/avatars/genie.svg": {
+      "col": 3,
+      "row": 2,
+      "source": "26e0ccfaaf873a09"
+    },
+    "/avatars/cowboy.svg": {
+      "col": 4,
+      "row": 2,
+      "source": "b1997a5ad32530e5"
+    },
+    "/avatars/rockstar.svg": {
+      "col": 5,
+      "row": 2,
+      "source": "99720b0fe504b3a8"
+    },
+    "/avatars/detective.svg": {
+      "col": 6,
+      "row": 2,
+      "source": "badea3e73a1c152c"
+    },
+    "/avatars/frog.svg": {
+      "col": 7,
+      "row": 2,
+      "source": "0c4e19dcdc068d7d"
+    },
+    "/avatars/footballer.svg": {
+      "col": 0,
+      "row": 3,
+      "source": "db3cf493023a32d6"
+    },
+    "/content/bronskista.png": {
+      "col": 1,
+      "row": 3,
+      "source": "bc7a92771af642a0"
+    },
+    "/content/bronskista-oppen.png": {
+      "col": 2,
+      "row": 3,
+      "source": "d3bca4702c440ebe"
+    },
+    "/content/silverkista.png": {
+      "col": 3,
+      "row": 3,
+      "source": "52b7e4b184f6e39a"
+    },
+    "/content/silverkista-oppen.png": {
+      "col": 4,
+      "row": 3,
+      "source": "40ef7e06ce99d959"
+    },
+    "/content/guldkista.png": {
+      "col": 5,
+      "row": 3,
+      "source": "c006425aa445db03"
+    },
+    "/content/guldkista-oppen.png": {
+      "col": 6,
+      "row": 3,
+      "source": "cf0c001ff3a8d6ef"
+    },
+    "/content/rubinkista.png": {
+      "col": 7,
+      "row": 3,
+      "source": "7087ce58c1a3a6b9"
+    },
+    "/content/rubinkista-oppen.png": {
+      "col": 0,
+      "row": 4,
+      "source": "b6c2072998342057"
+    },
+    "/content/diamantkista.png": {
+      "col": 1,
+      "row": 4,
+      "source": "f3d8aa51a5a47a08"
+    },
+    "/content/diamantkista-oppen.png": {
+      "col": 2,
+      "row": 4,
+      "source": "2e680ecd99e13c88"
+    },
+    "/content/smaragdkista.png": {
+      "col": 3,
+      "row": 4,
+      "source": "813eef0ddd2c68df"
+    },
+    "/content/smaragdkista-oppen.png": {
+      "col": 4,
+      "row": 4,
+      "source": "e957b8f0078f4972"
+    },
+    "/hemliga-kistan-blurrad.png": {
+      "col": 5,
+      "row": 4,
+      "source": "08b4dac480e9b1a9"
+    },
+    "/hemliga-kistan.png": {
+      "col": 6,
+      "row": 4,
+      "source": "1af3e6fd1a2c940e"
+    }
+  }
+}

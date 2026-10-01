@@ -19,6 +19,7 @@ import type { StudentData, GamificationData, Chest, ChestType, StageId } from "@
 import type { BossId, BossQuestion, BossConfig } from "@/lib/gamification";
 import { getPositiveFeedback } from "@/lib/feedback";
 import { getStage } from "@/lib/stages";
+import SpriteImage from "@/components/ui/SpriteImage";
 
 /** Fisher–Yates. Frågorna kom tidigare i fast ordning med fast rätt alternativ,
  *  så en andra match tog tjugo sekunder ur minnet. */
@@ -366,7 +367,7 @@ function BossPageInner() {
     setGam(g);
     // Matchen måste vara förtjänad med kapitel i den här världen.
     const gate = getBossGate(completedModulesInStage(s, stageId), bossWinsInStage(g, stageId));
-    if (!gate.unlocked) { router.push(`/world/${stageId}?tab=spel`); return; }
+    if (!gate.unlocked) { router.push(`/world/${stageId}#tab=spel`); return; }
     const b = nextBossForStage(stageId, bossWinsInStage(g, stageId));
     if (b) setRunQuestions(shuffled(b.questions).map(shuffleQuestion));
   }, [stageId]);
@@ -398,7 +399,7 @@ function BossPageInner() {
         bossWinsInStage(currentGam, stageId)
       );
       if (passed && !gateNow.unlocked) {
-        router.push(`/world/${stageId}?tab=spel`);
+        router.push(`/world/${stageId}#tab=spel`);
         return;
       }
 
@@ -480,7 +481,7 @@ function BossPageInner() {
         <Header student={student} />
         <div className="text-white" style={{ background: boss.gradient }}>
           <div className="max-w-3xl mx-auto px-4 py-6">
-            <Link prefetch={false} href={`/world/${stageId}?tab=spel`} className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1">
+            <Link prefetch={false} href={`/world/${stageId}#tab=spel`} className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors py-3 -my-1">
               ← Tillbaka till {stageName}
             </Link>
             <div className="flex items-center gap-3">
@@ -520,10 +521,11 @@ function BossPageInner() {
                 {(() => { const pts = bossPayout(boss); return <><p className="text-2xl font-black text-amber-500">+{pts}</p><p className="text-xs text-gray-400">bonuspoäng</p></>; })()}
               </div>
               <div className="bg-gray-50 rounded-2xl p-3 border border-gray-100">
-                <img
+                <SpriteImage
                   src={CHEST_META[boss.rewardChestType].image}
                   alt={CHEST_META[boss.rewardChestType].label}
-                  className="w-8 h-6 mx-auto object-contain"
+                  display="flex"
+                  className="w-8 h-6 mx-auto"
                 />
                 <p className="text-xs text-gray-400">{CHEST_META[boss.rewardChestType].label}</p>
               </div>
@@ -654,10 +656,11 @@ function BossPageInner() {
                 <p className="text-xs text-green-500">{badge?.label ?? "Märke"}</p>
               </div>
               <div className="bg-white rounded-2xl p-3 border border-green-200">
-                <img
+                <SpriteImage
                   src={CHEST_META[boss.rewardChestType].image}
                   alt={CHEST_META[boss.rewardChestType].label}
-                  className="w-8 h-6 mx-auto object-contain"
+                  display="flex"
+                  className="w-8 h-6 mx-auto"
                 />
                 <p className="text-xs text-green-500">{CHEST_META[boss.rewardChestType].label}!</p>
               </div>
@@ -672,7 +675,7 @@ function BossPageInner() {
                 Öppna kistor →
               </Link>
               <Link prefetch={false}
-                href={`/world/${stageId}?tab=grammar`}
+                href={`/world/${stageId}#tab=grammar`}
                 className="flex-1 py-3 rounded-2xl font-bold text-green-700 border-2 border-green-300 bg-white text-center cursor-pointer transition-all hover:bg-green-50 active:scale-95"
               >
                 Till {stageName} →
@@ -716,7 +719,7 @@ function BossPageInner() {
               Försök igen ↺
             </button>
             <Link prefetch={false}
-              href={`/world/${stageId}?tab=grammar`}
+              href={`/world/${stageId}#tab=grammar`}
               className="flex-1 py-3 rounded-2xl font-bold text-red-700 border-2 border-red-300 bg-white cursor-pointer text-center transition-all hover:bg-red-50 active:scale-95"
             >
               Öva mer

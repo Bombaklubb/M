@@ -10,6 +10,8 @@
  * 4. Data lagras anonymiserat i Redis
  */
 
+import { localDayKey } from '@/lib/dates';
+
 function getAnonymousDeviceId(): string {
   const storageKey = 'engelskajakten_anonymous_device_id';
   let deviceId = localStorage.getItem(storageKey);
@@ -20,65 +22,147 @@ function getAnonymousDeviceId(): string {
   return deviceId;
 }
 
-async function trackEvent(
-  type: 'pageview' | 'task_complete' | 'error' | 'session_time',
-  data?: {
-    questionType?: string;
-    timeSeconds?: number;
-    correct?: boolean;
-  }
-): Promise<void> {
+/** Lärarsidan ska inte skicka några statistikanrop alls. */
+function isTeacherPage(): boolean {
+  return window.location.pathname.startsWith('/larare');
+}
+
+async function trackEvent(type: 'pageview'): Promise<void> {
   try {
+    if (isTeacherPage()) return;
     const deviceId = getAnonymousDeviceId();
     await fetch('/api/stats/track', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ type, deviceId, data }),
+      body: JSON.stringify({ type, deviceId }),
     });
   } catch {
     // Tyst fel – analytics ska inte påverka användarupplevelsen
   }
 }
 
+/**
+ * En sidvisning per webbläsarsession (flik), inte per omladdning. Lärarvyn
+ * räknar besökare som unika enheter per dag, så siffrorna där blir desamma –
+ * men varje omladdning kostade förut ett anrop mot det delade Vercel-taket.
+ */
+const PAGEVIEW_SENT_KEY = 'engelskajakten_pageview_sent';
+
 export function trackPageView(): void {
+  if (isTeacherPage()) return;
+  try {
+    // Dagens datum sparas, så att en flik som står öppen över natten ändå
+    // räknas som besök nästa dag.
+    const today = localDayKey();
+    if (sessionStorage.getItem(PAGEVIEW_SENT_KEY) === today) return;
+    sessionStorage.setItem(PAGEVIEW_SENT_KEY, today);
+  } catch {
+    // sessionStorage avstängd: skicka som förut
+  }
   trackEvent('pageview');
 }
 
-export function trackTaskComplete(correct: boolean, questionType?: string): void {
-  trackEvent('task_complete', { correct, questionType });
+// ─── Klarade kapitel och tid, skickade i klump ────────────────────────────────
+//
+// Förut kostade varje klarat kapitel ett eget anrop, och tiden skickades i ett
+// eget anrop var femte minut – runt tjugo anrop under en lektion. Nu samlas
+// kapitlen och tiden ihop och skickas i ett enda anrop:
+//   • när det äldsta osända kapitlet är tio minuter gammalt,
+//   • när fliken stängs eller laddas om (sendBeacon), och
+//   • efter tjugo minuter även om inget kapitel klarats, så att tiden kommer fram.
+// Lärarvyn visar samma siffror, men upp till tio minuter senare.
+
+interface QueuedTask {
+  correct: boolean;
+  questionType?: string;
 }
 
-export function trackSessionTime(seconds: number): void {
-  if (seconds > 0) {
-    trackEvent('session_time', { timeSeconds: seconds });
+const BATCH_MS = 10 * 60 * 1000;
+const TIME_ONLY_MS = 20 * 60 * 1000;
+/** Rapporterad tid i ett anrop, som förut. */
+const MAX_SECONDS_PER_REPORT = 3600;
+
+/**
+ * Lite tid och inga kapitel när fliken laddas om: spara tiden i fliken och
+ * skicka den med nästa rapport i stället för i ett eget anrop. Stängs fliken
+ * förloras högst så här många sekunder.
+ */
+const CARRY_OVER_MAX_SECONDS = 60;
+const CARRY_OVER_KEY = 'engelskajakten_unsent_seconds';
+
+let queue: QueuedTask[] = [];
+let firstQueuedAt: number | null = null;
+let sessionStartTime: number | null = null;
+
+/** Tiden sedan förra rapporten. Nollställer räkningen. */
+function takeSessionSeconds(): number {
+  if (!sessionStartTime) return 0;
+  const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
+  sessionStartTime = Date.now();
+  return Math.min(Math.max(seconds, 0), MAX_SECONDS_PER_REPORT);
+}
+
+/** Skickar köade kapitel och tiden sedan förra rapporten i ett anrop. */
+function flush(useBeacon: boolean): void {
+  if (isTeacherPage()) return;
+  const timeSeconds = takeSessionSeconds();
+  const tasks = queue;
+  queue = [];
+  firstQueuedAt = null;
+  if (tasks.length === 0 && timeSeconds <= 0) return;
+  if (useBeacon && tasks.length === 0 && timeSeconds < CARRY_OVER_MAX_SECONDS) {
+    try {
+      sessionStorage.setItem(CARRY_OVER_KEY, String(timeSeconds));
+      return;
+    } catch {
+      // sessionStorage avstängd: skicka som vanligt
+    }
+  }
+  try {
+    const body = JSON.stringify({
+      type: 'batch',
+      deviceId: getAnonymousDeviceId(),
+      data: { timeSeconds, tasks },
+    });
+    if (useBeacon && navigator.sendBeacon) {
+      navigator.sendBeacon('/api/stats/track', body);
+    } else {
+      fetch('/api/stats/track', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body,
+        keepalive: true,
+      }).catch(() => {});
+    }
+  } catch {
+    // Tyst fel – analytics ska inte påverka användarupplevelsen
   }
 }
 
-// Session-tid tracker
-let sessionStartTime: number | null = null;
+/** Ett klarat (eller misslyckat) kapitel. Skickas tillsammans med andra. */
+export function trackTaskComplete(correct: boolean, questionType?: string): void {
+  if (isTeacherPage()) return;
+  queue.push(questionType ? { correct, questionType } : { correct });
+  if (firstQueuedAt === null) firstQueuedAt = Date.now();
+  else if (Date.now() - firstQueuedAt >= BATCH_MS) flush(false);
+}
 
 export function startSession(): void {
+  // Lärarsidan räknar inte tid och skickar inget.
+  if (isTeacherPage()) return;
   sessionStartTime = Date.now();
+  // Tid som sparades vid en omladdning räknas med från början.
+  try {
+    const carried = Number(sessionStorage.getItem(CARRY_OVER_KEY) || 0);
+    sessionStorage.removeItem(CARRY_OVER_KEY);
+    if (carried > 0) sessionStartTime -= Math.min(carried, CARRY_OVER_MAX_SECONDS) * 1000;
+  } catch {
+    // ingen sparad tid
+  }
 
-  // beforeunload och pagehide avfyras båda när fliken stängs. Förut skickade
-  // båda samma tid, så varje avslutad session räknades dubbelt och kostade två
-  // anrop. Nu nollställs starttiden när den skickats, och den andra hoppar över.
-  const handleUnload = () => {
-    if (sessionStartTime) {
-      const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
-      sessionStartTime = null;
-      if (seconds > 0 && navigator.sendBeacon) {
-        const deviceId = getAnonymousDeviceId();
-        const data = JSON.stringify({
-          type: 'session_time',
-          deviceId,
-          data: { timeSeconds: Math.min(seconds, 3600) },
-        });
-        navigator.sendBeacon('/api/stats/track', data);
-      }
-    }
-  };
-
+  // beforeunload och pagehide avfyras båda när fliken stängs. Den första
+  // skickar allt och nollställer, så den andra har inget kvar att skicka.
+  const handleUnload = () => flush(true);
   window.addEventListener('beforeunload', handleUnload);
   window.addEventListener('pagehide', handleUnload);
   // Kommer eleven tillbaka till en flik som redan lämnat ifrån sig sin tid
@@ -87,18 +171,14 @@ export function startSession(): void {
     if (!sessionStartTime) sessionStartTime = Date.now();
   });
 
-  // Skicka tid var 5:e minut för långa sessioner — men bara medan fliken
-  // syns. En flik som står öppen i bakgrunden hela dagen skickade annars
-  // tolv anrop i timmen. Tiden går inte förlorad: den skickas vid nästa
-  // tillfälle fliken syns, eller när den stängs.
+  // Kontrollerar varje minut, utan anrop, om det är dags att skicka. Bara
+  // medan fliken syns.
   setInterval(() => {
     if (document.hidden) return;
-    if (sessionStartTime) {
-      const seconds = Math.round((Date.now() - sessionStartTime) / 1000);
-      trackSessionTime(seconds);
-      sessionStartTime = Date.now();
-    }
-  }, 5 * 60 * 1000);
+    const now = Date.now();
+    if (firstQueuedAt !== null && now - firstQueuedAt >= BATCH_MS) flush(false);
+    else if (firstQueuedAt === null && sessionStartTime && now - sessionStartTime >= TIME_ONLY_MS) flush(false);
+  }, 60 * 1000);
 }
 
 export interface TeacherStats {

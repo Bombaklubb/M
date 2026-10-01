@@ -9,14 +9,19 @@ import { NextRequest, NextResponse } from 'next/server';
 import { redis, KEY_PREFIX, getTodayKey } from '@/lib/redis';
 
 interface TrackEvent {
-  type: 'pageview' | 'task_complete' | 'error' | 'session_time';
+  type: 'pageview' | 'task_complete' | 'error' | 'session_time' | 'batch';
   deviceId: string;
   data?: {
     questionType?: string;
     timeSeconds?: number;
     correct?: boolean;
+    /** batch: klarade kapitel sedan förra anropet. */
+    tasks?: { correct?: boolean; questionType?: string }[];
   };
 }
+
+/** Rimlig övre gräns för kapitel i ett anrop (tio minuter). */
+const MAX_TASKS_PER_BATCH = 100;
 
 export async function POST(req: NextRequest) {
   try {
@@ -66,6 +71,38 @@ export async function POST(req: NextRequest) {
           );
         }
         break;
+
+      // Appen samlar ihop klarade kapitel och tid och skickar dem i ett anrop
+      // (se analyticsService). task_complete och session_time ovan finns kvar
+      // för elever som har en äldre version av sidan öppen.
+      case 'batch': {
+        const tasks = Array.isArray(event.data?.tasks)
+          ? event.data.tasks.slice(0, MAX_TASKS_PER_BATCH)
+          : [];
+        if (tasks.length > 0) {
+          await redis.incrby(`${KEY_PREFIX}tasks:${today}`, tasks.length);
+          const errorsByType: Record<string, number> = {};
+          for (const t of tasks) {
+            if (t?.correct === false && typeof t.questionType === 'string' && t.questionType.length <= 40) {
+              errorsByType[t.questionType] = (errorsByType[t.questionType] ?? 0) + 1;
+            }
+          }
+          let totalErrors = 0;
+          for (const [questionType, n] of Object.entries(errorsByType)) {
+            await redis.hincrby(`${KEY_PREFIX}errors:${today}`, questionType, n);
+            totalErrors += n;
+          }
+          if (totalErrors > 0) await redis.incrby(`${KEY_PREFIX}total_errors:${today}`, totalErrors);
+        }
+        const seconds = Number(event.data?.timeSeconds);
+        if (seconds > 0) {
+          await redis.incrby(`${KEY_PREFIX}time:${today}`, Math.min(Math.round(seconds), 3600));
+        }
+        // Sidvisningen skickas bara en gång per flik, så varje rapport håller
+        // också eleven kvar under "Inloggade nu" i lärarvyn.
+        await redis.zadd(`${KEY_PREFIX}active`, { score: Date.now(), member: event.deviceId });
+        break;
+      }
 
       case 'error':
         if (event.data?.questionType) {

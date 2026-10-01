@@ -4,13 +4,25 @@ import AnalyticsInit from "@/components/AnalyticsInit";
 import JakterMenu from "@/components/ui/JakterMenu";
 import ThemedBackdrop from "@/components/ui/ThemedBackdrop";
 
+const FAVICON_SVG =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36">' +
+  '<rect width="60" height="36" fill="#012169"/>' +
+  '<path d="M0,0 L60,36 M60,0 L0,36" stroke="#fff" stroke-width="7.2"/>' +
+  '<path d="M0,0 L60,36 M60,0 L0,36" stroke="#C8102E" stroke-width="2.4"/>' +
+  '<rect x="22.8" width="14.4" height="36" fill="#fff"/><rect y="10.8" width="60" height="14.4" fill="#fff"/>' +
+  '<rect x="25.2" width="9.6" height="36" fill="#C8102E"/><rect y="13.2" width="60" height="9.6" fill="#C8102E"/>' +
+  "</svg>";
+const FAVICON_DATA_URI = `data:image/svg+xml,${encodeURIComponent(FAVICON_SVG)}`;
+
 export const metadata: Metadata = {
   title: "Engelskajakten – Lär dig engelska",
   description:
     "En gratis engelskträningsapp för åk 1–gymnasiet. Grammatikövningar och läsförståelse i fyra spännande världar.",
   keywords: ["engelska", "skola", "övningar", "grammatik", "läsförståelse", "gratis"],
   icons: {
-    icon: "/union-jack.svg",
+    // Favikonen ligger direkt i sidan (data-URI) i stället för som en fil, så
+    // den kostar inget eget anrop. Samma bild som public/union-jack.svg.
+    icon: FAVICON_DATA_URI,
     apple: "/union-jack.svg",
   },
   openGraph: {

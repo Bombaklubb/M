@@ -17,8 +17,12 @@ import { redis, KEY_PREFIX, getTodayKey, getDateKey } from '@/lib/redis';
 const TEACHER_PASSWORD = process.env.TEACHER_PASSWORD || 'Engelskajakten';
 
 const HISTORY_DAYS = 14;
-/** Hur länge en enhet räknas som "aktiv nu" efter sitt senaste besök. */
-const ACTIVE_WINDOW_MS = 5 * 60 * 1000;
+/**
+ * Hur länge en enhet räknas som "inloggad nu" efter sin senaste rapport.
+ * Appen skickar kapitel och tid i klump, högst var tionde minut (se
+ * analyticsService), så fönstret måste vara längre än så.
+ */
+const ACTIVE_WINDOW_MS = 15 * 60 * 1000;
 
 interface DayStats {
   visitors: number;
